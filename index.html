@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio for Android Apps and Games including Pale Blue Dot, Gravity Warp, and Gravity Garden.">
+    <title>My Android Projects</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <div class="logo"><a href="index.html">My Portfolio</a></div>
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="app.html">Pale Blue Dot</a></li>
+                    <li><a href="game1.html">Gravity Warp</a></li>
+                    <li><a href="game2.html">Gravity Garden</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero reveal">
+            <div class="container">
+                <h1>Welcome to My Android Projects</h1>
+                <p>Explore my latest mobile app and exciting games, built with passion and designed for an amazing user experience.</p>
+            </div>
+        </section>
+
+        <section class="container reveal">
+            <h2 class="section-title">My Projects</h2>
+            <div class="grid">
+                <!-- App Card -->
+                <a href="app.html" class="card">
+                    <img src="assets/app_mockup.png" alt="Pale Blue Dot" class="card-image" onerror="this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Pale+Blue+Dot'">
+                    <span class="card-tag tag-app">App</span>
+                    <h3>Pale Blue Dot</h3>
+                    <p>A productivity and utility app. (Placeholder description being built).</p>
+                    <div class="card-footer">
+                        <span class="btn btn-outline">View Details</span>
+                    </div>
+                </a>
+
+                <!-- Game 1 Card -->
+                <a href="game1.html" class="card">
+                    <img src="assets/game1_mockup.png" alt="Gravity Warp" class="card-image" onerror="this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Gravity+Warp'">
+                    <span class="card-tag tag-game1">Game</span>
+                    <h3>Gravity Warp</h3>
+                    <p>A dynamic, visually stunning space adventure. (Placeholder description being built).</p>
+                    <div class="card-footer">
+                        <span class="btn btn-outline">View Details</span>
+                    </div>
+                </a>
+
+                <!-- Game 2 Card -->
+                <a href="game2.html" class="card">
+                    <img src="assets/game2_mockup.png" alt="Gravity Garden" class="card-image" onerror="this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Gravity+Garden'">
+                    <span class="card-tag tag-game2">Game</span>
+                    <h3>Gravity Garden</h3>
+                    <p>A beautiful, relaxing puzzle experience. (Placeholder description being built).</p>
+                    <div class="card-footer">
+                        <span class="btn btn-outline">View Details</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="app-privacy.html">Pale Blue Dot Privacy</a>
+                <a href="game1-privacy.html">Gravity Warp Privacy</a>
+                <a href="game2-privacy.html">Gravity Garden Privacy</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

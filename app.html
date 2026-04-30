@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pale Blue Dot - A modern productivity and utility application.">
+    <title>Pale Blue Dot - App Details</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <div class="logo"><a href="index.html">My Portfolio</a></div>
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="app.html" class="active">Pale Blue Dot</a></li>
+                    <li><a href="game1.html">Gravity Warp</a></li>
+                    <li><a href="game2.html">Gravity Garden</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">App</span>
+                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">Pale Blue Dot</h1>
+                <img src="assets/app_mockup.png" alt="Pale Blue Dot App" class="project-hero-image" onerror="this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Pale+Blue+Dot'">
+            </div>
+            
+            <div class="project-content reveal">
+                <h2>About The App</h2>
+                <p>Pale Blue Dot is a modern productivity and utility application designed to help users streamline their daily workflows and maximize their efficiency. Featuring a clean, futuristic interface inspired by minimal space aesthetics, the app provides tools for organizing tasks and tracking data.</p>
+                <p>Currently in active development, more exciting features and details will be shared soon.</p>
+                
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;">Minimalist, intuitive user interface</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;">Robust data tracking and visualization</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;">Seamless performance and dark-mode default experience</li>
+                </ul>
+                
+                <div class="project-links">
+                    <a href="#" class="btn btn-primary">Get it on Google Play (Coming Soon)</a>
+                    <a href="app-privacy.html" class="btn btn-outline">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="app-privacy.html">Pale Blue Dot Privacy</a>
+                <a href="game1-privacy.html">Gravity Warp Privacy</a>
+                <a href="game2-privacy.html">Gravity Garden Privacy</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
