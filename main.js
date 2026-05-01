@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.className = 'modal';
       modal.innerHTML = `
         <span class="modal-close">&times;</span>
+        <span class="modal-prev">&#10094;</span>
+        <span class="modal-next">&#10095;</span>
         <img class="modal-content" id="modal-img">
       `;
       document.body.appendChild(modal);
@@ -59,32 +61,64 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const modalImg = document.getElementById('modal-img');
     const closeBtn = modal.querySelector('.modal-close');
+    const prevBtn = modal.querySelector('.modal-prev');
+    const nextBtn = modal.querySelector('.modal-next');
     
+    let currentIndex = 0;
+
+    function showImage(index) {
+        if (index < 0) {
+            currentIndex = galleryImages.length - 1;
+        } else if (index >= galleryImages.length) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+        modalImg.src = galleryImages[currentIndex].src;
+    }
+
     // Open modal on click
-    galleryImages.forEach(img => {
+    galleryImages.forEach((img, index) => {
       img.addEventListener('click', function() {
         modal.classList.add('show');
-        modalImg.src = this.src;
+        showImage(index);
       });
     });
     
-    // Close modal on close button click
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('show');
-    });
-    
-    // Close modal on click outside image
+    // Close modal
+    closeBtn.addEventListener('click', () => modal.classList.remove('show'));
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('show');
-      }
+      if (e.target === modal) modal.classList.remove('show');
     });
 
-    // Close modal on escape key
+    // Navigation buttons
+    prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex - 1); });
+    nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex + 1); });
+
+    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('show')) {
-        modal.classList.remove('show');
-      }
+      if (!modal.classList.contains('show')) return;
+      if (e.key === 'Escape') modal.classList.remove('show');
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
     });
+
+    // Swipe navigation
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    modal.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    modal.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) showImage(currentIndex + 1); // swipe left
+        if (touchEndX > touchStartX + 50) showImage(currentIndex - 1); // swipe right
+    }
   }
 });

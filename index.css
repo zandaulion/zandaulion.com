@@ -508,3 +508,36 @@ footer {
   color: var(--accent-blue);
 }
 
+.modal-prev,
+.modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease;
+  z-index: 1001;
+  padding: 12px 20px;
+  user-select: none;
+  background: rgba(0,0,0,0.2);
+  border-radius: var(--radius-md);
+}
+
+.modal-prev {
+  left: 20px;
+}
+
+.modal-next {
+  right: 20px;
+}
+
+.modal-prev:hover,
+.modal-next:hover,
+.modal-prev:focus,
+.modal-next:focus {
+  color: var(--accent-blue);
+  background: rgba(0,0,0,0.6);
+}
+
