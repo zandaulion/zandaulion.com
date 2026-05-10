@@ -8,6 +8,7 @@
   --accent-blue: #00d2ff;
   --accent-purple: #9d00ff;
   --accent-green: #00ff87;
+  --accent-orange: #ff9d00;
   
   /* Layout & Typography */
   --font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
@@ -248,6 +249,11 @@ main {
 .tag-game2 {
   background: rgba(0, 255, 135, 0.1);
   color: var(--accent-green);
+}
+
+.tag-game3 {
+  background: rgba(255, 157, 0, 0.1);
+  color: var(--accent-orange);
 }
 
 .card-footer {

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitPuzzles - A gravity-simulation puzzle game for Android.">
+    <title>OrbitPuzzles - Game Details</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <div class="logo"><a href="index.html">My Portfolio</a></div>
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
+                    <li><a href="gravitywarp.html">Gravity Warp</a></li>
+                    <li><a href="gravitygarden.html">Gravity Garden</a></li>
+                    <li><a href="orbitpuzzles.html" class="active">OrbitPuzzles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-game3" style="margin-bottom: 24px;">Game</span>
+                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">OrbitPuzzles</h1>
+                <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-37-349_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Game" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=OrbitPuzzles'">
+            </div>
+            
+            <div class="project-content reveal">
+                <h2>About The Game</h2>
+                <p>OrbitPuzzles is a challenging physics-based puzzle game where players design orbital systems by strategically placing celestial bodies like planets, moons, and asteroids. Your goal is to achieve specific configurations, such as completing a certain number of orbits without colliding with the central star or escaping the system.</p>
+                <p>Built completely natively in Kotlin, OrbitPuzzles features a highly stable custom $O(N^2)$ N-body simulator using Velocity Verlet integration and Plummer softening. Time pauses during the DESIGN phase so you can carefully position your bodies and adjust velocity vectors, and then flows in the RUN phase to test if your orbital mechanics hold up.</p>
+                <p>The visual experience pairs 3D rendering powered by Google Filament with 100% Jetpack Compose UI. Each celestial body is rendered using custom procedural texturing, creating an infinite variety of planets and stars without relying on massive texture files, while glowing trails and UI overlays provide real-time telemetry and feedback.</p>
+                
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Custom Physics Engine:</strong> Precise N-body simulation leveraging Velocity Verlet integration for long-term orbital stability, complete with Plummer softening to gracefully handle extreme close encounters.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Design & Run Phases:</strong> A tactical approach where time pauses for planning, allowing you to fine-tune your planetary setup, vector forces, and solve the orbital puzzle before unleashing the simulation.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Procedural 3D Planets:</strong> Google Filament integration using mathematically generated equirectangular albedo maps ensures every celestial body looks unique while keeping the app footprint small.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Hybrid Rendering:</strong> A flawless blend of native 3D physics rendering under beautifully layered, real-time 2D UI overlays drawn with Jetpack Compose Canvas.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Progressive Challenge:</strong> Navigate a wide array of levels with distinct budgets and goals. The internal `OrbitTracker` system accurately tallies revolutions regardless of elliptical eccentricity.</li>
+                </ul>
+                
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-29-933_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 1" class="gallery-img">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-37-349_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 2" class="gallery-img">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-41-276_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 3" class="gallery-img">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-53-361_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 4" class="gallery-img">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-00-279_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 5" class="gallery-img">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-04-774_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 6" class="gallery-img">
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="btn btn-primary">Get it on Google Play (Coming Soon)</a>
+                    <a href="orbitpuzzles-privacy.html" class="btn btn-outline">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
+                <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
+                <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
+                <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
