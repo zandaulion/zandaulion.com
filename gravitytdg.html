@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GravityTDG - A gravity-based space tower-defense game for Android.">
+    <title>GravityTDG - Game Details</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th, .spec-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .spec-table td {
+            color: var(--text-muted);
+        }
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+        .highlight-box {
+            background: rgba(255, 56, 56, 0.05);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0 !important;
+            color: var(--text-main) !important;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        .feature-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        .feature-item:hover {
+            border-color: rgba(255, 56, 56, 0.2);
+            background: var(--bg-card-hover);
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow" style="background: radial-gradient(circle at top right, rgba(255, 56, 56, 0.08), transparent 60%);"></div>
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <div class="logo"><a href="index.html">My Portfolio</a></div>
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
+                    <li><a href="gravitywarp.html">Gravity Warp</a></li>
+                    <li><a href="gravitygarden.html">Gravity Garden</a></li>
+                    <li><a href="orbitpuzzles.html">OrbitPuzzles</a></li>
+                    <li><a href="gravitytdg.html" class="active">GravityTDG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-game4" style="margin-bottom: 24px;">Game</span>
+                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">GravityTDG</h1>
+                <img src="assets/GravityTDG/Screenshot_2026-05-21-17-28-59-589_com.gravitytdg.jpg" alt="GravityTDG Game" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=GravityTDG'">
+            </div>
+            
+            <div class="project-content reveal">
+                <h2>About The Game</h2>
+                <p>GravityTDG is a state-of-the-art space tower-defense game for Android where gravity is both your greatest threat and your most powerful tool. Cosmonauts fall helplessly into orbit around a massive central celestial body, and your job is to strategically place and orient force-field and shooter turrets. Guide their trajectories and charge their shields so the orbital rescue beam can save them before they are lost to deep space or sucked into gravitational hazards.</p>
+                <p>Built with libGDX 1.12.1, the game leverages custom RK4 (Runge-Kutta 4th Order) numerical physics at a fixed 60Hz frequency to calculate smooth planetary gravity and complex force fields. With support for sophisticated multi-touch camera gestures (pan, pitch tilt, pinch-to-zoom, and axial rotation), players can navigate space arenas seamlessly.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Core Mechanic:</strong> Unlike traditional tower defense games where paths are static, GravityTDG has dynamic, orbit-based paths shaped in real-time by gravity and your tactical field turrets. You guide their flight path dynamically instead of blocking them!</p>
+                </div>
+
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>RK4 Orbital Physics</h3>
+                        <p>High-precision 60Hz integration simulator modeling real inverse-square gravity wells, directional jet forces, and tangential drag profiles.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Tactical Phases</h3>
+                        <p>Plan out your approach in the paused <strong>Design Phase</strong> with real-time vector trajectory previews, then execute in the <strong>Play Phase</strong> with customizable time speeds.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Dynamic Repositioning</h3>
+                        <p>Brief <strong>Reposition Phase</strong> between waves allows you to relocate and optimize turrets at a reduced cost, adapting to new cosmonaut entry vectors.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Hybrid 3D/2D Visuals</h3>
+                        <p>Stunning 3D spheres rendered with Depth Mask buffers, mixed with screen-space overlays for additive glow coronae, Keplerian bands, and planetary Terminators.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Procedural Audio Synth</h3>
+                        <p>Immersive sub-bass looping drones and custom-synthesized SFX generated mathematically from Python audio engines, playing in 22kHz mono.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Star Progression</h3>
+                        <p>Sequentially unlocking levels with persistent high scores and star ratings based on your rescue performance saved directly to preferences.</p>
+                    </div>
+                </div>
+
+                <h2>Turret Specifications</h2>
+                <p>Strategically spend your energy budget on two categories of turrets: force-field generators that steer orbits, and rescue-beam shooters that charge shields.</p>
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Turret ID</th>
+                            <th>Class</th>
+                            <th>Subtype</th>
+                            <th>Placement Cost</th>
+                            <th>Effect / Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>jet</strong></td>
+                            <td>Field</td>
+                            <td>Jet Force</td>
+                            <td>30 Energy</td>
+                            <td>Pushes cosmonauts in the turret's facing direction. Rotate 360&deg; in Design Phase to align forces.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>brake</strong></td>
+                            <td>Field</td>
+                            <td>Friction Drag</td>
+                            <td>20 Energy</td>
+                            <td>Applies drag directly opposing the velocity vector, slowing down fast-orbiting targets.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>shooter_single</strong></td>
+                            <td>Shooter</td>
+                            <td>Point Beam</td>
+                            <td>40 Energy</td>
+                            <td>High-strength (1.5x) rescue beam focused strictly on a single nearest cosmonaut in range.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>shooter_multi</strong></td>
+                            <td>Shooter</td>
+                            <td>Splash Area</td>
+                            <td>60 Energy</td>
+                            <td>Fills shields of all cosmonauts within range simultaneously, with a lower individual recharge rate.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Cosmonaut Reference</h2>
+                <p>Different cosmonauts require tailored gravitational handling and charge speeds based on their size, speed, and shield charges.</p>
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Size</th>
+                            <th>Base Speed</th>
+                            <th>Stickiness</th>
+                            <th>Shield Cycles</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>cosmonaut_basic</strong></td>
+                            <td>6</td>
+                            <td>1.0x</td>
+                            <td>1.0</td>
+                            <td>1 Cycle</td>
+                            <td>Standard crew member. One full charge rescues them instantly.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>cosmonaut_fast</strong></td>
+                            <td>1</td>
+                            <td>2.0x</td>
+                            <td>14.0</td>
+                            <td>1 Cycle</td>
+                            <td>Tiny and fragile. Charges extremely fast, but moves at double speed through orbits.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>cosmonaut_heavy</strong></td>
+                            <td>12</td>
+                            <td>1.0x</td>
+                            <td>0.7</td>
+                            <td>3 Cycles</td>
+                            <td>Massive cargo vessel. Charges slowly and must undergo 3 complete charge cycles to be rescued.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Celestial Centers & Rules</h2>
+                <p>The cosmic bodies at the center of the field govern both the gravity profiles and the rules required to pull off a successful rescue:</p>
+                <div class="features-grid" style="margin-top: 16px;">
+                    <div class="feature-item">
+                        <h3>Black Hole</h3>
+                        <p>Enormous gravity pull. Accompanied by Keplarian accretion disks and relativistic jets. Cosmonauts are saved immediately upon completing their shield charge anywhere in the arena.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Bright Star</h3>
+                        <p>Scorching corona and solar flares. Cosmonauts teleport and are saved instantly when their shield is fully charged, avoiding incineration.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Planet</h3>
+                        <p>Features beautiful atmospheric gradients and cloud terminators. Cosmonauts must physically land on the planet's surface <strong>after</strong> their shield has been 100% charged to be saved.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Space Station</h3>
+                        <p>Metallic technological outpost. Any cosmonaut that physically contacts the center station is automatically saved, regardless of their shield charge status.</p>
+                    </div>
+                </div>
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/GravityTDG/Screenshot_2026-05-21-07-17-01-853_com.gravitytdg.jpg" alt="GravityTDG Screenshot 1 - Design Mode Grid" class="gallery-img">
+                    <img src="assets/GravityTDG/Screenshot_2026-05-21-07-17-15-869_com.gravitytdg.jpg" alt="GravityTDG Screenshot 2 - Active Defense Firing" class="gallery-img">
+                    <img src="assets/GravityTDG/Screenshot_2026-05-21-17-28-53-008_com.gravitytdg.jpg" alt="GravityTDG Screenshot 3 - Black Hole Accretion Disk" class="gallery-img">
+                    <img src="assets/GravityTDG/Screenshot_2026-05-21-17-28-59-589_com.gravitytdg.jpg" alt="GravityTDG Screenshot 4 - Planet Termination Shadows" class="gallery-img">
+                    <img src="assets/GravityTDG/Screenshot_2026-05-21-17-31-15-087_com.gravitytdg.jpg" alt="GravityTDG Screenshot 5 - Main Menu Interface" class="gallery-img">
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="btn btn-primary">Get it on Google Play (Coming Soon)</a>
+                    <a href="gravitytdg-privacy.html" class="btn btn-outline">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
+                <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
+                <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
+                <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
+                <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
