@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BP Digitizer - An open-source Android app for logging, visualising, and exporting blood pressure readings.">
+    <title>BP Digitizer - App Details</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <div class="logo"><a href="index.html">My Portfolio</a></div>
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bpdigitizer.html" class="active">BP Digitizer</a></li>
+                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
+                    <li><a href="gravitywarp.html">Gravity Warp</a></li>
+                    <li><a href="gravitygarden.html">Gravity Garden</a></li>
+                    <li><a href="orbitpuzzles.html">OrbitPuzzles</a></li>
+                    <li><a href="gravitytdg.html">GravityTDG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">App</span>
+                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">BP Digitizer</h1>
+                <img src="assets/BP Digitizer/Screenshot_20260529_123254_BP Digitizer.jpg" alt="BP Digitizer App" class="project-hero-image" onerror="this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=BP+Digitizer'">
+            </div>
+            
+            <div class="project-content reveal">
+                <h2>About The App</h2>
+                <p>BP Digitizer is an Android app for logging, visualising, and exporting blood pressure readings. Point your camera at any non-smart digital monitor and let Gemini 2.5 Flash read the numbers for you — or enter them manually.</p>
+                <p>Built with modern Android development practices, it features an MVVM + Clean Architecture with Hilt DI, Jetpack Compose (Material 3), Room, and DataStore. It also supports secure API key storage in the Android Keystore, seamless PDF exporting, and AndroidX Health Connect integration.</p>
+                
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>AI-Assisted OCR:</strong> Gemini 2.5 Flash reads SYS / DIA / Pulse from a photo of any digital BP monitor.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>History & Trends:</strong> Vico line chart (40–180 mmHg) with 7d / 30d / 90d / All filters, pinch-to-zoom, and dotted reference lines at 120 / 80 mmHg. Includes landscape mode for full-screen trend charts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Health Risk Card & Profile:</strong> Personalised risk assessment (AHA-based) from the latest reading + user profile (birth year, sex, weight/height with BMI preview, smoker, diabetes, activity level).</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Export & Import:</strong> JSON · CSV · multi-page PDF (landscape charts + portrait table of last 30 days) and JSON import with timestamp-based deduplication.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Health Connect:</strong> Bulk sync + automatic per-reading push after each save when permissions are granted.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Reminders:</strong> Two configurable daily alarms (morning + evening) via AlarmManager with 15-min snooze action.</li>
+                </ul>
+                
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/BP Digitizer/Screenshot_20260529_123249_BP Digitizer.jpg" alt="BP Digitizer Screenshot 1" class="gallery-img">
+                    <img src="assets/BP Digitizer/Screenshot_20260529_123254_BP Digitizer.jpg" alt="BP Digitizer Screenshot 2" class="gallery-img">
+                    <img src="assets/BP Digitizer/Screenshot_20260529_123301_BP Digitizer.jpg" alt="BP Digitizer Screenshot 3" class="gallery-img">
+                    <img src="assets/BP Digitizer/Screenshot_20260529_123313_BP Digitizer.jpg" alt="BP Digitizer Screenshot 4" class="gallery-img">
+                    <img src="assets/BP Digitizer/Screenshot_20260529_123354_BP Digitizer.jpg" alt="BP Digitizer Screenshot 5" class="gallery-img">
+                    <img src="assets/BP Digitizer/Screenshot_20260529_123405_BP Digitizer.jpg" alt="BP Digitizer Screenshot 6" class="gallery-img">
+                </div>
+
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="bpdigitizer-privacy.html" class="btn btn-outline">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="bpdigitizer-privacy.html">BP Digitizer Privacy</a>
+                <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
+                <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
+                <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
+                <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
+                <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
