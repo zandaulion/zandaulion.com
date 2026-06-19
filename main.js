@@ -121,4 +121,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (touchEndX > touchStartX + 50) showImage(currentIndex - 1); // swipe right
     }
   }
+
+  // Inject Ko-fi floating button
+  const kofiButton = document.createElement('a');
+  kofiButton.href = 'https://ko-fi.com/zandaulion';
+  kofiButton.target = '_blank';
+  kofiButton.className = 'floating-kofi';
+  kofiButton.setAttribute('aria-label', 'Support me on Ko-fi');
+  kofiButton.innerHTML = `
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.4-.604-3.31.823-1.683 2.368-2.325 4.744-1.116l.099.052c.107.06.261.054.343-.015.084-.07.149-.241.149-.241.387-1.141 1.764-2.148 3.523-1.895 2.568.368 3.559 1.733 3.535 3.125-.018 1.054-.424 2.112-1.226 3.447h-.096zm10.026.177c-.496 1.879-1.745 2.127-1.745 2.127s-.766.126-1.57.173v-5.226c.723.047 1.442.067 1.442.067s1.378-.063 1.93.928c.518.932.443 1.931.443 1.931z" />
+    </svg>
+    Buy me a coffee
+  `;
+  document.body.appendChild(kofiButton);
 });
