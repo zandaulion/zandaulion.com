@@ -1,7 +1,7 @@
 from PIL import Image, ImageFilter, ImageEnhance
 
-input_path = 'assets/BP Digitizer/Screenshot_20260529_123254_BP Digitizer.jpg'
-output_path = 'feature_graphic.jpg'
+input_path = 'assets/BP Digitizer/Screenshot_2026-06-19-20-33-38-550_com.zandaulion.bpdigitized.jpg'
+output_path = 'assets/BP Digitizer/feature_graphic.jpg'
 
 # 1. Load the original screenshot
 img = Image.open(input_path)
