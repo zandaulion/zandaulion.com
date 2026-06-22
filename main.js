@@ -122,13 +122,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Inject official Ko-fi widget
-  const kofiScript = document.createElement('script');
-  kofiScript.type = 'text/javascript';
-  kofiScript.src = 'https://storage.ko-fi.com/cdn/widget/Widget_2.js';
-  kofiScript.onload = () => {
-    kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');
-    kofiwidget2.draw();
-  };
-  document.body.appendChild(kofiScript);
+
 });
