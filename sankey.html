@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankey Diagram Editor - My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <!-- Apache ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <div class="logo"><a href="index.html">My Portfolio</a></div>
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sankey.html" class="active">Sankey Editor</a></li>
+                    <li><a href="bpdigitizer.html">BP Digitizer</a></li>
+                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
+                    <li><a href="gravitywarp.html">Gravity Warp</a></li>
+                    <li><a href="gravitygarden.html">Gravity Garden</a></li>
+                    <li><a href="orbitpuzzles.html">OrbitPuzzles</a></li>
+                    <li><a href="gravitytdg.html">GravityTDG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="sankey-main container">
+        <div class="sankey-editor-layout">
+            
+            <!-- Left Panel: Controls -->
+            <div class="sankey-controls card">
+                <h2>Sankey Editor</h2>
+                <div class="control-actions" style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+                    <button id="btn-export" class="btn btn-outline" style="width: 100%;">Export as Image</button>
+                    <div style="display: flex; gap: 8px;">
+                        <button id="btn-export-json" class="btn btn-outline" style="flex: 1; font-size: 0.9rem;">Export JSON</button>
+                        <button id="btn-import-json" class="btn btn-outline" style="flex: 1; font-size: 0.9rem;">Import JSON</button>
+                    </div>
+                    <input type="file" id="import-file-input" accept=".json" style="display: none;">
+                </div>
+
+                <!-- Nodes Section -->
+                <div class="editor-section">
+                    <h3>Nodes</h3>
+                    <div class="input-group" style="flex-direction: column;">
+                        <input type="text" id="node-name" placeholder="Node Name">
+                        <div style="display: flex; gap: 8px; align-items: center;">
+                            <input type="color" id="node-color" value="#00d2ff" title="Node Color" disabled>
+                            <label style="display:flex; align-items:center; gap: 4px; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; flex: 1;">
+                                <input type="checkbox" id="auto-color" checked> Auto
+                            </label>
+                            <button id="add-node-btn" class="btn btn-primary" style="flex: 1;">Add Node</button>
+                        </div>
+                    </div>
+                    <ul id="nodes-list" class="item-list">
+                        <!-- Nodes populated via JS -->
+                    </ul>
+                </div>
+
+                <!-- Links Section -->
+                <div class="editor-section">
+                    <h3>Links</h3>
+                    <div class="input-group stacked-inputs">
+                        <select id="link-source">
+                            <option value="" disabled selected>Source Node</option>
+                        </select>
+                        <select id="link-target">
+                            <option value="" disabled selected>Target Node</option>
+                        </select>
+                        <input type="number" id="link-value" placeholder="Value (e.g. 10)" min="1">
+                        <button id="add-link-btn" class="btn btn-primary">Add Link</button>
+                    </div>
+                    <ul id="links-list" class="item-list">
+                        <!-- Links populated via JS -->
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Right Panel: Preview -->
+            <div class="sankey-preview card">
+                <div id="echarts-container" style="width: 100%; height: 600px;"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="sankey.js"></script>
+</body>
+</html>
