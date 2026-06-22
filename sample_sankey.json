@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    { "name": "Source A" },
+    { "name": "Source B" },
+    { "name": "Process C" },
+    { "name": "Process D" },
+    { "name": "Process E" },
+    { "name": "Outcome F" }
+  ],
+  "links": [
+    { "source": "Source A", "target": "Process C", "value": 10 },
+    { "source": "Source A", "target": "Process D", "value": 5 },
+    { "source": "Source B", "target": "Process D", "value": 8 },
+    { "source": "Source B", "target": "Process E", "value": 12 },
+    { "source": "Process C", "target": "Outcome F", "value": 10 },
+    { "source": "Process D", "target": "Outcome F", "value": 13 },
+    { "source": "Process E", "target": "Outcome F", "value": 12 }
+  ]
+}

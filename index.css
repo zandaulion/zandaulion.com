@@ -711,3 +711,10 @@ footer {
   border-radius: 50%;
   margin-right: 8px;
 }
+
+/* Official Ko-fi Widget Override to move to bottom-right */
+.floatingchat-container-wrap,
+.floating-chat-kofi-popup-iframe {
+  left: unset !important;
+  right: 20px !important;
+}
