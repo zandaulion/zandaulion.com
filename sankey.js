@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = myChart.getDataURL({
             type: 'png',
             pixelRatio: 2,
-            backgroundColor: '#0a0a0f'
+            backgroundColor: 'transparent'
         });
         const a = document.createElement('a');
         a.href = url;
