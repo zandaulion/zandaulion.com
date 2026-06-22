@@ -296,6 +296,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    function getFormattedTimestamp() {
+        const now = new Date();
+        const pad = (n) => n.toString().padStart(2, '0');
+        return `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+    }
+
     // Export Event
     btnExport.addEventListener('click', () => {
         const url = myChart.getDataURL({
@@ -305,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'sankey_diagram.png';
+        a.download = `zandaulion_sankey_${getFormattedTimestamp()}.png`;
         a.click();
     });
 
@@ -316,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'sankey_data.json';
+        a.download = `zandaulion_sankey_${getFormattedTimestamp()}.json`;
         a.click();
         URL.revokeObjectURL(url);
     });
