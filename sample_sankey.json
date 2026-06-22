@@ -1,19 +1,28 @@
 {
   "nodes": [
-    { "name": "Source A" },
-    { "name": "Source B" },
-    { "name": "Process C" },
-    { "name": "Process D" },
-    { "name": "Process E" },
-    { "name": "Outcome F" }
+    { "name": "Solar" },
+    { "name": "Wind" },
+    { "name": "Coal" },
+    { "name": "Natural Gas" },
+    { "name": "Power Grid" },
+    { "name": "Battery Storage" },
+    { "name": "Residential" },
+    { "name": "Industrial" },
+    { "name": "Commercial" },
+    { "name": "Energy Loss" }
   ],
   "links": [
-    { "source": "Source A", "target": "Process C", "value": 10 },
-    { "source": "Source A", "target": "Process D", "value": 5 },
-    { "source": "Source B", "target": "Process D", "value": 8 },
-    { "source": "Source B", "target": "Process E", "value": 12 },
-    { "source": "Process C", "target": "Outcome F", "value": 10 },
-    { "source": "Process D", "target": "Outcome F", "value": 13 },
-    { "source": "Process E", "target": "Outcome F", "value": 12 }
+    { "source": "Solar", "target": "Power Grid", "value": 30 },
+    { "source": "Solar", "target": "Battery Storage", "value": 15 },
+    { "source": "Wind", "target": "Power Grid", "value": 45 },
+    { "source": "Coal", "target": "Power Grid", "value": 60 },
+    { "source": "Natural Gas", "target": "Power Grid", "value": 50 },
+    { "source": "Natural Gas", "target": "Industrial", "value": 25 },
+    { "source": "Power Grid", "target": "Residential", "value": 50 },
+    { "source": "Power Grid", "target": "Commercial", "value": 40 },
+    { "source": "Power Grid", "target": "Industrial", "value": 60 },
+    { "source": "Power Grid", "target": "Energy Loss", "value": 45 },
+    { "source": "Battery Storage", "target": "Power Grid", "value": 10 },
+    { "source": "Battery Storage", "target": "Energy Loss", "value": 5 }
   ]
 }
