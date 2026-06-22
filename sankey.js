@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnExportJson = document.getElementById('btn-export-json');
     const btnImportJson = document.getElementById('btn-import-json');
     const importFileInput = document.getElementById('import-file-input');
+    const btnReset = document.getElementById('btn-reset');
 
     // Initialize ECharts
     const chartContainer = document.getElementById('echarts-container');
@@ -348,6 +349,29 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsText(file);
         // Reset file input so the same file can be loaded again if needed
         e.target.value = '';
+    });
+
+    // Reset Event
+    btnReset.addEventListener('click', () => {
+        if (nodes.length === 0 && links.length === 0) return; // Nothing to reset
+
+        const wantToSave = confirm('Would you like to export your work to JSON before resetting?');
+        if (wantToSave) {
+            btnExportJson.click();
+            setTimeout(() => {
+                if (confirm('Data exported! Are you sure you want to completely clear the diagram now?')) {
+                    nodes = [];
+                    links = [];
+                    updateChart();
+                }
+            }, 500);
+        } else {
+            if (confirm('Are you sure you want to completely reset the diagram? This cannot be undone.')) {
+                nodes = [];
+                links = [];
+                updateChart();
+            }
+        }
     });
 
     // Load initial empty chart
