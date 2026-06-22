@@ -57,6 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: 'item',
                 triggerOn: 'mousemove'
             },
+            graphic: [
+                {
+                    type: 'text',
+                    right: 10,
+                    bottom: 10,
+                    style: {
+                        text: 'zandaulion.com/sankey.html',
+                        fill: 'rgba(255, 255, 255, 0.4)',
+                        font: '14px Outfit, sans-serif'
+                    }
+                }
+            ],
             series: [
                 {
                     type: 'sankey',
