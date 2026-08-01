@@ -1,0 +1,43 @@
+Most tower defense games ask you to destroy whatever comes at you. Gravity TD asks you to save it.
+
+Stranded cosmonauts are drifting into the gravity well of a black hole, a dying star, an uncharted planet. You can't grab them — but you can bend the forces around them. Place jet fields to nudge their orbits, brakes to bleed off their speed, and rescue-beam turrets that charge a teleport shield before it's too late.
+
+REAL ORBITAL PHYSICS
+Every cosmonaut follows real gravity, computed every frame. Trajectory previews show exactly where each one will fly — until your turrets bend the path. Slingshot them around the core, slow them in friction zones, and turn a death spiral into a rescue orbit.
+
+FOUR WORLDS, FOUR STRATEGIES
+Each celestial body is a different puzzle, not a reskin:
+★ Black holes — charge the teleport shield before they cross the point of no return
+★ Stars — no beams needed: the radiation corona charges shields by exposure, so hold cosmonauts in the light. Heat burns their air near the surface, and the corona shrinks every wave, so the orbits that worked last time start leaking
+★ Planets — fill the re-entry shield, then steer them down to land
+★ Stations — no shield at all: brake them under the docking limit and thread them through an open bay
+
+A TOOLKIT, NOT A GRIND
+Six turret types, each with a real job:
+• Jet — push cosmonauts sideways to reshape their orbit
+• Brake — drag field that bleeds off velocity
+• Time Dilator — slows time itself inside its bubble
+• Multi Beam — charges every cosmonaut in range at once
+• Sniper Beam — long-range, high-power, one target at a time
+• Overcharge Cannon — a burst that fills a shield almost instantly
+
+And eight kinds of cosmonaut to rescue, each bending your plan a different way: steady regulars, speedsters at double pace and comets streaking at five times normal, divers that burn straight for the core, hulking drifters that drink up beam after beam, armoured heavies and bulwarks that shrug off charge after charge, and high-value VIPs worth reaching first.
+
+DESIGN, THEN WATCH IT PLAY OUT
+Every wave starts with a design phase: spend your energy budget, study the trajectory previews, place your answer. Then start the wave and watch physics do the rest — speed time up or slow it down as the rescue unfolds. Every cosmonaut you save returns energy for the next wave, and you can reposition turrets between waves at a discount.
+
+A 100-LEVEL CAMPAIGN
+One hundred levels across four celestial bodies, with escalating waves, multiple entry points, and tight energy budgets that make every placement matter. Earn up to three stars per level by saving more than the minimum — then come back and rescue them all.
+
+You always have four levels open to attempt, and every level you clear opens the next one — so a level that has you stumped never blocks the campaign. Stuck on a rescue? Go work another world and come back to it.
+
+YOUR PROGRESS, YOUR FILE
+Save a backup file of your campaign — stars, records and half-built levels — and share it to Drive, email or Files. Reinstalling or moving to a new phone is one tap: load the file and pick up exactly where you left off.
+
+FULLY 3D, BUILT FOR TOUCH
+Orbit the battlefield with one and two-finger gestures: pan, pinch to zoom, tilt, and rotate around glowing accretion disks, solar flares, and cloud-banded planets.
+
+NO ADS, NO SUBSCRIPTIONS
+No ads, ever. No account, no sign-in. The first 10 levels are free to play — unlock the remaining 90 across stars, planets and space stations with a single one-time purchase. Buy once, keep forever.
+
+Suit up, commander. The rescue beam is charged.
