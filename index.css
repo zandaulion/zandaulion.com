@@ -557,7 +557,8 @@ footer {
 
 /* Sankey Diagram Editor Styles */
 .sankey-main {
-  padding-top: 40px;
+  padding: 40px 24px;
+  width: 100%;
 }
 
 .sankey-editor-layout {
