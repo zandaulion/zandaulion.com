@@ -39,16 +39,147 @@
             </div>
             
             <div class="project-content reveal">
-                <h2>About The App</h2>
-                <p>Intârzieri Tren is a Progressive Web App (PWA) designed to track train delays across Romania. Built for convenience, it allows you to effortlessly monitor your journey without needing to install a heavy native app.</p>
-                <p>Simply add it to your home screen on Android or iOS for a full-screen, native-like experience. Access is invite-only, ensuring a reliable and streamlined service without the need for usernames or passwords.</p>
+                                <h2>About The App</h2>
+                <p>Watch one Romanian train between two stations and get a push notification when it departs, when its delay changes, and when it arrives.</p>
+                <p>Live at <code>https://<your-server>.<tailnet>.ts.net</code> (Tailscale Funnel &rarr; Caddy &rarr; rootless podman).</p>
+
+                <h2>Where the data comes from</h2>
+                <p>There is no public CFR API. The old <code>appiris.infofer.ro</code> endpoint is dead (NXDOMAIN) and the search flow on <code>mersultrenurilor.infofer.ro</code> is ReCaptcha gated. Two endpoints on that site are not:</p>
                 
-                <h2>Features</h2>
+                <table style="width: 100%; margin-bottom: 16px; border-collapse: collapse;">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <th style="text-align: left; padding: 8px;">Endpoint</th>
+                        <th style="text-align: left; padding: 8px;">What it gives</th>
+                        <th style="text-align: left; padding: 8px;">Used for</th>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <td style="padding: 8px;"><code>GET /ro-RO/Trains/LoadMapPartial</code></td>
+                        <td style="padding: 8px;">~1.7 MB of Leaflet markers: every running train, position, delay</td>
+                        <td style="padding: 8px;">live map / <code>/api/trains</code></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <td style="padding: 8px;"><code>POST /ro-RO/Trains/TrainsResult</code></td>
+                        <td style="padding: 8px;">one train's full itinerary: ordered stations, scheduled arr/dep, per-station delay</td>
+                        <td style="padding: 8px;">everything else</td>
+                    </tr>
+                </table>
+
+                <p>The POST needs an antiforgery token and a <code>ConfirmationKey</code>, both of which the <code>GET /ro-RO/Train/{number}</code> page hands out; the <code>ReCaptcha</code> field is accepted empty on the first attempt. So one itinerary costs two requests.</p>
+                <p>An identifying <code>User-Agent</code> is sent and works &mdash; no browser spoofing needed.</p>
+
+                <h3>Branches</h3>
+                <p>A train may be published as several <em>branches</em>: alternative descriptions of the same run. IR 1996 appears as both <code>Constanța&ndash;Craiova</code> (12 stops) and <code>Mangalia&ndash;Craiova</code> (21 stops). They are separate <code>div-stations-branch-*</code> sections and <strong>must</strong> be parsed separately &mdash; concatenating them produces duplicate stations and a timeline that jumps backwards. The one InfoFer shows by default is the one without <code>d-none</code>.</p>
+
+                <h2>How events are decided</h2>
+                <p>InfoFer publishes no "has departed" flag, so a station counts as passed once <code>scheduled_time + currently_reported_delay</code> is in the past &mdash; the same arithmetic a passenger on the platform does.</p>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Train Tracking:</strong> Track up to 5 trains simultaneously across the Romanian railway network, using real-time data sourced from cfr.ro.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Route Visualization:</strong> View the complete route of your train along with its measured delay at each station.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Push Notifications:</strong> Get instantly notified when your tracked train's delay changes, so you never miss an update.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Installable PWA:</strong> Add to your home screen on iOS and Android for quick access.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>departed</strong> &mdash; once past the expected departure from the chosen origin.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>delay</strong> &mdash; when the delay at the chosen destination moves by at least <code>DELAY_THRESHOLD</code> (default 5 min) <em>since the last notification sent</em>, not since the last poll, so small drift never accumulates into spam.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>arrived</strong> &mdash; once past the expected arrival at the chosen destination; retires the trip.</li>
+                </ul>
+                <p>A retired trip is never polled again. It stays visible in the user's list for <code>LIST_KEEP_HOURS</code> (12) so this morning's train is still there, and is deleted outright <code>PURGE_AFTER_HOURS</code> (48) after it finished so the table cannot grow without bound. Only retired trips are ever purged, so an overdue train that is still being watched is safe.</p>
+                <p>One subscription may watch <code>MAX_ACTIVE_TRIPS</code> (5) trains at once. Only <em>active</em> trips occupy a slot -- finished ones still visible in the list, and ones waiting to be purged, do not. The check and the insert share a <code>BEGIN IMMEDIATE</code> transaction so two requests arriving together cannot both see the last free slot; exceeding it returns 409.</p>
+                <p>Two retirement paths are distinguishable without an extra column: <code>arrived = 1</code> means an arrival was actually detected; <code>active = 0</code> with <code>arrived = 0</code> means the 6-hour fallback fired because the train stopped being published. The UI shows the second as <em>no longer tracked</em> rather than pretending it is still en route.</p>
+                <p>Subscribing to a train that already left does <strong>not</strong> fire a departure notification: <code>trips.prime()</code> adopts the current state silently.</p>
+                <p>Values InfoFer marks with <code>*</code> are its own projection between staff reports rather than a report; the UI tags these <code>est</code>.</p>
+
+                <h3>Reading the status line</h3>
+                <p>InfoFer states the delay, the time it was reported and <em>where</em> it was measured as one Romanian sentence, so the place only exists as prose:</p>
+
+                <table style="width: 100%; margin-bottom: 16px; border-collapse: collapse;">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <th style="text-align: left; padding: 8px;">Published</th>
+                        <th style="text-align: left; padding: 8px;">Parsed</th>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <td style="padding: 8px;"><code>98 min întârziere la plecarea din Târgu Ocna (Raportat la 20:59)</code></td>
+                        <td style="padding: 8px;">+98, 20:59, Târgu Ocna, <code>departure</code></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <td style="padding: 8px;"><code>102 min întârziere la trecerea fără oprire prin Radomirești</code></td>
+                        <td style="padding: 8px;">+102, Radomirești, <code>passing</code></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <td style="padding: 8px;"><code>166 min întârziere la sosirea în Galați</code></td>
+                        <td style="padding: 8px;">+166, Galați, <code>arrival</code></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <td style="padding: 8px;"><code>Fără întârziere, ajuns la destinație în Ploiești Sud</code></td>
+                        <td style="padding: 8px;">0, Ploiești Sud, <code>destination</code></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <td style="padding: 8px;"><code>3 min mai devreme, între stațiile Brazi - Ploiești Sud</code></td>
+                        <td style="padding: 8px;"><strong>-3</strong>, between Brazi/Ploiești Sud</td>
+                    </tr>
+                </table>
+                <p>Note the last one: <em>mai devreme</em> means <strong>early</strong>, and the sign is carried by the words rather than a minus, so it has to be applied when parsing.</p>
+
+                <h2>Load on the source</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;">The live map is fetched <strong>lazily</strong> &mdash; only when a client asks and the cached copy is older than <code>POLL_SECONDS</code>. An idle server makes no requests.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;">Itineraries are fetched only for trains somebody is watching, only inside that train's journey window (<code>LEAD_MINUTES</code> before scheduled departure until arrival + delay + <code>MAX_OVERDUE_HOURS</code>), and <strong>grouped by train</strong> &mdash; ten people watching the same train cost one fetch, not ten.</li>
+                </ul>
+
+                <h2>Access control</h2>
+                <p>Invite-only, no usernames or passwords. A device proves who it is with a random token in an <strong>HttpOnly cookie</strong>, so the credential never touches JavaScript. Trips belong to a device, so two phones never see each other's trains, and one invite registers exactly one device -- "a second phone needs a second invite" falls out of single-use invites rather than being a rule.</p>
+                <pre style="background: rgba(0,0,0,0.3); padding: 16px; border-radius: 8px; overflow-x: auto; margin-bottom: 16px;"><code>you (on the tailnet) --&gt; ./admin.sh invite "Ana"
+                             |
+                             v   https://.../i/ABCD-EFGH-JKLM   (WhatsApp)
+                    recipient opens --&gt; taps "Activate this device"
+                             |                    POST
+                             v
+                    device row + cookie --&gt; their own trains</code></pre>
+                <p><strong>Redemption is POST-only, behind a tap.</strong> Chat apps fetch shared links to build previews; if opening the URL redeemed it, WhatsApp would spend the invite before the recipient ever saw it. Preview bots do not POST. Verified: fetching <code>/i/&lt;code&gt;</code> leaves <code>used_at</code> null.</p>
+                <p>Codes are 12 characters from an alphabet with no <code>I</code>/<code>1</code>/<code>O</code>/<code>0</code> (~60 bits), expiring after <code>INVITE_TTL_DAYS</code>. <code>code_hash</code> is the authority for redemption; the plaintext is kept alongside it <strong>only while the invite can still register something</strong>, so it can be re-shown or copied, and is wiped on redemption. A spent invite therefore shows no code -- issue a new one rather than trying to recover it. <code>./admin.sh prune</code> (or the button on the admin page) deletes every used and expired invite; pending ones are never touched. They are accepted lower-case and without dashes, because the code doubles as the way in on iOS -- see below. Redemption is globally rate limited, since every request arrives from Caddy on loopback and per-IP limiting would be meaningless.</p>
+                <p>The admin page is at <strong>http://<tailnet-address>/admin/</strong> &mdash; tailnet only, served from a root the public site never maps, and <code>/admin*</code> is explicitly 404 there so a later change to the public root cannot start leaking it. Being plain HTTP it is not a secure context, so <code>navigator.clipboard</code> does not exist and the copy buttons fall back to <code>execCommand</code>.</p>
+                <p>Admin has <strong>no password</strong>: <code>/api/admin/*</code> exists only on the tailnet-only Caddy site, which injects <code>X-Admin: 1</code>. The public site refuses those paths outright <em>and</em> strips the header, so either control alone suffices. Manage it with <code>./admin.sh</code>.</p>
+                <p>An unregistered device gets 401 from every endpoint except <code>/api/health</code>, which exposes no user data and is left open for monitoring.</p>
+
+                <h3>Installing</h3>
+                <p>The app shows an install bar when it is running in a browser rather than standalone. On Chromium it captures <code>beforeinstallprompt</code> (suppressing Chrome's own mini-infobar) and triggers the real install dialog; the event fires only if the manifest, icons and a <code>fetch</code>-handling service worker are all in order, so a missing install button means one of those broke. Safari never fires it, so on iOS the bar explains the Share menu instead. Dismissal is remembered in <code>localStorage</code>, and the bar hides itself once <code>display-mode: standalone</code> matches.</p>
+
+                <h3>iOS</h3>
+                <p>Safari and an installed PWA have <strong>separate storage</strong>, so a code redeemed in Safari does not register the installed app -- and iOS only delivers push to the installed app. Recipients should add the page to the Home Screen first, open it from there, and type the code. That is why the invite is a typeable code and not only a link.</p>
+
+                <h2>Layout</h2>
+                <pre style="background: rgba(0,0,0,0.3); padding: 16px; border-radius: 8px; overflow-x: auto; margin-bottom: 16px;"><code>backend/
+  db.py       sqlite connection handling
+  accounts.py devices, invites, cookie tokens
+  iris.py     live-map parser (positions, delays, nearest station)
+  route.py    itinerary parser: branches, stops, day rollover, delays
+  trips.py    SQLite store + event detection + watcher loop
+  push.py     VAPID keypair + Web Push sending
+  app.py      FastAPI: /api/route, /api/trips, /api/vapid, /api/trains
+web/          the PWA (no build step, no framework)
+quadlet/      systemd unit for rootless podman</code></pre>
+                <p>State lives in the named volume <code>train-api-data</code> (<code>/data</code>): the VAPID keypair and <code>trips.db</code>. <strong>The keypair must survive rebuilds</strong> &mdash; regenerating it silently invalidates every browser subscription already issued.</p>
+
+                <h2>The watching list</h2>
+                <p>Each watched trip expands in place to show the train's whole route with the chosen leg highlighted, the same rendering used when picking stations (<code>stopRows()</code> serves both, interactive or not). Stops whose expected time has passed are dimmed, so how far the train has got is readable at a glance.</p>
+                <p>Expanding is a local DOM toggle, not a refetch, and the panel repaints from the cached route before revalidating -- otherwise the 60s refresh would blank an open panel back to a loading message.</p>
+
+                <h2>Deploying</h2>
+                <pre style="background: rgba(0,0,0,0.3); padding: 16px; border-radius: 8px; overflow-x: auto; margin-bottom: 16px;"><code>./deploy.sh          # web assets only
+./deploy.sh --api    # also rebuild the image and restart the unit
+./admin.sh invite X  # mint an invite (tailnet only)
+./admin.sh invites   # list, with codes for the ones still usable
+./admin.sh prune     # delete used and expired invites
+./admin.sh devices   # who is registered, and what they are watching
+./admin.sh revoke N  # lock a device out immediately
+./admin.sh forget N  # delete a device outright (its trips go too)
+./admin.sh prune-devices</code></pre>
+                <p>Assets are stamped with a content hash so the service worker and the <code>?v=</code> query strings change together.</p>
+
+                <h2>Caveats</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>The parsers are coupled to InfoFer's HTML</strong> and will break when it changes. Mitigated, not solved: malformed blocks are skipped individually, the last good map snapshot keeps serving, and <code>/api/health</code> exposes <code>stale</code>, <code>consecutive_failures</code> and the last watch pass.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Overnight trains</strong> wrap past midnight; day offsets are inferred from times moving backwards, tracked per arrival/departure rather than per station (a train can arrive 23:51 and depart 00:02).</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>SQLite cannot add a foreign key with <code>ALTER TABLE</code>.</strong> <code>push_subs.device_id</code> arrived that way during the migration, so on a migrated database it has no <code>ON DELETE CASCADE</code> and <code>PRAGMA foreign_key_check</code> reports clean because there is no constraint to check. Deleting a device removes its push subscription explicitly rather than trusting the cascade; <code>trips</code> was rebuilt during the migration so it does carry the key. The same limitation is why <code>ON CONFLICT(device_id)</code> needs its unique index created by hand.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>An invite link is a bearer token.</strong> Whoever opens it first is registered. Forwarded in a group chat, it is gone -- single use, expiry and revocation limit the damage but do not prevent it. <code>./admin.sh devices</code> shows last-seen times so a stranger is visible.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Losing the cookie means losing access.</strong> Cleared site data, a different browser, or private browsing all need a fresh invite. Storage for a <em>non-installed</em> site on iOS is evicted after 7 days idle, which is another reason to install to the Home Screen.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;">The Funnel URL is public regardless; the gate is application-level, so an unregistered visitor can load the shell but can do nothing with it.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>iOS</strong> only exposes Web Push to PWAs installed to the Home Screen.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;">Delays are reported by station staff, so they are as accurate &mdash; and as granular &mdash; as those reports.</li>
                 </ul>
                 
                 <h2>Gallery</h2>
