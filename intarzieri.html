@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intârzieri Tren - Track train delays in Romania.">
+    <title>Intârzieri Tren - App Details</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <div class="logo"><a href="index.html">My Portfolio</a></div>
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sankey.html">Sankey Editor</a></li>
+                    <li><a href="bpdigitizer.html">BP Digitizer</a></li>
+                    <li><a href="intarzieri.html" class="active">Intârzieri Tren</a></li>
+                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
+                    <li><a href="gravitywarp.html">Gravity Warp</a></li>
+                    <li><a href="gravitygarden.html">Gravity Garden</a></li>
+                    <li><a href="orbitpuzzles.html">OrbitPuzzles</a></li>
+                    <li><a href="gravitytdg.html">GravityTDG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">PWA</span>
+                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">Intârzieri Tren</h1>
+                <img src="assets/intarzieri/Screenshot_2026-08-14-22-24-21-507_com.android.chrome.jpg" alt="Intârzieri Tren App" class="project-hero-image" onerror="this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Intarzieri+Tren'">
+            </div>
+            
+            <div class="project-content reveal">
+                <h2>About The App</h2>
+                <p>Intârzieri Tren is a Progressive Web App (PWA) designed to track train delays across Romania. Built for convenience, it allows you to effortlessly monitor your journey without needing to install a heavy native app.</p>
+                <p>Simply add it to your home screen on Android or iOS for a full-screen, native-like experience. Access is invite-only, ensuring a reliable and streamlined service without the need for usernames or passwords.</p>
+                
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Train Tracking:</strong> Track up to 5 trains simultaneously across the Romanian railway network, using real-time data sourced from cfr.ro.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Route Visualization:</strong> View the complete route of your train along with its measured delay at each station.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Push Notifications:</strong> Get instantly notified when your tracked train's delay changes, so you never miss an update.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Installable PWA:</strong> Add to your home screen on iOS and Android for quick access.</li>
+                </ul>
+                
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/intarzieri/Screenshot_2026-08-14-22-24-21-507_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 1" class="gallery-img">
+                    <img src="assets/intarzieri/Screenshot_2026-08-14-22-24-34-045_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 2" class="gallery-img">
+                    <img src="assets/intarzieri/Screenshot_2026-08-14-22-24-40-495_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 3" class="gallery-img">
+                    <img src="assets/intarzieri/Screenshot_2026-08-14-22-24-43-384_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 4" class="gallery-img">
+                </div>
+
+                <div class="download-section" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
+                    <h3 style="margin-bottom: 16px;">Try It Out</h3>
+                    <p style="margin-bottom: 16px; color: var(--text-muted);">Access is invite-only. Open the web app on your mobile browser to install it.</p>
+                    <a href="https://intarzieri.zandaulion.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 24px; background: var(--accent-blue); color: white; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600;">Open Web App</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
+                <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
+                <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
+                <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
+                <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
+            <p style="margin-top: 10px; color: var(--text-muted);">Contact: <a href="mailto:zandaulion@gmail.com" style="color: var(--accent-blue); text-decoration: none;">zandaulion@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+<div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+</body>
+</html>
