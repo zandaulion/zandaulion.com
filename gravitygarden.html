@@ -10,24 +10,7 @@
 </head>
 <body>
     <div class="bg-glow"></div>
-    <header>
-        <div class="container nav-container">
-            <nav>
-                <div class="logo"><a href="index.html">My Portfolio</a></div>
-                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sankey.html">Sankey Editor</a></li>
-                    <li><a href="bpdigitizer.html">BP Digitizer</a></li>
-                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
-                    <li><a href="gravitywarp.html">Gravity Warp</a></li>
-                    <li><a href="gravitygarden.html" class="active">Gravity Garden</a></li>
-                    <li><a href="orbitpuzzles.html">OrbitPuzzles</a></li>
-                    <li><a href="gravitytdg.html">GravityTDG</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <portfolio-header active-page="gravitygarden.html"></portfolio-header>
 
     <main>
         <div class="container">
@@ -38,6 +21,11 @@
             </div>
             
             <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="#" class="btn btn-primary">Get it on Google Play (Coming Soon)</a>
+                    <a href="gravitygarden-privacy.html" class="btn btn-outline">Privacy Policy</a>
+                </div>
+
                 <h2>About The Game</h2>
                 <p>Gravity Garden is a breathtaking, relaxing physics-based puzzle experience set in lush environments with glowing alien flora and mysterious bioluminescent crystals. Utilizing a custom Box2D physics engine, the game features a deep fertility and spawning pipeline where the movement, resting, and impacts of your seed directly influence the growth of your garden. Manipulate gravity in four directions across 8 distinct levels—each boasting unique mechanics like underwater currents, updrafts, and labyrinthine walls—as you manage nutrients to cultivate a vibrant, living ecosystem.</p>
                 <p>Play at your own pace in the infinite, persistent Zen Mode, or test your problem-solving skills in Challenge Mode by carefully managing a nutrient budget, meeting environmental planting goals, and successfully capturing a wandering black-hole portal. Experiment with 4 unique seed types (Standard, Heavy, Bouncy, Light), each with its own physical properties and locked special plants, to discover 14 different plant variations. Watch in awe as moss, ferns, bioluminescent mushrooms, and towering crystals dynamically grow through multi-pass brushstroke rendering.</p>
@@ -66,27 +54,11 @@
                     <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-15-59-988_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 9" class="gallery-img">
                 </div>
 
-                <div class="project-links">
-                    <a href="#" class="btn btn-primary">Get it on Google Play (Coming Soon)</a>
-                    <a href="gravitygarden-privacy.html" class="btn btn-outline">Privacy Policy</a>
-                </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
-                <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
-                <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
-                <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
-                <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
-            </div>
-            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
-            <p style="margin-top: 10px; color: var(--text-muted);">Contact: <a href="mailto:zandaulion@gmail.com" style="color: var(--accent-blue); text-decoration: none;">zandaulion@gmail.com</a></p>
-        </div>
-    </footer>
+    <portfolio-footer></portfolio-footer>
     <script src="main.js"></script>
 <div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
 </body>

@@ -10,24 +10,7 @@
 </head>
 <body>
     <div class="bg-glow"></div>
-    <header>
-        <div class="container nav-container">
-            <nav>
-                <div class="logo"><a href="index.html">My Portfolio</a></div>
-                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sankey.html">Sankey Editor</a></li>
-                    <li><a href="bpdigitizer.html">BP Digitizer</a></li>
-                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
-                    <li><a href="gravitywarp.html">Gravity Warp</a></li>
-                    <li><a href="gravitygarden.html" class="active">Gravity Garden</a></li>
-                    <li><a href="orbitpuzzles.html">OrbitPuzzles</a></li>
-                    <li><a href="gravitytdg.html">GravityTDG</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <portfolio-header active-page="gravitygarden-privacy.html"></portfolio-header>
 
     <main>
         <div class="container reveal">
@@ -83,19 +66,7 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
-                <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
-                <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
-                <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
-                <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
-            </div>
-            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
-            <p style="margin-top: 10px; color: var(--text-muted);">Contact: <a href="mailto:zandaulion@gmail.com" style="color: var(--accent-blue); text-decoration: none;">zandaulion@gmail.com</a></p>
-        </div>
-    </footer>
+    <portfolio-footer></portfolio-footer>
     <script src="main.js"></script>
 <div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
 </body>

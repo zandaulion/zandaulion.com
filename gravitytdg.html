@@ -76,24 +76,7 @@
 </head>
 <body>
     <div class="bg-glow" style="background: radial-gradient(circle at top right, rgba(255, 56, 56, 0.08), transparent 60%);"></div>
-    <header>
-        <div class="container nav-container">
-            <nav>
-                <div class="logo"><a href="index.html">My Portfolio</a></div>
-                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sankey.html">Sankey Editor</a></li>
-                    <li><a href="bpdigitizer.html">BP Digitizer</a></li>
-                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
-                    <li><a href="gravitywarp.html">Gravity Warp</a></li>
-                    <li><a href="gravitygarden.html">Gravity Garden</a></li>
-                    <li><a href="orbitpuzzles.html">OrbitPuzzles</a></li>
-                    <li><a href="gravitytdg.html" class="active">GravityTDG</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <portfolio-header active-page="gravitytdg.html"></portfolio-header>
 
     <main>
         <div class="container">
@@ -104,6 +87,11 @@
             </div>
             
             <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitytdg&pcampaignid=web_share" class="btn btn-primary">Get it on Google Play</a>
+                    <a href="gravitytdg-privacy.html" class="btn btn-outline">Privacy Policy</a>
+                </div>
+
                 <h2>About The Game</h2>
                 <p>Most tower defense games ask you to destroy whatever comes at you. Gravity TD asks you to save it. Stranded cosmonauts are drifting into the gravity well of a black hole, a dying star, an uncharted planet. You can't grab them &mdash; but you can bend the forces around them. Place jet fields to nudge their orbits, brakes to bleed off their speed, and rescue-beam turrets that charge a teleport shield before it's too late.</p>
                 <p>Built with libGDX 1.12.1, the game leverages custom RK4 (Runge-Kutta 4th Order) numerical physics at a fixed 60Hz frequency to calculate smooth planetary gravity and complex force fields. With support for sophisticated multi-touch camera gestures (pan, pitch tilt, pinch-to-zoom, and axial rotation), players can navigate space arenas seamlessly.</p>
@@ -258,27 +246,11 @@
                     <img src="assets/GravityTDG/Screenshot_2026-08-06-15-54-08-093_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 8" class="gallery-img">
                 </div>
 
-                <div class="project-links">
-                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitytdg&pcampaignid=web_share" class="btn btn-primary">Get it on Google Play</a>
-                    <a href="gravitytdg-privacy.html" class="btn btn-outline">Privacy Policy</a>
-                </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
-                <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
-                <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
-                <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
-                <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
-            </div>
-            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
-            <p style="margin-top: 10px; color: var(--text-muted);">Contact: <a href="mailto:zandaulion@gmail.com" style="color: var(--accent-blue); text-decoration: none;">zandaulion@gmail.com</a></p>
-        </div>
-    </footer>
+    <portfolio-footer></portfolio-footer>
     <script src="main.js"></script>
 <div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
 </body>

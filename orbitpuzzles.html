@@ -10,24 +10,7 @@
 </head>
 <body>
     <div class="bg-glow"></div>
-    <header>
-        <div class="container nav-container">
-            <nav>
-                <div class="logo"><a href="index.html">My Portfolio</a></div>
-                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sankey.html">Sankey Editor</a></li>
-                    <li><a href="bpdigitizer.html">BP Digitizer</a></li>
-                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
-                    <li><a href="gravitywarp.html">Gravity Warp</a></li>
-                    <li><a href="gravitygarden.html">Gravity Garden</a></li>
-                    <li><a href="orbitpuzzles.html" class="active">OrbitPuzzles</a></li>
-                    <li><a href="gravitytdg.html">GravityTDG</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <portfolio-header active-page="orbitpuzzles.html"></portfolio-header>
 
     <main>
         <div class="container">
@@ -38,6 +21,11 @@
             </div>
             
             <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="#" class="btn btn-primary">Get it on Google Play (Coming Soon)</a>
+                    <a href="orbitpuzzles-privacy.html" class="btn btn-outline">Privacy Policy</a>
+                </div>
+
                 <h2>About The Game</h2>
                 <p>OrbitPuzzles is a challenging physics-based puzzle game where players design orbital systems by strategically placing celestial bodies like planets, moons, and asteroids. Your goal is to achieve specific configurations, such as completing a certain number of orbits without colliding with the central star or escaping the system.</p>
                 <p>Built completely natively in Kotlin, OrbitPuzzles features a highly stable custom $O(N^2)$ N-body simulator using Velocity Verlet integration and Plummer softening. Time pauses during the DESIGN phase so you can carefully position your bodies and adjust velocity vectors, and then flows in the RUN phase to test if your orbital mechanics hold up.</p>
@@ -62,27 +50,11 @@
                     <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-04-774_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 6" class="gallery-img">
                 </div>
 
-                <div class="project-links">
-                    <a href="#" class="btn btn-primary">Get it on Google Play (Coming Soon)</a>
-                    <a href="orbitpuzzles-privacy.html" class="btn btn-outline">Privacy Policy</a>
-                </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
-                <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
-                <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
-                <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
-                <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
-            </div>
-            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
-            <p style="margin-top: 10px; color: var(--text-muted);">Contact: <a href="mailto:zandaulion@gmail.com" style="color: var(--accent-blue); text-decoration: none;">zandaulion@gmail.com</a></p>
-        </div>
-    </footer>
+    <portfolio-footer></portfolio-footer>
     <script src="main.js"></script>
 <div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
 </body>

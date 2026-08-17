@@ -10,24 +10,7 @@
 </head>
 <body>
     <div class="bg-glow"></div>
-    <header>
-        <div class="container nav-container">
-            <nav>
-                <div class="logo"><a href="index.html">My Portfolio</a></div>
-                <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sankey.html">Sankey Editor</a></li>
-                    <li><a href="bpdigitizer.html">BP Digitizer</a></li>
-                    <li><a href="palebluedot.html">Pale Blue Dot</a></li>
-                    <li><a href="gravitywarp.html" class="active">Gravity Warp</a></li>
-                    <li><a href="gravitygarden.html">Gravity Garden</a></li>
-                    <li><a href="orbitpuzzles.html">OrbitPuzzles</a></li>
-                    <li><a href="gravitytdg.html">GravityTDG</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <portfolio-header active-page="gravitywarp.html"></portfolio-header>
 
     <main>
         <div class="container">
@@ -38,6 +21,16 @@
             </div>
             
             <div class="project-content reveal">
+                <div class="download-section" style="margin-bottom: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
+                    <h3 style="margin-bottom: 16px;">Try It Out</h3>
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitywarp&pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 24px; background: var(--accent-blue); color: white; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600;">Download on Google Play</a>
+                    </div>
+                </div>
+                <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="gravitywarp-privacy.html" class="btn btn-outline">Privacy Policy</a>
+                </div>
+
                 <h2>About The Game</h2>
                 <p>Gravity Warp is a high-speed, retro pixel-art physics arcade game built natively in Kotlin using the LibGDX framework. Navigate your starship through an endless, toroidal space using inverse-square gravity wells. Touching the screen creates a powerful gravitational pull that you must use to slingshot your ship, collect stardust, and outmaneuver explosive drifting and hunter mines.</p>
                 <p>Every element in the game—from the 13 unique pixel-art textures to the 4-track ambient synth audio—is generated procedurally at runtime. Experience a dynamic world wrapped in a parallax mesh background that distorts with gravitational lensing when you warp space. And if things get too intense, you can rely on the sophisticated AutoplayAI to take the wheel with its 8-step decision tree and look-ahead simulation.</p>
@@ -75,19 +68,7 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
-                <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
-                <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
-                <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
-                <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
-            </div>
-            <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
-            <p style="margin-top: 10px; color: var(--text-muted);">Contact: <a href="mailto:zandaulion@gmail.com" style="color: var(--accent-blue); text-decoration: none;">zandaulion@gmail.com</a></p>
-        </div>
-    </footer>
+    <portfolio-footer></portfolio-footer>
     <script src="main.js"></script>
 <div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
 </body>

@@ -1,19 +1,69 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Navigation Toggle
-  const mobileBtn = document.querySelector('.mobile-menu-btn');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (mobileBtn && navLinks) {
-    mobileBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-      const icon = mobileBtn.querySelector('i') || mobileBtn;
-      if (navLinks.classList.contains('show')) {
-        mobileBtn.innerHTML = '✕'; // Close icon
-      } else {
-        mobileBtn.innerHTML = '☰'; // Hamburger icon
-      }
-    });
+class PortfolioHeader extends HTMLElement {
+  connectedCallback() {
+    const activePage = this.getAttribute('active-page') || 'index.html';
+    
+    this.innerHTML = `
+      <header>
+          <div class="container nav-container">
+              <nav>
+                  <div class="logo"><a href="index.html">My Portfolio</a></div>
+                  <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+                  <ul class="nav-links">
+                      <li><a href="index.html" class="${activePage === 'index.html' ? 'active' : ''}">Home</a></li>
+                      <li><a href="sankey.html" class="${activePage === 'sankey.html' ? 'active' : ''}">Sankey Editor</a></li>
+                      <li><a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer</a></li>
+                      <li><a href="wbpdigitizer.html" class="${activePage === 'wbpdigitizer.html' ? 'active' : ''}">wBP Digitizer</a></li>
+                      <li><a href="intarzieri.html" class="${activePage === 'intarzieri.html' ? 'active' : ''}">Intârzieri Tren</a></li>
+                      <li><a href="palebluedot.html" class="${activePage === 'palebluedot.html' ? 'active' : ''}">Pale Blue Dot</a></li>
+                      <li><a href="gravitywarp.html" class="${activePage === 'gravitywarp.html' ? 'active' : ''}">Gravity Warp</a></li>
+                      <li><a href="gravitygarden.html" class="${activePage === 'gravitygarden.html' ? 'active' : ''}">Gravity Garden</a></li>
+                      <li><a href="orbitpuzzles.html" class="${activePage === 'orbitpuzzles.html' ? 'active' : ''}">OrbitPuzzles</a></li>
+                      <li><a href="gravitytdg.html" class="${activePage === 'gravitytdg.html' ? 'active' : ''}">GravityTDG</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+    `;
+    
+    const mobileBtn = this.querySelector('.mobile-menu-btn');
+    const navLinks = this.querySelector('.nav-links');
+    if (mobileBtn && navLinks) {
+      mobileBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        if (navLinks.classList.contains('show')) {
+          mobileBtn.innerHTML = '✕';
+        } else {
+          mobileBtn.innerHTML = '☰';
+        }
+      });
+    }
   }
+}
+customElements.define('portfolio-header', PortfolioHeader);
+
+class PortfolioFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <footer>
+          <div class="container">
+              <div class="footer-links">
+                  <a href="bpdigitizer-privacy.html">BP Digitizer Privacy</a>
+                  <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
+                  <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
+                  <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
+                  <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
+                  <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
+              </div>
+              <p>&copy; <span id="current-year">${new Date().getFullYear()}</span> My Portfolio. All rights reserved.</p>
+              <p style="margin-top: 10px; color: var(--text-muted);"><a href="mailto:zandaulion@gmail.com" style="color: var(--accent-blue); text-decoration: none;">zandaulion@gmail.com</a></p>
+          </div>
+      </footer>
+    `;
+  }
+}
+customElements.define('portfolio-footer', PortfolioFooter);
+
+document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll Reveal Animation
   const reveals = document.querySelectorAll('.reveal');
