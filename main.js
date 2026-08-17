@@ -1,25 +1,58 @@
+// Theme management
+const savedTheme = localStorage.getItem('theme') || 'system';
+
+function applyTheme(theme) {
+  let effectiveTheme = theme;
+  if (theme === 'system') {
+    effectiveTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+  if (effectiveTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+}
+
+applyTheme(savedTheme);
+
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
+  if (localStorage.getItem('theme') === 'system' || !localStorage.getItem('theme')) {
+    applyTheme('system');
+  }
+});
+
 class PortfolioHeader extends HTMLElement {
   connectedCallback() {
     const activePage = this.getAttribute('active-page') || 'index.html';
+    const currentTheme = localStorage.getItem('theme') || 'system';
+    
+    let themeIcon = '💻';
+    if (currentTheme === 'light') themeIcon = '☀️';
+    if (currentTheme === 'dark') themeIcon = '🌙';
     
     this.innerHTML = `
       <header>
           <div class="container nav-container">
               <nav>
                   <div class="logo"><a href="index.html">My Portfolio</a></div>
-                  <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
-                  <ul class="nav-links">
-                      <li><a href="index.html" class="${activePage === 'index.html' ? 'active' : ''}">Home</a></li>
-                      <li><a href="sankey.html" class="${activePage === 'sankey.html' ? 'active' : ''}">Sankey Editor</a></li>
-                      <li><a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer</a></li>
-                      <li><a href="wbpdigitizer.html" class="${activePage === 'wbpdigitizer.html' ? 'active' : ''}">wBP Digitizer</a></li>
-                      <li><a href="intarzieri.html" class="${activePage === 'intarzieri.html' ? 'active' : ''}">Intârzieri Tren</a></li>
-                      <li><a href="palebluedot.html" class="${activePage === 'palebluedot.html' ? 'active' : ''}">Pale Blue Dot</a></li>
-                      <li><a href="gravitywarp.html" class="${activePage === 'gravitywarp.html' ? 'active' : ''}">Gravity Warp</a></li>
-                      <li><a href="gravitygarden.html" class="${activePage === 'gravitygarden.html' ? 'active' : ''}">Gravity Garden</a></li>
-                      <li><a href="orbitpuzzles.html" class="${activePage === 'orbitpuzzles.html' ? 'active' : ''}">OrbitPuzzles</a></li>
-                      <li><a href="gravitytdg.html" class="${activePage === 'gravitytdg.html' ? 'active' : ''}">GravityTDG</a></li>
-                  </ul>
+                  <div class="nav-right" style="display: flex; align-items: center; gap: 24px;">
+                      <ul class="nav-links">
+                          <li><a href="index.html" class="${activePage === 'index.html' ? 'active' : ''}">Home</a></li>
+                          <li><a href="sankey.html" class="${activePage === 'sankey.html' ? 'active' : ''}">Sankey Editor</a></li>
+                          <li><a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer</a></li>
+                          <li><a href="wbpdigitizer.html" class="${activePage === 'wbpdigitizer.html' ? 'active' : ''}">wBP Digitizer</a></li>
+                          <li><a href="intarzieri.html" class="${activePage === 'intarzieri.html' ? 'active' : ''}">Intârzieri Tren</a></li>
+                          <li><a href="palebluedot.html" class="${activePage === 'palebluedot.html' ? 'active' : ''}">Pale Blue Dot</a></li>
+                          <li><a href="gravitywarp.html" class="${activePage === 'gravitywarp.html' ? 'active' : ''}">Gravity Warp</a></li>
+                          <li><a href="gravitygarden.html" class="${activePage === 'gravitygarden.html' ? 'active' : ''}">Gravity Garden</a></li>
+                          <li><a href="orbitpuzzles.html" class="${activePage === 'orbitpuzzles.html' ? 'active' : ''}">OrbitPuzzles</a></li>
+                          <li><a href="gravitytdg.html" class="${activePage === 'gravitytdg.html' ? 'active' : ''}">GravityTDG</a></li>
+                      </ul>
+                      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme" style="background: none; border: none; color: var(--text-main); font-size: 1.2rem; cursor: pointer; transition: transform 0.3s; margin-left: auto;">
+                        ${themeIcon}
+                      </button>
+                      <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+                  </div>
               </nav>
           </div>
       </header>
@@ -35,6 +68,36 @@ class PortfolioHeader extends HTMLElement {
         } else {
           mobileBtn.innerHTML = '☰';
         }
+      });
+    }
+
+    const themeToggle = this.querySelector('#theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const current = localStorage.getItem('theme') || 'system';
+        let newTheme = 'system';
+        
+        if (current === 'system') {
+          newTheme = 'light';
+          themeToggle.innerHTML = '☀️';
+        } else if (current === 'light') {
+          newTheme = 'dark';
+          themeToggle.innerHTML = '🌙';
+        } else {
+          newTheme = 'system';
+          themeToggle.innerHTML = '💻';
+        }
+
+        localStorage.setItem('theme', newTheme);
+        applyTheme(newTheme);
+        
+        // Brief rotation animation
+        themeToggle.style.transform = 'rotate(360deg)';
+        setTimeout(() => {
+          themeToggle.style.transition = 'none';
+          themeToggle.style.transform = 'rotate(0deg)';
+          setTimeout(() => themeToggle.style.transition = 'transform 0.3s', 10);
+        }, 300);
       });
     }
   }
