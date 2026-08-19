@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         fontFamily: 'Outfit',
                         fontSize: 14,
                         formatter: '{b} ({c})',
-                        distance: -8,
+                        distance: -45,
                         textBorderColor: textOutlineColor,
                         textBorderWidth: 2
                     },
