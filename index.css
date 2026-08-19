@@ -142,7 +142,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: clamp(12px, 3vw, 48px);
+  gap: clamp(6px, 3vw, 48px);
 }
 
 .logo {
