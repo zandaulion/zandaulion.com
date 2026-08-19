@@ -36,39 +36,14 @@ class PortfolioHeader extends HTMLElement {
               <nav>
                   <div class="logo"><a href="index.html">Zandaulion</a></div>
                   <div class="nav-right" style="display: flex; align-items: center; gap: 24px; min-width: 0;">
-                      <ul class="nav-links">
-                          <li><a href="sankey.html" class="${activePage === 'sankey.html' ? 'active' : ''}">Sankey Editor</a></li>
-                          <li><a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer</a></li>
-                          <li><a href="wbpdigitizer.html" class="${activePage === 'wbpdigitizer.html' ? 'active' : ''}">wBP Digitizer</a></li>
-                          <li><a href="intarzieri.html" class="${activePage === 'intarzieri.html' ? 'active' : ''}">Intârzieri Tren</a></li>
-                          <li><a href="palebluedot.html" class="${activePage === 'palebluedot.html' ? 'active' : ''}">Pale Blue Dot</a></li>
-                          <li><a href="gravitywarp.html" class="${activePage === 'gravitywarp.html' ? 'active' : ''}">Gravity Warp</a></li>
-                          <li><a href="gravitygarden.html" class="${activePage === 'gravitygarden.html' ? 'active' : ''}">Gravity Garden</a></li>
-                          <li><a href="orbitpuzzles.html" class="${activePage === 'orbitpuzzles.html' ? 'active' : ''}">OrbitPuzzles</a></li>
-                          <li><a href="gravitytdg.html" class="${activePage === 'gravitytdg.html' ? 'active' : ''}">GravityTDG</a></li>
-                      </ul>
                       <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme" style="background: none; border: none; color: var(--text-main); font-size: 1.2rem; cursor: pointer; transition: transform 0.3s; margin-left: auto;">
                         ${themeIcon}
                       </button>
-                      <button class="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
                   </div>
               </nav>
           </div>
       </header>
     `;
-    
-    const mobileBtn = this.querySelector('.mobile-menu-btn');
-    const navLinks = this.querySelector('.nav-links');
-    if (mobileBtn && navLinks) {
-      mobileBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-        if (navLinks.classList.contains('show')) {
-          mobileBtn.innerHTML = '✕';
-        } else {
-          mobileBtn.innerHTML = '☰';
-        }
-      });
-    }
 
     const themeToggle = this.querySelector('#theme-toggle');
     if (themeToggle) {
