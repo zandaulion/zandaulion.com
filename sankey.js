@@ -100,7 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     label: {
                         color: textColor,
                         fontFamily: 'Outfit',
-                        fontSize: 14
+                        fontSize: 14,
+                        formatter: '{b} ({c})'
                     },
                     itemStyle: {
                         borderWidth: 0,
