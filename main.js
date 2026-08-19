@@ -36,6 +36,20 @@ class PortfolioHeader extends HTMLElement {
               <nav>
                   <div class="logo"><a href="index.html">Zandaulion</a></div>
                   <div class="nav-right" style="display: flex; align-items: center; gap: 24px; min-width: 0;">
+                      <div class="nav-dropdown">
+                          <span class="nav-dropdown-title">Projects ▾</span>
+                          <div class="nav-dropdown-content">
+                              <a href="sankey.html" class="${activePage === 'sankey.html' ? 'active' : ''}">Sankey Editor</a>
+                              <a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer</a>
+                              <a href="wbpdigitizer.html" class="${activePage === 'wbpdigitizer.html' ? 'active' : ''}">wBP Digitizer</a>
+                              <a href="intarzieri.html" class="${activePage === 'intarzieri.html' ? 'active' : ''}">Intârzieri Tren</a>
+                              <a href="palebluedot.html" class="${activePage === 'palebluedot.html' ? 'active' : ''}">Pale Blue Dot</a>
+                              <a href="gravitywarp.html" class="${activePage === 'gravitywarp.html' ? 'active' : ''}">Gravity Warp</a>
+                              <a href="gravitygarden.html" class="${activePage === 'gravitygarden.html' ? 'active' : ''}">Gravity Garden</a>
+                              <a href="orbitpuzzles.html" class="${activePage === 'orbitpuzzles.html' ? 'active' : ''}">OrbitPuzzles</a>
+                              <a href="gravitytdg.html" class="${activePage === 'gravitytdg.html' ? 'active' : ''}">GravityTDG</a>
+                          </div>
+                      </div>
                       <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme" style="background: none; border: none; color: var(--text-main); font-size: 1.2rem; cursor: pointer; transition: transform 0.3s; margin-left: auto;">
                         ${themeIcon}
                       </button>
