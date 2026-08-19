@@ -11,6 +11,11 @@ function applyTheme(theme) {
   } else {
     document.documentElement.removeAttribute('data-theme');
   }
+  
+  const logoImg = document.getElementById('brand-logo');
+  if (logoImg) {
+    logoImg.src = effectiveTheme === 'light' ? 'assets/brand/logo_light.jpg' : 'assets/brand/logo.jpg';
+  }
 }
 
 applyTheme(savedTheme);
@@ -30,11 +35,14 @@ class PortfolioHeader extends HTMLElement {
     if (currentTheme === 'light') themeIcon = '☀️';
     if (currentTheme === 'dark') themeIcon = '🌙';
     
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const logoSrc = isLight ? 'assets/brand/logo_light.jpg' : 'assets/brand/logo.jpg';
+    
     this.innerHTML = `
       <header>
           <div class="container nav-container">
               <nav>
-                  <div class="logo"><a href="index.html" style="display: flex; align-items: center;"><img src="assets/brand/logo.jpg" alt="Zandaulion Logo" style="height: 36px; width: 36px; border-radius: 50%; margin-right: 12px; object-fit: cover;">Zandaulion</a></div>
+                  <div class="logo"><a href="index.html" style="display: flex; align-items: center;"><img id="brand-logo" src="${logoSrc}" alt="Zandaulion Logo" style="height: 36px; width: 36px; border-radius: 50%; margin-right: 12px; object-fit: cover;">Zandaulion</a></div>
                   <div class="nav-right" style="display: flex; align-items: center; gap: 24px; min-width: 0;">
                       <div class="nav-dropdown">
                           <span class="nav-dropdown-title">Projects ▾</span>
