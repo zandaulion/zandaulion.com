@@ -38,10 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
         myChart.resize();
     });
 
+    // Observe theme changes to update chart text color
+    const themeObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'data-theme') {
+                updateChart();
+            }
+        });
+    });
+    themeObserver.observe(document.documentElement, { attributes: true });
+
     function updateChart() {
         // Save to localStorage
         localStorage.setItem('sankey_nodes', JSON.stringify(nodes));
         localStorage.setItem('sankey_links', JSON.stringify(links));
+
+        const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
+        const textColor = isLightMode ? '#222222' : '#ffffff';
+        const watermarkColor = isLightMode ? 'rgba(0, 0, 0, 0.4)' : 'rgba(255, 255, 255, 0.4)';
 
         // Filter out nodes that have no links so they don't pile up awkwardly on the canvas.
         // They will remain in the left-hand editor list.
@@ -65,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     bottom: 10,
                     style: {
                         text: 'zandaulion.com/sankey.html',
-                        fill: 'rgba(255, 255, 255, 0.4)',
+                        fill: watermarkColor,
                         font: '14px Outfit, sans-serif'
                     }
                 }
@@ -84,13 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         curveness: 0.5
                     },
                     label: {
-                        color: '#fff',
+                        color: textColor,
                         fontFamily: 'Outfit',
                         fontSize: 14
                     },
                     itemStyle: {
                         borderWidth: 0,
-                        borderColor: '#fff'
+                        borderColor: textColor
                     }
                 }
             ]
