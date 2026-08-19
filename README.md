@@ -42,4 +42,7 @@ Since this is a purely static site with no build process required, you can view 
 The portfolio is designed to be hosted seamlessly on **GitHub Pages** (or any static hosting provider like Netlify/Vercel). Simply deploy the `main` branch.
 
 ## 📝 License
-This portfolio template and its contents are for personal showcase purposes. All rights reserved for the individual applications, artwork, and code represented within.
+The source code of this portfolio is open-sourced under the **GNU General Public License v3.0 (GPL-3.0)**. See the `LICENSE` file for more details.
+
+**Trademark & Brand Exception:**
+The "Zandaulion" name, brand identity, and all logo image files located in the `assets/brand/` directory are **NOT** covered by the GPL license. All rights to these trademarks and visual brand assets are strictly reserved. You may not use them in derivative works or to identify your own projects without permission.
