@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         myChart.resize();
     });
 
-    // Handle Width Slider
+    // Handle Width and Height Sliders
     const widthSlider = document.getElementById('width-slider');
     const widthDisplay = document.getElementById('width-display');
     if (widthSlider && widthDisplay) {
@@ -46,6 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const widthVal = e.target.value;
             widthDisplay.textContent = widthVal;
             chartContainer.style.width = `${widthVal}%`;
+            myChart.resize();
+        });
+    }
+
+    const heightSlider = document.getElementById('height-slider');
+    const heightDisplay = document.getElementById('height-display');
+    if (heightSlider && heightDisplay) {
+        heightSlider.addEventListener('input', (e) => {
+            const heightVal = e.target.value;
+            heightDisplay.textContent = heightVal;
+            // Base height is 800px
+            chartContainer.style.height = `${800 * (heightVal / 100)}px`;
             myChart.resize();
         });
     }
