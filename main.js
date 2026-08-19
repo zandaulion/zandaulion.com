@@ -34,7 +34,7 @@ class PortfolioHeader extends HTMLElement {
       <header>
           <div class="container nav-container">
               <nav>
-                  <div class="logo"><a href="index.html">Zandaulion</a></div>
+                  <div class="logo"><a href="index.html" style="display: flex; align-items: center;"><img src="assets/brand/logo.jpg" alt="Zandaulion Logo" style="height: 36px; width: 36px; border-radius: 50%; margin-right: 12px; object-fit: cover;">Zandaulion</a></div>
                   <div class="nav-right" style="display: flex; align-items: center; gap: 24px; min-width: 0;">
                       <div class="nav-dropdown">
                           <span class="nav-dropdown-title">Projects ▾</span>
