@@ -35,7 +35,7 @@ class PortfolioHeader extends HTMLElement {
           <div class="container nav-container">
               <nav>
                   <div class="logo"><a href="index.html">Zandaulion</a></div>
-                  <div class="nav-right" style="display: flex; align-items: center; gap: 24px;">
+                  <div class="nav-right" style="display: flex; align-items: center; gap: 24px; min-width: 0;">
                       <ul class="nav-links">
                           <li><a href="sankey.html" class="${activePage === 'sankey.html' ? 'active' : ''}">Sankey Editor</a></li>
                           <li><a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer</a></li>
