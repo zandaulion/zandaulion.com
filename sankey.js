@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
         const textColor = isLightMode ? '#222222' : '#ffffff';
         const watermarkColor = isLightMode ? 'rgba(0, 0, 0, 0.4)' : 'rgba(255, 255, 255, 0.4)';
+        const textOutlineColor = isLightMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.8)';
 
         // Filter out nodes that have no links so they don't pile up awkwardly on the canvas.
         // They will remain in the left-hand editor list.
@@ -101,7 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         color: textColor,
                         fontFamily: 'Outfit',
                         fontSize: 14,
-                        formatter: '{b} ({c})'
+                        formatter: '{b} ({c})',
+                        distance: -8,
+                        textBorderColor: textOutlineColor,
+                        textBorderWidth: 2
                     },
                     itemStyle: {
                         borderWidth: 0,
