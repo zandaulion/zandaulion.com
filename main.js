@@ -52,6 +52,7 @@ class PortfolioHeader extends HTMLElement {
                       <div class="nav-dropdown">
                           <span class="nav-dropdown-title">Projects ▾</span>
                           <div class="nav-dropdown-content">
+                              <a href="omaha.html" class="${activePage === 'omaha.html' ? 'active' : ''}">Pocket Omaha</a>
                               <a href="sankey.html" class="${activePage === 'sankey.html' ? 'active' : ''}">Sankey Editor</a>
                               <a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer</a>
                               <a href="wbpdigitizer.html" class="${activePage === 'wbpdigitizer.html' ? 'active' : ''}">wBP Digitizer</a>
