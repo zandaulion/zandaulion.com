@@ -34,7 +34,7 @@ class PortfolioHeader extends HTMLElement {
       <header>
           <div class="container nav-container">
               <nav>
-                  <div class="logo"><a href="index.html">My Portfolio</a></div>
+                  <div class="logo"><a href="index.html">Zandaulion</a></div>
                   <div class="nav-right" style="display: flex; align-items: center; gap: 24px;">
                       <ul class="nav-links">
                           <li><a href="index.html" class="${activePage === 'index.html' ? 'active' : ''}">Home</a></li>
@@ -117,7 +117,7 @@ class PortfolioFooter extends HTMLElement {
                   <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
                   <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
               </div>
-              <p>&copy; <span id="current-year">${new Date().getFullYear()}</span> My Portfolio. All rights reserved.</p>
+              <p>&copy; <span id="current-year">${new Date().getFullYear()}</span> Zandaulion. All rights reserved.</p>
               <p style="margin-top: 10px; color: var(--text-muted);"><a href="mailto:zandaulion@gmail.com" style="color: var(--accent-blue); text-decoration: none;">zandaulion@gmail.com</a></p>
           </div>
       </footer>
