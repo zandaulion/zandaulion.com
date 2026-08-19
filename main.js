@@ -16,6 +16,11 @@ function applyTheme(theme) {
   if (logoImg) {
     logoImg.src = effectiveTheme === 'light' ? 'assets/brand/logo_light.jpg' : 'assets/brand/logo.jpg';
   }
+  
+  const favicon = document.querySelector('link[rel="icon"]');
+  if (favicon) {
+    favicon.href = effectiveTheme === 'light' ? 'assets/brand/logo_light.jpg' : 'assets/brand/logo.jpg';
+  }
 }
 
 applyTheme(savedTheme);
