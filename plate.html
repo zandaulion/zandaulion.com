@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plate - A vision-first calorie and macro tracking PWA backed by Gemini and human-in-the-loop portion calibration.">
+    <title>Plate - Project Details</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="plate.html"></portfolio-header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">PWA / Web App</span>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">Plate</h1>
+                </div>
+                <img src="assets/Plate/feature_graphic.jpg" alt="Plate App" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Plate'">
+            </div>
+            
+            <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/plate" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">View on GitHub</a>
+                </div>
+
+                <h2>About The Project</h2>
+                <p><strong>Photograph a meal, correct the portion, log it.</strong></p>
+<p>Plate is a calorie and macro log whose primary input is a photo. The multimodal vision model identifies the food on the plate; the person who ate it corrects the weight. That division of labour is not a convenience &mdash; it is the core finding the entire design rests on.</p>
+<p>Benchmarked across 145 plates from the Nutrition5k dataset with weighed ground truth, visual human correction was proven to recover roughly half of the accuracy gain of a physical scale, creating an ideal balance between low daily friction and nutritional precision.</p>
+
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Vision-First Food Logging:</strong> Snap a photo and let the vision model identify foods, decompose composite meals, and estimate baseline nutrition instantly.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Empirical Portion Calibration:</strong> Transparent three-tier error bands based on whether weight was scale-measured, user-adjusted by eye, or model-estimated.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 "Not what you're eating?" Re-Read:</strong> State what a dish actually is to re-analyze the in-memory photo from scratch without taking a second picture.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏷️ Stated Nutrition Validation:</strong> Direct manual entry for printed panels or restaurant menus with automated sanity checks against physically impossible caloric densities.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📊 Energy & Weight Trends:</strong> Dense, honest daily time-series visualization tracking caloric intake stacked by macronutrient energy alongside least-squares expenditure trends.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📦 Complete Data Ownership & Zero Lock-in:</strong> Gated-free exports yielding structured JSON, spreadsheet-ready CSV, and a self-contained ZIP archive containing every captured meal photo.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Private & Account Budgeted:</strong> Strictly zero-telemetry architecture with built-in per-account daily quota guards to ensure sustainable operational costs.</li>
+                </ul>
+                
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/Plate/feature_graphic.jpg" alt="Plate Graphic" class="gallery-img">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="main.js?v=2.0"></script>
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+</body>
+</html>

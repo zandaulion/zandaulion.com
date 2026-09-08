@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thermostat - Multi-property temperature logger, interactive PWA dashboard, and Discord bot for Salus iT500 and Tuya sensors.">
+    <title>Thermostat Monitor - Project Details</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="thermostat.html"></portfolio-header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">IoT & Automation</span>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">Thermostat Monitor</h1>
+                </div>
+                <img src="assets/Thermostat/feature_graphic.jpg" alt="Thermostat Monitor" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Thermostat+Monitor'">
+            </div>
+            
+            <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/thermostat" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">View on GitHub</a>
+                </div>
+
+                <h2>About The Project</h2>
+                <p>A full-stack IoT telemetry and control system that logs temperature and heating relay status from Salus iT500 thermostats and Tuya sensors across several properties.</p>
+<p>Surfaces operational data three ways: a responsive Progressive Web App with live readings and interactive charts, a Discord bot for fast chat queries, and an automated continuous CSV data store.</p>
+
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Live PWA Dashboard:</strong> Real-time readings per property, interactive historical charts, and push notifications for temperature thresholds.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🤖 Discord Bot Integration:</strong> Query live temperatures with <code>!temp</code>, plot 7-day temperature trends with <code>!plot</code>, and download raw telemetry with <code>!data</code>.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔥 Visual Heating Overlays:</strong> Generates professional charts via matplotlib featuring shaded visual overlays whenever heating relays are active.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏱️ Automated Background Logging:</strong> Records ambient temperature, target setpoints, and relay states every 10 minutes.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🐳 Dockerized & Self-Hosted:</strong> Zero-hassle containerized deployment with Docker Compose designed for 24/7 reliability on Raspberry Pi or home servers.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌍 Timezone Synchronized:</strong> Automatic local timezone alignment across all loggers, graphs, and Discord notifications.</li>
+                </ul>
+                
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/Thermostat/feature_graphic.jpg" alt="Thermostat Monitor Graphic" class="gallery-img">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="main.js?v=2.0"></script>
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+</body>
+</html>
