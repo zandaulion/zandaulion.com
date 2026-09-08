@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pwa-kit - A zero-dependency, self-updating PWA mechanism extracted and generalised from Plate.">
+    <title>pwa-kit ⚡ - Project Details</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwakit.html"></portfolio-header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">Dev Tool / Open Source</span>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">pwa-kit ⚡</h1>
+                </div>
+                <img src="assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=pwa-kit'">
+            </div>
+            
+            <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">View on GitHub</a>
+                </div>
+
+                <h2>About The Project</h2>
+                <p><strong>The update mechanism from Plate, generalised: a PWA that updates itself and says so afterwards, rather than asking permission it does not need.</strong></p>
+                <p>Copy <code>sw.js</code> and <code>pwa-update.js</code> into an app's web root and wire them up. There is no build step, no bundler, and zero dependencies &mdash; which is the point: these apps are static directories.</p>
+                <p>A new service worker installs and activates immediately without waiting for tabs to close. Each open window safely completes current work before reloading seamlessly onto the latest version.</p>
+
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Immediate Activation:</strong> New workers install and take over without stale workers lingering for days across open browser tabs.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Unsaved Work Protection (<code>isBusy</code>):</strong> The worker asks rather than blindly navigating; pages defer reloads until pending edits or form states are safely resolved.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Network-First Freshness:</strong> Online requests always win to ensure deployed changes take effect on the very next reload, falling back to cache when offline.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 Clean Session Storage Notifications:</strong> Avoids polluting URL query strings with update flags, informing users cleanly through in-app toasts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 Built-in Cache Escape Hatch:</strong> Includes an emergency unregister and cache-bust mechanism for wedged clients.</li>
+                </ul>
+                
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit Graphic" class="gallery-img">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="main.js?v=2.0"></script>
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+</body>
+</html>

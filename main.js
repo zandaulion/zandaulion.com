@@ -65,6 +65,8 @@ class PortfolioHeader extends HTMLElement {
                               <a href="thermostat.html" class="${activePage === 'thermostat.html' ? 'active' : ''}">Thermostat</a>
                               <a href="olxdeals.html" class="${activePage === 'olxdeals.html' ? 'active' : ''}">OLX Deal Finder</a>
                               <a href="admitere.html" class="${activePage === 'admitere.html' ? 'active' : ''}">Admitere Liceu</a>
+                              <a href="pwakit.html" class="${activePage === 'pwakit.html' ? 'active' : ''}">pwa-kit</a>
+                              <a href="pwainvite.html" class="${activePage === 'pwainvite.html' ? 'active' : ''}">PWA Invite Console</a>
 
                               <div style="padding: 10px 16px 6px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-purple); font-weight: 700; border-top: 1px solid var(--border-light);">Android &amp; Games</div>
                               <a href="palebluedot.html" class="${activePage === 'palebluedot.html' ? 'active' : ''}">Pale Blue Dot</a>

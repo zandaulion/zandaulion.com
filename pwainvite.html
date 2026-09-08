@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PWA Invite Console - Unified device and invite administration for private PWAs.">
+    <title>PWA Invite Console 🔐 - Project Details</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwainvite.html"></portfolio-header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">Admin Tool / Infrastructure</span>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">PWA Invite Console 🔐</h1>
+                </div>
+                <img src="assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=PWA+Invite+Console'">
+            </div>
+            
+            <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-invite-console" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">View on GitHub</a>
+                </div>
+
+                <h2>About The Project</h2>
+                <p><strong>One page for the invite and device administration of every app behind the invite mechanism.</strong></p>
+                <p>It is the only administration GUI &mdash; the apps used to carry one each, which meant multiple tabs open and multiple places to remember. It lives in its own repository because it belongs to none of the apps it fronts.</p>
+                <p>Tailscale TLS terminates in front of the private listener, restricting administrative access strictly to authorized Tailnet nodes with zero exposed public endpoints or hardcoded passwords.</p>
+
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔑 Unified Invite Lifecycle:</strong> Generate, share, track expiration, and monitor redemption of app invitation links across services from one place.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Device Management:</strong> Inspect enrolled client devices, view last-seen timestamps, assign friendly labels, and instantly revoke compromised sessions.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Tailnet Private Security:</strong> No credentials stored in front-end code; authenticated via private reverse-proxy header injection reachable only through Tailscale.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Zero-Dependency PWA:</strong> Vanilla JavaScript single-page application with immediate revalidation and zero framework bloat.</li>
+                </ul>
+                
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console Graphic" class="gallery-img">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="main.js?v=2.0"></script>
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+</body>
+</html>
