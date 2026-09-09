@@ -55,6 +55,7 @@ class PortfolioHeader extends HTMLElement {
                               <div style="padding: 6px 16px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-blue); font-weight: 700;">PWAs &amp; Web Apps</div>
                               <a href="omaha.html" class="${activePage === 'omaha.html' ? 'active' : ''}">Pocket Omaha</a>
                               <a href="plate.html" class="${activePage === 'plate.html' ? 'active' : ''}">Plate</a>
+                              <a href="miscare.html" class="${activePage === 'miscare.html' ? 'active' : ''}">Mișcare</a>
                               <a href="spendosaurus.html" class="${activePage === 'spendosaurus.html' ? 'active' : ''}">Spendosaurus</a>
                               <a href="magpie.html" class="${activePage === 'magpie.html' ? 'active' : ''}">Magpie</a>
                               <a href="wbpdigitizer.html" class="${activePage === 'wbpdigitizer.html' ? 'active' : ''}">wBP Digitizer</a>

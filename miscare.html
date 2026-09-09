@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mișcare — An adaptive, zero-friction daily movement PWA designed from zero with Gemini Vision equipment recognition and a no-shaming philosophy.">
+    <title>Mișcare - Project Details</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/Miscare/icon.svg">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="miscare.html"></portfolio-header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">PWA / Web App</span>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">Mișcare</h1>
+                </div>
+                <img src="assets/Miscare/feature_graphic.jpg" alt="Mișcare App" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Mișcare'">
+            </div>
+            
+            <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">View on GitHub</a>
+                </div>
+
+                <h2>About The Project</h2>
+                <p><strong>Start from zero. Move at your own pace. No guilt, just adjustment.</strong></p>
+                <p><strong>Mișcare</strong> is an adaptive Progressive Web App (PWA) designed to remove every layer of psychological and physical friction associated with daily fitness. Engineered specifically for absolute beginners or individuals returning after long pauses, Mișcare eliminates complicated set/rep spreadsheets, punitive streak counters, and intimidating gym jargon.</p>
+                <p>Upon opening the app, users are greeted directly with <em>"Today's Session"</em> — ready to launch with a single tap. If life gets busy, a one-click <em>"Make it 5 minutes"</em> option scales the volume down. If life gets in the way for days, there are no broken streaks or guilt messages; the app simply welcomes you back with a gentle re-entry routine.</p>
+                <p>Built with Vanilla JavaScript (ES modules) and Node.js with native SQLite, Mișcare integrates with <strong>Gemini Vision</strong> to recognize available home equipment from photos, <strong>pwa-kit</strong> for zero-downtime offline caching and seamless updates, and <strong>pwa-invite-console</strong> for passwordless device onboarding.</p>
+
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Starting from Zero:</strong> Safe, foundational bodyweight movements (wall push-ups, chair sit-to-stand, gentle glute bridges, shoulder mobility stretches) paired with warm illustrated visual guides and protection filters for knees, lower back, and wrists.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Zero-Friction Daily Sessions:</strong> The home screen serves today's routine immediately. Includes one-tap variations like <em>"Make it 5 min"</em> and <em>"Swap exercise"</em>, accompanied by a quiet timer and Web Audio API chime.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Gemini Vision Equipment Recognition:</strong> Take a photo of household items or exercise equipment (dumbbells, resistance bands, yoga mats, or sturdy chairs). Google Gemini Vision automatically detects items and unlocks matching exercise variants.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 "No Shaming" Adaptive Logic:</strong> Active days are accumulated as permanent milestones rather than fragile streaks. If a session is rated "A bit tough", the next routine scales intensity down automatically; if returning after a break, an automatic gentle re-adaptation session is scheduled.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 Instant Updates via PWA Kit:</strong> Integrated with <code>pwa-kit</code> for network-first service worker caching with content-hash version stamping and non-disruptive update prompts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 Passwordless Device Pairing:</strong> Seamless onboarding via <code>pwa-invite-console</code> pairing codes (<code>XXXX-YYYY-ZZZZ</code>) issuing secure, long-lived device session tokens.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 Dual Theme &amp; Offline Resilience:</strong> Automatic light/dark palette with forest-emerald accents, fully functional offline backed by IndexedDB and LocalStorage.</li>
+                </ul>
+
+                <h2>Architecture &amp; Tech Stack</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0 40px;">
+                    <div class="feature-item">
+                        <h3>Frontend Architecture</h3>
+                        <p>Vanilla JavaScript (ES Modules) without build-step overhead, responsive CSS custom properties, custom Web Audio synthesis, and Service Worker offline caching.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Backend Engine</h3>
+                        <p>Node.js v24 leveraging native <code>DatabaseSync</code> from <code>node:sqlite</code>, Express REST endpoints, and Google Gemini Multimodal Vision API integration.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Integrations</h3>
+                        <p>Native contract compatibility with <strong>pwa-kit</strong> for version lifecycle management and <strong>pwa-invite-console</strong> for invite token redemption and device management.</p>
+                    </div>
+                </div>
+                
+                <h2>Exercise Compendium Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/Miscare/wall_pushups.jpg" alt="Wall Push-ups Guide" class="gallery-img">
+                    <img src="assets/Miscare/chair_sit_to_stand.jpg" alt="Chair Sit-to-Stand Guide" class="gallery-img">
+                    <img src="assets/Miscare/glute_bridge_gentle.jpg" alt="Gentle Glute Bridge Guide" class="gallery-img">
+                    <img src="assets/Miscare/shoulder_rolls_and_reach.jpg" alt="Shoulder Rolls and Reach Guide" class="gallery-img">
+                    <img src="assets/Miscare/chest_opener_stretch.jpg" alt="Chest Opener Stretch Guide" class="gallery-img">
+                    <img src="assets/Miscare/dumbbell_goblet_squat.jpg" alt="Dumbbell Goblet Squat Guide" class="gallery-img">
+                    <img src="assets/Miscare/incline_pushups.jpg" alt="Incline Push-ups Guide" class="gallery-img">
+                    <img src="assets/Miscare/standing_calf_raises.jpg" alt="Standing Calf Raises Guide" class="gallery-img">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="main.js?v=2.0"></script>
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+</body>
+</html>
