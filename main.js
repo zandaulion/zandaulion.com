@@ -126,6 +126,7 @@ class PortfolioFooter extends HTMLElement {
       <footer>
           <div class="container">
               <div class="footer-links">
+                  <a href="plate-privacy.html">Plate Privacy</a>
                   <a href="bpdigitizer-privacy.html">BP Digitizer Privacy</a>
                   <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
                   <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
