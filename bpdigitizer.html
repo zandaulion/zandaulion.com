@@ -25,10 +25,13 @@
             </div>
             
             <div class="project-content reveal">
-                <div class="project-links" style="margin-bottom: 32px;">
-                    <a href="assets/BP%20Digitizer/BP-Digitizer-1.5.2.apk" class="btn btn-primary" download style="margin-right: 12px;">Download APK</a>
-                    <a href="bpdigitizer-privacy.html" class="btn btn-outline" style="margin-right: 12px;">Privacy Policy</a>
+                <div class="project-links" style="margin-bottom: 24px; display: flex; align-items: center; flex-wrap: wrap; gap: 12px;">
+                    <button type="button" class="btn btn-primary" onclick="showApkNotAvailable()" style="font-family: inherit; font-size: 1rem; cursor: pointer;">Download APK</button>
+                    <a href="bpdigitizer-privacy.html" class="btn btn-outline">Privacy Policy</a>
                     <a href="wbpdigitizer.html" class="btn btn-outline">Or try the Web App</a>
+                </div>
+                <div id="apk-status-msg" style="display: none; margin-bottom: 24px; padding: 12px 18px; border-radius: 12px; background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.35); color: #fca5a5; font-size: 0.95rem; font-weight: 500;">
+                    ⚠️ <strong>Not available:</strong> The APK download is currently not available. Please try the <a href="wbpdigitizer.html" style="color: #6ee7b7; text-decoration: underline;">Web App</a> instead.
                 </div>
 
                 <h2>About The App</h2>
@@ -79,6 +82,16 @@
 
     <portfolio-footer></portfolio-footer>
     <script src="main.js?v=2.0"></script>
+    <script>
+        function showApkNotAvailable() {
+            alert('APK is currently not available. Please try the Web App instead.');
+            const msg = document.getElementById('apk-status-msg');
+            if (msg) {
+                msg.style.display = 'block';
+                msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+    </script>
 <div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
 </body>
 </html>
