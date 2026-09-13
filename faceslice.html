@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faceslice — From a single frontal photo to laser-cut metal plates for a layered topographic portrait relief. Slicing engine, real-time material estimation, and DXF export.">
+    <title>Faceslice - Project Details</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/Faceslice/icon.svg">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="faceslice.html"></portfolio-header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">PWA / Web App</span>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                    <img src="assets/Faceslice/icon-512.png" alt="Faceslice Icon" style="width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.25); object-fit: cover;">
+                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">Faceslice</h1>
+                </div>
+                <img src="assets/Faceslice/feature_graphic.jpg" alt="Faceslice App" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Faceslice'">
+            </div>
+            
+            <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://faceslice.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Launch Web App</a>
+                    <a href="https://github.com/zandaulion/faceslice" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
+                </div>
+
+                <h2>About The Project</h2>
+                <p><strong>De la o fotografie frontală la plăcile de tăiat pentru un portret în straturi — un relief ca o hartă topografică, din tablă, lipit manual strat peste strat.</strong></p>
+                <p><strong>Faceslice</strong> transforms a standard 2D selfie into physical layered topographic sculptures made from laser-cut sheet metal or cardstock. Instead of demanding complex multi-camera photogrammetry or finicky 3D scanning apps, Faceslice requires just a single frontal photograph and an interpupillary distance (IPD) measurement in millimeters to fix the physical scale.</p>
+                <p>To reconstruct a genuine head from one photo, Faceslice orchestrates a three-model computer vision fusion pipeline where each model contributes what it does best: silhouette segmentation captures hair, ears, and jawlines; monocular depth estimates broad skull volume; and facial mesh landmarker models extract crisp facial landmarks (nose, eye sockets, lips) as residual surface displacement.</p>
+                <p>The resulting 3D solid is sliced into parallel planes at custom angles. Frontal slicing produces self-aligning nested contour isohypses, complete with etched alignment guides on every plate, hollowed-out hidden interiors for up to 80% weight reduction, and instant production-grade DXF export.</p>
+
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Single-Photo 3D Reconstruction:</strong> Converts a single frontal selfie into a complete depth-relief solid, calibrated to real-world dimensions using pupil distance.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 3-Model AI Fusion Engine:</strong> Combines MediaPipe multiclass segmentation, ONNX monocular depth estimation (Depth Anything V2), and MediaPipe face landmarkers for balanced skull volume and facial sharpness.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️ Topographic Contour Slicing:</strong> Slices solids into parallel planes with free angle control (frontal for concentric nested isohypses, horizontal for side-profile laminations).</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 Self-Aligning Assembly Guides:</strong> When sliced frontally, each metal layer is nested inside the one below, and the bounding line of the next plate is engraved directly on its surface for easy alignment without jigs.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ Interior Hollowing &amp; Material Economy:</strong> Automatically removes concealed internal geometry, reducing material consumption and weight by up to 80% (e.g. 10 kg solid steel down to 1.9 kg hollow rings) while keeping sturdy bonding margins.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ Parametric Fabrication Controls:</strong> Real-time interactive adjustment of sheet thickness (0.5–10 mm), relief compression, kerf compensation, facial relief exaggeration, and slice angles.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Real-Time Material &amp; Weight Estimator:</strong> Dynamically calculates plate count, unique contours, required sheet metal area (dm²), stack height, and exact mass for Steel, Brass, and Aluminum.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 Production-Ready DXF Export:</strong> Exports fully vectorized, laser/waterjet/plasma CAM-ready DXF files nested to custom sheet stock dimensions with a single click.</li>
+                </ul>
+
+                <h2>Architecture &amp; Tech Stack</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0 40px;">
+                    <div class="feature-item">
+                        <h3>Interactive Web Client</h3>
+                        <p>Vanilla JavaScript (ES Modules), responsive canvas and SVG contour rendering, real-time parametric sliders, and offline-capable PWA architecture.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Vision &amp; Geometry Engine</h3>
+                        <p>Python 3 computational core utilizing MediaPipe (Segmentation &amp; Face Mesh), ONNX Runtime (Depth Anything V2 Small), Shapely for 2D polygon booleans and hollowing, and ezdxf for CAD generation.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Production Deployment</h3>
+                        <p>Containerized with Podman and systemd Quadlet, automated asset hash version stamping via <code>deploy.sh</code>, and served through Caddy reverse proxy with sub-second slicing response times on CPU.</p>
+                    </div>
+                </div>
+                
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/Faceslice/screenshot_01_app_editor.png" alt="Faceslice Studio — 3D Contour Relief, Cut Planes & Material Estimation" class="gallery-img">
+                    <img src="assets/Faceslice/screenshot_02_contour_closeup.png" alt="Topographic Elevation Relief — High-Resolution Face Layer Contours" class="gallery-img">
+                    <img src="assets/Faceslice/screenshot_03_bust_relief.png" alt="Bust Portrait Slicing — Shoulder Contours & Spaced Cutting Planes" class="gallery-img">
+                    <img src="assets/Faceslice/screenshot_04_dense_slices.png" alt="High-Density Slicing — 220 Slices (0.5 mm) & 153 Contours Analysis" class="gallery-img">
+                    <img src="assets/Faceslice/screenshot_05_hair_profile.png" alt="Complex Hair Silhouette & Solid Profile Cut Analysis" class="gallery-img">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="main.js?v=2.0"></script>
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+</body>
+</html>
