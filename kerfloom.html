@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kerfloom — Art that holds together. Turns photographs and prepared artwork into connected, manufacturing-aware geometry for CNC plasma and laser cutting. 13 cut styles, automated bridges, kerf simulation, encrypted sharing, and DXF export.">
+    <title>Kerfloom - Project Details</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/Kerfloom/icon.svg">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="kerfloom.html"></portfolio-header>
+
+    <main>
+        <div class="container">
+            <div class="project-header reveal">
+                <span class="card-tag tag-app" style="margin-bottom: 24px;">PWA / Web App</span>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                    <img src="assets/Kerfloom/icon.svg" alt="Kerfloom Icon" style="width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.25); object-fit: cover;">
+                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">Kerfloom</h1>
+                </div>
+                <img src="assets/Kerfloom/feature_graphic.jpg" alt="Kerfloom App" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Kerfloom'">
+            </div>
+            
+            <div class="project-content reveal">
+                <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://stencil-cnc.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Launch Web App</a>
+                    <a href="https://github.com/zandaulion/Stencil-cnc" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
+                </div>
+
+                <h2>About The Project</h2>
+                <p><strong>Art that holds together.</strong></p>
+                <p><strong>Kerfloom</strong> turns photographs and prepared artwork into connected, manufacturing-aware geometry for CNC plasma, laser, and waterjet cutting. It combines creative graphic image treatments with panel sizing, automated structural support design, physical kerf validation, manual touch-ups, in-browser project management, encrypted sharing, and CAM-ready exports into a unified, installable Progressive Web App.</p>
+                <p>The foundational law of CNC stencils is simple: <em>dark geometry represents retained metal, and light geometry represents material to remove</em>. In plasma and laser cutting, disconnected islands fall through the cutting table, and delicate bridges burn away. Kerfloom keeps the source treatment, structural frame, support bridges, manual brush edits, and automated manufacturing repairs as separate non-destructive inputs so the final panel can be consistently rebuilt, validated, and exported without altering original artwork.</p>
+
+                <h2>The 5-Step Workflow</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>1️⃣ Prepare:</strong> Import photographs or vector artwork, select from 13 cut styles (including Slats, Hatch, Variable Dots, Contour Bands, Stencil Portraits, and Radial Cuts with progressive ray splitting), and adjust bar pitch, angles, detail strength, and background isolation.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>2️⃣ Panel:</strong> Configure sheet metal stock dimensions (default 1250 &times; 2500 mm), portrait or landscape orientation, perimeter frame widths, anchor edges, and plasma constraints (default 2 mm minimum opening and 3 mm finished gap/web).</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>3️⃣ Support:</strong> Automatically inspect topological connectivity, identify floating islands that would fall out, and generate smart, filter-aligned bridges or organic slat stabilizers with portrait-aware dark-feature placement to protect facial expressions from interruption.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>4️⃣ Validate:</strong> Simulate real cutting kerf (e.g. 1.2 mm torch width). Locate unsevered dropouts, tight cuts, and fragile webs. Preview reversible manufacturing repair layers before making changes.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>5️⃣ Export:</strong> Download verified closed-contour DXF files calibrated for CAM software, clean SVG vector files, full-resolution preview PNGs, or portable Kerfloom project files with descriptive timestamped filenames (e.g., <code>project_297x420mm_slats_frame_cut_2026-09-15-162005.dxf</code>).</li>
+                </ul>
+
+                <h2>Features</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 13 Parametric Cut Styles:</strong> Line art, Poster stencil, Icon stencil, Graphic portrait, Silhouette, Negative-space linework, Icon / Woodcut, Contour bands, Slats, Hatch, Radial cuts (with directly controlled solid-hub diameter and progressive ray splitting), Variable dots, and Ornamental symmetry.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌉 Portrait-Aware Smart Bridges:</strong> Automatically generates structural ties aligned with active filter directions, with portrait-aware dark-feature placement and sparse slat stabilizers to protect facial features from interruption.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔥 Kerf Simulation &amp; Physical Validation:</strong> Previews post-kerf physical geometry to guarantee that finished features preserve minimum web strength, checking disconnected material, minimum openings, and close cuts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛠️ Automated Reversible Repairs:</strong> Cleans isolated raster slivers, widens close cuts, and strengthens weak webs with a single click without permanently altering the underlying artistic filters.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ Interactive Editing Brushes:</strong> Real-time manual Add/Remove metal tools, straight lines, connected-region fill, and single-gesture undo for artisan precision.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗃️ In-Browser Project Library &amp; Recoverable Trash:</strong> Browse panels with rendered geometry thumbnails, cut style, validation status, and source image availability. Full project lifecycle with rename, duplicate, download, and recoverable Trash.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏱️ Autosave &amp; 10 Recovery Rollback Points:</strong> Real-time status reporting, <code>Ctrl/Cmd+S</code> immediate saving, pending edit flushes, and up to ten automatic recovery rollback points retained after validation, repair, support generation, and export.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 Encrypted Private Project Sharing:</strong> Generate server-hosted encrypted snapshot packages protected by random link secrets and expiring in 7, 30, or 90 days. Recipients import an independent local editable copy without ongoing cloud sync or cross-device overwrite risks.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📦 Retained Export Artefacts:</strong> In-browser artifact store keeping up to 30 recent SVG, DXF, and PNG exports directly associated with each project, using standardized descriptive names like <code>project_297x420mm_slats_frame_cut_YYYY-MM-DD.dxf</code>.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Installable Offline PWA:</strong> Runs as an installable, offline-capable Progressive Web App once authorized on a device.</li>
+                </ul>
+
+                <h2>Architecture &amp; Tech Stack</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0 40px;">
+                    <div class="feature-item">
+                        <h3>Client PWA &amp; Geometry Core</h3>
+                        <p>Vanilla JavaScript (ES Modules), deterministic client-side 2D topology and mask processing engine, responsive HTML5 canvas preview, and IndexedDB storage for projects, checkpoints, and export artefacts.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Analysis Microservice</h3>
+                        <p>Isolated Python 3 / FastAPI service utilizing OpenCV and MediaPipe for advanced portrait analysis, depth filtering, and photographic cut pattern synthesis.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Security Gateway &amp; Sharing</h3>
+                        <p>Node.js / Express security gateway handling invite-token authentication, encrypted expiring project share packages, rootless Podman Quadlet containers on private networks, and Caddy reverse proxy.</p>
+                    </div>
+                </div>
+                
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/Kerfloom/screenshot_01_prepare.png" alt="Step 1: Prepare — Cut Styles, Slat Parameters & Tone Separation" class="gallery-img">
+                    <img src="assets/Kerfloom/screenshot_02_panel.png" alt="Step 2: Panel — Sizing, Sheet Orientation & Perimeter Frame Anchors" class="gallery-img">
+                    <img src="assets/Kerfloom/screenshot_03_support.png" alt="Step 3: Support — Connectivity Inspection & Automated Smart Bridges" class="gallery-img">
+                    <img src="assets/Kerfloom/screenshot_04_validate.png" alt="Step 4: Validate — Kerf Simulation & Manufacturing Repairs Engine" class="gallery-img">
+                    <img src="assets/Kerfloom/screenshot_05_export.png" alt="Step 5: Export — CAM-Ready DXF, SVG & Kerfloom Project Files" class="gallery-img">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="main.js?v=2.0"></script>
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+</body>
+</html>
