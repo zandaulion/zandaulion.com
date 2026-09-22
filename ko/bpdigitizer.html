@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Android 및 웹용 BP Digitizer: 혈압 측정값을 기록하고, 추세를 탐색하고, 기록을 내보냅니다.">
+    <title>BP Digitizer — 안드로이드 및 웹 | Zandaulion</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ko/bpdigitizer.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/bpdigitizer.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/bpdigitizer.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/bpdigitizer.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/bpdigitizer.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/bpdigitizer.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/bpdigitizer.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/bpdigitizer.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/bpdigitizer.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/bpdigitizer.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/bpdigitizer.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/bpdigitizer.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/bpdigitizer.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/bpdigitizer.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="bpdigitizer.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ko-KR">← 작업실로 돌아가기</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">일상 도구</span>
+                    <h1>BP Digitizer</h1>
+                                        <p class="project-lead">Android 및 웹 형식의 혈압 기록 1개. 판독값을 기록하고, 추세를 탐색하고, 기록을 내보냅니다.</p>
+                    <div class="project-links">
+                        <a href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">웹 앱 열기</a>
+                        <a href="#android-version" class="btn btn-outline">Android 앱 살펴보기</a>
+                        <a href="../bpdigitizer-privacy.html" class="btn btn-outline" hreflang="en-US">안드로이드 개인정보 보호정책</a>
+                    </div>
+                </div>
+                <img src="../assets/BP Digitizer/feature_graphic.jpg" alt="BP Digitizer 앱" class="project-hero-image">
+            </div>
+
+            <div class="project-content">
+                <h2>하나의 앱. 그것을 사용하는 두 가지 방법.</h2>
+                <p>BP Digitizer는 혈압 측정값을 기록하고, 기록을 탐색하고, 자신의 기록을 유지하는 데 도움이 됩니다. 기본 Android 앱을 사용하거나 브라우저에서 PWA를 엽니다. 이전에 여기에 wBP Digitizer로 나열된 웹 버전은 동일한 프로젝트의 일부입니다.</p>
+                <div class="platform-options" aria-label="플랫폼을 선택하세요">
+                    <section class="platform-option">
+                        <span class="section-number">브라우저에서 · PWA</span>
+                        <h3>그것을 열고 시작하십시오.</h3>
+                        <p>판독값을 기록하고, 차트를 보고, 보고서를 내보냅니다. 오프라인 사용을 위해 홈 화면에 설치하세요. 판독값은 브라우저에 저장됩니다.</p>
+                        <a class="btn btn-primary" href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer">웹 앱 열기 ↗</a>
+                    </section>
+                    <section class="platform-option">
+                        <span class="section-number">휴대전화 · Android</span>
+                        <h3>네이티브 일상의 동반자.</h3>
+                        <p>Android 버전의 카메라 스캔, 헬스 커넥트 통합, 알림을 살펴보세요.</p>
+                        <p class="platform-status">현재 Android APK를 사용할 수 없습니다. 이제 웹 버전을 사용할 수 있습니다.</p>
+                        <a class="btn btn-outline" href="#android-version">안드로이드 버전 보기 ↓</a>
+                    </section>
+                </div>
+
+                <section id="web-version" aria-labelledby="web-title">
+                    <h2 id="web-title">웹용 BP Digitizer</h2>
+                    <p>PWA는 수동 입력, 차트 및 내보내기 기능을 통해 동일한 프로젝트를 브라우저에 제공합니다. 판독값은 브라우저의 IndexedDB에 로컬로 저장됩니다. 홈 화면에 설치하여 가까이에 두세요.</p>
+                    <p><a href="https://github.com/zandaulion/bp-digitizer-web" target="_blank" rel="noopener noreferrer">GitHub에서 웹 소스 탐색 ↗</a></p>
+                    <h3>웹 앱 내부</h3>
+<div class="gallery-grid">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-35-44-031_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 1" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-35-56-427_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 2" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-03-493_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-07-825_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-15-532_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-24-148_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-32-019_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-51-488_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 8" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-56-240_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 9" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-37-03-180_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 10" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-37-09-725_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 11" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                    <h3>웹 기능</h3>
+<ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 로컬 우선 및 PWA:</strong> 홈 화면에 설치하고 오프라인으로 작동합니다. 판독값은 브라우저의 IndexedDB에 있으며 어디에도 전송되지 않습니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ 빠른 입장:</strong> 마지막 판독값에서 시드된 슬라이더를 사용한 수동 입력입니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 종합 차트:</strong> 추세 차트(수축기 + 확장기, 120/80 기준선) 및 수축기-이완기 분산. 7/30/90일 및 전체 기간.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 스마트 분석:</strong> 버스트 평균화는 연속적으로 수행된 판독값을 단일 지점으로 축소합니다. 장치에서 계산된 통찰력(아침 vs 저녁, 범위 내 시간, 정상적인 연속 기록, 컨텍스트 태그)</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🩺 임상 논리:</strong> AHA 구역(정상/상승/1단계/2단계/위기), MAP 및 맥압. 귀하의 건강 프로필을 통한 위험 평가.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 내보내기 및 보고서:</strong> CSV 및 JSON 내보내기. 개요 페이지, 차트 및 테이블 기록이 포함된 자세한 PDF 보고서입니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 글로벌:</strong> 12개 언어가 재번역되지 않고 Android 앱에서 전달됩니다.</li>
+                </ul>
+                </section>
+
+                <section id="android-version" aria-labelledby="android-title">
+                    <h2 id="android-title">안드로이드용 BP Digitizer</h2>
+                    <p>기본 Android 앱은 빠른 수동 입력과 선택적 프리미엄 카메라 스캔, 추세 보기, 헬스 커넥트 통합, PDF 내보내기 및 알림을 결합합니다. 판독값은 장치에 유지됩니다.</p>
+                    <p class="platform-status">현재 APK 다운로드를 사용할 수 없습니다. <a href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer">대신 웹 버전을 열어보세요 ↗</a></p>
+                    <p><a href="../bpdigitizer-privacy.html" hreflang="en-US">Android 개인정보 보호정책을 읽어보세요 ↗</a></p>
+                    <h3>안드로이드 앱 내부</h3>
+<div class="gallery-grid">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-32-59-186_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 1" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-10-577_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 2" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-22-212_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-38-550_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-47-244_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-54-635_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-13-782_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-20-725_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 8" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-33-414_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 9" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-43-874_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 10" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-35-09-916_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 11" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-41-13-557_com.google.android.apps.docs.jpg" alt="BP Digitizer 안드로이드 스크린샷 12" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_20260619_214338.png" alt="BP Digitizer 안드로이드 스크린샷 13" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_20260619_214352.png" alt="BP Digitizer 안드로이드 스크린샷 14" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_20260619_214403.png" alt="BP Digitizer 안드로이드 스크린샷 15" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_20260619_214653.png" alt="BP Digitizer 안드로이드 스크린샷 16" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_20260619_214703.png" alt="BP Digitizer 안드로이드 스크린샷 17" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_20260619_214716.png" alt="BP Digitizer 안드로이드 스크린샷 18" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_20260619_214748.png" alt="BP Digitizer 안드로이드 스크린샷 19" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_20260619_214804.png" alt="BP Digitizer 안드로이드 스크린샷 20" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BP Digitizer/Screenshot_20260619_214825.png" alt="BP Digitizer 안드로이드 스크린샷 21" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                    <h3>안드로이드 기능</h3>
+<ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏃 활동적인 라이프스타일을 위해 제작되었습니다:</strong> 혈압은 걸음 수, 운동, 수면과 함께 핵심적인 건강 지표입니다. 몇 초 안에 기록하고 계속해서 움직이는 루틴의 일부로 유지하세요.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ 몇 초 안에 무료로 판독값을 기록하세요.</strong> 빠르고 탭하기 쉬운 슬라이더를 사용하면 수축기, 확장기 및 맥박을 즉시 설정할 수 있습니다. 완전히 무료이고 오프라인으로 작동하며 계정이 필요하지 않습니다. 앱을 처음 열 때부터 추적을 시작하세요.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 또는 카메라로 스캔하세요(프리미엄):</strong> 입력하고 싶지 않으신가요? 모니터 디스플레이의 사진을 찍으면 숫자가 자동으로 입력됩니다. 카메라 스캐닝은 가장 쉬운 진입을 위한 옵션 프리미엄 기능입니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 트렌드를 살펴보세요:</strong> 일, 주, 월별로 수치가 어떻게 변하는지 확인하세요. 추세선과 3D 분산형 사이를 전환하고 손가락으로 회전하여 수축기, 확장기 및 맥박을 함께 탐색할 수 있습니다. 스마트 "평균" 평활화는 연속 판독값을 하나의 정직한 데이터 포인트로 병합하므로 추세가 현실을 반영합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏷️ 무엇이 당신의 숫자를 움직이는지 확인하세요:</strong> 운동, 카페인, 짠 식사, 수면 부족, 스트레스 등 맥락에 따라 읽은 내용에 태그를 지정하고 활동과 라이프스타일이 시간이 지남에 따라 수치에 어떻게 영향을 미치는지 알아보세요.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ 헬스 커넥트와 연결:</strong> Android 헬스 커넥트와 동기화하여 귀하의 허가를 받아 귀하의 조건에 따라 활동, 운동 및 기타 피트니스 데이터와 함께 혈압을 바로 유지하세요.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 나만의 기록을 보관하세요:</strong> 기록과 차트 및 판독값이 포함된 간단한 PDF를 내보냅니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏰ 일관된 습관을 기르세요:</strong> 선택적 알림 기능을 사용하면 매일 아침 저녁으로 같은 시간에 기록할 수 있으므로 추세가 완벽하게 유지됩니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 비공개 설계:</strong> 귀하의 데이터는 귀하의 장치에 유지됩니다. 만들 계정도 없고, 클라우드 가입도 없고, 판매하거나 공유할 것도 없습니다. 귀하의 전화번호는 귀하의 사업이며 오직 귀하의 것입니다.</li>
+                </ul>
+                </section>
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">계속 둘러보기</span><h2 id="related-title">이런 작품도 만나보세요</h2></div><p><a href="index.html#collection" hreflang="ko-KR">전체 모음 보기 ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="admitere.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/Admitere/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">일상 도구</div>
+            <h3>Admitere Liceu Kit <span aria-hidden="true">↗</span></h3>
+            <p>과거 입학 결과를 살펴보고 부쿠레슈티의 고등학교 선택을 시뮬레이션하세요.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="behind">
+          <a href="pwakit.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">무대 뒤 도구</div>
+            <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+            <p>웹 앱이 오프라인에서도 작동하고 최신 상태를 유지하도록 돕는 작은 구성 요소.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="behind">
+          <a href="pwainvite.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">무대 뒤 도구</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>비공개 웹 앱의 초대와 기기를 한곳에서 관리하는 작은 콘솔.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

@@ -7,15 +7,17 @@ const empty = document.querySelector('#empty-state');
 let category = 'all';
 
 function filterProjects() {
-  const query = search.value.trim().toLocaleLowerCase();
+  const normalize = text => text.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase(document.documentElement.lang);
+  const query = normalize(search.value.trim());
   let visible = 0;
   cards.forEach(card => {
     const matchesCategory = category === 'all' || card.dataset.category === category;
-    const matchesQuery = card.textContent.toLocaleLowerCase().includes(query);
+    const matchesQuery = normalize(card.textContent).includes(query);
     card.hidden = !(matchesCategory && matchesQuery);
     if (!card.hidden) visible++;
   });
-  count.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'} to explore`;
+  const number = new Intl.NumberFormat(document.documentElement.lang);
+  count.textContent = `${count.dataset.label}: ${number.format(visible)} / ${number.format(cards.length)}`;
   empty.hidden = visible !== 0;
 }
 
@@ -41,3 +43,4 @@ document.querySelector('#surprise-me').addEventListener('click', () => {
   window.location.href = pool[Math.floor(Math.random() * pool.length)].querySelector('a').href;
 });
 document.querySelector('#workshop-year').textContent = new Date().getFullYear();
+filterProjects();

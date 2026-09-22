@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="hi-IN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GravityTDG - एंड्रॉइड के लिए एक गुरुत्वाकर्षण-आधारित अंतरिक्ष टॉवर-रक्षा गेम।">
+    <title>GravityTDG - गेम विवरण</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th, .spec-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .spec-table td {
+            color: var(--text-muted);
+        }
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+        .highlight-box {
+            background: rgba(255, 56, 56, 0.05);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0 !important;
+            color: var(--text-main) !important;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        .feature-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        .feature-item:hover {
+            border-color: rgba(255, 56, 56, 0.2);
+            background: var(--bg-card-hover);
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/hi/gravitytdg.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/gravitytdg.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/gravitytdg.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/gravitytdg.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/gravitytdg.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/gravitytdg.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/gravitytdg.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/gravitytdg.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/gravitytdg.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/gravitytdg.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/gravitytdg.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/gravitytdg.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/gravitytdg.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/gravitytdg.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow" style="background: radial-gradient(circle at top right, rgba(255, 56, 56, 0.08), transparent 60%);"></div>
+    <portfolio-header active-page="gravitytdg.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="hi-IN">← कार्यशाला में वापस जाएँ</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">खेल और खोज</span>
+                    <h1>GravityTDG</h1>
+                    <p class="project-lead">टावर डिफेंस का नया रूप: कक्षीय भौतिकी और बचाव किरणों से ज़िंदगियाँ बचाएँ।</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitytdg&amp;pcampaignid=web_share" class="btn btn-primary">इसे Google Play पर प्राप्त करें</a>
+                    <a href="../gravitytdg-privacy.html" class="btn btn-outline" hreflang="en-US">गोपनीयता नीति (अंग्रेज़ी में)</a>
+                </div>
+                </div>
+                <img src="../assets/GravityTDG/workshop-hero.png" alt="GravityTDG गेम" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>खेल के बारे में</h2>
+                <p>अधिकांश टावर रक्षा खेल आपसे जो कुछ भी आपके सामने आता है उसे नष्ट करने के लिए कहते हैं। ग्रेविटी टीडी आपसे इसे सहेजने के लिए कहता है। फंसे हुए अंतरिक्ष यात्री एक ब्लैक होल, एक मरते हुए तारे, एक अज्ञात ग्रह के गुरुत्वाकर्षण कुएं में बह रहे हैं। आप उन्हें पकड़ नहीं सकते - लेकिन आप उनके आसपास की ताकतों को झुका सकते हैं। उनकी कक्षाओं को नियंत्रित करने के लिए जेट फ़ील्ड रखें, उनकी गति कम करने के लिए ब्रेक लगाएं, और बहुत देर होने से पहले टेलीपोर्ट शील्ड को चार्ज करने वाले बचाव-बीम बुर्ज रखें।</p>
+                <p>libGDX 1.12.1 के साथ निर्मित, गेम सुचारू ग्रहीय गुरुत्वाकर्षण और जटिल बल क्षेत्रों की गणना करने के लिए एक निश्चित 60Hz आवृत्ति पर कस्टम RK4 (रंज-कुट्टा 4th ऑर्डर) संख्यात्मक भौतिकी का लाभ उठाता है। परिष्कृत मल्टी-टच कैमरा जेस्चर (पैन, पिच झुकाव, पिंच-टू-ज़ूम और अक्षीय रोटेशन) के समर्थन के साथ, खिलाड़ी अंतरिक्ष क्षेत्र को निर्बाध रूप से नेविगेट कर सकते हैं।</p>
+
+                <div class="highlight-box">
+                    <p>कोर मैकेनिक: प्रत्येक लहर एक डिज़ाइन चरण से शुरू होती है जहां आप अपना ऊर्जा बजट खर्च करते हैं और प्रक्षेपवक्र पूर्वावलोकन का अध्ययन करते हैं। फिर आप लहर शुरू करते हैं और भौतिकी को बाकी काम करते देखते हैं - एक मौत सर्पिल को बचाव कक्षा में बदलना!</p>
+                </div>
+
+                <h2>चित्र संग्रह</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-42-058_com.zandaulion.gravitytdg.jpg" alt="GravityTDG स्तर प्रारंभ" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-49-918_com.zandaulion.gravitytdg.jpg" alt="GravityTDG कक्षीय बचाव तरंग" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-58-767_com.zandaulion.gravitytdg.jpg" alt="GravityTDG स्क्रीनशॉट 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-52-54-563_com.zandaulion.gravitytdg.jpg" alt="GravityTDG स्क्रीनशॉट 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-05-818_com.zandaulion.gravitytdg.jpg" alt="GravityTDG स्क्रीनशॉट 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-59-233_com.zandaulion.gravitytdg.jpg" alt="GravityTDG स्क्रीनशॉट 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-03-200_com.zandaulion.gravitytdg.jpg" alt="GravityTDG स्क्रीनशॉट 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-08-093_com.zandaulion.gravitytdg.jpg" alt="GravityTDG स्क्रीनशॉट 8" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>मुख्य विशेषताएं</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>आरके4 कक्षीय भौतिकी</h3>
+                        <p>उच्च परिशुद्धता 60 हर्ट्ज एकीकरण सिम्युलेटर वास्तविक व्युत्क्रम-वर्ग गुरुत्वाकर्षण कुओं, दिशात्मक जेट बलों और स्पर्शरेखा ड्रैग प्रोफाइल का मॉडलिंग करता है।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>सामरिक चरण</h3>
+                        <p>वास्तविक समय वेक्टर प्रक्षेपवक्र पूर्वावलोकन के साथ रुके हुए डिज़ाइन चरण में अपने दृष्टिकोण की योजना बनाएं, फिर अनुकूलन योग्य समय गति के साथ प्ले चरण में निष्पादित करें।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>गतिशील पुनर्स्थापन</h3>
+                        <p>तरंगों के बीच संक्षिप्त पुनर्स्थापन चरण आपको कम लागत पर बुर्ज को स्थानांतरित करने और अनुकूलित करने की अनुमति देता है, जो नए अंतरिक्ष यात्री प्रवेश वैक्टर के अनुकूल होता है।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>हाइब्रिड 3डी/2डी विजुअल</h3>
+                        <p>डेप्थ मास्क बफ़र्स के साथ प्रस्तुत किए गए आश्चर्यजनक 3डी गोले, एडिटिव ग्लो कोरोनाई, केप्लरियन बैंड और ग्रहीय टर्मिनेटर के लिए स्क्रीन-स्पेस ओवरले के साथ मिश्रित।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>प्रक्रियात्मक ऑडियो सिंथ</h3>
+                        <p>इमर्सिव सब-बास लूपिंग ड्रोन और कस्टम-सिंथेसाइज्ड एसएफएक्स गणितीय रूप से पायथन ऑडियो इंजन से उत्पन्न होते हैं, जो 22kHz मोनो में बजते हैं।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>सितारा प्रगति</h3>
+                        <p>आपके बचाव प्रदर्शन के आधार पर लगातार उच्च स्कोर और स्टार रेटिंग के साथ स्तरों को क्रमिक रूप से अनलॉक करना सीधे प्राथमिकताओं में सहेजा जाता है।</p>
+                    </div>
+                </div>
+
+                <h2>बुर्ज विशिष्टताएँ</h2>
+                <p>रणनीतिक रूप से अपने ऊर्जा बजट को दो श्रेणियों के बुर्जों पर खर्च करें: बल-क्षेत्र जनरेटर जो कक्षाओं को संचालित करते हैं, और बचाव-बीम शूटर जो ढालों को चार्ज करते हैं।</p>
+                <div class="table-scroll" role="region" aria-label="स्क्रॉल करने योग्य गेम विशिष्टताएँ" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>बुर्ज आईडी</th>
+                            <th>कक्षा</th>
+                            <th>उपप्रकार</th>
+                            <th>प्लेसमेंट लागत</th>
+                            <th>प्रभाव/विवरण</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>जेट</strong></td>
+                            <td>मैदान</td>
+                            <td>जेट बल</td>
+                            <td>30 ऊर्जा</td>
+                            <td>अंतरिक्ष यात्रियों को बुर्ज की सम्मुख दिशा में धकेलता है। बलों को संरेखित करने के लिए डिज़ाइन चरण में 360° घुमाएँ।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ब्रेक</strong></td>
+                            <td>मैदान</td>
+                            <td>घर्षण खींचें</td>
+                            <td>20 ऊर्जा</td>
+                            <td>तेजी से परिक्रमा करने वाले लक्ष्यों को धीमा करते हुए, सीधे वेग वेक्टर का विरोध करते हुए ड्रैग लागू करता है।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>शूटर_सिंगल</strong></td>
+                            <td>निशानेबाज</td>
+                            <td>प्वाइंट बीम</td>
+                            <td>40 ऊर्जा</td>
+                            <td>उच्च-शक्ति (1.5x) बचाव बीम ने सीमा में एकल निकटतम अंतरिक्ष यात्री पर सख्ती से ध्यान केंद्रित किया।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>शूटर_मल्टी</strong></td>
+                            <td>निशानेबाज</td>
+                            <td>स्पलैश क्षेत्र</td>
+                            <td>60 ऊर्जा</td>
+                            <td>कम व्यक्तिगत पुनर्भरण दर के साथ, एक साथ सीमा के भीतर सभी अंतरिक्ष यात्रियों की ढाल भरता है।</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>अंतरिक्ष यात्री संदर्भ</h2>
+                <p>विभिन्न अंतरिक्ष यात्रियों को उनके आकार, गति और ढाल शुल्क के आधार पर अनुरूप गुरुत्वाकर्षण हैंडलिंग और चार्ज गति की आवश्यकता होती है।</p>
+                <div class="table-scroll" role="region" aria-label="स्क्रॉल करने योग्य गेम विशिष्टताएँ" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>प्रकार</th>
+                            <th>आकार</th>
+                            <th>आधार गति</th>
+                            <th>चिपचिपाहट</th>
+                            <th>ढाल चक्र</th>
+                            <th>विवरण</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>अंतरिक्ष यात्री_बेसिक</strong></td>
+                            <td>6</td>
+                            <td>1.0x</td>
+                            <td>1.0</td>
+                            <td>1 चक्र</td>
+                            <td>मानक चालक दल के सदस्य. एक बार पूरा चार्ज उन्हें तुरंत बचा लेता है।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>अंतरिक्ष यात्री_तेज़</strong></td>
+                            <td>1</td>
+                            <td>2.0x</td>
+                            <td>14.0</td>
+                            <td>1 चक्र</td>
+                            <td>छोटा और नाजुक. बहुत तेजी से चार्ज होता है, लेकिन कक्षाओं में दोगुनी गति से चलता है।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>अंतरिक्ष यात्री_भारी</strong></td>
+                            <td>12</td>
+                            <td>1.0x</td>
+                            <td>0.7</td>
+                            <td>3 चक्र</td>
+                            <td>विशाल मालवाहक जहाज. धीरे-धीरे चार्ज होता है और इसे बचाने के लिए 3 पूर्ण चार्ज चक्रों से गुजरना होगा।</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>दिव्य केंद्र और नियम</h2>
+                <p>क्षेत्र के केंद्र में स्थित ब्रह्मांडीय पिंड गुरुत्वाकर्षण प्रोफाइल और सफल बचाव के लिए आवश्यक नियमों दोनों को नियंत्रित करते हैं:</p>
+                <div class="features-grid" style="margin-top: 16px;">
+                    <div class="feature-item">
+                        <h3>ब्लैक होल</h3>
+                        <p>प्रचंड गुरुत्वाकर्षण खिंचाव. केप्लेरियन अभिवृद्धि डिस्क और सापेक्ष जेट के साथ। अंतरिक्ष यात्रियों को क्षेत्र में कहीं भी अपना शील्ड चार्ज पूरा करने पर तुरंत बचा लिया जाता है।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>चमकीला सितारा</h3>
+                        <p>चिलचिलाती कोरोना और सौर ज्वालाएँ। अंतरिक्ष यात्री टेलीपोर्ट करते हैं और जब उनकी ढाल पूरी तरह से चार्ज हो जाती है, तो भस्म होने से बच जाते हैं और तुरंत बच जाते हैं।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>ग्रह</h3>
+                        <p>सुंदर वायुमंडलीय ग्रेडिएंट और क्लाउड टर्मिनेटर की विशेषताएँ। बचाने के लिए अंतरिक्ष यात्रियों को अपनी ढाल 100% चार्ज होने के बाद भौतिक रूप से ग्रह की सतह पर उतरना होगा।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>अंतरिक्ष स्टेशन</h3>
+                        <p>धात्विक तकनीकी चौकी. कोई भी अंतरिक्ष यात्री जो भौतिक रूप से केंद्र स्टेशन से संपर्क करता है, स्वचालित रूप से सहेजा जाता है, भले ही उनकी ढाल चार्ज स्थिति कुछ भी हो।</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">कुछ और खोजें</span><h2 id="related-title">आपको ये भी पसंद आ सकते हैं…</h2></div><p><a href="index.html#collection" hreflang="hi-IN">पूरा संग्रह देखें ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">खेल और खोज</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>आपकी जेब में एक छोटा ग्रह। ताज़ा खगोलीय जानकारी और NASA के डेटा से पृथ्वी को जानें।</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">रोज़मर्रा के औज़ार</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>बाज़ार की लिस्टिंग देखें, कीमतों के बदलाव की तुलना करें और अच्छा सौदा खोजें।</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">रोजमर्रा के उपकरण · एंड्रॉइड + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>रक्तचाप दर्ज करें, रुझान देखें और अपना इतिहास निर्यात करें। Android और वेब के लिए एक ऐप।</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

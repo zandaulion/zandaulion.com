@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en-US" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Faceslice — From a single frontal photo to laser-cut metal plates for a layered topographic portrait relief. Slicing engine, real-time material estimation, and DXF export.">
     <title>Faceslice - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
-    <link rel="stylesheet" href="workshop.css?v=2">
-    <link rel="stylesheet" href="project.css?v=2">
+    <link rel="stylesheet" href="workshop.css?v=3">
+    <link rel="stylesheet" href="project.css?v=5">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/Faceslice/icon.svg">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/faceslice.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/faceslice.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/faceslice.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/faceslice.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/faceslice.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/faceslice.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/faceslice.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/faceslice.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/faceslice.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/faceslice.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/faceslice.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/faceslice.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/faceslice.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/faceslice.html">
+    <!-- project-locales:end -->
 </head>
 <body>
     <div class="bg-glow"></div>
@@ -35,8 +52,8 @@
 
 
                 <h2>About The Project</h2>
-                <p><strong>De la o fotografie frontală la plăcile de tăiat pentru un portret în straturi — un relief ca o hartă topografică, din tablă, lipit manual strat peste strat.</strong></p>
-                <p><strong>Faceslice</strong> transforms a standard 2D selfie into physical layered topographic sculptures made from laser-cut sheet metal or cardstock. Instead of demanding complex multi-camera photogrammetry or finicky 3D scanning apps, Faceslice requires just a single frontal photograph and an interpupillary distance (IPD) measurement in millimeters to fix the physical scale.</p>
+                <p>From a frontal photograph to cutting patterns for a layered portrait — a topographic relief made from sheet metal, bonded by hand, layer by layer.</p>
+                <p>Faceslice transforms a standard 2D selfie into physical layered topographic sculptures made from laser-cut sheet metal or cardstock. Instead of demanding complex multi-camera photogrammetry or finicky 3D scanning apps, Faceslice requires just a single frontal photograph and an interpupillary distance (IPD) measurement in millimeters to fix the physical scale.</p>
                 <p>To reconstruct a genuine head from one photo, Faceslice orchestrates a three-model computer vision fusion pipeline where each model contributes what it does best: silhouette segmentation captures hair, ears, and jawlines; monocular depth estimates broad skull volume; and facial mesh landmarker models extract crisp facial landmarks (nose, eye sockets, lips) as residual surface displacement.</p>
                 <p>The resulting 3D solid is sliced into parallel planes at custom angles. Frontal slicing produces self-aligning nested contour isohypses, complete with etched alignment guides on every plate, hollowed-out hidden interiors for up to 80% weight reduction, and instant production-grade DXF export.</p>
 
@@ -113,7 +130,9 @@
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="project.js?v=2"></script>
+    <script src="language-data.js?v=5" defer></script>
+    <script src="project.js?v=5" defer></script>
+    <script src="language.js?v=6" defer></script>
 
 </body>
 </html>

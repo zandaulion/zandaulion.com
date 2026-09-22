@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pwa-kit - Un mecanism PWA cu autoactualizare, cu dependență zero, extras și generalizat din Bitey.">
+    <title>pwa-kit ⚡ - Detalii proiect</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ro/pwakit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/pwakit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/pwakit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/pwakit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/pwakit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/pwakit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/pwakit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/pwakit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/pwakit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/pwakit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/pwakit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/pwakit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/pwakit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/pwakit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwakit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ro">← Înapoi în atelier</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">În culise</span>
+                    <h1>pwa-kit</h1>
+                    <p class="project-lead">Mica piesă care ajută aplicațiile web să funcționeze offline și să rămână la zi.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Vezi pe GitHub</a>
+                </div>
+                </div>
+                <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Despre proiect</h2>
+                <p>Mecanismul de actualizare de la Bitey, generalizat: un PWA care se actualizează singur și spune acest lucru ulterior, în loc să ceară permisiunea de care nu are nevoie.</p>
+                <p>Copiere <code>sw.js</code> şi <code>pwa-update.js</code> în rădăcina web a unei aplicații și conectați-le. Nu există nicio etapă de construcție, nici un bundler și zero dependențe - care este ideea: aceste aplicații sunt directoare statice.</p>
+                <p>Un nou lucrător de service se instalează și se activează imediat, fără a aștepta închiderea filelor. Fiecare fereastră deschisă finalizează în siguranță munca curentă înainte de a se reîncărca fără probleme în cea mai recentă versiune.</p>
+
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit Grafic" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Funcționalități</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Activare imediată:</strong> Noi lucrători instalează și preiau controlul fără ca lucrătorii învechiți să zăbovească zile întregi în filele deschise ale browserului.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Protecția muncii nesalvate (<code>isBusy</code>):</strong> Lucrătorul întreabă mai degrabă decât să navigheze orbește; paginile amână reîncărcările până când modificările în așteptare sau stările formularelor sunt rezolvate în siguranță.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Rețea-First Freshness:</strong> Solicitările online câștigă întotdeauna pentru a se asigura că modificările implementate vor avea efect chiar la următoarea reîncărcare, revenind în cache atunci când sunt offline.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 Notificări pentru stocarea sesiunii curate:</strong> Evită poluarea șirurilor de interogări URL cu semnalizatoare de actualizare, informând utilizatorii în mod curat prin toast-uri în aplicație.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 Trapă de evacuare în cache încorporată:</strong> Include un mecanism de anulare a înregistrării în caz de urgență și un mecanism de blocare a memoriei cache pentru clienții blocați.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Descoperă o altă pistă</span><h2 id="related-title">Poate îți mai place și…</h2></div><p><a href="index.html#collection" hreflang="ro">Vezi întreaga colecție ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="behind">
+          <a href="pwainvite.html" hreflang="ro">
+            <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">În culise</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>O mică consolă pentru gestionarea invitațiilor și dispozitivelor din aplicații web private.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="ro">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Unelte creative</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>Transformă o fotografie în modele conectate pentru decupare în metal.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="ro">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Joacă și explorare</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>O mică planetă în buzunar. Explorează Pământul cu date astronomice actuale și informații de la NASA.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

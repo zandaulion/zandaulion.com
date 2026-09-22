@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="light" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mișcare - حركة يومية متكيفة خالية من الاحتكاك PWA مصممة من الصفر مع التعرف على معدات الرؤية Gemini وفلسفة عدم الخجل.">
+    <title>Mișcare - تفاصيل المشروع</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/Miscare/icon.svg">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ar/miscare.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/miscare.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/miscare.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/miscare.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/miscare.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/miscare.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/miscare.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/miscare.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/miscare.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/miscare.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/miscare.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/miscare.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/miscare.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/miscare.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="miscare.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ar">← العودة إلى الورشة</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">أدوات يومية</span>
+                    <h1>Mișcare</h1>
+                    <p class="project-lead">أضف بعض الحركة إلى يومك باستخدام المعدات التي لديك بالفعل.</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">فتح تطبيق الويب</a>
+                    <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">عرض على GitHub</a>
+                </div>
+                </div>
+                <img src="../assets/Miscare/feature_graphic.jpg" alt="تطبيق Mișcare" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>عن المشروع</h2>
+                <p>ابدأ من الصفر. تحرك بالسرعة التي تناسبك. لا ذنب، مجرد تعديل.</p>
+                <p>Mișcare هو تطبيق ويب تقدمي تكيفي (PWA) مصمم لإزالة كل طبقة من الاحتكاك النفسي والجسدي المرتبط باللياقة البدنية اليومية. تم تصميم Mișcare خصيصًا للمبتدئين أو الأفراد العائدين بعد فترات توقف طويلة، وهو يزيل جداول البيانات المعقدة للمجموعات/الممثلين، وعدادات الخطوط العقابية، والمصطلحات الرياضية المخيفة.</p>
+                <p>عند فتح التطبيق، يتم الترحيب بالمستخدمين مباشرة من خلال "جلسة اليوم" - وهي جاهزة للبدء بنقرة واحدة. إذا أصبحت الحياة مزدحمة، فإن خيار "اجعلها 5 دقائق" بنقرة واحدة يؤدي إلى تقصير فترة التمرين. إذا كانت الحياة تعترض طريقك لعدة أيام، فلن تكون هناك خطوط مكسورة أو رسائل ذنب؛ يرحب بك التطبيق ببساطة من خلال روتين إعادة الدخول اللطيف.</p>
+                <p>تم تصميم Mișcare باستخدام Vanilla JavaScript (وحدات ES) وNode.js مع SQLite الأصلي، ويتكامل مع Gemini Vision للتعرف على المعدات المنزلية المتاحة من الصور، وpwa-kit للتخزين المؤقت دون توقف دون اتصال بالإنترنت والتحديثات السلسة، ووحدة تحكم pwa-invite لتشغيل الجهاز بدون كلمة مرور.</p>
+
+                <h2>معرض الصور</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Miscare/screenshot_01_today.jpg" alt="حركتك اليوم - الجلسة والمستويات اليومية" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Miscare/screenshot_02_exercises.jpg" alt="مكتبة التمارين – من المستوى 0 إلى المستوى المتقدم" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Miscare/screenshot_03_equipment.jpg" alt="إعداد المعدات — التكيف الفوري" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Miscare/screenshot_04_progress.jpg" alt="التقدم دون خجل - لا توجد خطوط ضائعة" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>المزايا</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 البدء من الصفر:</strong> حركات آمنة وتأسيسية لوزن الجسم (تمارين الضغط على الحائط، والجلوس على الكرسي، والجسور اللطيفة، وتمديد حركة الكتف) مقترنة بأدلة مرئية مصورة دافئة ومرشحات حماية للركبتين وأسفل الظهر والمعصمين.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ جلسات يومية خالية من الاحتكاك:</strong> تخدم الشاشة الرئيسية روتين اليوم على الفور. يتضمن اختلافات بنقرة واحدة مثل <em>"اجعلها 5 دقائق"</em> و <em>"تمرين المبادلة"</em>، مصحوبًا بمؤقت هادئ وصوت الويب API.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 التعرف على معدات الرؤية Gemini:</strong> التقط صورة للأدوات المنزلية أو معدات التمارين الرياضية (الدمبل، أو أشرطة المقاومة، أو سجادات اليوغا، أو الكراسي القوية). تكتشف Google Gemini Vision تلقائيًا العناصر وتفتح متغيرات التمرين المطابقة.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 المنطق التكيفي "لا للخجل":</strong> يتم تجميع الأيام النشطة كمعالم دائمة بدلاً من الخطوط الهشة. إذا تم تصنيف الجلسة على أنها "صعبة بعض الشيء"، فإن الروتين التالي يخفض شدتها تلقائيًا؛ في حالة العودة بعد فترة راحة، يتم جدولة جلسة إعادة التكيف اللطيفة تلقائيًا.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 تحديثات فورية عبر PWA Kit:</strong> متكاملة مع <code>pwa-kit</code> للتخزين المؤقت لعامل الخدمة على الشبكة أولاً مع ختم إصدار تجزئة المحتوى ومطالبات التحديث غير المزعجة.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 اقتران الجهاز بدون كلمة مرور:</strong> تأهيل سلس عبر <code>pwa-invite-console</code> رموز الاقتران (<code>XXXX-YYYY-ZZZZ</code>) إصدار رموز مميزة آمنة وطويلة الأمد لجلسة الجهاز.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 الموضوع المزدوج والمرونة في وضع عدم الاتصال:</strong> لوحة ألوان فاتحة/داكنة تلقائية مع لمسات من زمرد الغابة، تعمل بكامل طاقتها دون اتصال بالإنترنت ومدعومة بـ IndexedDB وLocalStorage.</li>
+                </ul>
+
+                <h2>الهندسة المعمارية والتكنولوجيا المكدس</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0 40px;">
+                    <div class="feature-item">
+                        <h3>هندسة الواجهة الأمامية</h3>
+                        <p>Vanilla JavaScript (وحدات ES) بدون عبء خطوة البناء، وخصائص CSS المخصصة سريعة الاستجابة، وتوليف صوت الويب المخصص، والتخزين المؤقت لعامل الخدمة دون اتصال بالإنترنت.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>المحرك الخلفي</h3>
+                        <p>الاستفادة من Node.js v24 الأصلي <code>DatabaseSync</code> من <code>node:sqlite</code>ونقاط نهاية Express REST وتكامل Google Gemini Multimodal Vision API.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>التكامل</h3>
+                        <p>توافق العقد الأصلي مع pwa-kit لإدارة دورة حياة الإصدار ووحدة التحكم pwa-invite-لاسترداد رمز الدعوة وإدارة الجهاز.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">واصل الاكتشاف</span><h2 id="related-title">قد يعجبك أيضًا…</h2></div><p><a href="index.html#collection" hreflang="ar">استعرض المجموعة كاملة ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="omaha.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/omaha/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">أدوات يومية</div>
+            <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+            <p>انظر إلى ما وراء سعر السهم واكتشف ما يحرك الشركة.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitywarp.html" hreflang="ar">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityWarp/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">اللعب والاستكشاف</div>
+            <h3>Gravity Warp <span aria-hidden="true">↗</span></h3>
+            <p>شق طريقك عبر آبار الجاذبية في لعبة أركيد بطابع قديم تعتمد على الفيزياء.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="spendosaurus.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/Spendosaurus/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">أدوات يومية</div>
+            <h3>Spendosaurus <span aria-hidden="true">↗</span></h3>
+            <p>خطط لنفقات الأسرة الكبيرة، من التقدير الأول إلى القسط الأخير.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

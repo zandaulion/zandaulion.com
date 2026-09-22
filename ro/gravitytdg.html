@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GravityTDG - Un joc de apărare a turnului spațial bazat pe gravitație pentru Android.">
+    <title>GravityTDG - Detalii joc</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th, .spec-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .spec-table td {
+            color: var(--text-muted);
+        }
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+        .highlight-box {
+            background: rgba(255, 56, 56, 0.05);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0 !important;
+            color: var(--text-main) !important;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        .feature-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        .feature-item:hover {
+            border-color: rgba(255, 56, 56, 0.2);
+            background: var(--bg-card-hover);
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ro/gravitytdg.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/gravitytdg.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/gravitytdg.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/gravitytdg.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/gravitytdg.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/gravitytdg.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/gravitytdg.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/gravitytdg.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/gravitytdg.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/gravitytdg.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/gravitytdg.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/gravitytdg.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/gravitytdg.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/gravitytdg.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow" style="background: radial-gradient(circle at top right, rgba(255, 56, 56, 0.08), transparent 60%);"></div>
+    <portfolio-header active-page="gravitytdg.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ro">← Înapoi în atelier</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Joacă și explorare</span>
+                    <h1>GravityTDG</h1>
+                    <p class="project-lead">O altfel de apărare cu turnuri: folosește fizica orbitală și raze de salvare ca să salvezi vieți.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitytdg&amp;pcampaignid=web_share" class="btn btn-primary">Obțineți-l pe Google Play</a>
+                    <a href="../gravitytdg-privacy.html" class="btn btn-outline" hreflang="en-US">Politica de confidențialitate (în engleză)</a>
+                </div>
+                </div>
+                <img src="../assets/GravityTDG/workshop-hero.png" alt="GravityTDG Joc" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Despre joc</h2>
+                <p>Majoritatea jocurilor de apărare a turnului îți cer să distrugi orice vine la tine. Gravity TD vă cere să îl salvați. Cosmonauții blocați plutesc în puțul gravitațional al unei găuri negre, o stea pe moarte, o planetă necartografiată. Nu le poți apuca, dar poți îndoi forțele din jurul lor. Plasați câmpuri de avioane pentru a-și deplasa orbitele, frâne pentru a le elimina viteza și turnulețe cu fascicule de salvare care încarcă un scut de teleportare înainte de a fi prea târziu.</p>
+                <p>Construit cu libGDX 1.12.1, jocul folosește fizica numerică personalizată RK4 (Runge-Kutta 4th Order) la o frecvență fixă ​​de 60 Hz pentru a calcula gravitația planetară netedă și câmpurile de forță complexe. Cu suport pentru gesturi sofisticate ale camerei multi-touch (pan, pitch tilt, pinch-to-zoom și rotație axială), jucătorii pot naviga fără probleme în arenele spațiale.</p>
+
+                <div class="highlight-box">
+                    <p>Core Mechanic: Fiecare val începe cu o fază de proiectare în care vă cheltuiți bugetul de energie și studiați previzualizările traiectoriei. Apoi porniți valul și urmăriți fizica făcând restul - transformând o spirală morții într-o orbită de salvare!</p>
+                </div>
+
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-42-058_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Nivel de pornire" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-49-918_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Val de salvare orbitală" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-58-767_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captură de ecran 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-52-54-563_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captură de ecran 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-05-818_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captură de ecran 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-59-233_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captură de ecran 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-03-200_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captură de ecran 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-08-093_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captură de ecran 8" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Caracteristici cheie</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>RK4 Fizica orbitală</h3>
+                        <p>Simulator de integrare de 60 Hz de înaltă precizie care modelează puțuri gravitaționale reale cu pătrat invers, forțe direcționale ale jetului și profiluri de rezistență tangenţială.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Fazele tactice</h3>
+                        <p>Planificați-vă abordarea în faza de proiectare întreruptă cu previzualizări ale traiectoriei vectoriale în timp real, apoi executați în faza de redare cu viteze de timp personalizabile.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Repoziționare dinamică</h3>
+                        <p>Faza scurtă de repoziționare între valuri vă permite să relocați și să optimizați turnulele la un cost redus, adaptându-se la noii vectori de intrare a cosmonauților.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Imagini vizuale hibride 3D/2D</h3>
+                        <p>Sfere 3D uimitoare redate cu tampon de masca de adâncime, amestecate cu suprapuneri în spațiul ecranului pentru coroane strălucitoare aditive, benzi Kepleriene și Terminatori planetari.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Sintetizator audio procedural</h3>
+                        <p>Drone captivante cu bucle sub-bas și SFX sintetizat personalizat generate matematic din motoarele audio Python, redate în mono de 22 kHz.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Progresia stelelor</h3>
+                        <p>Deblocarea secvenţială a nivelurilor cu scoruri ridicate persistente şi evaluări cu stele bazate pe performanţa dumneavoastră de salvare salvate direct în preferinţe.</p>
+                    </div>
+                </div>
+
+                <h2>Specificații turelei</h2>
+                <p>Cheltuiește-ți în mod strategic bugetul de energie pe două categorii de turnulețe: generatoare de câmp de forță care orientează orbitele și trăgători cu fascicule de salvare care încarcă scuturi.</p>
+                <div class="table-scroll" role="region" aria-label="Specificații jocului derulabil" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>ID turelă</th>
+                            <th>Clasa</th>
+                            <th>Subtip</th>
+                            <th>Costul de plasare</th>
+                            <th>Efect / Descriere</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>jet</strong></td>
+                            <td>Câmp</td>
+                            <td>Jet Force</td>
+                            <td>30 Energie</td>
+                            <td>Împinge cosmonauții în direcția orientată spre turelă. Rotiți 360° în faza de proiectare pentru a alinia forțele.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>frână</strong></td>
+                            <td>Câmp</td>
+                            <td>Friction Drag</td>
+                            <td>20 Energie</td>
+                            <td>Aplică tragere direct opus vectorului viteză, încetinind țintele care orbitează rapid.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>shooter_single</strong></td>
+                            <td>Shooter</td>
+                            <td>Fascicul punctual</td>
+                            <td>40 Energie</td>
+                            <td>Faza de salvare de mare putere (1,5x) concentrată strict pe un singur cosmonaut cel mai apropiat din rază.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>shooter_multi</strong></td>
+                            <td>Shooter</td>
+                            <td>Zona Splash</td>
+                            <td>60 Energie</td>
+                            <td>Umple simultan scuturile tuturor cosmonauților din raza de acțiune, cu o rată de reîncărcare individuală mai mică.</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>Referință pentru cosmonauți</h2>
+                <p>Diferiții cosmonauți necesită manipulare gravitațională și viteze de încărcare adaptate în funcție de dimensiunea, viteza și încărcările scutului.</p>
+                <div class="table-scroll" role="region" aria-label="Specificații jocului derulabil" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Tip</th>
+                            <th>Dimensiune</th>
+                            <th>Viteza de bază</th>
+                            <th>Lipiciune</th>
+                            <th>Cicluri de scut</th>
+                            <th>Descriere</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>cosmonaut_de bază</strong></td>
+                            <td>6</td>
+                            <td>1,0x</td>
+                            <td>1.0</td>
+                            <td>1 ciclu</td>
+                            <td>Membru standard al echipajului. O singură încărcare completă îi salvează instantaneu.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>cosmonaut_rapid</strong></td>
+                            <td>1</td>
+                            <td>2,0x</td>
+                            <td>14.0</td>
+                            <td>1 ciclu</td>
+                            <td>Micuță și fragilă. Se încarcă extrem de rapid, dar se mișcă cu viteză dublă pe orbite.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>cosmonaut_greu</strong></td>
+                            <td>12</td>
+                            <td>1,0x</td>
+                            <td>0.7</td>
+                            <td>3 cicluri</td>
+                            <td>Nava de marfă masivă. Se încarcă lent și trebuie să treacă prin 3 cicluri complete de încărcare pentru a fi salvat.</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>Centrele și regulile celesti</h2>
+                <p>Corpurile cosmice din centrul câmpului guvernează atât profilurile gravitaționale, cât și regulile necesare pentru a realiza o salvare cu succes:</p>
+                <div class="features-grid" style="margin-top: 16px;">
+                    <div class="feature-item">
+                        <h3>gaura neagră</h3>
+                        <p>Atracție gravitațională enormă. Însoțit de discuri de acreție Keplariene și jeturi relativiste. Cosmonauții sunt salvați imediat după finalizarea încărcării scutului, oriunde în arenă.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Steaua strălucitoare</h3>
+                        <p>Coroană arzătoare și erupții solare. Cosmonauții se teleportează și sunt salvați instantaneu atunci când scutul lor este complet încărcat, evitând incinerarea.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Planetă</h3>
+                        <p>Prezintă gradienți atmosferici frumoși și terminatori de nor. Cosmonauții trebuie să aterizeze fizic pe suprafața planetei după ce scutul lor a fost încărcat 100% pentru a fi salvați.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Stația spațială</h3>
+                        <p>Avanpost tehnologic metalic. Orice cosmonaut care contactează fizic stația centrală este salvat automat, indiferent de starea de încărcare a scutului.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Descoperă o altă pistă</span><h2 id="related-title">Poate îți mai place și…</h2></div><p><a href="index.html#collection" hreflang="ro">Vezi întreaga colecție ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="ro">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Joacă și explorare</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>O mică planetă în buzunar. Explorează Pământul cu date astronomice actuale și informații de la NASA.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="ro">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Unelte de zi cu zi</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>Urmărește anunțuri, compară schimbările de preț și prinde o ofertă promițătoare.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="ro">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Instrumente de zi cu zi · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Înregistrează tensiunea arterială, urmărește evoluția și exportă istoricul. O singură aplicație pentru Android și web.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

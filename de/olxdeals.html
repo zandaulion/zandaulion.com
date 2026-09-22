@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de-DE" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OLX Deal Finder – Verfolgen Sie OLX.ro-Angebote, erkennen Sie Preissenkungen und zeigen Sie Angebote auf einem selbst gehosteten mobilen Dashboard an.">
+    <title>OLX Deal Finder – Projektdetails</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/de/olxdeals.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/olxdeals.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/olxdeals.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/olxdeals.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/olxdeals.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/olxdeals.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/olxdeals.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/olxdeals.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/olxdeals.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/olxdeals.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/olxdeals.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/olxdeals.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/olxdeals.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/olxdeals.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="olxdeals.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="de-DE">← Zurück zur Werkstatt</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Alltagshelfer</span>
+                    <h1>OLX Deal Finder</h1>
+                    <p class="project-lead">Beobachte Kleinanzeigen, vergleiche Preisänderungen und entdecke gute Angebote.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/olx-deal-finder" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Auf GitHub ansehen</a>
+                </div>
+                </div>
+                <img src="../assets/OLX/feature_graphic.jpg" alt="OLX Deal Finder" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Über das Projekt</h2>
+                <p>Verfolgen Sie Produkte auf OLX.ro und entdecken Sie wirklich gute Angebote – über ein selbst gehostetes, mobilfreundliches Dashboard, auf das Sie direkt von Ihrem Telefon aus zugreifen können.</p>
+<p>Es ruft regelmäßig Angebote für konfigurierte Suchvorgänge ab, vergleicht sie mit einer lokalen SQLite-Datenbank, um neue Angebote und Preissenkungen zu erkennen, normalisiert Währungen und filtert störende und verdächtige Angebote heraus.</p>
+
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/OLX/screenshot_01_deals.jpg" alt="Live-Deals-Feed – Echtzeit-OLX-Erkennung" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_02_drops.jpg" alt="Preisrückgangs-Feed – Historische Rückgänge und Bewertungsanalyse" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_03_trends.jpg" alt="Market Intelligence – Marktbewertung und Preiskerzen des Käufers" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_04_finder.jpg" alt="Modellschlüssel- und Kategoriefinder – Echtzeit-Abfrage-Generator" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_05_searches.jpg" alt="Konfigurierte Suchen – Aktives Tracking und Multi-Gruppen-Management" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Funktionen</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔍 Automatisiertes Schaben und Differenzieren:</strong> Durchsucht regelmäßig konfigurierte Suchanfragen mit höflichen paginierten Anfragen und speichert den vollständigen Preisverlauf in SQLite.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 Deal-Scoring und Rauschfilterung:</strong> Normalisiert EUR/RON-Währungen, filtert Schrott und Zubehör und bewertet Angebote, um außergewöhnliche Angebote hervorzuheben.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✨ KI-Bewertung mit Gemini Flash:</strong> Integrierte One-Click-KI-Analyse zur Beurteilung, ob ein Angebot echt ist, und zur Schätzung des realistischen Marktwerts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📲 Dual-Channel-Benachrichtigungen:</strong> Echte Angebote erreichen Ihr Telefon per Web Push; Systemausfälle werden stillschweigend an einen privaten NTFY-Kanal gemeldet.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Selbstgehostetes mobiles Dashboard:</strong> Ein sauberes PWA-Dashboard ohne Abhängigkeiten, das für blitzschnelles Surfen auf Smartphones entwickelt wurde.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📦 Containerisiertes Quadlet / Podman:</strong> Produktionstaugliche Systemintegration mit Quadlet-Einheiten für eine manuelle Ausführung im Hintergrund.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Weiter auf Entdeckungsreise</span><h2 id="related-title">Das könnte dir auch gefallen…</h2></div><p><a href="index.html#collection" hreflang="de-DE">Die ganze Sammlung ansehen ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Alltagswerkzeuge · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Erfasse Blutdruckwerte, verfolge Entwicklungen und exportiere deinen Verlauf. Eine App für Android und das Web.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="behind">
+          <a href="pwakit.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Hinter den Kulissen</div>
+            <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+            <p>Ein kleiner Baustein, mit dem Web-Apps offline funktionieren und aktuell bleiben.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Kreative Werkzeuge</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>Verwandle ein Foto in verbundene Muster zum Ausschneiden aus Metall.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

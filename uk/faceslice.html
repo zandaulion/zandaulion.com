@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faceslice — від однієї фронтальної фотографії до вирізаних лазером металевих пластин для багатошарового топографічного портретного рельєфу. Механізм нарізки, оцінка матеріалу в реальному часі та експорт DXF.">
+    <title>Faceslice - Деталі проекту</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/Faceslice/icon.svg">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/uk/faceslice.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/faceslice.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/faceslice.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/faceslice.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/faceslice.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/faceslice.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/faceslice.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/faceslice.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/faceslice.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/faceslice.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/faceslice.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/faceslice.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/faceslice.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/faceslice.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="faceslice.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="uk">← Назад до майстерні</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Творчі інструменти</span>
+                    <h1>Faceslice</h1>
+                    <p class="project-lead">Одне фото стає 3D-рельєфом, розділеним на шари для металевого портрета.</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://faceslice.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Відкрити вебзастосунок</a>
+                    <a href="https://github.com/zandaulion/faceslice" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Переглянути на GitHub</a>
+                </div>
+                </div>
+                <img src="../assets/Faceslice/feature_graphic.jpg" alt="Додаток Faceslice" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Про проєкт</h2>
+                <p>Від фронтальної фотографії до шаблонів вирізання багатошарового портрета — топографічного рельєфу з листового металу, склеєного вручну шар за шаром.</p>
+                <p>Faceslice перетворює стандартне 2D-селфі на фізичні багатошарові топографічні скульптури, виготовлені з різаного лазером листового металу або картону. Замість того, щоб вимагати складної фотограмметрії з кількома камерами або вибагливих програм 3D-сканування, Faceslice вимагає лише однієї фронтальної фотографії та вимірювання міжзіничної відстані (IPD) у міліметрах для фіксації фізичного масштабу.</p>
+                <p>Щоб відтворити справжню голову з однієї фотографії, Faceslice організовує конвеєр комп’ютерного бачення з трьома моделями, де кожна модель робить свій внесок у те, що вміє найкраще: сегментація силуету фіксує волосся, вуха та лінію щелепи; монокулярна глибина оцінює широкий об’єм черепа; а моделі сітчастих маркерів обличчя виділяють чіткі орієнтири обличчя (ніс, очні ямки, губи) як залишкове зміщення поверхні.</p>
+                <p>Отримане тривимірне тіло розрізається на паралельні площини під спеціальними кутами. Фронтальне нарізання створює самовирівнювані вкладені контурні ізогіпси, укомплектовані вигравіруваними напрямними вирівнювання на кожній пластині, видовбаними прихованими внутрішніми частинами для зменшення ваги до 80% і миттєвого експорту виробничого рівня DXF.</p>
+
+                <h2>Галерея</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Faceslice/screenshot_01_app_editor.png" alt="Faceslice Studio — 3D контурний рельєф, розрізні площини та оцінка матеріалу" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_02_contour_closeup.png" alt="Топографічний рельєф рельєфу — контури поверхневого шару з високою роздільною здатністю" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_03_bust_relief.png" alt="Розрізання портрета бюста — контури плечей і рознесені площини різання" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_04_dense_slices.png" alt="Нарізка високої щільності — 220 зрізів (0,5 мм) і 153 аналізу контурів" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_05_hair_profile.png" alt="Аналіз складного силуету волосся та суцільного профілю" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Можливості</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 3D-реконструкція однієї фотографії:</strong> Перетворює одне фронтальне селфі на повне рельєфне тіло, відкаліброване відповідно до реальних розмірів за допомогою відстані зіниці.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 3-модельний AI Fusion Engine:</strong> Поєднує багатокласову сегментацію MediaPipe, монокулярну оцінку глибини ONNX (Depth Anything V2) і орієнтири обличчя MediaPipe для збалансованого об’єму черепа та чіткості обличчя.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️ Топографічний контурний наріз:</strong> Розрізає тверді тіла на паралельні площини з контролем вільного кута (фронтальну для концентричних вкладених ізогіпс, горизонтальну для ламінування бічних профілів).</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 Напрямні для самовирівнювання монтажу:</strong> При фронтальному розрізі кожен металевий шар вкладається в нижній, а обмежувальна лінія наступної пластини вигравірувана безпосередньо на її поверхні для легкого вирівнювання без зажимів.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ Внутрішнє оздоблення та економія матеріалів:</strong> Автоматично видаляє приховану внутрішню геометрію, зменшуючи споживання матеріалу та вагу до 80% (наприклад, 10 кг суцільної сталі до порожнистих кілець вагою 1,9 кг), зберігаючи міцні межі з’єднання.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ Параметричне керування виготовленням:</strong> Інтерактивне налаштування в режимі реального часу товщини листа (0,5–10 мм), стиснення рельєфу, компенсації пропилів, збільшення рельєфу обличчя та кутів зрізу.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Оцінка матеріалу та ваги в реальному часі:</strong> Динамічно обчислює кількість пластин, унікальні контури, необхідну площу листового металу (дм²), висоту стопки та точну масу для сталі, латуні та алюмінію.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 Готовий до виробництва DXF Експорт:</strong> Експортує повністю векторизовані файли DXF із підтримкою лазерної/гідроабразивної/плазмової камери CAM, вкладених у спеціальні розміри аркушів, одним клацанням миші.</li>
+                </ul>
+
+                <h2>Архітектура та технічний стек</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0 40px;">
+                    <div class="feature-item">
+                        <h3>Інтерактивний веб-клієнт</h3>
+                        <p>Vanilla JavaScript (модулі ES), адаптивне полотно та візуалізація контурів SVG, параметричні повзунки в реальному часі та архітектура PWA з підтримкою офлайн.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Механізм зору та геометрії</h3>
+                        <p>Обчислювальне ядро Python 3 із використанням MediaPipe (сегментація та сітка граней), ONNX Runtime (Depth Anything V2 Small), Shapely для двовимірних полігональних логічних значень і порожнистості, а також ezdxf для створення CAD.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Розгортання виробництва</h3>
+                        <p>Контейнер із Podman і квадлетом systemd, автоматичне штампування хеш-версії активів через <code>deploy.sh</code>, і обслуговується через зворотний проксі-сервер Caddy із меншою секундою часу відгуку ЦП.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Продовжуйте відкривати</span><h2 id="related-title">Можливо, вам також сподобається…</h2></div><p><a href="index.html#collection" hreflang="uk">Переглянути всю колекцію ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="creative">
+          <a href="sankey.html" hreflang="uk">
+            <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Творчі інструменти</div>
+            <h3>Редактор діаграм Sankey <span aria-hidden="true">↗</span></h3>
+            <p>Покажіть, куди все рухається. Створюйте й експортуйте діаграми у браузері.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitygarden.html" hreflang="uk">
+            <div class="collection-image"><img src="../assets/Gravity Garden/workshop-hero.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Ігри й дослідження</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>Змінюйте гравітацію та вирощуйте сад у спокійній фізичній головоломці.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="magpie.html" hreflang="uk">
+            <div class="collection-image"><img src="../assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Щоденні інструменти</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>Місце для випадкових думок, фото й голосових нотаток, поки вони не зникли.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

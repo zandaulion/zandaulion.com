@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pwa-kit - 从 Bitey 中提取和推广的零依赖、自我更新的 PWA 机制。">
+    <title>pwa-kit ⚡ - 项目详情</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/zh-cn/pwakit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/pwakit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/pwakit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/pwakit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/pwakit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/pwakit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/pwakit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/pwakit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/pwakit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/pwakit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/pwakit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/pwakit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/pwakit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/pwakit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwakit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="zh-CN">← 返回工作坊</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">幕后工具</span>
+                    <h1>pwa-kit</h1>
+                    <p class="project-lead">帮助网页应用离线运行并保持更新的小小构件。</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">在 GitHub 上查看</a>
+                </div>
+                </div>
+                <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>关于项目</h2>
+                <p>Bitey 的更新机制概括为：PWA 会自我更新并在事后如此说明，而不是请求不需要的许可。</p>
+                <p>复制 <code>sw.js</code> 和 <code>pwa-update.js</code> 进入应用程序的网络根目录并将它们连接起来。没有构建步骤，没有捆绑程序，并且零依赖关系 - 这就是要点：这些应用程序是静态目录。</p>
+                <p>新的 Service Worker 会立即安装并激活，无需等待选项卡关闭。每个打开的窗口都会安全地完成当前工作，然后无缝地重新加载到最新版本。</p>
+
+                <h2>图片集</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit 图形" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>功能</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 立即激活：</strong> 新的工作人员可以安装并接管，而旧工作人员不会在打开的浏览器选项卡上徘徊数天。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存的工作保护 (<code>isBusy</code>):</strong> 工人主动询问，而不是盲目导航；页面推迟重新加载，直到安全地解决待处理的编辑或表单状态。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 网络第一的新鲜度：</strong> 在线请求总是获胜，以确保部署的更改在下一次重新加载时生效，并在离线时回退到缓存。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 清理会话存储通知：</strong> 避免使用更新标志污染 URL 查询字符串，通过应用内 toast 清楚地通知用户。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 内置缓存逃生舱口：</strong> 包括针对楔入客户端的紧急取消注册和缓存清除机制。</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">继续发现</span><h2 id="related-title">你可能还会喜欢…</h2></div><p><a href="index.html#collection" hreflang="zh-CN">查看全部作品 ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="behind">
+          <a href="pwainvite.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">幕后工具</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>一个小控制台，统一管理私人网页应用的邀请和设备。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">创作工具</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>把照片变成相互连接的图案，用于金属切割。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">玩乐与探索</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>口袋里的一颗小行星。借助实时天文信息和 NASA 数据探索地球。</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr-FR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thermostat - Enregistreur de température multi-propriétés, tableau de bord interactif PWA et bot Discord pour les capteurs Salus iT500 et Tuya.">
+    <title>Thermostat Monitor - Détails du projet</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/fr/thermostat.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/thermostat.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/thermostat.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/thermostat.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/thermostat.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/thermostat.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/thermostat.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/thermostat.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/thermostat.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/thermostat.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/thermostat.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/thermostat.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/thermostat.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/thermostat.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="thermostat.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="fr-FR">← Retour à l’atelier</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Outils du quotidien</span>
+                    <h1>Thermostat Monitor</h1>
+                    <p class="project-lead">Suivez la chaleur de votre maison grâce à l’historique des capteurs et aux courbes de température.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/thermostat" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Voir sur GitHub</a>
+                </div>
+                </div>
+                <img src="../assets/Thermostat/feature_graphic.jpg" alt="Thermostat Monitor" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>À propos du projet</h2>
+                <p>Un système de télémétrie et de contrôle IoT complet qui enregistre la température et l'état des relais de chauffage des thermostats Salus iT500 et des capteurs Tuya dans plusieurs propriétés.</p>
+<p>Présente les données opérationnelles de trois manières : une application Web progressive réactive avec des lectures en direct et des graphiques interactifs, un robot Discord pour des requêtes de chat rapides et un magasin de données CSV continu et automatisé.</p>
+
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Thermostat/screenshot_01_dashboard.jpg" alt="Tableau de bord de télémétrie en direct et cartes multi-propriétés" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_02_multi_location.jpg" alt="Historique comparatif multi-emplacements (7 jours • 88 000 points de données)" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_03_heating_relay.jpg" alt="Télémétrie historique sur 1 an avec cycles de chauffage actifs" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_04_humidity_tracking.jpg" alt="Surveillance de la température et de l&#x27;humidité (Studio)" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_05_room_detail.jpg" alt="Chronologie de la température ambiante de haute précision (bureau)" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Fonctionnalités</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Tableau de bord PWA en direct :</strong> Lectures en temps réel par propriété, graphiques historiques interactifs et notifications push pour les seuils de température.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🤖 Intégration du Discord Bot :</strong> Interrogez les températures en direct avec <code>!temp</code>, tracez les tendances de température sur 7 jours avec <code>!plot</code>, et téléchargez la télémétrie brute avec <code>!data</code>.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔥 Superpositions de chauffage visuel :</strong> Génère des graphiques professionnels via matplotlib avec des superpositions visuelles ombrées chaque fois que les relais de chauffage sont actifs.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏱️ Journalisation automatisée en arrière-plan :</strong> Enregistre la température ambiante, les points de consigne cibles et les états des relais toutes les 10 minutes.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🐳 Dockerisé et auto-hébergé :</strong> Déploiement conteneurisé sans tracas avec Docker Compose conçu pour une fiabilité 24h/24 et 7j/7 sur Raspberry Pi ou sur des serveurs domestiques.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌍 Fuseau horaire synchronisé :</strong> Alignement automatique du fuseau horaire local sur tous les enregistreurs, graphiques et notifications Discord.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Poursuivez la découverte</span><h2 id="related-title">Vous aimerez peut-être aussi…</h2></div><p><a href="index.html#collection" hreflang="fr-FR">Voir toute la collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="fr-FR">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Outils du quotidien</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>Suivez les annonces, comparez les variations de prix et repérez une bonne affaire.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html" hreflang="fr-FR">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityTDG/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Jouer et explorer</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>Une autre idée du tower defense : utilisez la physique orbitale et des rayons de secours pour sauver des vies.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="fr-FR">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Outils quotidiens · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Notez votre tension, suivez son évolution et exportez votre historique. Une seule application pour Android et le Web.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

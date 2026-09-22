@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="light" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pwa-kit - آلية PWA ذاتية التحديث مستخرجة ومعممة من Bitey.">
+    <title>pwa-kit ⚡ - تفاصيل المشروع</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ar/pwakit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/pwakit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/pwakit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/pwakit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/pwakit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/pwakit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/pwakit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/pwakit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/pwakit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/pwakit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/pwakit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/pwakit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/pwakit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/pwakit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwakit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ar">← العودة إلى الورشة</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">خلف الكواليس</span>
+                    <h1>pwa-kit</h1>
+                    <p class="project-lead">لبنة صغيرة تساعد تطبيقات الويب على العمل دون اتصال والبقاء محدثة.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">عرض على GitHub</a>
+                </div>
+                </div>
+                <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>عن المشروع</h2>
+                <p>آلية التحديث من Bitey معممة: PWA يقوم بتحديث نفسه ويقول ذلك بعد ذلك، بدلاً من طلب الإذن الذي لا يحتاج إليه.</p>
+                <p>ينسخ <code>sw.js</code> و <code>pwa-update.js</code> في جذر الويب الخاص بالتطبيق وقم بتوصيله. لا توجد خطوة بناء، ولا مجمع، ولا تبعيات - وهذا هو بيت القصيد: هذه التطبيقات هي أدلة ثابتة.</p>
+                <p>يقوم عامل الخدمة الجديد بالتثبيت والتنشيط على الفور دون انتظار إغلاق علامات التبويب. تُكمل كل نافذة مفتوحة العمل الحالي بأمان قبل إعادة التحميل بسلاسة على الإصدار الأحدث.</p>
+
+                <h2>معرض الصور</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="رسومية pwa-kit" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>المزايا</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ التفعيل فوري:</strong> يتم تثبيت العمال الجدد وتولي المهمة دون بقاء العمال الذين لا معنى لهم لعدة أيام عبر علامات تبويب المتصفح المفتوحة.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ حماية العمل غير المحفوظ (<code>isBusy</code>):</strong> فالعامل يسأل بدلاً من أن يبحر بشكل أعمى؛ تؤجل الصفحات عمليات إعادة التحميل حتى يتم حل التعديلات المعلقة أو حالات النموذج بأمان.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 نضارة الشبكة أولاً:</strong> تفوز الطلبات عبر الإنترنت دائمًا لضمان سريان التغييرات المنشورة عند إعادة التحميل التالية، وتعود إلى ذاكرة التخزين المؤقت عندما تكون غير متصل بالإنترنت.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 إشعارات تخزين الجلسة النظيفة:</strong> يتجنب تلويث سلاسل استعلام URL باستخدام علامات التحديث، وإبلاغ المستخدمين بشكل نظيف من خلال الخبز المحمص داخل التطبيق.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 فتحة الهروب من ذاكرة التخزين المؤقت المدمجة:</strong> يتضمن آلية إلغاء التسجيل في حالات الطوارئ وإلغاء التخزين المؤقت للعملاء المثبتين.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">واصل الاكتشاف</span><h2 id="related-title">قد يعجبك أيضًا…</h2></div><p><a href="index.html#collection" hreflang="ar">استعرض المجموعة كاملة ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="behind">
+          <a href="pwainvite.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">خلف الكواليس</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>لوحة صغيرة لإدارة الدعوات والأجهزة عبر تطبيقات الويب الخاصة.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">أدوات إبداعية</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>حوّل صورة إلى أنماط متصلة لقصّها في المعدن.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">اللعب والاستكشاف</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>كوكب صغير في جيبك. استكشف الأرض ببيانات فلكية محدثة وبيانات ناسا.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

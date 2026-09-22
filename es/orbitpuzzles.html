@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es-ES" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitPuzzles: un juego de rompecabezas de simulación de gravedad para Android.">
+    <title>OrbitPuzzles - Detalles del juego</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/es/orbitpuzzles.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/orbitpuzzles.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/orbitpuzzles.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/orbitpuzzles.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/orbitpuzzles.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/orbitpuzzles.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/orbitpuzzles.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/orbitpuzzles.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/orbitpuzzles.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/orbitpuzzles.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="orbitpuzzles.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="es-ES">← Volver al taller</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Jugar y explorar</span>
+                    <h1>OrbitPuzzles</h1>
+                    <p class="project-lead">Pon a prueba tu intuición sobre la gravedad con puzles de física orbital.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <span class="availability-note">Consíguelo en Google Play (Próximamente)</span>
+                    <a href="../orbitpuzzles-privacy.html" class="btn btn-outline" hreflang="en-US">Política de privacidad (en inglés)</a>
+                </div>
+                </div>
+                <img src="../assets/OrbitPuzzles/feature_graphic.jpg" alt="Juego OrbitPuzzles" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Sobre el juego</h2>
+                <p>OrbitPuzzles es un desafiante juego de rompecabezas basado en la física en el que los jugadores diseñan sistemas orbitales colocando estratégicamente cuerpos celestes como planetas, lunas y asteroides. Tu objetivo es lograr configuraciones específicas, como completar un número determinado de órbitas sin chocar con la estrella central ni escapar del sistema.</p>
+                <p>Construido de forma completamente nativa en Kotlin, OrbitPuzzles presenta un simulador de N-body $O(N^2)$ personalizado altamente estable que utiliza la integración de Velocity Verlet y el suavizado Plummer. El tiempo se detiene durante la fase de DISEÑO para que puedas posicionar cuidadosamente tus cuerpos y ajustar los vectores de velocidad, y luego fluye en la fase de EJECUCIÓN para probar si tu mecánica orbital se mantiene.</p>
+                <p>La experiencia visual combina la renderización 3D impulsada por Google Filament con la interfaz de usuario 100% Jetpack Compose. Cada cuerpo celeste se representa utilizando texturas procesales personalizadas, creando una variedad infinita de planetas y estrellas sin depender de archivos de texturas masivos, mientras que los rastros brillantes y las superposiciones de la interfaz de usuario brindan telemetría y retroalimentación en tiempo real.</p>
+
+                <h2>Galería</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-29-933_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Selección de nivel" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-37-349_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Fase de diseño" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-41-276_com.orbitpuzzles.app.jpg" alt="Ejecución de simulación OrbitPuzzles" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-53-361_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Captura de pantalla 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-00-279_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Captura de pantalla 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-04-774_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Captura de pantalla 6" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Funciones</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Motor de física personalizado:</strong> Simulación precisa de N cuerpos que aprovecha la integración de Velocity Verlet para una estabilidad orbital a largo plazo, completa con suavizado Plummer para manejar con elegancia encuentros cercanos extremos.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Fases de diseño y ejecución:</strong> Un enfoque táctico en el que el tiempo se detiene para planificar, lo que le permite ajustar la configuración planetaria, las fuerzas vectoriales y resolver el rompecabezas orbital antes de desencadenar la simulación.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Planetas procedimentales 3D:</strong> La integración de Google Filament mediante mapas de albedo equirectangulares generados matemáticamente garantiza que cada cuerpo celeste se vea único y, al mismo tiempo, mantiene pequeña la huella de la aplicación.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Representación híbrida:</strong> Una combinación perfecta de renderizado de física 3D nativa bajo superposiciones de interfaz de usuario 2D en tiempo real y bellamente superpuestas dibujadas con Jetpack Compose Canvas.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Desafío progresivo:</strong> Navega por una amplia gama de niveles con distintos presupuestos y objetivos. El sistema interno "OrbitTracker" cuenta con precisión las revoluciones independientemente de la excentricidad elíptica.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Sigue descubriendo</span><h2 id="related-title">Quizá también te guste…</h2></div><p><a href="index.html#collection" hreflang="es-ES">Ver toda la colección ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html" hreflang="es-ES">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityTDG/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Jugar y explorar</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>Un giro a la defensa de torres: usa la física orbital y rayos de rescate para salvar vidas.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="intarzieri.html" hreflang="es-ES">
+            <div class="collection-image"><img src="../assets/Intarzieri/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Herramientas cotidianas</div>
+            <h3>Intârzieri Tren <span aria-hidden="true">↗</span></h3>
+            <p>Sigue los trenes de Rumanía, sus rutas y los cambios en sus retrasos.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="thermostat.html" hreflang="es-ES">
+            <div class="collection-image"><img src="../assets/Thermostat/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Herramientas cotidianas</div>
+            <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+            <p>Consulta la temperatura de casa con el historial de sensores y gráficos.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

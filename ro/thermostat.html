@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thermostat - Înregistrare de temperatură cu mai multe proprietăți, tablou de bord interactiv PWA și bot Discord pentru senzorii Salus iT500 și Tuya.">
+    <title>Thermostat Monitor - Detalii proiect</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ro/thermostat.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/thermostat.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/thermostat.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/thermostat.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/thermostat.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/thermostat.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/thermostat.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/thermostat.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/thermostat.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/thermostat.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/thermostat.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/thermostat.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/thermostat.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/thermostat.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="thermostat.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ro">← Înapoi în atelier</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Unelte de zi cu zi</span>
+                    <h1>Thermostat Monitor</h1>
+                    <p class="project-lead">Vezi cât de cald e acasă, cu istoricul senzorilor și grafice de temperatură.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/thermostat" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Vezi pe GitHub</a>
+                </div>
+                </div>
+                <img src="../assets/Thermostat/feature_graphic.jpg" alt="Thermostat Monitor" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Despre proiect</h2>
+                <p>Un sistem complet de telemetrie și control IoT care înregistrează starea releului de temperatură și încălzire de la termostatele Salus iT500 și senzorii Tuya pe mai multe proprietăți.</p>
+<p>Afișează datele operaționale în trei moduri: o aplicație web progresivă receptivă cu citiri live și diagrame interactive, un bot Discord pentru interogări rapide de chat și un magazin de date automatizat continuu CSV.</p>
+
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Thermostat/screenshot_01_dashboard.jpg" alt="Tabloul de bord pentru telemetrie live și carduri cu mai multe proprietăți" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_02_multi_location.jpg" alt="Istoric comparativ cu mai multe locații (7 zile • 88k puncte de date)" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_03_heating_relay.jpg" alt="Telemetrie istorică de 1 an cu cicluri active de încălzire" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_04_humidity_tracking.jpg" alt="Monitorizare temperatură vs umiditate (studio)" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_05_room_detail.jpg" alt="Cronologie de înaltă precizie a temperaturii camerei (birou)" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Funcționalități</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Live PWA Tabloul de bord:</strong> Citiri în timp real per proprietate, diagrame istorice interactive și notificări push pentru pragurile de temperatură.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🤖 Integrarea Discord Bot:</strong> Interogați temperaturile live cu <code>!temp</code>, reprezentați tendințele temperaturii pe 7 zile cu <code>!plot</code>și descărcați telemetrie brută cu <code>!data</code>.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔥 Suprapuneri vizuale de încălzire:</strong> Generează diagrame profesionale prin matplotlib, cu suprapuneri vizuale umbrite ori de câte ori releele de încălzire sunt active.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏱️ Înregistrare automată în fundal:</strong> Înregistrează temperatura ambiantă, punctele de referință țintă și stările releului la fiecare 10 minute.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🐳 Dockerizat și auto-găzduit:</strong> Implementare containerizată fără probleme cu Docker Compose conceput pentru fiabilitate 24/7 pe Raspberry Pi sau pe serverele de acasă.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌍 Fus orar sincronizat:</strong> Alinierea automată a fusului orar local în toate loggerele, graficele și notificările Discord.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Descoperă o altă pistă</span><h2 id="related-title">Poate îți mai place și…</h2></div><p><a href="index.html#collection" hreflang="ro">Vezi întreaga colecție ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="ro">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Unelte de zi cu zi</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>Urmărește anunțuri, compară schimbările de preț și prinde o ofertă promițătoare.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html" hreflang="ro">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityTDG/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Joacă și explorare</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>O altfel de apărare cu turnuri: folosește fizica orbitală și raze de salvare ca să salvezi vieți.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="ro">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Instrumente de zi cu zi · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Înregistrează tensiunea arterială, urmărește evoluția și exportă istoricul. O singură aplicație pentru Android și web.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

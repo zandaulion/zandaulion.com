@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de-DE" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankey Diagrammeditor | Zandaulion</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <!-- Apache ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/de/sankey.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/sankey.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/sankey.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/sankey.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/sankey.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/sankey.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/sankey.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/sankey.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/sankey.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/sankey.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/sankey.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/sankey.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/sankey.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/sankey.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="sankey.html"></portfolio-header>
+
+    <main id="main" class="sankey-main">
+        <a class="back-link" href="index.html#collection" hreflang="de-DE">← Zurück zur Werkstatt</a>
+        <div class="sankey-editor-layout">
+
+            <!-- Left Panel: Controls -->
+            <div class="sankey-controls card">
+                <h1>Sankey-Editor</h1>
+
+                <h3 style="margin-bottom: 16px; font-weight: 700;">Daten &amp; Export</h3>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
+                    <button id="btn-export" class="btn btn-outline" style="width: 100%;">Als Bild exportieren</button>
+                    <div style="display: flex; gap: 10px;">
+                        <button id="btn-export-json" class="btn btn-outline" style="flex: 1; font-size: 0.9rem;">Exportieren Sie JSON</button>
+                        <button id="btn-import-json" class="btn btn-outline" style="flex: 1; font-size: 0.9rem;">Importieren Sie JSON</button>
+                    </div>
+                    <button id="btn-reset" class="btn btn-outline" style="width: 100%; border-color: rgba(255, 56, 56, 0.3); color: var(--accent-red);">Diagramm zurücksetzen</button>
+                    <a href="https://github.com/zandaulion/zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; text-align: center; font-size: 0.9rem;">Auf GitHub ansehen</a>
+                    <input type="file" id="import-file-input" accept=".json" style="display: none;">
+                </div>
+
+                <!-- Nodes Section -->
+                <div class="editor-section">
+                    <h3 style="margin-bottom: 16px; font-weight: 700;">Diagrammdaten</h3>
+                    <h3>Knoten</h3>
+                    <div class="input-group" style="flex-direction: column;">
+                        <input type="text" id="node-name" placeholder="Knotenname">
+                        <div style="display: flex; gap: 8px; align-items: center;">
+                            <input type="color" id="node-color" value="#00d2ff" title="Knotenfarbe" disabled>
+                            <label style="display:flex; align-items:center; gap: 4px; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; flex: 1;">
+                                <input type="checkbox" id="auto-color" checked> Automatisch
+                            </label>
+                            <button id="add-node-btn" class="btn btn-primary" style="flex: 1;">Knoten hinzufügen</button>
+                        </div>
+                    </div>
+                    <ul id="nodes-list" class="item-list">
+                        <!-- Nodes populated via JS -->
+                    </ul>
+                </div>
+
+                <!-- Links Section -->
+                <div class="editor-section">
+                    <h3>Links</h3>
+                    <div class="input-group stacked-inputs">
+                        <select id="link-source">
+                            <option value="" disabled selected>Quellknoten</option>
+                        </select>
+                        <select id="link-target">
+                            <option value="" disabled selected>Zielknoten</option>
+                        </select>
+                        <input type="number" id="link-value" placeholder="Wert (z. B. 10)" min="1">
+                        <button id="add-link-btn" class="btn btn-primary">Link hinzufügen</button>
+                    </div>
+                    <ul id="links-list" class="item-list">
+                        <!-- Links populated via JS -->
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Right Panel: Preview -->
+            <div class="sankey-preview card" style="display: flex; flex-direction: column; overflow: hidden; padding-top: 16px; padding-bottom: 0;">
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 16px; gap: 24px; padding: 0 24px; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <label for="height-slider" style="font-size: 0.9rem; color: var(--text-muted); white-space: nowrap;">Leinwandhöhe: <span id="height-display">100</span>%</label>
+                        <input type="range" id="height-slider" min="100" max="500" value="100" style="width: 120px;">
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <label for="width-slider" style="font-size: 0.9rem; color: var(--text-muted); white-space: nowrap;">Leinwandbreite: <span id="width-display">100</span>%</label>
+                        <input type="range" id="width-slider" min="100" max="500" value="100" style="width: 120px;">
+                    </div>
+                </div>
+                <div style="overflow: auto; width: 100%; height: 800px; padding-bottom: 24px;">
+                    <div id="echarts-container" style="width: 100%; height: 800px; min-width: 100%;"></div>
+                </div>
+            </div>
+
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Weiter auf Entdeckungsreise</span><h2 id="related-title">Das könnte dir auch gefallen…</h2></div><p><a href="index.html#collection" hreflang="de-DE">Die ganze Sammlung ansehen ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Kreative Werkzeuge</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>Verwandle ein Foto in verbundene Muster zum Ausschneiden aus Metall.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="miscare.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/Miscare/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Alltagshelfer</div>
+            <h3>Mișcare <span aria-hidden="true">↗</span></h3>
+            <p>Finde etwas Bewegung für heute – mit der Ausrüstung, die du schon hast.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitywarp.html" hreflang="de-DE">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityWarp/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Spielen und entdecken</div>
+            <h3>Gravity Warp <span aria-hidden="true">↗</span></h3>
+            <p>Steuere durch Gravitationstrichter in einem Retro-Arcadespiel mit Physik.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+    <script src="../sankey.js?v=3"></script>
+
+</body>
+</html>

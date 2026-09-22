@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PWA Invite Console - 개인 PWA에 대한 통합 장치 및 초대 관리입니다.">
+    <title>PWA Invite Console 🔐 - 프로젝트 세부 정보</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ko/pwainvite.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/pwainvite.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/pwainvite.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/pwainvite.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/pwainvite.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/pwainvite.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/pwainvite.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/pwainvite.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/pwainvite.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/pwainvite.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/pwainvite.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/pwainvite.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/pwainvite.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/pwainvite.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwainvite.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ko-KR">← 작업실로 돌아가기</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">무대 뒤 도구</span>
+                    <h1>PWA Invite Console</h1>
+                    <p class="project-lead">비공개 웹 앱의 초대와 기기를 한곳에서 관리하는 작은 콘솔.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-invite-console" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">GitHub에서 보기</a>
+                </div>
+                </div>
+                <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>프로젝트 소개</h2>
+                <p>초대 메커니즘 뒤에 있는 모든 앱의 초대 및 장치 관리를 위한 한 페이지입니다.</p>
+                <p>이는 유일한 관리 GUI입니다. 즉, 각각 하나씩 수행하는 데 사용되는 앱입니다. 이는 여러 탭이 열려 있고 기억할 여러 장소가 있음을 의미합니다. 이는 자신이 사용하는 앱 중 어느 것에도 속하지 않기 때문에 자체 저장소에 있습니다.</p>
+                <p>Tailscale TLS는 프라이빗 리스너 앞에서 종료되어 노출된 퍼블릭 엔드포인트나 하드코딩된 비밀번호가 없는 인증된 Tailnet 노드로만 관리 액세스를 엄격하게 제한합니다.</p>
+
+                <h2>갤러리</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console 그래픽" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>기능</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔑 통합 초대 수명 주기:</strong> 한 곳에서 서비스 전반에 걸쳐 앱 초대 링크 사용을 생성, 공유, 추적하고 모니터링할 수 있습니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 장치 관리:</strong> 등록된 클라이언트 장치를 검사하고, 마지막으로 표시된 타임스탬프를 확인하고, 친숙한 레이블을 할당하고, 손상된 세션을 즉시 취소하세요.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Tailnet 개인 보안:</strong> 프런트엔드 코드에는 자격 증명이 저장되지 않습니다. Tailscale을 통해서만 도달할 수 있는 개인 역방향 프록시 헤더 삽입을 통해 인증됩니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 종속성이 전혀 없는 PWA:</strong> 즉각적인 재검증과 프레임워크 팽창이 없는 바닐라 JavaScript 단일 페이지 애플리케이션입니다.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">계속 둘러보기</span><h2 id="related-title">이런 작품도 만나보세요</h2></div><p><a href="index.html#collection" hreflang="ko-KR">전체 모음 보기 ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="behind">
+          <a href="pwakit.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">무대 뒤 도구</div>
+            <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+            <p>웹 앱이 오프라인에서도 작동하고 최신 상태를 유지하도록 돕는 작은 구성 요소.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">창작 도구</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>사진을 서로 연결된 무늬로 바꿔 금속 절단 작품을 만들어 보세요.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">놀이와 탐험</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>주머니 속 작은 행성. 최신 천문 정보와 NASA 데이터로 지구를 탐험하세요.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

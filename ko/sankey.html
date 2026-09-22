@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankey 다이어그램 편집기 | Zandaulion</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <!-- Apache ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ko/sankey.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/sankey.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/sankey.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/sankey.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/sankey.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/sankey.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/sankey.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/sankey.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/sankey.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/sankey.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/sankey.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/sankey.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/sankey.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/sankey.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="sankey.html"></portfolio-header>
+
+    <main id="main" class="sankey-main">
+        <a class="back-link" href="index.html#collection" hreflang="ko-KR">← 작업실로 돌아가기</a>
+        <div class="sankey-editor-layout">
+
+            <!-- Left Panel: Controls -->
+            <div class="sankey-controls card">
+                <h1>Sankey 편집기</h1>
+
+                <h3 style="margin-bottom: 16px; font-weight: 700;">데이터 및 내보내기</h3>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
+                    <button id="btn-export" class="btn btn-outline" style="width: 100%;">이미지로 내보내기</button>
+                    <div style="display: flex; gap: 10px;">
+                        <button id="btn-export-json" class="btn btn-outline" style="flex: 1; font-size: 0.9rem;">JSON 내보내기</button>
+                        <button id="btn-import-json" class="btn btn-outline" style="flex: 1; font-size: 0.9rem;">JSON 가져오기</button>
+                    </div>
+                    <button id="btn-reset" class="btn btn-outline" style="width: 100%; border-color: rgba(255, 56, 56, 0.3); color: var(--accent-red);">다이어그램 재설정</button>
+                    <a href="https://github.com/zandaulion/zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; text-align: center; font-size: 0.9rem;">GitHub에서 보기</a>
+                    <input type="file" id="import-file-input" accept=".json" style="display: none;">
+                </div>
+
+                <!-- Nodes Section -->
+                <div class="editor-section">
+                    <h3 style="margin-bottom: 16px; font-weight: 700;">다이어그램 데이터</h3>
+                    <h3>노드</h3>
+                    <div class="input-group" style="flex-direction: column;">
+                        <input type="text" id="node-name" placeholder="노드 이름">
+                        <div style="display: flex; gap: 8px; align-items: center;">
+                            <input type="color" id="node-color" value="#00d2ff" title="노드 색상" disabled>
+                            <label style="display:flex; align-items:center; gap: 4px; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; flex: 1;">
+                                <input type="checkbox" id="auto-color" checked> 자동
+                            </label>
+                            <button id="add-node-btn" class="btn btn-primary" style="flex: 1;">노드 추가</button>
+                        </div>
+                    </div>
+                    <ul id="nodes-list" class="item-list">
+                        <!-- Nodes populated via JS -->
+                    </ul>
+                </div>
+
+                <!-- Links Section -->
+                <div class="editor-section">
+                    <h3>링크</h3>
+                    <div class="input-group stacked-inputs">
+                        <select id="link-source">
+                            <option value="" disabled selected>소스 노드</option>
+                        </select>
+                        <select id="link-target">
+                            <option value="" disabled selected>대상 노드</option>
+                        </select>
+                        <input type="number" id="link-value" placeholder="값(예: 10)" min="1">
+                        <button id="add-link-btn" class="btn btn-primary">링크 추가</button>
+                    </div>
+                    <ul id="links-list" class="item-list">
+                        <!-- Links populated via JS -->
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Right Panel: Preview -->
+            <div class="sankey-preview card" style="display: flex; flex-direction: column; overflow: hidden; padding-top: 16px; padding-bottom: 0;">
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 16px; gap: 24px; padding: 0 24px; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <label for="height-slider" style="font-size: 0.9rem; color: var(--text-muted); white-space: nowrap;">캔버스 높이: <span id="height-display">100</span>%</label>
+                        <input type="range" id="height-slider" min="100" max="500" value="100" style="width: 120px;">
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <label for="width-slider" style="font-size: 0.9rem; color: var(--text-muted); white-space: nowrap;">캔버스 폭: <span id="width-display">100</span>%</label>
+                        <input type="range" id="width-slider" min="100" max="500" value="100" style="width: 120px;">
+                    </div>
+                </div>
+                <div style="overflow: auto; width: 100%; height: 800px; padding-bottom: 24px;">
+                    <div id="echarts-container" style="width: 100%; height: 800px; min-width: 100%;"></div>
+                </div>
+            </div>
+
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">계속 둘러보기</span><h2 id="related-title">이런 작품도 만나보세요</h2></div><p><a href="index.html#collection" hreflang="ko-KR">전체 모음 보기 ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">창작 도구</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>사진을 서로 연결된 무늬로 바꿔 금속 절단 작품을 만들어 보세요.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="miscare.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/Miscare/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">일상 도구</div>
+            <h3>Mișcare <span aria-hidden="true">↗</span></h3>
+            <p>이미 가지고 있는 운동 도구로 오늘 조금 움직여 보세요.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitywarp.html" hreflang="ko-KR">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityWarp/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">놀이와 탐험</div>
+            <h3>Gravity Warp <span aria-hidden="true">↗</span></h3>
+            <p>복고풍 물리 아케이드 게임에서 중력 우물 사이를 헤쳐 나가세요.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+    <script src="../sankey.js?v=3"></script>
+
+</body>
+</html>

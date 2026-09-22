@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PWA Invite Console — 非公開PWAの端末と招待を一元管理するコンソール。">
+    <title>PWA Invite Console 🔐 - プロジェクトの詳細</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ja/pwainvite.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/pwainvite.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/pwainvite.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/pwainvite.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/pwainvite.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/pwainvite.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/pwainvite.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/pwainvite.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/pwainvite.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/pwainvite.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/pwainvite.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/pwainvite.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/pwainvite.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/pwainvite.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwainvite.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ja-JP">← 工房に戻る</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">舞台裏の道具</span>
+                    <h1>PWA Invite Console</h1>
+                    <p class="project-lead">非公開のWebアプリへの招待や端末をまとめて管理する、小さなコンソール。</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-invite-console" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">GitHubで見る</a>
+                </div>
+                </div>
+                <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>プロジェクトについて</h2>
+                <p>招待メカニズムの背後にあるすべてのアプリの招待とデバイス管理を 1 つのページで行います。</p>
+                <p>これは唯一の管理 GUI です。以前はアプリがそれぞれ 1 つずつ管理していたため、複数のタブが開き、複数の場所を覚えておく必要がありました。これは、どのアプリにも属さないため、独自のリポジトリに存在します。</p>
+                <p>Tailscale TLS はプライベート リスナーの前で終了し、管理アクセスを、公開されたパブリック エンドポイントやハードコードされたパスワードを持たない許可された Tailnet ノードに厳密に制限します。</p>
+
+                <h2>ギャラリー</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console グラフィック" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>機能</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔑 統合された招待ライフサイクル:</strong> 1 か所からサービス間でアプリの招待リンクを生成、共有、有効期限を追跡し、引き換えを監視します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 デバイス管理:</strong> 登録されたクライアント デバイスを検査し、最後に表示されたタイムスタンプを表示し、わかりやすいラベルを割り当て、侵害されたセッションを即座に取り消します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 テールネットプライベートセキュリティ:</strong> フロントエンド コードに資格情報は保存されません。 Tailscale 経由でのみ到達可能なプライベート リバース プロキシ ヘッダー インジェクション経由で認証されます。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 依存性ゼロ PWA:</strong> 即座に再検証され、フレームワークの肥大化が発生しない、バニラの JavaScript シングルページ アプリケーション。</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">もっと発見する</span><h2 id="related-title">こちらもいかがですか</h2></div><p><a href="index.html#collection" hreflang="ja-JP">すべての作品を見る ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="behind">
+          <a href="pwakit.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">舞台裏の道具</div>
+            <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+            <p>Webアプリのオフライン動作と更新を支える、小さな部品。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">創作の道具</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>写真をつながった模様に変え、金属の切り抜き作品へ。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">遊びと探索</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>ポケットに小さな惑星を。最新の天文情報とNASAのデータで地球を探索。</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

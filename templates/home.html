@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" dir="{{direction}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{meta}}">
+  <meta name="theme-color" content="#f7f5ee">
+  <meta property="og:title" content="Zandaulion — {{title}}">
+  <meta property="og:description" content="{{social}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="https://zandaulion.com/assets/Kerfloom/feature_graphic.jpg">
+  <link rel="canonical" href="{{canonical}}">
+  {{alternates}}
+  <title>Zandaulion — {{title}}</title>
+  <link rel="icon" type="image/png" href="{{root}}assets/brand/lion-light-v2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{root}}workshop.css?v=3">
+  <script src="{{root}}workshop.js?v=2" defer></script>
+  <script src="{{root}}language-data.js?v=5" defer></script>
+  <script src="{{root}}language.js?v=6" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">{{skip}}</a>
+  <header class="site-header wrap">
+    <a class="brand" href="{{locale_home}}" aria-label="{{home}}"><img src="{{root}}assets/brand/lion-light-v2.png" alt="" width="43" height="43">Zandaulion<span aria-hidden="true" style="color:var(--orange)">.</span></a>
+    <nav class="primary-nav" aria-label="{{nav}}">
+      <a href="#collection">{{collection}}</a>
+      <a href="#about">{{about}}</a>
+      <a href="mailto:zandaulion@gmail.com" class="nav-contact">{{hello}} ↗</a>
+    </nav>
+    {{language_picker}}
+  </header>
+  <main id="main">
+    {{translation_note}}
+    <section class="intro wrap" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> {{eyebrow}}</div>
+        <h1 id="intro-title">{{headline}}<br><em>{{curious}}</em></h1>
+        <p>{{welcome}}<br>{{welcome_more}}</p>
+        <div class="intro-actions">
+          <a class="solid-link" href="#collection">{{explore}} <span aria-hidden="true">↓</span></a>
+          <button class="text-button" id="surprise-me" hidden>✳ {{surprise}}</button>
+        </div>
+      </div>
+      <div class="workbench" aria-label="{{bench}}">
+        <a class="bench-piece planet-piece" href="{{root}}palebluedot.html" hreflang="en-US" aria-label="{{planet_link}}">
+          <img src="{{root}}assets/PaleBlueDot/Screenshot_20260501_090925.png" alt="{{planet_alt}}" width="2076" height="2152" fetchpriority="high">
+          <span>{{planet_caption}} ↗</span>
+        </a>
+        <div class="bench-sticker" aria-hidden="true">{{sticker}}<br>{{sticker_end}}<br>✳</div>
+        <a class="bench-piece art-piece" href="{{root}}kerfloom.html" hreflang="en-US" aria-label="{{art_link}}">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="{{root}}assets/Kerfloom/cut_style_03_radial_cuts.png" alt="{{art_alt}}" width="1024" height="512">
+          <span>{{art_caption}} ↗</span>
+        </a>
+        <div class="bench-note" aria-hidden="true"><span>↳</span> {{note}}</div>
+      </div>
+    </section>
+
+    <section class="featured wrap" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <div><span class="section-number">01 / {{featured_label}}</span><h2 id="featured-title">{{featured_title}}</h2></div>
+        <p>{{featured_intro}}</p>
+      </div>
+      <div class="featured-grid">
+        <a class="feature feature-kerfloom" href="{{root}}kerfloom.html" hreflang="en-US">
+          <div class="feature-art"><img src="{{root}}assets/Kerfloom/cut_style_01_slats.png" alt="{{kerf_alt}}" width="1024" height="512" loading="lazy"></div>
+          <div class="feature-copy"><span class="project-type">{{kerf_type}}</span><h3>Kerfloom</h3><p>{{kerf_feature}}</p><span class="feature-link">{{kerf_action}} <b aria-hidden="true">↗</b></span></div>
+        </a>
+        <a class="feature feature-space" href="{{root}}palebluedot.html" hreflang="en-US">
+          <div class="feature-art"><img src="{{root}}assets/PaleBlueDot/Screenshot_20260501_090925.png" alt="{{earth_alt}}" width="2076" height="2152" loading="lazy"></div>
+          <div class="feature-copy"><span class="project-type">{{earth_type}}</span><h3>Pale Blue Dot</h3><p>{{earth_feature}}</p><span class="feature-link">{{earth_action}} <b aria-hidden="true">↗</b></span></div>
+        </a>
+        <a class="feature feature-bitey" href="{{root}}plate.html" hreflang="en-US">
+          <div class="feature-art"><img src="{{root}}assets/Plate/bitey-hero.png" alt="{{bitey_alt}}" width="1024" height="500" loading="lazy"></div>
+          <div class="feature-copy"><span class="project-type">{{bitey_type}}</span><h3>Bitey</h3><p>{{bitey_feature}}</p><span class="feature-link">{{bitey_action}} <b aria-hidden="true">↗</b></span></div>
+        </a>
+      </div>
+    </section>
+
+    <div class="interlude wrap"><span aria-hidden="true">✳</span><p>{{interlude}}</p></div>
+
+    <section class="collection wrap" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading">
+        <div><span class="section-number">02 / {{collection_label}}</span><h2 id="collection-title">{{collection_title}}</h2></div>
+        <p>{{collection_intro}}</p>
+      </div>
+      <div class="collection-controls" hidden>
+        <div class="filters" role="group" aria-label="{{filter}}">
+          <button type="button" data-filter="all" aria-pressed="true" aria-controls="project-grid">{{all}}</button>
+          <button type="button" data-filter="everyday" aria-pressed="false" aria-controls="project-grid">{{everyday}}</button>
+          <button type="button" data-filter="creative" aria-pressed="false" aria-controls="project-grid">{{creative}}</button>
+          <button type="button" data-filter="play" aria-pressed="false" aria-controls="project-grid">{{play}}</button>
+          <button type="button" data-filter="behind" aria-pressed="false" aria-controls="project-grid">{{behind}}</button>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">{{search}}</span><input id="project-search" type="search" placeholder="{{placeholder}}" aria-controls="project-grid"></label>
+      </div>
+      <p class="collection-meta" id="project-count" data-label="{{count_label}}" role="status" aria-live="polite" aria-atomic="true">{{count_label}}: 20 / 20</p>
+      <div class="collection-grid" id="project-grid">
+        <article class="collection-card" data-category="creative">
+          <a href="{{root}}kerfloom.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{creative}}</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>{{kerf_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="{{root}}palebluedot.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{play}}</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>{{earth_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}plate.html" hreflang="en-US">
+            <div class="collection-image collection-image-hero"><img src="{{root}}assets/Plate/bitey-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}}</div>
+            <h3>Bitey <span aria-hidden="true">↗</span></h3>
+            <p>{{bitey_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="creative">
+          <a href="{{root}}faceslice.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Faceslice/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{creative}}</div>
+            <h3>Faceslice <span aria-hidden="true">↗</span></h3>
+            <p>{{faceslice_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="{{root}}gravitygarden.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Gravity Garden/workshop-hero.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{play}}</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>{{garden_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}magpie.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}}</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>{{magpie_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="creative">
+          <a href="{{root}}sankey.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{creative}}</div>
+            <h3>Sankey Diagram Editor <span aria-hidden="true">↗</span></h3>
+            <p>{{sankey_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}miscare.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Miscare/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}}</div>
+            <h3>Mișcare <span aria-hidden="true">↗</span></h3>
+            <p>{{miscare_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="{{root}}gravitywarp.html" hreflang="en-US">
+            <div class="collection-image collection-image-hero"><img src="{{root}}assets/GravityWarp/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{play}}</div>
+            <h3>Gravity Warp <span aria-hidden="true">↗</span></h3>
+            <p>{{warp_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}omaha.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/omaha/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}}</div>
+            <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+            <p>{{omaha_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}spendosaurus.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Spendosaurus/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}}</div>
+            <h3>Spendosaurus <span aria-hidden="true">↗</span></h3>
+            <p>{{spend_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="{{root}}orbitpuzzles.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/OrbitPuzzles/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{play}}</div>
+            <h3>OrbitPuzzles <span aria-hidden="true">↗</span></h3>
+            <p>{{orbit_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}intarzieri.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Intarzieri/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}}</div>
+            <h3>Intârzieri Tren <span aria-hidden="true">↗</span></h3>
+            <p>{{trains_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}thermostat.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Thermostat/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}}</div>
+            <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+            <p>{{thermostat_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="{{root}}gravitytdg.html" hreflang="en-US">
+            <div class="collection-image collection-image-hero"><img src="{{root}}assets/GravityTDG/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{play}}</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>{{tdg_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}olxdeals.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}}</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>{{olx_card}}</p>
+          </a>
+        </article>
+
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}bpdigitizer.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}} · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>{{bp_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="{{root}}admitere.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/Admitere/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{everyday}}</div>
+            <h3>Admitere Liceu Kit <span aria-hidden="true">↗</span></h3>
+            <p>{{admitere_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="behind">
+          <a href="{{root}}pwakit.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{behind}}</div>
+            <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+            <p>{{pwakit_card}}</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="behind">
+          <a href="{{root}}pwainvite.html" hreflang="en-US">
+            <div class="collection-image"><img src="{{root}}assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">{{behind}}</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>{{invite_card}}</p>
+          </a>
+        </article>
+      </div>
+      <div class="empty-state" id="empty-state" hidden><p>{{empty}}</p><button class="text-button" id="clear-filters">{{clear}} ↗</button></div>
+    </section>
+
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <div><span class="section-number">03 / {{about_label}}</span><h2 id="about-title">{{maker}}<br>{{rabbit_holes}}</h2></div>
+      <div><p>{{about_text}}</p><p>{{about_more}}</p><div class="about-links"><a href="mailto:zandaulion@gmail.com">{{hello}} ↗</a><a href="https://github.com/zandaulion" target="_blank" rel="noopener noreferrer">{{code}} ↗</a><a href="https://ko-fi.com/P7K6214YH8" target="_blank" rel="noopener noreferrer">{{coffee}} ↗</a></div></div>
+    </section>
+  </main>
+  <footer class="footer wrap">
+    <p>© <span id="workshop-year">2026</span> Zandaulion · {{thanks}}</p>
+    <details><summary>{{privacy}}</summary><div class="privacy-links"><a href="{{root}}plate-privacy.html" hreflang="en-US">{{formerly}}</a><a href="{{root}}bitey-privacy.html" hreflang="en-US">Bitey</a><a href="{{root}}bpdigitizer-privacy.html" hreflang="en-US">BP Digitizer</a><a href="{{root}}palebluedot-privacy.html" hreflang="en-US">Pale Blue Dot</a><a href="{{root}}gravitywarp-privacy.html" hreflang="en-US">Gravity Warp</a><a href="{{root}}gravitygarden-privacy.html" hreflang="en-US">Gravity Garden</a><a href="{{root}}orbitpuzzles-privacy.html" hreflang="en-US">OrbitPuzzles</a><a href="{{root}}gravitytdg-privacy.html" hreflang="en-US">GravityTDG</a></div></details>
+  </footer>
+</body>
+</html>

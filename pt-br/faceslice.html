@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faceslice — Desde uma única foto frontal até placas de metal cortadas a laser para um retrato topográfico em camadas. Mecanismo de fatiamento, estimativa de material em tempo real e exportação DXF.">
+    <title>Faceslice - Detalhes do Projeto</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/Faceslice/icon.svg">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/pt-br/faceslice.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/faceslice.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/faceslice.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/faceslice.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/faceslice.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/faceslice.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/faceslice.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/faceslice.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/faceslice.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/faceslice.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/faceslice.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/faceslice.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/faceslice.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/faceslice.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="faceslice.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="pt-BR">← Voltar à oficina</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Ferramentas criativas</span>
+                    <h1>Faceslice</h1>
+                    <p class="project-lead">Uma foto vira um relevo 3D, dividido em camadas para criar um retrato metálico.</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://faceslice.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Abrir o aplicativo web</a>
+                    <a href="https://github.com/zandaulion/faceslice" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver no GitHub</a>
+                </div>
+                </div>
+                <img src="../assets/Faceslice/feature_graphic.jpg" alt="Aplicativo Faceslice" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Sobre o projeto</h2>
+                <p>De uma fotografia frontal aos moldes de corte de um retrato em camadas: um relevo topográfico feito de chapas de metal, coladas à mão, camada por camada.</p>
+                <p>Faceslice transforma uma selfie 2D padrão em esculturas topográficas em camadas físicas feitas de chapa metálica cortada a laser ou cartolina. Em vez de exigir fotogrametria multicâmera complexa ou aplicativos de digitalização 3D meticulosos, o Faceslice requer apenas uma única fotografia frontal e uma medição de distância interpupilar (IPD) em milímetros para fixar a escala física.</p>
+                <p>Para reconstruir uma cabeça genuína a partir de uma foto, Faceslice orquestra um pipeline de fusão de visão computacional de três modelos, onde cada modelo contribui com o que faz de melhor: a segmentação da silhueta captura cabelos, orelhas e mandíbula; a profundidade monocular estima o amplo volume do crânio; e os modelos de marcadores de malha facial extraem pontos de referência faciais nítidos (nariz, órbitas oculares, lábios) como deslocamento residual da superfície.</p>
+                <p>O sólido 3D resultante é cortado em planos paralelos em ângulos personalizados. O fatiamento frontal produz isoipses de contorno aninhadas autoalinhadas, completas com guias de alinhamento gravadas em cada placa, interiores ocultos ocos para redução de peso de até 80% e exportação instantânea de nível de produção DXF.</p>
+
+                <h2>Galeria</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Faceslice/screenshot_01_app_editor.png" alt="Faceslice Studio — Relevo de contorno 3D, planos de corte e estimativa de materiais" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_02_contour_closeup.png" alt="Relevo de elevação topográfica — Contornos da camada facial de alta resolução" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_03_bust_relief.png" alt="Corte de retrato de busto - contornos de ombros e planos de corte espaçados" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_04_dense_slices.png" alt="Fatiamento de alta densidade — 220 fatias (0,5 mm) e análise de 153 contornos" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_05_hair_profile.png" alt="Silhueta de cabelo complexa e análise de corte de perfil sólido" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Recursos</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Reconstrução 3D de foto única:</strong> Converte uma única selfie frontal em um sólido completo em relevo de profundidade, calibrado para dimensões do mundo real usando a distância da pupila.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 Mecanismo de fusão AI de 3 modelos:</strong> Combina segmentação multiclasse MediaPipe, estimativa de profundidade monocular ONNX (Depth Anything V2) e marcadores faciais MediaPipe para volume equilibrado do crânio e nitidez facial.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️ Fatiamento de contorno topográfico:</strong> Fatia sólidos em planos paralelos com controle de ângulo livre (frontal para isohipses aninhadas concêntricas, horizontal para laminações de perfil lateral).</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 Guias de montagem com autoalinhamento:</strong> Quando cortada frontalmente, cada camada de metal é aninhada dentro daquela abaixo, e a linha delimitadora da próxima placa é gravada diretamente em sua superfície para facilitar o alinhamento sem gabaritos.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ Esvaziamento de interiores e economia de materiais:</strong> Remove automaticamente a geometria interna oculta, reduzindo o consumo de material e o peso em até 80% (por exemplo, 10 kg de aço sólido até 1,9 kg de anéis ocos), mantendo margens de colagem robustas.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ Controles de fabricação paramétrica:</strong> Ajuste interativo em tempo real da espessura da chapa (0,5–10 mm), compressão de relevo, compensação de corte, exagero de relevo facial e ângulos de corte.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Estimador de material e peso em tempo real:</strong> Calcula dinamicamente a contagem de placas, contornos exclusivos, área de chapa metálica necessária (dm²), altura da pilha e massa exata para aço, latão e alumínio.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 Exportação DXF pronta para produção:</strong> Exporta arquivos DXF totalmente vetorizados, prontos para CAM para laser/jato de água/plasma, aninhados em dimensões de folhas personalizadas com um único clique.</li>
+                </ul>
+
+                <h2>Pilha de arquitetura e tecnologia</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0 40px;">
+                    <div class="feature-item">
+                        <h3>Cliente Web Interativo</h3>
+                        <p>Vanilla JavaScript (Módulos ES), tela responsiva e renderização de contorno SVG, controles deslizantes paramétricos em tempo real e arquitetura PWA com capacidade offline.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Motor de visão e geometria</h3>
+                        <p>Núcleo computacional Python 3 utilizando MediaPipe (Segmentação e malha facial), ONNX Runtime (Depth Anything V2 Small), Shapely para booleanos e cavidades de polígonos 2D e ezdxf para geração de CAD.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Implantação de produção</h3>
+                        <p>Contêinerizado com Podman e systemd Quadlet, carimbo automatizado de versão de hash de ativos via <code>deploy.sh</code>e servido por meio do proxy reverso Caddy com tempos de resposta de divisão de subsegundos na CPU.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Continue descobrindo</span><h2 id="related-title">Talvez você também goste…</h2></div><p><a href="index.html#collection" hreflang="pt-BR">Ver toda a coleção ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="creative">
+          <a href="sankey.html" hreflang="pt-BR">
+            <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Ferramentas criativas</div>
+            <h3>Editor de diagrama Sankey <span aria-hidden="true">↗</span></h3>
+            <p>Desenhe como as coisas fluem. Crie e exporte diagramas no navegador.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitygarden.html" hreflang="pt-BR">
+            <div class="collection-image"><img src="../assets/Gravity Garden/workshop-hero.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Jogar e explorar</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>Mude a gravidade e cultive um jardim em um tranquilo jogo de quebra-cabeças baseado em física.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="magpie.html" hreflang="pt-BR">
+            <div class="collection-image"><img src="../assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Ferramentas do dia a dia</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>Um lugar para pensamentos soltos, fotos e notas de voz antes que desapareçam.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

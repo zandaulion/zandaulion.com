@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pwa-kit - Bitey에서 추출 및 일반화된 종속성이 없는 자체 업데이트 PWA 메커니즘입니다.">
+    <title>pwa-kit ⚡ - 프로젝트 세부정보</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ko/pwakit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/pwakit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/pwakit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/pwakit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/pwakit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/pwakit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/pwakit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/pwakit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/pwakit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/pwakit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/pwakit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/pwakit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/pwakit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/pwakit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwakit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ko-KR">← 작업실로 돌아가기</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">무대 뒤 도구</span>
+                    <h1>pwa-kit</h1>
+                    <p class="project-lead">웹 앱이 오프라인에서도 작동하고 최신 상태를 유지하도록 돕는 작은 구성 요소.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">GitHub에서 보기</a>
+                </div>
+                </div>
+                <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>프로젝트 소개</h2>
+                <p>일반화된 Bitey의 업데이트 메커니즘: 필요하지 않은 권한을 요청하는 대신 자체적으로 업데이트하고 나중에 그렇게 말하는 PWA입니다.</p>
+                <p>복사 <code>sw.js</code> 그리고 <code>pwa-update.js</code> 앱의 웹 루트에 연결하고 연결합니다. 빌드 단계도 없고, 번들러도 없고, 종속성도 없습니다. 이것이 요점입니다. 이러한 앱은 정적 디렉터리입니다.</p>
+                <p>새로운 서비스 작업자는 탭이 닫힐 때까지 기다리지 않고 즉시 설치하고 활성화합니다. 열려 있는 각 창은 최신 버전으로 원활하게 다시 로드되기 전에 현재 작업을 안전하게 완료합니다.</p>
+
+                <h2>갤러리</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit 그래픽" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>기능</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 즉시 활성화:</strong> 열려 있는 브라우저 탭에서 며칠 동안 머무르지 않는 오래된 작업자 없이 새로운 작업자가 설치하고 인계받습니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 저장되지 않은 작업 보호(<code>isBusy</code>):</strong> 작업자는 맹목적으로 탐색하기보다는 질문합니다. 보류 중인 편집 또는 양식 상태가 안전하게 해결될 때까지 페이지 다시 로드를 연기합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 네트워크 우선 신선도:</strong> 온라인 요청은 항상 승리하여 배포된 변경 사항이 다음 번 다시 로드 시 적용되도록 하고 오프라인일 때는 캐시로 돌아갑니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 클린 세션 저장 알림:</strong> 업데이트 플래그를 사용하여 URL 쿼리 문자열을 오염시키는 것을 방지하고 인앱 토스트를 통해 사용자에게 명확하게 알립니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 내장 캐시 탈출 해치:</strong> 고정된 클라이언트를 위한 긴급 등록 취소 및 캐시 버스트 메커니즘이 포함되어 있습니다.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">계속 둘러보기</span><h2 id="related-title">이런 작품도 만나보세요</h2></div><p><a href="index.html#collection" hreflang="ko-KR">전체 모음 보기 ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="behind">
+          <a href="pwainvite.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">무대 뒤 도구</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>비공개 웹 앱의 초대와 기기를 한곳에서 관리하는 작은 콘솔.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">창작 도구</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>사진을 서로 연결된 무늬로 바꿔 금속 절단 작품을 만들어 보세요.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">놀이와 탐험</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>주머니 속 작은 행성. 최신 천문 정보와 NASA 데이터로 지구를 탐험하세요.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

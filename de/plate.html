@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de-DE" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bitey – Ein visionäres Kalorien- und Makro-Tracking PWA, unterstützt durch Gemini und eine Human-in-the-Loop-Portionskalibrierung.">
+    <title>Bitey – Projektdetails</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/de/plate.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/plate.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/plate.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/plate.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/plate.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/plate.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/plate.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/plate.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/plate.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/plate.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/plate.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/plate.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/plate.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/plate.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="plate.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="de-DE">← Zurück zur Werkstatt</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Alltagshelfer</span>
+                    <h1>Bitey</h1>
+                    <p class="project-lead">Fotografiere dein Essen, passe die Portion an und führe mit Bitey ein Ernährungstagebuch.</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://plate.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Web-App öffnen</a>
+                    <a href="https://github.com/zandaulion/bitey" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Auf GitHub ansehen</a>
+                    <a href="../plate-privacy.html" class="btn btn-outline" hreflang="en-US">Datenschutzerklärung (auf Englisch)</a>
+                </div>
+                </div>
+                <img src="../assets/Plate/bitey-hero.png" alt="Bitey App" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Über das Projekt</h2>
+                <p>Fotografieren Sie eine Mahlzeit, korrigieren Sie die Portion und protokollieren Sie sie.</p>
+<p>Bitey (ehemals Plate) ist ein Kalorien- und Makroprotokoll, dessen primäre Eingabe ein Foto ist. Das multimodale Vision-Modell identifiziert das Essen auf dem Teller; Die Person, die es gegessen hat, korrigiert das Gewicht. Diese Arbeitsteilung ist keine Bequemlichkeit – sie ist die zentrale Erkenntnis, auf der das gesamte Design beruht.</p>
+<p>Beim Benchmarking von 145 Platten aus dem Nutrition5k-Datensatz mit gewichteter Grundwahrheit wurde nachgewiesen, dass die visuelle menschliche Korrektur etwa die Hälfte des Genauigkeitsgewinns einer physischen Waage wiedererlangt und so ein ideales Gleichgewicht zwischen geringer täglicher Reibung und ernährungsphysiologischer Präzision schafft.</p>
+
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Plate/screenshot_06_bitey_suggestions.jpg" alt="Bitey Proaktives Coaching und Ernährungsvorschläge" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_01_dashboard.jpg" alt="Bitey Tägliches Dashboard und Kalorienübersicht" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_02_meal_log.jpg" alt="Visuelle Lebensmittelprotokollierung und Bitey-Maskottchen" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_03_trends.jpg" alt="30-Tage-Trends zu Gewicht und Makronährstoffen" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_04_energy_expenditure.jpg" alt="Adaptiver Energieverbrennungs- und Wiege-Tracker" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_05_profile_settings.jpg" alt="Benutzerprofil und Ernährungspräferenzen einrichten" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Funktionen</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Vision-First-Lebensmittelprotokollierung:</strong> Machen Sie ein Foto und lassen Sie das Vision-Modell Lebensmittel identifizieren, zusammengesetzte Mahlzeiten zerlegen und sofort die Grundernährung abschätzen.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Empirische Portionskalibrierung:</strong> Transparente dreistufige Fehlerbänder basierend darauf, ob das Gewicht auf der Waage gemessen, vom Benutzer nach Augenmaß angepasst oder modellgeschätzt wurde.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 „Nicht das, was du isst?“ Lesen Sie noch einmal:</strong> Geben Sie an, was ein Gericht eigentlich ist, um das gespeicherte Foto von Grund auf neu zu analysieren, ohne ein zweites Bild aufzunehmen.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏷️ Angegebene Nährwertvalidierung:</strong> Direkte manuelle Eingabe für gedruckte Tafeln oder Restaurantmenüs mit automatischer Plausibilitätsprüfung anhand physikalisch unmöglicher Kaloriendichten.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📊 Energie- und Gewichtstrends:</strong> Dichte, ehrliche tägliche Zeitreihenvisualisierung, die die Kalorienaufnahme, gestapelt nach Makronährstoffenergie, sowie die Ausgabentrends nach der Methode der kleinsten Quadrate verfolgt.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📦 Vollständiger Dateneigentum und keine Bindung:</strong> Gated-freie Exporte ergeben strukturiertes JSON, tabellenfähiges CSV und ein eigenständiges ZIP-Archiv, das jedes aufgenommene Mahlzeitfoto enthält.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🦖 Bitey Ernährungsbegleiter:</strong> Ein ermutigender täglicher Begleiter, der das Erreichen Ihrer Protein- und Kalorienziele mit umsetzbarem, personalisiertem Feedback feiert.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Privat &amp; Konto budgetiert:</strong> Streng null-Telemetrie-Architektur mit integrierten täglichen Kontingentwächtern pro Konto, um nachhaltige Betriebskosten sicherzustellen.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Weiter auf Entdeckungsreise</span><h2 id="related-title">Das könnte dir auch gefallen…</h2></div><p><a href="index.html#collection" hreflang="de-DE">Die ganze Sammlung ansehen ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="magpie.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Alltagshelfer</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>Ein Platz für flüchtige Gedanken, Fotos und Sprachnotizen, bevor sie verschwinden.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="faceslice.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/Faceslice/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Kreative Werkzeuge</div>
+            <h3>Faceslice <span aria-hidden="true">↗</span></h3>
+            <p>Ein Foto wird zum 3D-Relief, in Schichten zerlegt für ein Metallporträt.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitygarden.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/Gravity Garden/workshop-hero.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Spielen und entdecken</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>Verändere die Schwerkraft und lass in einem ruhigen Physik-Puzzlespiel einen Garten wachsen.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

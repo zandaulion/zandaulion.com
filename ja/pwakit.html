@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pwa-kit - Bitey から抽出され一般化された、依存性ゼロの自己更新 PWA メカニズム。">
+    <title>pwa-kit ⚡ - プロジェクトの詳細</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ja/pwakit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/pwakit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/pwakit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/pwakit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/pwakit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/pwakit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/pwakit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/pwakit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/pwakit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/pwakit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/pwakit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/pwakit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/pwakit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/pwakit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwakit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ja-JP">← 工房に戻る</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">舞台裏の道具</span>
+                    <h1>pwa-kit</h1>
+                    <p class="project-lead">Webアプリのオフライン動作と更新を支える、小さな部品。</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">GitHubで見る</a>
+                </div>
+                </div>
+                <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>プロジェクトについて</h2>
+                <p>Bitey の更新メカニズムを一般化したものです。必要のない許可を求めるのではなく、自分自身を更新し、後で更新する PWA です。</p>
+                <p>コピー <code>sw.js</code> そして <code>pwa-update.js</code> アプリの Web ルートに接続し、それらを接続します。ビルド ステップ、バンドラー、依存関係はありません。これが重要です。これらのアプリは静的ディレクトリです。</p>
+                <p>新しい Service Worker は、タブが閉じるのを待たずにすぐにインストールされ、アクティブ化されます。開いている各ウィンドウは現在の作業を安全に完了してから、最新バージョンにシームレスにリロードします。</p>
+
+                <h2>ギャラリー</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit グラフィック" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>機能</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 即時アクティベーション:</strong> 新しいワーカーはインストールして引き継ぎますが、開いているブラウザーのタブに古くなったワーカーが何日も滞留することはありません。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存の作業保護 (<code>isBusy</code>):</strong> 労働者は盲目的にナビゲートするのではなく、質問します。保留中の編集またはフォームの状態が安全に解決されるまで、ページのリロードは延期されます。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 ネットワークファーストの鮮度:</strong> オンライン要求は常に優先され、デプロイされた変更が次回のリロード時に確実に有効になり、オフライン時にはキャッシュにフォールバックされます。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 セッションストレージのクリーンアップ通知:</strong> 更新フラグによる URL クエリ文字列の汚染を回避し、アプリ内のトーストを通じてユーザーに明確に通知します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 内蔵キャッシュエスケープハッチ:</strong> ウェッジされたクライアントのための緊急登録解除およびキャッシュ無効化メカニズムが含まれています。</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">もっと発見する</span><h2 id="related-title">こちらもいかがですか</h2></div><p><a href="index.html#collection" hreflang="ja-JP">すべての作品を見る ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="behind">
+          <a href="pwainvite.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">舞台裏の道具</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>非公開のWebアプリへの招待や端末をまとめて管理する、小さなコンソール。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">創作の道具</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>写真をつながった模様に変え、金属の切り抜き作品へ。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">遊びと探索</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>ポケットに小さな惑星を。最新の天文情報とNASAのデータで地球を探索。</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>
