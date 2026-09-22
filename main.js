@@ -60,7 +60,7 @@ class PortfolioHeader extends HTMLElement {
                               <a href="kerfloom.html" class="${activePage === 'kerfloom.html' ? 'active' : ''}">Kerfloom</a>
                               <a href="spendosaurus.html" class="${activePage === 'spendosaurus.html' ? 'active' : ''}">Spendosaurus</a>
                               <a href="magpie.html" class="${activePage === 'magpie.html' ? 'active' : ''}">Magpie</a>
-                              <a href="wbpdigitizer.html" class="${activePage === 'wbpdigitizer.html' ? 'active' : ''}">wBP Digitizer</a>
+                              <a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer (Android &amp; Web)</a>
                               <a href="intarzieri.html" class="${activePage === 'intarzieri.html' ? 'active' : ''}">Intârzieri Tren</a>
 
                               <div style="padding: 10px 16px 6px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-green); font-weight: 700; border-top: 1px solid var(--border-light);">Data &amp; Tools</div>
@@ -73,7 +73,6 @@ class PortfolioHeader extends HTMLElement {
 
                               <div style="padding: 10px 16px 6px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-purple); font-weight: 700; border-top: 1px solid var(--border-light);">Android &amp; Games</div>
                               <a href="palebluedot.html" class="${activePage === 'palebluedot.html' ? 'active' : ''}">Pale Blue Dot</a>
-                              <a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer</a>
                               <a href="gravitywarp.html" class="${activePage === 'gravitywarp.html' ? 'active' : ''}">Gravity Warp</a>
                               <a href="gravitygarden.html" class="${activePage === 'gravitygarden.html' ? 'active' : ''}">Gravity Garden</a>
                               <a href="orbitpuzzles.html" class="${activePage === 'orbitpuzzles.html' ? 'active' : ''}">OrbitPuzzles</a>

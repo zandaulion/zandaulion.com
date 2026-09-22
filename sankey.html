@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sankey Diagram Editor | Zandaulion</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <!-- Apache ECharts -->
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
@@ -14,13 +16,14 @@
     <div class="bg-glow"></div>
     <portfolio-header active-page="sankey.html"></portfolio-header>
 
-    <main class="sankey-main">
+    <main id="main" class="sankey-main">
+        <a class="back-link" href="index.html#collection">← Back to the workshop</a>
         <div class="sankey-editor-layout">
-            
+
             <!-- Left Panel: Controls -->
             <div class="sankey-controls card">
-                <h2>Sankey Editor</h2>
-                
+                <h1>Sankey Editor</h1>
+
                 <h3 style="margin-bottom: 16px; font-weight: 700;">Data & Export</h3>
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
                     <button id="btn-export" class="btn btn-outline" style="width: 100%;">Export as Image</button>
@@ -90,12 +93,41 @@
             </div>
 
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html">
+            <div class="collection-image"><img src="assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Creative tools</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>Turn a photograph into connected patterns ready to cut from metal.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="miscare.html">
+            <div class="collection-image"><img src="assets/Miscare/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Mișcare <span aria-hidden="true">↗</span></h3>
+            <p>Find a little movement for today, using the equipment you already have.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitywarp.html">
+            <div class="collection-image"><img src="assets/GravityWarp/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>Gravity Warp <span aria-hidden="true">↗</span></h3>
+            <p>Thread your way through gravity wells in a retro physics arcade game.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
+    <script src="project.js?v=1"></script>
     <script src="sankey.js?v=2.1"></script>
-<div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+
 </body>
 </html>
 

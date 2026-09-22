@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OLX Deal Finder - Track OLX.ro listings, detect price drops, and surface deals on a self-hosted mobile dashboard.">
     <title>OLX Deal Finder - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
 </head>
@@ -13,24 +15,36 @@
     <div class="bg-glow"></div>
     <portfolio-header active-page="olxdeals.html"></portfolio-header>
 
-    <main>
+    <main id="main">
         <div class="container">
-            <div class="project-header reveal">
-                <span class="card-tag tag-app" style="margin-bottom: 24px;">Web Tool / Automation</span>
-                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">OLX Deal Finder</h1>
-                </div>
-                <img src="assets/OLX/feature_graphic.jpg" alt="OLX Deal Finder" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=OLX+Deal+Finder'">
-            </div>
-            
-            <div class="project-content reveal">
-                <div class="project-links" style="margin-bottom: 32px;">
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Everyday tools</span>
+                    <h1>OLX Deal Finder</h1>
+                    <p class="project-lead">Follow marketplace finds, compare price changes, and catch a promising deal.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
                     <a href="https://github.com/zandaulion/olx-deal-finder" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">View on GitHub</a>
                 </div>
+                </div>
+                <img src="assets/OLX/feature_graphic.jpg" alt="OLX Deal Finder" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
 
                 <h2>About The Project</h2>
                 <p>Track products on OLX.ro and surface genuinely good deals &mdash; on a self-hosted, mobile-friendly dashboard you can access directly from your phone.</p>
 <p>It periodically pulls listings for configured searches, diffs them against a local SQLite database to detect new listings and price drops, normalizes currencies, and filters out noise and suspicious listings.</p>
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/OLX/screenshot_01_deals.jpg" alt="Live Deals Feed — Real-Time OLX Discovery" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/OLX/screenshot_02_drops.jpg" alt="Price Drops Feed — Historical Drops & Valuation Analysis" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/OLX/screenshot_03_trends.jpg" alt="Market Intelligence — Buyer's Market Score & Price Candlesticks" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/OLX/screenshot_04_finder.jpg" alt="Model Key & Category Finder — Real-Time Query Builder" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/OLX/screenshot_05_searches.jpg" alt="Configured Searches — Active Tracking & Multi-Group Management" class="gallery-img" loading="lazy" decoding="async">
+                </div>
 
                 <h2>Features</h2>
                 <ul>
@@ -41,22 +55,44 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Self-Hosted Mobile Dashboard:</strong> A clean, zero-dependency PWA dashboard designed for lightning-fast browsing on smartphones.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📦 Containerized Quadlet / Podman:</strong> Production-grade systemd integration with Quadlet units for hands-off background execution.</li>
                 </ul>
-                
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/OLX/screenshot_01_deals.jpg" alt="Live Deals Feed — Real-Time OLX Discovery" class="gallery-img">
-                    <img src="assets/OLX/screenshot_02_drops.jpg" alt="Price Drops Feed — Historical Drops & Valuation Analysis" class="gallery-img">
-                    <img src="assets/OLX/screenshot_03_trends.jpg" alt="Market Intelligence — Buyer's Market Score & Price Candlesticks" class="gallery-img">
-                    <img src="assets/OLX/screenshot_04_finder.jpg" alt="Model Key & Category Finder — Real-Time Query Builder" class="gallery-img">
-                    <img src="assets/OLX/screenshot_05_searches.jpg" alt="Configured Searches — Active Tracking & Multi-Group Management" class="gallery-img">
-                </div>
+
+
 
             </div>
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html">
+            <div class="collection-image"><img src="assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Log blood pressure readings, explore trends, and export your history. One app for Android and the web.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="behind">
+          <a href="pwakit.html">
+            <div class="collection-image"><img src="assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Behind the scenes</div>
+            <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+            <p>The little building block that helps web apps work offline and stay up to date.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html">
+            <div class="collection-image"><img src="assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Creative tools</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>Turn a photograph into connected patterns ready to cut from metal.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <script src="project.js?v=1"></script>
+
 </body>
 </html>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pale Blue Dot - A modern productivity and utility application.">
     <title>Pale Blue Dot - App Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
 </head>
@@ -13,30 +15,37 @@
     <div class="bg-glow"></div>
     <portfolio-header active-page="palebluedot.html"></portfolio-header>
 
-    <main>
+    <main id="main">
         <div class="container">
-            <div class="project-header reveal">
-                <span class="card-tag tag-app" style="margin-bottom: 24px;">App</span>
-                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">Pale Blue Dot</h1>
-                <img src="assets/PaleBlueDot/feature_graphic.jpg" alt="Pale Blue Dot App" class="project-hero-image" onerror="this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Pale+Blue+Dot'">
-            </div>
-            
-            <div class="project-content reveal">
-                <div class="download-section" style="margin-bottom: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
-                    <h3 style="margin-bottom: 16px;">Try It Out</h3>
-                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                        <a href="https://play.google.com/store/apps/details?id=com.zandaulion.palebluedot&pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 24px; background: var(--accent-blue); color: white; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600;">Download on Google Play</a>
-                    </div>
-                </div>
-                <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Play &amp; explore</span>
+                    <h1>Pale Blue Dot</h1>
+                    <p class="project-lead">A little planet in your pocket. Explore Earth with live astronomy and NASA data.</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.palebluedot&pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download on Google Play</a>
                     <a href="https://github.com/zandaulion/Globe" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
                     <a href="palebluedot-privacy.html" class="btn btn-outline">Privacy Policy</a>
                 </div>
+                </div>
+                <img src="assets/PaleBlueDot/feature_graphic.jpg" alt="Pale Blue Dot App" class="project-hero-image">
+            </div>
 
+            <div class="project-content reveal">
                 <h2>About The App</h2>
                 <p>Pale Blue Dot is a stunning, real-time 3D Earth viewer for Android, built entirely from scratch with raw OpenGL ES 3.0 and Kotlin—no game engines or third-party rendering libraries. It simulates our planet and the surrounding cosmos with remarkable astronomical accuracy, featuring real-time positioning for the Sun, Moon, and the International Space Station (ISS).</p>
                 <p>Stay connected to the planet's pulse through seamless integrations with live, public APIs. Watch live cloud cover updates directly from NASA's Terra and Aqua satellites, and track recent USGS earthquakes and NASA EONET volcanic eruptions—all overlaid beautifully onto a fully interactive globe that features day/night cycles, aurora zones, and 16,000 procedurally generated stars.</p>
-                
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/PaleBlueDot/Screenshot_20260501_090925.png" alt="Pale Blue Dot Screenshot 1" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PaleBlueDot/Screenshot_20260501_091038.png" alt="Pale Blue Dot Screenshot 2" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PaleBlueDot/Screenshot_20260501_091334.png" alt="Pale Blue Dot Screenshot 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PaleBlueDot/feature_graphic.jpg" alt="Pale Blue Dot Screenshot 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PaleBlueDot/Screenshot_20260501_091513.png" alt="Pale Blue Dot Screenshot 5" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
                 <h2>Features</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Live Earth Data:</strong> Real-time VIIRS cloud covers updated every 6 hours, plus live markers for recent M4.5+ earthquakes and active volcanic eruptions.</li>
@@ -45,15 +54,8 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Rich Cosmic Skybox:</strong> Explore a beautifully rendered sky filled with 16,000 twinkling stars (sized by power-law and colored by spectral class) and 15 major constellations using real J2000 RA/Dec positions.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Interactive Time Scrubber:</strong> Offset the current time ±24 hours to watch the terminator line sweep across the globe or predict the ISS's orbital path.</li>
                 </ul>
-                
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/PaleBlueDot/Screenshot_20260501_090925.png" alt="Pale Blue Dot Screenshot 1" class="gallery-img">
-                    <img src="assets/PaleBlueDot/Screenshot_20260501_091038.png" alt="Pale Blue Dot Screenshot 2" class="gallery-img">
-                    <img src="assets/PaleBlueDot/Screenshot_20260501_091334.png" alt="Pale Blue Dot Screenshot 3" class="gallery-img">
-                    <img src="assets/PaleBlueDot/feature_graphic.jpg" alt="Pale Blue Dot Screenshot 4" class="gallery-img">
-                    <img src="assets/PaleBlueDot/Screenshot_20260501_091513.png" alt="Pale Blue Dot Screenshot 5" class="gallery-img">
-                </div>
+
+
 
                 <div class="download-section" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
                     <h3 style="margin-bottom: 16px;">Available Now</h3>
@@ -66,11 +68,40 @@
                 </div>
             </div>
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="gravitygarden.html">
+            <div class="collection-image"><img src="assets/Gravity Garden/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>Bend gravity and grow a garden in a quiet, physics-powered puzzle game.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="plate.html">
+            <div class="collection-image"><img src="assets/Plate/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Plate <span aria-hidden="true">↗</span></h3>
+            <p>Photograph a meal, adjust the portion, and keep a food log with a little help from Bitey.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="faceslice.html">
+            <div class="collection-image"><img src="assets/Faceslice/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Creative tools</div>
+            <h3>Faceslice <span aria-hidden="true">↗</span></h3>
+            <p>One photo becomes a 3D relief, sliced into layers for a metal portrait.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-<div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <script src="project.js?v=1"></script>
+
 </body>
 </html>
 
