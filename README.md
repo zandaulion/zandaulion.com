@@ -1,5 +1,39 @@
 # Android Developer Portfolio
 
+## Workshop redesign
+
+The homepage and project pages now use the workshop presentation in `workshop.css`.
+Project pages also load `project.css` and `project.js`, with keyboard-accessible
+image galleries and related projects. The homepage collection is static HTML;
+`workshop.js` progressively adds filtering, search, and random discovery.
+
+BP Digitizer has one project page, `bpdigitizer.html`, covering Android and PWA
+versions. The former `wbpdigitizer.html` URL forwards to its web section, with a
+plain link as a fallback. Keep that compatibility page and the original
+`bpdigitizer-privacy.html` URL when making future changes.
+
+Preview with `python -m http.server 8765 --bind 127.0.0.1`, then open
+`http://127.0.0.1:8765/`. Verify with
+`python scripts/check_site.py --url http://127.0.0.1:8765`.
+
+### Stable privacy URLs
+
+The privacy-notice paths are already registered with Google Play. **Do not rename,
+move, or remove them when changing the website.** Keep these exact public paths:
+
+- `/bitey-privacy.html`
+- `/bpdigitizer-privacy.html`
+- `/gravitygarden-privacy.html`
+- `/gravitytdg-privacy.html`
+- `/gravitywarp-privacy.html`
+- `/orbitpuzzles-privacy.html`
+- `/palebluedot-privacy.html`
+- `/plate-privacy.html`
+
+These pages retain their original contents and shared `index.css` / `main.js`
+assets. `scripts/check_site.py` guards the paths and can verify the served notices
+match the files. The following sections describe the original site foundation.
+
 A responsive, high-performance static portfolio website showcasing three custom Android projects: **Pale Blue Dot**, **Gravity Warp**, and **Gravity Garden**. 
 
 The site is built with modern, accessible web practices and is designed to provide a rich visual experience with dynamic CSS styling, interactive image galleries, and smooth navigation—all without relying on heavy frontend frameworks.

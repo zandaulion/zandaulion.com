@@ -1,369 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio for Software Engineering, Data Visualization Tools, Android Apps and Games.">
-    <title>Zandaulion | Software Engineering Portfolio</title>
-    <link rel="stylesheet" href="index.css?v=2.0">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Welcome to Zandaulion's workshop. Explore apps, games, and curious tools, from everyday helpers to playful experiments with art and physics.">
+  <meta name="theme-color" content="#f7f5ee">
+  <meta property="og:title" content="Zandaulion — A workshop for curious things">
+  <meta property="og:description" content="Apps, games, and curious little tools. Come in, have a look around, and find something unexpected.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zandaulion.com/">
+  <meta property="og:image" content="https://zandaulion.com/assets/Kerfloom/feature_graphic.jpg">
+  <link rel="canonical" href="https://zandaulion.com/">
+  <title>Zandaulion — A workshop for curious things</title>
+  <link rel="icon" type="image/jpeg" href="assets/brand/logo_light.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="workshop.css?v=1">
+  <script src="workshop.js?v=1" defer></script>
 </head>
 <body>
-    <div class="bg-glow"></div>
-    <portfolio-header active-page="index.html"></portfolio-header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="Zandaulion home"><img src="assets/brand/logo_light.jpg" alt="" width="43" height="43">Zandaulion<span aria-hidden="true" style="color:var(--orange)">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#collection">The collection</a>
+      <a href="#about">About</a>
+      <a href="mailto:zandaulion@gmail.com" class="nav-contact">Say hello ↗</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="intro wrap" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> A small corner of the internet</div>
+        <h1 id="intro-title">A workshop for<br><em>curious things.</em></h1>
+        <p>Welcome. I make apps, games, and little tools.<br>Some useful. Some playful. All here for you to explore.</p>
+        <div class="intro-actions">
+          <a class="solid-link" href="#collection">Have a look around <span aria-hidden="true">↓</span></a>
+          <button class="text-button" id="surprise-me" hidden>✳ Surprise me</button>
+        </div>
+      </div>
+      <div class="workbench" aria-label="A few things from the workshop">
+        <a class="bench-piece planet-piece" href="palebluedot.html" aria-label="Explore Pale Blue Dot">
+          <img src="assets/PaleBlueDot/Screenshot_20260501_090925.png" alt="Earth with orbital paths in Pale Blue Dot" width="2076" height="2152" fetchpriority="high">
+          <span>A whole world in your pocket ↗</span>
+        </a>
+        <div class="bench-sticker" aria-hidden="true">made with<br>curiosity<br>✳</div>
+        <a class="bench-piece art-piece" href="kerfloom.html" aria-label="Discover Kerfloom">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="assets/Kerfloom/cut_style_03_radial_cuts.png" alt="A portrait formed from radiating cut-metal patterns" width="1024" height="512">
+          <span>From pixels to something real ↗</span>
+        </a>
+        <div class="bench-note" aria-hidden="true"><span>↳</span> Go on, pick something up.</div>
+      </div>
+    </section>
 
-    <main>
-        <section class="hero reveal">
-            <div class="container">
-                <h1>Code. Play. Visualize.</h1>
-                <p>Crafting high-performance native apps, immersive mobile games, and interactive data tools from the ground up.</p>
-            </div>
-        </section>
+    <section class="featured wrap" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <div><span class="section-number">01 / A few places to start</span><h2 id="featured-title">Fresh perspectives. Different worlds.</h2></div>
+        <p>Three doors into the workshop.</p>
+      </div>
+      <div class="featured-grid">
+        <a class="feature feature-kerfloom" href="kerfloom.html">
+          <div class="feature-art"><img src="assets/Kerfloom/cut_style_01_slats.png" alt="A portrait built from connected metal slats" width="1024" height="512" loading="lazy"></div>
+          <div class="feature-copy"><span class="project-type">Art meets engineering</span><h3>Kerfloom</h3><p>What if a photograph could become a piece of cut metal? Patterns, portraits, and art that holds together.</p><span class="feature-link">See what takes shape <b aria-hidden="true">↗</b></span></div>
+        </a>
+        <a class="feature feature-space" href="palebluedot.html">
+          <div class="feature-art"><img src="assets/PaleBlueDot/Screenshot_20260501_090925.png" alt="A live globe with orbital paths in Pale Blue Dot" width="2076" height="2152" loading="lazy"></div>
+          <div class="feature-copy"><span class="project-type">A little perspective</span><h3>Pale Blue Dot</h3><p>A living, spinning Earth in your pocket. Step back and explore our small place in a very big universe.</p><span class="feature-link">Take a look around Earth <b aria-hidden="true">↗</b></span></div>
+        </a>
+        <a class="feature feature-plate" href="plate.html">
+          <div class="feature-art"><img src="assets/Plate/screenshot_06_bitey_suggestions.jpg" alt="Bitey sharing food suggestions in Plate" width="480" height="960" loading="lazy"></div>
+          <div class="feature-copy"><span class="project-type">An everyday companion</span><h3>Plate</h3><p>A photo, a portion, a little more understanding of what you eat. And a friendly dinosaur along for the ride.</p><span class="feature-link">Meet Plate &amp; Bitey <b aria-hidden="true">↗</b></span></div>
+        </a>
+      </div>
+    </section>
 
-        <!-- Section 1: PWAs & Web Applications -->
-        <section class="container portfolio-section reveal">
-            <h2 class="section-title">PWAs &amp; Web Applications</h2>
-            <p class="section-subtitle">Lightweight, mobile-first progressive web apps engineered with offline resilience, intuitive touch gestures, and zero-telemetry architectures.</p>
-            <div class="grid">
-                <!-- Pocket Omaha Card -->
-                <div class="card">
-                    <a href="omaha.html" class="card-link">
-                        <img src="assets/omaha/feature_graphic.jpg" alt="Pocket Omaha" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Pocket+Omaha'">
-                        <span class="card-tag tag-app">PWA</span>
-                        <h3>Pocket Omaha</h3>
-                        <p>A Mobile-First PWA for stock health, economic moats, and fundamental rigor. Built for modern value investors.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="omaha.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/omaha" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- Plate Card -->
-                <div class="card">
-                    <a href="plate.html" class="card-link">
-                        <img src="assets/Plate/feature_graphic.jpg" alt="Plate" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Plate'">
-                        <span class="card-tag tag-app">PWA</span>
-                        <h3>Plate</h3>
-                        <p>Vision-first calorie and macro logging where the model reads the meal and the user calibrates the portion weight.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="plate.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/plate" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- Mișcare Card -->
-                <div class="card">
-                    <a href="miscare.html" class="card-link">
-                        <img src="assets/Miscare/feature_graphic.jpg" alt="Mișcare" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Mișcare'">
-                        <span class="card-tag tag-app">PWA</span>
-                        <h3>Mișcare</h3>
-                        <p>Adaptive daily movement PWA designed from zero with Gemini Vision equipment recognition and a no-shaming philosophy.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="miscare.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- Faceslice Card -->
-                <div class="card">
-                    <a href="faceslice.html" class="card-link">
-                        <img src="assets/Faceslice/feature_graphic.jpg" alt="Faceslice" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Faceslice'">
-                        <span class="card-tag tag-app">PWA</span>
-                        <h3>Faceslice</h3>
-                        <p>Single-photo 3D relief reconstruction and slicing engine for layered metal sheet portraits with DXF export.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="faceslice.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/faceslice" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- Kerfloom Card -->
-                <div class="card">
-                    <a href="kerfloom.html" class="card-link">
-                        <img src="assets/Kerfloom/feature_graphic.jpg" alt="Kerfloom" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Kerfloom'">
-                        <span class="card-tag tag-app">PWA</span>
-                        <h3>Kerfloom</h3>
-                        <p>Art that holds together: 14 parametric cut styles including Flow Engraving, encrypted server workspace with durable offline sync, physical kerf validation, and CAM-ready DXF/SVG export.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="kerfloom.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/Stencil-cnc" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- Spendosaurus 🦖 Card -->
-                <div class="card">
-                    <a href="spendosaurus.html" class="card-link">
-                        <img src="assets/Spendosaurus/feature_graphic.jpg" alt="Spendosaurus 🦖" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Spendosaurus+🦖'">
-                        <span class="card-tag tag-app">PWA</span>
-                        <h3>Spendosaurus 🦖</h3>
-                        <p>Mobile-first PWA for families to track big-ticket expenses, plan estimates, and incrementally log installments with touch gestures.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="spendosaurus.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/spendosaurus" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- Magpie 🐦‍⬛ Card -->
-                <div class="card">
-                    <a href="magpie.html" class="card-link">
-                        <img src="assets/Magpie/feature_graphic.jpg" alt="Magpie 🐦‍⬛" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Magpie+🐦‍⬛'">
-                        <span class="card-tag tag-app">PWA</span>
-                        <h3>Magpie 🐦‍⬛</h3>
-                        <p>Zero-friction thought and scratch capture for text, photos, and voice notes with generative Romanian AI reflection.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="magpie.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/magpie" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- wBP Digitizer Card -->
-                <div class="card">
-                    <a href="wbpdigitizer.html" class="card-link">
-                        <img src="assets/wBP Digitizer/feature_graphic.jpg" alt="wBP Digitizer" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=wBP+Digitizer'">
-                        <span class="card-tag tag-app">Web App</span>
-                        <h3>wBP Digitizer</h3>
-                        <p>A web companion to the Android app for logging, visualising, and exporting blood pressure readings. Local-first.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="wbpdigitizer.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/bp-digitizer-web" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- Intârzieri Tren Card -->
-                <div class="card">
-                    <a href="intarzieri.html" class="card-link">
-                        <img src="assets/Intarzieri/feature_graphic.jpg" alt="Intârzieri Tren" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Intârzieri+Tren'">
-                        <span class="card-tag tag-app">PWA</span>
-                        <h3>Intârzieri Tren</h3>
-                        <p>Track up to 5 trains in Romania, view routes and delays, and get push notifications when delays change.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="intarzieri.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/intarzieri" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="interlude wrap"><span aria-hidden="true">✳</span><p>A useful tool. A strange idea. A rabbit hole worth following.</p></div>
 
-        <!-- Section 2: Data Tools & Automation -->
-        <section class="container portfolio-section reveal">
-            <h2 class="section-title">Data Tools &amp; Automation</h2>
-            <p class="section-subtitle">Interactive client-side data visualization, multi-property IoT monitoring pipelines, and automated developer tooling.</p>
-            <div class="grid">
-                <!-- Sankey Diagram Editor Card -->
-                <div class="card">
-                    <a href="sankey.html" class="card-link">
-                        <img src="assets/Sankey/feature_graphic.jpg" alt="Sankey Diagram Editor" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Sankey+Diagram+Editor'">
-                        <span class="card-tag tag-app">Web Tool</span>
-                        <h3>Sankey Diagram Editor</h3>
-                        <p>A fully client-side, interactive graphical editor for creating, saving, and exporting beautiful Sankey Diagrams with ECharts.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="sankey.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/zaWebPage" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- Thermostat Monitor Card -->
-                <div class="card">
-                    <a href="thermostat.html" class="card-link">
-                        <img src="assets/Thermostat/feature_graphic.jpg" alt="Thermostat Monitor" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Thermostat+Monitor'">
-                        <span class="card-tag tag-app">IoT & Bot</span>
-                        <h3>Thermostat Monitor</h3>
-                        <p>Multi-property temperature logging from Salus iT500 and Tuya sensors with a live PWA, interactive charts, and Discord bot.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="thermostat.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/thermostat" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- OLX Deal Finder Card -->
-                <div class="card">
-                    <a href="olxdeals.html" class="card-link">
-                        <img src="assets/OLX/feature_graphic.jpg" alt="OLX Deal Finder" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=OLX+Deal+Finder'">
-                        <span class="card-tag tag-app">Automation</span>
-                        <h3>OLX Deal Finder</h3>
-                        <p>Automated marketplace scraper and deal radar with price history diffing, Gemini Flash AI valuation, and push alerts on a self-hosted PWA.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="olxdeals.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/olx-deal-finder" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- Admitere Liceu Kit 🎓 Card -->
-                <div class="card">
-                    <a href="admitere.html" class="card-link">
-                        <img src="assets/Admitere/feature_graphic.jpg" alt="Admitere Liceu Kit 🎓" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Admitere+Liceu+Kit+🎓'">
-                        <span class="card-tag tag-app">Data & AI Kit</span>
-                        <h3>Admitere Liceu Kit 🎓</h3>
-                        <p>Historical admission data, ranking interpolation curves, allocation simulator, and AI playbooks for Bucharest high school entrance.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="admitere.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/admitere-liceu-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- pwa-kit ⚡ Card -->
-                <div class="card">
-                    <a href="pwakit.html" class="card-link">
-                        <img src="assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit ⚡" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=pwa-kit+⚡'">
-                        <span class="card-tag tag-app">Dev Tool</span>
-                        <h3>pwa-kit ⚡</h3>
-                        <p>A lightweight, zero-dependency, self-updating service worker and client mechanism for offline-capable progressive web apps.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="pwakit.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- PWA Invite Console 🔐 Card -->
-                <div class="card">
-                    <a href="pwainvite.html" class="card-link">
-                        <img src="assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console 🔐" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=PWA+Invite+Console+🔐'">
-                        <span class="card-tag tag-app">Admin Tool</span>
-                        <h3>PWA Invite Console 🔐</h3>
-                        <p>Unified single-page admin console for invite codes and client device administration across private progressive web apps.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="pwainvite.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/pwa-invite-console" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="collection wrap" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading">
+        <div><span class="section-number">02 / Follow your curiosity</span><h2 id="collection-title">What catches your eye?</h2></div>
+        <p>There’s no particular order to curiosity.</p>
+      </div>
+      <div class="collection-controls" hidden>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" data-filter="all" aria-pressed="true" aria-controls="project-grid">Everything</button>
+          <button type="button" data-filter="everyday" aria-pressed="false" aria-controls="project-grid">Everyday tools</button>
+          <button type="button" data-filter="creative" aria-pressed="false" aria-controls="project-grid">Creative tools</button>
+          <button type="button" data-filter="play" aria-pressed="false" aria-controls="project-grid">Play &amp; explore</button>
+          <button type="button" data-filter="behind" aria-pressed="false" aria-controls="project-grid">Behind the scenes</button>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search projects</span><input id="project-search" type="search" placeholder="Find something…" aria-controls="project-grid"></label>
+      </div>
+      <p class="collection-meta" id="project-count" role="status" aria-live="polite" aria-atomic="true">20 projects to explore</p>
+      <div class="collection-grid" id="project-grid">
+        <article class="collection-card" data-category="creative">
+          <a href="kerfloom.html">
+            <div class="collection-image"><img src="assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Creative tools</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>Turn a photograph into connected patterns ready to cut from metal.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="palebluedot.html">
+            <div class="collection-image"><img src="assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>A little planet in your pocket. Explore Earth with live astronomy and NASA data.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="plate.html">
+            <div class="collection-image"><img src="assets/Plate/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Plate <span aria-hidden="true">↗</span></h3>
+            <p>Photograph a meal, adjust the portion, and keep a food log with a little help from Bitey.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="creative">
+          <a href="faceslice.html">
+            <div class="collection-image"><img src="assets/Faceslice/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Creative tools</div>
+            <h3>Faceslice <span aria-hidden="true">↗</span></h3>
+            <p>One photo becomes a 3D relief, sliced into layers for a metal portrait.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="gravitygarden.html">
+            <div class="collection-image"><img src="assets/Gravity Garden/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>Bend gravity and grow a garden in a quiet, physics-powered puzzle game.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="magpie.html">
+            <div class="collection-image"><img src="assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>A place for stray thoughts, photos, and voice notes before they fly away.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="creative">
+          <a href="sankey.html">
+            <div class="collection-image"><img src="assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Creative tools</div>
+            <h3>Sankey Diagram Editor <span aria-hidden="true">↗</span></h3>
+            <p>Make a picture of where things flow. Build and export diagrams in your browser.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="miscare.html">
+            <div class="collection-image"><img src="assets/Miscare/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Mișcare <span aria-hidden="true">↗</span></h3>
+            <p>Find a little movement for today, using the equipment you already have.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="gravitywarp.html">
+            <div class="collection-image"><img src="assets/GravityWarp/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>Gravity Warp <span aria-hidden="true">↗</span></h3>
+            <p>Thread your way through gravity wells in a retro physics arcade game.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="omaha.html">
+            <div class="collection-image"><img src="assets/omaha/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+            <p>Look beneath the stock price and explore what makes a business tick.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="spendosaurus.html">
+            <div class="collection-image"><img src="assets/Spendosaurus/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Spendosaurus <span aria-hidden="true">↗</span></h3>
+            <p>Give big family expenses a plan, from the first estimate to the last installment.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="orbitpuzzles.html">
+            <div class="collection-image"><img src="assets/OrbitPuzzles/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>OrbitPuzzles <span aria-hidden="true">↗</span></h3>
+            <p>Put your intuition for gravity to the test with orbital physics puzzles.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="intarzieri.html">
+            <div class="collection-image"><img src="assets/Intarzieri/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Intârzieri Tren <span aria-hidden="true">↗</span></h3>
+            <p>Keep an eye on Romanian trains, their routes, and changing delays.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="thermostat.html">
+            <div class="collection-image"><img src="assets/Thermostat/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+            <p>See how warm things are at home, with sensor history and temperature charts.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="play">
+          <a href="gravitytdg.html">
+            <div class="collection-image"><img src="assets/GravityTDG/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>A tower defense twist: use orbital physics and rescue beams to save, rather than destroy.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html">
+            <div class="collection-image"><img src="assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>Follow marketplace finds, compare price changes, and catch a promising deal.</p>
+          </a>
+        </article>
 
-        <!-- Section 3: Native Android Apps & Games -->
-        <section class="container portfolio-section reveal">
-            <h2 class="section-title">Native Android Apps &amp; Games</h2>
-            <p class="section-subtitle">High-performance mobile utilities, custom N-body orbital physics engines, and procedural retro arcade experiences.</p>
-            <div class="grid">
-                <!-- Pale Blue Dot Card -->
-                <div class="card">
-                    <a href="palebluedot.html" class="card-link">
-                        <img src="assets/PaleBlueDot/feature_graphic.jpg" alt="Pale Blue Dot" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Pale+Blue+Dot'">
-                        <span class="card-tag tag-app">App</span>
-                        <h3>Pale Blue Dot</h3>
-                        <p>A stunning, real-time 3D Earth viewer built natively in Kotlin, featuring live astronomy and real-time NASA/USGS API data.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="palebluedot.html" class="btn btn-outline">View Details</a>
-                    <a href="https://github.com/zandaulion/Globe" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-repo" title="View repository on GitHub">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    </div>
-                </div>
-                <!-- BP Digitizer Card -->
-                <div class="card">
-                    <a href="bpdigitizer.html" class="card-link">
-                        <img src="assets/BP Digitizer/feature_graphic.jpg" alt="BP Digitizer" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=BP+Digitizer'">
-                        <span class="card-tag tag-app">App</span>
-                        <h3>BP Digitizer</h3>
-                        <p>Track your blood pressure as part of your fitness routine — log in seconds.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="bpdigitizer.html" class="btn btn-outline">View Details</a>
-                    </div>
-                </div>
-                <!-- Gravity Warp Card -->
-                <div class="card">
-                    <a href="gravitywarp.html" class="card-link">
-                        <img src="assets/GravityWarp/feature_graphic.jpg" alt="Gravity Warp" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Gravity+Warp'">
-                        <span class="card-tag tag-game1">Game</span>
-                        <h3>Gravity Warp</h3>
-                        <p>A high-speed, retro pixel-art physics arcade game with inverse-square gravity wells and procedural synthesis.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="gravitywarp.html" class="btn btn-outline">View Details</a>
-                    </div>
-                </div>
-                <!-- Gravity Garden Card -->
-                <div class="card">
-                    <a href="gravitygarden.html" class="card-link">
-                        <img src="assets/Gravity Garden/feature_graphic.jpg" alt="Gravity Garden" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=Gravity+Garden'">
-                        <span class="card-tag tag-game2">Game</span>
-                        <h3>Gravity Garden</h3>
-                        <p>A physics-based zen gardening game where you cultivate procedurally generated plants in a relaxing environment.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="gravitygarden.html" class="btn btn-outline">View Details</a>
-                    </div>
-                </div>
-                <!-- OrbitPuzzles Card -->
-                <div class="card">
-                    <a href="orbitpuzzles.html" class="card-link">
-                        <img src="assets/OrbitPuzzles/feature_graphic.jpg" alt="OrbitPuzzles" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=OrbitPuzzles'">
-                        <span class="card-tag tag-game3">Game</span>
-                        <h3>OrbitPuzzles</h3>
-                        <p>A challenging gravity-simulation puzzle game featuring custom N-body physics and procedural 3D rendering.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="orbitpuzzles.html" class="btn btn-outline">View Details</a>
-                    </div>
-                </div>
-                <!-- GravityTDG Card -->
-                <div class="card">
-                    <a href="gravitytdg.html" class="card-link">
-                        <img src="assets/GravityTDG/feature_graphic.jpg" alt="GravityTDG" class="card-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400/1a1a24/ffffff?text=GravityTDG'">
-                        <span class="card-tag tag-game4">Game</span>
-                        <h3>GravityTDG</h3>
-                        <p>Most tower defense games ask you to destroy — Gravity TD asks you to save. Bend orbital physics with jet fields and rescue beams.</p>
-                    </a>
-                    <div class="card-footer">
-                        <a href="gravitytdg.html" class="btn btn-outline">View Details</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html">
+            <div class="collection-image"><img src="assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Log blood pressure readings, explore trends, and export your history. One app for Android and the web.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="everyday">
+          <a href="admitere.html">
+            <div class="collection-image"><img src="assets/Admitere/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Admitere Liceu Kit <span aria-hidden="true">↗</span></h3>
+            <p>Explore admission history and simulate high school choices in Bucharest.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="behind">
+          <a href="pwakit.html">
+            <div class="collection-image"><img src="assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Behind the scenes</div>
+            <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+            <p>The little building block that helps web apps work offline and stay up to date.</p>
+          </a>
+        </article>
+        <article class="collection-card" data-category="behind">
+          <a href="pwainvite.html">
+            <div class="collection-image"><img src="assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Behind the scenes</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>One small console for managing invitations and devices across private web apps.</p>
+          </a>
+        </article>
+      </div>
+      <div class="empty-state" id="empty-state" hidden><p>No projects here just yet. Try another word or explore the whole collection.</p><button class="text-button" id="clear-filters">Show everything ↗</button></div>
+    </section>
 
-    <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-<div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <div><span class="section-number">03 / The person behind the projects</span><h2 id="about-title">One maker.<br>Many rabbit holes.</h2></div>
+      <div><p>I’m the maker behind Zandaulion. This is my little workshop on the web: a collection of apps, games, and tools that stretches from everyday routines to art and orbital physics.</p><p>Have a wander, try something out, or take a peek at the code. If something catches your imagination, I’d love to hear about it.</p><div class="about-links"><a href="mailto:zandaulion@gmail.com">Say hello ↗</a><a href="https://github.com/zandaulion" target="_blank" rel="noopener noreferrer">Peek at the code ↗</a><a href="https://ko-fi.com/P7K6214YH8" target="_blank" rel="noopener noreferrer">Buy me a coffee ↗</a></div></div>
+    </section>
+  </main>
+  <footer class="footer wrap">
+    <p>© <span id="workshop-year">2026</span> Zandaulion · Thanks for looking around.</p>
+    <details><summary>App privacy policies</summary><div class="privacy-links"><a href="plate-privacy.html">Plate</a><a href="bitey-privacy.html">Bitey</a><a href="bpdigitizer-privacy.html">BP Digitizer</a><a href="palebluedot-privacy.html">Pale Blue Dot</a><a href="gravitywarp-privacy.html">Gravity Warp</a><a href="gravitygarden-privacy.html">Gravity Garden</a><a href="orbitpuzzles-privacy.html">OrbitPuzzles</a><a href="gravitytdg-privacy.html">GravityTDG</a></div></details>
+  </footer>
 </body>
 </html>

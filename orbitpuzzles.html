@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OrbitPuzzles - A gravity-simulation puzzle game for Android.">
     <title>OrbitPuzzles - Game Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
 </head>
@@ -13,25 +15,40 @@
     <div class="bg-glow"></div>
     <portfolio-header active-page="orbitpuzzles.html"></portfolio-header>
 
-    <main>
+    <main id="main">
         <div class="container">
-            <div class="project-header reveal">
-                <span class="card-tag tag-game3" style="margin-bottom: 24px;">Game</span>
-                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">OrbitPuzzles</h1>
-                <img src="assets/OrbitPuzzles/feature_graphic.jpg" alt="OrbitPuzzles Game" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=OrbitPuzzles'">
-            </div>
-            
-            <div class="project-content reveal">
-                <div class="project-links" style="margin-bottom: 32px;">
-                    <a href="#" class="btn btn-primary">Get it on Google Play (Coming Soon)</a>
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Play &amp; explore</span>
+                    <h1>OrbitPuzzles</h1>
+                    <p class="project-lead">Put your intuition for gravity to the test with orbital physics puzzles.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <span class="availability-note">Get it on Google Play (Coming Soon)</span>
                     <a href="orbitpuzzles-privacy.html" class="btn btn-outline">Privacy Policy</a>
                 </div>
+                </div>
+                <img src="assets/OrbitPuzzles/feature_graphic.jpg" alt="OrbitPuzzles Game" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
 
                 <h2>About The Game</h2>
                 <p>OrbitPuzzles is a challenging physics-based puzzle game where players design orbital systems by strategically placing celestial bodies like planets, moons, and asteroids. Your goal is to achieve specific configurations, such as completing a certain number of orbits without colliding with the central star or escaping the system.</p>
                 <p>Built completely natively in Kotlin, OrbitPuzzles features a highly stable custom $O(N^2)$ N-body simulator using Velocity Verlet integration and Plummer softening. Time pauses during the DESIGN phase so you can carefully position your bodies and adjust velocity vectors, and then flows in the RUN phase to test if your orbital mechanics hold up.</p>
                 <p>The visual experience pairs 3D rendering powered by Google Filament with 100% Jetpack Compose UI. Each celestial body is rendered using custom procedural texturing, creating an infinite variety of planets and stars without relying on massive texture files, while glowing trails and UI overlays provide real-time telemetry and feedback.</p>
-                
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-29-933_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Level Select" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-37-349_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Design Phase" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-41-276_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Simulation Run" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-53-361_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-00-279_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-04-774_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 6" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
                 <h2>Features</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Custom Physics Engine:</strong> Precise N-body simulation leveraging Velocity Verlet integration for long-term orbital stability, complete with Plummer softening to gracefully handle extreme close encounters.</li>
@@ -40,24 +57,45 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Hybrid Rendering:</strong> A flawless blend of native 3D physics rendering under beautifully layered, real-time 2D UI overlays drawn with Jetpack Compose Canvas.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Progressive Challenge:</strong> Navigate a wide array of levels with distinct budgets and goals. The internal `OrbitTracker` system accurately tallies revolutions regardless of elliptical eccentricity.</li>
                 </ul>
-                
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-29-933_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Level Select" class="gallery-img">
-                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-37-349_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Design Phase" class="gallery-img">
-                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-41-276_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Simulation Run" class="gallery-img">
-                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-53-361_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 4" class="gallery-img">
-                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-00-279_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 5" class="gallery-img">
-                    <img src="assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-04-774_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles Screenshot 6" class="gallery-img">
-                </div>
+
+
 
             </div>
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html">
+            <div class="collection-image"><img src="assets/GravityTDG/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>A tower defense twist: use orbital physics and rescue beams to save, rather than destroy.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="intarzieri.html">
+            <div class="collection-image"><img src="assets/Intarzieri/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Intârzieri Tren <span aria-hidden="true">↗</span></h3>
+            <p>Keep an eye on Romanian trains, their routes, and changing delays.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="thermostat.html">
+            <div class="collection-image"><img src="assets/Thermostat/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+            <p>See how warm things are at home, with sensor history and temperature charts.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-<div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <script src="project.js?v=1"></script>
+
 </body>
 </html>
 

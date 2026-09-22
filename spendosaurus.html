@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Spendosaurus - A lightweight, mobile-first PWA for families to track big-ticket expenses and installments.">
     <title>Spendosaurus 🦖 - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
 </head>
@@ -13,25 +15,37 @@
     <div class="bg-glow"></div>
     <portfolio-header active-page="spendosaurus.html"></portfolio-header>
 
-    <main>
+    <main id="main">
         <div class="container">
-            <div class="project-header reveal">
-                <span class="card-tag tag-app" style="margin-bottom: 24px;">PWA / Web App</span>
-                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">Spendosaurus 🦖</h1>
-                </div>
-                <img src="assets/Spendosaurus/feature_graphic.jpg" alt="Spendosaurus App" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Spendosaurus+🦖'">
-            </div>
-            
-            <div class="project-content reveal">
-                <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Everyday tools</span>
+                    <h1>Spendosaurus</h1>
+                    <p class="project-lead">Give big family expenses a plan, from the first estimate to the last installment.</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://spendosaurus.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Launch Web App</a>
                     <a href="https://github.com/zandaulion/spendosaurus" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
                 </div>
+                </div>
+                <img src="assets/Spendosaurus/feature_graphic.jpg" alt="Spendosaurus App" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
 
                 <h2>About The Project</h2>
                 <p>A lightweight, mobile-first Progressive Web App (PWA) designed for families to track big-ticket expenses, plan estimates, and incrementally tack on payments with zero friction and intuitive touch gestures.</p>
 <p>Whether renovating a home, planning a wedding, or managing a major family purchase, Spendosaurus makes variance tracking effortless through instant visual cues and fluid mobile-first ergonomics.</p>
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/Spendosaurus/screenshot_01_dashboard.jpg" alt="Spendosaurus Overview Dashboard & Active Budgets" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Spendosaurus/screenshot_02_expenses.jpg" alt="Recurring & Big-Ticket Expense Tracking Feed" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Spendosaurus/screenshot_03_audit_log.jpg" alt="Real-Time Activity & Multi-Device Audit Log" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Spendosaurus/screenshot_04_edit_item.jpg" alt="Expense Lifecycle, Recurrence & Payment Breakdown" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Spendosaurus/screenshot_05_settings.jpg" alt="App & Family Settings, Currencies & Thresholds" class="gallery-img" loading="lazy" decoding="async">
+                </div>
 
                 <h2>Features</h2>
                 <ul>
@@ -42,22 +56,44 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💱 Dual Currency Support:</strong> Switch effortlessly between RON and EUR with customizable big-ticket thresholds.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Invite-Based Pairing:</strong> Seamless device authentication powered by the unified PWA invite system with zero passwords or credentials required.</li>
                 </ul>
-                
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/Spendosaurus/screenshot_01_dashboard.jpg" alt="Spendosaurus Overview Dashboard & Active Budgets" class="gallery-img">
-                    <img src="assets/Spendosaurus/screenshot_02_expenses.jpg" alt="Recurring & Big-Ticket Expense Tracking Feed" class="gallery-img">
-                    <img src="assets/Spendosaurus/screenshot_03_audit_log.jpg" alt="Real-Time Activity & Multi-Device Audit Log" class="gallery-img">
-                    <img src="assets/Spendosaurus/screenshot_04_edit_item.jpg" alt="Expense Lifecycle, Recurrence & Payment Breakdown" class="gallery-img">
-                    <img src="assets/Spendosaurus/screenshot_05_settings.jpg" alt="App & Family Settings, Currencies & Thresholds" class="gallery-img">
-                </div>
+
+
 
             </div>
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="intarzieri.html">
+            <div class="collection-image"><img src="assets/Intarzieri/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Intârzieri Tren <span aria-hidden="true">↗</span></h3>
+            <p>Keep an eye on Romanian trains, their routes, and changing delays.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="orbitpuzzles.html">
+            <div class="collection-image"><img src="assets/OrbitPuzzles/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>OrbitPuzzles <span aria-hidden="true">↗</span></h3>
+            <p>Put your intuition for gravity to the test with orbital physics puzzles.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="thermostat.html">
+            <div class="collection-image"><img src="assets/Thermostat/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+            <p>See how warm things are at home, with sensor history and temperature charts.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <script src="project.js?v=1"></script>
+
 </body>
 </html>

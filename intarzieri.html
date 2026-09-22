@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Intârzieri Tren - Track train delays in Romania.">
     <title>Intârzieri Tren - App Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
 </head>
@@ -13,23 +15,36 @@
     <div class="bg-glow"></div>
     <portfolio-header active-page="intarzieri.html"></portfolio-header>
 
-    <main>
+    <main id="main">
         <div class="container">
-            <div class="project-header reveal">
-                <span class="card-tag tag-app" style="margin-bottom: 24px;">PWA / Web App</span>
-                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">Intârzieri Tren</h1>
-                <img src="assets/Intarzieri/feature_graphic.jpg" alt="Intârzieri Tren App" class="project-hero-image" onerror="this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Intarzieri+Tren'">
-            </div>
-            
-            <div class="project-content reveal">
-                <div class="project-links" style="margin-bottom: 32px;">
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Everyday tools</span>
+                    <h1>Intârzieri Tren</h1>
+                    <p class="project-lead">Keep an eye on Romanian trains, their routes, and changing delays.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
                     <a href="https://intarzieri.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-right: 12px;">Launch Web App</a>
                     <a href="https://github.com/zandaulion/intarzieri" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">View on GitHub</a>
                 </div>
+                </div>
+                <img src="assets/Intarzieri/feature_graphic.jpg" alt="Intârzieri Tren App" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
 
                 <h2>About The App</h2>
                 <p>Track your train journeys across Romania effortlessly. Intârzieri Tren is a Progressive Web App (PWA) designed to give you real-time updates and peace of mind while traveling.</p>
                 <p>Simply select your train and your route, and the app will keep you informed every step of the way without needing to constantly check a screen.</p>
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/Intarzieri/Screenshot_2026-08-14-22-24-21-507_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 1" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Intarzieri/Screenshot_2026-08-14-22-24-34-045_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 2" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Intarzieri/Screenshot_2026-08-14-22-24-40-495_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Intarzieri/Screenshot_2026-08-14-22-24-43-384_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 4" class="gallery-img" loading="lazy" decoding="async">
+                </div>
 
                 <h2>Features</h2>
                 <ul>
@@ -40,21 +55,44 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏱️ Multi-Trip Tracking:</strong> Keep an eye on up to 5 active trips simultaneously. Your recent trips remain accessible in your history for up to 12 hours after arrival.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Secure & Private:</strong> Access is strictly invite-only. Your device is securely linked without needing any usernames, passwords, or personal information.</li>
                 </ul>
-                
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/Intarzieri/Screenshot_2026-08-14-22-24-21-507_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 1" class="gallery-img">
-                    <img src="assets/Intarzieri/Screenshot_2026-08-14-22-24-34-045_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 2" class="gallery-img">
-                    <img src="assets/Intarzieri/Screenshot_2026-08-14-22-24-40-495_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 3" class="gallery-img">
-                    <img src="assets/Intarzieri/Screenshot_2026-08-14-22-24-43-384_com.android.chrome.jpg" alt="Intârzieri Tren Screenshot 4" class="gallery-img">
-                </div>
+
+
 
             </div>
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="thermostat.html">
+            <div class="collection-image"><img src="assets/Thermostat/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+            <p>See how warm things are at home, with sensor history and temperature charts.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html">
+            <div class="collection-image"><img src="assets/GravityTDG/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>A tower defense twist: use orbital physics and rescue beams to save, rather than destroy.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html">
+            <div class="collection-image"><img src="assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>Follow marketplace finds, compare price changes, and catch a promising deal.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-<div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <script src="project.js?v=1"></script>
+
 </body>
 </html>

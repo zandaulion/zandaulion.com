@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gravity Garden - A beautiful, relaxing puzzle experience.">
     <title>Gravity Garden - Game Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
 </head>
@@ -13,25 +15,43 @@
     <div class="bg-glow"></div>
     <portfolio-header active-page="gravitygarden.html"></portfolio-header>
 
-    <main>
+    <main id="main">
         <div class="container">
-            <div class="project-header reveal">
-                <span class="card-tag tag-game2" style="margin-bottom: 24px;">Game</span>
-                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">Gravity Garden</h1>
-                <img src="assets/Gravity%20Garden/feature_graphic.jpg" alt="Gravity Garden Game" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Gravity+Garden'">
-            </div>
-            
-            <div class="project-content reveal">
-                <div class="project-links" style="margin-bottom: 32px;">
-                    <a href="#" class="btn btn-primary">Get it on Google Play (Coming Soon)</a>
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Play &amp; explore</span>
+                    <h1>Gravity Garden</h1>
+                    <p class="project-lead">Bend gravity and grow a garden in a quiet, physics-powered puzzle game.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <span class="availability-note">Get it on Google Play (Coming Soon)</span>
                     <a href="gravitygarden-privacy.html" class="btn btn-outline">Privacy Policy</a>
                 </div>
+                </div>
+                <img src="assets/Gravity%20Garden/feature_graphic.jpg" alt="Gravity Garden Game" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
 
                 <h2>About The Game</h2>
                 <p>Gravity Garden is a breathtaking, relaxing physics-based puzzle experience set in lush environments with glowing alien flora and mysterious bioluminescent crystals. Utilizing a custom Box2D physics engine, the game features a deep fertility and spawning pipeline where the movement, resting, and impacts of your seed directly influence the growth of your garden. Manipulate gravity in four directions across 8 distinct levels—each boasting unique mechanics like underwater currents, updrafts, and labyrinthine walls—as you manage nutrients to cultivate a vibrant, living ecosystem.</p>
                 <p>Play at your own pace in the infinite, persistent Zen Mode, or test your problem-solving skills in Challenge Mode by carefully managing a nutrient budget, meeting environmental planting goals, and successfully capturing a wandering black-hole portal. Experiment with 4 unique seed types (Standard, Heavy, Bouncy, Light), each with its own physical properties and locked special plants, to discover 14 different plant variations. Watch in awe as moss, ferns, bioluminescent mushrooms, and towering crystals dynamically grow through multi-pass brushstroke rendering.</p>
                 <p>The entire experience is brought to life by a stunning custom oil-painting post-processing shader—featuring impasto highlights, canvas weaves, and procedural swirling skies—paired with procedurally generated audio, including wind sounds that dynamically react to your seed's velocity.</p>
-                
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-18-48-09-818_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 1" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-18-48-15-549_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 2" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-04-35-814_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-14-36-363_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-14-58-066_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-15-26-619_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-15-32-276_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-15-49-094_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 8" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-15-59-988_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 9" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
                 <h2>Features</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Two Distinct Game Modes:</strong> Enjoy pressure-free, infinite playtime where your garden persists across sessions in Zen Mode, or test your tactical resource management and portal-catching skills in Challenge Mode.</li>
@@ -41,27 +61,45 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Procedural Audio & Art:</strong> Immerse yourself in a canvas-like world driven by an oil painting shader, procedural swirling skies, "firefly wobble" animations for nutrients, and dynamically generated ambient and wind sounds.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>20 Zen Challenges:</strong> Complete progressive milestones—from planting your first bloom to mastering gravity manipulation and cultivating massive 50-plant gardens.</li>
                 </ul>
-                
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-18-48-09-818_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 1" class="gallery-img">
-                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-18-48-15-549_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 2" class="gallery-img">
-                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-04-35-814_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 3" class="gallery-img">
-                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-14-36-363_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 4" class="gallery-img">
-                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-14-58-066_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 5" class="gallery-img">
-                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-15-26-619_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 6" class="gallery-img">
-                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-15-32-276_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 7" class="gallery-img">
-                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-15-49-094_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 8" class="gallery-img">
-                    <img src="assets/Gravity%20Garden/Pictures/Screenshot_2026-08-08-19-15-59-988_com.zandaulion.gravitygarden.jpg" alt="Gravity Garden Screenshot 9" class="gallery-img">
-                </div>
+
+
 
             </div>
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="gravitywarp.html">
+            <div class="collection-image"><img src="assets/GravityWarp/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>Gravity Warp <span aria-hidden="true">↗</span></h3>
+            <p>Thread your way through gravity wells in a retro physics arcade game.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="magpie.html">
+            <div class="collection-image"><img src="assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>A place for stray thoughts, photos, and voice notes before they fly away.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="sankey.html">
+            <div class="collection-image"><img src="assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Creative tools</div>
+            <h3>Sankey Diagram Editor <span aria-hidden="true">↗</span></h3>
+            <p>Make a picture of where things flow. Build and export diagrams in your browser.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-<div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <script src="project.js?v=1"></script>
+
 </body>
 </html>
 

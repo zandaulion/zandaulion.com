@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gravity Warp - A dynamic, visually stunning space adventure game.">
     <title>Gravity Warp - Game Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
 </head>
@@ -13,29 +15,37 @@
     <div class="bg-glow"></div>
     <portfolio-header active-page="gravitywarp.html"></portfolio-header>
 
-    <main>
+    <main id="main">
         <div class="container">
-            <div class="project-header reveal">
-                <span class="card-tag tag-game1" style="margin-bottom: 24px;">Game</span>
-                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">Gravity Warp</h1>
-                <img src="assets/GravityWarp/feature_graphic.jpg" alt="Gravity Warp Game" class="project-hero-image" onerror="this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Gravity+Warp'">
-            </div>
-            
-            <div class="project-content reveal">
-                <div class="download-section" style="margin-bottom: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
-                    <h3 style="margin-bottom: 16px;">Try It Out</h3>
-                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                        <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitywarp&pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 24px; background: var(--accent-blue); color: white; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600;">Download on Google Play</a>
-                    </div>
-                </div>
-                <div class="project-links" style="margin-bottom: 32px;">
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Play &amp; explore</span>
+                    <h1>Gravity Warp</h1>
+                    <p class="project-lead">Thread your way through gravity wells in a retro physics arcade game.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitywarp&pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download on Google Play</a>
                     <a href="gravitywarp-privacy.html" class="btn btn-outline">Privacy Policy</a>
                 </div>
+                </div>
+                <img src="assets/GravityWarp/feature_graphic.jpg" alt="Gravity Warp Game" class="project-hero-image">
+            </div>
 
+            <div class="project-content reveal">
                 <h2>About The Game</h2>
                 <p>Gravity Warp is a high-speed, retro pixel-art physics arcade game built natively in Kotlin using the LibGDX framework. Navigate your starship through an endless, toroidal space using inverse-square gravity wells. Touching the screen creates a powerful gravitational pull that you must use to slingshot your ship, collect stardust, and outmaneuver explosive drifting and hunter mines.</p>
                 <p>Every element in the game—from the 13 unique pixel-art textures to the 4-track ambient synth audio—is generated procedurally at runtime. Experience a dynamic world wrapped in a parallax mesh background that distorts with gravitational lensing when you warp space. And if things get too intense, you can rely on the sophisticated AutoplayAI to take the wheel with its 8-step decision tree and look-ahead simulation.</p>
-                
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/GravityWarp/pictures/Screenshot_2026-05-02-07-33-31-755_com.orbit.game.jpg" alt="Gravity Warp Gameplay & Score" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityWarp/pictures/Screenshot_2026-05-02-07-33-35-519_com.orbit.game.jpg" alt="Gravity Warp Instructions & Menu" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityWarp/pictures/GravityWarp_1777696179319.gif" alt="Gravity Warp Gameplay 1" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityWarp/pictures/GravityWarp_1777696188413.gif" alt="Gravity Warp Gameplay 2" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityWarp/pictures/GravityWarp_1777696394030.gif" alt="Gravity Warp Gameplay 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityWarp/pictures/GravityWarp_1777696399657.gif" alt="Gravity Warp Gameplay 4" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
                 <h2>Features</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Inverse-Square Gravity Physics:</strong> Touch to create gravity wells and navigate your ship using purely physics-driven momentum.</li>
@@ -45,16 +55,8 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Built-in Autopilot AI:</strong> A complex, spatial-indexed AI algorithm that can take control and pilot the ship to safety.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Hard Mode Leaderboards:</strong> Double the mine spawn rate and compete for the ultimate high score.</li>
                 </ul>
-                
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/GravityWarp/pictures/Screenshot_2026-05-02-07-33-31-755_com.orbit.game.jpg" alt="Gravity Warp Gameplay & Score" class="gallery-img">
-                    <img src="assets/GravityWarp/pictures/Screenshot_2026-05-02-07-33-35-519_com.orbit.game.jpg" alt="Gravity Warp Instructions & Menu" class="gallery-img">
-                    <img src="assets/GravityWarp/pictures/GravityWarp_1777696179319.gif" alt="Gravity Warp Gameplay 1" class="gallery-img">
-                    <img src="assets/GravityWarp/pictures/GravityWarp_1777696188413.gif" alt="Gravity Warp Gameplay 2" class="gallery-img">
-                    <img src="assets/GravityWarp/pictures/GravityWarp_1777696394030.gif" alt="Gravity Warp Gameplay 3" class="gallery-img">
-                    <img src="assets/GravityWarp/pictures/GravityWarp_1777696399657.gif" alt="Gravity Warp Gameplay 4" class="gallery-img">
-                </div>
+
+
 
                 <div class="download-section" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
                     <h3 style="margin-bottom: 16px;">Available Now</h3>
@@ -67,11 +69,40 @@
                 </div>
             </div>
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="orbitpuzzles.html">
+            <div class="collection-image"><img src="assets/OrbitPuzzles/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>OrbitPuzzles <span aria-hidden="true">↗</span></h3>
+            <p>Put your intuition for gravity to the test with orbital physics puzzles.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="omaha.html">
+            <div class="collection-image"><img src="assets/omaha/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+            <p>Look beneath the stock price and explore what makes a business tick.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="spendosaurus.html">
+            <div class="collection-image"><img src="assets/Spendosaurus/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Spendosaurus <span aria-hidden="true">↗</span></h3>
+            <p>Give big family expenses a plan, from the first estimate to the last installment.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-<div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <script src="project.js?v=1"></script>
+
 </body>
 </html>
 

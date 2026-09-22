@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GravityTDG - A gravity-based space tower-defense game for Android.">
     <title>GravityTDG - Game Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <style>
         .spec-table {
@@ -79,26 +81,43 @@
     <div class="bg-glow" style="background: radial-gradient(circle at top right, rgba(255, 56, 56, 0.08), transparent 60%);"></div>
     <portfolio-header active-page="gravitytdg.html"></portfolio-header>
 
-    <main>
+    <main id="main">
         <div class="container">
-            <div class="project-header reveal">
-                <span class="card-tag tag-game4" style="margin-bottom: 24px;">Game</span>
-                <h1 style="font-size: 3rem; margin-bottom: 30px; font-weight: 800;">GravityTDG</h1>
-                <img src="assets/GravityTDG/feature_graphic.jpg" alt="GravityTDG Game" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=GravityTDG'">
-            </div>
-            
-            <div class="project-content reveal">
-                <div class="project-links" style="margin-bottom: 32px;">
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Play &amp; explore</span>
+                    <h1>GravityTDG</h1>
+                    <p class="project-lead">A tower defense twist: use orbital physics and rescue beams to save, rather than destroy.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
                     <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitytdg&pcampaignid=web_share" class="btn btn-primary">Get it on Google Play</a>
                     <a href="gravitytdg-privacy.html" class="btn btn-outline">Privacy Policy</a>
                 </div>
+                </div>
+                <img src="assets/GravityTDG/feature_graphic.jpg" alt="GravityTDG Game" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
 
                 <h2>About The Game</h2>
                 <p>Most tower defense games ask you to destroy whatever comes at you. Gravity TD asks you to save it. Stranded cosmonauts are drifting into the gravity well of a black hole, a dying star, an uncharted planet. You can't grab them &mdash; but you can bend the forces around them. Place jet fields to nudge their orbits, brakes to bleed off their speed, and rescue-beam turrets that charge a teleport shield before it's too late.</p>
                 <p>Built with libGDX 1.12.1, the game leverages custom RK4 (Runge-Kutta 4th Order) numerical physics at a fixed 60Hz frequency to calculate smooth planetary gravity and complex force fields. With support for sophisticated multi-touch camera gestures (pan, pitch tilt, pinch-to-zoom, and axial rotation), players can navigate space arenas seamlessly.</p>
-                
+
                 <div class="highlight-box">
                     <p><strong>Core Mechanic:</strong> Every wave starts with a design phase where you spend your energy budget and study trajectory previews. Then you start the wave and watch physics do the rest &mdash; turning a death spiral into a rescue orbit!</p>
+                </div>
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-51-42-058_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Level Start" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-51-49-918_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Orbital Rescue Wave" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-51-58-767_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-52-54-563_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-53-05-818_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-53-59-233_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-54-03-200_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-54-08-093_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 8" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Key Features</h2>
@@ -131,7 +150,7 @@
 
                 <h2>Turret Specifications</h2>
                 <p>Strategically spend your energy budget on two categories of turrets: force-field generators that steer orbits, and rescue-beam shooters that charge shields.</p>
-                <table class="spec-table">
+                <div class="table-scroll" role="region" aria-label="Scrollable game specifications" tabindex="0"><table class="spec-table">
                     <thead>
                         <tr>
                             <th>Turret ID</th>
@@ -171,11 +190,11 @@
                             <td>Fills shields of all cosmonauts within range simultaneously, with a lower individual recharge rate.</td>
                         </tr>
                     </tbody>
-                </table>
+                </table></div>
 
                 <h2>Cosmonaut Reference</h2>
                 <p>Different cosmonauts require tailored gravitational handling and charge speeds based on their size, speed, and shield charges.</p>
-                <table class="spec-table">
+                <div class="table-scroll" role="region" aria-label="Scrollable game specifications" tabindex="0"><table class="spec-table">
                     <thead>
                         <tr>
                             <th>Type</th>
@@ -212,7 +231,7 @@
                             <td>Massive cargo vessel. Charges slowly and must undergo 3 complete charge cycles to be rescued.</td>
                         </tr>
                     </tbody>
-                </table>
+                </table></div>
 
                 <h2>Celestial Centers & Rules</h2>
                 <p>The cosmic bodies at the center of the field govern both the gravity profiles and the rules required to pull off a successful rescue:</p>
@@ -235,25 +254,44 @@
                     </div>
                 </div>
 
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-51-42-058_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Level Start" class="gallery-img">
-                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-51-49-918_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Orbital Rescue Wave" class="gallery-img">
-                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-51-58-767_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 3" class="gallery-img">
-                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-52-54-563_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 4" class="gallery-img">
-                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-53-05-818_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 5" class="gallery-img">
-                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-53-59-233_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 6" class="gallery-img">
-                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-54-03-200_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 7" class="gallery-img">
-                    <img src="assets/GravityTDG/Screenshot_2026-08-06-15-54-08-093_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Screenshot 8" class="gallery-img">
-                </div>
+
 
             </div>
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html">
+            <div class="collection-image"><img src="assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>A little planet in your pocket. Explore Earth with live astronomy and NASA data.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html">
+            <div class="collection-image"><img src="assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>Follow marketplace finds, compare price changes, and catch a promising deal.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html">
+            <div class="collection-image"><img src="assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Log blood pressure readings, explore trends, and export your history. One app for Android and the web.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-<div style='position: fixed; bottom: 20px; right: 20px; z-index: 9999;'><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <script src="project.js?v=1"></script>
+
 </body>
 </html>
 

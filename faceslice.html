@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Faceslice — From a single frontal photo to laser-cut metal plates for a layered topographic portrait relief. Slicing engine, real-time material estimation, and DXF export.">
     <title>Faceslice - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=1">
+    <link rel="stylesheet" href="project.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/Faceslice/icon.svg">
 </head>
@@ -13,28 +15,39 @@
     <div class="bg-glow"></div>
     <portfolio-header active-page="faceslice.html"></portfolio-header>
 
-    <main>
+    <main id="main">
         <div class="container">
-            <div class="project-header reveal">
-                <span class="card-tag tag-app" style="margin-bottom: 24px;">PWA / Web App</span>
-                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-                    <img src="assets/Faceslice/icon-512.png" alt="Faceslice Icon" style="width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.25); object-fit: cover;">
-                    <h1 style="font-size: 3rem; margin: 0; font-weight: 800;">Faceslice</h1>
-                </div>
-                <img src="assets/Faceslice/feature_graphic.jpg" alt="Faceslice App" class="project-hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600/1a1a24/ffffff?text=Faceslice'">
-            </div>
-            
-            <div class="project-content reveal">
-                <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Creative tools</span>
+                    <h1>Faceslice</h1>
+                    <p class="project-lead">One photo becomes a 3D relief, sliced into layers for a metal portrait.</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://faceslice.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Launch Web App</a>
                     <a href="https://github.com/zandaulion/faceslice" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
                 </div>
+                </div>
+                <img src="assets/Faceslice/feature_graphic.jpg" alt="Faceslice App" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
 
                 <h2>About The Project</h2>
                 <p><strong>De la o fotografie frontală la plăcile de tăiat pentru un portret în straturi — un relief ca o hartă topografică, din tablă, lipit manual strat peste strat.</strong></p>
                 <p><strong>Faceslice</strong> transforms a standard 2D selfie into physical layered topographic sculptures made from laser-cut sheet metal or cardstock. Instead of demanding complex multi-camera photogrammetry or finicky 3D scanning apps, Faceslice requires just a single frontal photograph and an interpupillary distance (IPD) measurement in millimeters to fix the physical scale.</p>
                 <p>To reconstruct a genuine head from one photo, Faceslice orchestrates a three-model computer vision fusion pipeline where each model contributes what it does best: silhouette segmentation captures hair, ears, and jawlines; monocular depth estimates broad skull volume; and facial mesh landmarker models extract crisp facial landmarks (nose, eye sockets, lips) as residual surface displacement.</p>
                 <p>The resulting 3D solid is sliced into parallel planes at custom angles. Frontal slicing produces self-aligning nested contour isohypses, complete with etched alignment guides on every plate, hollowed-out hidden interiors for up to 80% weight reduction, and instant production-grade DXF export.</p>
+
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="assets/Faceslice/screenshot_01_app_editor.png" alt="Faceslice Studio — 3D Contour Relief, Cut Planes & Material Estimation" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Faceslice/screenshot_02_contour_closeup.png" alt="Topographic Elevation Relief — High-Resolution Face Layer Contours" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Faceslice/screenshot_03_bust_relief.png" alt="Bust Portrait Slicing — Shoulder Contours & Spaced Cutting Planes" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Faceslice/screenshot_04_dense_slices.png" alt="High-Density Slicing — 220 Slices (0.5 mm) & 153 Contours Analysis" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Faceslice/screenshot_05_hair_profile.png" alt="Complex Hair Silhouette & Solid Profile Cut Analysis" class="gallery-img" loading="lazy" decoding="async">
+                </div>
 
                 <h2>Features</h2>
                 <ul>
@@ -63,22 +76,44 @@
                         <p>Containerized with Podman and systemd Quadlet, automated asset hash version stamping via <code>deploy.sh</code>, and served through Caddy reverse proxy with sub-second slicing response times on CPU.</p>
                     </div>
                 </div>
-                
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/Faceslice/screenshot_01_app_editor.png" alt="Faceslice Studio — 3D Contour Relief, Cut Planes & Material Estimation" class="gallery-img">
-                    <img src="assets/Faceslice/screenshot_02_contour_closeup.png" alt="Topographic Elevation Relief — High-Resolution Face Layer Contours" class="gallery-img">
-                    <img src="assets/Faceslice/screenshot_03_bust_relief.png" alt="Bust Portrait Slicing — Shoulder Contours & Spaced Cutting Planes" class="gallery-img">
-                    <img src="assets/Faceslice/screenshot_04_dense_slices.png" alt="High-Density Slicing — 220 Slices (0.5 mm) & 153 Contours Analysis" class="gallery-img">
-                    <img src="assets/Faceslice/screenshot_05_hair_profile.png" alt="Complex Hair Silhouette & Solid Profile Cut Analysis" class="gallery-img">
-                </div>
+
+
 
             </div>
         </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="creative">
+          <a href="sankey.html">
+            <div class="collection-image"><img src="assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Creative tools</div>
+            <h3>Sankey Diagram Editor <span aria-hidden="true">↗</span></h3>
+            <p>Make a picture of where things flow. Build and export diagrams in your browser.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitygarden.html">
+            <div class="collection-image"><img src="assets/Gravity Garden/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Play &amp; explore</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>Bend gravity and grow a garden in a quiet, physics-powered puzzle game.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="magpie.html">
+            <div class="collection-image"><img src="assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Everyday tools</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>A place for stray thoughts, photos, and voice notes before they fly away.</p>
+          </a>
+        </article>
+        </div>
+    </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2.0"></script>
-    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+    <script src="project.js?v=1"></script>
+
 </body>
 </html>
