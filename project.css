@@ -92,3 +92,5 @@ footer.footer { text-align: left; border-top: 1px solid var(--line); }
   .sankey-editor-layout { min-width: 0; }
   .sankey-main .card { min-width: 0; padding: 16px; }
 }
+
+.project-header .project-hero-image.hero-landscape { aspect-ratio: 1024 / 500; }

@@ -14,12 +14,13 @@ function applyTheme(theme) {
   
   const logoImg = document.getElementById('brand-logo');
   if (logoImg) {
-    logoImg.src = effectiveTheme === 'light' ? 'assets/brand/logo_light.jpg' : 'assets/brand/logo.jpg';
+    logoImg.src = effectiveTheme === 'light' ? 'assets/brand/lion-light-v2.png' : 'assets/brand/lion-dark-v2.png';
   }
   
   const favicon = document.querySelector('link[rel="icon"]');
   if (favicon) {
-    favicon.href = effectiveTheme === 'light' ? 'assets/brand/logo_light.jpg' : 'assets/brand/logo.jpg';
+    favicon.href = effectiveTheme === 'light' ? 'assets/brand/lion-light-v2.png' : 'assets/brand/lion-dark-v2.png';
+    favicon.type = 'image/png';
   }
 }
 
@@ -41,7 +42,7 @@ class PortfolioHeader extends HTMLElement {
     if (currentTheme === 'dark') themeIcon = '🌙';
     
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    const logoSrc = isLight ? 'assets/brand/logo_light.jpg' : 'assets/brand/logo.jpg';
+    const logoSrc = isLight ? 'assets/brand/lion-light-v2.png' : 'assets/brand/lion-dark-v2.png';
     
     this.innerHTML = `
       <header>
@@ -54,7 +55,7 @@ class PortfolioHeader extends HTMLElement {
                           <div class="nav-dropdown-content">
                               <div style="padding: 6px 16px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-blue); font-weight: 700;">PWAs &amp; Web Apps</div>
                               <a href="omaha.html" class="${activePage === 'omaha.html' ? 'active' : ''}">Pocket Omaha</a>
-                              <a href="plate.html" class="${activePage === 'plate.html' ? 'active' : ''}">Plate</a>
+                              <a href="plate.html" class="${activePage === 'plate.html' ? 'active' : ''}">Bitey</a>
                               <a href="miscare.html" class="${activePage === 'miscare.html' ? 'active' : ''}">Mișcare</a>
                               <a href="faceslice.html" class="${activePage === 'faceslice.html' ? 'active' : ''}">Faceslice</a>
                               <a href="kerfloom.html" class="${activePage === 'kerfloom.html' ? 'active' : ''}">Kerfloom</a>
@@ -127,7 +128,7 @@ class PortfolioFooter extends HTMLElement {
       <footer>
           <div class="container">
               <div class="footer-links">
-                  <a href="plate-privacy.html">Plate Privacy</a>
+                  <a href="plate-privacy.html">Bitey Privacy (formerly Plate)</a>
                   <a href="bpdigitizer-privacy.html">BP Digitizer Privacy</a>
                   <a href="palebluedot-privacy.html">Pale Blue Dot Privacy</a>
                   <a href="gravitywarp-privacy.html">Gravity Warp Privacy</a>
