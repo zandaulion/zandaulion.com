@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faceslice — 从单张正面照片到激光切割金属板的分层地形肖像浮雕。切片引擎、实时材料估算和 DXF 导出。">
+    <title>Faceslice - 项目详情</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/Faceslice/icon.svg">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/zh-cn/faceslice.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/faceslice.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/faceslice.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/faceslice.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/faceslice.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/faceslice.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/faceslice.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/faceslice.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/faceslice.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/faceslice.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/faceslice.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/faceslice.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/faceslice.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/faceslice.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="faceslice.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="zh-CN">← 返回工作坊</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">创作工具</span>
+                    <h1>Faceslice</h1>
+                    <p class="project-lead">一张照片变成三维浮雕，再切分成多层，组成金属人像。</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://faceslice.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">打开网页应用</a>
+                    <a href="https://github.com/zandaulion/faceslice" target="_blank" rel="noopener noreferrer" class="btn btn-outline">在 GitHub 上查看</a>
+                </div>
+                </div>
+                <img src="../assets/Faceslice/feature_graphic.jpg" alt="Faceslice 应用程序" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>关于项目</h2>
+                <p>从正面照片生成分层肖像的切割图案，将金属薄板逐层手工粘合，组成宛如地形图的浮雕。</p>
+                <p>Faceslice 将标准 2D 自拍照转换为由激光切割金属板或卡片纸制成的物理分层地形雕塑。 Faceslice 不需要复杂的多相机摄影测量或挑剔的 3D 扫描应用程序，只需一张正面照片和以毫米为单位的瞳距 (IPD) 测量值即可确定物理比例。</p>
+                <p>为了从一张照片中重建真实的头部，Faceslice 精心策划了一个三模型计算机视觉融合管道，其中每个模型都贡献其最擅长的功能：轮廓分割捕捉头发、耳朵和下巴轮廓；单眼深度估计广泛的颅骨体积；面部网格标志模型提取清晰的面部标志（鼻子、眼窝、嘴唇）作为残余表面位移。</p>
+                <p>生成的 3D 实体以自定义角度切成平行平面。正面切片可产生自对准嵌套轮廓等高面，每块板上均配有蚀刻对准导轨，镂空隐藏内部可减轻高达 80% 的重量，并可即时输出生产级 DXF。</p>
+
+                <h2>图片集</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Faceslice/screenshot_01_app_editor.png" alt="Faceslice Studio — 3D 轮廓浮雕、剖切面和材料估算" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_02_contour_closeup.png" alt="地形高程起伏 — 高分辨率面层轮廓" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_03_bust_relief.png" alt="半身像切片 - 肩部轮廓和间隔切割面" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_04_dense_slices.png" alt="高密度切片 — 220 个切片 (0.5 mm) 和 153 个轮廓分析" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_05_hair_profile.png" alt="复杂的头发轮廓和实体轮廓切割分析" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>功能</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 单照片 3D 重建：</strong> 将单张正面自拍照转换为完整的深度立体图，并使用瞳孔距离校准到真实世界的尺寸。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 3模型AI融合引擎：</strong> 结合 MediaPipe 多类分割、ONNX 单眼深度估计 (Depth Anything V2) 和 MediaPipe 面部标志器，以平衡头骨体积和面部清晰度。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️地形轮廓切片：</strong> 将实体切成具有自由角度控制的平行平面（正面用于同心嵌套等高面，水平用于侧面剖面叠层）。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 自对准装配指南：</strong> 当正面切片时，每个金属层都嵌套在下面的金属层内，并且下一块金属板的边界线直接雕刻在其表面上，以便无需夹具即可轻松对齐。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ 内部镂空&amp;材料经济：</strong> 自动去除隐藏的内部几何形状，减少材料消耗和重量高达 80%（例如，10 公斤实心钢减少到 1.9 公斤空心环），同时保持坚固的粘合边缘。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ 参数化制造控制：</strong> 板材厚度（0.5-10 毫米）、浮雕压缩、切口补偿、面部浮雕夸张和切片角度的实时交互式调整。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ 实时材料和重量估算器：</strong> 动态计算钢、黄铜和铝的板数、独特轮廓、所需的钣金面积 (dm²)、堆叠高度和精确质量。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 生产就绪 DXF 导出：</strong> 只需单击一下即可导出完全矢量化、激光/水射流/等离子 CAM 就绪的 DXF 文件，嵌套到自定义板材尺寸。</li>
+                </ul>
+
+                <h2>架构与技术堆栈</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0 40px;">
+                    <div class="feature-item">
+                        <h3>交互式网络客户端</h3>
+                        <p>Vanilla JavaScript（ES 模块）、响应式画布和 SVG 轮廓渲染、实时参数滑块以及支持离线的 PWA 架构。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>视觉与几何引擎</h3>
+                        <p>Python 3 计算核心利用 MediaPipe（分割和面网格）、ONNX 运行时（Depth Anything V2 Small）、用于 2D 多边形布尔运算和镂空的 Shapely 以及用于 CAD 生成的 ezdxf。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>生产部署</h3>
+                        <p>使用 Podman 和 systemd Quadlet 进行容器化，通过自动化资产哈希版本标记 <code>deploy.sh</code>，并通过 Caddy 反向代理提供服务，CPU 上的切片响应时间为亚秒级。</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">继续发现</span><h2 id="related-title">你可能还会喜欢…</h2></div><p><a href="index.html#collection" hreflang="zh-CN">查看全部作品 ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="creative">
+          <a href="sankey.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">创作工具</div>
+            <h3>Sankey 图表编辑器 <span aria-hidden="true">↗</span></h3>
+            <p>画出事物流动的方向。在浏览器中制作并导出图表。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitygarden.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/Gravity Garden/workshop-hero.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">玩乐与探索</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>在宁静的物理解谜游戏中改变重力，让花园生长。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="magpie.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">日常工具</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>存放零散想法、照片和语音备忘，在它们溜走之前。</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

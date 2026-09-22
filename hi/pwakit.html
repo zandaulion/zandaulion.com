@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hi-IN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pwa-kit - एक शून्य-निर्भरता, स्व-अद्यतन PWA तंत्र Bitey से निकाला और सामान्यीकृत किया गया।">
+    <title>pwa-kit ⚡ - परियोजना विवरण</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/hi/pwakit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/pwakit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/pwakit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/pwakit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/pwakit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/pwakit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/pwakit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/pwakit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/pwakit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/pwakit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/pwakit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/pwakit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/pwakit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/pwakit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwakit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="hi-IN">← कार्यशाला में वापस जाएँ</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">पर्दे के पीछे</span>
+                    <h1>pwa-kit</h1>
+                    <p class="project-lead">एक छोटा घटक जो वेब ऐप को ऑफ़लाइन चलने और अपडेट रहने में मदद करता है।</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">GitHub पर देखें</a>
+                </div>
+                </div>
+                <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>परियोजना के बारे में</h2>
+                <p>Bitey से अद्यतन तंत्र, सामान्यीकृत: एक PWA जो स्वयं को अद्यतन करता है और बाद में अनुमति मांगने के बजाय ऐसा कहता है, जिसकी उसे आवश्यकता नहीं है।</p>
+                <p>प्रतिलिपि <code>sw.js</code> और <code>pwa-update.js</code> किसी ऐप के वेब रूट में डालें और उन्हें वायर करें। कोई बिल्ड चरण नहीं है, कोई बंडलर नहीं है, और शून्य निर्भरताएँ हैं - जो कि मुद्दा है: ये ऐप्स स्थिर निर्देशिकाएँ हैं।</p>
+                <p>एक नया सेवा कर्मी टैब बंद होने की प्रतीक्षा किए बिना तुरंत इंस्टॉल और सक्रिय हो जाता है। प्रत्येक खुली विंडो नवीनतम संस्करण पर निर्बाध रूप से पुनः लोड करने से पहले वर्तमान कार्य को सुरक्षित रूप से पूरा करती है।</p>
+
+                <h2>चित्र संग्रह</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit ग्राफ़िक" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>विशेषताएँ</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ तत्काल सक्रियण:</strong> नए कर्मचारी खुले ब्राउज़र टैब पर कई दिनों तक रुके बिना पुराने कर्मचारियों को स्थापित करते हैं और कार्यभार संभालते हैं।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ बिना सहेजे गए कार्य सुरक्षा (<code>isBusy</code>):</strong> कार्यकर्ता आँख मूंदकर मार्गदर्शन करने के बजाय पूछता है; जब तक लंबित संपादन या प्रपत्र स्थिति का सुरक्षित समाधान नहीं हो जाता, तब तक पेजों को पुनः लोड करना स्थगित कर दिया जाता है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 नेटवर्क-प्रथम ताजगी:</strong> ऑनलाइन अनुरोध हमेशा यह सुनिश्चित करने में सफल होते हैं कि तैनात किए गए परिवर्तन अगले पुनः लोड पर प्रभावी हों, ऑफ़लाइन होने पर कैश में वापस आ जाएं।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 स्वच्छ सत्र भंडारण सूचनाएं:</strong> अद्यतन फ़्लैग के साथ URL क्वेरी स्ट्रिंग को प्रदूषित होने से बचाता है, इन-ऐप टोस्ट के माध्यम से उपयोगकर्ताओं को स्पष्ट रूप से सूचित करता है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 बिल्ट-इन कैश एस्केप हैच:</strong> वेज्ड ग्राहकों के लिए एक आपातकालीन अपंजीकृत और कैश-बस्ट तंत्र शामिल है।</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">कुछ और खोजें</span><h2 id="related-title">आपको ये भी पसंद आ सकते हैं…</h2></div><p><a href="index.html#collection" hreflang="hi-IN">पूरा संग्रह देखें ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="behind">
+          <a href="pwainvite.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">पर्दे के पीछे</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>निजी वेब ऐप के निमंत्रण और उपकरण सँभालने के लिए एक छोटा कंसोल।</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">रचनात्मक औज़ार</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>तस्वीर को धातु में काटने के लिए आपस में जुड़े पैटर्न में बदलें।</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">खेल और खोज</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>आपकी जेब में एक छोटा ग्रह। ताज़ा खगोलीय जानकारी और NASA के डेटा से पृथ्वी को जानें।</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

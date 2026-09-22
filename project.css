@@ -94,3 +94,19 @@ footer.footer { text-align: left; border-top: 1px solid var(--line); }
 }
 
 .project-header .project-hero-image.hero-landscape { aspect-ratio: 1024 / 500; }
+
+/* Flexible translated copy and logical spacing for right-to-left project pages. */
+.project-header, footer.footer { text-align: start; }
+.project-header > *, .platform-option, .feature-item { min-width: 0; }
+.project-links .btn, .platform-option .btn, .project-content h2, .project-content h3 { overflow-wrap: anywhere; }
+.project-content ul, .project-content ol { padding-inline: 23px 0; }
+.project-content li { padding-inline: 3px 0; }
+.project-content .platform-status { border-left: 0; border-inline-start: 2px solid var(--orange); padding-inline: 14px 0; }
+html[dir="rtl"] .project-header h1, html[dir="rtl"] .project-content h2 { letter-spacing: normal; }
+html[dir="rtl"] .project-header .project-hero-image { transform: rotate(-1deg); }
+html[dir="rtl"] .gallery-navigation { direction: ltr; }
+.sankey-controls .btn { white-space: normal; overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  html[dir="rtl"] .project-header .project-hero-image { transform: none; }
+  .gallery-toolbar, .gallery-navigation { flex-wrap: wrap; }
+}

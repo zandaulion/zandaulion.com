@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pwa-kit - Um mecanismo PWA de dependência zero e autoatualização extraído e generalizado de Bitey.">
+    <title>pwa-kit ⚡ - Detalhes do projeto</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/pt-br/pwakit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/pwakit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/pwakit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/pwakit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/pwakit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/pwakit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/pwakit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/pwakit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/pwakit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/pwakit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/pwakit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/pwakit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/pwakit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/pwakit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="pwakit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="pt-BR">← Voltar à oficina</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Nos bastidores</span>
+                    <h1>pwa-kit</h1>
+                    <p class="project-lead">Uma pequena peça que ajuda aplicativos web a funcionar offline e ficar atualizados.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Ver no GitHub</a>
+                </div>
+                </div>
+                <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="pwa-kit" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Sobre o projeto</h2>
+                <p>O mecanismo de atualização do Bitey, generalizado: um PWA que se atualiza e diz isso depois, em vez de pedir permissão desnecessária.</p>
+                <p>Cópia <code>sw.js</code> e <code>pwa-update.js</code> na raiz da web de um aplicativo e conecte-os. Não há etapa de construção, nenhum empacotador e zero dependências - esse é o ponto: esses aplicativos são diretórios estáticos.</p>
+                <p>Um novo service worker é instalado e ativado imediatamente, sem esperar o fechamento das guias. Cada janela aberta conclui com segurança o trabalho atual antes de recarregar perfeitamente na versão mais recente.</p>
+
+                <h2>Galeria</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/PWA-Kit/feature_graphic.jpg" alt="Gráfico pwa-kit" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Recursos</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Ativação imediata:</strong> Novos trabalhadores são instalados e assumidos sem que trabalhadores obsoletos permaneçam por dias nas guias abertas do navegador.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Proteção de trabalho não salvo (<code>isBusy</code>):</strong> O trabalhador pergunta em vez de navegar cegamente; as páginas adiam as recargas até que as edições pendentes ou os estados do formulário sejam resolvidos com segurança.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Atualização da rede em primeiro lugar:</strong> As solicitações on-line sempre vencem para garantir que as alterações implantadas entrem em vigor na próxima recarga, voltando ao cache quando estiver off-line.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 Notificações de armazenamento de sessão limpa:</strong> Evita poluir strings de consulta de URL com sinalizadores de atualização, informando os usuários de forma clara por meio de brindes no aplicativo.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 Escotilha de escape de cache integrada:</strong> Inclui um mecanismo de cancelamento de registro de emergência e bloqueio de cache para clientes bloqueados.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Continue descobrindo</span><h2 id="related-title">Talvez você também goste…</h2></div><p><a href="index.html#collection" hreflang="pt-BR">Ver toda a coleção ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="behind">
+          <a href="pwainvite.html" hreflang="pt-BR">
+            <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Nos bastidores</div>
+            <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+            <p>Um pequeno console para gerenciar convites e dispositivos em aplicativos web privados.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="pt-BR">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Ferramentas criativas</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>Transforme uma fotografia em padrões conectados para recortar em metal.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="pt-BR">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Jogar e explorar</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>Um pequeno planeta no seu bolso. Explore a Terra com dados astronômicos atuais e da NASA.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="light" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitPuzzles - لعبة ألغاز لمحاكاة الجاذبية لنظام Android.">
+    <title>OrbitPuzzles - تفاصيل اللعبة</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ar/orbitpuzzles.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/orbitpuzzles.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/orbitpuzzles.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/orbitpuzzles.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/orbitpuzzles.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/orbitpuzzles.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/orbitpuzzles.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/orbitpuzzles.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/orbitpuzzles.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/orbitpuzzles.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="orbitpuzzles.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ar">← العودة إلى الورشة</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">اللعب والاستكشاف</span>
+                    <h1>OrbitPuzzles</h1>
+                    <p class="project-lead">اختبر حدسك بشأن الجاذبية بألغاز الفيزياء المدارية.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <span class="availability-note">احصل عليه على Google Play (قريبًا)</span>
+                    <a href="../orbitpuzzles-privacy.html" class="btn btn-outline" hreflang="en-US">سياسة الخصوصية (بالإنجليزية)</a>
+                </div>
+                </div>
+                <img src="../assets/OrbitPuzzles/feature_graphic.jpg" alt="لعبة OrbitPuzzles" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>عن اللعبة</h2>
+                <p>OrbitPuzzles هي لعبة ألغاز مليئة بالتحديات تعتمد على الفيزياء حيث يقوم اللاعبون بتصميم أنظمة مدارية من خلال وضع الأجرام السماوية بشكل استراتيجي مثل الكواكب والأقمار والكويكبات. هدفك هو تحقيق تكوينات محددة، مثل إكمال عدد معين من المدارات دون الاصطدام بالنجم المركزي أو الهروب من النظام.</p>
+                <p>تم تصميم OrbitPuzzles محليًا بالكامل في Kotlin، وهو يتميز بمحاكي N-body $O(N^2)$ مخصص عالي الاستقرار باستخدام تكامل Velocity Verlet وتنعيم Plummer. يتوقف الوقت مؤقتًا أثناء مرحلة التصميم حتى تتمكن من وضع أجسادك بعناية وضبط متجهات السرعة، ثم يتدفق في مرحلة التشغيل لاختبار ما إذا كانت الميكانيكا المدارية الخاصة بك صامدة أم لا.</p>
+                <p>تجمع التجربة المرئية بين العرض ثلاثي الأبعاد المدعوم من Google Filament وواجهة المستخدم Jetpack Compose بنسبة 100%. يتم عرض كل جرم سماوي باستخدام تركيب إجرائي مخصص، مما يؤدي إلى إنشاء مجموعة لا حصر لها من الكواكب والنجوم دون الاعتماد على ملفات نسيج ضخمة، بينما توفر المسارات المتوهجة وتراكبات واجهة المستخدم القياس عن بعد والتعليقات في الوقت الفعلي.</p>
+
+                <h2>معرض الصور</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-29-933_com.orbitpuzzles.app.jpg" alt="حدد مستوى OrbitPuzzles" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-37-349_com.orbitpuzzles.app.jpg" alt="مرحلة تصميم OrbitPuzzles" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-41-276_com.orbitpuzzles.app.jpg" alt="تشغيل محاكاة OrbitPuzzles" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-53-361_com.orbitpuzzles.app.jpg" alt="لقطة الشاشة OrbitPuzzles 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-00-279_com.orbitpuzzles.app.jpg" alt="لقطة الشاشة OrbitPuzzles 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-04-774_com.orbitpuzzles.app.jpg" alt="لقطة الشاشة OrbitPuzzles 6" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>المزايا</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>محرك الفيزياء المخصص:</strong> محاكاة دقيقة للجسم N تستفيد من تكامل Velocity Verlet لتحقيق الاستقرار المداري على المدى الطويل، مع استكمال تقنية Plummer softening للتعامل بأمان مع اللقاءات القريبة للغاية.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>مراحل التصميم والتشغيل:</strong> أسلوب تكتيكي حيث يتوقف الوقت مؤقتًا للتخطيط، مما يسمح لك بضبط إعداد الكواكب لديك وقوى المتجهات وحل اللغز المداري قبل إطلاق العنان للمحاكاة.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>الكواكب الإجرائية ثلاثية الأبعاد:</strong> يضمن تكامل Google Filament باستخدام خرائط البياض متساوية المستطيلات التي تم إنشاؤها رياضيًا أن يبدو كل جرم سماوي فريدًا مع الحفاظ على مساحة التطبيق صغيرة.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>العرض الهجين:</strong> مزيج لا تشوبه شائبة من عرض الفيزياء ثلاثية الأبعاد الأصلية ضمن تراكبات واجهة المستخدم ثنائية الأبعاد ذات الطبقات الجميلة في الوقت الفعلي والمرسومة باستخدام Jetpack Compose Canvas.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>التحدي التقدمي:</strong> التنقل عبر مجموعة واسعة من المستويات بميزانيات وأهداف مميزة. يقوم نظام "OrbitTracker" الداخلي بإحصاء الثورات بدقة بغض النظر عن الانحراف الإهليلجي.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">واصل الاكتشاف</span><h2 id="related-title">قد يعجبك أيضًا…</h2></div><p><a href="index.html#collection" hreflang="ar">استعرض المجموعة كاملة ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html" hreflang="ar">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityTDG/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">اللعب والاستكشاف</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>فكرة مختلفة للدفاع بالأبراج: استخدم الفيزياء المدارية وأشعة الإنقاذ لإنقاذ الأرواح.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="intarzieri.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/Intarzieri/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">أدوات يومية</div>
+            <h3>Intârzieri Tren <span aria-hidden="true">↗</span></h3>
+            <p>تابع قطارات رومانيا ومساراتها وتغيرات التأخير.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="thermostat.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/Thermostat/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">أدوات يومية</div>
+            <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+            <p>تابع دفء منزلك من خلال سجل المستشعرات ومخططات الحرارة.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

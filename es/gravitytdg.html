@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es-ES" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GravityTDG: un juego de defensa de torres espaciales basado en la gravedad para Android.">
+    <title>GravityTDG - Detalles del juego</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th, .spec-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .spec-table td {
+            color: var(--text-muted);
+        }
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+        .highlight-box {
+            background: rgba(255, 56, 56, 0.05);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0 !important;
+            color: var(--text-main) !important;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        .feature-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        .feature-item:hover {
+            border-color: rgba(255, 56, 56, 0.2);
+            background: var(--bg-card-hover);
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/es/gravitytdg.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/gravitytdg.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/gravitytdg.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/gravitytdg.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/gravitytdg.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/gravitytdg.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/gravitytdg.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/gravitytdg.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/gravitytdg.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/gravitytdg.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/gravitytdg.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/gravitytdg.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/gravitytdg.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/gravitytdg.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow" style="background: radial-gradient(circle at top right, rgba(255, 56, 56, 0.08), transparent 60%);"></div>
+    <portfolio-header active-page="gravitytdg.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="es-ES">← Volver al taller</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Jugar y explorar</span>
+                    <h1>GravityTDG</h1>
+                    <p class="project-lead">Un giro a la defensa de torres: usa la física orbital y rayos de rescate para salvar vidas.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitytdg&amp;pcampaignid=web_share" class="btn btn-primary">Consíguelo en Google Play</a>
+                    <a href="../gravitytdg-privacy.html" class="btn btn-outline" hreflang="en-US">Política de privacidad (en inglés)</a>
+                </div>
+                </div>
+                <img src="../assets/GravityTDG/workshop-hero.png" alt="Juego GravityTDG" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Sobre el juego</h2>
+                <p>La mayoría de los juegos de defensa de torres te piden que destruyas todo lo que se te presente. Gravity TD te pide que lo guardes. Los cosmonautas varados están a la deriva hacia el pozo de gravedad de un agujero negro, una estrella moribunda, un planeta inexplorado. No puedes agarrarlos, pero puedes doblegar las fuerzas que los rodean. Coloca campos de propulsión para impulsar sus órbitas, frenos para reducir su velocidad y torretas de rayos de rescate que cargan un escudo de teletransporte antes de que sea demasiado tarde.</p>
+                <p>Construido con libGDX 1.12.1, el juego aprovecha la física numérica personalizada RK4 (Runge-Kutta 4th Order) a una frecuencia fija de 60 Hz para calcular la gravedad planetaria suave y los campos de fuerza complejos. Con soporte para sofisticados gestos de cámara multitáctil (giro, inclinación, pellizco para hacer zoom y rotación axial), los jugadores pueden navegar por los escenarios espaciales sin problemas.</p>
+
+                <div class="highlight-box">
+                    <p>Mecánica central: cada ola comienza con una fase de diseño en la que gastas tu presupuesto de energía y estudias vistas previas de la trayectoria. Luego inicias la ola y observas cómo la física hace el resto: ¡convierte una espiral mortal en una órbita de rescate!</p>
+                </div>
+
+                <h2>Galería</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-42-058_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Inicio de nivel" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-49-918_com.zandaulion.gravitytdg.jpg" alt="Onda de rescate orbital GravityTDG" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-58-767_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captura de pantalla 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-52-54-563_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captura de pantalla 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-05-818_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captura de pantalla 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-59-233_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captura de pantalla 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-03-200_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captura de pantalla 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-08-093_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Captura de pantalla 8" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Características clave</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Física orbital RK4</h3>
+                        <p>Simulador de integración de 60 Hz de alta precisión que modela pozos reales de gravedad cuadrada inversa, fuerzas de chorro direccionales y perfiles de arrastre tangenciales.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Fases tácticas</h3>
+                        <p>Planifique su enfoque en la fase de diseño pausada con vistas previas de la trayectoria vectorial en tiempo real, luego ejecútelo en la fase de reproducción con velocidades de tiempo personalizables.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Reposicionamiento dinámico</h3>
+                        <p>La breve fase de reposición entre oleadas permite reubicar y optimizar las torretas a un coste reducido, adaptándose a los nuevos vectores de entrada de los cosmonautas.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Imágenes híbridas 3D/2D</h3>
+                        <p>Impresionantes esferas 3D renderizadas con buffers de máscara de profundidad, mezcladas con superposiciones de espacio de pantalla para coronas luminosas aditivas, bandas keplerianas y terminadores planetarios.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Sintetizador de audio procesal</h3>
+                        <p>Drones envolventes con bucles de subgraves y SFX sintetizados personalizados generados matemáticamente a partir de motores de audio Python, reproducidos en mono de 22 kHz.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Progresión estelar</h3>
+                        <p>Desbloqueo secuencial de niveles con puntuaciones altas persistentes y calificaciones de estrellas basadas en su desempeño en el rescate guardadas directamente en las preferencias.</p>
+                    </div>
+                </div>
+
+                <h2>Especificaciones de la torreta</h2>
+                <p>Gasta estratégicamente tu presupuesto de energía en dos categorías de torretas: generadores de campos de fuerza que dirigen las órbitas y lanzadores de rayos de rescate que cargan escudos.</p>
+                <div class="table-scroll" role="region" aria-label="Especificaciones del juego desplazable" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>ID de torreta</th>
+                            <th>clase</th>
+                            <th>Subtipo</th>
+                            <th>Costo de colocación</th>
+                            <th>Efecto / Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>chorro</strong></td>
+                            <td>campo</td>
+                            <td>Fuerza Jet</td>
+                            <td>30 energía</td>
+                            <td>Empuja a los cosmonautas en la dirección de la torreta. Gire 360° en la fase de diseño para alinear las fuerzas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>freno</strong></td>
+                            <td>campo</td>
+                            <td>Arrastre de fricción</td>
+                            <td>20 energía</td>
+                            <td>Aplica arrastre directamente opuesto al vector de velocidad, lo que ralentiza los objetivos en órbita rápida.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>tirador_single</strong></td>
+                            <td>tirador</td>
+                            <td>Haz puntual</td>
+                            <td>40 energía</td>
+                            <td>Haz de rescate de alta potencia (1,5x) enfocado estrictamente al cosmonauta más cercano dentro del alcance.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>tirador_multi</strong></td>
+                            <td>tirador</td>
+                            <td>Área de chapoteo</td>
+                            <td>60 energía</td>
+                            <td>Llena los escudos de todos los cosmonautas dentro del alcance simultáneamente, con una tasa de recarga individual más baja.</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>Referencia de cosmonauta</h2>
+                <p>Los diferentes cosmonautas requieren un manejo gravitacional y velocidades de carga personalizados en función de su tamaño, velocidad y cargas de escudo.</p>
+                <div class="table-scroll" role="region" aria-label="Especificaciones del juego desplazable" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Tamaño</th>
+                            <th>Velocidad base</th>
+                            <th>pegajosidad</th>
+                            <th>Ciclos de escudo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>cosmonauta_basico</strong></td>
+                            <td>6</td>
+                            <td>1,0x</td>
+                            <td>1.0</td>
+                            <td>1 ciclo</td>
+                            <td>Miembro de la tripulación estándar. Una carga completa los rescata al instante.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>cosmonauta_rápido</strong></td>
+                            <td>1</td>
+                            <td>2.0x</td>
+                            <td>14.0</td>
+                            <td>1 ciclo</td>
+                            <td>Diminuto y frágil. Carga extremadamente rápido, pero se mueve al doble de velocidad a través de órbitas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>cosmonauta_pesado</strong></td>
+                            <td>12</td>
+                            <td>1,0x</td>
+                            <td>0.7</td>
+                            <td>3 ciclos</td>
+                            <td>Buque de carga masivo. Se carga lentamente y debe someterse a 3 ciclos de carga completos para ser rescatado.</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>Centros y reglas celestes</h2>
+                <p>Los cuerpos cósmicos en el centro del campo gobiernan tanto los perfiles de gravedad como las reglas necesarias para llevar a cabo un rescate exitoso:</p>
+                <div class="features-grid" style="margin-top: 16px;">
+                    <div class="feature-item">
+                        <h3>Agujero negro</h3>
+                        <p>Enorme atracción de gravedad. Acompañado de discos de acreción keplarianos y chorros relativistas. Los cosmonautas se salvan inmediatamente al completar la carga de su escudo en cualquier lugar de la arena.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>estrella brillante</h3>
+                        <p>Corona abrasadora y erupciones solares. Los cosmonautas se teletransportan y se salvan instantáneamente cuando su escudo está completamente cargado, evitando la incineración.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Planeta</h3>
+                        <p>Presenta hermosos gradientes atmosféricos y terminadores de nubes. Los cosmonautas deben aterrizar físicamente en la superficie del planeta después de que su escudo esté cargado al 100% para poder salvarse.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Estación Espacial</h3>
+                        <p>Puesto tecnológico metálico. Cualquier cosmonauta que contacte físicamente con la estación central se guarda automáticamente, independientemente del estado de carga de su escudo.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Sigue descubriendo</span><h2 id="related-title">Quizá también te guste…</h2></div><p><a href="index.html#collection" hreflang="es-ES">Ver toda la colección ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="es-ES">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Jugar y explorar</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>Un pequeño planeta en tu bolsillo. Explora la Tierra con datos astronómicos actuales y de la NASA.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="es-ES">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Herramientas cotidianas</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>Sigue anuncios, compara cambios de precio y encuentra una oferta prometedora.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="es-ES">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Herramientas cotidianas · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Registra tu presión arterial, observa tendencias y exporta tu historial. Una aplicación para Android y la web.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

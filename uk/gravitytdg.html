@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GravityTDG – гра гравітаційна гра для захисту космічної вежі для Android.">
+    <title>GravityTDG - Деталі гри</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th, .spec-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .spec-table td {
+            color: var(--text-muted);
+        }
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+        .highlight-box {
+            background: rgba(255, 56, 56, 0.05);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0 !important;
+            color: var(--text-main) !important;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        .feature-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        .feature-item:hover {
+            border-color: rgba(255, 56, 56, 0.2);
+            background: var(--bg-card-hover);
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/uk/gravitytdg.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/gravitytdg.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/gravitytdg.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/gravitytdg.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/gravitytdg.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/gravitytdg.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/gravitytdg.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/gravitytdg.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/gravitytdg.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/gravitytdg.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/gravitytdg.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/gravitytdg.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/gravitytdg.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/gravitytdg.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow" style="background: radial-gradient(circle at top right, rgba(255, 56, 56, 0.08), transparent 60%);"></div>
+    <portfolio-header active-page="gravitytdg.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="uk">← Назад до майстерні</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Ігри й дослідження</span>
+                    <h1>GravityTDG</h1>
+                    <p class="project-lead">Незвична оборона вежами: використовуйте орбітальну фізику та рятувальні промені, щоб рятувати життя.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitytdg&amp;pcampaignid=web_share" class="btn btn-primary">Отримайте його на Google Play</a>
+                    <a href="../gravitytdg-privacy.html" class="btn btn-outline" hreflang="en-US">Політика конфіденційності (англійською)</a>
+                </div>
+                </div>
+                <img src="../assets/GravityTDG/workshop-hero.png" alt="Гра GravityTDG" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Про гру</h2>
+                <p>Більшість ігор Tower Defense просять вас знищити все, що на вас потрапить. Gravity TD просить вас зберегти його. Застряглі космонавти дрейфують у гравітаційний колодязь чорної діри, вмираючої зірки, незвіданої планети. Ви не можете схопити їх, але ви можете зігнути сили навколо них. Розмістіть реактивні поля, щоб підштовхнути їхні орбіти, гальма, щоб зменшити їхню швидкість, і турелі з рятувальним променем, які заряджають щит телепорту, поки не надто пізно.</p>
+                <p>Створена за допомогою libGDX 1.12.1, гра використовує спеціальну чисельну фізику RK4 (Runge-Kutta 4th Order) із фіксованою частотою 60 Гц для розрахунку плавної планетарної гравітації та складних силових полів. Завдяки підтримці складних мультисенсорних жестів камери (панорамування, кут нахилу, масштабування щипками та осьове обертання) гравці можуть безперешкодно переміщатися по космічних аренах.</p>
+
+                <div class="highlight-box">
+                    <p>Основна механіка: кожна хвиля починається з етапу проектування, на якому ви витрачаєте свій енергетичний бюджет і вивчаєте попередній перегляд траєкторії. Потім ви починаєте хвилю та спостерігаєте, як фізика зробить все інше — перетворить спіраль смерті на орбіту порятунку!</p>
+                </div>
+
+                <h2>Галерея</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-42-058_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Початок рівня" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-49-918_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Orbital Rescue Wave" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-58-767_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Знімок екрана 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-52-54-563_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Знімок екрана 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-05-818_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Знімок екрана 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-59-233_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Знімок екрана 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-03-200_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Знімок екрана 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-08-093_com.zandaulion.gravitytdg.jpg" alt="GravityTDG Знімок екрана 8" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Ключові характеристики</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>RK4 Орбітальна фізика</h3>
+                        <p>Високоточний симулятор інтеграції 60 Гц, що моделює реальні оберненоквадратичні гравітаційні колодязі, спрямовані реактивні сили та профілі тангенціального опору.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Тактичні фази</h3>
+                        <p>Сплануйте свій підхід на призупиненій фазі проектування з попереднім переглядом векторної траєкторії в реальному часі, а потім виконайте на фазі відтворення з настроюваною швидкістю часу.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Динамічне репозиціювання</h3>
+                        <p>Коротка фаза зміни положення між хвилями дозволяє переміщати й оптимізувати турелі за менших витрат, адаптуючись до нових векторів входу космонавтів.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Гібридна 3D/2D візуалізація</h3>
+                        <p>Приголомшливі 3D-сфери, відтворені за допомогою буферів Depth Mask, змішаних із накладеннями екранного простору для адитивних корон, кеплерівських смуг і планетарних термінаторів.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Процедурний аудіосинтезатор</h3>
+                        <p>Захоплюючі суббасові лупові звуки та спеціальний синтезований SFX, створений математично за допомогою аудіосистем Python, що відтворюється в монофонічному режимі 22 кГц.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Зоряна прогресія</h3>
+                        <p>Послідовне розблокування рівнів із постійними високими балами та оцінками зірок на основі ваших рятувальних заходів, збережених безпосередньо в налаштуваннях.</p>
+                    </div>
+                </div>
+
+                <h2>Технічні характеристики вежі</h2>
+                <p>Стратегічно витрачайте свій енергетичний бюджет на дві категорії турелей: генератори силового поля, які керують орбітами, і стрілялки з рятувальним променем, які заряджають щити.</p>
+                <div class="table-scroll" role="region" aria-label="Специфікації гри з можливістю прокручування" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>ID вежі</th>
+                            <th>Клас</th>
+                            <th>Підтип</th>
+                            <th>Вартість розміщення</th>
+                            <th>Ефект / Опис</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>струмінь</strong></td>
+                            <td>Поле</td>
+                            <td>Реактивні сили</td>
+                            <td>30 Енергія</td>
+                            <td>Штовхає космонавтів у напрямку турелі. Поверніть на 360° на етапі проектування, щоб вирівняти сили.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>гальмо</strong></td>
+                            <td>Поле</td>
+                            <td>Сила тертя</td>
+                            <td>20 Енергія</td>
+                            <td>Застосовує опір прямо проти вектора швидкості, уповільнюючи цілі на швидких орбітах.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>шутер_сингл</strong></td>
+                            <td>Стрілець</td>
+                            <td>Точковий промінь</td>
+                            <td>40 Енергія</td>
+                            <td>Високоміцний (1,5x) рятувальний промінь фокусувався суворо на одного найближчого космонавта в зоні дії.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>shooter_multi</strong></td>
+                            <td>Стрілець</td>
+                            <td>Зона бризок</td>
+                            <td>60 Енергія</td>
+                            <td>Одночасно заповнює щити всіх космонавтів у зоні дії з меншою індивідуальною швидкістю перезарядки.</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>Довідка космонавта</h2>
+                <p>Різним космонавтам потрібне індивідуальне гравітаційне керування та швидкість заряду залежно від їхнього розміру, швидкості та заряду щита.</p>
+                <div class="table-scroll" role="region" aria-label="Специфікації гри з можливістю прокручування" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Тип</th>
+                            <th>Розмір</th>
+                            <th>Базова швидкість</th>
+                            <th>липкість</th>
+                            <th>Цикли щита</th>
+                            <th>опис</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>cosmonaut_basic</strong></td>
+                            <td>6</td>
+                            <td>1,0x</td>
+                            <td>1.0</td>
+                            <td>1 цикл</td>
+                            <td>Стандартний член екіпажу. Один повний заряд рятує їх миттєво.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>космонавт_швидкий</strong></td>
+                            <td>1</td>
+                            <td>2,0x</td>
+                            <td>14.0</td>
+                            <td>1 цикл</td>
+                            <td>Крихітний і крихкий. Заряджається надзвичайно швидко, але рухається по орбітах з подвоєною швидкістю.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>космонавт_важкий</strong></td>
+                            <td>12</td>
+                            <td>1,0x</td>
+                            <td>0.7</td>
+                            <td>3 цикли</td>
+                            <td>Масивне вантажне судно. Заряджається повільно і має пройти 3 повних цикли заряджання, щоб бути врятованим.</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>Небесні центри та правила</h2>
+                <p>Космічні тіла в центрі поля керують як профілем гравітації, так і правилами, необхідними для успішного порятунку:</p>
+                <div class="features-grid" style="margin-top: 16px;">
+                    <div class="feature-item">
+                        <h3>Чорна діра</h3>
+                        <p>Величезна сила тяжіння. Супроводжується кепларівськими акреційними дисками та релятивістськими струменями. Космонавти рятуються відразу після завершення атаки щита в будь-якому місці арени.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Яскрава зірка</h3>
+                        <p>Палюча корона і сонячні спалахи. Космонавти телепортуються та рятуються миттєво, коли їхній щит повністю заряджається, уникаючи спалення.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Планета</h3>
+                        <p>Має чудові атмосферні градієнти та обмежувачі хмар. Космонавти повинні фізично приземлитися на поверхню планети після того, як їхній щит буде заряджено на 100%, щоб врятуватися.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Космічна станція</h3>
+                        <p>Металевий технологічний форпост. Будь-який космонавт, який фізично контактує з центральною станцією, автоматично зберігається, незалежно від стану заряду його щита.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Продовжуйте відкривати</span><h2 id="related-title">Можливо, вам також сподобається…</h2></div><p><a href="index.html#collection" hreflang="uk">Переглянути всю колекцію ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="uk">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Ігри й дослідження</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>Маленька планета у вашій кишені. Досліджуйте Землю з актуальними астрономічними даними та даними NASA.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="uk">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Щоденні інструменти</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>Стежте за оголошеннями, порівнюйте зміни цін і знаходьте вдалі пропозиції.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="uk">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Щоденні інструменти · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Записуйте артеріальний тиск, стежте за тенденціями й експортуйте історію. Один застосунок для Android і вебу.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

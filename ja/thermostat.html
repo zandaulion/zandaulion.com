@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thermostat - マルチプロパティ温度ロガー、インタラクティブな PWA ダッシュボード、Salus iT500 および Tuya センサー用の Discord ボット。">
+    <title>Thermostat Monitor - プロジェクトの詳細</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ja/thermostat.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/thermostat.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/thermostat.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/thermostat.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/thermostat.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/thermostat.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/thermostat.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/thermostat.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/thermostat.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/thermostat.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/thermostat.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/thermostat.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/thermostat.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/thermostat.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="thermostat.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ja-JP">← 工房に戻る</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">毎日の道具</span>
+                    <h1>Thermostat Monitor</h1>
+                    <p class="project-lead">センサーの履歴と温度グラフで、家の暖かさを確認できます。</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/thermostat" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">GitHubで見る</a>
+                </div>
+                </div>
+                <img src="../assets/Thermostat/feature_graphic.jpg" alt="Thermostat Monitor" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>プロジェクトについて</h2>
+                <p>いくつかの施設にわたる Salus iT500 サーモスタットと Tuya センサーからの温度と暖房リレーのステータスを記録する、フルスタックの IoT 遠隔測定および制御システム。</p>
+<p>運用データを 3 つの方法で表示します。ライブ読み取りとインタラクティブなグラフを備えた応答性の高いプログレッシブ Web アプリ、高速チャット クエリ用の Discord ボット、および自動化された継続的な CSV データ ストアです。</p>
+
+                <h2>ギャラリー</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Thermostat/screenshot_01_dashboard.jpg" alt="ライブ テレメトリ ダッシュボードとマルチプロパティ カード" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_02_multi_location.jpg" alt="複数の場所の比較履歴 (7 日間 • 88,000 データポイント)" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_03_heating_relay.jpg" alt="アクティブな加熱サイクルを使用した 1 年間の履歴テレメトリ" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_04_humidity_tracking.jpg" alt="温度と湿度のモニタリング (スタジオ)" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_05_room_detail.jpg" alt="高精度室温タイムライン（オフィス）" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>機能</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 ライブ PWA ダッシュボード:</strong> プロパティごとのリアルタイムの測定値、インタラクティブな履歴グラフ、温度しきい値のプッシュ通知。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🤖 Discord ボットの統合:</strong> ライブ温度をクエリするには <code>!temp</code>、7 日間の気温傾向を次のようにプロットします。 <code>!plot</code>、生のテレメトリをダウンロードします <code>!data</code>.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔥 視覚暖房オーバーレイ:</strong> 加熱リレーがアクティブな場合は常に、陰影付きのビジュアル オーバーレイを特徴とする matplotlib を介してプロフェッショナルなチャートを生成します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏱️ 自動バックグラウンドロギング:</strong> 周囲温度、目標設定値、リレー状態を 10 分ごとに記録します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🐳 Docker化および自己ホスト型:</strong> Raspberry Pi またはホーム サーバー上で 24 時間年中無休の信頼性を実現するように設計された Docker Compose を使用した、手間のかからないコンテナ化された展開。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌍 タイムゾーンの同期:</strong> すべてのロガー、グラフ、Discord 通知にわたるローカル タイムゾーンの自動調整。</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">もっと発見する</span><h2 id="related-title">こちらもいかがですか</h2></div><p><a href="index.html#collection" hreflang="ja-JP">すべての作品を見る ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">毎日の道具</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>出品を追跡し、価格の変化を比べて、気になるお買い得品を発見。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html" hreflang="ja-JP">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityTDG/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">遊びと探索</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>タワーディフェンスに新しい発想。軌道物理と救助ビームで命を救いましょう。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">日常ツール · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>血圧を記録し、傾向を見て、履歴を書き出せます。AndroidとWebで使えるひとつのアプリ。</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

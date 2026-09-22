@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bitey - 视觉优先的卡路里和宏观跟踪 PWA，由 Gemini 和人机交互部分校准支持。">
+    <title>Bitey - 项目详情</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/zh-cn/plate.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/plate.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/plate.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/plate.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/plate.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/plate.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/plate.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/plate.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/plate.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/plate.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/plate.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/plate.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/plate.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/plate.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="plate.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="zh-CN">← 返回工作坊</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">日常工具</span>
+                    <h1>Bitey</h1>
+                    <p class="project-lead">拍下餐食、调整份量，让 Bitey 帮你记录饮食。</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://plate.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">打开网页应用</a>
+                    <a href="https://github.com/zandaulion/bitey" target="_blank" rel="noopener noreferrer" class="btn btn-outline">在 GitHub 上查看</a>
+                    <a href="../plate-privacy.html" class="btn btn-outline" hreflang="en-US">隐私政策（英文）</a>
+                </div>
+                </div>
+                <img src="../assets/Plate/bitey-hero.png" alt="Bitey 应用程序" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>关于项目</h2>
+                <p>拍摄一顿饭，纠正份量，记录下来。</p>
+<p>Bitey（以前称为 Plate）是卡路里和宏观日志，其主要输入是照片。多模态视觉模型识别盘子上的食物；吃它的人纠正体重。这种分工并不是一种便利——而是整个设计所依赖的核心发现。</p>
+<p>通过对 Nutrition5k 数据集的 145 个盘子和加权地面实况进行基准测试，视觉人工校正被证明可以恢复物理秤大约一半的准确度增益，从而在低日常摩擦和营养精度之间建立理想的平衡。</p>
+
+                <h2>图片集</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Plate/screenshot_06_bitey_suggestions.jpg" alt="Bitey 主动指导和饮食建议" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_01_dashboard.jpg" alt="Bitey 每日仪表板和热量摘要" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_02_meal_log.jpg" alt="视觉食物记录和 Bitey 吉祥物" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_03_trends.jpg" alt="30 天体重和大量营养素趋势" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_04_energy_expenditure.jpg" alt="自适应能量燃烧和称重跟踪器" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/screenshot_05_profile_settings.jpg" alt="用户个人资料和饮食偏好设置" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>功能</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 视觉优先的食物记录：</strong> 拍一张照片，让视觉模型识别食物、分解复合膳食，并立即估计基线营养。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ 经验部分校准：</strong> 透明的三层误差带基于体重是秤测量的、用户肉眼调整的还是模型估计的。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄“不是你吃的东西吗？”重读：</strong> 说明一道菜实际上是什么，从头开始重新分析内存中的照片，而无需拍摄第二张照片。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏷️规定营养验证：</strong> 直接手动输入印刷面板或餐厅菜单，并针对物理上不可能的热量密度进行自动健全性检查。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📊 能量和体重趋势：</strong> 密集、诚实的每日时间序列可视化跟踪由常量营养素能量叠加的热量摄入以及最小二乘支出趋势。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📦 完整的数据所有权和零锁定：</strong> 无门控导出可产生结构化的 JSON、电子表格就绪的 CSV 以及包含每张捕获的膳食照片的独立 ZIP 存档。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🦖 Bitey 营养伴侣：</strong> 一个令人鼓舞的日常伴侣，通过可操作的个性化反馈来庆祝您达到蛋白质和热量目标。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 私人和帐户预算：</strong> 严格的零遥测架构，内置每个帐户每日配额保护，以确保可持续的运营成本。</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">继续发现</span><h2 id="related-title">你可能还会喜欢…</h2></div><p><a href="index.html#collection" hreflang="zh-CN">查看全部作品 ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="magpie.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">日常工具</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>存放零散想法、照片和语音备忘，在它们溜走之前。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="faceslice.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/Faceslice/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">创作工具</div>
+            <h3>Faceslice <span aria-hidden="true">↗</span></h3>
+            <p>一张照片变成三维浮雕，再切分成多层，组成金属人像。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitygarden.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/Gravity Garden/workshop-hero.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">玩乐与探索</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>在宁静的物理解谜游戏中改变重力，让花园生长。</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

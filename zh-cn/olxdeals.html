@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OLX Deal Finder - 跟踪 OLX.ro 列表、检测价格下跌并在自托管移动仪表板上显示交易。">
+    <title>OLX Deal Finder - 项目详情</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/zh-cn/olxdeals.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/olxdeals.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/olxdeals.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/olxdeals.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/olxdeals.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/olxdeals.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/olxdeals.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/olxdeals.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/olxdeals.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/olxdeals.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/olxdeals.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/olxdeals.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/olxdeals.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/olxdeals.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="olxdeals.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="zh-CN">← 返回工作坊</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">日常工具</span>
+                    <h1>OLX Deal Finder</h1>
+                    <p class="project-lead">追踪二手市场信息，对比价格变化，发现值得入手的好物。</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/olx-deal-finder" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">在 GitHub 上查看</a>
+                </div>
+                </div>
+                <img src="../assets/OLX/feature_graphic.jpg" alt="OLX Deal Finder" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>关于项目</h2>
+                <p>在 OLX.ro 上跟踪产品并显示真正优惠的价格 - 在自托管、适合移动设备的仪表板上，您可以直接从手机访问。</p>
+<p>它定期提取配置搜索的列表，将它们与本地 SQLite 数据库进行比较，以检测新列表和价格下跌，标准化货币，并过滤掉噪音和可疑列表。</p>
+
+                <h2>图片集</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/OLX/screenshot_01_deals.jpg" alt="实时优惠信息 — 实时 OLX 发现" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_02_drops.jpg" alt="价格下跌饲料 — 历史跌幅和估值分析" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_03_trends.jpg" alt="市场情报 — 买方市场评分和价格烛台" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_04_finder.jpg" alt="型号键和类别查找器 - 实时查询生成器" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_05_searches.jpg" alt="配置搜索 - 主动跟踪和多组管理" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>功能</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔍 自动抓取和比较：</strong> 使用礼貌的分页请求定期扫描配置的搜索，并将完整的价格历史记录存储在 SQLite 中。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 交易评分和噪音过滤：</strong> 标准化欧元/列伊货币，过滤垃圾和配件，并对列表进行评分以突出特殊交易。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✨ Gemini Flash 的人工智能估值：</strong> 集成的一键式人工智能分析可评估列表是否真实并估算实际市场价值。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📲 双通道通知：</strong> 真实交易通过网络推送到达您的手机；系统故障会默默地向专用 ntfy 通道报告。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 自托管移动仪表板：</strong> 干净、零依赖的 PWA 仪表板，专为在智能手机上实现闪电般的快速浏览而设计。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📦 容器化 Quadlet / Podman：</strong> 生产级 systemd 与 Quadlet 单元集成，实现无需干预的后台执行。</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">继续发现</span><h2 id="related-title">你可能还会喜欢…</h2></div><p><a href="index.html#collection" hreflang="zh-CN">查看全部作品 ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">日常工具·Android+PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>记录血压、查看趋势并导出历史数据。一个应用，适用于 Android 和网页。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="behind">
+          <a href="pwakit.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">幕后工具</div>
+            <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+            <p>帮助网页应用离线运行并保持更新的小小构件。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="zh-CN">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">创作工具</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>把照片变成相互连接的图案，用于金属切割。</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

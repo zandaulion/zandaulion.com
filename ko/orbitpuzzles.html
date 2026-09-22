@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitPuzzles - Android용 중력 시뮬레이션 퍼즐 게임입니다.">
+    <title>OrbitPuzzles - 게임 세부 정보</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ko/orbitpuzzles.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/orbitpuzzles.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/orbitpuzzles.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/orbitpuzzles.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/orbitpuzzles.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/orbitpuzzles.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/orbitpuzzles.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/orbitpuzzles.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/orbitpuzzles.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/orbitpuzzles.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="orbitpuzzles.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ko-KR">← 작업실로 돌아가기</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">놀이와 탐험</span>
+                    <h1>OrbitPuzzles</h1>
+                    <p class="project-lead">궤도 물리 퍼즐로 중력에 대한 직감을 시험해 보세요.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <span class="availability-note">Google Play에서 구매하세요(출시 예정)</span>
+                    <a href="../orbitpuzzles-privacy.html" class="btn btn-outline" hreflang="en-US">개인정보 처리방침 (영어)</a>
+                </div>
+                </div>
+                <img src="../assets/OrbitPuzzles/feature_graphic.jpg" alt="OrbitPuzzles 게임" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>게임 소개</h2>
+                <p>OrbitPuzzles는 플레이어가 행성, 달, 소행성과 같은 천체를 전략적으로 배치하여 궤도 시스템을 설계하는 도전적인 물리 기반 퍼즐 게임입니다. 당신의 목표는 중앙 별과 충돌하거나 시스템을 탈출하지 않고 특정 수의 궤도를 완료하는 등 특정 구성을 달성하는 것입니다.</p>
+                <p>완전히 기본적으로 Kotlin으로 구축된 OrbitPuzzles는 Velocity Verlet 통합 및 Plummer 연화를 사용하여 매우 안정적인 맞춤형 $O(N^2)$ N-바디 시뮬레이터를 제공합니다. DESIGN 단계에서는 시간이 정지되어 신체 위치를 신중하게 조정하고 속도 벡터를 조정할 수 있으며, RUN 단계에서는 궤도 역학이 유지되는지 테스트할 수 있습니다.</p>
+                <p>시각적 경험은 Google Filament 기반 3D 렌더링과 100% Jetpack Compose UI를 결합합니다. 각 천체는 맞춤형 절차적 텍스처링을 사용하여 렌더링되어 대규모 텍스처 파일에 의존하지 않고도 무한히 다양한 행성과 별을 생성하며, 빛나는 궤적과 UI 오버레이는 실시간 원격 측정 및 피드백을 제공합니다.</p>
+
+                <h2>갤러리</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-29-933_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles 레벨 선택" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-37-349_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles 설계 단계" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-41-276_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles 시뮬레이션 실행" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-53-361_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles 스크린샷 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-00-279_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles 스크린샷 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-04-774_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles 스크린샷 6" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>기능</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>맞춤형 물리 엔진:</strong> 장기적인 궤도 안정성을 위해 Velocity Verlet 통합을 활용하고 극한의 근접 충돌을 우아하게 처리하기 위한 Plummer 연화 기능을 갖춘 정밀한 N-바디 시뮬레이션입니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>설계 및 실행 단계:</strong> 계획을 위해 시간을 잠시 멈추는 전술적 접근 방식을 통해 행성 설정, 벡터 힘을 미세 조정하고 시뮬레이션을 시작하기 전에 궤도 퍼즐을 풀 수 있습니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>절차적 3D 행성:</strong> 수학적으로 생성된 등장방형 알베도 맵을 사용한 Google Filament 통합은 앱 설치 공간을 작게 유지하면서 모든 천체가 독특하게 보이도록 보장합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>하이브리드 렌더링:</strong> Jetpack Compose Canvas로 그린 아름답게 계층화된 실시간 2D UI 오버레이 아래 기본 3D 물리 렌더링이 완벽하게 혼합되어 있습니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>프로그레시브 챌린지:</strong> 뚜렷한 예산과 목표를 가지고 다양한 레벨을 탐색하세요. 내부 'OrbitTracker' 시스템은 타원 편심에 관계없이 회전을 정확하게 계산합니다.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">계속 둘러보기</span><h2 id="related-title">이런 작품도 만나보세요</h2></div><p><a href="index.html#collection" hreflang="ko-KR">전체 모음 보기 ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html" hreflang="ko-KR">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityTDG/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">놀이와 탐험</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>새로운 타워 디펜스: 궤도 물리와 구조 광선으로 생명을 구하세요.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="intarzieri.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/Intarzieri/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">일상 도구</div>
+            <h3>Intârzieri Tren <span aria-hidden="true">↗</span></h3>
+            <p>루마니아 열차의 노선과 달라지는 지연 정보를 확인하세요.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="thermostat.html" hreflang="ko-KR">
+            <div class="collection-image"><img src="../assets/Thermostat/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">일상 도구</div>
+            <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+            <p>센서 기록과 온도 그래프로 집 안이 얼마나 따뜻한지 확인하세요.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

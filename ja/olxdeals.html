@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OLX Deal Finder - OLX.ro のリストを追跡し、価格下落を検出し、自己ホスト型モバイル ダッシュボードで取引を表示します。">
+    <title>OLX Deal Finder - プロジェクトの詳細</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ja/olxdeals.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/olxdeals.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/olxdeals.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/olxdeals.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/olxdeals.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/olxdeals.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/olxdeals.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/olxdeals.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/olxdeals.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/olxdeals.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/olxdeals.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/olxdeals.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/olxdeals.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/olxdeals.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="olxdeals.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ja-JP">← 工房に戻る</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">毎日の道具</span>
+                    <h1>OLX Deal Finder</h1>
+                    <p class="project-lead">出品を追跡し、価格の変化を比べて、気になるお買い得品を発見。</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/olx-deal-finder" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">GitHubで見る</a>
+                </div>
+                </div>
+                <img src="../assets/OLX/feature_graphic.jpg" alt="OLX Deal Finder" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>プロジェクトについて</h2>
+                <p>OLX.ro で製品を追跡し、本当にお得なセールを表示します。携帯電話から直接アクセスできる、セルフホスト型のモバイル対応ダッシュボードです。</p>
+<p>設定された検索のリストを定期的に取得し、ローカル SQLite データベースと比較して新しいリストと価格下落を検出し、通貨を正規化し、ノイズや疑わしいリストを除外します。</p>
+
+                <h2>ギャラリー</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/OLX/screenshot_01_deals.jpg" alt="ライブ取引フィード — リアルタイム OLX ディスカバリー" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_02_drops.jpg" alt="価格下落フィード — 過去の下落と評価分析" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_03_trends.jpg" alt="マーケットインテリジェンス — 買い手の市場スコアと価格のローソク足" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_04_finder.jpg" alt="モデルキーとカテゴリファインダー — リアルタイムクエリビルダー" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OLX/screenshot_05_searches.jpg" alt="構成された検索 - アクティブな追跡とマルチグループ管理" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>機能</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔍 自動スクレーパーとディフィング:</strong> 丁寧なページ分割されたリクエストを使用して設定された検索を定期的にスキャンし、完全な価格履歴を SQLite に保存します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 取引スコアリングとノイズフィルター:</strong> EUR/RON 通貨を正規化し、ジャンク品や付属品をフィルタリングし、リストにスコアを付けて例外的な取引を強調します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✨ Gemini Flash による AI 評価:</strong> 統合されたワンクリック AI 分析により、リストが本物かどうかを評価し、現実的な市場価値を推定します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📲 デュアルチャネル通知:</strong> 実際の取引は Web プッシュ経由で携帯電話に届きます。システム障害はプライベート ntfy チャネルにサイレントに報告されます。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 セルフホスト型モバイルダッシュボード:</strong> クリーンで依存性のない PWA ダッシュボードは、スマートフォンでの超高速ブラウジング用に設計されています。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📦 コンテナ化されたQuadlet / Podman:</strong> 生産グレードの systemd と Quadlet ユニットの統合により、ハンズオフのバックグラウンド実行が可能になります。</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">もっと発見する</span><h2 id="related-title">こちらもいかがですか</h2></div><p><a href="index.html#collection" hreflang="ja-JP">すべての作品を見る ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">日常ツール · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>血圧を記録し、傾向を見て、履歴を書き出せます。AndroidとWebで使えるひとつのアプリ。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="behind">
+          <a href="pwakit.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">舞台裏の道具</div>
+            <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+            <p>Webアプリのオフライン動作と更新を支える、小さな部品。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="creative">
+          <a href="kerfloom.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/Kerfloom/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">創作の道具</div>
+            <h3>Kerfloom <span aria-hidden="true">↗</span></h3>
+            <p>写真をつながった模様に変え、金属の切り抜き作品へ。</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

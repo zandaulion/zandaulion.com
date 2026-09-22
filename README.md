@@ -1,5 +1,61 @@
 # Android Developer Portfolio
 
+## Languages
+
+The homepage is available in English (at the original root URL), Arabic (`/ar/`),
+Simplified Chinese (`/zh-cn/`), French (`/fr/`), German (`/de/`), Hindi (`/hi/`),
+Japanese (`/ja/`), Korean (`/ko/`), Brazilian Portuguese (`/pt-br/`), Romanian
+(`/ro/`), Spanish (`/es/`), and Ukrainian (`/uk/`). All 20 project pages, including
+the Sankey editor controls and messages, are available in all 12 languages.
+Privacy notices remain in English at their established URLs.
+
+Edit the shared layout in `templates/home.html` and text in `locales/*.json`.
+Run `python scripts/build_locales.py` to regenerate the 12 static homepages and
+the shared navigation dictionary. Generated pages are committed so GitHub Pages
+needs no additional build service. Each page has its own language, canonical URL,
+and reciprocal `hreflang` links. Catalogs must have exactly the same non-empty keys.
+
+Project translations live in `locales/projects/<language>/`. The same build
+command generates 220 translated project pages from their English sources,
+including text, headings, metadata, image captions, and accessible control labels.
+Shared text comes from the homepage catalogs and each language's `common.json`.
+When source text changes, the build requires its translation to be updated.
+App names, screenshots, and technical identifiers retain their original form.
+Language paths are declared in `scripts/site_locales.py`; project coverage and
+shared UI strings are declared in `scripts/project_locales.py`.
+
+The initial project translation drafts were prepared with Google's translation
+service, then shared wording, gallery controls, and product names were refined.
+The earlier Romanian project translations were retained. Native-speaker editorial
+review remains useful, especially for technical terminology. The optional
+`python scripts/translate_projects.py --fetch [--language ro]` authoring command
+sends only missing public project text for translation. It preserves existing
+catalogs and applies `locales/projects/overrides.json`. Normal builds and the
+deployed site never call a translation service. Translation caches are untracked.
+
+Before publishing, run `python scripts/build_locales.py --check` and
+`python scripts/check_site.py --url http://127.0.0.1:8765`.
+The first check rejects stale generated pages; the second checks all 261 pages.
+
+Language links work without JavaScript. `language.js` remembers an explicit
+language choice and keeps the current project when switching languages. If a
+translation is unavailable, it shows the English project with an explanatory note.
+Direct language URLs always take precedence. On the main entry page only (`/`
+or `/index.html`), the site uses an explicit `?lang=` choice, then a saved language,
+then the first supported browser preference from `navigator.languages`, falling
+back to English. Regional variants match their base language (for example,
+`fr-CA` uses French). English links carry `?lang=en-US` so the choice also works
+when storage is unavailable. Redirects preserve section anchors and other query
+parameters. Project and privacy pages never redirect based on browser language.
+Run `node --test scripts/test_language.cjs` to check selection and redirect behavior.
+Navigation points explicitly to `index.html` so opening the site from disk never
+lands on a folder listing. The language scripts use ordinary deferred scripts,
+which also run under `file://`. Local project links carry the language choice in
+the URL because browsers may isolate local-file storage for each document.
+Arabic uses a right-to-left layout. App names and supplied screenshots retain
+their original branding. These initial translations should receive native-speaker
+editorial review as the site evolves.
+
 ## Workshop redesign
 
 The homepage and project pages now use the workshop presentation in `workshop.css`.

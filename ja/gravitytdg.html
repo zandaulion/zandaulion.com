@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GravityTDG - Android 用の重力ベースの宇宙タワーディフェンス ゲーム。">
+    <title>GravityTDG - ゲーム詳細</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th, .spec-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .spec-table td {
+            color: var(--text-muted);
+        }
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+        .highlight-box {
+            background: rgba(255, 56, 56, 0.05);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0 !important;
+            color: var(--text-main) !important;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        .feature-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        .feature-item:hover {
+            border-color: rgba(255, 56, 56, 0.2);
+            background: var(--bg-card-hover);
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ja/gravitytdg.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/gravitytdg.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/gravitytdg.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/gravitytdg.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/gravitytdg.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/gravitytdg.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/gravitytdg.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/gravitytdg.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/gravitytdg.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/gravitytdg.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/gravitytdg.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/gravitytdg.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/gravitytdg.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/gravitytdg.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow" style="background: radial-gradient(circle at top right, rgba(255, 56, 56, 0.08), transparent 60%);"></div>
+    <portfolio-header active-page="gravitytdg.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ja-JP">← 工房に戻る</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">遊びと探索</span>
+                    <h1>GravityTDG</h1>
+                    <p class="project-lead">タワーディフェンスに新しい発想。軌道物理と救助ビームで命を救いましょう。</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitytdg&amp;pcampaignid=web_share" class="btn btn-primary">Google Play で入手</a>
+                    <a href="../gravitytdg-privacy.html" class="btn btn-outline" hreflang="en-US">プライバシーポリシー（英語）</a>
+                </div>
+                </div>
+                <img src="../assets/GravityTDG/workshop-hero.png" alt="GravityTDG ゲーム" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>ゲームについて</h2>
+                <p>ほとんどのタワーディフェンス ゲームでは、向かってくるものは何でも破壊する必要があります。 Gravity TD はそれを保存するように求めます。取り残された宇宙飛行士は、ブラックホール、瀕死の星、未知の惑星の重力井戸に漂流しています。それらを掴むことはできませんが、周囲の力を曲げることはできます。ジェットフィールドを配置して軌道を微調整し、ブレーキをかけて速度を落とし、手遅れになる前にテレポートシールドに突撃するレスキュービームタレットを配置します。</p>
+                <p>libGDX 1.12.1 で構築されたこのゲームは、60 Hz の固定周波数でのカスタム RK4 (ルンゲ クッタ 4 次) 数値物理学を利用して、滑らかな惑星の重力と複雑な力場を計算します。洗練されたマルチタッチ カメラ ジェスチャ (パン、ピッチ チルト、ピンチでズーム、軸回転) のサポートにより、プレイヤーはスペース アリーナをシームレスにナビゲートできます。</p>
+
+                <div class="highlight-box">
+                    <p>コアメカニック: すべてのウェーブは、エネルギー予算を費やして軌道プレビューを研究する設計段階から始まります。次に、ウェーブを開始し、物理学が残りの作業を行うのを観察します。つまり、死のスパイラルが救助軌道に変わります。</p>
+                </div>
+
+                <h2>ギャラリー</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-42-058_com.zandaulion.gravitytdg.jpg" alt="GravityTDG レベルスタート" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-49-918_com.zandaulion.gravitytdg.jpg" alt="GravityTDG オービタルレスキューウェーブ" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-58-767_com.zandaulion.gravitytdg.jpg" alt="GravityTDG スクリーンショット 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-52-54-563_com.zandaulion.gravitytdg.jpg" alt="GravityTDG スクリーンショット 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-05-818_com.zandaulion.gravitytdg.jpg" alt="GravityTDG スクリーンショット 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-59-233_com.zandaulion.gravitytdg.jpg" alt="GravityTDG スクリーンショット 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-03-200_com.zandaulion.gravitytdg.jpg" alt="GravityTDG スクリーンショット 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-08-093_com.zandaulion.gravitytdg.jpg" alt="GravityTDG スクリーンショット 8" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>主な特長</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>RK4 軌道物理学</h3>
+                        <p>実際の逆二乗重力井戸、方向性ジェット力、および接線抗力プロファイルをモデリングする高精度 60Hz 統合シミュレーター。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>戦術フェーズ</h3>
+                        <p>一時停止した設計フェーズでリアルタイムのベクトル軌跡プレビューを使用してアプローチを計画し、再生フェーズでカスタマイズ可能な時間速度で実行します。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>動的な再配置</h3>
+                        <p>波間の短い再位置フェーズにより、コストを削減して砲塔を再配置および最適化し、新しい宇宙飛行士の進入ベクトルに適応できます。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>ハイブリッド 3D/2D ビジュアル</h3>
+                        <p>深度マスク バッファーを使用してレンダリングされた見事な 3D 球体は、加法的なグロー コロナ、ケプラー バンド、惑星ターミネーターのスクリーン スペース オーバーレイと混合されています。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>プロシージャルオーディオシンセ</h3>
+                        <p>没入型のサブベース ループ ドローンと Python オーディオ エンジンから数学的に生成されたカスタム合成 SFX が 22kHz モノラルで再生されます。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>スターの進歩</h3>
+                        <p>環境設定に直接保存された救助パフォーマンスに基づいて、永続的な高スコアと星評価でレベルを順次ロック解除します。</p>
+                    </div>
+                </div>
+
+                <h2>タレット仕様</h2>
+                <p>エネルギー予算を 2 つのカテゴリのタレットに戦略的に費やします。軌道を操縦するフォース フィールド ジェネレーターと、シールドを充電するレスキュー ビーム シューターです。</p>
+                <div class="table-scroll" role="region" aria-label="スクロールゲーム仕様" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>タレットID</th>
+                            <th>クラス</th>
+                            <th>サブタイプ</th>
+                            <th>配置コスト</th>
+                            <th>効果・説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ジェット</strong></td>
+                            <td>フィールド</td>
+                            <td>ジェットフォース</td>
+                            <td>30 エネルギー</td>
+                            <td>宇宙飛行士を砲塔の向いている方向に押し出します。設計段階で 360° 回転して力を調整します。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ブレーキ</strong></td>
+                            <td>フィールド</td>
+                            <td>摩擦抵抗</td>
+                            <td>20 エネルギー</td>
+                            <td>速度ベクトルに直接反対する抗力を適用し、高速で周回するターゲットの速度を低下させます。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>シューターシングル</strong></td>
+                            <td>シューター</td>
+                            <td>ポイントビーム</td>
+                            <td>40 エネルギー</td>
+                            <td>高強度 (1.5 倍) の救難ビームは、射程内に最も近い 1 人の宇宙飛行士に厳密に焦点を合わせました。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>シューターマルチ</strong></td>
+                            <td>シューター</td>
+                            <td>スプラッシュエリア</td>
+                            <td>60 エネルギー</td>
+                            <td>範囲内のすべての宇宙飛行士のシールドを同時に満たしますが、個々のリチャージ率は低くなります。</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>宇宙飛行士のリファレンス</h2>
+                <p>さまざまな宇宙飛行士は、そのサイズ、速度、およびシールドの装填に基づいて、調整された重力処理と突撃速度を必要とします。</p>
+                <div class="table-scroll" role="region" aria-label="スクロールゲーム仕様" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>種類</th>
+                            <th>サイズ</th>
+                            <th>基本速度</th>
+                            <th>べたつき</th>
+                            <th>シールドサイクル</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>宇宙飛行士_基本</strong></td>
+                            <td>6</td>
+                            <td>1.0倍</td>
+                            <td>1.0</td>
+                            <td>1サイクル</td>
+                            <td>標準的な乗組員。 1 回のフル充電で即座に救出できます。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>宇宙飛行士_高速</strong></td>
+                            <td>1</td>
+                            <td>2.0倍</td>
+                            <td>14.0</td>
+                            <td>1サイクル</td>
+                            <td>小さくて壊れやすい。充電速度は非常に速いですが、軌道上では 2 倍の速度で移動します。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>宇宙飛行士_ヘビー</strong></td>
+                            <td>12</td>
+                            <td>1.0倍</td>
+                            <td>0.7</td>
+                            <td>3サイクル</td>
+                            <td>巨大な貨物船。充電が遅いため、救出するには 3 回の完全な充電サイクルを実行する必要があります。</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>天体のセンターとルール</h2>
+                <p>フィールドの中心にある宇宙体は、重力プロファイルと救助を成功させるために必要な規則の両方を制御します。</p>
+                <div class="features-grid" style="margin-top: 16px;">
+                    <div class="feature-item">
+                        <h3>ブラックホール</h3>
+                        <p>巨大な重力。ケプラリアン降着円盤と相対論的ジェットを伴います。宇宙飛行士は、アリーナのどこかでシールドチャージを完了するとすぐに救われます。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>ブライトスター</h3>
+                        <p>灼熱のコロナと太陽フレア。宇宙飛行士はテレポートし、シールドが完全に充電されると即座に救出され、焼却を回避します。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>惑星</h3>
+                        <p>美しい大気のグラデーションと雲のターミネーターが特徴です。宇宙飛行士は、シールドが 100% 充電された後、物理的に地球の表面に着陸しなければ救われません。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>宇宙ステーション</h3>
+                        <p>メタリックな技術の前哨基地。センターステーションに物理的に接触した宇宙飛行士は、シールドの充電ステータスに関係なく、自動的に保存されます。</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">もっと発見する</span><h2 id="related-title">こちらもいかがですか</h2></div><p><a href="index.html#collection" hreflang="ja-JP">すべての作品を見る ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">遊びと探索</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>ポケットに小さな惑星を。最新の天文情報とNASAのデータで地球を探索。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">毎日の道具</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>出品を追跡し、価格の変化を比べて、気になるお買い得品を発見。</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="ja-JP">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">日常ツール · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>血圧を記録し、傾向を見て、履歴を書き出せます。AndroidとWebで使えるひとつのアプリ。</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

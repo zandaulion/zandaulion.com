@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de-DE" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thermostat – Temperaturlogger für mehrere Objekte, interaktives PWA-Dashboard und Discord-Bot für Salus iT500- und Tuya-Sensoren.">
+    <title>Thermostat Monitor – Projektdetails</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/de/thermostat.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/thermostat.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/thermostat.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/thermostat.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/thermostat.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/thermostat.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/thermostat.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/thermostat.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/thermostat.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/thermostat.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/thermostat.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/thermostat.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/thermostat.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/thermostat.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="thermostat.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="de-DE">← Zurück zur Werkstatt</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Alltagshelfer</span>
+                    <h1>Thermostat Monitor</h1>
+                    <p class="project-lead">Sieh, wie warm es zu Hause ist – mit Sensorverlauf und Temperaturdiagrammen.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/thermostat" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Auf GitHub ansehen</a>
+                </div>
+                </div>
+                <img src="../assets/Thermostat/feature_graphic.jpg" alt="Thermostat Monitor" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>Über das Projekt</h2>
+                <p>Ein umfassendes IoT-Telemetrie- und Steuerungssystem, das den Temperatur- und Heizungsrelaisstatus von Salus iT500-Thermostaten und Tuya-Sensoren in mehreren Immobilien protokolliert.</p>
+<p>Zeigt Betriebsdaten auf drei Arten an: eine reaktionsfähige Progressive Web App mit Live-Messwerten und interaktiven Diagrammen, einen Discord-Bot für schnelle Chat-Anfragen und einen automatisierten kontinuierlichen CSV-Datenspeicher.</p>
+
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Thermostat/screenshot_01_dashboard.jpg" alt="Live-Telemetrie-Dashboard und Multi-Property-Karten" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_02_multi_location.jpg" alt="Vergleichsverlauf mehrerer Standorte (7 Tage • 88.000 Datenpunkte)" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_03_heating_relay.jpg" alt="1 Jahr historische Telemetrie mit aktiven Heizzyklen" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_04_humidity_tracking.jpg" alt="Überwachung von Temperatur und Luftfeuchtigkeit (Studio)" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Thermostat/screenshot_05_room_detail.jpg" alt="Hochpräzise Raumtemperatur-Zeitleiste (Büro)" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Funktionen</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Live-PWA-Dashboard:</strong> Echtzeit-Messwerte pro Objekt, interaktive historische Diagramme und Push-Benachrichtigungen für Temperaturschwellenwerte.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🤖 Discord Bot-Integration:</strong> Live-Temperaturen abfragen mit <code>!temp</code>, zeichnen Sie 7-Tage-Temperaturtrends mit auf <code>!plot</code>, und laden Sie rohe Telemetrie mit herunter <code>!data</code>.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔥 Visuelle Heizüberlagerungen:</strong> Erzeugt über Matplotlib professionelle Diagramme mit schattierten visuellen Überlagerungen, wenn Heizrelais aktiv sind.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏱️ Automatisierte Hintergrundprotokollierung:</strong> Zeichnet alle 10 Minuten Umgebungstemperatur, Zielsollwerte und Relaiszustände auf.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🐳 Dockerisiert und selbstgehostet:</strong> Problemlose Containerbereitstellung mit Docker Compose, konzipiert für Zuverlässigkeit rund um die Uhr auf Raspberry Pi oder Heimservern.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌍 Zeitzone synchronisiert:</strong> Automatische lokale Zeitzonenausrichtung für alle Logger, Diagramme und Discord-Benachrichtigungen.</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">Weiter auf Entdeckungsreise</span><h2 id="related-title">Das könnte dir auch gefallen…</h2></div><p><a href="index.html#collection" hreflang="de-DE">Die ganze Sammlung ansehen ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Alltagshelfer</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>Beobachte Kleinanzeigen, vergleiche Preisänderungen und entdecke gute Angebote.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html" hreflang="de-DE">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityTDG/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Spielen und entdecken</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>Eine andere Art von Tower Defense: Nutze Orbitalphysik und Rettungsstrahlen, um Leben zu retten.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="de-DE">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Alltagswerkzeuge · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>Erfasse Blutdruckwerte, verfolge Entwicklungen und exportiere deinen Verlauf. Eine App für Android und das Web.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const locale = window.ZandaulionLocales.find(item => item.lang === document.documentElement.lang);
+    const t = text => locale.sankey[text] || text;
+    const html = text => String(text).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('"', '&quot;');
     // State (Load from localStorage if exists)
     let nodes = JSON.parse(localStorage.getItem('sankey_nodes')) || [];
     let links = JSON.parse(localStorage.getItem('sankey_links')) || [];
@@ -145,8 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderUI() {
         // Render Nodes List
         nodesList.innerHTML = '';
-        linkSourceSelect.innerHTML = '<option value="" disabled selected>Source Node</option>';
-        linkTargetSelect.innerHTML = '<option value="" disabled selected>Target Node</option>';
+        linkSourceSelect.innerHTML = `<option value="" disabled selected>${html(t('Source Node'))}</option>`;
+        linkTargetSelect.innerHTML = `<option value="" disabled selected>${html(t('Target Node'))}</option>`;
 
         nodes.forEach((node, index) => {
             // Add to list
@@ -159,11 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
             li.innerHTML = `
                 <div style="display: flex; align-items: center;">
                     <span class="color-indicator" style="${colorIndicatorStyle}"></span>
-                    ${node.name}
+                    ${html(node.name)}
                 </div>
                 <div>
-                    <button class="edit-node-btn" data-index="${index}" style="background:none; border:none; color:var(--text-muted); cursor:pointer; margin-right:8px; font-size:1.1rem;" title="Edit Node">&#9998;</button>
-                    <button class="delete-btn" data-index="${index}" title="Remove Node">&times;</button>
+                    <button class="edit-node-btn" data-index="${index}" style="background:none; border:none; color:var(--text-muted); cursor:pointer; margin-right:8px; font-size:1.1rem;" title="${html(t('Edit Node'))}">&#9998;</button>
+                    <button class="delete-btn" data-index="${index}" title="${html(t('Remove Node'))}">&times;</button>
                 </div>
             `;
             nodesList.appendChild(li);
@@ -186,11 +189,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const li = document.createElement('li');
             li.innerHTML = `
                 <div>
-                    <strong>${link.source}</strong> &rarr; <strong>${link.target}</strong> (${link.value})
+                    <strong>${html(link.source)}</strong> &rarr; <strong>${html(link.target)}</strong> (${link.value})
                 </div>
                 <div>
-                    <button class="edit-link-btn" data-index="${index}" style="background:none; border:none; color:var(--text-muted); cursor:pointer; margin-right:8px; font-size:1.1rem;" title="Edit Link">&#9998;</button>
-                    <button class="delete-btn" data-index="${index}" title="Remove Link">&times;</button>
+                    <button class="edit-link-btn" data-index="${index}" style="background:none; border:none; color:var(--text-muted); cursor:pointer; margin-right:8px; font-size:1.1rem;" title="${html(t('Edit Link'))}">&#9998;</button>
+                    <button class="delete-btn" data-index="${index}" title="${html(t('Remove Link'))}">&times;</button>
                 </div>
             `;
             linksList.appendChild(li);
@@ -209,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const oldName = nodes[editingNodeIndex].name;
             // Check if renaming to something that already exists elsewhere
             if (oldName !== name && nodes.find(n => n.name === name)) {
-                alert('Node name already exists!');
+                alert(t('Node name already exists!'));
                 return;
             }
             
@@ -229,11 +232,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             editingNodeIndex = null;
-            addNodeBtn.textContent = 'Add Node';
+            addNodeBtn.textContent = t('Add Node');
         } else {
             // Add mode
             if (nodes.find(n => n.name === name)) {
-                alert('Node already exists!');
+                alert(t('Node already exists!'));
                 return;
             }
 
@@ -257,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
             links = links.filter(l => l.source !== nodeName && l.target !== nodeName);
             if (editingNodeIndex === index) {
                 editingNodeIndex = null;
-                addNodeBtn.textContent = 'Add Node';
+                addNodeBtn.textContent = t('Add Node');
                 nodeNameInput.value = '';
             }
             updateChart();
@@ -273,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 autoColorCheck.checked = true;
                 nodeColorInput.disabled = true;
             }
-            addNodeBtn.textContent = 'Update';
+            addNodeBtn.textContent = t('Update');
             nodeNameInput.focus();
         }
     });
@@ -285,11 +288,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const value = parseFloat(linkValueInput.value);
 
         if (!source || !target || isNaN(value)) {
-            alert('Please fill out source, target, and value.');
+            alert(t('Please fill out source, target, and value.'));
             return;
         }
         if (source === target) {
-            alert('Source and target cannot be the same node.');
+            alert(t('Source and target cannot be the same node.'));
             return;
         }
 
@@ -297,12 +300,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update mode
             const existingLinkIndex = links.findIndex(l => l.source === source && l.target === target);
             if (existingLinkIndex >= 0 && existingLinkIndex !== editingLinkIndex) {
-                alert('This link already exists. Please edit the existing one or choose a different source/target.');
+                alert(t('This link already exists. Please edit the existing one or choose a different source/target.'));
                 return;
             }
             links[editingLinkIndex] = { source, target, value };
             editingLinkIndex = null;
-            addLinkBtn.textContent = 'Add Link';
+            addLinkBtn.textContent = t('Add Link');
         } else {
             // Add mode
             const existingLinkIndex = links.findIndex(l => l.source === source && l.target === target);
@@ -324,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
             links.splice(index, 1);
             if (editingLinkIndex === index) {
                 editingLinkIndex = null;
-                addLinkBtn.textContent = 'Add Link';
+                addLinkBtn.textContent = t('Add Link');
                 linkValueInput.value = '';
             }
             updateChart();
@@ -334,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
             linkSourceSelect.value = link.source;
             linkTargetSelect.value = link.target;
             linkValueInput.value = link.value;
-            addLinkBtn.textContent = 'Update';
+            addLinkBtn.textContent = t('Update');
             linkValueInput.focus();
         }
     });
@@ -387,12 +390,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     nodes = data.nodes;
                     links = data.links;
                     updateChart();
-                    alert('Sankey diagram imported successfully!');
+                    alert(t('Sankey diagram imported successfully!'));
                 } else {
-                    alert('Invalid JSON format. Expected { nodes: [], links: [] }');
+                    alert(t('Invalid JSON format. Expected { nodes: [], links: [] }'));
                 }
             } catch (err) {
-                alert('Error parsing JSON file.');
+                alert(t('Error parsing JSON file.'));
             }
         };
         reader.readAsText(file);
@@ -404,18 +407,18 @@ document.addEventListener('DOMContentLoaded', () => {
     btnReset.addEventListener('click', () => {
         if (nodes.length === 0 && links.length === 0) return; // Nothing to reset
 
-        const wantToSave = confirm('Would you like to export your work to JSON before resetting?');
+        const wantToSave = confirm(t('Would you like to export your work to JSON before resetting?'));
         if (wantToSave) {
             btnExportJson.click();
             setTimeout(() => {
-                if (confirm('Data exported! Are you sure you want to completely clear the diagram now?')) {
+                if (confirm(t('Data exported! Are you sure you want to completely clear the diagram now?'))) {
                     nodes = [];
                     links = [];
                     updateChart();
                 }
             }, 500);
         } else {
-            if (confirm('Are you sure you want to completely reset the diagram? This cannot be undone.')) {
+            if (confirm(t('Are you sure you want to completely reset the diagram? This cannot be undone.'))) {
                 nodes = [];
                 links = [];
                 updateChart();

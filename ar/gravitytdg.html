@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="light" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GravityTDG - لعبة برج الدفاع عن الفضاء تعتمد على الجاذبية لنظام Android.">
+    <title>GravityTDG - تفاصيل اللعبة</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th, .spec-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spec-table th {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .spec-table td {
+            color: var(--text-muted);
+        }
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+        .highlight-box {
+            background: rgba(255, 56, 56, 0.05);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0 !important;
+            color: var(--text-main) !important;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        .feature-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        .feature-item:hover {
+            border-color: rgba(255, 56, 56, 0.2);
+            background: var(--bg-card-hover);
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ar/gravitytdg.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/gravitytdg.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/gravitytdg.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/gravitytdg.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/gravitytdg.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/gravitytdg.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/gravitytdg.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/gravitytdg.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/gravitytdg.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/gravitytdg.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/gravitytdg.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/gravitytdg.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/gravitytdg.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/gravitytdg.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow" style="background: radial-gradient(circle at top right, rgba(255, 56, 56, 0.08), transparent 60%);"></div>
+    <portfolio-header active-page="gravitytdg.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ar">← العودة إلى الورشة</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">اللعب والاستكشاف</span>
+                    <h1>GravityTDG</h1>
+                    <p class="project-lead">فكرة مختلفة للدفاع بالأبراج: استخدم الفيزياء المدارية وأشعة الإنقاذ لإنقاذ الأرواح.</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.zandaulion.gravitytdg&amp;pcampaignid=web_share" class="btn btn-primary">احصل عليه على Google Play</a>
+                    <a href="../gravitytdg-privacy.html" class="btn btn-outline" hreflang="en-US">سياسة الخصوصية (بالإنجليزية)</a>
+                </div>
+                </div>
+                <img src="../assets/GravityTDG/workshop-hero.png" alt="لعبة GravityTDG" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>عن اللعبة</h2>
+                <p>تطلب منك معظم ألعاب الدفاع عن الأبراج تدمير كل ما يأتي إليك. يطلب منك Gravity TD حفظه. ينجرف رواد الفضاء الذين تقطعت بهم السبل إلى بئر الجاذبية لثقب أسود، أو نجم يحتضر، أو كوكب مجهول. لا يمكنك الإمساك بهم، ولكن يمكنك ثني القوى المحيطة بهم. ضع الحقول النفاثة لدفع مداراتها، والفرامل لتقليل سرعتها، وأبراج شعاع الإنقاذ التي تشحن درع النقل الآني قبل فوات الأوان.</p>
+                <p>تم تصميم اللعبة باستخدام libGDX 1.12.1، وهي تستفيد من الفيزياء العددية RK4 (Runge-Kutta 4th Order) المخصصة بتردد ثابت 60 هرتز لحساب الجاذبية الكوكبية الناعمة ومجالات القوة المعقدة. من خلال دعم إيماءات الكاميرا المتطورة متعددة اللمس (التحريك وإمالة الملعب والضغط للتكبير والتدوير المحوري)، يمكن للاعبين التنقل في ساحات الفضاء بسلاسة.</p>
+
+                <div class="highlight-box">
+                    <p>الميكانيكية الأساسية: تبدأ كل موجة بمرحلة تصميم حيث تنفق ميزانية الطاقة الخاصة بك وتدرس معاينات المسار. ثم تبدأ الموجة وتشاهد الفيزياء تقوم بالباقي، وتحول دوامة الموت إلى مدار إنقاذ!</p>
+                </div>
+
+                <h2>معرض الصور</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-42-058_com.zandaulion.gravitytdg.jpg" alt="بداية المستوى GravityTDG" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-49-918_com.zandaulion.gravitytdg.jpg" alt="GravityTDG موجة الإنقاذ المدارية" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-51-58-767_com.zandaulion.gravitytdg.jpg" alt="لقطة الشاشة GravityTDG 3" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-52-54-563_com.zandaulion.gravitytdg.jpg" alt="لقطة الشاشة GravityTDG 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-05-818_com.zandaulion.gravitytdg.jpg" alt="لقطة الشاشة GravityTDG 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-53-59-233_com.zandaulion.gravitytdg.jpg" alt="لقطة الشاشة GravityTDG 6" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-03-200_com.zandaulion.gravitytdg.jpg" alt="لقطة الشاشة GravityTDG 7" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/GravityTDG/Screenshot_2026-08-06-15-54-08-093_com.zandaulion.gravitytdg.jpg" alt="لقطة الشاشة GravityTDG 8" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>الميزات الرئيسية</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>RK4 الفيزياء المدارية</h3>
+                        <p>محاكاة تكامل عالية الدقة 60 هرتز تعمل على نمذجة آبار الجاذبية ذات المربع العكسي الحقيقي، والقوى النفاثة الاتجاهية، وملفات تعريف السحب العرضية.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>المراحل التكتيكية</h3>
+                        <p>خطط لأسلوبك في مرحلة التصميم المتوقفة مؤقتًا من خلال معاينات مسار المتجهات في الوقت الفعلي، ثم نفذها في مرحلة التشغيل بسرعات زمنية قابلة للتخصيص.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>إعادة التموضع الديناميكي</h3>
+                        <p>تسمح لك مرحلة إعادة التموضع الموجزة بين الموجات بنقل الأبراج وتحسينها بتكلفة منخفضة، والتكيف مع متجهات دخول رواد الفضاء الجدد.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>مرئيات هجينة ثلاثية الأبعاد/ثنائية الأبعاد</h3>
+                        <p>مجالات مذهلة ثلاثية الأبعاد تم تقديمها باستخدام مخازن قناع العمق المؤقتة، ممزوجة بتراكبات مساحة الشاشة لإكليل التوهج الإضافي، ونطاقات كيبلر، وإنهاء الكواكب.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>توليف الصوت الإجرائي</h3>
+                        <p>طائرات بدون طيار غامرة ذات صوت جهير فرعي ومؤثرات صوتية مُركبة خصيصًا تم إنشاؤها رياضيًا من محركات صوت Python، ويتم تشغيلها بسرعة 22 كيلو هرتز أحادية.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>تقدم النجوم</h3>
+                        <p>فتح المستويات بشكل تسلسلي مع درجات عالية مستمرة وتصنيفات نجوم بناءً على أداء الإنقاذ الخاص بك، ويتم حفظه مباشرةً في التفضيلات.</p>
+                    </div>
+                </div>
+
+                <h2>مواصفات البرج</h2>
+                <p>أنفق ميزانية الطاقة الخاصة بك بشكل استراتيجي على فئتين من الأبراج: مولدات مجال القوة التي توجه المدارات، ورماة شعاع الإنقاذ الذين يشحنون الدروع.</p>
+                <div class="table-scroll" role="region" aria-label="مواصفات اللعبة القابلة للتمرير" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>معرف البرج</th>
+                            <th>فئة</th>
+                            <th>النوع الفرعي</th>
+                            <th>تكلفة التنسيب</th>
+                            <th>التأثير / الوصف</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>طائرة</strong></td>
+                            <td>الميدان</td>
+                            <td>القوة النفاثة</td>
+                            <td>30 طاقة</td>
+                            <td>يدفع رواد الفضاء في اتجاه البرج المواجه. قم بالتدوير 360 درجة في مرحلة التصميم لمحاذاة القوى.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الفرامل</strong></td>
+                            <td>الميدان</td>
+                            <td>سحب الاحتكاك</td>
+                            <td>20 الطاقة</td>
+                            <td>يتم تطبيق السحب بشكل معاكس لمتجه السرعة بشكل مباشر، مما يؤدي إلى إبطاء الأهداف التي تدور بسرعة.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>shooter_single</strong></td>
+                            <td>مطلق النار</td>
+                            <td>شعاع النقطة</td>
+                            <td>40 طاقة</td>
+                            <td>شعاع الإنقاذ عالي القوة (1.5x) يركز بشكل صارم على أقرب رائد فضاء في النطاق.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>shooter_multi</strong></td>
+                            <td>مطلق النار</td>
+                            <td>منطقة سبلاش</td>
+                            <td>60 طاقة</td>
+                            <td>يملأ دروع جميع رواد الفضاء ضمن النطاق في وقت واحد، مع معدل إعادة شحن فردي أقل.</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>مرجع رائد الفضاء</h2>
+                <p>يحتاج رواد الفضاء المختلفون إلى التعامل مع الجاذبية وسرعات الشحن وفقًا لحجمهم وسرعتهم وشحنات درعهم.</p>
+                <div class="table-scroll" role="region" aria-label="مواصفات اللعبة القابلة للتمرير" tabindex="0"><table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>اكتب</th>
+                            <th>الحجم</th>
+                            <th>السرعة الأساسية</th>
+                            <th>اللزوجة</th>
+                            <th>دورات الدرع</th>
+                            <th>الوصف</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Cosmonaut_basic</strong></td>
+                            <td>6</td>
+                            <td>1.0x</td>
+                            <td>1.0</td>
+                            <td>1 دورة</td>
+                            <td>عضو الطاقم القياسي. شحنة واحدة كاملة تنقذهم على الفور.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>رائد الفضاء_سريع</strong></td>
+                            <td>1</td>
+                            <td>2.0x</td>
+                            <td>14.0</td>
+                            <td>1 دورة</td>
+                            <td>صغيرة وهشة. يتم شحنه بسرعة كبيرة، ولكنه يتحرك بسرعة مضاعفة عبر المدارات.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cosmonaut_heavy</strong></td>
+                            <td>12</td>
+                            <td>1.0x</td>
+                            <td>0.7</td>
+                            <td>3 دورات</td>
+                            <td>سفينة شحن ضخمة. يتم الشحن ببطء ويجب أن يخضع لـ 3 دورات شحن كاملة ليتم إنقاذه.</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <h2>المراكز والقواعد السماوية</h2>
+                <p>تتحكم الأجسام الكونية الموجودة في مركز الحقل في كل من ملفات الجاذبية والقواعد المطلوبة لإنجاز عملية إنقاذ ناجحة:</p>
+                <div class="features-grid" style="margin-top: 16px;">
+                    <div class="feature-item">
+                        <h3>الثقب الأسود</h3>
+                        <p>سحب الجاذبية الهائلة. مصحوبة بأقراص التراكم الكيبلارية والنفاثات النسبية. يتم إنقاذ رواد الفضاء فور الانتهاء من شحن درعهم في أي مكان في الساحة.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>النجم الساطع</h3>
+                        <p>الهالة الحارقة والتوهجات الشمسية. ينتقل رواد الفضاء فوريًا ويتم حفظهم على الفور عندما يكون درعهم مشحونًا بالكامل، لتجنب الحرق.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>كوكب</h3>
+                        <p>يتميز بتدرجات جوية جميلة وإنهاء سحابي. يجب أن يهبط رواد الفضاء فعليًا على سطح الكوكب بعد شحن درعهم بنسبة 100% ليتم إنقاذهم.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>محطة الفضاء</h3>
+                        <p>البؤرة التكنولوجية المعدنية. يتم تلقائيًا حفظ أي رائد فضاء يتصل فعليًا بالمحطة المركزية، بغض النظر عن حالة شحن الدرع الخاص به.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">واصل الاكتشاف</span><h2 id="related-title">قد يعجبك أيضًا…</h2></div><p><a href="index.html#collection" hreflang="ar">استعرض المجموعة كاملة ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="palebluedot.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/PaleBlueDot/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">اللعب والاستكشاف</div>
+            <h3>Pale Blue Dot <span aria-hidden="true">↗</span></h3>
+            <p>كوكب صغير في جيبك. استكشف الأرض ببيانات فلكية محدثة وبيانات ناسا.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="olxdeals.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/OLX/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">أدوات يومية</div>
+            <h3>OLX Deal Finder <span aria-hidden="true">↗</span></h3>
+            <p>تابع إعلانات السوق وقارن تغيرات الأسعار والتقط عرضًا واعدًا.</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="bpdigitizer.html" hreflang="ar">
+            <div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">الأدوات اليومية · Android + PWA</div>
+            <h3>BP Digitizer <span aria-hidden="true">↗</span></h3>
+            <p>سجّل قراءات ضغط الدم، وتابع الاتجاهات، وصدّر سجلك. تطبيق واحد لأندرويد والويب.</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

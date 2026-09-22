@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hi-IN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitPuzzles - एंड्रॉइड के लिए एक गुरुत्वाकर्षण-सिमुलेशन पहेली गेम।">
+    <title>OrbitPuzzles - गेम विवरण</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/hi/orbitpuzzles.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/orbitpuzzles.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/orbitpuzzles.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/orbitpuzzles.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/orbitpuzzles.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/orbitpuzzles.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/orbitpuzzles.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/orbitpuzzles.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/orbitpuzzles.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/orbitpuzzles.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/orbitpuzzles.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="orbitpuzzles.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="hi-IN">← कार्यशाला में वापस जाएँ</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">खेल और खोज</span>
+                    <h1>OrbitPuzzles</h1>
+                    <p class="project-lead">कक्षीय भौतिकी की पहेलियों से गुरुत्व के बारे में अपनी सहज समझ परखें।</p>
+                    <div class="project-links" style="margin-bottom: 32px;">
+                    <span class="availability-note">इसे Google Play पर प्राप्त करें (जल्द ही आ रहा है)</span>
+                    <a href="../orbitpuzzles-privacy.html" class="btn btn-outline" hreflang="en-US">गोपनीयता नीति (अंग्रेज़ी में)</a>
+                </div>
+                </div>
+                <img src="../assets/OrbitPuzzles/feature_graphic.jpg" alt="OrbitPuzzles गेम" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>खेल के बारे में</h2>
+                <p>OrbitPuzzles एक चुनौतीपूर्ण भौतिकी-आधारित पहेली खेल है जहां खिलाड़ी ग्रहों, चंद्रमाओं और क्षुद्रग्रहों जैसे खगोलीय पिंडों को रणनीतिक रूप से रखकर कक्षीय प्रणाली डिजाइन करते हैं। आपका लक्ष्य विशिष्ट विन्यास प्राप्त करना है, जैसे कि केंद्रीय तारे से टकराए बिना या सिस्टम से बाहर निकले बिना एक निश्चित संख्या में कक्षाएँ पूरी करना।</p>
+                <p>पूरी तरह से कोटलिन में निर्मित, OrbitPuzzles में वेलोसिटी वेरलेट एकीकरण और प्लमर सॉफ्टनिंग का उपयोग करके एक अत्यधिक स्थिर कस्टम $O(N^2)$ N-बॉडी सिम्युलेटर की सुविधा है। डिज़ाइन चरण के दौरान समय रुक जाता है ताकि आप सावधानीपूर्वक अपने शरीर की स्थिति बना सकें और वेग वैक्टर को समायोजित कर सकें, और फिर यह जांचने के लिए RUN चरण में प्रवाहित होता है कि क्या आपका कक्षीय यांत्रिकी कायम है।</p>
+                <p>दृश्य अनुभव 100% जेटपैक कंपोज़ यूआई के साथ Google फिलामेंट द्वारा संचालित 3डी रेंडरिंग को जोड़ता है। प्रत्येक खगोलीय पिंड को कस्टम प्रक्रियात्मक बनावट का उपयोग करके प्रस्तुत किया जाता है, जो विशाल बनावट फ़ाइलों पर भरोसा किए बिना ग्रहों और सितारों की एक अनंत विविधता का निर्माण करता है, जबकि चमकदार ट्रेल्स और यूआई ओवरले वास्तविक समय टेलीमेट्री और फीडबैक प्रदान करते हैं।</p>
+
+                <h2>चित्र संग्रह</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-29-933_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles स्तर चयन" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-37-349_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles डिज़ाइन चरण" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-41-276_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles सिमुलेशन रन" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-16-53-361_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles स्क्रीनशॉट 4" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-00-279_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles स्क्रीनशॉट 5" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/OrbitPuzzles/Screenshot_2026-05-10-13-17-04-774_com.orbitpuzzles.app.jpg" alt="OrbitPuzzles स्क्रीनशॉट 6" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>विशेषताएँ</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>कस्टम भौतिकी इंजन:</strong> दीर्घकालिक कक्षीय स्थिरता के लिए वेलोसिटी वेरलेट एकीकरण का लाभ उठाने वाला सटीक एन-बॉडी सिमुलेशन, अत्यधिक करीबी मुठभेड़ों को खूबसूरती से संभालने के लिए प्लमर सॉफ्टनिंग के साथ पूरा होता है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>डिज़ाइन एवं चलाने के चरण:</strong> एक सामरिक दृष्टिकोण जहां योजना बनाने के लिए समय रुकता है, जिससे आप अपने ग्रहीय सेटअप, वेक्टर बलों को ठीक कर सकते हैं और सिमुलेशन शुरू करने से पहले कक्षीय पहेली को हल कर सकते हैं।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>प्रक्रियात्मक 3डी ग्रह:</strong> गणितीय रूप से उत्पन्न समआयताकार अल्बेडो मानचित्रों का उपयोग करके Google फिलामेंट एकीकरण यह सुनिश्चित करता है कि ऐप फ़ुटप्रिंट को छोटा रखते हुए प्रत्येक खगोलीय पिंड अद्वितीय दिखे।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>हाइब्रिड रेंडरिंग:</strong> जेटपैक कंपोज़ कैनवस के साथ खूबसूरती से स्तरित, वास्तविक समय 2 डी यूआई ओवरले के तहत देशी 3 डी भौतिकी प्रतिपादन का एक निर्दोष मिश्रण।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>प्रगतिशील चुनौती:</strong> अलग-अलग बजट और लक्ष्यों के साथ स्तरों की एक विस्तृत श्रृंखला पर नेविगेट करें। आंतरिक 'ऑर्बिटट्रैकर' प्रणाली अण्डाकार विलक्षणता की परवाह किए बिना क्रांतियों का सटीक मिलान करती है।</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">कुछ और खोजें</span><h2 id="related-title">आपको ये भी पसंद आ सकते हैं…</h2></div><p><a href="index.html#collection" hreflang="hi-IN">पूरा संग्रह देखें ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="play">
+          <a href="gravitytdg.html" hreflang="hi-IN">
+            <div class="collection-image collection-image-hero"><img src="../assets/GravityTDG/workshop-hero.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">खेल और खोज</div>
+            <h3>GravityTDG <span aria-hidden="true">↗</span></h3>
+            <p>टावर डिफेंस का नया रूप: कक्षीय भौतिकी और बचाव किरणों से ज़िंदगियाँ बचाएँ।</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="intarzieri.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/Intarzieri/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">रोज़मर्रा के औज़ार</div>
+            <h3>Intârzieri Tren <span aria-hidden="true">↗</span></h3>
+            <p>रोमानिया की ट्रेनों, उनके रास्तों और बदलती देरी पर नज़र रखें।</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="thermostat.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/Thermostat/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">रोज़मर्रा के औज़ार</div>
+            <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+            <p>सेंसर के इतिहास और तापमान चार्ट से देखें कि घर कितना गर्म है।</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hi-IN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faceslice - एक एकल फ्रंटल फोटो से लेकर एक स्तरित स्थलाकृतिक चित्र राहत के लिए लेजर-कट धातु प्लेटों तक। स्लाइसिंग इंजन, वास्तविक समय सामग्री अनुमान, और DXF निर्यात।">
+    <title>Faceslice - परियोजना विवरण</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/Faceslice/icon.svg">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/hi/faceslice.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/faceslice.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/faceslice.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/faceslice.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/faceslice.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/faceslice.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/faceslice.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/faceslice.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/faceslice.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/faceslice.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/faceslice.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/faceslice.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/faceslice.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/faceslice.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="faceslice.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="hi-IN">← कार्यशाला में वापस जाएँ</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">रचनात्मक औज़ार</span>
+                    <h1>Faceslice</h1>
+                    <p class="project-lead">एक तस्वीर 3D उभार में बदलती है, फिर परतों में बँटकर धातु का चित्र बनती है।</p>
+                    <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://faceslice.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">वेब ऐप खोलें</a>
+                    <a href="https://github.com/zandaulion/faceslice" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub पर देखें</a>
+                </div>
+                </div>
+                <img src="../assets/Faceslice/feature_graphic.jpg" alt="Faceslice ऐप" class="project-hero-image">
+            </div>
+
+            <div class="project-content reveal">
+
+
+                <h2>परियोजना के बारे में</h2>
+                <p>सामने से ली गई तस्वीर से परतदार पोर्ट्रेट के कटिंग पैटर्न तक — धातु की चादरों से बना स्थलाकृतिक उभार, जिसे हाथ से परत-दर-परत चिपकाया जाता है।</p>
+                <p>Faceslice एक मानक 2डी सेल्फी को लेजर-कट शीट मेटल या कार्डस्टॉक से बनी भौतिक स्तरित स्थलाकृतिक मूर्तियों में बदल देता है। जटिल मल्टी-कैमरा फोटोग्रामेट्री या बारीक 3डी स्कैनिंग ऐप्स की मांग करने के बजाय, Faceslice को भौतिक पैमाने को ठीक करने के लिए केवल एक फ्रंटल फोटोग्राफ और मिलीमीटर में एक इंटरपुपिलरी दूरी (आईपीडी) माप की आवश्यकता होती है।</p>
+                <p>एक तस्वीर से एक वास्तविक सिर को फिर से बनाने के लिए, Faceslice एक तीन-मॉडल कंप्यूटर विज़न फ़्यूज़न पाइपलाइन का आयोजन करता है जहां प्रत्येक मॉडल अपना सर्वश्रेष्ठ योगदान देता है: सिल्हूट विभाजन बाल, कान और जबड़े की रेखाओं को कैप्चर करता है; एककोशिकीय गहराई व्यापक खोपड़ी की मात्रा का अनुमान लगाती है; और फेशियल मेश लैंडमार्कर मॉडल अवशिष्ट सतह विस्थापन के रूप में स्पष्ट चेहरे के लैंडमार्क (नाक, आंख के सॉकेट, होंठ) निकालते हैं।</p>
+                <p>परिणामी 3डी ठोस को कस्टम कोणों पर समानांतर विमानों में काटा जाता है। फ्रंटल स्लाइसिंग सेल्फ-अलाइनिंग नेस्टेड कंटूर आइसोहिप्सेस का उत्पादन करती है, जो प्रत्येक प्लेट पर नक्काशीदार संरेखण गाइड के साथ पूरा होता है, 80% तक वजन घटाने के लिए खोखले-आउट छिपे हुए अंदरूनी भाग और तत्काल उत्पादन-ग्रेड DXF निर्यात होता है।</p>
+
+                <h2>चित्र संग्रह</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/Faceslice/screenshot_01_app_editor.png" alt="Faceslice स्टूडियो - 3डी कंटूर रिलीफ, कट प्लेन और सामग्री अनुमान" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_02_contour_closeup.png" alt="स्थलाकृतिक ऊंचाई राहत - उच्च-रिज़ॉल्यूशन चेहरे की परत आकृति" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_03_bust_relief.png" alt="बस्ट पोर्ट्रेट स्लाइसिंग - कंधे की आकृति और दूरी पर कटिंग प्लेन" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_04_dense_slices.png" alt="उच्च-घनत्व स्लाइसिंग - 220 स्लाइस (0.5 मिमी) और 153 आकृति विश्लेषण" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Faceslice/screenshot_05_hair_profile.png" alt="जटिल बाल सिल्हूट और ठोस प्रोफ़ाइल कट विश्लेषण" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>विशेषताएँ</h2>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 सिंगल-फोटो 3डी पुनर्निर्माण:</strong> एकल फ्रंटल सेल्फी को पूर्ण गहराई-राहत ठोस में परिवर्तित करता है, जिसे पुतली की दूरी का उपयोग करके वास्तविक दुनिया के आयामों में कैलिब्रेट किया जाता है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 3-मॉडल एआई फ़्यूज़न इंजन:</strong> संतुलित खोपड़ी की मात्रा और चेहरे की तीक्ष्णता के लिए MediaPipe मल्टीक्लास सेगमेंटेशन, ONNX मोनोकुलर गहराई अनुमान (गहराई कुछ भी V2), और MediaPipe फेस लैंडमार्कर को जोड़ती है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️ स्थलाकृतिक समोच्च स्लाइसिंग:</strong> मुक्त कोण नियंत्रण (संकेंद्रित नेस्टेड आइसोहाइप्स के लिए ललाट, साइड-प्रोफ़ाइल लेमिनेशन के लिए क्षैतिज) के साथ ठोस पदार्थों को समानांतर विमानों में काटता है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 स्व-संरेखित असेंबली मार्गदर्शिकाएँ:</strong> जब सामने से काटा जाता है, तो प्रत्येक धातु की परत को नीचे वाली परत के अंदर घोंसला बना दिया जाता है, और जिग्स के बिना आसान संरेखण के लिए अगली प्लेट की बाउंडिंग लाइन सीधे इसकी सतह पर उकेरी जाती है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ आंतरिक खोखलापन और भौतिक अर्थव्यवस्था:</strong> छिपी हुई आंतरिक ज्यामिति को स्वचालित रूप से हटा देता है, मजबूत बॉन्डिंग मार्जिन बनाए रखते हुए सामग्री की खपत और वजन को 80% तक कम कर देता है (उदाहरण के लिए 10 किलो ठोस स्टील से 1.9 किलो खोखले छल्ले तक)।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ पैरामीट्रिक निर्माण नियंत्रण:</strong> शीट की मोटाई (0.5-10 मिमी), राहत संपीड़न, केर्फ़ मुआवजा, चेहरे की राहत अतिशयोक्ति, और स्लाइस कोण का वास्तविक समय इंटरैक्टिव समायोजन।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ वास्तविक समय सामग्री और वजन अनुमानक:</strong> स्टील, पीतल और एल्यूमीनियम के लिए प्लेट गिनती, अद्वितीय आकृति, आवश्यक शीट धातु क्षेत्र (डीएम²), स्टैक ऊंचाई और सटीक द्रव्यमान की गतिशील रूप से गणना करता है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 उत्पादन के लिए तैयार DXF निर्यात:</strong> पूरी तरह से वेक्टरकृत, लेजर/वॉटरजेट/प्लाज्मा सीएएम-तैयार DXF फ़ाइलों को एक क्लिक के साथ कस्टम शीट स्टॉक आयामों में निर्यात करता है।</li>
+                </ul>
+
+                <h2>वास्तुकला एवं तकनीकी स्टैक</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0 40px;">
+                    <div class="feature-item">
+                        <h3>इंटरएक्टिव वेब क्लाइंट</h3>
+                        <p>वेनिला जावास्क्रिप्ट (ईएस मॉड्यूल), उत्तरदायी कैनवास और SVG समोच्च प्रतिपादन, वास्तविक समय पैरामीट्रिक स्लाइडर, और ऑफ़लाइन-सक्षम PWA आर्किटेक्चर।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>दृष्टि एवं ज्यामिति इंजन</h3>
+                        <p>पायथन 3 कम्प्यूटेशनल कोर MediaPipe (सेगमेंटेशन और फेस मेश), ONNX रनटाइम (गहराई कुछ भी V2 छोटा), 2D बहुभुज बूलियन और खोखलापन के लिए शेपली और CAD पीढ़ी के लिए ezdxf का उपयोग करता है।</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>उत्पादन परिनियोजन</h3>
+                        <p>पॉडमैन और सिस्टमड क्वाडलेट के साथ कंटेनरीकृत, स्वचालित एसेट हैश संस्करण स्टैम्पिंग के माध्यम से <code>deploy.sh</code>, और सीपीयू पर उप-सेकंड स्लाइसिंग प्रतिक्रिया समय के साथ कैडी रिवर्स प्रॉक्सी के माध्यम से सेवा प्रदान की गई।</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <section class="related-projects wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><span class="section-number">कुछ और खोजें</span><h2 id="related-title">आपको ये भी पसंद आ सकते हैं…</h2></div><p><a href="index.html#collection" hreflang="hi-IN">पूरा संग्रह देखें ↗</a></p></div>
+        <div class="collection-grid">
+<article class="collection-card" data-category="creative">
+          <a href="sankey.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">रचनात्मक औज़ार</div>
+            <h3>Sankey आरेख संपादक <span aria-hidden="true">↗</span></h3>
+            <p>दिखाएँ कि चीज़ें कैसे बहती हैं। ब्राउज़र में आरेख बनाएँ और निर्यात करें।</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="play">
+          <a href="gravitygarden.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/Gravity Garden/workshop-hero.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">खेल और खोज</div>
+            <h3>Gravity Garden <span aria-hidden="true">↗</span></h3>
+            <p>एक शांत भौतिकी पहेली के खेल में गुरुत्व बदलें और बगीचा उगाएँ।</p>
+          </a>
+        </article>
+<article class="collection-card" data-category="everyday">
+          <a href="magpie.html" hreflang="hi-IN">
+            <div class="collection-image"><img src="../assets/Magpie/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">रोज़मर्रा के औज़ार</div>
+            <h3>Magpie <span aria-hidden="true">↗</span></h3>
+            <p>बिखरे विचारों, तस्वीरों और आवाज़ के नोट्स को खोने से पहले सहेजने की जगह।</p>
+          </a>
+        </article>
+        </div>
+    </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+
+</body>
+</html>
