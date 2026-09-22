@@ -4,7 +4,7 @@ class WorkshopHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<a class="skip-link" href="#main">Skip to content</a>
       <header class="site-header wrap">
-        <a class="brand" href="index.html" aria-label="Zandaulion home"><img src="assets/brand/logo_light.jpg" alt="" width="43" height="43">Zandaulion<span aria-hidden="true" style="color:var(--orange)">.</span></a>
+        <a class="brand" href="index.html" aria-label="Zandaulion home"><img src="assets/brand/lion-light-v2.png" alt="" width="43" height="43">Zandaulion<span aria-hidden="true" style="color:var(--orange)">.</span></a>
         <nav aria-label="Main navigation"><a href="index.html#collection">The collection</a><a href="index.html#about">About</a><a class="nav-contact" href="mailto:zandaulion@gmail.com">Say hello ↗</a></nav>
       </header>`;
   }
@@ -17,7 +17,7 @@ class WorkshopFooter extends HTMLElement {
       <p>© ${new Date().getFullYear()} Zandaulion · <a href="index.html#collection">Keep exploring ↗</a></p>
       <a href="https://ko-fi.com/P7K6214YH8" target="_blank" rel="noopener noreferrer">Buy me a coffee ↗</a>
       <details><summary>App privacy policies</summary><div class="privacy-links">
-        <a href="plate-privacy.html">Plate</a><a href="bitey-privacy.html">Bitey</a><a href="bpdigitizer-privacy.html">BP Digitizer</a><a href="palebluedot-privacy.html">Pale Blue Dot</a><a href="gravitywarp-privacy.html">Gravity Warp</a><a href="gravitygarden-privacy.html">Gravity Garden</a><a href="orbitpuzzles-privacy.html">OrbitPuzzles</a><a href="gravitytdg-privacy.html">GravityTDG</a>
+        <a href="plate-privacy.html">Bitey (formerly Plate)</a><a href="bitey-privacy.html">Bitey</a><a href="bpdigitizer-privacy.html">BP Digitizer</a><a href="palebluedot-privacy.html">Pale Blue Dot</a><a href="gravitywarp-privacy.html">Gravity Warp</a><a href="gravitygarden-privacy.html">Gravity Garden</a><a href="orbitpuzzles-privacy.html">OrbitPuzzles</a><a href="gravitytdg-privacy.html">GravityTDG</a>
       </div></details></footer>`;
   }
 }
