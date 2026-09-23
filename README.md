@@ -1,81 +1,236 @@
-# Android Developer Portfolio
+# Zandaulion
 
-## Languages
+<!-- readme-languages:start -->
+**English** · [العربية](README.ar.md) · [简体中文](README.zh-CN.md) · [Français](README.fr-FR.md) · [Deutsch](README.de-DE.md) · [हिन्दी](README.hi-IN.md) · [日本語](README.ja-JP.md) · [한국어](README.ko-KR.md) · [Português (Brasil)](README.pt-BR.md) · [Română](README.ro.md) · [Español](README.es-ES.md) · [Українська](README.uk.md)
+<!-- readme-languages:end -->
 
-The homepage is available in English (at the original root URL), Arabic (`/ar/`),
-Simplified Chinese (`/zh-cn/`), French (`/fr/`), German (`/de/`), Hindi (`/hi/`),
-Japanese (`/ja/`), Korean (`/ko/`), Brazilian Portuguese (`/pt-br/`), Romanian
-(`/ro/`), Spanish (`/es/`), and Ukrainian (`/uk/`). All 20 project pages, including
-the Sankey editor controls and messages, are available in all 12 languages.
-Privacy notices remain in English at their established URLs.
+A playful workshop for curious ideas: apps, games, and small tools to explore.
 
-Edit the shared layout in `templates/home.html` and text in `locales/*.json`.
-Run `python scripts/build_locales.py` to regenerate the 12 static homepages and
-the shared navigation dictionary. Generated pages are committed so GitHub Pages
-needs no additional build service. Each page has its own language, canonical URL,
-and reciprocal `hreflang` links. Catalogs must have exactly the same non-empty keys.
+**[Visit zandaulion.com](https://zandaulion.com/)** · [Romanian collection](https://zandaulion.com/ro/index.html)
 
-Project translations live in `locales/projects/<language>/`. The same build
-command generates 220 translated project pages from their English sources,
-including text, headings, metadata, image captions, and accessible control labels.
-Shared text comes from the homepage catalogs and each language's `common.json`.
-When source text changes, the build requires its translation to be updated.
-App names, screenshots, and technical identifiers retain their original form.
-Language paths are declared in `scripts/site_locales.py`; project coverage and
-shared UI strings are declared in `scripts/project_locales.py`.
+This repository contains the Zandaulion website: a searchable collection of 20
+projects, individual project pages, and an interactive Sankey diagram editor.
+The homepage and every project page are available in 12 languages. The site is
+static HTML, CSS, and vanilla JavaScript, hosted on GitHub Pages.
 
-The initial project translation drafts were prepared with Google's translation
-service, then shared wording, gallery controls, and product names were refined.
-The earlier Romanian project translations were retained. Native-speaker editorial
-review remains useful, especially for technical terminology. The optional
-`python scripts/translate_projects.py --fetch [--language ro]` authoring command
-sends only missing public project text for translation. It preserves existing
-catalogs and applies `locales/projects/overrides.json`. Normal builds and the
-deployed site never call a translation service. Translation caches are untracked.
+## README translations
 
-Before publishing, run `python scripts/build_locales.py --check` and
-`python scripts/check_site.py --url http://127.0.0.1:8765`.
-The first check rejects stale generated pages; the second checks all 261 pages.
+This README is available in the same 12 languages as the website. Use the language
+links at the top to switch versions. English lives in `README.md`; translated
+versions use filenames such as `README.ro.md` and `README.ar.md`.
 
-Language links work without JavaScript. `language.js` remembers an explicit
-language choice and keeps the current project when switching languages. If a
-translation is unavailable, it shows the English project with an explanatory note.
-Direct language URLs always take precedence. On the main entry page only (`/`
-or `/index.html`), the site uses an explicit `?lang=` choice, then a saved language,
-then the first supported browser preference from `navigator.languages`, falling
-back to English. Regional variants match their base language (for example,
-`fr-CA` uses French). English links carry `?lang=en-US` so the choice also works
-when storage is unavailable. Redirects preserve section anchors and other query
-parameters. Project and privacy pages never redirect based on browser language.
-Run `node --test scripts/test_language.cjs` to check selection and redirect behavior.
-Navigation points explicitly to `index.html` so opening the site from disk never
-lands on a folder listing. The language scripts use ordinary deferred scripts,
-which also run under `file://`. Local project links carry the language choice in
-the URL because browsers may isolate local-file storage for each document.
-Arabic uses a right-to-left layout. App names and supplied screenshots retain
-their original branding. These initial translations should receive native-speaker
-editorial review as the site evolves.
+Edit the English README and the corresponding catalogs in `locales/readme/`, then
+run `python scripts/build_readmes.py` to regenerate the translated files. Use
+`python scripts/build_readmes.py --check` to detect stale files or missing
+translations. The optional `--fetch` flag prepares missing translation drafts
+through the same Google translation service used for project text. Commands,
+paths, code examples, and link destinations are preserved.
 
-## Workshop redesign
+## What’s here
 
-The homepage and project pages now use the workshop presentation in `workshop.css`.
-Project pages also load `project.css` and `project.js`, with keyboard-accessible
-image galleries and related projects. The homepage collection is static HTML;
-`workshop.js` progressively adds filtering, search, and random discovery.
+- A collection with category filters, accent-insensitive search, and random discovery.
+- Project descriptions, launch and source links, screenshot galleries, and related projects.
+- Keyboard-accessible image galleries with captions, previous/next controls, and touch gestures.
+- A Sankey editor with node/link editing, image export, and JSON import/export.
+- Language selection, saved preferences, browser-language detection, and Arabic right-to-left layout.
+- Existing English privacy notices at the URLs already registered with Google Play.
 
-BP Digitizer has one project page, `bpdigitizer.html`, covering Android and PWA
-versions. The former `wbpdigitizer.html` URL forwards to its web section, with a
-plain link as a fallback. Keep that compatibility page and the original
-`bpdigitizer-privacy.html` URL when making future changes.
+### Project collection
 
-Preview with `python -m http.server 8765 --bind 127.0.0.1`, then open
-`http://127.0.0.1:8765/`. Verify with
-`python scripts/check_site.py --url http://127.0.0.1:8765`.
+| Project | Website page |
+| --- | --- |
+| Admitere Liceu Kit | [admitere.html](admitere.html) |
+| BP Digitizer — Android and PWA | [bpdigitizer.html](bpdigitizer.html) |
+| Faceslice | [faceslice.html](faceslice.html) |
+| Gravity Garden | [gravitygarden.html](gravitygarden.html) |
+| GravityTDG | [gravitytdg.html](gravitytdg.html) |
+| Gravity Warp | [gravitywarp.html](gravitywarp.html) |
+| Intârzieri Tren | [intarzieri.html](intarzieri.html) |
+| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Magpie | [magpie.html](magpie.html) |
+| Mișcare | [miscare.html](miscare.html) |
+| OLX Deal Finder | [olxdeals.html](olxdeals.html) |
+| Pocket Omaha | [omaha.html](omaha.html) |
+| OrbitPuzzles | [orbitpuzzles.html](orbitpuzzles.html) |
+| Pale Blue Dot | [palebluedot.html](palebluedot.html) |
+| Bitey, formerly Plate | [plate.html](plate.html) |
+| PWA Invite Console | [pwainvite.html](pwainvite.html) |
+| pwa-kit | [pwakit.html](pwakit.html) |
+| Sankey Diagram Editor | [sankey.html](sankey.html) |
+| Spendosaurus | [spendosaurus.html](spendosaurus.html) |
+| Thermostat Monitor | [thermostat.html](thermostat.html) |
 
-### Stable privacy URLs
+The app repositories are separate from this website. The renamed repositories
+are [zandaulion.com](https://github.com/zandaulion/zandaulion.com),
+[bitey](https://github.com/zandaulion/bitey), and
+[kerfloom](https://github.com/zandaulion/kerfloom).
 
-The privacy-notice paths are already registered with Google Play. **Do not rename,
-move, or remove them when changing the website.** Keep these exact public paths:
+Bitey keeps the established `plate.html` page. BP Digitizer has one page for both
+platforms; `wbpdigitizer.html` remains a compatibility redirect to
+`bpdigitizer.html#web-version`.
+
+## Preview locally
+
+Run these commands from the repository root. Python is needed for the generator
+and checks; the Python scripts use only the standard library. Node.js with the
+built-in test runner is needed for the language tests. There is no npm install
+or frontend bundler step.
+
+```sh
+python scripts/build_locales.py
+python -m http.server 8765 --bind 127.0.0.1
+```
+
+Open [the local homepage](http://127.0.0.1:8765/index.html), or use
+[explicit English](http://127.0.0.1:8765/index.html?lang=en-US) or
+[Romanian](http://127.0.0.1:8765/ro/index.html) to bypass automatic language selection.
+
+The generated HTML is also designed for direct file browsing. Open `index.html`,
+not a language folder; navigation uses explicit filenames to avoid directory
+listings. Language scripts are ordinary scripts rather than ES modules.
+The local HTTP preview is the recommended way to review changes.
+
+## Languages and navigation
+
+| Language | Locale | Homepage |
+| --- | --- | --- |
+| English | `en-US` | `/index.html?lang=en-US` |
+| Arabic | `ar` | `/ar/index.html` |
+| Chinese, Simplified | `zh-CN` | `/zh-cn/index.html` |
+| French | `fr-FR` | `/fr/index.html` |
+| German | `de-DE` | `/de/index.html` |
+| Hindi | `hi-IN` | `/hi/index.html` |
+| Japanese | `ja-JP` | `/ja/index.html` |
+| Korean | `ko-KR` | `/ko/index.html` |
+| Portuguese, Brazil | `pt-BR` | `/pt-br/index.html` |
+| Romanian | `ro` | `/ro/index.html` |
+| Spanish | `es-ES` | `/es/index.html` |
+| Ukrainian | `uk` | `/uk/index.html` |
+
+Translated project pages keep the same filename under the language prefix, such
+as `/fr/kerfloom.html` or `/ja/plate.html`. Language switching keeps the current
+project and section anchor. Collection and related-project links stay in the
+selected language. Each homepage and project page has a language declaration,
+canonical URL, and reciprocal `hreflang` links.
+
+An explicit language path, such as `/ro/`, always takes precedence. On the main
+entry page only (`/` or `/index.html`), selection follows this order:
+
+1. A supported explicit `?lang=` choice.
+2. A saved language preference.
+3. The first supported browser preference from `navigator.languages`.
+4. English if no supported language matches.
+
+Regional variants match their base language: for example, `fr-CA` selects French.
+English links include `?lang=en-US` so an explicit choice works even when browser
+storage is unavailable. Entry-page redirects preserve section anchors and other
+query parameters. Project and privacy URLs never redirect based on browser language.
+
+Homepage language links are present in the HTML and work without JavaScript.
+Project headers, their language picker, gallery controls, and the Sankey editor
+use JavaScript. Local-file project links carry the selected language in the URL
+because browsers may isolate storage for each file.
+
+## Editing and generating pages
+
+| What to change | Source to edit |
+| --- | --- |
+| Homepage layout | `templates/home.html` |
+| Homepage text in each language | `locales/<locale>.json` |
+| English project content and layout | Root project HTML files, such as `kerfloom.html` |
+| Translated project content | `locales/projects/<locale>/<project>.json` |
+| Gallery controls and editor messages | `locales/projects/<locale>/common.json` |
+| Reusable translation corrections | `locales/projects/overrides.json` |
+| Supported locales and URL prefixes | `scripts/site_locales.py` |
+| Project coverage and translation rendering | `scripts/project_locales.py` |
+| Shared presentation | `workshop.css` and `project.css` |
+| Collection, project, and language behavior | `workshop.js`, `project.js`, and `language.js` |
+| Sankey editor behavior | `sankey.js` |
+
+After editing source content or catalogs, regenerate the site:
+
+```sh
+python scripts/build_locales.py
+```
+
+The generator produces 12 homepages, 220 translated project pages, and
+`language-data.js`. It also maintains canonical and alternate-language links on
+the 20 English project pages. Commit these generated outputs with their sources;
+GitHub Pages serves them directly without running the Python generator.
+
+Do not edit generated homepages, translated HTML, or `language-data.js` directly:
+regeneration replaces those edits. Homepage catalogs must have matching non-empty
+keys. Project catalogs use source text as keys, so changes to English copy require
+corresponding translation updates. Missing translations fail the build.
+
+### Translation maintenance
+
+Project translation drafts were prepared with Google’s translation service, then
+shared wording, gallery controls, product names, and selected technical phrases
+were refined. Earlier Romanian translations were retained. Native-speaker review
+is still useful, particularly for technical terminology. App names, screenshots,
+and technical identifiers retain their original form.
+
+The optional authoring script can prepare missing translations for one locale:
+
+```sh
+python scripts/translate_projects.py --fetch --language ro
+```
+
+Omit `--language ro` to process all translated locales. The `--fetch` flag permits
+sending missing public project text to Google’s translation service. Existing
+catalogs are reused, product names are protected, and `overrides.json` corrections
+are applied. Without `--fetch`, the script reports missing strings and refreshes
+catalogs only where all required translations are already available. It is not a
+read-only check.
+
+Some shared phrases also occur in per-project catalogs. Put consistent wording
+corrections in `overrides.json` and run the preparation script to apply them across
+projects, then rebuild the HTML. Review generated translations before publishing.
+The `.translation-cache/` folder is ignored by Git. Normal builds and the deployed
+website never call a translation service.
+
+## Checks before publishing
+
+With the local preview server running, run these commands in another terminal:
+
+```sh
+python scripts/build_locales.py --check
+python scripts/check_site.py --url http://127.0.0.1:8765
+node --test scripts/test_language.cjs
+```
+
+- The build check detects stale generated outputs and missing translations.
+- The site check covers all 261 HTML pages: 12 homepages, 240 project pages,
+  eight privacy notices, and one compatibility redirect. It checks local links,
+  assets, duplicate IDs outside the preserved privacy markup, project language
+  metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also
+  checks HTTP responses and compares served privacy notices with their source files.
+- The language tests cover preference precedence, regional matching, blocked
+  storage, file and subdirectory roots, redirect behavior, and section preservation.
+
+For offline link checks, run `python scripts/check_site.py` without `--url`.
+Review affected pages in the browser as well: mobile layout, Arabic direction,
+language switching, gallery keyboard controls, and editor interactions.
+
+## Deployment
+
+The live site is [zandaulion.com](https://zandaulion.com/), published from `main`
+through GitHub Pages. `CNAME` keeps the custom domain configuration.
+
+After generating and checking the site, commit the source and generated changes
+and push `main`. Wait for the **pages build and deployment** workflow to complete,
+then verify the changed URLs on the live domain. Keep the existing project and
+privacy routes when renaming apps or their repositories.
+
+The site uses static assets and ordinary scripts. Fonts are loaded from Google
+Fonts, and the Sankey editor loads Apache ECharts from jsDelivr. No translation
+service is required at runtime.
+
+## Stable privacy URLs
+
+These URLs are already registered with Google Play. **Do not rename, move, or
+remove them, or rewrite their contents as part of website localization.**
 
 - `/bitey-privacy.html`
 - `/bpdigitizer-privacy.html`
@@ -86,53 +241,41 @@ move, or remove them when changing the website.** Keep these exact public paths:
 - `/palebluedot-privacy.html`
 - `/plate-privacy.html`
 
-These pages retain their original contents and shared `index.css` / `main.js`
-assets. `scripts/check_site.py` guards the paths and can verify the served notices
-match the files. The following sections describe the original site foundation.
+The notices remain in English and retain their original presentation and shared
+`index.css` / `main.js` assets. Shared-asset changes should account for these pages.
+`scripts/check_site.py` guards the paths and can verify the served content.
 
-A responsive, high-performance static portfolio website showcasing three custom Android projects: **Pale Blue Dot**, **Gravity Warp**, and **Gravity Garden**. 
-
-The site is built with modern, accessible web practices and is designed to provide a rich visual experience with dynamic CSS styling, interactive image galleries, and smooth navigation—all without relying on heavy frontend frameworks.
-
-## 🚀 Projects Showcased
-
-1. **Pale Blue Dot:** A stunning, real-time 3D Earth viewer built natively in Kotlin and OpenGL ES 3.0. It features live astronomy data, procedural stars, and real-time NASA/USGS API overlays (cloud cover, earthquakes, and active volcanoes).
-2. **Gravity Warp:** A fast-paced, retro pixel-art physics arcade game built with Kotlin and LibGDX. It features an inverse-square gravity model, toroidal screen wrapping, procedural art generation, and a built-in look-ahead Autoplay AI.
-3. **Gravity Garden:** A beautiful, physics-based zen puzzle game utilizing a custom Box2D engine. Players manipulate gravity to cultivate a vibrant, procedurally generated garden brought to life with a custom oil-painting post-processing shader.
-
-## 🛠️ Technology Stack
-
-- **HTML5:** Semantic, accessible layout structure.
-- **Vanilla CSS3:** Custom styling system utilizing CSS variables, responsive grid layouts, glassmorphism effects (`backdrop-filter`), and CSS animations. 
-- **Vanilla JavaScript:** Lightweight DOM manipulation for mobile navigation toggles, scroll reveal animations, and a fully custom interactive full-screen image lightbox with touch/swipe and keyboard support.
-
-## 📁 Repository Structure
+## Repository map
 
 ```text
 /
-├── index.html                  # Main portfolio landing page
-├── palebluedot.html            # Pale Blue Dot project page
-├── gravitywarp.html            # Gravity Warp project page
-├── gravitygarden.html          # Gravity Garden project page
-├── *-privacy.html              # Individual privacy policy pages for each app
-├── index.css                   # Global stylesheet and design system
-├── main.js                     # Global interactive logic (lightbox, animations)
-└── assets/                     # Project-specific assets (screenshots, GIFs, and docs)
-    ├── PaleBlueDot/
-    ├── GravityWarp/
-    └── Gravity Garden/
+├── index.html                  # Generated English homepage
+├── <project>.html              # English project sources
+├── *-privacy.html              # Preserved English privacy notices
+├── wbpdigitizer.html           # Compatibility redirect
+├── templates/home.html         # Shared homepage template
+├── README.*.md                 # Translated README files
+├── locales/                    # Website and README translation catalogs
+├── ar/, de/, ro/, ...           # Generated language homepages and project pages
+├── scripts/                    # Generation, translation preparation, checks, tests
+├── language-data.js            # Generated navigation and UI dictionaries
+├── language.js                 # Language selection and navigation
+├── workshop.css / workshop.js  # Workshop presentation and collection behavior
+├── project.css / project.js    # Project presentation, header/footer, galleries
+├── sankey.js                   # Interactive diagram editor
+├── sample_sankey.json          # Sample diagram data
+├── index.css / main.js         # Original shared assets, retained for privacy pages
+├── assets/                     # Brand artwork, project graphics, screenshots
+├── CNAME                       # GitHub Pages custom domain
+└── LICENSE
 ```
 
-## 🌐 How to View
+## License and brand assets
 
-### Local Development
-Since this is a purely static site with no build process required, you can view it by simply opening `index.html` in any modern web browser.
+The source code is licensed under the **GNU General Public License v3.0
+(GPL-3.0)**. See [LICENSE](LICENSE).
 
-### Live Deployment
-The portfolio is designed to be hosted seamlessly on **GitHub Pages** (or any static hosting provider like Netlify/Vercel). Simply deploy the `main` branch.
-
-## 📝 License
-The source code of this portfolio is open-sourced under the **GNU General Public License v3.0 (GPL-3.0)**. See the `LICENSE` file for more details.
-
-**Trademark & Brand Exception:**
-The "Zandaulion" name, brand identity, and all logo image files located in the `assets/brand/` directory are **NOT** covered by the GPL license. All rights to these trademarks and visual brand assets are strictly reserved. You may not use them in derivative works or to identify your own projects without permission.
+**Trademark & Brand Exception:** The “Zandaulion” name, brand identity, and all
+logo image files located in `assets/brand/` are **not** covered by the GPL license.
+All rights to these trademarks and visual brand assets are reserved. You may not
+use them in derivative works or to identify your own projects without permission.
