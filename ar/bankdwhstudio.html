@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="light" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="يقوم Bank DWH Studio بتحويل الأسئلة المصرفية باللغة الطبيعية إلى مسودات PostgreSQL SQL قابلة للتحرير والمراجعة ومثبتة في مستودع اصطناعي مكون من 5000 عمود.">
+    <title>Bank DWH Studio - مسودات SQL قابلة للمراجعة</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ar/bankdwhstudio.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/bankdwhstudio.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/bankdwhstudio.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/bankdwhstudio.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/bankdwhstudio.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/bankdwhstudio.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/bankdwhstudio.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/bankdwhstudio.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/bankdwhstudio.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/bankdwhstudio.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="bankdwhstudio.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ar">← العودة إلى الورشة</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">خلف الكواليس · تجربة البيانات والذكاء الاصطناعي</span>
+                    <h1>Bank DWH Studio</h1>
+                    <p class="project-lead">اطرح سؤالًا عن البيانات المصرفية، واستكشف المخطط ذي الصلة، واحصل على مسودة SQL قابلة للتحرير.</p>
+                    <div class="project-links">
+                        <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">افتح PWA</a>
+                        <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">عرض على GitHub</a>
+                    </div>
+                    <p class="availability-note">PWA المباشر متاح للمدعوين فقط.</p>
+                </div>
+                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio يعرض سؤالًا مصرفيًا، ومسودة SQL، وسياق المخطط المسترجع، والملاحظات، والشيكات" class="project-hero-image hero-landscape bank-interface">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>يصبح السؤال شيئًا يمكنك فحصه</h2>
+                <p>يعد Bank DWH Studio دليلاً شخصيًا على مفهوم استكشاف مستودع بيانات مصرفية كبير من خلال اللغة الطبيعية. اطرح سؤالاً، واختر مجال موضوع مصرفي اختياريًا، وسيقوم التطبيق باسترداد سياق المخطط الأكثر صلة قبل صياغة PostgreSQL SQL.</p>
+                <p>والنتيجة هي عمدا أكثر من مجرد كتلة التعليمات البرمجية. ويعرض الجداول المستردة والتفسير والافتراضات وملاحظات المراجعة والفحوصات الأساسية بجانب مسودة قابلة للتحرير. عندما تكون هناك تفاصيل ضرورية مفقودة - مثل السنة في طلب نهاية أغسطس - يمكن للمساعد أن يطلب التوضيح.</p>
+
+                <h2>كيف يعمل</h2>
+                <ol>
+                    <li><strong>اسأل بلغة الحياة اليومية.</strong> قم بوصف الإجابة المصرفية التي تحتاجها وقم بتضييق نطاق البحث إلى مجال الموضوع عندما يكون ذلك مفيدًا.</li>
+                    <li><strong>استرداد شريحة محدودة من المخطط.</strong> تبحث الواجهة الخلفية Node في بيانات التعريف Elasticsearch عن الجداول والأعمدة ذات الصلة.</li>
+                    <li><strong>مسودة مع السياق.</strong> يقوم نموذج GPT-OSS المستضاف بإنشاء SQL من هذا المخطط المحدود، بينما تتعامل القواعد المستندة إلى الكتالوج مع الأسئلة الشائعة المدعومة.</li>
+                    <li><strong>مراجعة قبل الاستخدام.</strong> قم بتحرير المسودة أو نسخها، وتفحص سياقها وافتراضاتها، ثم قم بتشغيلها بشكل منفصل في عميل SQL الخاص بك.</li>
+                </ol>
+
+                <h2>ما هو على طاولة العمل</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+                    <div class="feature-item"><h3>100 طاولة صناعية</h3><p>توفر تجهيزات المستودع المصرفي التي تم إنشاؤها 5000 عمود وعلاقة وPostgreSQL DDL وكتالوج وبذرة صغيرة.</p></div>
+                    <div class="feature-item"><h3>استرجاع يرتكز على المخطط</h3><p>يقوم Elasticsearch بتضييق نطاق كتالوج كبير إلى بيانات التعريف المطلوبة للسؤال قبل إرسال أي شيء إلى النموذج.</p></div>
+                    <div class="feature-item"><h3>سياق المنطق المرئي</h3><p>تظل الجداول المستردة والتفسيرات والافتراضات والملاحظات والشيكات مرئية بحيث يمكن الطعن في المسودة بدلاً من قبولها بشكل أعمى.</p></div>
+                    <div class="feature-item"><h3>واحد PWA، العديد من الشاشات</h3><p>واجهة الدعوة فقط قابلة للتثبيت وتتكيف من شاشات سطح المكتب العريضة إلى الهواتف المدمجة.</p></div>
+                </div>
+
+                <h2>معرض الصور</h2>
+                <p>ستة أسئلة عبر سطح المكتب والكمبيوتر المحمول والجهاز اللوحي والهاتف. تعيد هذه اللقطات عرض الاستجابات التي تمت مراجعتها والتي تم إنشاؤها مقابل الكتالوج الاصطناعي، مما يجعل أمثلة المحفظة قابلة للتكرار.</p>
+                <div class="gallery-grid">
+                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="مسودة العملاء النشطين SQL على سطح المكتب" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="العملاء في مسودة SQL الافتراضية على سطح مكتب واسع" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="سداد القرض مشروع SQL على جهاز كمبيوتر محمول" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="تفويضات البطاقة مسودة SQL على جهاز لوحي أفقي" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="أرصدة الودائع مسودة SQL على لوح عمودي" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="حجم الدفع مسودة SQL على الهاتف" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>ويبقى الإنسان في الحلقة</h2>
+                <p>ينشئ التطبيق مسودات SQL فقط؛ ولا يتصل أبداً بمستودع بيانات مصرفي ولا ينفّذ أي استعلام. يحرر المستخدمون النتيجة أو ينسخونها ثم يشغّلونها بصورة منفصلة في عميل قاعدة البيانات الخاص بهم. ولا يتلقى المتصفح مفتاح API الخاص بالنموذج.</p>
+                <p>تتحقق الفحوصات الآلية من أن صيغة العبارة مخصصة للقراءة فقط ومن الإشارات إلى الجداول المعروفة. أما صحة بناء SQL ومراجع الأعمدة والمعنى من منظور الأعمال فتظل بحاجة إلى مراجعة بشرية. جميع الأسماء والعلاقات والمقاييس في المستودع مواد اختبار اصطناعية وليست تعريفات مصرفية معتمدة.</p>
+
+                <h2>تحت غطاء محرك السيارة</h2>
+                <p>يقوم إثبات المفهوم المنشور بتشغيل واجهة خلفية Node على مثيل Oracle Ampere A1، مع Elasticsearch لاسترجاع المخطط ونموذج GPT-OSS مستضاف لصياغة SQL. يوثق المستودع أيضًا بنية مستقبلية أوسع، منفصلة بوضوح عن POC الأصغر حجمًا.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">افتح PWA المخصص للدعوة فقط</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">تصفح جميع الأمثلة العشرة</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">واصل الاكتشاف</span><h2 id="related-title">قد يعجبك أيضًا…</h2></div><p><a href="index.html#collection" hreflang="ar">استعرض المجموعة كاملة ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="ar">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">خلف الكواليس</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>لوحة صغيرة لإدارة الدعوات والأجهزة عبر تطبيقات الويب الخاصة.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ar">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">خلف الكواليس</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>لبنة صغيرة تساعد تطبيقات الويب على العمل دون اتصال والبقاء محدثة.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="creative">
+                    <a href="sankey.html" hreflang="ar">
+                        <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">أدوات إبداعية</div>
+                        <h3>محرر المخططات Sankey <span aria-hidden="true">↗</span></h3>
+                        <p>ارسم كيف تتدفق الأشياء. أنشئ مخططات وصدّرها من متصفحك.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

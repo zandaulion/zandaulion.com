@@ -8,7 +8,7 @@
 
 **[访问 zandaulion.com](https://zandaulion.com/)** · [罗马尼亚系列](https://zandaulion.com/ro/index.html)
 
-该存储库包含 Zandaulion 网站：20 个项目的可搜索集合、单个项目页面和交互式 Sankey 图表编辑器。主页和每个项目页面都有 12 种语言版本。该站点是静态 HTML、CSS 和普通 JavaScript，托管在 GitHub Pages 上。
+该存储库包含 Zandaulion 网站：21 个项目的可搜索集合、各个项目页面和交互式 Sankey 图表编辑器。主页和每个项目页面都有 12 种语言版本。该站点是静态 HTML、CSS 和普通 JavaScript，托管在 GitHub Pages 上。
 
 ## README 译本
 
@@ -30,6 +30,7 @@
 | 项目 | 网站页面 |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android 和 PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -51,6 +52,8 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 
 应用程序存储库与本网站是分开的。重命名的存储库为 [zandaulion.com](https://github.com/zandaulion/zandaulion.com)、[bitey](https://github.com/zandaulion/bitey) 和 [kerfloom](https://github.com/zandaulion/kerfloom)。
+
+Bank DWH Studio 源和合成仓库固定装置位于 [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc) 中。
 
 Bitey 保留已建立的`plate.html` 页面。 BP Digitizer 两个平台都有一个页面； `wbpdigitizer.html` 仍然是到 `bpdigitizer.html#web-version` 的兼容性重定向。
 

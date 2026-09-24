@@ -6,14 +6,14 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit
 from site_locales import LANGUAGES
 
-FILES = ('admitere.html', 'bpdigitizer.html', 'faceslice.html', 'gravitygarden.html',
+FILES = ('admitere.html', 'bankdwhstudio.html', 'bpdigitizer.html', 'faceslice.html', 'gravitygarden.html',
          'gravitytdg.html', 'gravitywarp.html', 'intarzieri.html', 'kerfloom.html',
          'magpie.html', 'miscare.html', 'olxdeals.html', 'omaha.html', 'orbitpuzzles.html',
          'palebluedot.html', 'plate.html', 'pwainvite.html', 'pwakit.html', 'sankey.html',
          'spendosaurus.html', 'thermostat.html')
 PROJECTS = {lang: FILES for lang, path, _, _ in LANGUAGES if path}
 PATHS = {lang: path for lang, path, _, _ in LANGUAGES}
-BRANDS = {'Zandaulion', 'Admitere Liceu Kit', 'BP Digitizer', 'Faceslice', 'Gravity Garden',
+BRANDS = {'Zandaulion', 'Admitere Liceu Kit', 'Bank DWH Studio', 'BP Digitizer', 'Faceslice', 'Gravity Garden',
           'GravityTDG', 'Gravity Warp', 'Întârzieri Tren', 'Kerfloom', 'Magpie', 'Mișcare',
           'OLX Deals', 'Omaha', 'OrbitPuzzles', 'Pale Blue Dot', 'Bitey', 'PWA Invite',
           'PWA Kit', 'Sankey', 'Spendosaurus', 'Thermostat', 'PWAInvite', 'PWAKit'}

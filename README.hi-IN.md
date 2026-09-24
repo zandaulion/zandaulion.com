@@ -8,7 +8,7 @@
 
 **[zandaulion.com पर जाएँ](https://zandaulion.com/)** · [रोमानियाई संग्रह](https://zandaulion.com/ro/index.html)
 
-इस रिपॉजिटरी में Zandaulion वेबसाइट शामिल है: 20 परियोजनाओं, व्यक्तिगत प्रोजेक्ट पेजों और एक इंटरैक्टिव Sankey आरेख संपादक का खोजने योग्य संग्रह। मुखपृष्ठ और प्रत्येक परियोजना पृष्ठ 12 भाषाओं में उपलब्ध हैं। साइट स्थिर HTML, CSS, और वेनिला JavaScript है, जो GitHub Pages पर होस्ट की गई है।
+इस रिपॉजिटरी में Zandaulion वेबसाइट शामिल है: 21 परियोजनाओं, व्यक्तिगत प्रोजेक्ट पेजों और एक इंटरैक्टिव Sankey आरेख संपादक का खोजने योग्य संग्रह। मुखपृष्ठ और प्रत्येक परियोजना पृष्ठ 12 भाषाओं में उपलब्ध हैं। साइट स्थिर HTML, CSS, और वेनिला JavaScript है, जो GitHub Pages पर होस्ट की गई है।
 
 ## README के अनुवाद
 
@@ -30,6 +30,7 @@
 | प्रोजेक्ट | वेबसाइट पेज |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer - Android और PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -51,6 +52,8 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 
 ऐप रिपॉजिटरी इस वेबसाइट से अलग हैं। नामांकित रिपॉजिटरी [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey), और [kerfloom](https://github.com/zandaulion/kerfloom) हैं।
+
+Bank DWH Studio स्रोत और सिंथेटिक वेयरहाउस फिक्स्चर [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc) में रहते हैं।
 
 Bitey स्थापित `plate.html` पेज रखता है। BP Digitizer में दोनों प्लेटफार्मों के लिए एक पेज है; `wbpdigitizer.html` `bpdigitizer.html#web-version` पर एक अनुकूलता रीडायरेक्ट बना हुआ है।
 

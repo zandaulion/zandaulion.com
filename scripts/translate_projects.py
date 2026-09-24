@@ -19,6 +19,7 @@ PROTECTED = sorted(BRANDS | {
     'Google Play', 'GitHub', 'Gemini', 'OpenCV', 'MediaPipe', 'Nutrition5k', 'Box2D',
     'LibGDX', 'OpenGL ES', 'NASA', 'USGS', 'ISS', 'GPS', 'GPU', 'API', 'PWA',
     'JSON', 'CSV', 'SVG', 'DXF', 'PNG', 'ZIP', 'CNC', 'CAM', 'HTTPS', 'WebGL', 'Escape',
+    'SQL', 'PostgreSQL', 'Elasticsearch', 'GPT-OSS', 'Node', 'Oracle Ampere A1', 'DDL', 'POC',
     'Run all checks', 'Save to Projects', 'Save offline', 'New project', 'Undo/Redo',
     'GPL-3.0-or-later', 'Node/Express', 'Python/FastAPI',
     '{n}', '{total}', '{ nodes: [], links: [] }'
@@ -57,9 +58,9 @@ def translate_batch(strings, target):
             if len(lines) != len(strings) or any(not line.strip() for line in lines):
                 raise ValueError('Translation changed paragraph boundaries')
             return [line.strip() for line in lines]
-        except ValueError:
+        except ValueError as exc:
             if len(strings) == 1:
-                raise
+                raise ValueError(f'{exc}: {strings[0]}') from exc
             middle = len(strings) // 2
             return translate_batch(strings[:middle], target) + translate_batch(strings[middle:], target)
         except Exception:

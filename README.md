@@ -8,7 +8,7 @@ A playful workshop for curious ideas: apps, games, and small tools to explore.
 
 **[Visit zandaulion.com](https://zandaulion.com/)** · [Romanian collection](https://zandaulion.com/ro/index.html)
 
-This repository contains the Zandaulion website: a searchable collection of 20
+This repository contains the Zandaulion website: a searchable collection of 21
 projects, individual project pages, and an interactive Sankey diagram editor.
 The homepage and every project page are available in 12 languages. The site is
 static HTML, CSS, and vanilla JavaScript, hosted on GitHub Pages.
@@ -40,6 +40,7 @@ paths, code examples, and link destinations are preserved.
 | Project | Website page |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android and PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -64,6 +65,9 @@ The app repositories are separate from this website. The renamed repositories
 are [zandaulion.com](https://github.com/zandaulion/zandaulion.com),
 [bitey](https://github.com/zandaulion/bitey), and
 [kerfloom](https://github.com/zandaulion/kerfloom).
+
+The Bank DWH Studio source and synthetic warehouse fixture live in
+[semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 
 Bitey keeps the established `plate.html` page. BP Digitizer has one page for both
 platforms; `wbpdigitizer.html` remains a compatibility redirect to

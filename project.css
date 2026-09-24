@@ -94,6 +94,7 @@ footer.footer { text-align: left; border-top: 1px solid var(--line); }
 }
 
 .project-header .project-hero-image.hero-landscape { aspect-ratio: 1024 / 500; }
+.project-header .project-hero-image.bank-interface { object-fit: cover; object-position: center top; background: #081524; }
 
 /* Flexible translated copy and logical spacing for right-to-left project pages. */
 .project-header, footer.footer { text-align: start; }

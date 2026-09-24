@@ -10,7 +10,7 @@
 
 **[قم بزيارة zandaulion.com](https://zandaulion.com/)** · [المجموعة الرومانية](https://zandaulion.com/ro/index.html)
 
-يحتوي هذا المستودع على موقع Zandaulion: مجموعة قابلة للبحث مكونة من 20 مشروعًا، وصفحات مشاريع فردية، ومحرر الرسوم البيانية التفاعلي Sankey. الصفحة الرئيسية وكل صفحة مشروع متاحة بـ 12 لغة. الموقع ثابت HTML، CSS، وفانيليا JavaScript، مستضاف على GitHub Pages.
+يحتوي هذا المستودع على موقع Zandaulion: مجموعة قابلة للبحث مكونة من 21 مشروعًا، وصفحات مشاريع فردية، ومحرر الرسوم البيانية التفاعلي Sankey. الصفحة الرئيسية وكل صفحة مشروع متاحة بـ 12 لغة. الموقع ثابت HTML، CSS، وفانيليا JavaScript، مستضاف على GitHub Pages.
 
 ## ترجمات README
 
@@ -32,6 +32,7 @@
 | مشروع | صفحة الموقع |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer - أندرويد وPWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -53,6 +54,8 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 
 مستودعات التطبيقات منفصلة عن هذا الموقع. المستودعات التي تمت إعادة تسميتها هي [zandaulion.com](https://github.com/zandaulion/zandaulion.com) و[bitey](https://github.com/zandaulion/bitey) و[kerfloom](https://github.com/zandaulion/kerfloom).
+
+مصدر Bank DWH Studio وتركيبات المستودعات الاصطناعية موجودة في [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 
 يحتفظ Bitey بصفحة `plate.html` المنشأة. يحتوي BP Digitizer على صفحة واحدة لكلا النظامين الأساسيين؛ يبقى `wbpdigitizer.html` بمثابة إعادة توجيه توافقية إلى `bpdigitizer.html#web-version`.
 

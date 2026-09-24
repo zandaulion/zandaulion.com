@@ -8,7 +8,7 @@
 
 **[Відвідайте zandaulion.com](https://zandaulion.com/)** · [Румунська колекція](https://zandaulion.com/ro/index.html)
 
-Це сховище містить веб-сайт Zandaulion: доступну для пошуку колекцію з 20 проектів, окремі сторінки проектів та інтерактивний редактор діаграм Sankey. Домашня сторінка та кожна сторінка проекту доступні 12 мовами. Сайт є статичним HTML, CSS і ванільним JavaScript, розміщеним на GitHub Pages.
+Це сховище містить веб-сайт Zandaulion: доступну для пошуку колекцію з 21 проекту, окремі сторінки проекту та інтерактивний редактор діаграм Sankey. Домашня сторінка та кожна сторінка проекту доступні 12 мовами. Сайт є статичним HTML, CSS і ванільним JavaScript, розміщеним на GitHub Pages.
 
 ## Переклади README
 
@@ -30,6 +30,7 @@
 | Проект | Сторінка сайту |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android і PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -51,6 +52,8 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 
 Репозиторії додатків відокремлені від цього веб-сайту. Перейменовані сховища: [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) і [kerfloom](https://github.com/zandaulion/kerfloom).
+
+Джерело Bank DWH Studio і синтетичний складський прилад доступні в [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 
 Bitey зберігає встановлену сторінку `plate.html`. BP Digitizer має одну сторінку для обох платформ; `wbpdigitizer.html` залишається перенаправленням сумісності на `bpdigitizer.html#web-version`.
 

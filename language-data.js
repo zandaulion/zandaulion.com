@@ -61,6 +61,7 @@ window.ZandaulionLocales = [
     "dir": "rtl",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -136,6 +137,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -211,6 +213,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -286,6 +289,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -361,6 +365,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -436,6 +441,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -511,6 +517,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -586,6 +593,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -661,6 +669,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -736,6 +745,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",
@@ -811,6 +821,7 @@ window.ZandaulionLocales = [
     "dir": "ltr",
     "projects": [
       "admitere.html",
+      "bankdwhstudio.html",
       "bpdigitizer.html",
       "faceslice.html",
       "gravitygarden.html",

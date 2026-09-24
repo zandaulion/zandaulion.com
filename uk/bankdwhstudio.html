@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bank DWH Studio перетворює запитання про банківські дані природною мовою на редаговані чернетки PostgreSQL SQL, які можна перевірити та які ґрунтуються на синтетичному сховищі з 5 000 стовпців.">
+    <title>Bank DWH Studio - Чернетки SQL, які можна переглядати</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/uk/bankdwhstudio.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/bankdwhstudio.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/bankdwhstudio.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/bankdwhstudio.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/bankdwhstudio.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/bankdwhstudio.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/bankdwhstudio.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/bankdwhstudio.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/bankdwhstudio.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/bankdwhstudio.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="bankdwhstudio.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="uk">← Назад до майстерні</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">За лаштунками · Експеримент із даними та ШІ</span>
+                    <h1>Bank DWH Studio</h1>
+                    <p class="project-lead">Поставте запитання про банківські дані, перегляньте відповідну схему й отримайте редаговану чернетку SQL.</p>
+                    <div class="project-links">
+                        <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Відкрийте PWA</a>
+                        <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Переглянути на GitHub</a>
+                    </div>
+                    <p class="availability-note">Пряма трансляція PWA доступна лише за запрошеннями.</p>
+                </div>
+                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio показує банківське запитання, чернетку SQL, отриманий контекст схеми, примітки та чеки" class="project-hero-image hero-landscape bank-interface">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>Питання стає тим, що ви можете перевірити</h2>
+                <p>Bank DWH Studio — це особисте підтвердження концепції для вивчення великого сховища банківських даних за допомогою природної мови. Поставте запитання, за бажанням виберіть тематику банківської справи, і програма отримає найбільш релевантний контекст схеми перед створенням PostgreSQL SQL.</p>
+                <p>Результат навмисно більше, ніж блок коду. Він показує отримані таблиці, інтерпретацію, припущення, оглядові примітки та основні перевірки поряд із редагованим чернеткою. Якщо необхідна деталь відсутня, наприклад рік у запиті на кінець серпня, помічник може попросити роз’яснення.</p>
+
+                <h2>Як це працює</h2>
+                <ol>
+                    <li><strong>Запитайте повсякденною мовою.</strong> Опишіть потрібну банківську відповідь і звузіть пошук до предметної області, якщо це буде корисно.</li>
+                    <li><strong>Отримати обмежений фрагмент схеми.</strong> Сервер Node шукає в метаданих Elasticsearch відповідні таблиці та стовпці.</li>
+                    <li><strong>Чернетка з контекстом.</strong> Розміщена модель GPT-OSS створює SQL із цієї обмеженої схеми, тоді як правила, засновані на каталозі, обробляють підтримувані типові запитання.</li>
+                    <li><strong>Перегляньте перед використанням.</strong> Відредагуйте або скопіюйте чернетку, перевірте її контекст і припущення, а потім запустіть її окремо у своєму клієнті SQL.</li>
+                </ol>
+
+                <h2>Що на верстаку</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+                    <div class="feature-item"><h3>100 синтетичних таблиць</h3><p>Згенерований фіксатор банківського складу містить 5000 стовпців, зв’язки, PostgreSQL DDL, каталог і невелике початкове значення.</p></div>
+                    <div class="feature-item"><h3>Пошук за схемою</h3><p>Elasticsearch звужує великий каталог до метаданих, необхідних для запитання, перш ніж щось буде надіслано моделі.</p></div>
+                    <div class="feature-item"><h3>Видимий контекст міркувань</h3><p>Отримані таблиці, тлумачення, припущення, примітки та перевірки залишаються видимими, тому проект можна оскаржити, а не прийняти наосліп.</p></div>
+                    <div class="feature-item"><h3>Один PWA, багато екранів</h3><p>Інтерфейс, доступний лише для запрошення, можна встановити та адаптується від широких екранів робочого столу до компактних телефонів.</p></div>
+                </div>
+
+                <h2>Галерея</h2>
+                <p>Шість запитань для комп’ютера, ноутбука, планшета та телефону. Ці записи відтворюють перевірені відповіді, згенеровані на основі синтетичного каталогу, завдяки чому приклади портфоліо повторюються.</p>
+                <div class="gallery-grid">
+                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Активні клієнти SQL проект на робочому столі" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="Клієнти в чернетці SQL за замовчуванням на широкому робочому столі" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="Погашення кредиту SQL проект на ноутбуці" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="Проект авторизації картки SQL на альбомному планшеті" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="Депозитні залишки SQL чернетка на портретному планшеті" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="Сума оплати SQL тратта на тел" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Людина залишається в курсі</h2>
+                <p>Застосунок лише створює чернетки SQL; він ніколи не підключається до банківського сховища даних і не виконує запитів. Користувачі редагують або копіюють результат і запускають його окремо у власному клієнті бази даних. Браузер ніколи не отримує API-ключ моделі.</p>
+                <p>Автоматичні перевірки охоплюють базову форму інструкції лише для читання та посилання на відомі таблиці. Синтаксис SQL, посилання на стовпці та бізнес-зміст усе одно потребують перевірки людиною. Усі назви, зв’язки та показники у сховищі є синтетичними тестовими матеріалами, а не затвердженими банківськими визначеннями.</p>
+
+                <h2>Під капотом</h2>
+                <p>Розгорнуте підтвердження концепції запускає серверну частину Node на екземплярі Oracle Ampere A1 із Elasticsearch для отримання схеми та розміщеною моделлю GPT-OSS для креслення SQL. Репозиторій також документує ширшу майбутню архітектуру, чітко відокремлену від меншої розгорнутої POC.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Відкрийте PWA лише за запрошенням</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Перегляньте всі 10 прикладів</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Продовжуйте відкривати</span><h2 id="related-title">Можливо, вам також сподобається…</h2></div><p><a href="index.html#collection" hreflang="uk">Переглянути всю колекцію ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="uk">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">За лаштунками</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>Маленька консоль для керування запрошеннями та пристроями в приватних вебзастосунках.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="uk">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">За лаштунками</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>Маленька складова, що допомагає вебзастосункам працювати офлайн і залишатися актуальними.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="creative">
+                    <a href="sankey.html" hreflang="uk">
+                        <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Творчі інструменти</div>
+                        <h3>Редактор діаграм Sankey <span aria-hidden="true">↗</span></h3>
+                        <p>Покажіть, куди все рухається. Створюйте й експортуйте діаграми у браузері.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

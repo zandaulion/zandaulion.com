@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bank DWH Studio は、自然言語による銀行取引の質問を、5,000 列の合成ウェアハウスに基づいて編集可能でレビュー可能な PostgreSQL SQL ドラフトに変換します。">
+    <title>Bank DWH Studio - レビュー可能な SQL ドラフト</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ja/bankdwhstudio.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/bankdwhstudio.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/bankdwhstudio.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/bankdwhstudio.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/bankdwhstudio.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/bankdwhstudio.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/bankdwhstudio.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/bankdwhstudio.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/bankdwhstudio.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/bankdwhstudio.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="bankdwhstudio.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ja-JP">← 工房に戻る</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">舞台裏・データとAIの実験</span>
+                    <h1>Bank DWH Studio</h1>
+                    <p class="project-lead">銀行データについて質問し、関連するスキーマを確認して、編集可能な SQL の草案を手に入れましょう。</p>
+                    <div class="project-links">
+                        <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">PWAを開きます</a>
+                        <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHubで見る</a>
+                    </div>
+                    <p class="availability-note">ライブ PWA は招待制です。</p>
+                </div>
+                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="銀行に関する質問、SQL ドラフト、取得されたスキーマ コンテキスト、メモ、および小切手を示す Bank DWH Studio" class="project-hero-image hero-landscape bank-interface">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>質問は調べられるものになる</h2>
+                <p>Bank DWH Studio は、自然言語を通じて大規模な銀行データ ウェアハウスを探索するための個人的な概念実証です。質問をし、必要に応じて銀行のサブジェクト領域を選択すると、アプリは PostgreSQL SQL を作成する前に最も関連性の高いスキーマ コンテキストを取得します。</p>
+                <p>結果は意図的にコードブロック以上のものになります。編集可能なドラフトの横に、取得した表、解釈、仮定、レビューメモ、および基本的なチェックが表示されます。 8 月末のリクエストの年など、必要な詳細が不足している場合、アシスタントは説明を求めることができます。</p>
+
+                <h2>仕組み</h2>
+                <ol>
+                    <li><strong>日常の言葉で尋ねてください。</strong> 必要な銀行業務に関する回答を説明し、必要に応じて対象分野に検索を絞り込みます。</li>
+                    <li><strong>スキーマの境界付きスライスを取得します。</strong> Node バックエンドは、関連するテーブルと列の Elasticsearch メタデータを検索します。</li>
+                    <li><strong>コンテキストを含めて下書きします。</strong> ホストされた GPT-OSS モデルは、その制限されたスキーマから SQL を作成しますが、カタログに基づいたルールは、サポートされている一般的な質問を処理します。</li>
+                    <li><strong>使用する前に確認してください。</strong> ドラフトを編集またはコピーし、そのコンテキストと仮定を検査して、独自の SQL クライアントで個別に実行します。</li>
+                </ol>
+
+                <h2>作業台の上にあるもの</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+                    <div class="feature-item"><h3>100 の合成テーブル</h3><p>生成された銀行倉庫フィクスチャは、5,000 の列、リレーションシップ、PostgreSQL DDL、カタログ、および小さなシードを提供します。</p></div>
+                    <div class="feature-item"><h3>スキーマに基づいた検索</h3><p>Elasticsearch は、モデルに何かが送信される前に、大規模なカタログを質問に必要なメタデータに絞り込みます。</p></div>
+                    <div class="feature-item"><h3>目に見える推論コンテキスト</h3><p>取得した表、解釈、仮定、メモ、チェックは表示されたままになるため、ドラフトを盲目的に受け入れるのではなく異議を唱えることができます。</p></div>
+                    <div class="feature-item"><h3>1 つの PWA、多くの画面</h3><p>招待専用インターフェイスはインストール可能で、ワイドデスクトップ画面からコンパクトな電話まで適応します。</p></div>
+                </div>
+
+                <h2>ギャラリー</h2>
+                <p>デスクトップ、ラップトップ、タブレット、携帯電話にわたる 6 つの質問。これらのキャプチャは、合成カタログに対して生成されたレビュー済みの応答を再生し、ポートフォリオの例を再現可能にします。</p>
+                <div class="gallery-grid">
+                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="アクティブな顧客のデスクトップ上の SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="広いデスクトップ上のデフォルトの SQL ドラフトのクライアント" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="ラップトップ上のローン返済 SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="横向きタブレット上のカード認証 SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="縦長のタブレット上の預金残高 SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="電話での支払い額 SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>人間は常にループの中にいます</h2>
+                <p>このアプリは SQL の草案を作成するだけで、銀行のデータウェアハウスに接続したり、クエリを実行したりすることはありません。利用者は結果を編集またはコピーし、自分のデータベースクライアントで別途実行します。ブラウザーにモデルの API キーが渡ることはありません。</p>
+                <p>自動チェックの対象は、読み取り専用ステートメントの基本形と既知のテーブル参照です。SQL の構文、列参照、業務上の意味は引き続き人による確認が必要です。ウェアハウス内の名称、関係、指標はすべて合成したテスト資料であり、承認済みの銀行業務定義ではありません。</p>
+
+                <h2>ボンネットの下で</h2>
+                <p>デプロイされた概念実証では、Oracle Ampere A1 インスタンス上で Node バックエンドを実行し、スキーマ取得用の Elasticsearch と、SQL ドラフト用のホストされた GPT-OSS モデルを使用します。このリポジトリには、小規模に展開された POC から明確に分離された、より広範な将来のアーキテクチャも文書化されています。</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">招待専用の PWA を開きます</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">10 件の例をすべて参照する</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">もっと発見する</span><h2 id="related-title">こちらもいかがですか</h2></div><p><a href="index.html#collection" hreflang="ja-JP">すべての作品を見る ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="ja-JP">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">舞台裏の道具</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>非公開のWebアプリへの招待や端末をまとめて管理する、小さなコンソール。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ja-JP">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">舞台裏の道具</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>Webアプリのオフライン動作と更新を支える、小さな部品。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="creative">
+                    <a href="sankey.html" hreflang="ja-JP">
+                        <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">創作の道具</div>
+                        <h3>Sankey ダイアグラムエディタ <span aria-hidden="true">↗</span></h3>
+                        <p>ものの流れを図に。ブラウザで図を作成し、書き出せます。</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

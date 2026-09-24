@@ -8,7 +8,7 @@ Un atelier jucăuș pentru idei curioase: aplicații, jocuri și mici unelte de 
 
 **[Vizitați zandaulion.com](https://zandaulion.com/)** · [Colecția românească](https://zandaulion.com/ro/index.html)
 
-Acest repository conține site-ul Zandaulion: o colecție de 20 de proiecte în care poți căuta, pagini individuale pentru proiecte și un editor interactiv de diagrame Sankey. Pagina principală și toate paginile de proiect sunt disponibile în 12 limbi. Site-ul folosește HTML static, CSS și JavaScript simplu și este găzduit pe GitHub Pages.
+Acest depozit conține site-ul web Zandaulion: o colecție de 21 de proiecte care poate fi căutată, pagini de proiecte individuale și un editor de diagrame Sankey interactiv. Pagina principală și fiecare pagină de proiect sunt disponibile în 12 limbi. Site-ul este static HTML, CSS și vanilla JavaScript, găzduit pe GitHub Pages.
 
 ## Traducerile README
 
@@ -30,6 +30,7 @@ Editați fișierul README în limba engleză și cataloagele corespunzătoare î
 | Proiect | Pagina de pe site |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android și PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -51,6 +52,8 @@ Editați fișierul README în limba engleză și cataloagele corespunzătoare î
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 
 Arhivele de aplicații sunt separate de acest site web. Arhivele redenumite sunt [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) și [kerfloom](https://github.com/zandaulion/kerfloom).
+
+Sursa Bank DWH Studio și dispozitivul de depozitare sintetică trăiesc în [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 
 Bitey păstrează pagina `plate.html` stabilită. BP Digitizer are o pagină pentru ambele platforme; `wbpdigitizer.html` rămâne o redirecționare de compatibilitate către `bpdigitizer.html#web-version`.
 

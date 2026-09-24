@@ -8,7 +8,7 @@ Un atelier ludique pour les idées curieuses : des applications, des jeux et de 
 
 **[Visitez zandaulion.com](https://zandaulion.com/)** · [RCollection roumaine](https://zandaulion.com/ro/index.html)
 
-Ce référentiel contient le site Web Zandaulion : une collection consultable de 20 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
+Ce référentiel contient le site Web Zandaulion : une collection consultable de 21 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
 
 ## Traductions du README
 
@@ -30,6 +30,7 @@ Modifiez le README anglais et les catalogues correspondants dans `locales/readme
 | Projet | Page du site Web |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android et PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -51,6 +52,8 @@ Modifiez le README anglais et les catalogues correspondants dans `locales/readme
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 
 Les référentiels d'applications sont distincts de ce site Web. Les référentiels renommés sont [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) et [kerfloom](https://github.com/zandaulion/kerfloom).
+
+La source Bank DWH Studio et l'équipement d'entrepôt synthétique se trouvent dans [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 
 Bitey conserve la page `plate.html` établie. BP Digitizer comporte une page pour les deux plates-formes ; `wbpdigitizer.html` reste une redirection de compatibilité vers `bpdigitizer.html#web-version`.
 
