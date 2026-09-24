@@ -8,7 +8,7 @@
 
 **[zandaulion.com にアクセスしてください](https://zandaulion.com/)** · [ルーマニアのコレクション](https://zandaulion.com/ro/index.html)
 
-このリポジトリには、Zandaulion Web サイトが含まれています。これには、20 個のプロジェクトの検索可能なコレクション、個々のプロジェクト ページ、およびインタラクティブな Sankey 図エディターが含まれます。ホームページとすべてのプロジェクト ページは 12 か国語で利用できます。サイトは静的 HTML、CSS、およびバニラ JavaScript で、GitHub Pages でホストされています。
+このリポジトリには、21 のプロジェクトの検索可能なコレクション、個々のプロジェクト ページ、および対話型の Sankey 図エディターである Zandaulion Web サイトが含まれています。ホームページとすべてのプロジェクト ページは 12 か国語で利用できます。サイトは静的 HTML、CSS、およびバニラ JavaScript で、GitHub Pages でホストされています。
 
 ## READMEの翻訳
 
@@ -30,6 +30,7 @@
 | プロジェクト | ウェブサイトのページ |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android および PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -51,6 +52,8 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 
 アプリのリポジトリはこの Web サイトとは別のものです。名前が変更されたリポジトリは、[zandaulion.com](https://github.com/zandaulion/zandaulion.com)、[bitey](https://github.com/zandaulion/bitey)、および [kerfloom](https://github.com/zandaulion/kerfloom) です。
+
+Bank DWH Studio ソースと合成ウェアハウス フィクスチャは、[semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc) に存在します。
 
 Bitey は、確立された `plate.html` ページを保持します。 BP Digitizer には両方のプラットフォーム用の 1 ページがあります。 `wbpdigitizer.html` は、`bpdigitizer.html#web-version` への互換性リダイレクトのままです。
 

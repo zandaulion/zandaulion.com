@@ -8,7 +8,7 @@ Un taller lleno de juego para ideas curiosas: aplicaciones, juegos y pequeñas h
 
 **[Visita zandaulion.com](https://zandaulion.com/)** · [Colección rumana](https://zandaulion.com/ro/index.html)
 
-Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 20 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
+Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 21 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
 
 ## Traducciones del README
 
@@ -30,6 +30,7 @@ Edite el archivo README en inglés y los catálogos correspondientes en `locales
 | Proyecto | página web |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android y PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -51,6 +52,8 @@ Edite el archivo README en inglés y los catálogos correspondientes en `locales
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 
 Los repositorios de aplicaciones están separados de este sitio web. Los repositorios renombrados son [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) y [kerfloom](https://github.com/zandaulion/kerfloom).
+
+La fuente Bank DWH Studio y el dispositivo de almacén sintético se encuentran en [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 
 Bitey mantiene la página `plate.html` establecida. BP Digitizer tiene una página para ambas plataformas; `wbpdigitizer.html` sigue siendo una redirección de compatibilidad a `bpdigitizer.html#web-version`.
 

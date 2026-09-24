@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bank DWH Studio 将自然语言银行问题转化为基于 5,000 列合成仓库的可编辑、可审查的 PostgreSQL SQL 草稿。">
+    <title>Bank DWH Studio - 可审查的 SQL 草稿</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/zh-cn/bankdwhstudio.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/bankdwhstudio.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/bankdwhstudio.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/bankdwhstudio.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/bankdwhstudio.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/bankdwhstudio.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/bankdwhstudio.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/bankdwhstudio.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/bankdwhstudio.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/bankdwhstudio.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="bankdwhstudio.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="zh-CN">← 返回工作坊</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">幕后·数据与人工智能实验</span>
+                    <h1>Bank DWH Studio</h1>
+                    <p class="project-lead">提出银行数据问题，查看相关架构，获得可编辑的 SQL 草稿。</p>
+                    <div class="project-links">
+                        <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">打开PWA</a>
+                        <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">在 GitHub 上查看</a>
+                    </div>
+                    <p class="availability-note">现场 PWA 仅限受邀参加。</p>
+                </div>
+                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio 显示银行问题、SQL 草稿、检索到的架构上下文、注释和支票" class="project-hero-image hero-landscape bank-interface">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>问题变成了你可以检查的东西</h2>
+                <p>Bank DWH Studio 是通过自然语言探索大型银行数据仓库的个人概念证明。提出问题，可选择选择银行主题领域，应用程序会在起草 PostgreSQL SQL 之前检索最相关的架构上下文。</p>
+                <p>结果故意不仅仅是一个代码块。它显示了检索到的表格、解释、假设、审查注释和可编辑草稿旁边的基本检查。当缺少必要的细节时（例如八月底请求中的年份），助理可以要求澄清。</p>
+
+                <h2>它是如何运作的</h2>
+                <ol>
+                    <li><strong>用日常用语提问。</strong> 描述您需要的银行业答案，并在有用时将搜索范围缩小到某个主题领域。</li>
+                    <li><strong>检索模式的有界切片。</strong> Node 后端在 Elasticsearch 元数据中搜索相关表和列。</li>
+                    <li><strong>草稿与上下文。</strong> 托管的 GPT-OSS 模型从该有界架构创建 SQL，而基于目录的规则则处理支持的常见问题。</li>
+                    <li><strong>使用前请检查。</strong> 编辑或复制草稿，检查其上下文和假设，然后在您自己的 SQL 客户端中单独运行它。</li>
+                </ol>
+
+                <h2>工作台上有什么</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+                    <div class="feature-item"><h3>100张合成桌子</h3><p>生成的银行仓库固定装置提供 5,000 个列、关系、PostgreSQL DDL、目录和小种子。</p></div>
+                    <div class="feature-item"><h3>基于模式的检索</h3><p>在将任何内容发送到模型之前，Elasticsearch 将大型目录缩小到问题所需的元数据。</p></div>
+                    <div class="feature-item"><h3>可见的推理上下文</h3><p>检索到的表格、解释、假设、注释和检查保持可见，因此草案可以受到质疑，而不是盲目接受。</p></div>
+                    <div class="feature-item"><h3>一台PWA，多个屏幕</h3><p>仅限邀请的界面是可安装的，并且适用于从宽桌面屏幕到紧凑型手机。</p></div>
+                </div>
+
+                <h2>图片集</h2>
+                <p>涉及台式机、笔记本电脑、平板电脑和手机的六个问题。这些捕获重放针对综合目录生成的已审核响应，使投资组合示例可重复。</p>
+                <div class="gallery-grid">
+                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="活跃客户 SQL 桌面草稿" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="宽桌面上默认 SQL 草稿中的客户端" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="笔记本电脑上的贷款偿还 SQL 汇票" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="横向平板电脑上的卡授权 SQL 草稿" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="纵向平板电脑上的存款余额 SQL 草稿" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="电话付款金额 SQL 汇票" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>人类留在循环中</h2>
+                <p>应用只生成 SQL 草稿；它不会连接银行数据仓库，也不会执行查询。用户可编辑或复制结果，再在自己的数据库客户端中单独运行。浏览器不会收到模型 API 密钥。</p>
+                <p>自动检查仅涵盖只读语句的基本形态和已知表引用。SQL 语法、字段引用和业务含义仍须人工审查。仓库中的所有名称、关系和指标都是合成测试材料，并非获批准的银行业务定义。</p>
+
+                <h2>在引擎盖下</h2>
+                <p>已部署的概念验证在 Oracle Ampere A1 实例上运行 Node 后端，其中 Elasticsearch 用于模式检索，托管 GPT-OSS 模型用于 SQL 起草。该存储库还记录了更广泛的未来架构，与较小的部署的 POC 明显分开。</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">打开仅限邀请的 PWA</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">浏览全部 10 个示例</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">继续发现</span><h2 id="related-title">你可能还会喜欢…</h2></div><p><a href="index.html#collection" hreflang="zh-CN">查看全部作品 ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="zh-CN">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">幕后工具</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>一个小控制台，统一管理私人网页应用的邀请和设备。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="zh-CN">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">幕后工具</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>帮助网页应用离线运行并保持更新的小小构件。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="creative">
+                    <a href="sankey.html" hreflang="zh-CN">
+                        <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">创作工具</div>
+                        <h3>Sankey 图表编辑器 <span aria-hidden="true">↗</span></h3>
+                        <p>画出事物流动的方向。在浏览器中制作并导出图表。</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

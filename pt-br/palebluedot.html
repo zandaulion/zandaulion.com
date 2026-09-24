@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pale Blue Dot - Um aplicativo moderno de produtividade e utilidade.">
-    <title>Pale Blue Dot - Detalhes do aplicativo</title>
+    <meta name="description" content="Explore a Terra e o espaço com Pale Blue Dot para Android. Um globo 3D interativo, eventos recentes da Terra, descobertas e desafios para crianças curiosas de 9 a 12 anos e adultos.">
+    <title>Pale Blue Dot - Explore a Terra e o Espaço</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
     <link rel="stylesheet" href="../project.css?v=5">
@@ -39,7 +39,7 @@
                 <div class="project-intro">
                     <span class="section-number">Jogar e explorar</span>
                     <h1>Pale Blue Dot</h1>
-                    <p class="project-lead">Um pequeno planeta no seu bolso. Explore a Terra com dados astronômicos atuais e da NASA.</p>
+                    <p class="project-lead">Um pequeno planeta no seu bolso. Gire a Terra, explore o espaço e colecione descobertas.</p>
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://play.google.com/store/apps/details?id=com.zandaulion.palebluedot&amp;pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Baixe em Google Play</a>
                     <a href="https://github.com/zandaulion/Globe" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver no GitHub</a>
@@ -51,8 +51,8 @@
 
             <div class="project-content reveal">
                 <h2>Sobre o aplicativo</h2>
-                <p>Pale Blue Dot é um impressionante visualizador 3D Earth em tempo real para Android, construído inteiramente do zero com OpenGL ES 3.0 bruto e Kotlin – sem mecanismos de jogo ou bibliotecas de renderização de terceiros. Ele simula o nosso planeta e o cosmos circundante com notável precisão astronômica, apresentando posicionamento em tempo real para o Sol, a Lua e a Estação Espacial Internacional (ISS).</p>
-                <p>Mantenha-se conectado ao pulso do planeta por meio de integrações perfeitas com APIs públicos e ativos. Assista a atualizações ao vivo da cobertura de nuvens diretamente dos satélites Terra e Aqua do NASA e rastreie os recentes terremotos USGS e as erupções vulcânicas NASA EONET - tudo lindamente sobreposto em um globo totalmente interativo que apresenta ciclos diurnos/noturnos, zonas de aurora e 16.000 estrelas geradas processualmente.</p>
+                <p>Pale Blue Dot é um aplicativo 3D interativo de Terra e astronomia para crianças curiosas de 9 a 12 anos e adultos. Vire o globo, siga a fronteira entre o dia e a noite e aproveite os eventos recentes da Terra para saber o que está acontecendo em nosso pequeno planeta.</p>
+                <p>A exploração torna-se uma coleção de pequenas descobertas: mantenha um diário, tente um desafio de descoberta ou abra Hoje para um fato espacial e a fase estimada da Lua. Uma introdução de primeiro lançamento e uma legenda ilustrada ajudam você a encontrar seu caminho.</p>
 
                 <h2>Galeria</h2>
                 <div class="gallery-grid">
@@ -65,14 +65,23 @@
 
                 <h2>Recursos</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Dados ao vivo da Terra:</strong> Coberturas de nuvens VIIRS em tempo real atualizadas a cada 6 horas, além de marcadores ao vivo para terremotos M4.5+ recentes e erupções vulcânicas ativas.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Astronomia precisa:</strong> Cálculos precisos da data juliana determinam a posição em tempo real do Sol, da Lua e de ISS, completos com detecção geométrica de eclipses solares e lunares.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Mecanismo OpenGL 3D personalizado:</strong> Renderização suave e acelerada por hardware com iluminação lambertiana, brilho atmosférico Fresnel, luzes da cidade à noite e auroras dinâmicas.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Skybox Cósmico Rico:</strong> Explore um céu lindamente renderizado repleto de 16.000 estrelas cintilantes (dimensionadas pela lei de potência e coloridas por classe espectral) e 15 constelações principais usando posições reais J2000 RA/Dec.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Purificador de tempo interativo:</strong> Desloque a hora atual de ±24 horas para observar a linha do terminador varrendo o globo ou prever o caminho orbital do ISS.</li>
+                    <li><strong>Um globo para explorar:</strong> Arraste para girar, aperte para ampliar e toque na superfície para saber por que um lugar está à luz do dia ou na escuridão. As luzes da cidade, uma atmosfera e zonas de aurora animadas dão vida à cena.</li>
+                    <li><strong>Um dia em qualquer direção:</strong> Mova o controle deslizante de tempo até 24 horas para trás ou para frente para explorar o Sol, a Lua, a órbita ilustrativa ISS e o limite dia/noite. Solte-o para retornar suavemente ao agora.</li>
+                    <li><strong>Eventos da Terra:</strong> Explore terremotos, vulcões, incêndios florestais e tempestades severas com títulos, idades e explicações escritas para crianças.</li>
+                    <li><strong>Olhe além da Terra:</strong> Descubra 15 constelações, 16.000 estrelas procedimentais e uma faixa da Via Láctea. Toque nas setas indicadoras para encontrar o Sol ou a Lua, ou no marcador ISS para saber mais sobre a estação.</li>
+                    <li><strong>Descobertas e desafios:</strong> Colete oito descobertas em um diário salvo no seu dispositivo. Encontre diurno, noturno ou um evento; os desafios do evento aparecem apenas quando os dados correspondentes estão disponíveis.</li>
+                    <li><strong>Uma pequena descoberta diária:</strong> Hoje mostra a fase e a iluminação estimadas da Lua, um dos 24 fatos espaciais rotativos e um caminho para desafios.</li>
+                    <li><strong>Ouça e compartilhe:</strong> Ative a narração lida em voz alta ou música ambiente com volume ajustável. Compartilhe uma imagem de globo de marca por meio da planilha de compartilhamento do Android após o controle dos pais.</li>
                 </ul>
 
+                <h2>Observações e imaginação</h2>
+                <p>O globo combina observações públicas com simulações simplificadas. Terremotos vêm de USGS: magnitude 4,5 e superior nos últimos sete dias. NASA EONET fornece eventos vulcânicos ainda abertos, incêndios florestais dos últimos dez dias e tempestades severas dos últimos sete dias.</p>
+                <p>Desligue as nuvens, escolha as nuvens geradas ou explore a cobertura derivada de satélite das imagens SNPP NASA VIIRS do dia anterior. A imagem processada é armazenada em cache por seis horas, com uma imagem mais antiga ou nuvens geradas como substitutos. Esse cache não aciona downloads automáticos a cada seis horas; os feeds de eventos precisam de um download bem-sucedido e não possuem cache persistente.</p>
+                <p>O Sol e a Lua usam cálculos astronômicos simplificados. A ISS segue uma órbita ilustrativa, não um feed de posição ao vivo. Os alertas de eclipse indicam alinhamentos aproximados, não previsões precisas ou visibilidade local. O controle deslizante de tempo move a simulação; ele não carrega nuvens passadas ou previstas ou eventos da Terra.</p>
 
+                <h2>Feito para mentes curiosas</h2>
+                <p>Sem contas, anúncios, análises ou SDKs de rastreamento. O aplicativo solicita apenas acesso à Internet para dados públicos NASA e USGS, sem permissão de localização ou acesso GPS. As preferências e o progresso da descoberta permanecem no seu dispositivo; as imagens compartilhadas são criadas localmente e você escolhe para onde enviá-las.</p>
+                <p>Desenvolvido para telefones, tablets e dispositivos dobráveis Android, com suporte para rotação de tela. Requer Android 7.0 ou posterior e OpenGL ES 3.0. O globo é construído em Kotlin com controles nativos do Android e sem mecanismo de jogo.</p>
 
                 <div class="download-section" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
                     <h3 style="margin-bottom: 16px;">Disponível agora</h3>

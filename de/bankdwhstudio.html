@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de-DE" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bank DWH Studio verwandelt Bankfragen in natürlicher Sprache in bearbeitbare, überprüfbare PostgreSQL SQL-Entwürfe, die in einem synthetischen 5.000-Spalten-Warehouse basieren.">
+    <title>Bank DWH Studio – Überprüfbare SQL-Entwürfe</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/de/bankdwhstudio.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/bankdwhstudio.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/bankdwhstudio.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/bankdwhstudio.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/bankdwhstudio.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/bankdwhstudio.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/bankdwhstudio.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/bankdwhstudio.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/bankdwhstudio.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/bankdwhstudio.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="bankdwhstudio.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="de-DE">← Zurück zur Werkstatt</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Hinter den Kulissen · Daten- und KI-Experiment</span>
+                    <h1>Bank DWH Studio</h1>
+                    <p class="project-lead">Stelle eine Frage zu Bankdaten. Erkunde das passende Schema. Erhalte einen bearbeitbaren SQL-Entwurf.</p>
+                    <div class="project-links">
+                        <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Öffnen Sie PWA</a>
+                        <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Auf GitHub ansehen</a>
+                    </div>
+                    <p class="availability-note">Das Live-Event PWA ist nur auf Einladung möglich.</p>
+                </div>
+                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio zeigt eine Bankfrage, einen SQL-Entwurf, einen abgerufenen Schemakontext, Notizen und Schecks" class="project-hero-image hero-landscape bank-interface">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>Eine Frage wird zu etwas, das Sie untersuchen können</h2>
+                <p>Bank DWH Studio ist ein persönlicher Proof of Concept für die Erkundung eines großen Bankdatenlagers mithilfe natürlicher Sprache. Stellen Sie eine Frage, wählen Sie optional einen Bankthemenbereich aus, und die App ruft den relevantesten Schemakontext ab, bevor PostgreSQL SQL erstellt wird.</p>
+                <p>Das Ergebnis ist bewusst mehr als ein Codeblock. Es zeigt die abgerufenen Tabellen, Interpretationen, Annahmen, Überprüfungsnotizen und grundlegenden Überprüfungen neben einem bearbeitbaren Entwurf. Wenn ein notwendiges Detail fehlt – wie zum Beispiel das Jahr in einer Ende-August-Anfrage – kann der Assistent um Klarstellung bitten.</p>
+
+                <h2>Wie es funktioniert</h2>
+                <ol>
+                    <li><strong>Fragen Sie in der Alltagssprache.</strong> Beschreiben Sie die Bankantwort, die Sie benötigen, und schränken Sie die Suche bei Bedarf auf einen Themenbereich ein.</li>
+                    <li><strong>Rufen Sie einen begrenzten Ausschnitt des Schemas ab.</strong> Ein Node-Backend durchsucht Elasticsearch-Metadaten nach relevanten Tabellen und Spalten.</li>
+                    <li><strong>Entwurf mit Kontext.</strong> Ein gehostetes GPT-OSS-Modell erstellt SQL aus diesem begrenzten Schema, während katalogbasierte Regeln unterstützte häufige Fragen behandeln.</li>
+                    <li><strong>Vor der Verwendung überprüfen.</strong> Bearbeiten oder kopieren Sie den Entwurf, überprüfen Sie seinen Kontext und seine Annahmen und führen Sie ihn dann separat in Ihrem eigenen SQL-Client aus.</li>
+                </ol>
+
+                <h2>Was liegt auf der Werkbank?</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+                    <div class="feature-item"><h3>100 synthetische Tische</h3><p>Eine generierte Bank-Warehouse-Fixture bietet 5.000 Spalten, Beziehungen, PostgreSQL DDL, einen Katalog und einen kleinen Startwert.</p></div>
+                    <div class="feature-item"><h3>Schemabasierter Abruf</h3><p>Elasticsearch schränkt einen großen Katalog auf die für die Frage erforderlichen Metadaten ein, bevor etwas an das Modell gesendet wird.</p></div>
+                    <div class="feature-item"><h3>Sichtbarer Argumentationskontext</h3><p>Abgerufene Tabellen, Interpretationen, Annahmen, Notizen und Überprüfungen bleiben sichtbar, sodass der Entwurf angefochten und nicht blind akzeptiert werden kann.</p></div>
+                    <div class="feature-item"><h3>Ein PWA, viele Bildschirme</h3><p>Die nur auf Einladung zugängliche Schnittstelle ist installierbar und passt sich von breiten Desktop-Bildschirmen bis hin zu kompakten Telefonen an.</p></div>
+                </div>
+
+                <h2>Galerie</h2>
+                <p>Sechs Fragen für Desktop, Laptop, Tablet und Telefon. Diese Erfassungen geben überprüfte Antworten wieder, die anhand des synthetischen Katalogs generiert wurden, wodurch die Portfolio-Beispiele wiederholbar werden.</p>
+                <div class="gallery-grid">
+                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Aktive Kunden SQL-Entwurf auf dem Desktop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="Clients im Standard-SQL-Entwurf auf einem breiten Desktop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="Darlehensrückzahlungen SQL-Entwurf auf einem Laptop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="Kartenberechtigungen SQL Entwurf auf einem Tablet im Querformat" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="Einzahlungsguthaben SQL-Entwurf auf einem Hochformat-Tablet" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="Zahlungsvolumen SQL-Entwurf auf einem Telefon" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Der Mensch bleibt auf dem Laufenden</h2>
+                <p>Die App erstellt SQL-Entwürfe; sie verbindet sich nie mit einem Bank-Data-Warehouse und führt keine Abfragen aus. Nutzer bearbeiten oder kopieren das Ergebnis und führen es separat in ihrem eigenen Datenbank-Client aus. Der Browser erhält den API-Schlüssel des Modells zu keinem Zeitpunkt.</p>
+                <p>Automatisierte Prüfungen decken die schreibgeschützte Form der Anweisung und Verweise auf bekannte Tabellen ab. SQL-Syntax, Spaltenverweise und fachliche Bedeutung müssen weiterhin von Menschen geprüft werden. Alle Namen, Beziehungen und Kennzahlen im Warehouse sind synthetisches Testmaterial und keine freigegebenen bankfachlichen Definitionen.</p>
+
+                <h2>Unter der Haube</h2>
+                <p>Der bereitgestellte Proof of Concept führt ein Node-Backend auf einer Oracle Ampere A1-Instanz aus, mit Elasticsearch für den Schemaabruf und einem gehosteten GPT-OSS-Modell für SQL-Entwurf. Das Repository dokumentiert auch eine breitere zukünftige Architektur, klar getrennt von der kleineren bereitgestellten POC.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Öffnen Sie das nur auf Einladung zugängliche PWA</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Durchsuchen Sie alle 10 Beispiele</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Weiter auf Entdeckungsreise</span><h2 id="related-title">Das könnte dir auch gefallen…</h2></div><p><a href="index.html#collection" hreflang="de-DE">Die ganze Sammlung ansehen ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="de-DE">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Hinter den Kulissen</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>Eine kleine Konsole für Einladungen und Geräte in privaten Web-Apps.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="de-DE">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Hinter den Kulissen</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>Ein kleiner Baustein, mit dem Web-Apps offline funktionieren und aktuell bleiben.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="creative">
+                    <a href="sankey.html" hreflang="de-DE">
+                        <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Kreative Werkzeuge</div>
+                        <h3>Sankey Diagrammeditor <span aria-hidden="true">↗</span></h3>
+                        <p>Zeige, wohin Dinge fließen. Erstelle und exportiere Diagramme im Browser.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

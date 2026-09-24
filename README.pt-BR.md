@@ -8,7 +8,7 @@ Uma oficina divertida para ideias curiosas: aplicativos, jogos e pequenas ferram
 
 **[Visite zandaulion.com](https://zandaulion.com/)** · [Coleção romena](https://zandaulion.com/ro/index.html)
 
-Este repositório contém o site Zandaulion: uma coleção pesquisável de 20 projetos, páginas de projetos individuais e um editor de diagrama Sankey interativo. A página inicial e todas as páginas do projeto estão disponíveis em 12 idiomas. O site é estático HTML, CSS e vanilla JavaScript, hospedado em GitHub Pages.
+Este repositório contém o site Zandaulion: uma coleção pesquisável de 21 projetos, páginas de projetos individuais e um editor de diagrama Sankey interativo. A página inicial e todas as páginas do projeto estão disponíveis em 12 idiomas. O site é estático HTML, CSS e vanilla JavaScript, hospedado em GitHub Pages.
 
 ## Traduções do README
 
@@ -30,6 +30,7 @@ Edite o README em inglês e os catálogos correspondentes em `locales/readme/` e
 | Projeto | Página do site |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer – Android e PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
@@ -51,6 +52,8 @@ Edite o README em inglês e os catálogos correspondentes em `locales/readme/` e
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 
 Os repositórios de aplicativos são separados deste site. Os repositórios renomeados são [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) e [kerfloom](https://github.com/zandaulion/kerfloom).
+
+A fonte Bank DWH Studio e o acessório de armazém sintético residem em [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 
 Bitey mantém a página `plate.html` estabelecida. BP Digitizer possui uma página para ambas as plataformas; `wbpdigitizer.html` continua sendo um redirecionamento de compatibilidade para `bpdigitizer.html#web-version`.
 

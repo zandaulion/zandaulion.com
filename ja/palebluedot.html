@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pale Blue Dot - 最新の生産性とユーティリティ アプリケーション。">
-    <title>Pale Blue Dot - アプリ詳細</title>
+    <meta name="description" content="Android 用 Pale Blue Dot で地球と宇宙を探索しましょう。 9 ～ 12 歳の好奇心旺盛な子供たちと大人向けの、インタラクティブな 3D 地球儀、最近の地球の出来事、発見、挑戦。">
+    <title>Pale Blue Dot - 地球と宇宙を探索する</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
     <link rel="stylesheet" href="../project.css?v=5">
@@ -39,7 +39,7 @@
                 <div class="project-intro">
                     <span class="section-number">遊びと探索</span>
                     <h1>Pale Blue Dot</h1>
-                    <p class="project-lead">ポケットに小さな惑星を。最新の天文情報とNASAのデータで地球を探索。</p>
+                    <p class="project-lead">ポケットの中の小さな惑星。地球を回し、宇宙を探検して、発見を集めよう。</p>
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://play.google.com/store/apps/details?id=com.zandaulion.palebluedot&amp;pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Google Playでダウンロード</a>
                     <a href="https://github.com/zandaulion/Globe" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHubで見る</a>
@@ -51,8 +51,8 @@
 
             <div class="project-content reveal">
                 <h2>アプリについて</h2>
-                <p>Pale Blue Dot は、Android 用の素晴らしいリアルタイム 3D Earth ビューアで、生の OpenGL ES 3.0 と Kotlin を使用して完全にゼロから構築されており、ゲーム エンジンやサードパーティのレンダリング ライブラリは使用されていません。これは、太陽、月、国際宇宙ステーション (ISS) のリアルタイム測位機能を備え、驚くべき天文精度で地球と周囲の宇宙をシミュレートします。</p>
-                <p>ライブのパブリック API とのシームレスな統合を通じて、地球の脈動との接続を維持します。 NASA の Terra 衛星と Aqua 衛星からライブ雲量更新を直接監視し、最近の USGS 地震と NASA IONET 火山噴火を追跡します。これらはすべて、昼夜サイクル、オーロラ ゾーン、および手続き的に生成された 16,000 個の星を備えた完全にインタラクティブな地球儀上に美しくオーバーレイされます。</p>
+                <p>Pale Blue Dot は、9 ～ 12 歳の好奇心旺盛な子供と大人向けのインタラクティブな 3D 地球と天文アプリです。地球儀を回して昼と夜の境界線をたどり、最近の地球の出来事をタップして、私たちの小さな惑星で何が起こっているのかを学びましょう。</p>
+                <p>探検は小さな発見の集まりになります。日記をつけたり、見つけ出しチャレンジに挑戦したり、今日を開いて宇宙の事実や月の推定位相を調べたりしてください。初回起動時の概要と図解付きの凡例は、目的を見つけるのに役立ちます。</p>
 
                 <h2>ギャラリー</h2>
                 <div class="gallery-grid">
@@ -65,14 +65,23 @@
 
                 <h2>機能</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>ライブ地球データ:</strong> リアルタイムの VIIRS 雲量は 6 時間ごとに更新され、最近の M4.5 以上の地震や活発な火山噴火のライブ マーカーも表示されます。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>正確な天文学:</strong> 正確なユリウス日の計算により、太陽、月、ISS のリアルタイムの位置が決定され、幾何学的な日食と月食の検出が完了します。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>カスタム OpenGL 3D エンジン:</strong> ランバーシアン ライティング、フレネルの大気リム グロー、夜の街の明かり、ダイナミックなオーロラを特徴とする、ハードウェア アクセラレーションによるスムーズなレンダリング。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>リッチなコズミック スカイボックス:</strong> 実際の J2000 赤経/赤道位置を使用して、16,000 個のきらめく星 (べき乗則によってサイズを決定し、スペクトル クラスによって色分け) と 15 の主要な星座で満たされた美しくレンダリングされた空を探索します。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>インタラクティブなタイムスクラバー:</strong> 現在時刻を ±24 時間オフセットして、地球全体を掃引するターミネーター ラインを観察したり、ISS の軌道経路を予測したりできます。</li>
+                    <li><strong>探検する地球:</strong> ドラッグして回転し、ピンチしてズームし、表面をタップして、その場所が明るいのか暗いのかを調べます。街の明かり、雰囲気の縁、アニメーション化されたオーロラ ゾーンがシーンに命を吹き込みます。</li>
+                    <li><strong>どちらかの方向の 1 日:</strong> タイム スライダーを最大 24 時間前後に移動して、太陽、月、例示の ISS 軌道、昼と夜の境界を探索します。放すとスムーズに現在に戻ります。</li>
+                    <li><strong>地球上の出来事:</strong> 子供向けに書かれたタイトル、年齢、説明とともに、地震、火山、山火事、激しい嵐について調べてみましょう。</li>
+                    <li><strong>地球の向こう側を見てみましょう:</strong> 15 の星座、16,000 個のプロシージャル星、天の川帯を発見してください。インジケーターの矢印をタップして太陽または月を見つけるか、ISS マーカーをタップしてステーションについて確認します。</li>
+                    <li><strong>発見と課題:</strong> デバイスに保存されたジャーナルに 8 つの発見を収集します。昼、夜、またはイベントを検索します。イベント チャレンジは、一致するデータが利用可能な場合にのみ表示されます。</li>
+                    <li><strong>日々の小さな発見：</strong> 今日は、月の推定位相と照度、24 の回転宇宙の事実の 1 つ、そして課題への道を示します。</li>
+                    <li><strong>聞いて共有してください:</strong> 音量調整可能なナレーションの読み上げやアンビエント ミュージックをオンにします。保護者ゲートを通過した後、Android の共有シートを介してブランドの地球儀の画像を共有します。</li>
                 </ul>
 
+                <h2>観察と想像力</h2>
+                <p>地球儀は公開観測データと簡略化したシミュレーションを組み合わせています。地震データは USGS による過去7日間のマグニチュード4.5以上の観測です。NASA EONET からは、未終了の火山イベント、過去10日間の山火事、過去7日間の激しい嵐の情報を取得します。</p>
+                <p>雲をオフにするか、生成された雲を選択するか、前日の NASA VIIRS SNPP 画像から衛星由来のカバーを探索します。処理された画像は 6 時間キャッシュされ、古い画像または生成されたクラウドがフォールバックとして使用されます。このキャッシュは 6 時間ごとの自動ダウンロードをトリガーしません。イベント フィードはダウンロードが成功する必要があり、永続的なキャッシュはありません。</p>
+                <p>太陽と月の位置には簡略化した天文計算を使っています。ISS の軌道は説明用のモデルで、実際の位置をリアルタイムに取得するものではありません。日食・月食の通知はおおよその位置関係を示し、正確な予測や各地での見え方を示すものではありません。時間スライダーで変わるのはシミュレーションだけで、過去や予報の雲・地球上のイベントは読み込みません。</p>
 
+                <h2>好奇心旺盛な心のために作られました</h2>
+                <p>アカウント、広告、分析、追跡 SDK はありません。このアプリは、パブリック NASA および USGS データに対するインターネット アクセスのみを要求し、位置情報の許可や GPS アクセスは要求しません。設定と検出の進行状況はデバイス上に残ります。共有イメージはローカルで作成され、送信先を選択できます。</p>
+                <p>Android スマートフォン、タブレット、折りたたみ式デバイス向けに構築されており、画面回転をサポートしています。 Android 7.0以降およびOpenGL ES 3.0が必要です。地球儀は、ネイティブ Android コントロールを備えた Kotlin で構築されており、ゲーム エンジンはありません。</p>
 
                 <div class="download-section" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
                     <h3 style="margin-bottom: 16px;">今すぐ利用可能</h3>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bank DWH Studio turns natural-language banking questions into editable, reviewable PostgreSQL SQL drafts grounded in a synthetic 5,000-column warehouse.">
+    <title>Bank DWH Studio - Reviewable SQL Drafts</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=3">
+    <link rel="stylesheet" href="project.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/bankdwhstudio.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/bankdwhstudio.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/bankdwhstudio.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/bankdwhstudio.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/bankdwhstudio.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/bankdwhstudio.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/bankdwhstudio.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/bankdwhstudio.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/bankdwhstudio.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/bankdwhstudio.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="bankdwhstudio.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Behind the scenes · Data &amp; AI experiment</span>
+                    <h1>Bank DWH Studio</h1>
+                    <p class="project-lead">Ask a banking question. Explore the relevant schema. Leave with an editable SQL draft.</p>
+                    <div class="project-links">
+                        <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open the PWA</a>
+                        <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                    </div>
+                    <p class="availability-note">The live PWA is invitation-only.</p>
+                </div>
+                <img src="assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio showing a banking question, SQL draft, retrieved schema context, notes, and checks" class="project-hero-image hero-landscape bank-interface">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>A question becomes something you can inspect</h2>
+                <p>Bank DWH Studio is a personal proof of concept for exploring a large banking data warehouse through natural language. Ask a question, optionally choose a banking subject area, and the app retrieves the most relevant schema context before drafting PostgreSQL SQL.</p>
+                <p>The result is deliberately more than a code block. It shows the retrieved tables, interpretation, assumptions, review notes, and basic checks beside an editable draft. When a necessary detail is missing—such as the year in an end-of-August request—the assistant can ask for clarification.</p>
+
+                <h2>How it works</h2>
+                <ol>
+                    <li><strong>Ask in everyday language.</strong> Describe the banking answer you need and narrow the search to a subject area when useful.</li>
+                    <li><strong>Retrieve a bounded slice of the schema.</strong> A Node backend searches Elasticsearch metadata for relevant tables and columns.</li>
+                    <li><strong>Draft with context.</strong> A hosted GPT-OSS model creates SQL from that bounded schema, while catalog-grounded rules handle supported common questions.</li>
+                    <li><strong>Review before using.</strong> Edit or copy the draft, inspect its context and assumptions, then run it separately in your own SQL client.</li>
+                </ol>
+
+                <h2>What is on the workbench</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+                    <div class="feature-item"><h3>100 synthetic tables</h3><p>A generated banking warehouse fixture provides 5,000 columns, relationships, PostgreSQL DDL, a catalog, and a small seed.</p></div>
+                    <div class="feature-item"><h3>Schema-grounded retrieval</h3><p>Elasticsearch narrows a large catalog to the metadata needed for the question before anything is sent to the model.</p></div>
+                    <div class="feature-item"><h3>Visible reasoning context</h3><p>Retrieved tables, interpretation, assumptions, notes, and checks stay visible so the draft can be challenged rather than accepted blindly.</p></div>
+                    <div class="feature-item"><h3>One PWA, many screens</h3><p>The invite-only interface is installable and adapts from wide desktop screens to compact phones.</p></div>
+                </div>
+
+                <h2>Gallery</h2>
+                <p>Six questions across desktop, laptop, tablet, and phone. These captures replay reviewed responses generated against the synthetic catalog, making the portfolio examples repeatable.</p>
+                <div class="gallery-grid">
+                    <img src="assets/BankDWHStudio/01-active-customers-desktop.png" alt="Active customers SQL draft on desktop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="Clients in default SQL draft on a wide desktop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="Loan repayments SQL draft on a laptop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="Card authorizations SQL draft on a landscape tablet" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="Deposit balances SQL draft on a portrait tablet" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/BankDWHStudio/08-payment-volume-phone.png" alt="Payment volume SQL draft on a phone" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>The human stays in the loop</h2>
+                <p>The app drafts SQL; it never connects to a banking warehouse and never executes a query. Users edit or copy the result and run it separately in their own database client. The browser never receives the model API key.</p>
+                <p>Automated checks cover read-only statement shape and known table references. SQL syntax, column references, and business meaning still require human review. All warehouse names, relationships, and measures in the repository are synthetic test material rather than approved banking definitions.</p>
+
+                <h2>Under the hood</h2>
+                <p>The deployed proof of concept runs a Node backend on an Oracle Ampere A1 instance, with Elasticsearch for schema retrieval and a hosted GPT-OSS model for SQL drafting. The repository also documents a broader future architecture, clearly separated from the smaller deployed POC.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open the invite-only PWA</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Browse all 10 examples</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html">
+                        <div class="collection-image"><img src="assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Behind the scenes</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>One small console for managing invitations and devices across private web apps.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html">
+                        <div class="collection-image"><img src="assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Behind the scenes</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>The little building block that helps web apps work offline and stay up to date.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="creative">
+                    <a href="sankey.html">
+                        <div class="collection-image"><img src="assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Creative tools</div>
+                        <h3>Sankey Diagram Editor <span aria-hidden="true">↗</span></h3>
+                        <p>Make a picture of where things flow. Build and export diagrams in your browser.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="language-data.js?v=5" defer></script>
+    <script src="project.js?v=5" defer></script>
+    <script src="language.js?v=6" defer></script>
+</body>
+</html>

@@ -107,5 +107,7 @@
   "Brand artwork, project graphics, screenshots": "Markenartwork, Projektgrafiken, Screenshots",
   "GitHub Pages custom domain": "Benutzerdefinierte GitHub Pages-Domäne",
   "License and brand assets": "Lizenz und Markenmaterialien",
-  "The source code is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. See [LICENSE](LICENSE).": "Der Quellcode ist unter der Lizenz **GNU General Public License v3.0 (GPL-3.0)** lizenziert. Siehe [LICENSE](LICENSE)."
+  "The source code is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. See [LICENSE](LICENSE).": "Der Quellcode ist unter der Lizenz **GNU General Public License v3.0 (GPL-3.0)** lizenziert. Siehe [LICENSE](LICENSE).",
+  "This repository contains the Zandaulion website: a searchable collection of 21 projects, individual project pages, and an interactive Sankey diagram editor. The homepage and every project page are available in 12 languages. The site is static HTML, CSS, and vanilla JavaScript, hosted on GitHub Pages.": "Dieses Repository enthält die Zandaulion-Website: eine durchsuchbare Sammlung von 21 Projekten, einzelne Projektseiten und einen interaktiven Sankey-Diagrammeditor. Die Homepage und jede Projektseite sind in 12 Sprachen verfügbar. Die Site ist statisch HTML, CSS und Vanilla JavaScript und wird auf GitHub Pages gehostet.",
+  "The Bank DWH Studio source and synthetic warehouse fixture live in [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).": "Die Bank DWH Studio-Quelle und die synthetische Lagervorrichtung leben in [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc)."
 }

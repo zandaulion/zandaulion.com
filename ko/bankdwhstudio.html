@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bank DWH Studio는 자연어 뱅킹 질문을 편집 및 검토 가능한 합성 5,000열 창고에 기반한 PostgreSQL SQL 초안으로 변환합니다.">
+    <title>Bank DWH Studio - 검토 가능한 SQL 초안</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ko/bankdwhstudio.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/bankdwhstudio.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/bankdwhstudio.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/bankdwhstudio.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/bankdwhstudio.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/bankdwhstudio.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/bankdwhstudio.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/bankdwhstudio.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/bankdwhstudio.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/bankdwhstudio.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="bankdwhstudio.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ko-KR">← 작업실로 돌아가기</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">비하인드 스토리 · 데이터 및 AI 실험</span>
+                    <h1>Bank DWH Studio</h1>
+                    <p class="project-lead">은행 데이터에 대해 질문하고 관련 스키마를 살펴본 뒤 편집 가능한 SQL 초안을 받아 보세요.</p>
+                    <div class="project-links">
+                        <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">PWA 열기</a>
+                        <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub에서 보기</a>
+                    </div>
+                    <p class="availability-note">라이브 PWA는 초대 전용입니다.</p>
+                </div>
+                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="은행 관련 질문, SQL 초안, 검색된 스키마 컨텍스트, 메모 및 수표를 보여주는 Bank DWH Studio" class="project-hero-image hero-landscape bank-interface">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>질문은 검사할 수 있는 것이 됩니다</h2>
+                <p>Bank DWH Studio는 자연어를 통해 대규모 은행 데이터 웨어하우스를 탐색하기 위한 개인 개념 증명입니다. 질문하고 선택적으로 은행 주제 영역을 선택하면 앱이 PostgreSQL SQL 초안을 작성하기 전에 가장 관련성이 높은 스키마 컨텍스트를 검색합니다.</p>
+                <p>결과는 의도적으로 코드 블록 그 이상입니다. 편집 가능한 초안 옆에 검색된 테이블, 해석, 가정, 검토 메모 및 기본 점검 사항이 표시됩니다. 8월 말 요청의 연도와 같이 필요한 세부 정보가 누락된 경우 도우미는 설명을 요청할 수 있습니다.</p>
+
+                <h2>작동 원리</h2>
+                <ol>
+                    <li><strong>일상 언어로 물어보세요.</strong> 필요한 뱅킹 답변을 설명하고 유용할 경우 주제 영역으로 검색 범위를 좁히세요.</li>
+                    <li><strong>스키마의 제한된 조각을 검색합니다.</strong> Node 백엔드는 Elasticsearch 메타데이터에서 관련 테이블 및 열을 검색합니다.</li>
+                    <li><strong>맥락을 고려한 초안.</strong> 호스팅된 GPT-OSS 모델은 제한된 스키마에서 SQL를 생성하는 반면 카탈로그 기반 규칙은 지원되는 일반적인 질문을 처리합니다.</li>
+                    <li><strong>사용하기 전에 검토하십시오.</strong> 초안을 편집하거나 복사하고, 해당 컨텍스트와 가정을 검사한 다음, 자체 SQL 클라이언트에서 별도로 실행하세요.</li>
+                </ol>
+
+                <h2>작업대에는 무엇이 있나요?</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+                    <div class="feature-item"><h3>100개의 합성 테이블</h3><p>생성된 은행 창고 고정 장치는 5,000개의 열, 관계, PostgreSQL DDL, 카탈로그 및 작은 시드를 제공합니다.</p></div>
+                    <div class="feature-item"><h3>스키마 기반 검색</h3><p>Elasticsearch는 모델에 항목을 보내기 전에 질문에 필요한 메타데이터로 대규모 카탈로그를 좁힙니다.</p></div>
+                    <div class="feature-item"><h3>가시적 추론 맥락</h3><p>검색된 표, 해석, 가정, 메모 및 점검 사항은 눈에 잘 띄므로 초안을 맹목적으로 받아들이는 대신 이의를 제기할 수 있습니다.</p></div>
+                    <div class="feature-item"><h3>하나의 PWA, 많은 화면</h3><p>초대 전용 인터페이스는 설치가 가능하며 넓은 데스크톱 화면에서 소형 휴대폰까지 적용됩니다.</p></div>
+                </div>
+
+                <h2>갤러리</h2>
+                <p>데스크톱, 노트북, 태블릿, 휴대폰 전반에 걸친 6가지 질문입니다. 이러한 캡처는 종합 카탈로그에 대해 생성된 검토된 응답을 재생하여 포트폴리오 예제를 반복 가능하게 만듭니다.</p>
+                <div class="gallery-grid">
+                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="데스크탑의 활성 고객 SQL 초안" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="와이드 데스크탑의 기본 SQL 초안 클라이언트" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="노트북의 대출 상환 SQL 초안" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="가로형 태블릿의 카드 승인 SQL 초안" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="세로 태블릿에 SQL 환어금 잔고 입금" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="휴대폰 결제량 SQL 초안" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>인간은 루프에 머무른다</h2>
+                <p>앱은 SQL 초안만 작성하며 은행 데이터 웨어하우스에 연결하거나 쿼리를 실행하지 않습니다. 사용자는 결과를 편집하거나 복사한 뒤 자신의 데이터베이스 클라이언트에서 별도로 실행합니다. 브라우저에는 모델 API 키가 전달되지 않습니다.</p>
+                <p>자동 검사는 읽기 전용 명령문의 기본 형태와 알려진 테이블 참조만 확인합니다. SQL 구문, 열 참조, 비즈니스 의미는 여전히 사람이 검토해야 합니다. 웨어하우스의 모든 이름, 관계, 측정값은 합성 테스트 자료이며 승인된 은행 업무 정의가 아닙니다.</p>
+
+                <h2>후드 아래</h2>
+                <p>배포된 개념 증명은 Oracle Ampere A1 인스턴스에서 Node 백엔드를 실행하며, 스키마 검색을 위한 Elasticsearch와 SQL 제도를 위한 호스팅된 GPT-OSS 모델을 사용합니다. 또한 이 저장소는 더 작게 배포된 POC와 명확하게 구분된 더 광범위한 미래 아키텍처를 문서화합니다.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">초대 전용 PWA 열기</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">10개 예시 모두 찾아보기</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">계속 둘러보기</span><h2 id="related-title">이런 작품도 만나보세요</h2></div><p><a href="index.html#collection" hreflang="ko-KR">전체 모음 보기 ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="ko-KR">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">무대 뒤 도구</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>비공개 웹 앱의 초대와 기기를 한곳에서 관리하는 작은 콘솔.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ko-KR">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">무대 뒤 도구</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>웹 앱이 오프라인에서도 작동하고 최신 상태를 유지하도록 돕는 작은 구성 요소.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="creative">
+                    <a href="sankey.html" hreflang="ko-KR">
+                        <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">창작 도구</div>
+                        <h3>Sankey 다이어그램 편집기 <span aria-hidden="true">↗</span></h3>
+                        <p>무엇이 어디로 흐르는지 그려보세요. 브라우저에서 다이어그램을 만들고 내보낼 수 있어요.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

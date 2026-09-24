@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bank DWH Studio transformă întrebări despre date bancare, formulate în limbaj natural, în schițe SQL PostgreSQL editabile și ușor de verificat, bazate pe un depozit sintetic cu 5.000 de coloane.">
+    <title>Bank DWH Studio - Schițe SQL ușor de verificat</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ro/bankdwhstudio.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/bankdwhstudio.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/bankdwhstudio.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/bankdwhstudio.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/bankdwhstudio.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/bankdwhstudio.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/bankdwhstudio.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/bankdwhstudio.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/bankdwhstudio.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/bankdwhstudio.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/bankdwhstudio.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="bankdwhstudio.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ro">← Înapoi în atelier</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">În culise · Experiment cu date și AI</span>
+                    <h1>Bank DWH Studio</h1>
+                    <p class="project-lead">Pune o întrebare despre date bancare. Explorează schema relevantă. Obține o schiță SQL editabilă.</p>
+                    <div class="project-links">
+                        <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Deschide aplicația PWA</a>
+                        <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Vezi pe GitHub</a>
+                    </div>
+                    <p class="availability-note">Aplicația PWA este disponibilă numai pe bază de invitație.</p>
+                </div>
+                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio afișând o întrebare despre date bancare, schița SQL, contextul extras din schemă, notele și verificările" class="project-hero-image hero-landscape bank-interface">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>O întrebare devine un rezultat pe care îl poți verifica</h2>
+                <p>Bank DWH Studio este un proiect demonstrativ personal pentru explorarea unui depozit mare de date bancare prin limbaj natural. Pune o întrebare, alege opțional un domeniu bancar, iar aplicația extrage cel mai relevant context din schemă înainte de a redacta SQL pentru PostgreSQL.</p>
+                <p>Rezultatul oferă intenționat mai mult decât un bloc de cod. Alături de schița editabilă apar tabelele găsite, interpretarea întrebării, ipotezele, notele pentru revizuire și verificările de bază. Când lipsește un detaliu necesar, precum anul dintr-o întrebare despre sfârșitul lunii august, asistentul poate cere o clarificare.</p>
+
+                <h2>Cum funcționează</h2>
+                <ol>
+                    <li><strong>Întreabă în limbaj obișnuit.</strong> Descrie răspunsul de care ai nevoie și restrânge căutarea la un domeniu bancar atunci când este util.</li>
+                    <li><strong>Extrage o parte bine delimitată a schemei.</strong> Un backend Node caută în metadatele Elasticsearch tabelele și coloanele relevante.</li>
+                    <li><strong>Redactează folosind contextul.</strong> Un model GPT-OSS găzduit creează SQL din această parte delimitată a schemei, iar regulile bazate pe catalog tratează întrebările uzuale acceptate.</li>
+                    <li><strong>Verifică înainte de utilizare.</strong> Editează sau copiază schița, verifică-i contextul și ipotezele, apoi ruleaz-o separat în propriul client SQL.</li>
+                </ol>
+
+                <h2>Ce se află pe bancul de lucru</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+                    <div class="feature-item"><h3>100 de tabele sintetice</h3><p>Un depozit bancar generat oferă 5.000 de coloane, relații, definiții PostgreSQL DDL, un catalog și un set minimal de date.</p></div>
+                    <div class="feature-item"><h3>Căutare bazată pe schemă</h3><p>Elasticsearch restrânge catalogul mare la metadatele necesare întrebării înainte ca informațiile să fie trimise modelului.</p></div>
+                    <div class="feature-item"><h3>Context vizibil pentru verificare</h3><p>Tabelele găsite, interpretarea, ipotezele, notele și verificările rămân vizibile, astfel încât schița să poată fi analizată critic înainte de a fi acceptată.</p></div>
+                    <div class="feature-item"><h3>O aplicație PWA, multe ecrane</h3><p>Interfața disponibilă pe bază de invitație poate fi instalată și se adaptează de la ecrane desktop late până la telefoane compacte.</p></div>
+                </div>
+
+                <h2>Galerie</h2>
+                <p>Șase întrebări prezentate pe desktop, laptop, tabletă și telefon. Capturile redau răspunsuri verificate, generate folosind catalogul sintetic, astfel încât exemplele din portofoliu să poată fi reproduse.</p>
+                <div class="gallery-grid">
+                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Schiță SQL despre clienții activi, pe desktop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="Schiță SQL despre clienții în stare de neplată, pe un ecran desktop lat" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="Schiță SQL despre rambursările creditelor, pe laptop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="Schiță SQL despre autorizările cardurilor, pe o tabletă orientată peisaj" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="Schiță SQL despre soldurile depozitelor, pe o tabletă orientată portret" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="Schiță SQL despre volumul plăților, pe telefon" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Omul păstrează controlul</h2>
+                <p>Aplicația redactează SQL, dar nu se conectează niciodată la un depozit de date bancare și nu execută interogări. Utilizatorii editează sau copiază rezultatul și îl rulează separat în propriul client de baze de date. Browserul nu primește niciodată cheia API a modelului.</p>
+                <p>Verificările automate acoperă forma instrucțiunilor doar pentru citire și referințele la tabele cunoscute. Sintaxa SQL, referințele la coloane și semnificația de business necesită în continuare verificare umană. Toate numele, relațiile și indicatorii din depozitul inclus în proiect sunt date sintetice pentru testare, nu definiții bancare aprobate.</p>
+
+                <h2>Cum este construit</h2>
+                <p>Proiectul demonstrativ rulează un backend Node pe o instanță Oracle Ampere A1, folosește Elasticsearch pentru căutarea în schemă și un model GPT-OSS găzduit pentru redactarea SQL. Repository-ul documentează și o posibilă arhitectură viitoare mai amplă, delimitată clar de proiectul demonstrativ implementat.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Deschide aplicația PWA pe bază de invitație</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Vezi toate cele 10 exemple</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Descoperă o altă pistă</span><h2 id="related-title">Poate îți mai place și…</h2></div><p><a href="index.html#collection" hreflang="ro">Vezi întreaga colecție ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="ro">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">În culise</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>O mică consolă pentru gestionarea invitațiilor și dispozitivelor din aplicații web private.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ro">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">În culise</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>Mica piesă care ajută aplicațiile web să funcționeze offline și să rămână la zi.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="creative">
+                    <a href="sankey.html" hreflang="ro">
+                        <div class="collection-image"><img src="../assets/Sankey/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Unelte creative</div>
+                        <h3>Sankey Editor de diagrame <span aria-hidden="true">↗</span></h3>
+                        <p>Arată cum circulă lucrurile. Creează și exportă diagrame direct în browser.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

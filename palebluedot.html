@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pale Blue Dot - A modern productivity and utility application.">
-    <title>Pale Blue Dot - App Details</title>
+    <meta name="description" content="Explore Earth and space with Pale Blue Dot for Android. An interactive 3D globe, recent Earth events, discoveries, and challenges for curious kids ages 9–12 and grown-ups.">
+    <title>Pale Blue Dot - Explore Earth and Space</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <link rel="stylesheet" href="workshop.css?v=3">
     <link rel="stylesheet" href="project.css?v=5">
@@ -39,7 +39,7 @@
                 <div class="project-intro">
                     <span class="section-number">Play &amp; explore</span>
                     <h1>Pale Blue Dot</h1>
-                    <p class="project-lead">A little planet in your pocket. Explore Earth with live astronomy and NASA data.</p>
+                    <p class="project-lead">A little planet in your pocket. Spin Earth, explore space, and collect discoveries.</p>
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://play.google.com/store/apps/details?id=com.zandaulion.palebluedot&pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download on Google Play</a>
                     <a href="https://github.com/zandaulion/Globe" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
@@ -51,8 +51,8 @@
 
             <div class="project-content reveal">
                 <h2>About The App</h2>
-                <p>Pale Blue Dot is a stunning, real-time 3D Earth viewer for Android, built entirely from scratch with raw OpenGL ES 3.0 and Kotlin—no game engines or third-party rendering libraries. It simulates our planet and the surrounding cosmos with remarkable astronomical accuracy, featuring real-time positioning for the Sun, Moon, and the International Space Station (ISS).</p>
-                <p>Stay connected to the planet's pulse through seamless integrations with live, public APIs. Watch live cloud cover updates directly from NASA's Terra and Aqua satellites, and track recent USGS earthquakes and NASA EONET volcanic eruptions—all overlaid beautifully onto a fully interactive globe that features day/night cycles, aurora zones, and 16,000 procedurally generated stars.</p>
+                <p>Pale Blue Dot is an interactive 3D Earth and astronomy app for curious kids ages 9–12 and grown-ups. Turn the globe, follow the boundary between day and night, and tap recent Earth events to learn what is happening on our small planet.</p>
+                <p>Exploration becomes a collection of little discoveries: keep a journal, try a find-it challenge, or open Today for a space fact and the Moon's estimated phase. A first-launch introduction and illustrated legend help you find your way.</p>
 
                 <h2>Gallery</h2>
                 <div class="gallery-grid">
@@ -65,14 +65,23 @@
 
                 <h2>Features</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Live Earth Data:</strong> Real-time VIIRS cloud covers updated every 6 hours, plus live markers for recent M4.5+ earthquakes and active volcanic eruptions.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Precise Astronomy:</strong> Accurate Julian Date calculations drive the real-time position of the Sun, Moon, and ISS, complete with geometric solar and lunar eclipse detection.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Custom OpenGL 3D Engine:</strong> Smooth, hardware-accelerated rendering featuring Lambertian lighting, Fresnel atmospheric rim glow, city lights at night, and dynamic auroras.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Rich Cosmic Skybox:</strong> Explore a beautifully rendered sky filled with 16,000 twinkling stars (sized by power-law and colored by spectral class) and 15 major constellations using real J2000 RA/Dec positions.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Interactive Time Scrubber:</strong> Offset the current time ±24 hours to watch the terminator line sweep across the globe or predict the ISS's orbital path.</li>
+                    <li><strong>A globe to explore:</strong> Drag to rotate, pinch to zoom, and tap the surface to learn why a place is in daylight or darkness. City lights, an atmosphere rim, and animated aurora zones bring the scene to life.</li>
+                    <li><strong>A day in either direction:</strong> Move the time slider up to 24 hours backward or forward to explore the Sun, Moon, illustrative ISS orbit, and day/night boundary. Release it to return smoothly to now.</li>
+                    <li><strong>Earth events:</strong> Explore earthquakes, volcanoes, wildfires, and severe storms with titles, ages, and explanations written for kids.</li>
+                    <li><strong>Look beyond Earth:</strong> Discover 15 constellations, 16,000 procedural stars, and a Milky Way band. Tap indicator arrows to find the Sun or Moon, or the ISS marker to learn about the station.</li>
+                    <li><strong>Discoveries and challenges:</strong> Collect eight discoveries in a journal saved on your device. Find daytime, night-time, or an event; event challenges appear only when matching data is available.</li>
+                    <li><strong>A small daily discovery:</strong> Today shows the Moon's estimated phase and illumination, one of 24 rotating space facts, and a way into challenges.</li>
+                    <li><strong>Listen and share:</strong> Turn on read-aloud narration or ambient music with adjustable volume. Share a branded globe image through Android's share sheet after a parental gate.</li>
                 </ul>
 
+                <h2>Observations and imagination</h2>
+                <p>The globe combines public observations with simplified simulations. Earthquakes come from USGS: magnitude 4.5 and above over the past seven days. NASA EONET supplies open volcano events, wildfires from the past ten days, and severe storms from the past seven days.</p>
+                <p>Switch clouds off, choose generated clouds, or explore satellite-derived cover from the previous day's NASA VIIRS SNPP imagery. The processed image is cached for six hours, with an older image or generated clouds as fallbacks. This cache does not trigger automatic downloads every six hours; event feeds need a successful download and have no persistent cache.</p>
+                <p>The Sun and Moon use simplified astronomical calculations. The ISS follows an illustrative orbit, not a live position feed. Eclipse alerts indicate approximate alignments, not precise predictions or local visibility. The time slider moves the simulation; it does not load past or forecast clouds or Earth events.</p>
 
+                <h2>Made for curious minds</h2>
+                <p>No accounts, ads, analytics, or tracking SDKs. The app requests only internet access for public NASA and USGS data, with no location permission or GPS access. Preferences and discovery progress stay on your device; shared images are created locally, and you choose where to send them.</p>
+                <p>Built for Android phones, tablets, and foldables, with support for screen rotation. Requires Android 7.0 or later and OpenGL ES 3.0. The globe is built in Kotlin with native Android controls and no game engine.</p>
 
                 <div class="download-section" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
                     <h3 style="margin-bottom: 16px;">Available Now</h3>
