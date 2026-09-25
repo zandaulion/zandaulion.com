@@ -4,6 +4,7 @@ Approved direction: a calm, curious adult lion in loose pen strokes. Preserve th
 expression and silhouette; do not simplify it into a cartoon mascot.
 
 - `lion-light-v2.png`: forest-green mark on transparency, for light backgrounds.
+- `lion-light-v2-white.png`: forest-green mark on solid white background.
 - `lion-dark-v2.png`: cream mark on forest green, for dark backgrounds.
 - The original `logo.jpg` and `logo_light.jpg` remain available for older references.
 - Website lettering is rendered separately so the mark stays legible in the header.
