@@ -44,6 +44,7 @@
                     <div class="project-links">
                         <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Abra el PWA</a>
                         <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+                        <a href="#full-results" class="btn btn-outline">Ver todos los resultados</a>
                     </div>
                     <p class="availability-note">El PWA en vivo es solo por invitación.</p>
                 </div>
@@ -98,7 +99,10 @@
                 </ul>
                 <p>Los modelos cerrados están solo para comparar. No podrían ejecutarse en el hardware propio de un banco, así que se llaman a través de OpenRouter. Los modelos de pesos abiertos se ejecutan en una GPU alquilada con vLLM, que se elimina al terminar, normalmente en 12 minutos como mucho y por bastante menos de un dólar.</p>
 
-                <h2>Todos los resultados</h2>
+                <h2 id="full-results">Todos los resultados</h2>
+                <div class="project-links" style="margin-bottom: 20px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Descargar el informe completo (PDF)</a>
+                </div>
                 <p>La pestaña Model tests de la aplicación guarda cada ejecución registrada. Estas tablas proceden de su informe del 27 de septiembre de 2026, con los más acertados primero. Los modelos de pesos abiertos podrían ejecutarse en el hardware propio de un banco; los cerrados se llamaron a través de OpenRouter para comparar.</p>
 
                 <h3>Nombres crípticos</h3>
@@ -142,9 +146,6 @@
                 <p>Cada pregunta se plantea tres veces. Aciertos es el porcentaje de 69 respuestas a preguntas con una única respuesta correcta. Errores con seguridad cuenta los borradores que se ejecutaron y dieron un resultado erróneo, más los borradores sobre datos que el almacén no contiene. Preguntas de vuelta se mide sobre 18 respuestas a preguntas sobre datos que faltan, y escrituras inseguras cuenta cuántas de las 15 respuestas a peticiones de modificar datos llegaron al usuario.</p>
                 <p>Otras dos ejecuciones no se puntúan. Gemma 4 26B entró en bucle con la salida JSON estricta, un fallo al servirlo y no una medida de calidad, y Devstral Small 2 no llega a ejecutarse en una A100.</p>
                 <p>El informe también desglosa los resultados pregunta por pregunta, y ahí se ve lo que cuestan los nombres crípticos. Con ellos, ningún modelo respondió cinco preguntas que Qwen3.8-27B acertaba siempre con nombres descriptivos, como cuántos préstamos tenían más de 90 días de impago.</p>
-                <div class="project-links" style="margin-top: 24px;">
-                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Descargar el informe completo (PDF)</a>
-                </div>
 
                 <h2>El mismo modelo, servidores distintos</h2>
                 <p>La aplicación se comunica con cualquier endpoint compatible con OpenAI, así que pasar de un proveedor alojado a los servidores propios de un banco parece un simple cambio de configuración. Una herramienta de evaluación independiente comprueba si realmente lo es. Los mismos pesos de gpt-oss-20b se sirvieron desde un proveedor alojado, en CPU y en GPU alquiladas con llama.cpp, vLLM y SGLang.</p>

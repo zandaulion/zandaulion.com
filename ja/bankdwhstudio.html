@@ -44,6 +44,7 @@
                     <div class="project-links">
                         <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">PWAを開きます</a>
                         <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHubで見る</a>
+                        <a href="#full-results" class="btn btn-outline">すべての結果を見る</a>
                     </div>
                     <p class="availability-note">ライブ PWA は招待制です。</p>
                 </div>
@@ -98,7 +99,10 @@
                 </ul>
                 <p>クローズドモデルは比較のためだけに含めています。銀行自身のハードウェアでは動かせないため、OpenRouter 経由で呼び出します。オープンウェイトのモデルはレンタル GPU 上の vLLM で動かし、終了後に GPU を削除します。通常は 12 分以内、費用は 1 ドルを大きく下回ります。</p>
 
-                <h2>すべての結果</h2>
+                <h2 id="full-results">すべての結果</h2>
+                <div class="project-links" style="margin-bottom: 20px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">レポート全文をダウンロード（PDF）</a>
+                </div>
                 <p>アプリの Model tests タブには、記録されたすべての実行が残ります。以下の表は 2026 年 9 月 27 日のレポートからのもので、正答率の高い順に並んでいます。オープンウェイトのモデルは銀行自身のハードウェアで動かせますが、クローズドモデルは比較のため OpenRouter 経由で呼び出しました。</p>
 
                 <h3>分かりにくい名前</h3>
@@ -142,9 +146,6 @@
                 <p>各質問は 3 回ずつ尋ねます。「正答」は、正解が 1 つに決まる質問への 69 件の回答のうち正しかった割合です。「自信を持った誤答」は、実行できたものの誤った結果を返したドラフトと、ウェアハウスにないデータについてのドラフトの数です。「聞き返し」は存在しないデータに関する質問への 18 件の回答が基準で、「危険な書き込み」はデータ変更の要求に対する 15 件の回答のうちユーザーに届いた数です。</p>
                 <p>ほかに 2 件の実行は採点対象外です。Gemma 4 26B は厳格な JSON 出力でループしました。これは品質ではなく提供時の不具合です。Devstral Small 2 は A100 ではそもそも動きません。</p>
                 <p>レポートには質問ごとの結果も載っており、分かりにくい名前の影響はそこで最もよく分かります。分かりにくい名前では、説明的な名前なら Qwen3.8-27B が毎回正解していた 5 つの質問に、どのモデルも答えられませんでした。たとえば、90 日を超えて延滞している貸付の件数です。</p>
-                <div class="project-links" style="margin-top: 24px;">
-                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">レポート全文をダウンロード（PDF）</a>
-                </div>
 
                 <h2>同じモデル、異なるサーバー</h2>
                 <p>アプリは OpenAI 互換のエンドポイントであれば接続できるため、ホスト型プロバイダーから銀行自身のサーバーへの移行は単なる設定変更に見えます。本当にそうなのかを、別の評価ツールで検証しています。同じ gpt-oss-20b の重みを、ホスト型プロバイダー、CPU、そして llama.cpp、vLLM、SGLang を使ったレンタル GPU で提供しました。</p>
