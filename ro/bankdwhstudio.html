@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ro" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against semantic-layer-poc commit 58c1a5cb34baa6b65eaaa78872c8cea144f94ba4 (2026-09-27). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio transformă întrebări despre date bancare, formulate în limbaj natural, în schițe SQL PostgreSQL editabile și ușor de verificat, bazate pe un depozit sintetic cu 5.000 de coloane.">
+    <meta name="description" content="Bank DWH Studio transformă întrebările bancare în limbaj natural în schițe SQL PostgreSQL editabile și ușor de verificat și măsoară cât de des modelul răspunde corect.">
     <title>Bank DWH Studio - Schițe SQL ușor de verificat</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=7">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -46,7 +47,7 @@
                     </div>
                     <p class="availability-note">Aplicația PWA este disponibilă numai pe bază de invitație.</p>
                 </div>
-                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio afișând o întrebare despre date bancare, schița SQL, contextul extras din schemă, notele și verificările" class="project-hero-image hero-landscape bank-interface">
+                <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="Bank DWH Studio cu o întrebare despre primii cinci clienți după transferuri bancare, schița SQL, contextul de schemă găsit, notele și verificările" class="project-hero-image hero-landscape bank-interface">
             </div>
 
             <div class="project-content reveal">
@@ -67,18 +68,40 @@
                     <div class="feature-item"><h3>100 de tabele sintetice</h3><p>Un depozit bancar generat oferă 5.000 de coloane, relații, definiții PostgreSQL DDL, un catalog și un set minimal de date.</p></div>
                     <div class="feature-item"><h3>Căutare bazată pe schemă</h3><p>Elasticsearch restrânge catalogul mare la metadatele necesare întrebării înainte ca informațiile să fie trimise modelului.</p></div>
                     <div class="feature-item"><h3>Context vizibil pentru verificare</h3><p>Tabelele găsite, interpretarea, ipotezele, notele și verificările rămân vizibile, astfel încât schița să poată fi analizată critic înainte de a fi acceptată.</p></div>
+                    <div class="feature-item"><h3>Răspunsuri la care poți reveni</h3><p>Fiecare răspuns, inclusiv o întrebare adresată ție, este salvat într-un istoric pe dispozitivul tău. Restaurează o schiță anterioară sau șterge-le pe cele de care nu mai ai nevoie.</p></div>
+                    <div class="feature-item"><h3>Teste de modele, incluse</h3><p>Două file arată fiecare rulare a benchmarkului, exportă rezultatele în PDF și permit dispozitivelor aprobate să testeze un model nou pe un GPU închiriat, cu progres în timp real.</p></div>
                     <div class="feature-item"><h3>O aplicație PWA, multe ecrane</h3><p>Interfața disponibilă pe bază de invitație poate fi instalată și se adaptează de la ecrane desktop late până la telefoane compacte.</p></div>
                 </div>
 
+                <h2>Măsurat, nu presupus</h2>
+                <p>Un instrument care scrie SQL este util doar dacă SQL-ul este corect, așa că repository-ul măsoară acest lucru în loc să-l ia de bun.</p>
+                <p>Un benchmark de modele pune 46 de întrebări dificile, de câte trei ori fiecare. Întrebările cu un singur răspuns corect sunt evaluate rulând schița pe o copie PostgreSQL populată a depozitului de date. Întrebările despre date pe care depozitul nu le conține, cum ar fi salariile sau pierderea clienților, ar trebui să primească o întrebare înapoi. Cererile de modificare a datelor nu trebuie să ajungă niciodată la utilizator.</p>
+                <p>Cea mai importantă cifră este cât de des un model greșește cu încredere: o schiță care rulează, dar dă un răspuns greșit, sau un răspuns despre date care nu există. Ambele arată ca răspunsuri reale și tocmai de aceea sunt riscante.</p>
+                <ul>
+                    <li><strong>gpt-oss-20b, modelul folosit de aplicație:</strong> 86% corecte, 5 răspunsuri greșite cu încredere și aproximativ 200 de întrebări pe minut pe un singur A100.</li>
+                    <li><strong>Qwen3.8-27B:</strong> 96% corecte, fără niciun răspuns greșit cu încredere, dar de aproximativ cinci ori mai lent.</li>
+                    <li><strong>gpt-oss-120b:</strong> nu este mai precis decât 20b și are mai puțin de jumătate din viteza lui.</li>
+                </ul>
+                <p>Toate trei au cerut clarificări de fiecare dată când trebuiau, iar verificarea SQL a oprit orice scriere încercată de gpt-oss-20b. Fiecare rulare a benchmarkului închiriază un GPU, servește modelul cu vLLM și șterge GPU-ul la final, de obicei în cel mult 12 minute și pentru mult sub un dolar.</p>
+
+                <h2>Același model, servere diferite</h2>
+                <p>Aplicația comunică cu orice endpoint compatibil OpenAI, așa că trecerea de la un furnizor găzduit la serverele proprii ale unei bănci pare o simplă schimbare de configurare. Un sistem separat de evaluare verifică dacă chiar așa este. Aceleași ponderi gpt-oss-20b au fost servite de un furnizor găzduit, pe CPU și pe GPU-uri închiriate prin llama.cpp, vLLM și SGLang.</p>
+                <p>Fiecare server a ales tabelele corecte. Diferențele au apărut în altă parte: în joinurile opționale adăugate de o schiță, în faptul că o cerere distructivă a fost refuzată sau oprită mai târziu de verificarea SQL și sub sarcină. vLLM a respectat formatul JSON strict cu 64 de cereri simultane și a ajuns la aproximativ 270 de întrebări pe minut pe un singur RTX 4090. SGLang a încălcat acest format sub sarcină până când a fost pornit cu o setare mai strictă, o eroare care nu a apărut niciodată cu o singură cerere odată.</p>
+                <p>Un alt experiment a rescris catalogul cu nume abreviate, în stil mainframe. Cu descrierile tabelelor și coloanelor păstrate, ambele modele au trecut toate cele douăsprezece întrebări de bază. Fără descrieri, doar jumătate au trecut, un semn clar că metadatele bune contează la fel de mult ca modelul.</p>
+
                 <h2>Galerie</h2>
-                <p>Șase întrebări prezentate pe desktop, laptop, tabletă și telefon. Capturile redau răspunsuri verificate, generate folosind catalogul sintetic, astfel încât exemplele din portofoliu să poată fi reproduse.</p>
-                <div class="gallery-grid">
-                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Schiță SQL despre clienții activi, pe desktop" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="Schiță SQL despre clienții în stare de neplată, pe un ecran desktop lat" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="Schiță SQL despre rambursările creditelor, pe laptop" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="Schiță SQL despre autorizările cardurilor, pe o tabletă orientată peisaj" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="Schiță SQL despre soldurile depozitelor, pe o tabletă orientată portret" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="Schiță SQL despre volumul plăților, pe telefon" class="gallery-img" loading="lazy" decoding="async">
+                <p>Zece întrebări dificile din benchmark, de la un desktop lat la un telefon mic. Fiecare schiță SQL a fost scrisă de fluxul și modelul aplicației, apoi verificată prin rulare pe depozitul populat; toate zece au dat răspunsul corect. Capturile de ecran redau aceste răspunsuri înregistrate, deci sunt reproductibile și nu conțin date bancare reale.</p>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="Primii cinci clienți după valoarea transferurilor bancare, pe desktop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-wire-and-atm-customers-desktop-wide.png" alt="Clienți cu un transfer bancar și o tranzacție ATM, pe un desktop lat" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loans-90-days-past-due-laptop.png" alt="Credite cu peste 90 de zile de întârziere, pe un laptop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-top-merchant-categories-tablet-landscape.png" alt="Categoriile de comercianți cu cea mai mare valoare a autorizărilor de card, pe o tabletă în mod peisaj" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-declined-card-share-tablet-portrait.png" alt="Ponderea autorizărilor de card refuzate, pe o tabletă în mod portret" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/06-escalated-complaints-tablet-compact.png" alt="Reclamații escaladate pe categorie, pe o tabletă compactă" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/07-high-aml-alerts-phone-large.png" alt="Alerte AML de severitate ridicată pe jurisdicție, pe un telefon mare" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-mobile-transactions-phone.png" alt="Tranzacții prin Mobile App pe an, pe un telefon" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/09-closing-balance-phone-compact.png" alt="Soldul mediu de închidere al conturilor, pe un telefon compact" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/10-sme-cross-border-phone-small.png" alt="Clienți IMM cu un transfer bancar transfrontalier, pe un telefon mic" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Omul păstrează controlul</h2>
@@ -86,10 +109,11 @@
                 <p>Verificările automate acoperă forma instrucțiunilor doar pentru citire și referințele la tabele cunoscute. Sintaxa SQL, referințele la coloane și semnificația de business necesită în continuare verificare umană. Toate numele, relațiile și indicatorii din depozitul inclus în proiect sunt date sintetice pentru testare, nu definiții bancare aprobate.</p>
 
                 <h2>Cum este construit</h2>
-                <p>Proiectul demonstrativ rulează un backend Node pe o instanță Oracle Ampere A1, folosește Elasticsearch pentru căutarea în schemă și un model GPT-OSS găzduit pentru redactarea SQL. Repository-ul documentează și o posibilă arhitectură viitoare mai amplă, delimitată clar de proiectul demonstrativ implementat.</p>
+                <p>Proiectul demonstrativ rulează un backend Node și Elasticsearch în containere rootless pe o instanță Oracle Ampere A1 și redactează SQL cu gpt-oss-20b printr-un furnizor găzduit. Repository-ul documentează și o posibilă arhitectură viitoare mai amplă, delimitată clar de proiectul demonstrativ implementat.</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Deschide aplicația PWA pe bază de invitație</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Vezi toate cele 10 exemple</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/blob/main/app/eval/bench/README.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Citește benchmarkul de modele</a>
                 </div>
             </div>
         </div>

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="hi-IN" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against semantic-layer-poc commit 58c1a5cb34baa6b65eaaa78872c8cea144f94ba4 (2026-09-27). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio प्राकृतिक भाषा के बैंकिंग प्रश्नों को संपादन योग्य, समीक्षा योग्य PostgreSQL SQL ड्राफ्ट में बदल देता है, जिन्हें सिंथेटिक 5,000-कॉलम वेयरहाउस में रखा गया है।">
+    <meta name="description" content="Bank DWH Studio सामान्य भाषा में पूछे गए बैंकिंग सवालों को संपादन योग्य और समीक्षा योग्य PostgreSQL SQL ड्राफ़्ट में बदलता है, और मापता है कि मॉडल कितनी बार सही जवाब देता है।">
     <title>Bank DWH Studio - समीक्षा योग्य SQL ड्राफ्ट</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=7">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -46,7 +47,7 @@
                     </div>
                     <p class="availability-note">लाइव PWA केवल आमंत्रण के लिए है।</p>
                 </div>
-                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio एक बैंकिंग प्रश्न, SQL ड्राफ्ट, पुनर्प्राप्त स्कीमा संदर्भ, नोट्स और चेक दिखा रहा है" class="project-hero-image hero-landscape bank-interface">
+                <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="Bank DWH Studio में वायर ट्रांसफ़र की सबसे बड़ी राशि वाले पाँच ग्राहकों का सवाल, उसका SQL ड्राफ़्ट, खोजा गया स्कीमा संदर्भ, नोट्स और जाँचें" class="project-hero-image hero-landscape bank-interface">
             </div>
 
             <div class="project-content reveal">
@@ -67,18 +68,40 @@
                     <div class="feature-item"><h3>100 सिंथेटिक टेबल</h3><p>एक उत्पन्न बैंकिंग वेयरहाउस फिक्स्चर 5,000 कॉलम, रिश्ते, PostgreSQL DDL, एक कैटलॉग और एक छोटा बीज प्रदान करता है।</p></div>
                     <div class="feature-item"><h3>स्कीमा-आधारित पुनर्प्राप्ति</h3><p>Elasticsearch मॉडल में कुछ भी भेजने से पहले प्रश्न के लिए आवश्यक मेटाडेटा तक एक बड़ी सूची को सीमित कर देता है।</p></div>
                     <div class="feature-item"><h3>दर्शनीय तर्क प्रसंग</h3><p>पुनर्प्राप्त तालिकाएँ, व्याख्याएँ, धारणाएँ, नोट्स और चेक दृश्यमान रहते हैं ताकि मसौदे को आँख बंद करके स्वीकार करने के बजाय चुनौती दी जा सके।</p></div>
+                    <div class="feature-item"><h3>जवाब, जिन पर आप लौट सकें</h3><p>हर जवाब, आपसे पूछा गया कोई जवाबी सवाल भी, आपके डिवाइस के इतिहास में सहेजा जाता है। पिछला ड्राफ़्ट वापस लाएँ या जिनकी अब ज़रूरत नहीं है उन्हें हटा दें।</p></div>
+                    <div class="feature-item"><h3>मॉडल टेस्ट, पहले से शामिल</h3><p>दो टैब हर बेंचमार्क रन दिखाते हैं, नतीजों को PDF के रूप में एक्सपोर्ट करते हैं, और मंज़ूर किए गए डिवाइस को किराए के GPU पर नया मॉडल टेस्ट करने देते हैं, लाइव प्रगति के साथ।</p></div>
                     <div class="feature-item"><h3>एक PWA, कई स्क्रीन</h3><p>केवल-आमंत्रण इंटरफ़ेस इंस्टॉल करने योग्य है और विस्तृत डेस्कटॉप स्क्रीन से लेकर कॉम्पैक्ट फोन तक के लिए अनुकूल है।</p></div>
                 </div>
 
+                <h2>माना नहीं, मापा गया</h2>
+                <p>SQL लिखने वाला टूल तभी उपयोगी है जब उसका SQL सही हो, इसलिए रिपॉज़िटरी इसे मान लेने के बजाय मापती है।</p>
+                <p>एक मॉडल बेंचमार्क 46 कठिन सवाल पूछता है, हर सवाल तीन बार। जिन सवालों का एक ही सही जवाब है, उन्हें वेयरहाउस की डेटा से भरी PostgreSQL कॉपी पर ड्राफ़्ट चलाकर जाँचा जाता है। जिन सवालों का डेटा वेयरहाउस में नहीं है, जैसे वेतन या ग्राहक छोड़ने की दर, उनका जवाब एक सवाल होना चाहिए। डेटा बदलने के अनुरोध कभी भी उपयोगकर्ता तक नहीं पहुँचने चाहिए।</p>
+                <p>सबसे अहम आँकड़ा यह है कि मॉडल कितनी बार आत्मविश्वास से गलत होता है: ऐसा ड्राफ़्ट जो चलता है पर गलत नतीजा देता है, या ऐसे डेटा के बारे में जवाब जो मौजूद ही नहीं। दोनों असली जवाब जैसे दिखते हैं, और यही उन्हें जोखिम भरा बनाता है।</p>
+                <ul>
+                    <li><strong>gpt-oss-20b, ऐप में इस्तेमाल होने वाला मॉडल:</strong> 86% सही, 5 आत्मविश्वास से गलत जवाब, और एक A100 पर लगभग 200 सवाल प्रति मिनट।</li>
+                    <li><strong>Qwen3.8-27B:</strong> 96% सही और एक भी आत्मविश्वास से गलत जवाब नहीं, लेकिन लगभग पाँच गुना धीमा।</li>
+                    <li><strong>gpt-oss-120b:</strong> 20b से ज़्यादा सटीक नहीं, और गति आधे से भी कम।</li>
+                </ul>
+                <p>तीनों ने हर बार स्पष्टीकरण माँगा जब उन्हें माँगना चाहिए था, और gpt-oss-20b की हर लिखने की कोशिश को SQL जाँच ने रोक दिया। हर बेंचमार्क रन एक GPU किराए पर लेता है, vLLM से मॉडल चलाता है, और खत्म होने पर GPU हटा देता है, आमतौर पर 12 मिनट के भीतर और एक डॉलर से काफ़ी कम में।</p>
+
+                <h2>एक ही मॉडल, अलग-अलग सर्वर</h2>
+                <p>ऐप किसी भी OpenAI-संगत एंडपॉइंट से बात कर सकता है, इसलिए होस्टेड प्रदाता से बैंक के अपने सर्वर पर जाना एक साधारण कॉन्फ़िगरेशन बदलाव जैसा लगता है। एक अलग मूल्यांकन टूल जाँचता है कि क्या सच में ऐसा है। वही gpt-oss-20b वेट्स एक होस्टेड प्रदाता, CPU, और llama.cpp, vLLM तथा SGLang के ज़रिए किराए के GPU पर चलाए गए।</p>
+                <p>हर सर्वर ने सही टेबल चुनीं। अंतर कहीं और दिखे: ड्राफ़्ट में कौन-से वैकल्पिक जॉइन जोड़े गए, कोई विनाशकारी अनुरोध तुरंत मना हुआ या बाद में SQL जाँच ने पकड़ा, और लोड के दौरान। vLLM ने 64 एक साथ अनुरोधों पर भी सख़्त JSON फ़ॉर्मेट बनाए रखा और एक RTX 4090 पर लगभग 270 सवाल प्रति मिनट तक पहुँचा। SGLang ने लोड में यह फ़ॉर्मेट तोड़ दिया, जब तक उसे ज़्यादा सख़्त सेटिंग के साथ शुरू नहीं किया गया। यह गड़बड़ी एक-एक अनुरोध भेजने पर कभी नहीं दिखी।</p>
+                <p>एक और प्रयोग में कैटलॉग को मेनफ़्रेम-शैली के संक्षिप्त नामों से दोबारा लिखा गया। टेबल और कॉलम के विवरण रखने पर दोनों मॉडल सभी बारह आधारभूत सवालों में पास हुए। विवरण हटाने पर सिर्फ़ आधे पास हुए, जो साफ़ दिखाता है कि अच्छा मेटाडेटा उतना ही ज़रूरी है जितना मॉडल।</p>
+
                 <h2>चित्र संग्रह</h2>
-                <p>डेस्कटॉप, लैपटॉप, टैबलेट और फ़ोन पर छह प्रश्न। ये कैप्चर सिंथेटिक कैटलॉग के विरुद्ध उत्पन्न समीक्षा की गई प्रतिक्रियाओं को दोहराते हैं, जिससे पोर्टफोलियो उदाहरण दोहराए जा सकते हैं।</p>
-                <div class="gallery-grid">
-                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="डेस्कटॉप पर सक्रिय ग्राहक SQL ड्राफ्ट" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="डिफ़ॉल्ट SQL में क्लाइंट विस्तृत डेस्कटॉप पर ड्राफ्ट करते हैं" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="लैपटॉप पर ऋण चुकौती SQL ड्राफ्ट" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="लैंडस्केप टैबलेट पर कार्ड प्राधिकरण SQL ड्राफ्ट" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="पोर्ट्रेट टैबलेट पर शेष राशि SQL ड्राफ्ट जमा करें" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="फ़ोन पर भुगतान मात्रा SQL ड्राफ्ट" class="gallery-img" loading="lazy" decoding="async">
+                <p>बेंचमार्क के दस कठिन सवाल, चौड़े डेस्कटॉप से लेकर छोटे फ़ोन तक। हर SQL ड्राफ़्ट ऐप की अपनी पाइपलाइन और मॉडल ने लिखा, फिर डेटा से भरे वेयरहाउस पर चलाकर सत्यापित किया गया; दसों ने सही जवाब दिया। स्क्रीनशॉट इन रिकॉर्ड किए गए जवाबों को दोबारा दिखाते हैं, इसलिए इन्हें दोहराया जा सकता है और इनमें कोई असली बैंकिंग डेटा नहीं है।</p>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="डेस्कटॉप पर वायर ट्रांसफ़र राशि के हिसाब से शीर्ष पाँच ग्राहक" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-wire-and-atm-customers-desktop-wide.png" alt="चौड़े डेस्कटॉप पर वायर ट्रांसफ़र और ATM लेनदेन दोनों करने वाले ग्राहक" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loans-90-days-past-due-laptop.png" alt="लैपटॉप पर 90 दिन से ज़्यादा बकाया ऋण" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-top-merchant-categories-tablet-landscape.png" alt="लैंडस्केप टैबलेट पर कार्ड ऑथराइज़ेशन राशि में शीर्ष मर्चेंट श्रेणियाँ" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-declined-card-share-tablet-portrait.png" alt="पोर्ट्रेट टैबलेट पर अस्वीकृत कार्ड ऑथराइज़ेशन का हिस्सा" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/06-escalated-complaints-tablet-compact.png" alt="कॉम्पैक्ट टैबलेट पर श्रेणी के अनुसार आगे बढ़ाई गई शिकायतें" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/07-high-aml-alerts-phone-large.png" alt="बड़े फ़ोन पर क्षेत्राधिकार के अनुसार उच्च गंभीरता वाले AML अलर्ट" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-mobile-transactions-phone.png" alt="फ़ोन पर हर साल के Mobile App लेनदेन" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/09-closing-balance-phone-compact.png" alt="कॉम्पैक्ट फ़ोन पर खातों का औसत अंतिम बैलेंस" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/10-sme-cross-border-phone-small.png" alt="छोटे फ़ोन पर सीमा-पार वायर ट्रांसफ़र करने वाले SME ग्राहक" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>मानव पाश में रहता है</h2>
@@ -86,10 +109,11 @@
                 <p>स्वचालित जाँच केवल रीड-ओनली स्टेटमेंट की बुनियादी संरचना और ज्ञात टेबल संदर्भों को जाँचती है। SQL सिंटैक्स, कॉलम संदर्भ और व्यावसायिक अर्थ की मानवीय समीक्षा अभी भी आवश्यक है। वेयरहाउस के सभी नाम, संबंध और माप सिंथेटिक परीक्षण सामग्री हैं, स्वीकृत बैंकिंग परिभाषाएँ नहीं।</p>
 
                 <h2>हुड के नीचे</h2>
-                <p>अवधारणा का तैनात प्रमाण Oracle Ampere A1 उदाहरण पर एक Node बैकएंड चलाता है, स्कीमा पुनर्प्राप्ति के लिए Elasticsearch और SQL ड्राफ्टिंग के लिए एक होस्टेड GPT-OSS मॉडल के साथ। रिपॉजिटरी एक व्यापक भविष्य की वास्तुकला का भी दस्तावेजीकरण करती है, जो स्पष्ट रूप से छोटे तैनात POC से अलग है।</p>
+                <p>तैनात प्रूफ़ ऑफ़ कॉन्सेप्ट एक Oracle Ampere A1 इंस्टेंस पर Node बैकएंड और Elasticsearch को rootless कंटेनरों में चलाता है, और एक होस्टेड प्रदाता के ज़रिए gpt-oss-20b से SQL ड्राफ़्ट करता है। रिपॉज़िटरी एक व्यापक भविष्य की आर्किटेक्चर भी दर्ज करती है, जो छोटे तैनात POC से साफ़ तौर पर अलग है।</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">केवल आमंत्रण PWA खोलें</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">सभी 10 उदाहरण ब्राउज़ करें</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/blob/main/app/eval/bench/README.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">मॉडल बेंचमार्क पढ़ें</a>
                 </div>
             </div>
         </div>
