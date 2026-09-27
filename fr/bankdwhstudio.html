@@ -8,7 +8,7 @@
     <title>Bank DWH Studio - Brouillons SQL révisables</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=7">
+    <link rel="stylesheet" href="../project.css?v=8">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -97,6 +97,54 @@
                     <li><strong>GPT-6 Luna :</strong> a poussé la prudence trop loin : il a répondu par une question à 53 questions sur 69 et n'a eu juste que dans 22 % des cas.</li>
                 </ul>
                 <p>Les modèles fermés ne sont là que pour comparaison. Ils ne pourraient pas tourner sur le matériel d'une banque ; ils sont donc appelés via OpenRouter. Les modèles à poids ouverts tournent sur un GPU loué avec vLLM, supprimé ensuite, généralement en 12 minutes au plus et pour bien moins d'un dollar.</p>
+
+                <h2>Tous les résultats</h2>
+                <p>L'onglet Model tests de l'application conserve chaque exécution enregistrée. Ces tableaux proviennent de son rapport du 27 septembre 2026, les plus justes en premier. Les modèles à poids ouverts pourraient tourner sur le matériel d'une banque ; les modèles fermés ont été appelés via OpenRouter pour comparaison.</p>
+
+                <h3>Noms cryptiques</h3>
+                <div class="table-scroll" role="region" aria-label="Résultats défilants avec des noms cryptiques" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Modèle</th><th class="num">Justes</th><th class="num">Faux avec assurance</th><th class="num">Questions en retour</th><th class="num">Écritures dangereuses</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-closed"><td><code>google/gemini-3.8-flash</code><span class="run-meta"><span class="weights-tag">Fermés</span> <span>OpenRouter</span></span></td><td class="num">72.5%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>anthropic/claude-sonnet-5</code><span class="run-meta"><span class="weights-tag">Fermés</span> <span>OpenRouter</span></span></td><td class="num">69.6%</td><td class="num">12</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">69.6%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1</code><span class="run-meta"><span class="weights-tag">Fermés</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">18</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-5.5</code><span class="run-meta"><span class="weights-tag">Fermés</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1-mini</code><span class="run-meta"><span class="weights-tag">Fermés</span> <span>OpenRouter</span></span></td><td class="num">65.2%</td><td class="num">15</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">63.8%</td><td class="num">13</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">62.3%</td><td class="num">14</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">46.4%</td><td class="num">17</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-6-luna</code><span class="run-meta"><span class="weights-tag">Fermés</span> <span>OpenRouter</span></span></td><td class="num">21.7%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <h3>Noms descriptifs</h3>
+                <div class="table-scroll" role="region" aria-label="Résultats défilants avec des noms descriptifs" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Modèle</th><th class="num">Justes</th><th class="num">Faux avec assurance</th><th class="num">Questions en retour</th><th class="num">Écritures dangereuses</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>L40S</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>RTX 4090</span></span></td><td class="num">87%</td><td class="num">6</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">5</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">11</td><td class="num">14/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>ministral-3-14b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>RTX PRO 4500</span></span></td><td class="num">44.9%</td><td class="num">40</td><td class="num">3/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>mistral-small-3.2-24b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">40.6%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gemma-2-9b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">34.8%</td><td class="num">35</td><td class="num">0/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>eurollm-22b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">0%</td><td class="num">0</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <p>Chaque question est posée trois fois. Justes est la part des 69 réponses aux questions à réponse unique. Faux avec assurance compte les brouillons qui ont tourné et donné un mauvais résultat, plus les brouillons portant sur des données absentes de l'entrepôt. Questions en retour porte sur 18 réponses à des questions sur des données manquantes, et écritures dangereuses compte combien des 15 réponses aux demandes de modification ont atteint l'utilisateur.</p>
+                <p>Deux autres exécutions ne sont pas notées. Gemma 4 26B a bouclé avec la sortie JSON stricte, une défaillance de service et non une mesure de qualité, et Devstral Small 2 ne tourne pas du tout sur un A100.</p>
+                <p>Le rapport détaille aussi les résultats question par question, et c'est là que se voit le coût des noms cryptiques. Avec eux, aucun modèle n'a répondu à cinq questions que Qwen3.8-27B réussissait à chaque fois avec des noms descriptifs, comme le nombre de prêts en retard de plus de 90 jours.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Télécharger le rapport complet (PDF)</a>
+                </div>
 
                 <h2>Même modèle, serveurs différents</h2>
                 <p>L'application communique avec tout point d'accès compatible OpenAI : passer d'un fournisseur hébergé aux serveurs d'une banque ressemble donc à un simple changement de configuration. Un outil d'évaluation distinct vérifie si c'est vraiment le cas. Les mêmes poids gpt-oss-20b ont été servis par un fournisseur hébergé, sur CPU et sur des GPU loués via llama.cpp, vLLM et SGLang.</p>

@@ -8,7 +8,7 @@
     <title>Bank DWH Studio - Reviewable SQL Drafts</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <link rel="stylesheet" href="workshop.css?v=3">
-    <link rel="stylesheet" href="project.css?v=7">
+    <link rel="stylesheet" href="project.css?v=8">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/brand/lion-light-v2.png">
 
@@ -97,6 +97,54 @@
                     <li><strong>GPT-6 Luna:</strong> took caution too far, asking back on 53 of 69 questions and getting only 22% right.</li>
                 </ul>
                 <p>The closed models are there for comparison only. They could not run on a bank's own hardware, so they are called through OpenRouter. Open-weights models run on a rented GPU with vLLM, which is deleted afterwards, usually within 12 minutes and for well under a dollar.</p>
+
+                <h2>The full results</h2>
+                <p>The app's Model tests tab keeps every recorded run. These tables come from its report of 27 September 2026, most correct first. Open-weights models could run on a bank's own hardware; closed models were called through OpenRouter for comparison.</p>
+
+                <h3>Cryptic names</h3>
+                <div class="table-scroll" role="region" aria-label="Scrollable results with cryptic names" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Model</th><th class="num">Correct</th><th class="num">Confidently wrong</th><th class="num">Asked back</th><th class="num">Unsafe writes</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-closed"><td><code>google/gemini-3.8-flash</code><span class="run-meta"><span class="weights-tag">Closed</span> <span>OpenRouter</span></span></td><td class="num">72.5%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>anthropic/claude-sonnet-5</code><span class="run-meta"><span class="weights-tag">Closed</span> <span>OpenRouter</span></span></td><td class="num">69.6%</td><td class="num">12</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">69.6%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1</code><span class="run-meta"><span class="weights-tag">Closed</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">18</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-5.5</code><span class="run-meta"><span class="weights-tag">Closed</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1-mini</code><span class="run-meta"><span class="weights-tag">Closed</span> <span>OpenRouter</span></span></td><td class="num">65.2%</td><td class="num">15</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">63.8%</td><td class="num">13</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">62.3%</td><td class="num">14</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">46.4%</td><td class="num">17</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-6-luna</code><span class="run-meta"><span class="weights-tag">Closed</span> <span>OpenRouter</span></span></td><td class="num">21.7%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <h3>Descriptive names</h3>
+                <div class="table-scroll" role="region" aria-label="Scrollable results with descriptive names" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Model</th><th class="num">Correct</th><th class="num">Confidently wrong</th><th class="num">Asked back</th><th class="num">Unsafe writes</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>L40S</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>RTX 4090</span></span></td><td class="num">87%</td><td class="num">6</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">5</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">11</td><td class="num">14/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>ministral-3-14b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>RTX PRO 4500</span></span></td><td class="num">44.9%</td><td class="num">40</td><td class="num">3/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>mistral-small-3.2-24b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">40.6%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gemma-2-9b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">34.8%</td><td class="num">35</td><td class="num">0/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>eurollm-22b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">0%</td><td class="num">0</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <p>Each question is asked three times. Correct is the share of 69 answers to questions with one right answer. Confidently wrong counts drafts that ran and returned the wrong answer, plus drafts for data the warehouse does not hold. Asked back is out of 18 answers to questions about missing data, and unsafe writes counts how many of 15 answers to requests to change data reached the user.</p>
+                <p>Two more runs are not scored. Gemma 4 26B looped under strict JSON output, a serving failure rather than a measure of quality, and Devstral Small 2 does not run on an A100 at all.</p>
+                <p>The report also breaks the results down question by question, and that is where the cost of cryptic names shows. With them, no model answered five questions that Qwen3.8-27B got right every time with descriptive names, such as how many loans were more than 90 days past due.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download the full report (PDF)</a>
+                </div>
 
                 <h2>Same model, different servers</h2>
                 <p>The app talks to any OpenAI-compatible endpoint, so moving from a hosted provider to a bank's own servers looks like a simple configuration change. A separate evaluation harness checks whether it really is. The same gpt-oss-20b weights were served by a hosted provider, on CPU, and on rented GPUs through llama.cpp, vLLM, and SGLang.</p>

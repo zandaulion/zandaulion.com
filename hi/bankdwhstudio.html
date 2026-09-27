@@ -8,7 +8,7 @@
     <title>Bank DWH Studio - समीक्षा योग्य SQL ड्राफ्ट</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=7">
+    <link rel="stylesheet" href="../project.css?v=8">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -97,6 +97,54 @@
                     <li><strong>GPT-6 Luna:</strong> सावधानी में हद से आगे निकल गया: 69 में से 53 सवालों का जवाब सवाल से दिया और सिर्फ़ 22% सही रहा।</li>
                 </ul>
                 <p>क्लोज़्ड मॉडल सिर्फ़ तुलना के लिए हैं। वे किसी बैंक के अपने हार्डवेयर पर नहीं चल सकते, इसलिए उन्हें OpenRouter के ज़रिए बुलाया जाता है। ओपन वेट्स वाले मॉडल vLLM के साथ किराए के GPU पर चलते हैं, जिसे बाद में हटा दिया जाता है, आमतौर पर 12 मिनट के भीतर और एक डॉलर से काफ़ी कम में।</p>
+
+                <h2>पूरे नतीजे</h2>
+                <p>ऐप का Model tests टैब हर दर्ज रन को सँभालकर रखता है। ये तालिकाएँ 27 सितंबर 2026 की उसकी रिपोर्ट से हैं, सबसे ज़्यादा सही वाले पहले। ओपन वेट्स वाले मॉडल किसी बैंक के अपने हार्डवेयर पर चल सकते हैं; क्लोज़्ड मॉडल तुलना के लिए OpenRouter के ज़रिए बुलाए गए।</p>
+
+                <h3>अस्पष्ट नाम</h3>
+                <div class="table-scroll" role="region" aria-label="अस्पष्ट नामों वाले नतीजे, स्क्रॉल करने योग्य" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>मॉडल</th><th class="num">सही</th><th class="num">आत्मविश्वास से गलत</th><th class="num">जवाबी सवाल</th><th class="num">असुरक्षित लेखन</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-closed"><td><code>google/gemini-3.8-flash</code><span class="run-meta"><span class="weights-tag">क्लोज़्ड</span> <span>OpenRouter</span></span></td><td class="num">72.5%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>anthropic/claude-sonnet-5</code><span class="run-meta"><span class="weights-tag">क्लोज़्ड</span> <span>OpenRouter</span></span></td><td class="num">69.6%</td><td class="num">12</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">69.6%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1</code><span class="run-meta"><span class="weights-tag">क्लोज़्ड</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">18</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-5.5</code><span class="run-meta"><span class="weights-tag">क्लोज़्ड</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1-mini</code><span class="run-meta"><span class="weights-tag">क्लोज़्ड</span> <span>OpenRouter</span></span></td><td class="num">65.2%</td><td class="num">15</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">63.8%</td><td class="num">13</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">62.3%</td><td class="num">14</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">46.4%</td><td class="num">17</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-6-luna</code><span class="run-meta"><span class="weights-tag">क्लोज़्ड</span> <span>OpenRouter</span></span></td><td class="num">21.7%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <h3>वर्णनात्मक नाम</h3>
+                <div class="table-scroll" role="region" aria-label="वर्णनात्मक नामों वाले नतीजे, स्क्रॉल करने योग्य" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>मॉडल</th><th class="num">सही</th><th class="num">आत्मविश्वास से गलत</th><th class="num">जवाबी सवाल</th><th class="num">असुरक्षित लेखन</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>L40S</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>RTX 4090</span></span></td><td class="num">87%</td><td class="num">6</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">5</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">11</td><td class="num">14/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>ministral-3-14b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>RTX PRO 4500</span></span></td><td class="num">44.9%</td><td class="num">40</td><td class="num">3/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>mistral-small-3.2-24b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">40.6%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gemma-2-9b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">34.8%</td><td class="num">35</td><td class="num">0/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>eurollm-22b</code><span class="run-meta"><span class="weights-tag">ओपन</span> <span>A100</span></span></td><td class="num">0%</td><td class="num">0</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <p>हर सवाल तीन बार पूछा जाता है। सही, एक सही जवाब वाले सवालों के 69 जवाबों में सही जवाबों का हिस्सा है। आत्मविश्वास से गलत उन ड्राफ़्ट को गिनता है जो चले पर गलत नतीजा दिया, और उन ड्राफ़्ट को जो ऐसे डेटा के लिए बने जो वेयरहाउस में है ही नहीं। जवाबी सवाल, गायब डेटा वाले सवालों के 18 जवाबों में से गिने जाते हैं, और असुरक्षित लेखन बताता है कि डेटा बदलने के अनुरोधों के 15 जवाबों में से कितने उपयोगकर्ता तक पहुँचे।</p>
+                <p>दो और रन को अंक नहीं दिए गए। Gemma 4 26B सख़्त JSON आउटपुट में लूप में फँस गया, जो गुणवत्ता का पैमाना नहीं बल्कि चलाने की गड़बड़ी है, और Devstral Small 2 A100 पर चलता ही नहीं।</p>
+                <p>रिपोर्ट नतीजों को सवाल-दर-सवाल भी दिखाती है, और वहीं अस्पष्ट नामों की कीमत दिखती है। उनके साथ कोई भी मॉडल उन पाँच सवालों का जवाब नहीं दे पाया जिन्हें Qwen3.8-27B वर्णनात्मक नामों के साथ हर बार सही करता था, जैसे 90 दिन से ज़्यादा बकाया ऋणों की संख्या।</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">पूरी रिपोर्ट डाउनलोड करें (PDF)</a>
+                </div>
 
                 <h2>एक ही मॉडल, अलग-अलग सर्वर</h2>
                 <p>ऐप किसी भी OpenAI-संगत एंडपॉइंट से बात कर सकता है, इसलिए होस्टेड प्रदाता से बैंक के अपने सर्वर पर जाना एक साधारण कॉन्फ़िगरेशन बदलाव जैसा लगता है। एक अलग मूल्यांकन टूल जाँचता है कि क्या सच में ऐसा है। वही gpt-oss-20b वेट्स एक होस्टेड प्रदाता, CPU, और llama.cpp, vLLM तथा SGLang के ज़रिए किराए के GPU पर चलाए गए।</p>

@@ -8,7 +8,7 @@
     <title>Bank DWH Studio - Schițe SQL ușor de verificat</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=7">
+    <link rel="stylesheet" href="../project.css?v=8">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -97,6 +97,54 @@
                     <li><strong>GPT-6 Luna:</strong> a exagerat cu prudența: a răspuns cu o întrebare la 53 din 69 de întrebări și a nimerit doar 22%.</li>
                 </ul>
                 <p>Modelele închise sunt incluse doar pentru comparație. Nu ar putea rula pe hardware-ul propriu al unei bănci, așa că sunt apelate prin OpenRouter. Modelele cu ponderi deschise rulează pe un GPU închiriat, cu vLLM, care este șters la final, de obicei în cel mult 12 minute și pentru mult sub un dolar.</p>
+
+                <h2>Rezultatele complete</h2>
+                <p>Fila Model tests a aplicației păstrează fiecare rulare înregistrată. Tabelele de mai jos provin din raportul ei din 27 septembrie 2026, cu cele mai precise modele primele. Modelele cu ponderi deschise ar putea rula pe hardware-ul propriu al unei bănci; modelele închise au fost apelate prin OpenRouter, pentru comparație.</p>
+
+                <h3>Nume criptice</h3>
+                <div class="table-scroll" role="region" aria-label="Rezultate derulabile cu nume criptice" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Model</th><th class="num">Corecte</th><th class="num">Greșite cu încredere</th><th class="num">Întrebări înapoi</th><th class="num">Scrieri nesigure</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-closed"><td><code>google/gemini-3.8-flash</code><span class="run-meta"><span class="weights-tag">Închise</span> <span>OpenRouter</span></span></td><td class="num">72.5%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>anthropic/claude-sonnet-5</code><span class="run-meta"><span class="weights-tag">Închise</span> <span>OpenRouter</span></span></td><td class="num">69.6%</td><td class="num">12</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">69.6%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1</code><span class="run-meta"><span class="weights-tag">Închise</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">18</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-5.5</code><span class="run-meta"><span class="weights-tag">Închise</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1-mini</code><span class="run-meta"><span class="weights-tag">Închise</span> <span>OpenRouter</span></span></td><td class="num">65.2%</td><td class="num">15</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">63.8%</td><td class="num">13</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">62.3%</td><td class="num">14</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">46.4%</td><td class="num">17</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-6-luna</code><span class="run-meta"><span class="weights-tag">Închise</span> <span>OpenRouter</span></span></td><td class="num">21.7%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <h3>Nume descriptive</h3>
+                <div class="table-scroll" role="region" aria-label="Rezultate derulabile cu nume descriptive" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Model</th><th class="num">Corecte</th><th class="num">Greșite cu încredere</th><th class="num">Întrebări înapoi</th><th class="num">Scrieri nesigure</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>L40S</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>RTX 4090</span></span></td><td class="num">87%</td><td class="num">6</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">5</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">11</td><td class="num">14/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>ministral-3-14b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>RTX PRO 4500</span></span></td><td class="num">44.9%</td><td class="num">40</td><td class="num">3/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>mistral-small-3.2-24b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">40.6%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gemma-2-9b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">34.8%</td><td class="num">35</td><td class="num">0/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>eurollm-22b</code><span class="run-meta"><span class="weights-tag">Deschise</span> <span>A100</span></span></td><td class="num">0%</td><td class="num">0</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <p>Fiecare întrebare este pusă de trei ori. Corecte înseamnă procentul din cele 69 de răspunsuri la întrebări cu un singur răspuns corect. Greșite cu încredere numără schițele care au rulat și au dat un răspuns greșit, plus schițele pentru date pe care depozitul nu le conține. Întrebări înapoi se raportează la 18 răspunsuri la întrebări despre date lipsă, iar scrieri nesigure arată câte dintre cele 15 răspunsuri la cereri de modificare a datelor au ajuns la utilizator.</p>
+                <p>Alte două rulări nu sunt punctate. Gemma 4 26B a intrat în buclă sub ieșirea JSON strictă, o problemă de servire, nu o măsură a calității, iar Devstral Small 2 nu rulează deloc pe un A100.</p>
+                <p>Raportul detaliază rezultatele și întrebare cu întrebare, iar acolo se vede costul numelor criptice. Cu ele, niciun model nu a răspuns la cinci întrebări pe care Qwen3.8-27B le-a nimerit de fiecare dată cu nume descriptive, cum ar fi câte credite aveau peste 90 de zile de întârziere.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Descarcă raportul complet (PDF)</a>
+                </div>
 
                 <h2>Același model, servere diferite</h2>
                 <p>Aplicația comunică cu orice endpoint compatibil OpenAI, așa că trecerea de la un furnizor găzduit la serverele proprii ale unei bănci pare o simplă schimbare de configurare. Un sistem separat de evaluare verifică dacă chiar așa este. Aceleași ponderi gpt-oss-20b au fost servite de un furnizor găzduit, pe CPU și pe GPU-uri închiriate prin llama.cpp, vLLM și SGLang.</p>
