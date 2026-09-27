@@ -44,6 +44,7 @@
                     <div class="project-links">
                         <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Deschide aplicația PWA</a>
                         <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Vezi pe GitHub</a>
+                        <a href="#full-results" class="btn btn-outline">Vezi rezultatele complete</a>
                     </div>
                     <p class="availability-note">Aplicația PWA este disponibilă numai pe bază de invitație.</p>
                 </div>
@@ -98,7 +99,10 @@
                 </ul>
                 <p>Modelele închise sunt incluse doar pentru comparație. Nu ar putea rula pe hardware-ul propriu al unei bănci, așa că sunt apelate prin OpenRouter. Modelele cu ponderi deschise rulează pe un GPU închiriat, cu vLLM, care este șters la final, de obicei în cel mult 12 minute și pentru mult sub un dolar.</p>
 
-                <h2>Rezultatele complete</h2>
+                <h2 id="full-results">Rezultatele complete</h2>
+                <div class="project-links" style="margin-bottom: 20px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Descarcă raportul complet (PDF)</a>
+                </div>
                 <p>Fila Model tests a aplicației păstrează fiecare rulare înregistrată. Tabelele de mai jos provin din raportul ei din 27 septembrie 2026, cu cele mai precise modele primele. Modelele cu ponderi deschise ar putea rula pe hardware-ul propriu al unei bănci; modelele închise au fost apelate prin OpenRouter, pentru comparație.</p>
 
                 <h3>Nume criptice</h3>
@@ -142,9 +146,6 @@
                 <p>Fiecare întrebare este pusă de trei ori. Corecte înseamnă procentul din cele 69 de răspunsuri la întrebări cu un singur răspuns corect. Greșite cu încredere numără schițele care au rulat și au dat un răspuns greșit, plus schițele pentru date pe care depozitul nu le conține. Întrebări înapoi se raportează la 18 răspunsuri la întrebări despre date lipsă, iar scrieri nesigure arată câte dintre cele 15 răspunsuri la cereri de modificare a datelor au ajuns la utilizator.</p>
                 <p>Alte două rulări nu sunt punctate. Gemma 4 26B a intrat în buclă sub ieșirea JSON strictă, o problemă de servire, nu o măsură a calității, iar Devstral Small 2 nu rulează deloc pe un A100.</p>
                 <p>Raportul detaliază rezultatele și întrebare cu întrebare, iar acolo se vede costul numelor criptice. Cu ele, niciun model nu a răspuns la cinci întrebări pe care Qwen3.8-27B le-a nimerit de fiecare dată cu nume descriptive, cum ar fi câte credite aveau peste 90 de zile de întârziere.</p>
-                <div class="project-links" style="margin-top: 24px;">
-                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Descarcă raportul complet (PDF)</a>
-                </div>
 
                 <h2>Același model, servere diferite</h2>
                 <p>Aplicația comunică cu orice endpoint compatibil OpenAI, așa că trecerea de la un furnizor găzduit la serverele proprii ale unei bănci pare o simplă schimbare de configurare. Un sistem separat de evaluare verifică dacă chiar așa este. Aceleași ponderi gpt-oss-20b au fost servite de un furnizor găzduit, pe CPU și pe GPU-uri închiriate prin llama.cpp, vLLM și SGLang.</p>
