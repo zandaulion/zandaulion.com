@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko-KR" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against semantic-layer-poc commit 58c1a5cb34baa6b65eaaa78872c8cea144f94ba4 (2026-09-27). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio는 자연어 뱅킹 질문을 편집 및 검토 가능한 합성 5,000열 창고에 기반한 PostgreSQL SQL 초안으로 변환합니다.">
+    <meta name="description" content="Bank DWH Studio는 자연어로 된 은행 관련 질문을 편집하고 검토할 수 있는 PostgreSQL SQL 초안으로 바꾸고, 모델이 얼마나 자주 정답을 내는지 측정합니다.">
     <title>Bank DWH Studio - 검토 가능한 SQL 초안</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=7">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -46,7 +47,7 @@
                     </div>
                     <p class="availability-note">라이브 PWA는 초대 전용입니다.</p>
                 </div>
-                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="은행 관련 질문, SQL 초안, 검색된 스키마 컨텍스트, 메모 및 수표를 보여주는 Bank DWH Studio" class="project-hero-image hero-landscape bank-interface">
+                <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="전신 송금액 상위 5명 고객에 대한 질문, SQL 초안, 검색된 스키마 맥락, 메모와 검사를 보여 주는 Bank DWH Studio" class="project-hero-image hero-landscape bank-interface">
             </div>
 
             <div class="project-content reveal">
@@ -67,18 +68,40 @@
                     <div class="feature-item"><h3>100개의 합성 테이블</h3><p>생성된 은행 창고 고정 장치는 5,000개의 열, 관계, PostgreSQL DDL, 카탈로그 및 작은 시드를 제공합니다.</p></div>
                     <div class="feature-item"><h3>스키마 기반 검색</h3><p>Elasticsearch는 모델에 항목을 보내기 전에 질문에 필요한 메타데이터로 대규모 카탈로그를 좁힙니다.</p></div>
                     <div class="feature-item"><h3>가시적 추론 맥락</h3><p>검색된 표, 해석, 가정, 메모 및 점검 사항은 눈에 잘 띄므로 초안을 맹목적으로 받아들이는 대신 이의를 제기할 수 있습니다.</p></div>
+                    <div class="feature-item"><h3>다시 볼 수 있는 답변</h3><p>사용자에게 되묻는 질문을 포함해 모든 답변이 기기의 기록에 저장됩니다. 이전 초안을 복원하거나 더 이상 필요 없는 항목을 삭제할 수 있습니다.</p></div>
+                    <div class="feature-item"><h3>모델 테스트 기본 제공</h3><p>두 개의 탭에서 모든 벤치마크 실행을 보여 주고 결과를 PDF로 내보내며, 승인된 기기는 대여한 GPU에서 새 모델을 테스트하고 진행 상황을 실시간으로 볼 수 있습니다.</p></div>
                     <div class="feature-item"><h3>하나의 PWA, 많은 화면</h3><p>초대 전용 인터페이스는 설치가 가능하며 넓은 데스크톱 화면에서 소형 휴대폰까지 적용됩니다.</p></div>
                 </div>
 
+                <h2>가정이 아닌 측정</h2>
+                <p>SQL을 작성하는 도구는 그 SQL이 정확할 때만 쓸모가 있습니다. 그래서 저장소는 이를 당연하게 여기지 않고 직접 측정합니다.</p>
+                <p>모델 벤치마크는 46개의 어려운 질문을 각각 세 번씩 묻습니다. 정답이 하나인 질문은 데이터를 채운 PostgreSQL 웨어하우스 사본에서 초안을 실행해 채점합니다. 급여나 고객 이탈처럼 웨어하우스에 없는 데이터에 관한 질문에는 되묻는 것이 정답입니다. 데이터를 변경하려는 요청은 절대 사용자에게 전달되어서는 안 됩니다.</p>
+                <p>가장 중요한 수치는 모델이 자신 있게 틀리는 빈도입니다. 실행은 되지만 틀린 결과를 내는 초안, 또는 존재하지 않는 데이터에 대한 답변이 여기에 해당합니다. 둘 다 진짜 답처럼 보이기 때문에 위험합니다.</p>
+                <ul>
+                    <li><strong>gpt-oss-20b, 앱이 사용하는 모델:</strong> 정답률 86%, 자신 있게 틀린 답변 5건, A100 한 대에서 분당 약 200개 질문.</li>
+                    <li><strong>Qwen3.8-27B:</strong> 정답률 96%에 자신 있게 틀린 답변은 없지만, 속도는 약 5배 느립니다.</li>
+                    <li><strong>gpt-oss-120b:</strong> 20b보다 정확하지 않으며 속도는 절반에도 못 미칩니다.</li>
+                </ul>
+                <p>세 모델 모두 되물어야 할 때마다 되물었고, gpt-oss-20b가 시도한 모든 쓰기는 SQL 검사가 막아냈습니다. 각 벤치마크 실행은 GPU를 대여해 vLLM으로 모델을 제공하고, 끝나면 GPU를 삭제합니다. 보통 12분 이내에 끝나며 비용은 1달러에 한참 못 미칩니다.</p>
+
+                <h2>같은 모델, 다른 서버</h2>
+                <p>앱은 OpenAI 호환 엔드포인트라면 어디든 연결할 수 있어서, 호스팅 제공업체에서 은행 자체 서버로 옮기는 일이 단순한 설정 변경처럼 보입니다. 별도의 평가 도구가 실제로 그런지 확인합니다. 같은 gpt-oss-20b 가중치를 호스팅 제공업체, CPU, 그리고 llama.cpp, vLLM, SGLang을 사용하는 대여 GPU에서 각각 제공했습니다.</p>
+                <p>모든 서버가 올바른 테이블을 골랐습니다. 차이는 다른 곳에서 나타났습니다. 초안에 추가되는 선택적 조인, 파괴적인 요청이 바로 거부되는지 아니면 나중에 SQL 검사에서 걸러지는지, 그리고 부하 상황에서였습니다. vLLM은 동시 요청 64개에서도 엄격한 JSON 형식을 지켰고, RTX 4090 한 장에서 분당 약 270개 질문을 처리했습니다. SGLang은 부하가 걸리면 이 형식을 깨뜨렸고, 더 엄격한 설정으로 시작한 뒤에야 해결되었습니다. 이 오류는 요청을 하나씩 보낼 때는 한 번도 나타나지 않았습니다.</p>
+                <p>또 다른 실험에서는 카탈로그를 메인프레임 스타일의 약어 이름으로 바꿨습니다. 테이블과 열 설명을 유지했을 때는 두 모델 모두 기준 질문 12개를 모두 통과했습니다. 설명을 없애자 절반만 통과했는데, 이는 좋은 메타데이터가 모델만큼 중요하다는 분명한 신호입니다.</p>
+
                 <h2>갤러리</h2>
-                <p>데스크톱, 노트북, 태블릿, 휴대폰 전반에 걸친 6가지 질문입니다. 이러한 캡처는 종합 카탈로그에 대해 생성된 검토된 응답을 재생하여 포트폴리오 예제를 반복 가능하게 만듭니다.</p>
-                <div class="gallery-grid">
-                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="데스크탑의 활성 고객 SQL 초안" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="와이드 데스크탑의 기본 SQL 초안 클라이언트" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="노트북의 대출 상환 SQL 초안" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="가로형 태블릿의 카드 승인 SQL 초안" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="세로 태블릿에 SQL 환어금 잔고 입금" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="휴대폰 결제량 SQL 초안" class="gallery-img" loading="lazy" decoding="async">
+                <p>벤치마크에서 고른 어려운 질문 10개를 넓은 데스크톱부터 작은 휴대폰까지 보여 줍니다. 각 SQL 초안은 앱 자체의 파이프라인과 모델이 작성했고, 데이터를 채운 웨어하우스에서 실행해 검증했습니다. 10개 모두 정답을 냈습니다. 스크린샷은 이렇게 기록된 응답을 재생한 것이므로 재현할 수 있으며 실제 은행 데이터는 포함하지 않습니다.</p>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="데스크톱에서 본 전신 송금액 상위 5명 고객" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-wire-and-atm-customers-desktop-wide.png" alt="넓은 데스크톱에서 본 전신 송금과 ATM 거래를 모두 한 고객" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loans-90-days-past-due-laptop.png" alt="노트북에서 본 90일 넘게 연체된 대출" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-top-merchant-categories-tablet-landscape.png" alt="가로 모드 태블릿에서 본 카드 승인 금액이 가장 큰 가맹점 업종" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-declined-card-share-tablet-portrait.png" alt="세로 모드 태블릿에서 본 거절된 카드 승인 비율" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/06-escalated-complaints-tablet-compact.png" alt="소형 태블릿에서 본 유형별 에스컬레이션된 민원" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/07-high-aml-alerts-phone-large.png" alt="대형 휴대폰에서 본 관할권별 심각도 높은 AML 경보" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-mobile-transactions-phone.png" alt="휴대폰에서 본 연도별 Mobile App 거래" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/09-closing-balance-phone-compact.png" alt="소형 휴대폰에서 본 계좌 평균 마감 잔액" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/10-sme-cross-border-phone-small.png" alt="작은 휴대폰에서 본 해외 전신 송금을 한 중소기업 고객" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>인간은 루프에 머무른다</h2>
@@ -86,10 +109,11 @@
                 <p>자동 검사는 읽기 전용 명령문의 기본 형태와 알려진 테이블 참조만 확인합니다. SQL 구문, 열 참조, 비즈니스 의미는 여전히 사람이 검토해야 합니다. 웨어하우스의 모든 이름, 관계, 측정값은 합성 테스트 자료이며 승인된 은행 업무 정의가 아닙니다.</p>
 
                 <h2>후드 아래</h2>
-                <p>배포된 개념 증명은 Oracle Ampere A1 인스턴스에서 Node 백엔드를 실행하며, 스키마 검색을 위한 Elasticsearch와 SQL 제도를 위한 호스팅된 GPT-OSS 모델을 사용합니다. 또한 이 저장소는 더 작게 배포된 POC와 명확하게 구분된 더 광범위한 미래 아키텍처를 문서화합니다.</p>
+                <p>배포된 개념 증명은 Oracle Ampere A1 인스턴스에서 Node 백엔드와 Elasticsearch를 rootless 컨테이너로 실행하고, 호스팅 제공업체를 통해 gpt-oss-20b로 SQL 초안을 작성합니다. 저장소에는 규모가 작은 배포된 POC와 명확히 구분되는 더 넓은 미래 아키텍처도 문서화되어 있습니다.</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">초대 전용 PWA 열기</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">10개 예시 모두 찾아보기</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/blob/main/app/eval/bench/README.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">모델 벤치마크 읽기</a>
                 </div>
             </div>
         </div>
