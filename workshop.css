@@ -61,8 +61,8 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .feature-kerfloom .feature-art { padding: 22px 28px; background: #dbe2cf; }
 .feature-kerfloom .feature-art img { box-shadow: 4px 8px 0 #253f3520; transform: rotate(-4deg); object-fit: cover; }
 .feature-bank { background: #e4e9ed; }
-.feature-bank .feature-art { background: #0b1522; }
-.feature-bank .feature-art img { object-position: top; }
+.feature-bank .feature-art { padding: 22px 28px; background: #d3dce4; }
+.feature-bank .feature-art img { box-shadow: -4px 8px 0 #0b152226; transform: rotate(3deg); border-radius: 6px; object-position: top; }
 .feature-bitey { background: #f1e4d5; }
 .feature-bitey .feature-art { background: #10291d; height: auto; aspect-ratio: 1024 / 500; }
 .feature-bitey .feature-art img { object-fit: contain; }
