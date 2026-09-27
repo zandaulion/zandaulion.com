@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
 <head>
-    <!-- Content checked against semantic-layer-poc commit 58c1a5cb34baa6b65eaaa78872c8cea144f94ba4 (2026-09-27). -->
+    <!-- Content checked against semantic-layer-poc commit 9b955f52fe7291050214a05e413d210332d9c70f (2026-09-27). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bank DWH Studio turns natural-language banking questions into editable, reviewable PostgreSQL SQL drafts, and measures how often the model gets them right.">
@@ -69,7 +69,7 @@
                     <div class="feature-item"><h3>Schema-grounded retrieval</h3><p>Elasticsearch narrows a large catalog to the metadata needed for the question before anything is sent to the model.</p></div>
                     <div class="feature-item"><h3>Visible reasoning context</h3><p>Retrieved tables, interpretation, assumptions, notes, and checks stay visible so the draft can be challenged rather than accepted blindly.</p></div>
                     <div class="feature-item"><h3>Answers you can return to</h3><p>Every answer, including a question back to you, is saved to a history on your device. Restore an earlier draft or delete the ones you no longer need.</p></div>
-                    <div class="feature-item"><h3>Model tests, built in</h3><p>Two tabs show every benchmark run, export the results as a PDF, and let approved devices test a new model on a rented GPU with live progress.</p></div>
+                    <div class="feature-item"><h3>Model tests, built in</h3><p>Two tabs show every benchmark run, marked as open or closed weights, export the results as a PDF, and let approved devices test a new model, on a rented GPU or through OpenRouter, with live progress.</p></div>
                     <div class="feature-item"><h3>One PWA, many screens</h3><p>The invite-only interface is installable and adapts from wide desktop screens to compact phones.</p></div>
                 </div>
 
@@ -77,12 +77,26 @@
                 <p>A tool that writes SQL is only as useful as its SQL is correct, so the repository measures that instead of taking it on trust.</p>
                 <p>A model benchmark asks 46 hard questions, three times each. Questions with one right answer are scored by running the draft against a seeded PostgreSQL copy of the warehouse. Questions about data the warehouse does not hold, such as salaries or churn, should get a question back. Requests to change data must never reach the user.</p>
                 <p>The number that matters most is how often a model is confidently wrong: a draft that runs but returns the wrong answer, or an answer about data that does not exist. Both look like real answers, which is what makes them risky.</p>
+                <p>Every model answers the same questions twice. First the warehouse uses descriptive names, such as fact_account_balance_daily. Then it uses cryptic names, abbreviated the way older bank warehouses spell them, such as F_ACCT_BAL_D, with the column descriptions kept. The data and the right answers stay the same.</p>
+
+                <h3>With descriptive names</h3>
                 <ul>
                     <li><strong>gpt-oss-20b, the model the app uses:</strong> 86% correct, 5 confidently wrong answers, and about 200 questions a minute on one A100.</li>
                     <li><strong>Qwen3.8-27B:</strong> 96% correct with no confidently wrong answers, but about five times slower.</li>
                     <li><strong>gpt-oss-120b:</strong> no more accurate than the 20b, at less than half the speed.</li>
                 </ul>
-                <p>All three asked for clarification every time they should have, and the SQL check caught every write that gpt-oss-20b attempted. Each benchmark run rents a GPU, serves the model with vLLM, and deletes the GPU afterwards, usually within 12 minutes and for well under a dollar.</p>
+                <p>All three asked for clarification every time they should have, and the SQL check caught every write that gpt-oss-20b attempted.</p>
+
+                <h3>With cryptic names</h3>
+                <p>Every open model lost between 22 and 39 points. The new mistakes were the ones readable names used to prevent: a guessed column, or a table misread from its abbreviation. None of the open models let a write through.</p>
+                <ul>
+                    <li><strong>gpt-oss-20b:</strong> fell from 86% to 46% correct, with 17 confidently wrong answers.</li>
+                    <li><strong>Qwen3.8-27B:</strong> the best open model, at 70% correct with 8 confidently wrong answers.</li>
+                    <li><strong>Gemini 3.8 Flash:</strong> the best overall, at 72% correct with just one confidently wrong answer, because it asked back rather than guessed.</li>
+                    <li><strong>Claude Sonnet 5, GPT-5.5, and GPT-4.1:</strong> 68 to 70% correct, but with 9 to 18 confidently wrong answers.</li>
+                    <li><strong>GPT-6 Luna:</strong> took caution too far, asking back on 53 of 69 questions and getting only 22% right.</li>
+                </ul>
+                <p>The closed models are there for comparison only. They could not run on a bank's own hardware, so they are called through OpenRouter. Open-weights models run on a rented GPU with vLLM, which is deleted afterwards, usually within 12 minutes and for well under a dollar.</p>
 
                 <h2>Same model, different servers</h2>
                 <p>The app talks to any OpenAI-compatible endpoint, so moving from a hosted provider to a bank's own servers looks like a simple configuration change. A separate evaluation harness checks whether it really is. The same gpt-oss-20b weights were served by a hosted provider, on CPU, and on rented GPUs through llama.cpp, vLLM, and SGLang.</p>
