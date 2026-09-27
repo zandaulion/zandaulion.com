@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-ES" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against semantic-layer-poc commit 58c1a5cb34baa6b65eaaa78872c8cea144f94ba4 (2026-09-27). -->
+    <!-- Content checked against semantic-layer-poc commit 9b955f52fe7291050214a05e413d210332d9c70f (2026-09-27). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bank DWH Studio convierte preguntas bancarias en lenguaje natural en borradores SQL de PostgreSQL editables y revisables, y mide con qué frecuencia acierta el modelo.">
@@ -69,7 +69,7 @@
                     <div class="feature-item"><h3>Recuperación basada en esquemas</h3><p>Elasticsearch reduce un catálogo grande a los metadatos necesarios para la pregunta antes de enviar algo al modelo.</p></div>
                     <div class="feature-item"><h3>Contexto de razonamiento visible</h3><p>Las tablas, interpretaciones, suposiciones, notas y comprobaciones recuperadas permanecen visibles para que el borrador pueda cuestionarse en lugar de aceptarse ciegamente.</p></div>
                     <div class="feature-item"><h3>Respuestas a las que puedes volver</h3><p>Cada respuesta, incluida una pregunta de vuelta, se guarda en un historial en tu dispositivo. Restaura un borrador anterior o elimina los que ya no necesites.</p></div>
-                    <div class="feature-item"><h3>Pruebas de modelos integradas</h3><p>Dos pestañas muestran cada ejecución del benchmark, exportan los resultados en PDF y permiten a los dispositivos autorizados probar un modelo nuevo en una GPU alquilada, con el progreso en directo.</p></div>
+                    <div class="feature-item"><h3>Pruebas de modelos integradas</h3><p>Dos pestañas muestran cada ejecución del benchmark, marcada como de pesos abiertos o cerrados, exportan los resultados en PDF y permiten a los dispositivos autorizados probar un modelo nuevo, en una GPU alquilada o a través de OpenRouter, con el progreso en directo.</p></div>
                     <div class="feature-item"><h3>Un PWA, muchas pantallas</h3><p>La interfaz solo por invitación se puede instalar y se adapta desde pantallas de escritorio anchas hasta teléfonos compactos.</p></div>
                 </div>
 
@@ -77,12 +77,26 @@
                 <p>Una herramienta que escribe SQL solo es útil si ese SQL es correcto, así que el repositorio lo mide en lugar de darlo por hecho.</p>
                 <p>Un benchmark de modelos plantea 46 preguntas difíciles, tres veces cada una. Las preguntas con una única respuesta correcta se puntúan ejecutando el borrador en una copia de PostgreSQL con datos del almacén. Las preguntas sobre datos que el almacén no contiene, como salarios o abandono de clientes, deberían recibir una pregunta de vuelta. Las solicitudes para modificar datos nunca deben llegar al usuario.</p>
                 <p>La cifra más importante es con qué frecuencia un modelo se equivoca con seguridad: un borrador que se ejecuta pero da un resultado erróneo, o una respuesta sobre datos que no existen. Ambos parecen respuestas reales, y eso es lo que los hace arriesgados.</p>
+                <p>Cada modelo responde dos veces a las mismas preguntas. Primero, el almacén usa nombres descriptivos, como fact_account_balance_daily. Después usa nombres crípticos, abreviados como los escriben los almacenes bancarios antiguos, como F_ACCT_BAL_D, conservando las descripciones de las columnas. Los datos y las respuestas correctas no cambian.</p>
+
+                <h3>Con nombres descriptivos</h3>
                 <ul>
                     <li><strong>gpt-oss-20b, el modelo que usa la aplicación:</strong> 86 % de aciertos, 5 respuestas erróneas con seguridad y unas 200 preguntas por minuto en una sola A100.</li>
                     <li><strong>Qwen3.8-27B:</strong> 96 % de aciertos sin ninguna respuesta errónea con seguridad, pero unas cinco veces más lento.</li>
                     <li><strong>gpt-oss-120b:</strong> no es más preciso que el 20b y tiene menos de la mitad de su velocidad.</li>
                 </ul>
-                <p>Los tres pidieron una aclaración siempre que debían, y la comprobación SQL detuvo todas las escrituras que intentó gpt-oss-20b. Cada ejecución del benchmark alquila una GPU, sirve el modelo con vLLM y elimina la GPU al terminar, normalmente en 12 minutos como mucho y por bastante menos de un dólar.</p>
+                <p>Los tres pidieron una aclaración siempre que debían, y la comprobación SQL detuvo todas las escrituras que intentó gpt-oss-20b.</p>
+
+                <h3>Con nombres crípticos</h3>
+                <p>Todos los modelos abiertos perdieron entre 22 y 39 puntos. Los nuevos errores fueron justo los que los nombres legibles evitaban: una columna adivinada o una tabla malinterpretada a partir de su abreviatura. Ningún modelo abierto dejó pasar una escritura.</p>
+                <ul>
+                    <li><strong>gpt-oss-20b:</strong> bajó del 86 % al 46 % de aciertos, con 17 respuestas erróneas con seguridad.</li>
+                    <li><strong>Qwen3.8-27B:</strong> el mejor modelo abierto, con un 70 % de aciertos y 8 respuestas erróneas con seguridad.</li>
+                    <li><strong>Gemini 3.8 Flash:</strong> el mejor de todos, con un 72 % de aciertos y solo una respuesta errónea con seguridad, porque prefirió preguntar a adivinar.</li>
+                    <li><strong>Claude Sonnet 5, GPT-5.5 y GPT-4.1:</strong> entre un 68 y un 70 % de aciertos, pero con 9 a 18 respuestas erróneas con seguridad.</li>
+                    <li><strong>GPT-6 Luna:</strong> llevó la prudencia demasiado lejos: respondió con una pregunta en 53 de 69 casos y solo acertó el 22 %.</li>
+                </ul>
+                <p>Los modelos cerrados están solo para comparar. No podrían ejecutarse en el hardware propio de un banco, así que se llaman a través de OpenRouter. Los modelos de pesos abiertos se ejecutan en una GPU alquilada con vLLM, que se elimina al terminar, normalmente en 12 minutos como mucho y por bastante menos de un dólar.</p>
 
                 <h2>El mismo modelo, servidores distintos</h2>
                 <p>La aplicación se comunica con cualquier endpoint compatible con OpenAI, así que pasar de un proveedor alojado a los servidores propios de un banco parece un simple cambio de configuración. Una herramienta de evaluación independiente comprueba si realmente lo es. Los mismos pesos de gpt-oss-20b se sirvieron desde un proveedor alojado, en CPU y en GPU alquiladas con llama.cpp, vLLM y SGLang.</p>
