@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de-DE" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against semantic-layer-poc commit 58c1a5cb34baa6b65eaaa78872c8cea144f94ba4 (2026-09-27). -->
+    <!-- Content checked against semantic-layer-poc commit 9b955f52fe7291050214a05e413d210332d9c70f (2026-09-27). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bank DWH Studio verwandelt Bankfragen in natürlicher Sprache in bearbeitbare, überprüfbare PostgreSQL-SQL-Entwürfe und misst, wie oft das Modell richtig liegt.">
@@ -69,7 +69,7 @@
                     <div class="feature-item"><h3>Schemabasierter Abruf</h3><p>Elasticsearch schränkt einen großen Katalog auf die für die Frage erforderlichen Metadaten ein, bevor etwas an das Modell gesendet wird.</p></div>
                     <div class="feature-item"><h3>Sichtbarer Argumentationskontext</h3><p>Abgerufene Tabellen, Interpretationen, Annahmen, Notizen und Überprüfungen bleiben sichtbar, sodass der Entwurf angefochten und nicht blind akzeptiert werden kann.</p></div>
                     <div class="feature-item"><h3>Antworten, zu denen Sie zurückkehren können</h3><p>Jede Antwort, auch eine Rückfrage an Sie, wird in einem Verlauf auf Ihrem Gerät gespeichert. Stellen Sie einen früheren Entwurf wieder her oder löschen Sie die, die Sie nicht mehr brauchen.</p></div>
-                    <div class="feature-item"><h3>Modelltests inklusive</h3><p>Zwei Tabs zeigen jeden Benchmark-Lauf, exportieren die Ergebnisse als PDF und lassen freigegebene Geräte ein neues Modell auf einer gemieteten GPU testen, mit Live-Fortschritt.</p></div>
+                    <div class="feature-item"><h3>Modelltests inklusive</h3><p>Zwei Tabs zeigen jeden Benchmark-Lauf, gekennzeichnet als offene oder geschlossene Gewichte, exportieren die Ergebnisse als PDF und lassen freigegebene Geräte ein neues Modell testen, auf einer gemieteten GPU oder über OpenRouter, mit Live-Fortschritt.</p></div>
                     <div class="feature-item"><h3>Ein PWA, viele Bildschirme</h3><p>Die nur auf Einladung zugängliche Schnittstelle ist installierbar und passt sich von breiten Desktop-Bildschirmen bis hin zu kompakten Telefonen an.</p></div>
                 </div>
 
@@ -77,12 +77,26 @@
                 <p>Ein Werkzeug, das SQL schreibt, ist nur so nützlich, wie sein SQL korrekt ist. Deshalb misst das Repository genau das, statt es einfach anzunehmen.</p>
                 <p>Ein Modell-Benchmark stellt 46 schwierige Fragen, jede dreimal. Fragen mit genau einer richtigen Antwort werden bewertet, indem der Entwurf gegen eine befüllte PostgreSQL-Kopie des Warehouse ausgeführt wird. Fragen zu Daten, die das Warehouse nicht enthält, etwa Gehälter oder Kundenabwanderung, sollten mit einer Rückfrage beantwortet werden. Anfragen, Daten zu ändern, dürfen den Nutzer nie erreichen.</p>
                 <p>Die wichtigste Zahl ist, wie oft ein Modell selbstsicher falsch liegt: ein Entwurf, der läuft, aber das falsche Ergebnis liefert, oder eine Antwort zu Daten, die es nicht gibt. Beides sieht wie eine echte Antwort aus, und genau das macht es riskant.</p>
+                <p>Jedes Modell beantwortet dieselben Fragen zweimal. Zuerst verwendet das Warehouse beschreibende Namen wie fact_account_balance_daily. Dann verwendet es kryptische Namen, abgekürzt wie in älteren Bank-Warehouses, etwa F_ACCT_BAL_D, wobei die Spaltenbeschreibungen erhalten bleiben. Die Daten und die richtigen Antworten bleiben gleich.</p>
+
+                <h3>Mit beschreibenden Namen</h3>
                 <ul>
                     <li><strong>gpt-oss-20b, das Modell der App:</strong> 86 % richtig, 5 selbstsicher falsche Antworten und rund 200 Fragen pro Minute auf einer A100.</li>
                     <li><strong>Qwen3.8-27B:</strong> 96 % richtig ohne selbstsicher falsche Antworten, aber etwa fünfmal langsamer.</li>
                     <li><strong>gpt-oss-120b:</strong> nicht genauer als das 20b, bei weniger als halber Geschwindigkeit.</li>
                 </ul>
-                <p>Alle drei fragten jedes Mal nach, wenn sie es sollten, und die SQL-Prüfung fing jeden Schreibversuch von gpt-oss-20b ab. Jeder Benchmark-Lauf mietet eine GPU, stellt das Modell mit vLLM bereit und löscht die GPU danach wieder, meist innerhalb von 12 Minuten und für deutlich weniger als einen Dollar.</p>
+                <p>Alle drei fragten jedes Mal nach, wenn sie es sollten, und die SQL-Prüfung fing jeden Schreibversuch von gpt-oss-20b ab.</p>
+
+                <h3>Mit kryptischen Namen</h3>
+                <p>Jedes offene Modell verlor zwischen 22 und 39 Punkte. Die neuen Fehler waren genau die, die lesbare Namen verhindert hatten: eine geratene Spalte oder eine Tabelle, die aus ihrer Abkürzung falsch gedeutet wurde. Keines der offenen Modelle ließ einen Schreibzugriff durch.</p>
+                <ul>
+                    <li><strong>gpt-oss-20b:</strong> fiel von 86 % auf 46 % richtige Antworten, mit 17 selbstsicher falschen Antworten.</li>
+                    <li><strong>Qwen3.8-27B:</strong> das beste offene Modell, mit 70 % richtig und 8 selbstsicher falschen Antworten.</li>
+                    <li><strong>Gemini 3.8 Flash:</strong> das beste insgesamt, mit 72 % richtig und nur einer selbstsicher falschen Antwort, weil es lieber nachfragte als riet.</li>
+                    <li><strong>Claude Sonnet 5, GPT-5.5 und GPT-4.1:</strong> 68 bis 70 % richtig, aber mit 9 bis 18 selbstsicher falschen Antworten.</li>
+                    <li><strong>GPT-6 Luna:</strong> übertrieb die Vorsicht: fragte bei 53 von 69 Fragen zurück und lag nur bei 22 % richtig.</li>
+                </ul>
+                <p>Die geschlossenen Modelle dienen nur zum Vergleich. Sie könnten nicht auf der eigenen Hardware einer Bank laufen und werden deshalb über OpenRouter aufgerufen. Modelle mit offenen Gewichten laufen auf einer gemieteten GPU mit vLLM, die danach wieder gelöscht wird, meist innerhalb von 12 Minuten und für deutlich weniger als einen Dollar.</p>
 
                 <h2>Gleiches Modell, verschiedene Server</h2>
                 <p>Die App spricht mit jedem OpenAI-kompatiblen Endpunkt. Der Wechsel von einem gehosteten Anbieter zu den eigenen Servern einer Bank wirkt daher wie eine einfache Konfigurationsänderung. Ein separates Evaluierungswerkzeug prüft, ob das wirklich stimmt. Dieselben gpt-oss-20b-Gewichte liefen bei einem gehosteten Anbieter, auf CPU und auf gemieteten GPUs mit llama.cpp, vLLM und SGLang.</p>
