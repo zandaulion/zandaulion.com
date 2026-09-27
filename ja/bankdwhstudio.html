@@ -8,7 +8,7 @@
     <title>Bank DWH Studio - レビュー可能な SQL ドラフト</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=7">
+    <link rel="stylesheet" href="../project.css?v=8">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -97,6 +97,54 @@
                     <li><strong>GPT-6 Luna：</strong> 慎重すぎて、69 問中 53 問に聞き返しで答え、正答率はわずか 22%。</li>
                 </ul>
                 <p>クローズドモデルは比較のためだけに含めています。銀行自身のハードウェアでは動かせないため、OpenRouter 経由で呼び出します。オープンウェイトのモデルはレンタル GPU 上の vLLM で動かし、終了後に GPU を削除します。通常は 12 分以内、費用は 1 ドルを大きく下回ります。</p>
+
+                <h2>すべての結果</h2>
+                <p>アプリの Model tests タブには、記録されたすべての実行が残ります。以下の表は 2026 年 9 月 27 日のレポートからのもので、正答率の高い順に並んでいます。オープンウェイトのモデルは銀行自身のハードウェアで動かせますが、クローズドモデルは比較のため OpenRouter 経由で呼び出しました。</p>
+
+                <h3>分かりにくい名前</h3>
+                <div class="table-scroll" role="region" aria-label="分かりにくい名前での結果（スクロール可能）" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>モデル</th><th class="num">正答</th><th class="num">自信を持った誤答</th><th class="num">聞き返し</th><th class="num">危険な書き込み</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-closed"><td><code>google/gemini-3.8-flash</code><span class="run-meta"><span class="weights-tag">クローズド</span> <span>OpenRouter</span></span></td><td class="num">72.5%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>anthropic/claude-sonnet-5</code><span class="run-meta"><span class="weights-tag">クローズド</span> <span>OpenRouter</span></span></td><td class="num">69.6%</td><td class="num">12</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">69.6%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1</code><span class="run-meta"><span class="weights-tag">クローズド</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">18</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-5.5</code><span class="run-meta"><span class="weights-tag">クローズド</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1-mini</code><span class="run-meta"><span class="weights-tag">クローズド</span> <span>OpenRouter</span></span></td><td class="num">65.2%</td><td class="num">15</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">63.8%</td><td class="num">13</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">62.3%</td><td class="num">14</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">46.4%</td><td class="num">17</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-6-luna</code><span class="run-meta"><span class="weights-tag">クローズド</span> <span>OpenRouter</span></span></td><td class="num">21.7%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <h3>説明的な名前</h3>
+                <div class="table-scroll" role="region" aria-label="説明的な名前での結果（スクロール可能）" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>モデル</th><th class="num">正答</th><th class="num">自信を持った誤答</th><th class="num">聞き返し</th><th class="num">危険な書き込み</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>L40S</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>RTX 4090</span></span></td><td class="num">87%</td><td class="num">6</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">5</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">11</td><td class="num">14/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>ministral-3-14b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>RTX PRO 4500</span></span></td><td class="num">44.9%</td><td class="num">40</td><td class="num">3/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>mistral-small-3.2-24b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">40.6%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gemma-2-9b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">34.8%</td><td class="num">35</td><td class="num">0/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>eurollm-22b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">0%</td><td class="num">0</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <p>各質問は 3 回ずつ尋ねます。「正答」は、正解が 1 つに決まる質問への 69 件の回答のうち正しかった割合です。「自信を持った誤答」は、実行できたものの誤った結果を返したドラフトと、ウェアハウスにないデータについてのドラフトの数です。「聞き返し」は存在しないデータに関する質問への 18 件の回答が基準で、「危険な書き込み」はデータ変更の要求に対する 15 件の回答のうちユーザーに届いた数です。</p>
+                <p>ほかに 2 件の実行は採点対象外です。Gemma 4 26B は厳格な JSON 出力でループしました。これは品質ではなく提供時の不具合です。Devstral Small 2 は A100 ではそもそも動きません。</p>
+                <p>レポートには質問ごとの結果も載っており、分かりにくい名前の影響はそこで最もよく分かります。分かりにくい名前では、説明的な名前なら Qwen3.8-27B が毎回正解していた 5 つの質問に、どのモデルも答えられませんでした。たとえば、90 日を超えて延滞している貸付の件数です。</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">レポート全文をダウンロード（PDF）</a>
+                </div>
 
                 <h2>同じモデル、異なるサーバー</h2>
                 <p>アプリは OpenAI 互換のエンドポイントであれば接続できるため、ホスト型プロバイダーから銀行自身のサーバーへの移行は単なる設定変更に見えます。本当にそうなのかを、別の評価ツールで検証しています。同じ gpt-oss-20b の重みを、ホスト型プロバイダー、CPU、そして llama.cpp、vLLM、SGLang を使ったレンタル GPU で提供しました。</p>

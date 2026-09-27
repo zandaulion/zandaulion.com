@@ -8,7 +8,7 @@
     <title>Bank DWH Studio - Чернетки SQL, які можна переглядати</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=7">
+    <link rel="stylesheet" href="../project.css?v=8">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -97,6 +97,54 @@
                     <li><strong>GPT-6 Luna:</strong> перестаралася з обережністю: відповіла зустрічним запитанням на 53 з 69 запитань і вгадала лише 22%.</li>
                 </ul>
                 <p>Закриті моделі наведено лише для порівняння. Вони не могли б працювати на власному обладнанні банку, тому їх викликають через OpenRouter. Моделі з відкритими вагами працюють на орендованому GPU з vLLM, який потім видаляється, — зазвичай до 12 хвилин і значно дешевше за долар.</p>
+
+                <h2>Повні результати</h2>
+                <p>Вкладка Model tests у застосунку зберігає кожен записаний запуск. Ці таблиці взято з її звіту від 27 вересня 2026 року, найточніші моделі — першими. Моделі з відкритими вагами могли б працювати на власному обладнанні банку; закриті моделі викликали через OpenRouter для порівняння.</p>
+
+                <h3>Криптичні назви</h3>
+                <div class="table-scroll" role="region" aria-label="Прокручувані результати з криптичними назвами" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Модель</th><th class="num">Правильно</th><th class="num">Упевнено хибно</th><th class="num">Зустрічні запитання</th><th class="num">Небезпечні записи</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-closed"><td><code>google/gemini-3.8-flash</code><span class="run-meta"><span class="weights-tag">Закриті</span> <span>OpenRouter</span></span></td><td class="num">72.5%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>anthropic/claude-sonnet-5</code><span class="run-meta"><span class="weights-tag">Закриті</span> <span>OpenRouter</span></span></td><td class="num">69.6%</td><td class="num">12</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">69.6%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1</code><span class="run-meta"><span class="weights-tag">Закриті</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">18</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-5.5</code><span class="run-meta"><span class="weights-tag">Закриті</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1-mini</code><span class="run-meta"><span class="weights-tag">Закриті</span> <span>OpenRouter</span></span></td><td class="num">65.2%</td><td class="num">15</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">63.8%</td><td class="num">13</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">62.3%</td><td class="num">14</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">46.4%</td><td class="num">17</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-6-luna</code><span class="run-meta"><span class="weights-tag">Закриті</span> <span>OpenRouter</span></span></td><td class="num">21.7%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <h3>Описові назви</h3>
+                <div class="table-scroll" role="region" aria-label="Прокручувані результати з описовими назвами" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Модель</th><th class="num">Правильно</th><th class="num">Упевнено хибно</th><th class="num">Зустрічні запитання</th><th class="num">Небезпечні записи</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>L40S</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>RTX 4090</span></span></td><td class="num">87%</td><td class="num">6</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">5</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">11</td><td class="num">14/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>ministral-3-14b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>RTX PRO 4500</span></span></td><td class="num">44.9%</td><td class="num">40</td><td class="num">3/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>mistral-small-3.2-24b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">40.6%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gemma-2-9b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">34.8%</td><td class="num">35</td><td class="num">0/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>eurollm-22b</code><span class="run-meta"><span class="weights-tag">Відкриті</span> <span>A100</span></span></td><td class="num">0%</td><td class="num">0</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <p>Кожне запитання ставиться тричі. «Правильно» — це частка з 69 відповідей на запитання з єдиною правильною відповіддю. «Упевнено хибно» рахує чернетки, які виконалися й дали хибний результат, а також чернетки для даних, яких у сховищі немає. «Зустрічні запитання» рахуються з 18 відповідей на запитання про відсутні дані, а «небезпечні записи» показують, скільки з 15 відповідей на запити змінити дані дійшли до користувача.</p>
+                <p>Ще два запуски не оцінено. Gemma 4 26B зациклювалася за суворого JSON-виводу — це збій запуску, а не міра якості, — а Devstral Small 2 взагалі не запускається на A100.</p>
+                <p>Звіт також розбирає результати запитання за запитанням, і саме там видно ціну криптичних назв. З ними жодна модель не відповіла на п’ять запитань, які Qwen3.8-27B щоразу розв’язувала з описовими назвами, — наприклад, скільки кредитів були прострочені понад 90 днів.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Завантажити повний звіт (PDF)</a>
+                </div>
 
                 <h2>Та сама модель, різні сервери</h2>
                 <p>Застосунок працює з будь-яким OpenAI-сумісним endpoint, тож перехід від хмарного провайдера до власних серверів банку здається простою зміною конфігурації. Окремий інструмент оцінювання перевіряє, чи це справді так. Ті самі ваги gpt-oss-20b запускали в хмарного провайдера, на CPU та на орендованих GPU через llama.cpp, vLLM і SGLang.</p>

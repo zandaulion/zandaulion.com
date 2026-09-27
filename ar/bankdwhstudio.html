@@ -8,7 +8,7 @@
     <title>Bank DWH Studio - مسودات SQL قابلة للمراجعة</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=7">
+    <link rel="stylesheet" href="../project.css?v=8">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -97,6 +97,54 @@
                     <li><strong>GPT-6 Luna:</strong> بالغ في الحذر: ردّ بسؤال على 53 من 69 سؤالًا ولم يصب إلا في 22%.</li>
                 </ul>
                 <p>النماذج المغلقة موجودة للمقارنة فقط. فهي لا تستطيع العمل على أجهزة البنك الخاصة، لذلك تُستدعى عبر OpenRouter. أما النماذج مفتوحة الأوزان فتعمل على GPU مستأجر عبر vLLM، يُحذف بعد الانتهاء، عادةً خلال 12 دقيقة على الأكثر وبأقل بكثير من دولار.</p>
+
+                <h2>النتائج الكاملة</h2>
+                <p>تحتفظ علامة التبويب Model tests في التطبيق بكل تشغيل مسجَّل. تأتي هذه الجداول من تقريرها بتاريخ 27 سبتمبر 2026، والأدق أولًا. يمكن للنماذج مفتوحة الأوزان أن تعمل على أجهزة البنك الخاصة، أما النماذج المغلقة فاستُدعيت عبر OpenRouter للمقارنة.</p>
+
+                <h3>أسماء مبهمة</h3>
+                <div class="table-scroll" role="region" aria-label="نتائج قابلة للتمرير بأسماء مبهمة" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>النموذج</th><th class="num">صحيحة</th><th class="num">خاطئة بثقة</th><th class="num">رد بسؤال</th><th class="num">كتابات غير آمنة</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-closed"><td><code>google/gemini-3.8-flash</code><span class="run-meta"><span class="weights-tag">مغلق</span> <span>OpenRouter</span></span></td><td class="num">72.5%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>anthropic/claude-sonnet-5</code><span class="run-meta"><span class="weights-tag">مغلق</span> <span>OpenRouter</span></span></td><td class="num">69.6%</td><td class="num">12</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">69.6%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1</code><span class="run-meta"><span class="weights-tag">مغلق</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">18</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-5.5</code><span class="run-meta"><span class="weights-tag">مغلق</span> <span>OpenRouter</span></span></td><td class="num">68.1%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-4.1-mini</code><span class="run-meta"><span class="weights-tag">مغلق</span> <span>OpenRouter</span></span></td><td class="num">65.2%</td><td class="num">15</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">63.8%</td><td class="num">13</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">62.3%</td><td class="num">14</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">46.4%</td><td class="num">17</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-closed"><td><code>openai/gpt-6-luna</code><span class="run-meta"><span class="weights-tag">مغلق</span> <span>OpenRouter</span></span></td><td class="num">21.7%</td><td class="num">1</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <h3>أسماء وصفية</h3>
+                <div class="table-scroll" role="region" aria-label="نتائج قابلة للتمرير بأسماء وصفية" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>النموذج</th><th class="num">صحيحة</th><th class="num">خاطئة بثقة</th><th class="num">رد بسؤال</th><th class="num">كتابات غير آمنة</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>L40S</span></span></td><td class="num">95.7%</td><td class="num">0</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>RTX 4090</span></span></td><td class="num">87%</td><td class="num">6</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">5</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">11</td><td class="num">14/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">85.5%</td><td class="num">8</td><td class="num">18/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>ministral-3-14b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>RTX PRO 4500</span></span></td><td class="num">44.9%</td><td class="num">40</td><td class="num">3/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>mistral-small-3.2-24b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">40.6%</td><td class="num">9</td><td class="num">15/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>gemma-2-9b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">34.8%</td><td class="num">35</td><td class="num">0/18</td><td class="num">0/15</td></tr>
+                        <tr class="weights-open"><td><code>eurollm-22b</code><span class="run-meta"><span class="weights-tag">مفتوح</span> <span>A100</span></span></td><td class="num">0%</td><td class="num">0</td><td class="num">17/18</td><td class="num">0/15</td></tr>
+                    </tbody>
+                </table></div>
+
+                <p>يُطرح كل سؤال ثلاث مرات. تعني «صحيحة» نسبة الإجابات الصحيحة من 69 إجابة عن أسئلة لها إجابة صحيحة واحدة. وتعدّ «خاطئة بثقة» المسودات التي عملت وأعطت نتيجة خاطئة، إضافة إلى المسودات عن بيانات لا يحتويها المستودع. ويُحسب «رد بسؤال» من 18 إجابة عن أسئلة حول بيانات غير موجودة، وتعدّ «كتابات غير آمنة» عدد ما وصل إلى المستخدم من 15 إجابة عن طلبات تعديل البيانات.</p>
+                <p>هناك تشغيلان آخران بلا تقييم. فقد دخل Gemma 4 26B في حلقة متكررة مع مخرجات JSON الصارمة، وهو خلل في التشغيل لا مقياس للجودة، أما Devstral Small 2 فلا يعمل على A100 إطلاقًا.</p>
+                <p>يفصّل التقرير النتائج أيضًا سؤالًا بسؤال، وهناك تظهر كلفة الأسماء المبهمة. فمعها لم يُجب أي نموذج عن خمسة أسئلة أصاب فيها Qwen3.8-27B في كل مرة مع الأسماء الوصفية، مثل عدد القروض المتأخرة أكثر من 90 يومًا.</p>
+                <div class="project-links" style="margin-top: 24px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">نزّل التقرير الكامل (PDF)</a>
+                </div>
 
                 <h2>النموذج نفسه، خوادم مختلفة</h2>
                 <p>يتصل التطبيق بأي نقطة وصول متوافقة مع OpenAI، لذا يبدو الانتقال من مزوّد مستضاف إلى خوادم البنك الخاصة مجرد تغيير في الإعدادات. تتحقق أداة تقييم منفصلة مما إذا كان الأمر كذلك فعلًا. شُغّلت أوزان gpt-oss-20b نفسها لدى مزوّد مستضاف، وعلى CPU، وعلى وحدات GPU مستأجرة عبر llama.cpp وvLLM وSGLang.</p>
