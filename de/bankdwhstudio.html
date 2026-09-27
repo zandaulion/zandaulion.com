@@ -44,6 +44,7 @@
                     <div class="project-links">
                         <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Öffnen Sie PWA</a>
                         <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Auf GitHub ansehen</a>
+                        <a href="#full-results" class="btn btn-outline">Alle Ergebnisse ansehen</a>
                     </div>
                     <p class="availability-note">Das Live-Event PWA ist nur auf Einladung möglich.</p>
                 </div>
@@ -98,7 +99,10 @@
                 </ul>
                 <p>Die geschlossenen Modelle dienen nur zum Vergleich. Sie könnten nicht auf der eigenen Hardware einer Bank laufen und werden deshalb über OpenRouter aufgerufen. Modelle mit offenen Gewichten laufen auf einer gemieteten GPU mit vLLM, die danach wieder gelöscht wird, meist innerhalb von 12 Minuten und für deutlich weniger als einen Dollar.</p>
 
-                <h2>Alle Ergebnisse</h2>
+                <h2 id="full-results">Alle Ergebnisse</h2>
+                <div class="project-links" style="margin-bottom: 20px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Vollständigen Bericht herunterladen (PDF)</a>
+                </div>
                 <p>Der Tab Model tests der App speichert jeden aufgezeichneten Lauf. Diese Tabellen stammen aus seinem Bericht vom 27. September 2026, die genauesten Modelle zuerst. Modelle mit offenen Gewichten könnten auf der eigenen Hardware einer Bank laufen; geschlossene Modelle wurden zum Vergleich über OpenRouter aufgerufen.</p>
 
                 <h3>Kryptische Namen</h3>
@@ -142,9 +146,6 @@
                 <p>Jede Frage wird dreimal gestellt. Richtig ist der Anteil an 69 Antworten auf Fragen mit genau einer richtigen Antwort. Selbstsicher falsch zählt Entwürfe, die liefen und ein falsches Ergebnis lieferten, plus Entwürfe zu Daten, die das Warehouse nicht enthält. Rückfragen bezieht sich auf 18 Antworten zu Fragen nach fehlenden Daten, und unsichere Schreibzugriffe zählt, wie viele von 15 Antworten auf Änderungswünsche den Nutzer erreichten.</p>
                 <p>Zwei weitere Läufe sind nicht gewertet. Gemma 4 26B lief bei strikter JSON-Ausgabe in eine Schleife – ein Bereitstellungsfehler, kein Qualitätsmaß –, und Devstral Small 2 läuft auf einer A100 überhaupt nicht.</p>
                 <p>Der Bericht schlüsselt die Ergebnisse auch Frage für Frage auf, und dort zeigt sich, was kryptische Namen kosten. Mit ihnen beantwortete kein Modell fünf Fragen, die Qwen3.8-27B mit beschreibenden Namen jedes Mal richtig beantwortete, etwa wie viele Kredite mehr als 90 Tage überfällig waren.</p>
-                <div class="project-links" style="margin-top: 24px;">
-                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">Vollständigen Bericht herunterladen (PDF)</a>
-                </div>
 
                 <h2>Gleiches Modell, verschiedene Server</h2>
                 <p>Die App spricht mit jedem OpenAI-kompatiblen Endpunkt. Der Wechsel von einem gehosteten Anbieter zu den eigenen Servern einer Bank wirkt daher wie eine einfache Konfigurationsänderung. Ein separates Evaluierungswerkzeug prüft, ob das wirklich stimmt. Dieselben gpt-oss-20b-Gewichte liefen bei einem gehosteten Anbieter, auf CPU und auf gemieteten GPUs mit llama.cpp, vLLM und SGLang.</p>
