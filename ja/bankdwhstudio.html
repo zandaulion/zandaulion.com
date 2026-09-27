@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja-JP" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against semantic-layer-poc commit 58c1a5cb34baa6b65eaaa78872c8cea144f94ba4 (2026-09-27). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio は、自然言語による銀行取引の質問を、5,000 列の合成ウェアハウスに基づいて編集可能でレビュー可能な PostgreSQL SQL ドラフトに変換します。">
+    <meta name="description" content="Bank DWH Studio は、自然言語による銀行の質問を編集・レビュー可能な PostgreSQL の SQL ドラフトに変換し、モデルが正解する頻度を測定します。">
     <title>Bank DWH Studio - レビュー可能な SQL ドラフト</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=7">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -46,7 +47,7 @@
                     </div>
                     <p class="availability-note">ライブ PWA は招待制です。</p>
                 </div>
-                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="銀行に関する質問、SQL ドラフト、取得されたスキーマ コンテキスト、メモ、および小切手を示す Bank DWH Studio" class="project-hero-image hero-landscape bank-interface">
+                <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="電信送金額の上位 5 顧客に関する質問、SQL ドラフト、取得したスキーマのコンテキスト、メモ、チェックを表示した Bank DWH Studio" class="project-hero-image hero-landscape bank-interface">
             </div>
 
             <div class="project-content reveal">
@@ -67,18 +68,40 @@
                     <div class="feature-item"><h3>100 の合成テーブル</h3><p>生成された銀行倉庫フィクスチャは、5,000 の列、リレーションシップ、PostgreSQL DDL、カタログ、および小さなシードを提供します。</p></div>
                     <div class="feature-item"><h3>スキーマに基づいた検索</h3><p>Elasticsearch は、モデルに何かが送信される前に、大規模なカタログを質問に必要なメタデータに絞り込みます。</p></div>
                     <div class="feature-item"><h3>目に見える推論コンテキスト</h3><p>取得した表、解釈、仮定、メモ、チェックは表示されたままになるため、ドラフトを盲目的に受け入れるのではなく異議を唱えることができます。</p></div>
+                    <div class="feature-item"><h3>あとから見返せる回答</h3><p>すべての回答は、あなたへの確認の質問も含め、端末上の履歴に保存されます。以前のドラフトを復元したり、不要になったものを削除したりできます。</p></div>
+                    <div class="feature-item"><h3>モデルテストを内蔵</h3><p>2 つのタブで、すべてのベンチマーク実行を表示し、結果を PDF にエクスポートできます。承認された端末では、レンタル GPU 上で新しいモデルをテストし、進捗をリアルタイムで確認できます。</p></div>
                     <div class="feature-item"><h3>1 つの PWA、多くの画面</h3><p>招待専用インターフェイスはインストール可能で、ワイドデスクトップ画面からコンパクトな電話まで適応します。</p></div>
                 </div>
 
+                <h2>推測ではなく測定</h2>
+                <p>SQL を書くツールは、その SQL が正しくなければ役に立ちません。そこでリポジトリでは、正しさを前提にせず実際に測定しています。</p>
+                <p>モデルベンチマークでは 46 の難問をそれぞれ 3 回ずつ尋ねます。正解が 1 つに決まる質問は、データを投入した PostgreSQL のウェアハウスのコピーでドラフトを実行して採点します。給与や解約など、ウェアハウスにないデータに関する質問には、聞き返すのが正しい対応です。データを変更する要求は、決してユーザーに届いてはいけません。</p>
+                <p>最も重要な指標は、モデルが自信を持って間違える頻度です。実行はできても誤った結果を返すドラフトや、存在しないデータについての回答がそれにあたります。どちらも本物の回答に見えるため、危険なのです。</p>
+                <ul>
+                    <li><strong>gpt-oss-20b（アプリが使用するモデル）：</strong> 正答率 86%、自信を持った誤答 5 件、A100 1 基で毎分約 200 問。</li>
+                    <li><strong>Qwen3.8-27B：</strong> 正答率 96% で自信を持った誤答はゼロ。ただし速度は約 5 分の 1。</li>
+                    <li><strong>gpt-oss-120b：</strong> 20b より正確ではなく、速度は半分以下。</li>
+                </ul>
+                <p>3 つのモデルはいずれも、聞き返すべき場面では必ず聞き返しました。また、gpt-oss-20b が試みた書き込みはすべて SQL チェックで阻止されました。ベンチマークの各実行では GPU をレンタルし、vLLM でモデルを提供し、終了後に GPU を削除します。通常は 12 分以内、費用は 1 ドルを大きく下回ります。</p>
+
+                <h2>同じモデル、異なるサーバー</h2>
+                <p>アプリは OpenAI 互換のエンドポイントであれば接続できるため、ホスト型プロバイダーから銀行自身のサーバーへの移行は単なる設定変更に見えます。本当にそうなのかを、別の評価ツールで検証しています。同じ gpt-oss-20b の重みを、ホスト型プロバイダー、CPU、そして llama.cpp、vLLM、SGLang を使ったレンタル GPU で提供しました。</p>
+                <p>どのサーバーも正しいテーブルを選びました。違いが現れたのは別の点です。ドラフトに追加される任意の結合、破壊的な要求がその場で拒否されるか後で SQL チェックに阻止されるか、そして負荷時の挙動です。vLLM は同時 64 リクエストでも厳格な JSON 形式を守り、RTX 4090 1 枚で毎分約 270 問に達しました。SGLang は負荷時にこの形式を崩し、より厳しい設定で起動するまで直りませんでした。この不具合は、1 件ずつのリクエストでは一度も現れませんでした。</p>
+                <p>別の実験では、カタログをメインフレーム風の略称に書き換えました。テーブルと列の説明を残した場合、両モデルとも 12 の基本質問にすべて合格しました。説明を削除すると合格は半分にとどまり、良いメタデータがモデルと同じくらい重要であることがはっきり示されました。</p>
+
                 <h2>ギャラリー</h2>
-                <p>デスクトップ、ラップトップ、タブレット、携帯電話にわたる 6 つの質問。これらのキャプチャは、合成カタログに対して生成されたレビュー済みの応答を再生し、ポートフォリオの例を再現可能にします。</p>
-                <div class="gallery-grid">
-                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="アクティブな顧客のデスクトップ上の SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="広いデスクトップ上のデフォルトの SQL ドラフトのクライアント" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="ラップトップ上のローン返済 SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="横向きタブレット上のカード認証 SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="縦長のタブレット上の預金残高 SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="電話での支払い額 SQL ドラフト" class="gallery-img" loading="lazy" decoding="async">
+                <p>ベンチマークから選んだ 10 の難問を、ワイドなデスクトップから小型スマートフォンまで表示しています。各 SQL ドラフトはアプリ自身のパイプラインとモデルが作成し、データを投入したウェアハウスで実行して検証しました。10 件すべてが正しい答えを返しました。スクリーンショットは記録済みの応答を再生したもので、再現可能であり、実際の銀行データは含みません。</p>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="デスクトップ：電信送金額の上位 5 顧客" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-wire-and-atm-customers-desktop-wide.png" alt="ワイドデスクトップ：電信送金と ATM 取引の両方がある顧客" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loans-90-days-past-due-laptop.png" alt="ノート PC：90 日超延滞している貸付" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-top-merchant-categories-tablet-landscape.png" alt="横向きタブレット：カード承認額が最も多い加盟店カテゴリー" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-declined-card-share-tablet-portrait.png" alt="縦向きタブレット：拒否されたカード承認の割合" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/06-escalated-complaints-tablet-compact.png" alt="コンパクトタブレット：カテゴリー別のエスカレーションされた苦情" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/07-high-aml-alerts-phone-large.png" alt="大型スマートフォン：法域別の重大度 HIGH の AML アラート" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-mobile-transactions-phone.png" alt="スマートフォン：年別の Mobile App 取引件数" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/09-closing-balance-phone-compact.png" alt="コンパクトスマートフォン：口座の平均期末残高" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/10-sme-cross-border-phone-small.png" alt="小型スマートフォン：国際電信送金を行った中小企業顧客" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>人間は常にループの中にいます</h2>
@@ -86,10 +109,11 @@
                 <p>自動チェックの対象は、読み取り専用ステートメントの基本形と既知のテーブル参照です。SQL の構文、列参照、業務上の意味は引き続き人による確認が必要です。ウェアハウス内の名称、関係、指標はすべて合成したテスト資料であり、承認済みの銀行業務定義ではありません。</p>
 
                 <h2>ボンネットの下で</h2>
-                <p>デプロイされた概念実証では、Oracle Ampere A1 インスタンス上で Node バックエンドを実行し、スキーマ取得用の Elasticsearch と、SQL ドラフト用のホストされた GPT-OSS モデルを使用します。このリポジトリには、小規模に展開された POC から明確に分離された、より広範な将来のアーキテクチャも文書化されています。</p>
+                <p>デプロイされた概念実証では、Oracle Ampere A1 インスタンス上で Node バックエンドと Elasticsearch を rootless コンテナとして実行し、ホスト型プロバイダー経由の gpt-oss-20b で SQL をドラフトします。このリポジトリには、小規模にデプロイされた POC とは明確に区別された、より広範な将来のアーキテクチャも文書化されています。</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">招待専用の PWA を開きます</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">10 件の例をすべて参照する</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/blob/main/app/eval/bench/README.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">モデルベンチマークを読む</a>
                 </div>
             </div>
         </div>
