@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="uk" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against semantic-layer-poc commit 58c1a5cb34baa6b65eaaa78872c8cea144f94ba4 (2026-09-27). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio перетворює запитання про банківські дані природною мовою на редаговані чернетки PostgreSQL SQL, які можна перевірити та які ґрунтуються на синтетичному сховищі з 5 000 стовпців.">
+    <meta name="description" content="Bank DWH Studio перетворює банківські запитання природною мовою на редаговані чернетки SQL для PostgreSQL, які легко перевірити, і вимірює, як часто модель відповідає правильно.">
     <title>Bank DWH Studio - Чернетки SQL, які можна переглядати</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=7">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -46,7 +47,7 @@
                     </div>
                     <p class="availability-note">Пряма трансляція PWA доступна лише за запрошеннями.</p>
                 </div>
-                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio показує банківське запитання, чернетку SQL, отриманий контекст схеми, примітки та чеки" class="project-hero-image hero-landscape bank-interface">
+                <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="Bank DWH Studio із запитанням про п’ятьох клієнтів із найбільшими банківськими переказами, чернеткою SQL, знайденим контекстом схеми, нотатками та перевірками" class="project-hero-image hero-landscape bank-interface">
             </div>
 
             <div class="project-content reveal">
@@ -67,18 +68,40 @@
                     <div class="feature-item"><h3>100 синтетичних таблиць</h3><p>Згенерований фіксатор банківського складу містить 5000 стовпців, зв’язки, PostgreSQL DDL, каталог і невелике початкове значення.</p></div>
                     <div class="feature-item"><h3>Пошук за схемою</h3><p>Elasticsearch звужує великий каталог до метаданих, необхідних для запитання, перш ніж щось буде надіслано моделі.</p></div>
                     <div class="feature-item"><h3>Видимий контекст міркувань</h3><p>Отримані таблиці, тлумачення, припущення, примітки та перевірки залишаються видимими, тому проект можна оскаржити, а не прийняти наосліп.</p></div>
+                    <div class="feature-item"><h3>Відповіді, до яких можна повернутися</h3><p>Кожна відповідь, зокрема зустрічне запитання до вас, зберігається в історії на вашому пристрої. Відновіть попередню чернетку або видаліть ті, що більше не потрібні.</p></div>
+                    <div class="feature-item"><h3>Тести моделей — вбудовано</h3><p>Дві вкладки показують кожен запуск бенчмарку, експортують результати в PDF і дозволяють схваленим пристроям протестувати нову модель на орендованому GPU з поступом у реальному часі.</p></div>
                     <div class="feature-item"><h3>Один PWA, багато екранів</h3><p>Інтерфейс, доступний лише для запрошення, можна встановити та адаптується від широких екранів робочого столу до компактних телефонів.</p></div>
                 </div>
 
+                <h2>Виміряно, а не припущено</h2>
+                <p>Інструмент, що пише SQL, корисний лише тоді, коли цей SQL правильний, тому репозиторій вимірює це, а не приймає на віру.</p>
+                <p>Бенчмарк моделей ставить 46 складних запитань, кожне тричі. Запитання з єдиною правильною відповіддю оцінюються запуском чернетки на заповненій копії сховища в PostgreSQL. На запитання про дані, яких у сховищі немає, як-от зарплати чи відтік клієнтів, модель має відповісти зустрічним запитанням. Запити на зміну даних ніколи не мають дійти до користувача.</p>
+                <p>Найважливіший показник — як часто модель упевнено помиляється: чернетка, що виконується, але дає хибний результат, або відповідь про дані, яких не існує. Обидва випадки виглядають як справжні відповіді, і саме це робить їх ризикованими.</p>
+                <ul>
+                    <li><strong>gpt-oss-20b, модель, яку використовує застосунок:</strong> 86% правильних відповідей, 5 упевнено хибних і близько 200 запитань на хвилину на одному A100.</li>
+                    <li><strong>Qwen3.8-27B:</strong> 96% правильних відповідей без жодної впевнено хибної, але приблизно вп’ятеро повільніше.</li>
+                    <li><strong>gpt-oss-120b:</strong> не точніша за 20b і працює менш ніж удвічі повільніше.</li>
+                </ul>
+                <p>Усі три просили уточнення щоразу, коли мали це робити, а перевірка SQL зупинила кожну спробу запису від gpt-oss-20b. Кожен запуск бенчмарку орендує GPU, запускає модель через vLLM і після завершення видаляє GPU — зазвичай до 12 хвилин і значно дешевше за долар.</p>
+
+                <h2>Та сама модель, різні сервери</h2>
+                <p>Застосунок працює з будь-яким OpenAI-сумісним endpoint, тож перехід від хмарного провайдера до власних серверів банку здається простою зміною конфігурації. Окремий інструмент оцінювання перевіряє, чи це справді так. Ті самі ваги gpt-oss-20b запускали в хмарного провайдера, на CPU та на орендованих GPU через llama.cpp, vLLM і SGLang.</p>
+                <p>Кожен сервер обрав правильні таблиці. Відмінності проявилися в іншому: які необов’язкові join додавала чернетка, чи деструктивний запит відхилявся одразу, чи його пізніше зупиняла перевірка SQL, а також під навантаженням. vLLM дотримувався суворого формату JSON при 64 одночасних запитах і досяг близько 270 запитань на хвилину на одній RTX 4090. SGLang порушував цей формат під навантаженням, доки його не запустили зі суворішим налаштуванням; при одиночних запитах ця помилка ніколи не з’являлася.</p>
+                <p>Інший експеримент переписав каталог скороченими назвами в стилі мейнфреймів. Зі збереженими описами таблиць і стовпців обидві моделі й далі пройшли всі дванадцять базових запитань. Без описів пройшла лише половина — чіткий знак, що якісні метадані важать не менше за модель.</p>
+
                 <h2>Галерея</h2>
-                <p>Шість запитань для комп’ютера, ноутбука, планшета та телефону. Ці записи відтворюють перевірені відповіді, згенеровані на основі синтетичного каталогу, завдяки чому приклади портфоліо повторюються.</p>
-                <div class="gallery-grid">
-                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Активні клієнти SQL проект на робочому столі" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="Клієнти в чернетці SQL за замовчуванням на широкому робочому столі" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="Погашення кредиту SQL проект на ноутбуці" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="Проект авторизації картки SQL на альбомному планшеті" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="Депозитні залишки SQL чернетка на портретному планшеті" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="Сума оплати SQL тратта на тел" class="gallery-img" loading="lazy" decoding="async">
+                <p>Десять складних запитань із бенчмарку — від широкого монітора до маленького телефона. Кожну чернетку SQL написали власний конвеєр і модель застосунку, а потім її перевірили запуском на заповненому сховищі; усі десять дали правильну відповідь. Знімки екрана відтворюють ці записані відповіді, тож вони відтворювані й не містять реальних банківських даних.</p>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="П’ять клієнтів із найбільшою сумою банківських переказів на комп’ютері" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-wire-and-atm-customers-desktop-wide.png" alt="Клієнти з банківським переказом і операцією ATM на широкому моніторі" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loans-90-days-past-due-laptop.png" alt="Кредити з простроченням понад 90 днів на ноутбуці" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-top-merchant-categories-tablet-landscape.png" alt="Категорії продавців із найбільшою сумою авторизацій карток на планшеті в альбомній орієнтації" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-declined-card-share-tablet-portrait.png" alt="Частка відхилених авторизацій карток на планшеті в портретній орієнтації" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/06-escalated-complaints-tablet-compact.png" alt="Ескальовані скарги за категоріями на компактному планшеті" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/07-high-aml-alerts-phone-large.png" alt="Сповіщення AML високої важливості за юрисдикціями на великому телефоні" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-mobile-transactions-phone.png" alt="Транзакції через Mobile App за роками на телефоні" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/09-closing-balance-phone-compact.png" alt="Середній залишок на рахунках на кінець дня на компактному телефоні" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/10-sme-cross-border-phone-small.png" alt="Клієнти МСБ із транскордонним банківським переказом на маленькому телефоні" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Людина залишається в курсі</h2>
@@ -86,10 +109,11 @@
                 <p>Автоматичні перевірки охоплюють базову форму інструкції лише для читання та посилання на відомі таблиці. Синтаксис SQL, посилання на стовпці та бізнес-зміст усе одно потребують перевірки людиною. Усі назви, зв’язки та показники у сховищі є синтетичними тестовими матеріалами, а не затвердженими банківськими визначеннями.</p>
 
                 <h2>Під капотом</h2>
-                <p>Розгорнуте підтвердження концепції запускає серверну частину Node на екземплярі Oracle Ampere A1 із Elasticsearch для отримання схеми та розміщеною моделлю GPT-OSS для креслення SQL. Репозиторій також документує ширшу майбутню архітектуру, чітко відокремлену від меншої розгорнутої POC.</p>
+                <p>Розгорнутий доказ концепції запускає бекенд Node та Elasticsearch у rootless-контейнерах на інстансі Oracle Ampere A1 і пише SQL за допомогою gpt-oss-20b через хмарного провайдера. Репозиторій також описує ширшу майбутню архітектуру, чітко відокремлену від меншого розгорнутого POC.</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Відкрийте PWA лише за запрошенням</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Перегляньте всі 10 прикладів</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/blob/main/app/eval/bench/README.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Відкрити бенчмарк моделей</a>
                 </div>
             </div>
         </div>

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es-ES" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against semantic-layer-poc commit 58c1a5cb34baa6b65eaaa78872c8cea144f94ba4 (2026-09-27). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio convierte preguntas bancarias en lenguaje natural en borradores editables y revisables de PostgreSQL SQL basados ​​en un almacén sintético de 5000 columnas.">
+    <meta name="description" content="Bank DWH Studio convierte preguntas bancarias en lenguaje natural en borradores SQL de PostgreSQL editables y revisables, y mide con qué frecuencia acierta el modelo.">
     <title>Bank DWH Studio - Borradores revisables de SQL</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=7">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -46,7 +47,7 @@
                     </div>
                     <p class="availability-note">El PWA en vivo es solo por invitación.</p>
                 </div>
-                <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Bank DWH Studio que muestra una pregunta bancaria, borrador de SQL, contexto de esquema recuperado, notas y cheques" class="project-hero-image hero-landscape bank-interface">
+                <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="Bank DWH Studio con una pregunta sobre los cinco clientes con más transferencias, su borrador SQL, el contexto de esquema recuperado, notas y comprobaciones" class="project-hero-image hero-landscape bank-interface">
             </div>
 
             <div class="project-content reveal">
@@ -67,18 +68,40 @@
                     <div class="feature-item"><h3>100 mesas sintéticas</h3><p>Un dispositivo de almacén bancario generado proporciona 5000 columnas, relaciones, PostgreSQL DDL, un catálogo y una pequeña semilla.</p></div>
                     <div class="feature-item"><h3>Recuperación basada en esquemas</h3><p>Elasticsearch reduce un catálogo grande a los metadatos necesarios para la pregunta antes de enviar algo al modelo.</p></div>
                     <div class="feature-item"><h3>Contexto de razonamiento visible</h3><p>Las tablas, interpretaciones, suposiciones, notas y comprobaciones recuperadas permanecen visibles para que el borrador pueda cuestionarse en lugar de aceptarse ciegamente.</p></div>
+                    <div class="feature-item"><h3>Respuestas a las que puedes volver</h3><p>Cada respuesta, incluida una pregunta de vuelta, se guarda en un historial en tu dispositivo. Restaura un borrador anterior o elimina los que ya no necesites.</p></div>
+                    <div class="feature-item"><h3>Pruebas de modelos integradas</h3><p>Dos pestañas muestran cada ejecución del benchmark, exportan los resultados en PDF y permiten a los dispositivos autorizados probar un modelo nuevo en una GPU alquilada, con el progreso en directo.</p></div>
                     <div class="feature-item"><h3>Un PWA, muchas pantallas</h3><p>La interfaz solo por invitación se puede instalar y se adapta desde pantallas de escritorio anchas hasta teléfonos compactos.</p></div>
                 </div>
 
+                <h2>Medido, no supuesto</h2>
+                <p>Una herramienta que escribe SQL solo es útil si ese SQL es correcto, así que el repositorio lo mide en lugar de darlo por hecho.</p>
+                <p>Un benchmark de modelos plantea 46 preguntas difíciles, tres veces cada una. Las preguntas con una única respuesta correcta se puntúan ejecutando el borrador en una copia de PostgreSQL con datos del almacén. Las preguntas sobre datos que el almacén no contiene, como salarios o abandono de clientes, deberían recibir una pregunta de vuelta. Las solicitudes para modificar datos nunca deben llegar al usuario.</p>
+                <p>La cifra más importante es con qué frecuencia un modelo se equivoca con seguridad: un borrador que se ejecuta pero da un resultado erróneo, o una respuesta sobre datos que no existen. Ambos parecen respuestas reales, y eso es lo que los hace arriesgados.</p>
+                <ul>
+                    <li><strong>gpt-oss-20b, el modelo que usa la aplicación:</strong> 86 % de aciertos, 5 respuestas erróneas con seguridad y unas 200 preguntas por minuto en una sola A100.</li>
+                    <li><strong>Qwen3.8-27B:</strong> 96 % de aciertos sin ninguna respuesta errónea con seguridad, pero unas cinco veces más lento.</li>
+                    <li><strong>gpt-oss-120b:</strong> no es más preciso que el 20b y tiene menos de la mitad de su velocidad.</li>
+                </ul>
+                <p>Los tres pidieron una aclaración siempre que debían, y la comprobación SQL detuvo todas las escrituras que intentó gpt-oss-20b. Cada ejecución del benchmark alquila una GPU, sirve el modelo con vLLM y elimina la GPU al terminar, normalmente en 12 minutos como mucho y por bastante menos de un dólar.</p>
+
+                <h2>El mismo modelo, servidores distintos</h2>
+                <p>La aplicación se comunica con cualquier endpoint compatible con OpenAI, así que pasar de un proveedor alojado a los servidores propios de un banco parece un simple cambio de configuración. Una herramienta de evaluación independiente comprueba si realmente lo es. Los mismos pesos de gpt-oss-20b se sirvieron desde un proveedor alojado, en CPU y en GPU alquiladas con llama.cpp, vLLM y SGLang.</p>
+                <p>Todos los servidores eligieron las tablas correctas. Las diferencias aparecieron en otros puntos: en los joins opcionales que añadía un borrador, en si una solicitud destructiva se rechazaba o la detenía después la comprobación SQL, y bajo carga. vLLM mantuvo el formato JSON estricto con 64 solicitudes simultáneas y alcanzó unas 270 preguntas por minuto en una sola RTX 4090. SGLang rompió ese formato bajo carga hasta que se inició con un ajuste más estricto, un fallo que nunca apareció con una sola solicitud a la vez.</p>
+                <p>Otro experimento reescribió el catálogo con nombres abreviados al estilo mainframe. Conservando las descripciones de tablas y columnas, ambos modelos siguieron superando las doce preguntas de referencia. Sin las descripciones, solo la mitad las superó: una señal clara de que unos buenos metadatos importan tanto como el modelo.</p>
+
                 <h2>Galería</h2>
-                <p>Seis preguntas para computadoras de escritorio, portátiles, tabletas y teléfonos. Estas capturas reproducen las respuestas revisadas generadas en el catálogo sintético, lo que hace que los ejemplos de la cartera sean repetibles.</p>
-                <div class="gallery-grid">
-                    <img src="../assets/BankDWHStudio/01-active-customers-desktop.png" alt="Clientes activos SQL borrador en escritorio" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/02-default-clients-desktop-wide.png" alt="Clientes en borrador predeterminado SQL en un escritorio amplio" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/03-loan-repayments-laptop.png" alt="Pagos de préstamos SQL borrador en una computadora portátil" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/04-card-authorizations-tablet-landscape.png" alt="Autorizaciones de tarjeta SQL borrador en tableta horizontal" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/05-deposit-balances-tablet-portrait.png" alt="Deposite saldos en giro SQL en una tableta vertical" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BankDWHStudio/08-payment-volume-phone.png" alt="Volumen de pago SQL giro en un teléfono" class="gallery-img" loading="lazy" decoding="async">
+                <p>Diez preguntas difíciles del benchmark, desde un escritorio ancho hasta un móvil pequeño. Cada borrador SQL lo escribió el propio flujo y modelo de la aplicación, y después se verificó ejecutándolo en el almacén con datos; las diez dieron la respuesta correcta. Las capturas reproducen esas respuestas grabadas, así que son repetibles y no contienen datos bancarios reales.</p>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/BankDWHStudio/01-top5-wire-customers-desktop.png" alt="Los cinco clientes con mayor importe de transferencias, en escritorio" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/02-wire-and-atm-customers-desktop-wide.png" alt="Clientes con una transferencia y una operación ATM, en un escritorio ancho" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/03-loans-90-days-past-due-laptop.png" alt="Préstamos con más de 90 días de impago, en un portátil" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/04-top-merchant-categories-tablet-landscape.png" alt="Categorías de comercio con mayor importe de autorizaciones de tarjeta, en una tableta horizontal" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/05-declined-card-share-tablet-portrait.png" alt="Porcentaje de autorizaciones de tarjeta rechazadas, en una tableta vertical" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/06-escalated-complaints-tablet-compact.png" alt="Reclamaciones escaladas por categoría, en una tableta compacta" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/07-high-aml-alerts-phone-large.png" alt="Alertas AML de gravedad alta por jurisdicción, en un móvil grande" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/08-mobile-transactions-phone.png" alt="Transacciones de Mobile App por año, en un móvil" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/09-closing-balance-phone-compact.png" alt="Saldo medio de cierre de las cuentas, en un móvil compacto" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BankDWHStudio/10-sme-cross-border-phone-small.png" alt="Clientes pyme con una transferencia internacional, en un móvil pequeño" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>El ser humano se mantiene informado</h2>
@@ -86,10 +109,11 @@
                 <p>Las comprobaciones automáticas cubren la estructura de una instrucción de solo lectura y las referencias a tablas conocidas. La sintaxis SQL, las referencias de columnas y el significado de negocio todavía requieren revisión humana. Todos los nombres, relaciones e indicadores del almacén son material de prueba sintético, no definiciones bancarias aprobadas.</p>
 
                 <h2>Debajo del capó</h2>
-                <p>La prueba de concepto implementada ejecuta un backend Node en una instancia Oracle Ampere A1, con Elasticsearch para la recuperación de esquemas y un modelo GPT-OSS alojado para la redacción de SQL. El repositorio también documenta una arquitectura futura más amplia, claramente separada del POC más pequeño implementado.</p>
+                <p>La prueba de concepto implementada ejecuta un backend Node y Elasticsearch en contenedores rootless en una instancia Oracle Ampere A1, y redacta el SQL con gpt-oss-20b a través de un proveedor alojado. El repositorio también documenta una arquitectura futura más amplia, claramente separada del POC más pequeño implementado.</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Abra el PWA solo por invitación</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Explore los 10 ejemplos</a>
+                    <a href="https://github.com/zandaulion/semantic-layer-poc/blob/main/app/eval/bench/README.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Leer el benchmark de modelos</a>
                 </div>
             </div>
         </div>
