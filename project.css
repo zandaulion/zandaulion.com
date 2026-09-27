@@ -26,6 +26,7 @@ main { padding: 35px 0 0; }
 .project-links .btn { padding: 11px 16px; border-radius: 6px; font-size: 13px; margin: 0 !important; }
 .btn-primary { background: var(--ink); color: var(--paper); }
 .btn-outline { border-color: var(--line); }
+.btn-soon, .btn-soon:hover { background: transparent; color: var(--muted); border: 1px dashed var(--line); cursor: default; transform: none; font-family: inherit; }
 .availability-note { font-size: 13px; color: var(--muted); border: 1px dashed var(--line); border-radius: 6px; padding: 10px 14px; }
 .platform-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 28px 0 44px; }
 .platform-option { border: 1px solid var(--line); background: var(--sage); border-radius: 10px; padding: 25px; }
