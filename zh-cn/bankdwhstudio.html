@@ -44,6 +44,7 @@
                     <div class="project-links">
                         <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">打开PWA</a>
                         <a href="https://github.com/zandaulion/semantic-layer-poc" class="btn btn-outline" target="_blank" rel="noopener noreferrer">在 GitHub 上查看</a>
+                        <a href="#full-results" class="btn btn-outline">查看完整结果</a>
                     </div>
                     <p class="availability-note">现场 PWA 仅限受邀参加。</p>
                 </div>
@@ -98,7 +99,10 @@
                 </ul>
                 <p>封闭模型仅用于比较。它们无法在银行自己的硬件上运行，因此通过 OpenRouter 调用。开放权重模型在租用的 GPU 上用 vLLM 运行，结束后删除 GPU，通常不超过 12 分钟，花费远低于一美元。</p>
 
-                <h2>完整结果</h2>
+                <h2 id="full-results">完整结果</h2>
+                <div class="project-links" style="margin-bottom: 20px;">
+                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">下载完整报告（PDF）</a>
+                </div>
                 <p>应用的 Model tests 标签页会保存每一次记录的运行。下面的表格来自其 2026 年 9 月 27 日的报告，按正确率从高到低排列。开放权重模型可以在银行自己的硬件上运行；封闭模型通过 OpenRouter 调用，仅作比较。</p>
 
                 <h3>晦涩名称</h3>
@@ -142,9 +146,6 @@
                 <p>每个问题问三次。“正确”是 69 个答案中答对的比例，这些问题都只有一个正确答案。“自信地答错”统计能运行但结果错误的草稿，以及针对仓库中不存在的数据给出的草稿。“追问”以 18 个关于缺失数据问题的答案为分母，“不安全写入”统计 15 个修改数据请求的答案中有多少到达了用户。</p>
                 <p>另有两次运行未计分。Gemma 4 26B 在严格 JSON 输出下陷入循环，这是服务故障而非质量问题；Devstral Small 2 则根本无法在 A100 上运行。</p>
                 <p>报告还逐题列出了结果，晦涩名称的代价在那里一目了然。使用晦涩名称时，没有任何模型答对五个问题，而 Qwen3.8-27B 在描述性名称下每次都答对，例如逾期超过 90 天的贷款有多少笔。</p>
-                <div class="project-links" style="margin-top: 24px;">
-                    <a href="../assets/BankDWHStudio/model-tests-2026-09-27.pdf" class="btn btn-outline" target="_blank" rel="noopener">下载完整报告（PDF）</a>
-                </div>
 
                 <h2>同一模型，不同服务器</h2>
                 <p>该应用可连接任何兼容 OpenAI 的端点，因此从托管服务商切换到银行自己的服务器，看起来只是简单的配置更改。一个独立的评估工具会验证事实是否如此。同一套 gpt-oss-20b 权重分别由托管服务商、在 CPU 上，以及在租用的 GPU 上通过 llama.cpp、vLLM 和 SGLang 提供服务。</p>
