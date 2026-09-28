@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light" dir="ltr">
+<head>
+    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="O Android Store Screenshot Kit gera capturas reproduzíveis para o Google Play a partir de apps Android reais no Firebase Test Lab, depois as valida e registra cada execução.">
+    <title>Android Store Screenshot Kit - Detalhes do projeto</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/pt-br/screenshotkit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/screenshotkit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/screenshotkit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/screenshotkit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/screenshotkit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/screenshotkit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/screenshotkit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/screenshotkit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/screenshotkit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/screenshotkit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/screenshotkit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/screenshotkit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/screenshotkit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/screenshotkit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="screenshotkit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="pt-BR">← Voltar à oficina</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Nos bastidores</span>
+                    <h1>Android Store Screenshot Kit</h1>
+                    <p class="project-lead">Capturas reais de apps Android reais, feitas sempre do mesmo jeito e prontas para o Google Play.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                    </div>
+                </div>
+                <img src="../assets/ScreenshotKit/feature-graphic.png" alt="Três telas de celular, a do meio emoldurada e marcada como aprovada" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>Sobre o projeto</h2>
+                <p>As capturas da loja ficam desatualizadas toda vez que o app muda, e tirá-las à mão em um celular é lento e nunca sai igual duas vezes. Este kit transforma isso em uma etapa repetível: cada app mantém um pequeno teste que prepara os próprios dados e percorre as telas, e o kit cuida do resto.</p>
+                <p>Ele compila o app e o teste, executa os dois no dispositivo do Firebase Test Lab escolhido, acompanha a execução até o fim, baixa as capturas e as confere com os requisitos do Google Play antes de copiá-las para a pasta da loja do app.</p>
+
+                <h2>Como funciona</h2>
+                <ol>
+                    <li><strong>Descreva a execução.</strong> Um arquivo TOML curto informa o app, o teste, os dispositivos a usar e a quantidade e o tamanho das capturas esperadas.</li>
+                    <li><strong>Escreva a parte do app.</strong> Comece pelo teste-modelo, carregue dados de exemplo fixos e liste as telas a capturar. Funções compartilhadas esperam as telas, tocam, fecham diálogos do sistema e travam a orientação.</li>
+                    <li><strong>Execute um dispositivo.</strong> Um único comando compila os dois APKs, envia-os ao Firebase Test Lab e acompanha o teste até terminar.</li>
+                    <li><strong>Colete e confira.</strong> As capturas são baixadas, conferidas quanto a quantidade, tamanho e formato de cor, e salvas junto com um registro da execução.</li>
+                </ol>
+
+                <h2>Recursos</h2>
+                <ul>
+                    <li><strong>O mesmo resultado em toda execução:</strong> Cada app carrega os próprios dados de exemplo gravados em vez de chamar serviços ao vivo, então as capturas não mudam de uma execução para outra.</li>
+                    <li><strong>Conferidas antes do uso:</strong> Cada PNG é conferido quanto à quantidade esperada, às dimensões e ao formato RGB sem transparência que o Google Play exige.</li>
+                    <li><strong>Um registro de cada execução:</strong> Cada execução ganha a própria pasta, com os PNGs intactos e um arquivo run.json com os hashes dos arquivos, o dispositivo, o link do Firebase Console e a configuração exata.</li>
+                    <li><strong>Pronto para dispositivos de 16 KB:</strong> Uma verificação separada confere o alinhamento do APK e de cada biblioteca nativa dentro dele, para dispositivos Android com páginas de memória de 16 KB.</li>
+                    <li><strong>Sem contas surpresa:</strong> Um dispositivo sempre precisa ser informado, então uma execução nunca se espalha por todos os dispositivos físicos configurados, possivelmente pagos.</li>
+                    <li><strong>Segredos de fora:</strong> Os IDs de projeto vêm de variáveis de ambiente e o login, da Google Cloud CLI; nenhuma credencial fica na configuração.</li>
+                    <li><strong>Fácil de adotar:</strong> As funções compartilhadas dependem só do AndroidX Test e do UI Automator, então servem para apps com ou sem Jetpack Compose.</li>
+                </ul>
+
+                <h2>Sob o capô</h2>
+                <p>A ferramenta de linha de comando é um único script Python que não precisa de nada além do Python 3.11. As funções compartilhadas são uma pequena biblioteca Android escrita em Java, então não impõem nenhuma versão do Kotlin aos apps que as usam e funcionam com o AGP 8 e o AGP 9. Na CI, dispositivos virtuais podem rodar em cada pull request, deixando os físicos para as versões candidatas. O kit é de código aberto, sob a licença GPL-3.0.</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Continue descobrindo</span><h2 id="related-title">Talvez você também goste…</h2></div><p><a href="index.html#collection" hreflang="pt-BR">Ver toda a coleção ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="pt-BR">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Nos bastidores</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>Uma pequena peça que ajuda aplicativos web a funcionar offline e ficar atualizados.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="pt-BR">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Nos bastidores</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>Um pequeno console para gerenciar convites e dispositivos em aplicativos web privados.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="omaha.html" hreflang="pt-BR">
+                        <div class="collection-image"><img src="../assets/omaha/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Ferramentas do dia a dia</div>
+                        <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+                        <p>Entenda o que mudou nas empresas que você acompanha. Reveja seus motivos.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

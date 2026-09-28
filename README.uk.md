@@ -8,7 +8,7 @@
 
 **[Відвідайте zandaulion.com](https://zandaulion.com/)** · [Румунська колекція](https://zandaulion.com/ro/index.html)
 
-Це сховище містить веб-сайт Zandaulion: доступну для пошуку колекцію з 21 проекту, окремі сторінки проекту та інтерактивний редактор діаграм Sankey. Домашня сторінка та кожна сторінка проекту доступні 12 мовами. Сайт є статичним HTML, CSS і ванільним JavaScript, розміщеним на GitHub Pages.
+Це сховище містить веб-сайт Zandaulion: доступну для пошуку колекцію з 22 проекту, окремі сторінки проекту та інтерактивний редактор діаграм Sankey. Домашня сторінка та кожна сторінка проекту доступні 12 мовами. Сайт є статичним HTML, CSS і ванільним JavaScript, розміщеним на GitHub Pages.
 
 ## Переклади README
 
@@ -30,6 +30,7 @@
 | Проект | Сторінка сайту |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android і PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |

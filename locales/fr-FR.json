@@ -74,6 +74,7 @@
   "bank_card": "Posez une question bancaire et obtenez un brouillon SQL modifiable, fondé sur un entrepôt synthétique de 5 000 colonnes.",
   "pwakit_card": "Une petite brique qui aide les applications Web à fonctionner hors connexion et à rester à jour.",
   "invite_card": "Une petite console pour gérer les invitations et les appareils des applications Web privées.",
+  "screenshotkit_card": "De vraies captures pour le Play Store, prises dans de vraies applications Android, de la même façon à chaque fois.",
   "empty": "Aucun projet ici pour le moment. Essayez un autre mot ou explorez toute la collection.",
   "clear": "Tout afficher",
   "about_label": "La personne derrière les projets",

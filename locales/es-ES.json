@@ -74,6 +74,7 @@
   "bank_card": "Haz una pregunta bancaria y obtén un borrador SQL editable basado en un almacén sintético de 5000 columnas.",
   "pwakit_card": "Una pequeña pieza que ayuda a las aplicaciones web a funcionar sin conexión y mantenerse actualizadas.",
   "invite_card": "Una pequeña consola para gestionar invitaciones y dispositivos en aplicaciones web privadas.",
+  "screenshotkit_card": "Capturas reales para Play Store, de aplicaciones Android reales, tomadas siempre de la misma forma.",
   "empty": "No hay proyectos aquí por ahora. Prueba otra palabra o explora toda la colección.",
   "clear": "Mostrar todo",
   "about_label": "La persona detrás de los proyectos",
