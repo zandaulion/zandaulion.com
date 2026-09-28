@@ -8,7 +8,7 @@
 
 **[访问 zandaulion.com](https://zandaulion.com/)** · [罗马尼亚系列](https://zandaulion.com/ro/index.html)
 
-该存储库包含 Zandaulion 网站：22 个项目的可搜索集合、各个项目页面和交互式 Sankey 图表编辑器。主页和每个项目页面都有 12 种语言版本。该站点是静态 HTML、CSS 和普通 JavaScript，托管在 GitHub Pages 上。
+该存储库包含 Zandaulion 网站：23 个项目的可搜索集合、各个项目页面和交互式 Sankey 图表编辑器。主页和每个项目页面都有 12 种语言版本。该站点是静态 HTML、CSS 和普通 JavaScript，托管在 GitHub Pages 上。
 
 ## README 译本
 
@@ -33,6 +33,7 @@
 | Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android 和 PWA | [bpdigitizer.html](bpdigitizer.html) |
+| Casierul clasei | [casierul.html](casierul.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
