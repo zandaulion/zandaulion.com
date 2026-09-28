@@ -8,7 +8,7 @@
 
 **[Відвідайте zandaulion.com](https://zandaulion.com/)** · [Румунська колекція](https://zandaulion.com/ro/index.html)
 
-Це сховище містить веб-сайт Zandaulion: доступну для пошуку колекцію з 22 проекту, окремі сторінки проекту та інтерактивний редактор діаграм Sankey. Домашня сторінка та кожна сторінка проекту доступні 12 мовами. Сайт є статичним HTML, CSS і ванільним JavaScript, розміщеним на GitHub Pages.
+Це сховище містить веб-сайт Zandaulion: доступну для пошуку колекцію з 23 проекту, окремі сторінки проекту та інтерактивний редактор діаграм Sankey. Домашня сторінка та кожна сторінка проекту доступні 12 мовами. Сайт є статичним HTML, CSS і ванільним JavaScript, розміщеним на GitHub Pages.
 
 ## Переклади README
 
@@ -33,6 +33,7 @@
 | Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android і PWA | [bpdigitizer.html](bpdigitizer.html) |
+| Casierul clasei | [casierul.html](casierul.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
