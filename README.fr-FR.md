@@ -8,7 +8,7 @@ Un atelier ludique pour les idées curieuses : des applications, des jeux et de 
 
 **[Visitez zandaulion.com](https://zandaulion.com/)** · [RCollection roumaine](https://zandaulion.com/ro/index.html)
 
-Ce référentiel contient le site Web Zandaulion : une collection consultable de 22 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
+Ce référentiel contient le site Web Zandaulion : une collection consultable de 23 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
 
 ## Traductions du README
 
@@ -33,6 +33,7 @@ Modifiez le README anglais et les catalogues correspondants dans `locales/readme
 | Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android et PWA | [bpdigitizer.html](bpdigitizer.html) |
+| Casierul clasei | [casierul.html](casierul.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |

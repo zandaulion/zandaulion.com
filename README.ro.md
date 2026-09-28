@@ -8,7 +8,7 @@ Un atelier jucăuș pentru idei curioase: aplicații, jocuri și mici unelte de 
 
 **[Vizitați zandaulion.com](https://zandaulion.com/)** · [Colecția românească](https://zandaulion.com/ro/index.html)
 
-Acest depozit conține site-ul web Zandaulion: o colecție de 22 de proiecte care poate fi căutată, pagini de proiecte individuale și un editor de diagrame Sankey interactiv. Pagina principală și fiecare pagină de proiect sunt disponibile în 12 limbi. Site-ul este static HTML, CSS și vanilla JavaScript, găzduit pe GitHub Pages.
+Acest depozit conține site-ul web Zandaulion: o colecție de 23 de proiecte care poate fi căutată, pagini de proiecte individuale și un editor de diagrame Sankey interactiv. Pagina principală și fiecare pagină de proiect sunt disponibile în 12 limbi. Site-ul este static HTML, CSS și vanilla JavaScript, găzduit pe GitHub Pages.
 
 ## Traducerile README
 
@@ -33,6 +33,7 @@ Editați fișierul README în limba engleză și cataloagele corespunzătoare î
 | Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android și PWA | [bpdigitizer.html](bpdigitizer.html) |
+| Casierul clasei | [casierul.html](casierul.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
