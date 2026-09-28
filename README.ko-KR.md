@@ -8,7 +8,7 @@
 
 **[zandaulion.com 방문](https://zandaulion.com/)** · [루마니아 컬렉션](https://zandaulion.com/ro/index.html)
 
-이 저장소에는 검색 가능한 21개 프로젝트 컬렉션, 개별 프로젝트 페이지 및 대화형 Sankey 다이어그램 편집기인 Zandaulion 웹 사이트가 포함되어 있습니다. 홈페이지와 모든 프로젝트 페이지는 12개 언어로 제공됩니다. 사이트는 GitHub Pages에서 호스팅되는 정적 HTML, CSS 및 바닐라 JavaScript입니다.
+이 저장소에는 검색 가능한 22개 프로젝트 컬렉션, 개별 프로젝트 페이지 및 대화형 Sankey 다이어그램 편집기인 Zandaulion 웹 사이트가 포함되어 있습니다. 홈페이지와 모든 프로젝트 페이지는 12개 언어로 제공됩니다. 사이트는 GitHub Pages에서 호스팅되는 정적 HTML, CSS 및 바닐라 JavaScript입니다.
 
 ## README 번역
 
@@ -30,6 +30,7 @@
 | 프로젝트 | 웹사이트 페이지 |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — 안드로이드 및 PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |

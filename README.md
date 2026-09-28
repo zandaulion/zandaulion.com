@@ -8,7 +8,7 @@ A playful workshop for curious ideas: apps, games, and small tools to explore.
 
 **[Visit zandaulion.com](https://zandaulion.com/)** · [Romanian collection](https://zandaulion.com/ro/index.html)
 
-This repository contains the Zandaulion website: a searchable collection of 21
+This repository contains the Zandaulion website: a searchable collection of 22
 projects, individual project pages, and an interactive Sankey diagram editor.
 The homepage and every project page are available in 12 languages. The site is
 static HTML, CSS, and vanilla JavaScript, hosted on GitHub Pages.
@@ -40,6 +40,7 @@ paths, code examples, and link destinations are preserved.
 | Project | Website page |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android and PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |

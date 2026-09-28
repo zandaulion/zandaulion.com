@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="light" dir="ltr">
+<head>
+    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Android Store Screenshot Kit produce capturi de ecran repetabile pentru Google Play din aplicații Android reale, pe Firebase Test Lab, apoi le verifică și înregistrează fiecare rulare.">
+    <title>Android Store Screenshot Kit - Detalii proiect</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ro/screenshotkit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/screenshotkit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/screenshotkit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/screenshotkit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/screenshotkit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/screenshotkit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/screenshotkit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/screenshotkit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/screenshotkit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/screenshotkit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/screenshotkit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/screenshotkit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/screenshotkit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/screenshotkit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="screenshotkit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ro">← Înapoi în atelier</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">În culise</span>
+                    <h1>Android Store Screenshot Kit</h1>
+                    <p class="project-lead">Capturi reale din aplicații Android reale, făcute la fel de fiecare dată și gata pentru Google Play.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Vezi pe GitHub</a>
+                    </div>
+                </div>
+                <img src="../assets/ScreenshotKit/feature-graphic.png" alt="Trei ecrane de telefon, cel din mijloc încadrat și bifat" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>Despre proiect</h2>
+                <p>Capturile pentru magazin se învechesc de fiecare dată când aplicația se schimbă, iar a le face de mână pe telefon e lent și niciodată la fel de două ori. Acest kit le transformă într-un pas repetabil: fiecare aplicație păstrează un mic test care își pregătește propriile date și îi parcurge ecranele, iar kitul se ocupă de rest.</p>
+                <p>Construiește aplicația și testul ei, le rulează pe un dispozitiv Firebase Test Lab ales, urmărește rularea până la capăt, descarcă capturile și le verifică după cerințele Google Play înainte de a le copia în folderul de magazin al aplicației.</p>
+
+                <h2>Cum funcționează</h2>
+                <ol>
+                    <li><strong>Descrie rularea.</strong> Un fișier TOML scurt numește aplicația, testul ei, dispozitivele folosite și numărul și dimensiunea capturilor așteptate.</li>
+                    <li><strong>Scrie partea aplicației.</strong> Pornește de la testul-șablon, încarcă date de exemplu fixe și enumeră ecranele de capturat. Funcțiile comune așteaptă ecranele, ating, închid dialogurile de sistem și blochează orientarea.</li>
+                    <li><strong>Rulează un singur dispozitiv.</strong> O singură comandă construiește ambele APK-uri, le trimite la Firebase Test Lab și urmărește testul până se termină.</li>
+                    <li><strong>Adună și verifică.</strong> Capturile sunt descărcate, verificate ca număr, dimensiune și format de culoare și salvate împreună cu o evidență a rulării.</li>
+                </ol>
+
+                <h2>Funcționalități</h2>
+                <ul>
+                    <li><strong>Același rezultat la fiecare rulare:</strong> Fiecare aplicație își încarcă propriile date de exemplu înregistrate în loc să apeleze servicii live, așa că de la o rulare la alta capturile nu se schimbă.</li>
+                    <li><strong>Verificate înainte de folosire:</strong> Fiecare PNG este verificat pentru numărul așteptat, dimensiuni și formatul RGB fără transparență cerut de Google Play.</li>
+                    <li><strong>O evidență pentru fiecare rulare:</strong> Fiecare rulare primește propriul folder, cu PNG-urile neatinse și un fișier run.json care conține amprentele fișierelor, dispozitivul, linkul din Firebase Console și configurația exactă.</li>
+                    <li><strong>Pregătit pentru dispozitivele cu 16 KB:</strong> O verificare separată controlează alinierea APK-ului și a fiecărei biblioteci native din el, pentru dispozitivele Android cu pagini de memorie de 16 KB.</li>
+                    <li><strong>Fără facturi surpriză:</strong> Dispozitivul trebuie numit mereu explicit, așa că o rulare nu se extinde niciodată pe toate dispozitivele fizice configurate, posibil plătite.</li>
+                    <li><strong>Secretele rămân în afară:</strong> ID-urile de proiect vin din variabile de mediu, iar autentificarea din Google Cloud CLI; configurația nu conține nicio credențială.</li>
+                    <li><strong>Ușor de adoptat:</strong> Funcțiile comune depind doar de AndroidX Test și UI Automator, așa că se potrivesc aplicațiilor cu sau fără Jetpack Compose.</li>
+                </ul>
+
+                <h2>Cum este construit</h2>
+                <p>Instrumentul din linia de comandă este un singur script Python care nu are nevoie de nimic în afară de Python 3.11. Funcțiile comune sunt o mică bibliotecă Android scrisă în Java, așa că nu impun nicio versiune de Kotlin aplicațiilor care le folosesc și funcționează atât cu AGP 8, cât și cu AGP 9. În CI, dispozitivele virtuale pot rula la fiecare pull request, iar cele fizice pot fi păstrate pentru versiunile candidate. Kitul este open source, sub licența GPL-3.0.</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Descoperă o altă pistă</span><h2 id="related-title">Poate îți mai place și…</h2></div><p><a href="index.html#collection" hreflang="ro">Vezi întreaga colecție ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ro">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">În culise</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>Mica piesă care ajută aplicațiile web să funcționeze offline și să rămână la zi.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="ro">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">În culise</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>O mică consolă pentru gestionarea invitațiilor și dispozitivelor din aplicații web private.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="omaha.html" hreflang="ro">
+                        <div class="collection-image"><img src="../assets/omaha/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Unelte de zi cu zi</div>
+                        <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+                        <p>Înțelege ce s-a schimbat la companiile pe care le urmărești. Revizuiește-ți motivele.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

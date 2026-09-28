@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-theme="light" dir="ltr">
+<head>
+    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Android Store Screenshot Kit는 Firebase Test Lab에서 실제 Android 앱으로 재현 가능한 Google Play 스크린샷을 만들고, 검증한 뒤 모든 실행을 기록합니다.">
+    <title>Android Store Screenshot Kit - 프로젝트 정보</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ko/screenshotkit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/screenshotkit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/screenshotkit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/screenshotkit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/screenshotkit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/screenshotkit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/screenshotkit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/screenshotkit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/screenshotkit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/screenshotkit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/screenshotkit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/screenshotkit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/screenshotkit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/screenshotkit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="screenshotkit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ko-KR">← 작업실로 돌아가기</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">무대 뒤 도구</span>
+                    <h1>Android Store Screenshot Kit</h1>
+                    <p class="project-lead">실제 Android 앱의 진짜 스크린샷을 매번 같은 방식으로 찍어 Google Play에 바로 쓸 수 있습니다.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub에서 보기</a>
+                    </div>
+                </div>
+                <img src="../assets/ScreenshotKit/feature-graphic.png" alt="휴대폰 화면 세 개 중 가운데 화면이 테두리로 강조되고 체크 표시가 있음" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>프로젝트 소개</h2>
+                <p>스토어 스크린샷은 앱이 바뀔 때마다 낡고, 휴대폰으로 직접 찍으면 느린 데다 두 번 똑같이 나오지 않습니다. 이 키트는 이를 반복 가능한 단계로 바꿉니다. 각 앱은 자체 데이터를 준비하고 화면을 차례로 여는 작은 테스트만 갖고, 나머지는 키트가 맡습니다.</p>
+                <p>앱과 테스트를 빌드하고, 선택한 Firebase Test Lab 기기에서 실행해 끝까지 따라간 뒤, 스크린샷을 내려받아 Google Play 요구 사항에 맞는지 확인하고 앱의 스토어 폴더에 복사합니다.</p>
+
+                <h2>작동 원리</h2>
+                <ol>
+                    <li><strong>실행을 정의합니다.</strong> 짧은 TOML 파일에 앱, 테스트, 사용할 기기, 예상 스크린샷 개수와 크기를 적습니다.</li>
+                    <li><strong>앱 쪽 부분을 작성합니다.</strong> 템플릿 테스트에서 시작해 고정된 예시 데이터를 불러오고 캡처할 화면을 나열합니다. 공용 도우미가 화면 대기, 탭, 시스템 대화상자 닫기, 화면 방향 고정을 처리합니다.</li>
+                    <li><strong>기기 하나로 실행합니다.</strong> 명령 하나로 두 APK를 빌드하고 Firebase Test Lab에 제출한 뒤 테스트가 끝날 때까지 따라갑니다.</li>
+                    <li><strong>수집하고 확인합니다.</strong> 스크린샷을 내려받아 개수, 크기, 색상 형식을 확인하고 실행 기록과 함께 저장합니다.</li>
+                </ol>
+
+                <h2>기능</h2>
+                <ul>
+                    <li><strong>매번 같은 결과:</strong> 각 앱은 실시간 서비스를 호출하는 대신 녹화해 둔 자체 예시 데이터를 불러오므로, 실행할 때마다 스크린샷이 달라지지 않습니다.</li>
+                    <li><strong>사용 전에 확인:</strong> 모든 PNG의 예상 개수와 크기, 그리고 Google Play가 요구하는 투명도 없는 RGB 형식을 확인합니다.</li>
+                    <li><strong>실행마다 남는 기록:</strong> 실행마다 별도 폴더가 생기며, 원본 그대로의 PNG와 파일 해시, 기기, Firebase Console 링크, 정확한 설정을 담은 run.json 파일이 저장됩니다.</li>
+                    <li><strong>16KB 기기 대비:</strong> 별도 검사가 APK와 그 안의 모든 네이티브 라이브러리 정렬을 확인해, 메모리 페이지가 16KB인 Android 기기에 대비합니다.</li>
+                    <li><strong>예상치 못한 요금 없음:</strong> 기기를 항상 명시해야 하므로, 설정된 모든 실기기, 즉 유료일 수 있는 기기로 실행이 퍼지는 일이 없습니다.</li>
+                    <li><strong>비밀 정보는 따로:</strong> 프로젝트 ID는 환경 변수에서, 로그인은 Google Cloud CLI에서 가져오며, 설정 파일에는 자격 증명이 전혀 없습니다.</li>
+                    <li><strong>도입이 쉬움:</strong> 도우미는 AndroidX Test와 UI Automator에만 의존하므로 Jetpack Compose를 쓰는 앱이든 아니든 잘 맞습니다.</li>
+                </ul>
+
+                <h2>후드 아래</h2>
+                <p>명령줄 도구는 Python 3.11만 있으면 되는 단일 Python 스크립트입니다. 공용 도우미는 Java로 작성한 작은 Android 라이브러리여서, 이를 쓰는 앱에 특정 Kotlin 버전을 강요하지 않고 AGP 8과 AGP 9에서 모두 작동합니다. CI에서는 모든 pull request마다 가상 기기를 실행하고, 실기기는 출시 후보용으로 남겨 둘 수 있습니다. 이 키트는 GPL-3.0 라이선스의 오픈 소스입니다.</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">계속 둘러보기</span><h2 id="related-title">이런 작품도 만나보세요</h2></div><p><a href="index.html#collection" hreflang="ko-KR">전체 모음 보기 ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ko-KR">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">무대 뒤 도구</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>웹 앱이 오프라인에서도 작동하고 최신 상태를 유지하도록 돕는 작은 구성 요소.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="ko-KR">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">무대 뒤 도구</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>비공개 웹 앱의 초대와 기기를 한곳에서 관리하는 작은 콘솔.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="omaha.html" hreflang="ko-KR">
+                        <div class="collection-image"><img src="../assets/omaha/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">일상 도구</div>
+                        <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+                        <p>팔로우하는 기업에서 무엇이 바뀌었는지 이해하세요. 나의 이유를 다시 살펴보세요.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

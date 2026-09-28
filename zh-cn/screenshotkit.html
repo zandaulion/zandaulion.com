@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" dir="ltr">
+<head>
+    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Android Store Screenshot Kit 在 Firebase Test Lab 上从真实的 Android 应用生成可复现的 Google Play 截图，然后进行校验并记录每一次运行。">
+    <title>Android Store Screenshot Kit - 项目详情</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/zh-cn/screenshotkit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/screenshotkit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/screenshotkit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/screenshotkit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/screenshotkit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/screenshotkit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/screenshotkit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/screenshotkit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/screenshotkit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/screenshotkit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/screenshotkit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/screenshotkit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/screenshotkit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/screenshotkit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="screenshotkit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="zh-CN">← 返回工作坊</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">幕后工具</span>
+                    <h1>Android Store Screenshot Kit</h1>
+                    <p class="project-lead">真实 Android 应用的真实截图，每次都以相同方式生成，可直接用于 Google Play。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">在 GitHub 上查看</a>
+                    </div>
+                </div>
+                <img src="../assets/ScreenshotKit/feature-graphic.png" alt="三块手机屏幕，中间一块被框出并打勾" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>关于项目</h2>
+                <p>应用每次更新，商店截图就会过时；在手机上手动截图既慢，又很难两次完全一致。这个工具包把截图变成可重复的步骤：每个应用只保留一个小测试，用来准备自己的数据并逐个打开页面，其余工作都交给工具包。</p>
+                <p>它会构建应用及其测试，在选定的 Firebase Test Lab 设备上运行，全程跟踪运行过程，下载截图，并按照 Google Play 的要求检查，再复制到应用的商店素材文件夹。</p>
+
+                <h2>它是如何运作的</h2>
+                <ol>
+                    <li><strong>描述运行。</strong> 一个简短的 TOML 文件写明应用、测试、要使用的设备，以及预期的截图数量和尺寸。</li>
+                    <li><strong>编写应用自己的部分。</strong> 从模板测试开始，载入固定的示例数据，并列出要截取的页面。共享的辅助函数负责等待页面、点按、关闭系统对话框以及锁定屏幕方向。</li>
+                    <li><strong>运行一台设备。</strong> 一条命令即可构建两个 APK，提交到 Firebase Test Lab，并跟踪测试直到结束。</li>
+                    <li><strong>收集并检查。</strong> 截图下载后会检查数量、尺寸和颜色格式，并与一份运行记录一起保存。</li>
+                </ol>
+
+                <h2>功能</h2>
+                <ul>
+                    <li><strong>每次运行结果相同：</strong> 每个应用载入自己录制好的示例数据，而不是调用线上服务，因此截图不会在不同运行之间发生变化。</li>
+                    <li><strong>使用前先检查：</strong> 每个 PNG 都会检查数量、尺寸，以及 Google Play 要求的不含透明通道的 RGB 格式。</li>
+                    <li><strong>每次运行都有记录：</strong> 每次运行都有独立的文件夹，保存未经修改的 PNG，以及一个 run.json 文件，其中包含文件哈希、设备、Firebase Console 链接和完整配置。</li>
+                    <li><strong>适配 16 KB 设备：</strong> 另有一项检查会核对 APK 及其中每个原生库的对齐方式，以适配内存页为 16 KB 的 Android 设备。</li>
+                    <li><strong>不会有意外账单：</strong> 每次都必须明确指定设备，因此一次运行绝不会扩散到所有已配置、可能收费的实体设备上。</li>
+                    <li><strong>密钥不入配置：</strong> 项目 ID 来自环境变量，登录则通过 Google Cloud CLI；配置文件中不包含任何凭据。</li>
+                    <li><strong>易于接入：</strong> 辅助函数只依赖 AndroidX Test 和 UI Automator，因此无论应用是否使用 Jetpack Compose 都适用。</li>
+                </ul>
+
+                <h2>在引擎盖下</h2>
+                <p>命令行工具是一个 Python 脚本，除了 Python 3.11 之外不需要任何东西。共享辅助函数是一个用 Java 编写的小型 Android 库，因此不会强制使用它的应用采用特定的 Kotlin 版本，并且同时支持 AGP 8 和 AGP 9。在 CI 中，可以在每个拉取请求上运行虚拟设备，把实体设备留给候选发布版本。该工具包以 GPL-3.0 许可证开源。</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">继续发现</span><h2 id="related-title">你可能还会喜欢…</h2></div><p><a href="index.html#collection" hreflang="zh-CN">查看全部作品 ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="zh-CN">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">幕后工具</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>帮助网页应用离线运行并保持更新的小小构件。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="zh-CN">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">幕后工具</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>一个小控制台，统一管理私人网页应用的邀请和设备。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="omaha.html" hreflang="zh-CN">
+                        <div class="collection-image"><img src="../assets/omaha/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">日常工具</div>
+                        <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+                        <p>了解你关注的公司发生了什么变化。重新审视你的理由。</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

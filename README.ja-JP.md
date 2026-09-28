@@ -8,7 +8,7 @@
 
 **[zandaulion.com にアクセスしてください](https://zandaulion.com/)** · [ルーマニアのコレクション](https://zandaulion.com/ro/index.html)
 
-このリポジトリには、21 のプロジェクトの検索可能なコレクション、個々のプロジェクト ページ、および対話型の Sankey 図エディターである Zandaulion Web サイトが含まれています。ホームページとすべてのプロジェクト ページは 12 か国語で利用できます。サイトは静的 HTML、CSS、およびバニラ JavaScript で、GitHub Pages でホストされています。
+このリポジトリには、22 のプロジェクトの検索可能なコレクション、個々のプロジェクト ページ、および対話型の Sankey 図エディターである Zandaulion Web サイトが含まれています。ホームページとすべてのプロジェクト ページは 12 か国語で利用できます。サイトは静的 HTML、CSS、およびバニラ JavaScript で、GitHub Pages でホストされています。
 
 ## READMEの翻訳
 
@@ -30,6 +30,7 @@
 | プロジェクト | ウェブサイトのページ |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android および PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
