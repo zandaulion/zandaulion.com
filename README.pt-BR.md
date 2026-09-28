@@ -8,7 +8,7 @@ Uma oficina divertida para ideias curiosas: aplicativos, jogos e pequenas ferram
 
 **[Visite zandaulion.com](https://zandaulion.com/)** · [Coleção romena](https://zandaulion.com/ro/index.html)
 
-Este repositório contém o site Zandaulion: uma coleção pesquisável de 22 projetos, páginas de projetos individuais e um editor de diagrama Sankey interativo. A página inicial e todas as páginas do projeto estão disponíveis em 12 idiomas. O site é estático HTML, CSS e vanilla JavaScript, hospedado em GitHub Pages.
+Este repositório contém o site Zandaulion: uma coleção pesquisável de 23 projetos, páginas de projetos individuais e um editor de diagrama Sankey interativo. A página inicial e todas as páginas do projeto estão disponíveis em 12 idiomas. O site é estático HTML, CSS e vanilla JavaScript, hospedado em GitHub Pages.
 
 ## Traduções do README
 
@@ -33,6 +33,7 @@ Edite o README em inglês e os catálogos correspondentes em `locales/readme/` e
 | Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer – Android e PWA | [bpdigitizer.html](bpdigitizer.html) |
+| Casierul clasei | [casierul.html](casierul.html) |
 | Faceslice | [faceslice.html](faceslice.html) |
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
