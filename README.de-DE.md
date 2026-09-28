@@ -8,7 +8,7 @@ Eine spielerische Werkstatt für neugierige Ideen: Apps, Spiele und kleine Werkz
 
 **[Visit zandaulion.com](https://zandaulion.com/)** · [Rumänische Sammlung](https://zandaulion.com/ro/index.html)
 
-Dieses Repository enthält die Zandaulion-Website: eine durchsuchbare Sammlung von 21 Projekten, einzelne Projektseiten und einen interaktiven Sankey-Diagrammeditor. Die Homepage und jede Projektseite sind in 12 Sprachen verfügbar. Die Site ist statisch HTML, CSS und Vanilla JavaScript und wird auf GitHub Pages gehostet.
+Dieses Repository enthält die Zandaulion-Website: eine durchsuchbare Sammlung von 22 Projekten, einzelne Projektseiten und einen interaktiven Sankey-Diagrammeditor. Die Homepage und jede Projektseite sind in 12 Sprachen verfügbar. Die Site ist statisch HTML, CSS und Vanilla JavaScript und wird auf GitHub Pages gehostet.
 
 ## README-Übersetzungen
 
@@ -30,6 +30,7 @@ Bearbeiten Sie die englische README-Datei und die entsprechenden Kataloge in `lo
 | Projekt | Website-Seite |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer – Android und PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |

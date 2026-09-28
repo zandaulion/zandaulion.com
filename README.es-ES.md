@@ -8,7 +8,7 @@ Un taller lleno de juego para ideas curiosas: aplicaciones, juegos y pequeñas h
 
 **[Visita zandaulion.com](https://zandaulion.com/)** · [Colección rumana](https://zandaulion.com/ro/index.html)
 
-Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 21 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
+Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 22 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
 
 ## Traducciones del README
 
@@ -30,6 +30,7 @@ Edite el archivo README en inglés y los catálogos correspondientes en `locales
 | Proyecto | página web |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer — Android y PWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |

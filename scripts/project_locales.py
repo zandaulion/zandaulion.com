@@ -9,7 +9,7 @@ from site_locales import LANGUAGES
 FILES = ('admitere.html', 'bankdwhstudio.html', 'bpdigitizer.html', 'faceslice.html', 'gravitygarden.html',
          'gravitytdg.html', 'gravitywarp.html', 'intarzieri.html', 'kerfloom.html',
          'magpie.html', 'miscare.html', 'olxdeals.html', 'omaha.html', 'orbitpuzzles.html',
-         'palebluedot.html', 'plate.html', 'pwainvite.html', 'pwakit.html', 'sankey.html',
+         'palebluedot.html', 'plate.html', 'pwainvite.html', 'pwakit.html', 'sankey.html', 'screenshotkit.html',
          'spendosaurus.html', 'thermostat.html')
 PROJECTS = {lang: FILES for lang, path, _, _ in LANGUAGES if path}
 PATHS = {lang: path for lang, path, _, _ in LANGUAGES}
@@ -17,7 +17,7 @@ BRANDS = {'Zandaulion', 'Admitere Liceu Kit', 'Bank DWH Studio', 'BP Digitizer',
           'GravityTDG', 'Gravity Warp', 'Întârzieri Tren', 'Kerfloom', 'Magpie', 'Mișcare',
           'OLX Deals', 'Omaha', 'OrbitPuzzles', 'Pale Blue Dot', 'Bitey', 'PWA Invite',
           'PWA Kit', 'Sankey', 'Spendosaurus', 'Thermostat', 'PWAInvite', 'PWAKit'}
-BRANDS.update({'Intârzieri Tren', 'OLX Deal Finder', 'Pocket Omaha', 'PWA Invite Console',
+BRANDS.update({'Android Store Screenshot Kit', 'Intârzieri Tren', 'OLX Deal Finder', 'Pocket Omaha', 'PWA Invite Console',
                'pwa-kit', 'Thermostat Monitor'})
 UI = {
     'explore': 'Keep exploring', 'viewer': 'Project image viewer',

@@ -74,6 +74,7 @@
   "bank_card": "Stelle eine Banking-Frage und erhalte einen bearbeitbaren SQL-Entwurf, gestützt auf ein synthetisches Warehouse mit 5.000 Spalten.",
   "pwakit_card": "Ein kleiner Baustein, mit dem Web-Apps offline funktionieren und aktuell bleiben.",
   "invite_card": "Eine kleine Konsole für Einladungen und Geräte in privaten Web-Apps.",
+  "screenshotkit_card": "Echte Play-Store-Screenshots aus echten Android-Apps, jedes Mal auf dieselbe Weise aufgenommen.",
   "empty": "Hier gibt es gerade keine Projekte. Versuche ein anderes Wort oder entdecke die ganze Sammlung.",
   "clear": "Alles anzeigen",
   "about_label": "Der Mensch hinter den Projekten",

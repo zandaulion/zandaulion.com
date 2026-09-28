@@ -79,6 +79,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -155,6 +156,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -231,6 +233,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -307,6 +310,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -383,6 +387,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -459,6 +464,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -535,6 +541,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -611,6 +618,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -687,6 +695,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -763,6 +772,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
@@ -839,6 +849,7 @@ window.ZandaulionLocales = [
       "pwainvite.html",
       "pwakit.html",
       "sankey.html",
+      "screenshotkit.html",
       "spendosaurus.html",
       "thermostat.html"
     ],
