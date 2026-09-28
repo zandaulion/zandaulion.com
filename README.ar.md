@@ -10,7 +10,7 @@
 
 **[قم بزيارة zandaulion.com](https://zandaulion.com/)** · [المجموعة الرومانية](https://zandaulion.com/ro/index.html)
 
-يحتوي هذا المستودع على موقع Zandaulion: مجموعة قابلة للبحث مكونة من 21 مشروعًا، وصفحات مشاريع فردية، ومحرر الرسوم البيانية التفاعلي Sankey. الصفحة الرئيسية وكل صفحة مشروع متاحة بـ 12 لغة. الموقع ثابت HTML، CSS، وفانيليا JavaScript، مستضاف على GitHub Pages.
+يحتوي هذا المستودع على موقع Zandaulion: مجموعة قابلة للبحث مكونة من 22 مشروعًا، وصفحات مشاريع فردية، ومحرر الرسوم البيانية التفاعلي Sankey. الصفحة الرئيسية وكل صفحة مشروع متاحة بـ 12 لغة. الموقع ثابت HTML، CSS، وفانيليا JavaScript، مستضاف على GitHub Pages.
 
 ## ترجمات README
 
@@ -32,6 +32,7 @@
 | مشروع | صفحة الموقع |
 | --- | --- |
 | Admitere Liceu Kit | [admitere.html](admitere.html) |
+| Android Store Screenshot Kit | [screenshotkit.html](screenshotkit.html) |
 | Bank DWH Studio | [bankdwhstudio.html](bankdwhstudio.html) |
 | BP Digitizer - أندرويد وPWA | [bpdigitizer.html](bpdigitizer.html) |
 | Faceslice | [faceslice.html](faceslice.html) |

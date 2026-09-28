@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="light" dir="rtl">
+<head>
+    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ينتج Android Store Screenshot Kit لقطات شاشة قابلة للتكرار لمتجر Google Play من تطبيقات Android حقيقية على Firebase Test Lab، ثم يتحقق منها ويسجّل كل تشغيل.">
+    <title>Android Store Screenshot Kit - تفاصيل المشروع</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ar/screenshotkit.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/screenshotkit.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/screenshotkit.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/screenshotkit.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/screenshotkit.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/screenshotkit.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/screenshotkit.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/screenshotkit.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/screenshotkit.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/screenshotkit.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/screenshotkit.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/screenshotkit.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/screenshotkit.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/screenshotkit.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="screenshotkit.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ar">← العودة إلى الورشة</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">خلف الكواليس</span>
+                    <h1>Android Store Screenshot Kit</h1>
+                    <p class="project-lead">لقطات حقيقية لتطبيقات Android حقيقية، تُلتقط بالطريقة نفسها في كل مرة وجاهزة لمتجر Google Play.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">عرض على GitHub</a>
+                    </div>
+                </div>
+                <img src="../assets/ScreenshotKit/feature-graphic.png" alt="ثلاث شاشات هاتف، الوسطى منها مؤطرة وعليها علامة صح" class="project-hero-image hero-landscape">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>عن المشروع</h2>
+                <p>تتقادم لقطات المتجر كلما تغيّر التطبيق، والتقاطها يدويًا على الهاتف بطيء ولا يأتي متطابقًا مرتين. يحوّل هذا الطقم ذلك إلى خطوة قابلة للتكرار: يحتفظ كل تطبيق باختبار صغير يجهّز بياناته ويمر على شاشاته، ويتكفل الطقم بالباقي.</p>
+                <p>يبني التطبيق واختباره، ويشغّلهما على جهاز Firebase Test Lab المختار، ويتابع التشغيل حتى نهايته، وينزّل اللقطات ويتحقق منها وفق متطلبات Google Play قبل نسخها إلى مجلد المتجر الخاص بالتطبيق.</p>
+
+                <h2>كيف يعمل</h2>
+                <ol>
+                    <li><strong>صِف التشغيل.</strong> يحدد ملف TOML قصير التطبيق واختباره والأجهزة المستخدمة وعدد اللقطات المتوقعة وحجمها.</li>
+                    <li><strong>اكتب الجزء الخاص بالتطبيق.</strong> ابدأ من الاختبار النموذجي، وحمّل بيانات أمثلة ثابتة، وحدد الشاشات المطلوب التقاطها. وتتولى دوال مشتركة انتظار الشاشات والنقر وإغلاق نوافذ النظام وتثبيت اتجاه الشاشة.</li>
+                    <li><strong>شغّل جهازًا واحدًا.</strong> أمر واحد يبني ملفي APK ويرسلهما إلى Firebase Test Lab ويتابع الاختبار حتى ينتهي.</li>
+                    <li><strong>اجمع وتحقق.</strong> تُنزَّل اللقطات ويُتحقق من عددها وحجمها وصيغة ألوانها، ثم تُحفظ مع سجل للتشغيل.</li>
+                </ol>
+
+                <h2>المزايا</h2>
+                <ul>
+                    <li><strong>النتيجة نفسها في كل تشغيل:</strong> يحمّل كل تطبيق بيانات الأمثلة المسجلة الخاصة به بدل الاتصال بخدمات حية، فلا تتغير اللقطات من تشغيل إلى آخر.</li>
+                    <li><strong>يُتحقق منها قبل الاستخدام:</strong> يُفحص كل ملف PNG من حيث العدد المتوقع والأبعاد وصيغة RGB دون شفافية التي يطلبها Google Play.</li>
+                    <li><strong>سجل لكل تشغيل:</strong> يحصل كل تشغيل على مجلد خاص يضم ملفات PNG دون تعديل وملف run.json يحوي بصمات الملفات والجهاز ورابط Firebase Console والإعدادات بدقة.</li>
+                    <li><strong>جاهز لأجهزة 16 كيلوبايت:</strong> يتحقق فحص منفصل من محاذاة ملف APK وكل مكتبة أصلية داخله، من أجل أجهزة Android ذات صفحات الذاكرة بحجم 16 كيلوبايت.</li>
+                    <li><strong>لا فواتير مفاجئة:</strong> يجب دائمًا تسمية الجهاز صراحة، فلا يمتد التشغيل أبدًا إلى كل الأجهزة الفعلية المُعدّة التي قد تكون مدفوعة.</li>
+                    <li><strong>الأسرار تبقى خارجًا:</strong> تأتي معرّفات المشروع من متغيرات البيئة، وتسجيل الدخول من Google Cloud CLI؛ ولا تحتوي الإعدادات على أي بيانات اعتماد.</li>
+                    <li><strong>سهل الاعتماد:</strong> لا تعتمد الدوال المشتركة إلا على AndroidX Test وUI Automator، لذا تناسب التطبيقات المبنية بـ Jetpack Compose أو من دونه.</li>
+                </ul>
+
+                <h2>تحت غطاء محرك السيارة</h2>
+                <p>أداة سطر الأوامر سكربت Python واحد لا يحتاج إلى شيء سوى Python 3.11. والدوال المشتركة مكتبة Android صغيرة مكتوبة بلغة Java، فلا تفرض إصدارًا معينًا من Kotlin على التطبيقات التي تستخدمها، وتعمل مع AGP 8 وAGP 9. وفي التكامل المستمر يمكن تشغيل الأجهزة الافتراضية مع كل طلب سحب، مع إبقاء الأجهزة الفعلية للنسخ المرشحة للإصدار. الطقم مفتوح المصدر بترخيص GPL-3.0.</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">واصل الاكتشاف</span><h2 id="related-title">قد يعجبك أيضًا…</h2></div><p><a href="index.html#collection" hreflang="ar">استعرض المجموعة كاملة ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ar">
+                        <div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">خلف الكواليس</div>
+                        <h3>pwa-kit <span aria-hidden="true">↗</span></h3>
+                        <p>لبنة صغيرة تساعد تطبيقات الويب على العمل دون اتصال والبقاء محدثة.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="ar">
+                        <div class="collection-image"><img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">خلف الكواليس</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>لوحة صغيرة لإدارة الدعوات والأجهزة عبر تطبيقات الويب الخاصة.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="omaha.html" hreflang="ar">
+                        <div class="collection-image"><img src="../assets/omaha/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">أدوات يومية</div>
+                        <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+                        <p>افهم ما تغيّر في الشركات التي تتابعها. وراجع أسبابك.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>
