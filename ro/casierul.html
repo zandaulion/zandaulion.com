@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 600c671380ec0746196cda7956e04e70719e447c (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit dec540cb668f833e4a88d8824ce8b5af75b5745b (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei este o aplicație web în limba română pentru fondurile claselor: contribuții pe copil, cheltuieli comune, încasare rapidă, rapoarte PDF, mai multe clase și acces doar pentru citire pentru părinți și auditori.">
@@ -63,6 +63,8 @@
                     <img src="../assets/Casierul/03-cheltuieli-tableta-768x1024.png" alt="Cheltuielile clasei pe tabletă" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/04-rapoarte-tableta-1024x768.png" alt="Rapoarte pe o tabletă ținută orizontal" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/05-registru-desktop-1440x900.png" alt="Registrul clasei pe desktop" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="O plată cu documentul justificativ atașat, pe tabletă" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="Un raport PDF complet, previzualizat în aplicație, pe tabletă" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Cum funcționează</h2>
@@ -80,6 +82,8 @@
                     <li><strong>Corecții fără ștergeri:</strong> O operațiune confirmată se anulează printr-o corecție separată, cu motiv, așa că istoricul rămâne mereu complet.</li>
                     <li><strong>Exact până la ultimul ban:</strong> Sumele sunt păstrate în bani întregi, iar împărțirea unui total distribuie exact și ultimii bani.</li>
                     <li><strong>Sigur și pe o conexiune slabă:</strong> Salvarea are nevoie de internet, dar dacă un răspuns se pierde, o reîncercare confirmă aceeași cerere fără să înregistreze plata de două ori. Modificările făcute pe alt dispozitiv trebuie verificate înainte de salvare.</li>
+                    <li><strong>Bani avansați fondului:</strong> Când cineva plătește pentru clasă din propriul buzunar, aplicația înregistrează suma, o poate lega de o cheltuială și arată cât îi mai datorează clasa până la restituirea parțială sau integrală.</li>
+                    <li><strong>Documente justificative:</strong> Atașează PDF-uri sau fotografii, cum ar fi bonuri, la cheltuieli și plăți. Fiecare fișier are o amprentă digitală, iar casierul decide dacă rămâne doar pentru casier și auditori sau este vizibil și părinților clasei.</li>
                     <li><strong>Rapoarte PDF:</strong> Vezi, partajează sau descarcă rapoartele direct din aplicație, colorate cu verde pentru achitat, galben pentru parțial, roșu pentru restant și albastru pentru solduri și bani dați mai departe. Fiecare PDF păstrează siglele și culorile școlii și ale clasei de la momentul emiterii.</li>
                     <li><strong>Mai multe clase, ținute separat:</strong> Fiecare clasă are propria bază de date, proprii copii, cheltuieli, rapoarte, sigle și drepturi. Un selector din antet comută între clase, iar același dispozitiv poate avea roluri diferite în clase diferite.</li>
                     <li><strong>Părinții văd doar propriul copil:</strong> Dispozitivul unui părinte primește totalurile clasei și datele copilului său, niciodată numele sau plățile celorlalți copii.</li>
@@ -87,7 +91,7 @@
                 </ul>
 
                 <h2>Cum este construit</h2>
-                <p>Casierul clasei rulează pe Node.js 24, cu SQLite-ul inclus și fără dependențe la rulare. Se actualizează singur cu pwa-kit, iar invitațiile și dispozitivele se administrează din PWA Invite Console. Copiile de siguranță zilnice sunt verificate înainte de a fi păstrate. Proiectul este open source, sub licența GPL-3.0.</p>
+                <p>Casierul clasei rulează pe Node.js 24, cu SQLite-ul inclus. PDFKit generează rapoartele, o copie locală a PDF.js le afișează, iar aplicația nu încarcă biblioteci sau fonturi de pe servere externe. Se actualizează singur cu pwa-kit, iar invitațiile și dispozitivele se administrează din PWA Invite Console. Copiile de siguranță zilnice sunt verificate înainte de a fi păstrate. Proiectul este open source, sub licența GPL-3.0.</p>
             </div>
         </div>
 
