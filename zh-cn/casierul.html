@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit dec540cb668f833e4a88d8824ce8b5af75b5745b (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 4581752c9ac344a40cd4555172f56c016b164749 (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei 是一款罗马尼亚语网页应用，用于管理班级经费：按孩子记录缴费、共同开支、快速收款、PDF 报表、多个班级，以及供家长和审核人员使用的只读访问。">
@@ -63,8 +63,9 @@
                     <img src="../assets/Casierul/03-cheltuieli-tableta-768x1024.png" alt="平板上的班级开支" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/04-rapoarte-tableta-1024x768.png" alt="横屏平板上的报表" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/05-registru-desktop-1440x900.png" alt="电脑上的班级账本" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/08-incasare-laptop-1366x768.png" alt="在笔记本电脑上收款，缴费项目和确认信息并排显示" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="平板上附有凭证的一笔付款" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="在平板应用内预览的完整 PDF 报表" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="在平板应用内以 PDF 预览的缴费明细表" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>它是如何运作的</h2>
@@ -85,8 +86,11 @@
                     <li><strong>垫付给班费的钱：</strong> 有人自掏腰包为班级付款时，应用会记录这笔钱，必要时关联到某项开支，并显示班级还欠对方多少，直到部分或全部归还。</li>
                     <li><strong>凭证文件：</strong> 为开支和付款附上 PDF 或照片，例如收据。每个文件都有数字指纹，由出纳决定只给出纳和审核人员查看，还是也向班级家长公开。</li>
                     <li><strong>PDF 报表：</strong> 在应用内直接预览、分享或下载报表，并用颜色区分：绿色表示已付清，黄色表示部分付款，红色表示逾期，蓝色表示余额和已付出的款项。每份 PDF 都保留签发时学校和班级的徽标与配色。</li>
+                    <li><strong>开支覆盖率：</strong> 班级概况、每项开支的报表和缴费明细表都会为每项开支显示一个进度条和百分比：所需金额中已经向孩子们收齐了多少。</li>
                     <li><strong>多个班级，彼此隔离：</strong> 每个班级都有独立的数据库、孩子、开支、报表、徽标和权限。页眉中的选择器可以切换班级，同一台设备在不同班级中可以拥有不同角色。</li>
                     <li><strong>家长只能看到自己的孩子：</strong> 家长的设备只会收到班级汇总和自己孩子的信息，绝不会收到其他孩子的姓名或付款记录。</li>
+                    <li><strong>适配各种屏幕：</strong> 在手机上，收款操作随手可及。在平板上，列表会分栏排列；在笔记本电脑上，导航移到侧边，账本会把余额和历史并排显示。旋转屏幕或调整窗口大小时，正在输入的内容会保留。</li>
+                    <li><strong>亲切的外观：</strong> 温暖的配色、低调的插图，以及通俗易懂的欠款说明。报表带有笔记本、纸飞机等小小的文具元素，同时金额和表格依然清晰。</li>
                     <li><strong>JSON 导出：</strong> 数据及其历史的可读副本，不含任何凭据。</li>
                 </ul>
 
