@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 600c671380ec0746196cda7956e04e70719e447c (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit dec540cb668f833e4a88d8824ce8b5af75b5745b (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei 是一款罗马尼亚语网页应用，用于管理班级经费：按孩子记录缴费、共同开支、快速收款、PDF 报表、多个班级，以及供家长和审核人员使用的只读访问。">
@@ -63,6 +63,8 @@
                     <img src="../assets/Casierul/03-cheltuieli-tableta-768x1024.png" alt="平板上的班级开支" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/04-rapoarte-tableta-1024x768.png" alt="横屏平板上的报表" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/05-registru-desktop-1440x900.png" alt="电脑上的班级账本" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="平板上附有凭证的一笔付款" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="在平板应用内预览的完整 PDF 报表" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>它是如何运作的</h2>
@@ -80,6 +82,8 @@
                     <li><strong>更正不删除：</strong> 已确认的操作通过一条单独的更正记录并注明原因来撤销，因此历史始终完整。</li>
                     <li><strong>精确到最后一个巴尼：</strong> 金额以整数巴尼（罗马尼亚的分）存储，分摊总额时会把每一个巴尼都精确分配。</li>
                     <li><strong>网络不稳也安全：</strong> 保存需要联网，但如果响应丢失，重试会确认同一请求，不会重复记账。在其他设备上做出的更改需要先核对再保存。</li>
+                    <li><strong>垫付给班费的钱：</strong> 有人自掏腰包为班级付款时，应用会记录这笔钱，必要时关联到某项开支，并显示班级还欠对方多少，直到部分或全部归还。</li>
+                    <li><strong>凭证文件：</strong> 为开支和付款附上 PDF 或照片，例如收据。每个文件都有数字指纹，由出纳决定只给出纳和审核人员查看，还是也向班级家长公开。</li>
                     <li><strong>PDF 报表：</strong> 在应用内直接预览、分享或下载报表，并用颜色区分：绿色表示已付清，黄色表示部分付款，红色表示逾期，蓝色表示余额和已付出的款项。每份 PDF 都保留签发时学校和班级的徽标与配色。</li>
                     <li><strong>多个班级，彼此隔离：</strong> 每个班级都有独立的数据库、孩子、开支、报表、徽标和权限。页眉中的选择器可以切换班级，同一台设备在不同班级中可以拥有不同角色。</li>
                     <li><strong>家长只能看到自己的孩子：</strong> 家长的设备只会收到班级汇总和自己孩子的信息，绝不会收到其他孩子的姓名或付款记录。</li>
@@ -87,7 +91,7 @@
                 </ul>
 
                 <h2>在引擎盖下</h2>
-                <p>Casierul clasei 运行在 Node.js 24 上，使用内置的 SQLite，没有任何运行时依赖。它通过 pwa-kit 自动更新，邀请和设备则在 PWA Invite Console 中管理。每日备份在保存前都会检查完整性。该项目以 GPL-3.0 许可证开源。</p>
+                <p>Casierul clasei 运行在 Node.js 24 上，使用内置的 SQLite。报表由 PDFKit 生成，并用本地的 PDF.js 副本预览，应用不会从外部服务器加载任何库或字体。它通过 pwa-kit 自动更新，邀请和设备则在 PWA Invite Console 中管理。每日备份在保存前都会检查完整性。该项目以 GPL-3.0 许可证开源。</p>
             </div>
         </div>
 
