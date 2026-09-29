@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
 <head>
-    <!-- Content checked against casierul-clasei commit 9907eccc0ebf98074551483d176fbbf37d6d7cbf (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 600c671380ec0746196cda7956e04e70719e447c (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casierul clasei is a Romanian web app for the parent who keeps a school class's fund: contributions per child, shared expenses, quick collection, and a ledger that never erases history.">
+    <meta name="description" content="Casierul clasei is a Romanian web app for keeping school class funds: contributions per child, shared expenses, quick collection, PDF reports, several classes, and read-only access for parents and auditors.">
     <title>Casierul clasei - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <link rel="stylesheet" href="workshop.css?v=3">
@@ -52,8 +52,8 @@
 
             <div class="project-content reveal">
                 <h2>About The App</h2>
-                <p>Casierul clasei (“the class treasurer”) is for the parent who looks after a school class's fund. It keeps each child's contributions, the class's expenses, and every payment in one shared record, so the treasurer always knows the balance and who still owes what.</p>
-                <p>The app is in Romanian, with amounts in lei. Access is by invitation: the treasurer activates their own phone, tablet, or computer, and all of them see the same class. There are no accounts for parents.</p>
+                <p>Casierul clasei (“the class treasurer”) is for the parent who looks after a school class's fund. It keeps each child's contributions, the class's expenses, and every payment in one shared record, so the treasurer always knows the balance and who still owes what. One installation can look after several classes and schools, each with its own separate ledger.</p>
+                <p>The app is in Romanian, with amounts in lei. Access is by invitation, for one class and one role at a time. The treasurer can see and change everything. A parent can see the class totals and their own child's account. An auditor can see the whole ledger and the reports without changing anything. Read-only access can expire on a chosen date.</p>
 
                 <h2>Gallery</h2>
                 <p>All the data in these screenshots is made up.</p>
@@ -80,6 +80,9 @@
                     <li><strong>Corrections without erasing:</strong> A confirmed operation is undone by a separate correction with a reason, so the history always stays complete.</li>
                     <li><strong>Exact to the last ban:</strong> Amounts are stored in whole bani, the Romanian cents, and splitting a total shares out every last one exactly.</li>
                     <li><strong>Safe on a shaky connection:</strong> Saving needs the internet, but if a reply gets lost, a retry confirms the same request without recording the payment twice. Changes made on another device have to be checked before saving.</li>
+                    <li><strong>PDF reports:</strong> Preview, share, or download reports right in the app, colour-coded green for paid, yellow for partly paid, red for overdue, and blue for balances and money paid out. Each PDF keeps the school and class logos and colours it was issued with.</li>
+                    <li><strong>Several classes, kept apart:</strong> Each class has its own database, children, expenses, reports, logos, and permissions. A selector in the header switches between classes, and the same device can have different roles in different classes.</li>
+                    <li><strong>Parents see only their own child:</strong> A parent's device receives the class totals and their child's details, and never the names or payments of the other children.</li>
                     <li><strong>JSON export:</strong> A readable copy of the data and its history, without any credentials.</li>
                 </ul>
 
