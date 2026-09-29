@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit dec540cb668f833e4a88d8824ce8b5af75b5745b (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 4581752c9ac344a40cd4555172f56c016b164749 (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei는 학급 회비 관리를 위한 루마니아어 웹 앱입니다. 아이별 회비, 공동 지출, 빠른 수금, PDF 보고서, 여러 학급, 학부모와 감사자를 위한 읽기 전용 접근을 제공합니다.">
@@ -63,8 +63,9 @@
                     <img src="../assets/Casierul/03-cheltuieli-tableta-768x1024.png" alt="태블릿에서 본 학급 지출" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/04-rapoarte-tableta-1024x768.png" alt="가로 모드 태블릿에서 본 보고서" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/05-registru-desktop-1440x900.png" alt="데스크톱에서 본 학급 장부" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/08-incasare-laptop-1366x768.png" alt="노트북에서 회비를 받는 화면. 회비 항목과 확인 창이 나란히 보임" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="증빙 서류가 첨부된 지급 내역(태블릿)" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="앱에서 미리 본 전체 PDF 보고서(태블릿)" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="앱에서 PDF로 미리 본 회비 표(태블릿)" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>작동 원리</h2>
@@ -85,8 +86,11 @@
                     <li><strong>회비에 빌려준 돈:</strong> 누군가 학급을 위해 자기 돈으로 먼저 내면, 앱이 그 금액을 기록하고 필요하면 지출과 연결하며, 일부 또는 전액을 돌려받을 때까지 학급이 그 사람에게 얼마를 빚지고 있는지 보여 줍니다.</li>
                     <li><strong>증빙 서류:</strong> 영수증 같은 PDF나 사진을 지출과 지급에 첨부하세요. 파일마다 디지털 지문이 붙으며, 총무와 감사자만 볼지 학급 학부모에게도 공개할지는 총무가 정합니다.</li>
                     <li><strong>PDF 보고서:</strong> 앱 안에서 보고서를 미리 보고, 공유하고, 내려받을 수 있습니다. 완납은 초록, 일부 납부는 노랑, 연체는 빨강, 잔액과 지급한 돈은 파랑으로 표시됩니다. 각 PDF에는 발행 당시 학교와 학급의 로고와 색상이 그대로 남습니다.</li>
+                    <li><strong>지출 충당률:</strong> 학급 현황, 지출별 보고서, 회비 표에는 지출마다 막대와 백분율이 표시되어, 필요한 금액 중 아이들에게서 얼마를 모았는지 알 수 있습니다.</li>
                     <li><strong>여러 학급, 따로따로:</strong> 학급마다 데이터베이스, 아이, 지출, 보고서, 로고, 권한이 따로 있습니다. 머리글의 선택기로 학급을 바꿀 수 있으며, 같은 기기라도 학급마다 다른 역할을 가질 수 있습니다.</li>
                     <li><strong>학부모는 자기 아이만 봅니다:</strong> 학부모의 기기에는 학급 합계와 자기 아이의 정보만 전달되며, 다른 아이들의 이름이나 납부 내역은 절대 전달되지 않습니다.</li>
+                    <li><strong>모든 화면에 맞게:</strong> 휴대폰에서는 수금 기능이 늘 손 닿는 곳에 있습니다. 태블릿에서는 목록이 여러 열로 펼쳐지고, 노트북에서는 내비게이션이 옆으로 옮겨 가며 장부가 잔액과 기록을 나란히 보여 줍니다. 화면을 돌리거나 창 크기를 바꿔도 입력 중이던 내용은 그대로입니다.</li>
+                    <li><strong>친근한 모습:</strong> 따뜻한 색감, 은은한 일러스트, 누가 얼마를 내야 하는지 알기 쉬운 설명. 보고서에는 공책과 종이비행기 같은 작은 문구류 장식이 들어가지만, 금액과 표는 여전히 또렷합니다.</li>
                     <li><strong>JSON 내보내기:</strong> 자격 증명 없이 데이터와 기록을 담은 읽기 쉬운 사본.</li>
                 </ul>
 
