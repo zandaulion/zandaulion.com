@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 600c671380ec0746196cda7956e04e70719e447c (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit dec540cb668f833e4a88d8824ce8b5af75b5745b (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei est une application web en roumain pour tenir la caisse des classes : contributions par enfant, dépenses communes, encaissement rapide, rapports PDF, plusieurs classes et accès en lecture seule pour les parents et les vérificateurs.">
@@ -63,6 +63,8 @@
                     <img src="../assets/Casierul/03-cheltuieli-tableta-768x1024.png" alt="Les dépenses de la classe sur une tablette" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/04-rapoarte-tableta-1024x768.png" alt="Les rapports sur une tablette en mode paysage" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/05-registru-desktop-1440x900.png" alt="Le registre de la classe sur un ordinateur" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="Un paiement avec son justificatif joint, sur une tablette" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="Un rapport PDF complet prévisualisé dans l&#x27;application, sur une tablette" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Comment ça marche</h2>
@@ -80,6 +82,8 @@
                     <li><strong>Des corrections sans effacement :</strong> Une opération confirmée est annulée par une correction distincte, avec un motif, pour que l'historique reste toujours complet.</li>
                     <li><strong>Juste au ban près :</strong> Les montants sont stockés en bani entiers, les centimes roumains, et le partage d'un total répartit exactement chacun d'eux.</li>
                     <li><strong>Fiable même avec une connexion instable :</strong> L'enregistrement nécessite Internet, mais si une réponse se perd, une nouvelle tentative confirme la même demande sans enregistrer le paiement deux fois. Les modifications faites sur un autre appareil doivent être vérifiées avant l'enregistrement.</li>
+                    <li><strong>Argent avancé à la caisse :</strong> Quand quelqu'un paie pour la classe de sa poche, l'application enregistre la somme, la relie à une dépense si besoin et montre ce que la classe lui doit encore jusqu'à son remboursement partiel ou total.</li>
+                    <li><strong>Justificatifs :</strong> Joignez des PDF ou des photos, comme des tickets de caisse, aux dépenses et aux paiements. Chaque fichier reçoit une empreinte numérique, et le trésorier décide s'il reste réservé au trésorier et aux vérificateurs ou s'il est partagé avec les parents de la classe.</li>
                     <li><strong>Rapports PDF :</strong> Affichez, partagez ou téléchargez les rapports directement dans l'application, avec un code couleur : vert pour payé, jaune pour partiellement payé, rouge pour en retard et bleu pour les soldes et l'argent versé. Chaque PDF conserve les logos et les couleurs de l'école et de la classe au moment de son émission.</li>
                     <li><strong>Plusieurs classes, bien séparées :</strong> Chaque classe a sa propre base de données, ses enfants, ses dépenses, ses rapports, ses logos et ses droits. Un sélecteur dans l'en-tête permet de passer d'une classe à l'autre, et un même appareil peut avoir des rôles différents selon la classe.</li>
                     <li><strong>Les parents ne voient que leur enfant :</strong> L'appareil d'un parent reçoit les totaux de la classe et les informations de son enfant, jamais les noms ni les paiements des autres enfants.</li>
@@ -87,7 +91,7 @@
                 </ul>
 
                 <h2>Sous le capot</h2>
-                <p>Casierul clasei fonctionne avec Node.js 24 et son SQLite intégré, sans aucune dépendance à l'exécution. L'application se met à jour grâce à pwa-kit, et les invitations et appareils se gèrent depuis PWA Invite Console. Les sauvegardes quotidiennes sont vérifiées avant d'être conservées. Le projet est open source sous licence GPL-3.0.</p>
+                <p>Casierul clasei fonctionne avec Node.js 24 et son SQLite intégré. PDFKit crée les rapports, une copie locale de PDF.js les affiche, et l'application ne charge aucune bibliothèque ni police depuis des serveurs externes. L'application se met à jour grâce à pwa-kit, et les invitations et appareils se gèrent depuis PWA Invite Console. Les sauvegardes quotidiennes sont vérifiées avant d'être conservées. Le projet est open source sous licence GPL-3.0.</p>
             </div>
         </div>
 
