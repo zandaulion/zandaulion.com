@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 9907eccc0ebf98074551483d176fbbf37d6d7cbf (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 600c671380ec0746196cda7956e04e70719e447c (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="O Casierul clasei é um app web em romeno para o pai ou a mãe que cuida do caixa de uma turma: contribuições por criança, despesas compartilhadas, cobrança rápida e um registro que nunca apaga o histórico.">
+    <meta name="description" content="O Casierul clasei é um app web em romeno para cuidar do caixa das turmas: contribuições por criança, despesas compartilhadas, cobrança rápida, relatórios em PDF, várias turmas e acesso somente leitura para pais e auditores.">
     <title>Casierul clasei - Detalhes do projeto</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -52,8 +52,8 @@
 
             <div class="project-content reveal">
                 <h2>Sobre o aplicativo</h2>
-                <p>O Casierul clasei (“o tesoureiro da turma”) é para o pai ou a mãe que cuida do caixa de uma turma. Ele reúne em um só lugar as contribuições de cada criança, as despesas da turma e cada pagamento, para que o tesoureiro sempre saiba o saldo e quem ainda deve.</p>
-                <p>O app é em romeno, com valores em lei. O acesso é por convite: o tesoureiro ativa o próprio celular, tablet ou computador, e todos veem a mesma turma. Não há contas para os pais.</p>
+                <p>O Casierul clasei (“o tesoureiro da turma”) é para o pai ou a mãe que cuida do caixa de uma turma. Ele reúne em um só lugar as contribuições de cada criança, as despesas da turma e cada pagamento, para que o tesoureiro sempre saiba o saldo e quem ainda deve. Uma única instalação pode cuidar de várias turmas e escolas, cada uma com seu próprio registro separado.</p>
+                <p>O app é em romeno, com valores em lei. O acesso é por convite, para uma turma e um papel por vez. O tesoureiro pode ver e alterar tudo. Um pai ou uma mãe vê os totais da turma e a conta do próprio filho. Um auditor vê todo o registro e os relatórios sem poder alterar nada. O acesso somente leitura pode expirar em uma data escolhida.</p>
 
                 <h2>Galeria</h2>
                 <p>Todos os dados destas capturas são inventados.</p>
@@ -80,6 +80,9 @@
                     <li><strong>Correções sem apagar:</strong> Uma operação confirmada é desfeita por uma correção separada, com motivo, então o histórico sempre fica completo.</li>
                     <li><strong>Exato até o último ban:</strong> Os valores são guardados em bani inteiros, os centavos romenos, e dividir um total distribui exatamente até o último.</li>
                     <li><strong>Seguro com conexão instável:</strong> Salvar precisa de internet, mas se uma resposta se perder, uma nova tentativa confirma o mesmo pedido sem registrar o pagamento duas vezes. Mudanças feitas em outro dispositivo precisam ser conferidas antes de salvar.</li>
+                    <li><strong>Relatórios em PDF:</strong> Veja, compartilhe ou baixe relatórios direto no app, com cores: verde para pago, amarelo para pago em parte, vermelho para atrasado e azul para saldos e dinheiro repassado. Cada PDF mantém os logotipos e as cores da escola e da turma do momento em que foi emitido.</li>
+                    <li><strong>Várias turmas, bem separadas:</strong> Cada turma tem seu próprio banco de dados, crianças, despesas, relatórios, logotipos e permissões. Um seletor no cabeçalho alterna entre as turmas, e o mesmo dispositivo pode ter papéis diferentes em turmas diferentes.</li>
+                    <li><strong>Os pais veem só o próprio filho:</strong> O dispositivo de um pai ou uma mãe recebe os totais da turma e os dados do filho, nunca os nomes ou pagamentos das outras crianças.</li>
                     <li><strong>Exportação JSON:</strong> Uma cópia legível dos dados e do histórico, sem credenciais.</li>
                 </ul>
 
