@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 9907eccc0ebf98074551483d176fbbf37d6d7cbf (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 600c671380ec0746196cda7956e04e70719e447c (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casierul clasei 是一款罗马尼亚语网页应用，供负责管理班级经费的家长使用：按孩子记录缴费、共同开支、快速收款，以及永不删除历史的账本。">
+    <meta name="description" content="Casierul clasei 是一款罗马尼亚语网页应用，用于管理班级经费：按孩子记录缴费、共同开支、快速收款、PDF 报表、多个班级，以及供家长和审核人员使用的只读访问。">
     <title>Casierul clasei - 项目详情</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -52,8 +52,8 @@
 
             <div class="project-content reveal">
                 <h2>关于该应用程序</h2>
-                <p>Casierul clasei（意为“班级出纳”）面向负责管理班级经费的家长。它把每个孩子的缴费、班级开支和每一笔付款集中记录在一处，让出纳随时知道余额以及谁还没交。</p>
-                <p>应用为罗马尼亚语，金额以列伊计。使用需要邀请：出纳激活自己的手机、平板或电脑，所有设备看到的是同一个班级。家长没有账号。</p>
+                <p>Casierul clasei（意为“班级出纳”）面向负责管理班级经费的家长。它把每个孩子的缴费、班级开支和每一笔付款集中记录在一处，让出纳随时知道余额以及谁还没交。一次安装即可管理多个班级和学校，每个班级都有独立的账本。</p>
+                <p>应用为罗马尼亚语，金额以列伊计。访问需要邀请，每次针对一个班级和一个角色。出纳可以查看和修改所有内容；家长可以看到班级汇总和自己孩子的账户；审核人员可以查看完整账本和报表，但不能做任何修改。只读访问可以在指定日期到期。</p>
 
                 <h2>图片集</h2>
                 <p>这些截图中的数据全部为虚构。</p>
@@ -80,6 +80,9 @@
                     <li><strong>更正不删除：</strong> 已确认的操作通过一条单独的更正记录并注明原因来撤销，因此历史始终完整。</li>
                     <li><strong>精确到最后一个巴尼：</strong> 金额以整数巴尼（罗马尼亚的分）存储，分摊总额时会把每一个巴尼都精确分配。</li>
                     <li><strong>网络不稳也安全：</strong> 保存需要联网，但如果响应丢失，重试会确认同一请求，不会重复记账。在其他设备上做出的更改需要先核对再保存。</li>
+                    <li><strong>PDF 报表：</strong> 在应用内直接预览、分享或下载报表，并用颜色区分：绿色表示已付清，黄色表示部分付款，红色表示逾期，蓝色表示余额和已付出的款项。每份 PDF 都保留签发时学校和班级的徽标与配色。</li>
+                    <li><strong>多个班级，彼此隔离：</strong> 每个班级都有独立的数据库、孩子、开支、报表、徽标和权限。页眉中的选择器可以切换班级，同一台设备在不同班级中可以拥有不同角色。</li>
+                    <li><strong>家长只能看到自己的孩子：</strong> 家长的设备只会收到班级汇总和自己孩子的信息，绝不会收到其他孩子的姓名或付款记录。</li>
                     <li><strong>JSON 导出：</strong> 数据及其历史的可读副本，不含任何凭据。</li>
                 </ul>
 
