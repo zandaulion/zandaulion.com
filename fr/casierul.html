@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 4581752c9ac344a40cd4555172f56c016b164749 (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 4b84d80ec95f6f6deefc531bbf6fe75ca48e6928 (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei est une application web en roumain pour tenir la caisse des classes : contributions par enfant, dépenses communes, encaissement rapide, rapports PDF, plusieurs classes et accès en lecture seule pour les parents et les vérificateurs.">
@@ -53,7 +53,7 @@
             <div class="project-content reveal">
                 <h2>À propos de l'application</h2>
                 <p>Casierul clasei (« le trésorier de la classe ») s'adresse au parent qui gère la caisse d'une classe. L'application regroupe en un seul endroit les contributions de chaque enfant, les dépenses de la classe et chaque paiement, pour que le trésorier connaisse toujours le solde et sache qui doit encore quelque chose. Une seule installation peut gérer plusieurs classes et écoles, chacune avec son propre registre séparé.</p>
-                <p>L'application est en roumain, avec des montants en lei. L'accès se fait sur invitation, pour une seule classe et un seul rôle à la fois. Le trésorier peut tout voir et tout modifier. Un parent voit les totaux de la classe et le compte de son enfant. Un vérificateur voit tout le registre et les rapports, sans rien pouvoir modifier. L'accès en lecture seule peut expirer à la date choisie.</p>
+                <p>L'application est en roumain, avec des montants en lei. L'accès se fait sur invitation, pour une seule classe et un seul rôle à la fois. Le trésorier peut tout voir et tout modifier. Un parent voit les totaux de la classe et le compte de son enfant. Un vérificateur voit tout le registre et les rapports, sans rien pouvoir modifier. L'accès en lecture seule peut expirer à la date choisie. Une invitation peut activer deux appareils, par exemple un téléphone et un ordinateur portable.</p>
 
                 <h2>Galerie</h2>
                 <p>Toutes les données de ces captures sont inventées.</p>
@@ -61,7 +61,7 @@
                     <img src="../assets/Casierul/01-copii-mobile-390x844.png" alt="La liste des enfants sur un téléphone" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/02-incasare-mobile-412x915.png" alt="L&#x27;encaissement auprès d&#x27;un enfant sur un téléphone, avec les options de monnaie et d&#x27;avance" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/03-cheltuieli-tableta-768x1024.png" alt="Les dépenses de la classe sur une tablette" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Casierul/04-rapoarte-tableta-1024x768.png" alt="Les rapports sur une tablette en mode paysage" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/04-rapoarte-tableta-1024x768.png" alt="Coordonnées de paiement et rapports sur une tablette à l&#x27;horizontale" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/05-registru-desktop-1440x900.png" alt="Le registre de la classe sur un ordinateur" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/08-incasare-laptop-1366x768.png" alt="L&#x27;encaissement sur un ordinateur portable, avec les contributions et la confirmation côte à côte" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="Un paiement avec son justificatif joint, sur une tablette" class="gallery-img" loading="lazy" decoding="async">
@@ -72,7 +72,7 @@
                 <ol>
                     <li><strong>Configurer la classe.</strong> Ajoutez l'école, la classe et l'année scolaire, puis les enfants, un par un ou en collant une liste.</li>
                     <li><strong>Créer des dépenses.</strong> Choisissez les enfants concernés et la manière de répartir le coût : un montant fixe par enfant, un total partagé entre eux, ou une quantité par enfant multipliée par un prix unitaire.</li>
-                    <li><strong>Encaisser l'argent.</strong> Touchez un enfant et choisissez tout ce qu'il doit ou une seule dépense. De grands boutons arrondissent le montant à 10, 50 ou 100 lei au-dessus, et la différence est rendue en monnaie ou gardée comme avance.</li>
+                    <li><strong>Encaisser l'argent.</strong> Touchez un enfant et choisissez tout ce qu'il doit ou une seule dépense. De grands boutons arrondissent le montant à 5, 10, 50 ou 100 lei au-dessus, et la différence est rendue en monnaie ou gardée comme avance.</li>
                     <li><strong>Payer et tenir les comptes.</strong> Enregistrez l'argent versé, avec sa destination et, si besoin, la dépense concernée, et suivez le solde de la classe dans le registre.</li>
                 </ol>
 
@@ -80,6 +80,7 @@
                 <ul>
                     <li><strong>Le compte de chaque enfant :</strong> Contributions, sommes restant dues, avances et historique complet pour chaque enfant.</li>
                     <li><strong>Des avances qui tombent juste :</strong> Une avance peut couvrir plus tard une autre contribution ou être remboursée, et son utilisation ne compte jamais comme de l'argent nouveau.</li>
+                    <li><strong>Réglé à l'encaissement :</strong> L'avance d'un enfant peut être utilisée directement dans l'écran d'encaissement, et seul le reste est demandé en espèces. S'il reste au plus 1 leu, il peut rester dû, être couvert par l'avance ou être soldé comme ajustement d'arrondi. Les espèces elles-mêmes sont toujours enregistrées exactement.</li>
                     <li><strong>Des corrections sans effacement :</strong> Une opération confirmée est annulée par une correction distincte, avec un motif, pour que l'historique reste toujours complet.</li>
                     <li><strong>Juste au ban près :</strong> Les montants sont stockés en bani entiers, les centimes roumains, et le partage d'un total répartit exactement chacun d'eux.</li>
                     <li><strong>Fiable même avec une connexion instable :</strong> L'enregistrement nécessite Internet, mais si une réponse se perd, une nouvelle tentative confirme la même demande sans enregistrer le paiement deux fois. Les modifications faites sur un autre appareil doivent être vérifiées avant l'enregistrement.</li>
@@ -87,6 +88,8 @@
                     <li><strong>Justificatifs :</strong> Joignez des PDF ou des photos, comme des tickets de caisse, aux dépenses et aux paiements. Chaque fichier reçoit une empreinte numérique, et le trésorier décide s'il reste réservé au trésorier et aux vérificateurs ou s'il est partagé avec les parents de la classe.</li>
                     <li><strong>Rapports PDF :</strong> Affichez, partagez ou téléchargez les rapports directement dans l'application, avec un code couleur : vert pour payé, jaune pour partiellement payé, rouge pour en retard et bleu pour les soldes et l'argent versé. Chaque PDF conserve les logos et les couleurs de l'école et de la classe au moment de son émission.</li>
                     <li><strong>Couverture des dépenses :</strong> La situation de la classe, le rapport de chaque dépense et le tableau des contributions affichent pour chaque dépense une barre et un pourcentage : la part de la somme nécessaire déjà collectée auprès des enfants.</li>
+                    <li><strong>Rappels WhatsApp :</strong> Enregistrez jusqu'à deux contacts WhatsApp par enfant et ouvrez une conversation privée où le solde de l'enfant est déjà écrit, en partageant aussi son rapport PDF si vous le souhaitez. Rien n'est envoyé automatiquement, et seul le trésorier voit les contacts : jamais les parents ni les vérificateurs, et jamais dans les PDF ou les exports.</li>
+                    <li><strong>Coordonnées de paiement :</strong> Le lien Revolut.me de la classe, le nom du bénéficiaire et l'IBAN sont conservés dans les réglages et figurent dans les rapports individuels, de classe et de dépenses ainsi que dans les rappels, prêts à être copiés ou partagés.</li>
                     <li><strong>Plusieurs classes, bien séparées :</strong> Chaque classe a sa propre base de données, ses enfants, ses dépenses, ses rapports, ses logos et ses droits. Un sélecteur dans l'en-tête permet de passer d'une classe à l'autre, et un même appareil peut avoir des rôles différents selon la classe.</li>
                     <li><strong>Les parents ne voient que leur enfant :</strong> L'appareil d'un parent reçoit les totaux de la classe et les informations de son enfant, jamais les noms ni les paiements des autres enfants.</li>
                     <li><strong>Pensé pour tous les écrans :</strong> Sur téléphone, l'encaissement reste à portée de main. Sur tablette, les listes se répartissent en colonnes ; sur ordinateur portable, la navigation passe sur le côté et le registre affiche le solde et l'historique côte à côte. Faire pivoter ou redimensionner la fenêtre conserve ce que vous étiez en train de saisir.</li>

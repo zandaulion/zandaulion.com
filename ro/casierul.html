@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 4581752c9ac344a40cd4555172f56c016b164749 (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 4b84d80ec95f6f6deefc531bbf6fe75ca48e6928 (2026-09-29). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei este o aplicație web în limba română pentru fondurile claselor: contribuții pe copil, cheltuieli comune, încasare rapidă, rapoarte PDF, mai multe clase și acces doar pentru citire pentru părinți și auditori.">
@@ -53,7 +53,7 @@
             <div class="project-content reveal">
                 <h2>Despre aplicație</h2>
                 <p>Casierul clasei este pentru părintele care se ocupă de fondul unei clase. Ține într-un singur loc contribuțiile fiecărui copil, cheltuielile clasei și fiecare plată, așa că persoana care strânge banii știe mereu soldul și cine mai are de plătit. O singură instalare poate gestiona mai multe clase și școli, fiecare cu registrul ei separat.</p>
-                <p>Aplicația este în limba română, cu sumele în lei. Accesul se face prin invitație, pentru o singură clasă și un singur rol. Casierul vede și modifică totul. Un părinte vede totalurile clasei și contul propriului copil. Un auditor vede tot registrul și rapoartele, fără să poată modifica nimic. Accesul doar pentru citire poate expira la o dată aleasă.</p>
+                <p>Aplicația este în limba română, cu sumele în lei. Accesul se face prin invitație, pentru o singură clasă și un singur rol. Casierul vede și modifică totul. Un părinte vede totalurile clasei și contul propriului copil. Un auditor vede tot registrul și rapoartele, fără să poată modifica nimic. Accesul doar pentru citire poate expira la o dată aleasă. O invitație poate activa două dispozitive, de exemplu un telefon și un laptop.</p>
 
                 <h2>Galerie</h2>
                 <p>Toate datele din aceste capturi sunt inventate.</p>
@@ -61,7 +61,7 @@
                     <img src="../assets/Casierul/01-copii-mobile-390x844.png" alt="Lista copiilor pe telefon" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/02-incasare-mobile-412x915.png" alt="Încasarea banilor de la un copil pe telefon, cu opțiunile de rest și avans" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/03-cheltuieli-tableta-768x1024.png" alt="Cheltuielile clasei pe tabletă" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Casierul/04-rapoarte-tableta-1024x768.png" alt="Rapoarte pe o tabletă ținută orizontal" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/04-rapoarte-tableta-1024x768.png" alt="Detalii de plată și rapoarte pe o tabletă ținută orizontal" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/05-registru-desktop-1440x900.png" alt="Registrul clasei pe desktop" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/08-incasare-laptop-1366x768.png" alt="Încasarea banilor pe laptop, cu contribuțiile și confirmarea alături" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="O plată cu documentul justificativ atașat, pe tabletă" class="gallery-img" loading="lazy" decoding="async">
@@ -72,7 +72,7 @@
                 <ol>
                     <li><strong>Configurează clasa.</strong> Adaugă școala, clasa și anul școlar, apoi copiii, pe rând sau lipind o listă.</li>
                     <li><strong>Creează cheltuieli.</strong> Alege copiii care participă și cum se împarte costul: o sumă fixă pe copil, un total împărțit între ei sau o cantitate pe copil înmulțită cu prețul unitar.</li>
-                    <li><strong>Încasează banii.</strong> Atinge un copil și alege tot ce are de plată sau o singură cheltuială. Butoanele mari rotunjesc suma în sus la următorul multiplu de 10, 50 sau 100 de lei, iar diferența se dă rest sau se păstrează ca avans.</li>
+                    <li><strong>Încasează banii.</strong> Atinge un copil și alege tot ce are de plată sau o singură cheltuială. Butoanele mari rotunjesc suma în sus la următorul multiplu de 5, 10, 50 sau 100 de lei, iar diferența se dă rest sau se păstrează ca avans.</li>
                     <li><strong>Plătește și ține evidența.</strong> Înregistrează banii dați mai departe, cu destinația și, opțional, cheltuiala de care țin, și urmărește soldul clasei în registru.</li>
                 </ol>
 
@@ -80,6 +80,7 @@
                 <ul>
                     <li><strong>Contul fiecărui copil:</strong> Contribuții, sume restante, avansuri și istoricul complet pentru fiecare copil.</li>
                     <li><strong>Avansuri care se adună:</strong> Un avans poate acoperi mai târziu o altă contribuție sau poate fi restituit, iar folosirea lui nu este socotită niciodată drept bani noi intrați.</li>
+                    <li><strong>Decontat la încasare:</strong> Avansul unui copil poate fi folosit direct în ecranul de încasare, așa că în numerar se cere doar restul. Dacă rămâne cel mult 1 leu, suma poate rămâne datorată, poate fi acoperită din avans sau poate fi închisă ca ajustare de rotunjire. Numerarul în sine este înregistrat întotdeauna exact.</li>
                     <li><strong>Corecții fără ștergeri:</strong> O operațiune confirmată se anulează printr-o corecție separată, cu motiv, așa că istoricul rămâne mereu complet.</li>
                     <li><strong>Exact până la ultimul ban:</strong> Sumele sunt păstrate în bani întregi, iar împărțirea unui total distribuie exact și ultimii bani.</li>
                     <li><strong>Sigur și pe o conexiune slabă:</strong> Salvarea are nevoie de internet, dar dacă un răspuns se pierde, o reîncercare confirmă aceeași cerere fără să înregistreze plata de două ori. Modificările făcute pe alt dispozitiv trebuie verificate înainte de salvare.</li>
@@ -87,6 +88,8 @@
                     <li><strong>Documente justificative:</strong> Atașează PDF-uri sau fotografii, cum ar fi bonuri, la cheltuieli și plăți. Fiecare fișier are o amprentă digitală, iar casierul decide dacă rămâne doar pentru casier și auditori sau este vizibil și părinților clasei.</li>
                     <li><strong>Rapoarte PDF:</strong> Vezi, partajează sau descarcă rapoartele direct din aplicație, colorate cu verde pentru achitat, galben pentru parțial, roșu pentru restant și albastru pentru solduri și bani dați mai departe. Fiecare PDF păstrează siglele și culorile școlii și ale clasei de la momentul emiterii.</li>
                     <li><strong>Acoperirea cheltuielilor:</strong> Situația clasei, raportul fiecărei cheltuieli și Tabelul contribuțiilor arată pentru fiecare cheltuială o bară și un procent: cât din suma necesară a fost strâns de la copii.</li>
+                    <li><strong>Mementouri pe WhatsApp:</strong> Salvează până la două contacte WhatsApp pentru fiecare copil și deschide o conversație privată cu soldul copilului deja scris, eventual împreună cu raportul său PDF. Nimic nu se trimite automat, iar contactele sunt văzute doar de casier: niciodată de părinți sau auditori și niciodată în PDF-uri sau exporturi.</li>
+                    <li><strong>Detalii de plată:</strong> Linkul Revolut.me al clasei, numele beneficiarului și IBAN-ul sunt păstrate în setări și apar în rapoartele individuale, de clasă și de cheltuieli, precum și în mementouri, gata de copiat sau de trimis.</li>
                     <li><strong>Mai multe clase, ținute separat:</strong> Fiecare clasă are propria bază de date, proprii copii, cheltuieli, rapoarte, sigle și drepturi. Un selector din antet comută între clase, iar același dispozitiv poate avea roluri diferite în clase diferite.</li>
                     <li><strong>Părinții văd doar propriul copil:</strong> Dispozitivul unui părinte primește totalurile clasei și datele copilului său, niciodată numele sau plățile celorlalți copii.</li>
                     <li><strong>Gândit pentru orice ecran:</strong> Pe telefon, încasarea rămâne la îndemână. Pe tabletă, listele se așază pe coloane; pe laptop, navigarea se mută lateral, iar registrul arată soldul și istoricul alături. Rotirea sau redimensionarea ferestrei păstrează ce scriai.</li>
