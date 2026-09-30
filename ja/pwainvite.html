@@ -7,7 +7,7 @@
     <title>PWA Invite Console 🔐 - プロジェクトの詳細</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=5">
+    <link rel="stylesheet" href="../project.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -44,7 +44,7 @@
                     <a href="https://github.com/zandaulion/pwa-invite-console" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">GitHubで見る</a>
                 </div>
                 </div>
-                <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console" class="project-hero-image">
+                <img src="../assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="デスクトップのコンソール。サイドバーにすべてのアプリ、Casierul clasei の端末が表示されています" class="project-hero-image hero-landscape hero-top">
             </div>
 
             <div class="project-content reveal">
@@ -56,14 +56,27 @@
                 <p>Tailscale TLS はプライベート リスナーの前で終了し、管理アクセスを、公開されたパブリック エンドポイントやハードコードされたパスワードを持たない許可された Tailnet ノードに厳密に制限します。</p>
 
                 <h2>ギャラリー</h2>
+                <p>これらのスクリーンショットの名前、招待の受取人、クラス、子どもは匿名化され、ぼかしてあります。</p>
+                <h3>デスクトップ</h3>
                 <div class="gallery-grid">
-                    <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console グラフィック" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="サイドバーにすべてのアプリがあり、1 つのアプリの端末とその役割、状態を表示" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/02-desktop-invitations-light.png" alt="アプリの招待一覧。それぞれの作成日と使用日を表示" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/03-desktop-parent-invitation.png" alt="Casierul clasei の新しい招待。クラス、保護者の役割、子ども、アクセス終了日を指定" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/04-desktop-account-invitation-dark.png" alt="ダークテーマのシンプルな新規招待" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>スマートフォンでは</h3>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/PWA-Invite-Console/05-mobile-devices-light.png" alt="スマートフォンで見るアプリの端末" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/06-mobile-app-picker-dark.png" alt="スマートフォンのアプリ選択画面。アイコンと検索付き、ダークテーマ" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/07-mobile-parent-invitation.png" alt="スマートフォンで作成する Casierul clasei の保護者向け招待" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>機能</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔑 統合された招待ライフサイクル:</strong> 1 か所からサービス間でアプリの招待リンクを生成、共有、有効期限を追跡し、引き換えを監視します。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 デバイス管理:</strong> 登録されたクライアント デバイスを検査し、最後に表示されたタイムスタンプを表示し、わかりやすいラベルを割り当て、侵害されたセッションを即座に取り消します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎟️ アプリごとの招待:</strong> アプリは独自のアクセスオプションを提供できます。Casierul clasei では、招待でクラス、役割、保護者の場合は子ども、アクセスの終了日を選びます。ほかのアプリはすべて、1 ステップのシンプルな招待のままです。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌗 デスクトップとスマートフォン、ライトとダーク:</strong> デスクトップではすべてのアプリを並べたサイドバー、スマートフォンでは検索できるアプリ選択画面、さらにライトテーマとダークテーマがあります。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 テールネットプライベートセキュリティ:</strong> フロントエンド コードに資格情報は保存されません。 Tailscale 経由でのみ到達可能なプライベート リバース プロキシ ヘッダー インジェクション経由で認証されます。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 依存性ゼロ PWA:</strong> 即座に再検証され、フレームワークの肥大化が発生しない、バニラの JavaScript シングルページ アプリケーション。</li>
                 </ul>

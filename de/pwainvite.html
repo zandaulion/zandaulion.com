@@ -7,7 +7,7 @@
     <title>PWA Invite Console 🔐 - Projektdetails</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=5">
+    <link rel="stylesheet" href="../project.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -44,7 +44,7 @@
                     <a href="https://github.com/zandaulion/pwa-invite-console" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Auf GitHub ansehen</a>
                 </div>
                 </div>
-                <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console" class="project-hero-image">
+                <img src="../assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="Die Konsole auf einem Desktop, mit allen Apps in der Seitenleiste und den Geräten von Casierul clasei" class="project-hero-image hero-landscape hero-top">
             </div>
 
             <div class="project-content reveal">
@@ -56,14 +56,27 @@
                 <p>Tailscale TLS endet vor dem privaten Listener und beschränkt den administrativen Zugriff ausschließlich auf autorisierte Tailnet-Knoten ohne exponierte öffentliche Endpunkte oder fest codierte Passwörter.</p>
 
                 <h2>Galerie</h2>
+                <p>Namen, Empfänger von Einladungen, Klassen und Kinder in diesen Screenshots sind anonymisiert und unscharf gemacht.</p>
+                <h3>Auf dem Desktop</h3>
                 <div class="gallery-grid">
-                    <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console Grafik" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="Alle Apps in der Seitenleiste, mit den Geräten einer App, ihren Rollen und ihrem Status" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/02-desktop-invitations-light.png" alt="Die Einladungen einer App, mit dem Datum, an dem jede erstellt und verwendet wurde" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/03-desktop-parent-invitation.png" alt="Eine neue Einladung für Casierul clasei mit Klasse, Elternrolle, Kind und Enddatum des Zugangs" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/04-desktop-account-invitation-dark.png" alt="Eine einfache neue Einladung im dunklen Design" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>Auf dem Smartphone</h3>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/PWA-Invite-Console/05-mobile-devices-light.png" alt="Die Geräte einer App auf einem Telefon" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/06-mobile-app-picker-dark.png" alt="Die App-Auswahl auf einem Telefon, mit Symbolen und Suche, im dunklen Design" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/07-mobile-parent-invitation.png" alt="Eine Einladung für Eltern bei Casierul clasei auf einem Telefon" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Funktionen</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔑 Einheitlicher Einladungslebenszyklus:</strong> Generieren, teilen, verfolgen Sie den Ablauf und überwachen Sie die Einlösung von App-Einladungslinks dienstübergreifend von einem Ort aus.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Geräteverwaltung:</strong> Überprüfen Sie registrierte Client-Geräte, zeigen Sie die zuletzt gesehenen Zeitstempel an, weisen Sie benutzerfreundliche Labels zu und widerrufen Sie gefährdete Sitzungen sofort.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎟️ App-spezifische Einladungen:</strong> Eine App kann eigene Zugangsoptionen anbieten. Bei Casierul clasei legt eine Einladung die Klasse, die Rolle, bei Eltern das Kind und das Enddatum des Zugangs fest, während alle anderen Apps die einfache Einladung in einem Schritt behalten.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌗 Desktop und Telefon, hell und dunkel:</strong> Eine Seitenleiste mit allen Apps auf dem Desktop, eine durchsuchbare App-Auswahl auf dem Telefon sowie ein helles und ein dunkles Design.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Tailnet Private Security:</strong> Keine Anmeldeinformationen im Front-End-Code gespeichert; authentifiziert über eine private Reverse-Proxy-Header-Injektion, die nur über Tailscale erreichbar ist.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Null-Abhängigkeit PWA:</strong> Vanilla-JavaScript-Single-Page-Anwendung mit sofortiger Revalidierung und ohne Framework-Aufblähung.</li>
                 </ul>
