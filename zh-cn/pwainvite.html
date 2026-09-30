@@ -7,7 +7,7 @@
     <title>PWA Invite Console 🔐 - 项目详情</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=5">
+    <link rel="stylesheet" href="../project.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -44,7 +44,7 @@
                     <a href="https://github.com/zandaulion/pwa-invite-console" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">在 GitHub 上查看</a>
                 </div>
                 </div>
-                <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console" class="project-hero-image">
+                <img src="../assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="桌面上的控制台，侧边栏列出所有应用，并显示 Casierul clasei 的设备" class="project-hero-image hero-landscape hero-top">
             </div>
 
             <div class="project-content reveal">
@@ -56,14 +56,27 @@
                 <p>Tailscale TLS 在私有侦听器前面终止，将管理访问严格限制在具有零公开公共端点或硬编码密码的授权 Tailnet 节点。</p>
 
                 <h2>图片集</h2>
+                <p>这些截图中的姓名、邀请接收人、班级和孩子均已匿名化并模糊处理。</p>
+                <h3>在桌面上</h3>
                 <div class="gallery-grid">
-                    <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console图解" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="侧边栏列出所有应用，并显示某个应用的设备、角色和状态" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/02-desktop-invitations-light.png" alt="某个应用的邀请，以及每份邀请的创建和使用时间" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/03-desktop-parent-invitation.png" alt="Casierul clasei 的新邀请，包含班级、家长角色、孩子和访问结束日期" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/04-desktop-account-invitation-dark.png" alt="深色主题下的简单新邀请" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>手机上</h3>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/PWA-Invite-Console/05-mobile-devices-light.png" alt="手机上某个应用的设备" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/06-mobile-app-picker-dark.png" alt="手机上的应用选择器，带图标和搜索，深色主题" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/07-mobile-parent-invitation.png" alt="手机上 Casierul clasei 的家长邀请" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>功能</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔑 统一邀请生命周期：</strong> 从一处生成、共享、跟踪过期并监控跨服务的应用程序邀请链接的兑换。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 设备管理：</strong> 检查注册的客户端设备、查看上次查看的时间戳、分配友好标签并立即撤销受损会话。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎟️ 各应用专属的邀请：</strong> 应用可以提供自己的访问选项。在 Casierul clasei 中，邀请会选择班级、角色、家长对应的孩子以及访问结束日期，而其他所有应用仍保留一步完成的简单邀请。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌗 桌面与手机，浅色与深色：</strong> 桌面上是列出所有应用的侧边栏，手机上是可搜索的应用选择器，另有浅色和深色两种主题。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 尾网私人保安：</strong> 前端代码中没有存储凭据；通过只能通过 Tailscale 访问的私有反向代理标头注入进行身份验证。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 零依赖PWA：</strong> Vanilla JavaScript 单页应用程序具有立即重新验证和零框架膨胀的功能。</li>
                 </ul>
