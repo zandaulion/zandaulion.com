@@ -67,6 +67,7 @@ main { padding: 35px 0 0; }
 .gallery-open { display: block; background: transparent; border: 0; padding: 0; width: 100%; border-radius: 8px; cursor: zoom-in; }
 .gallery-img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 5px 16px #243d350d; }
 .gallery-img:hover { transform: translateY(-3px); }
+.gallery-flows { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .gallery-tall .gallery-img { aspect-ratio: 3 / 5; object-fit: cover; object-position: top; }
 .gallery-tip { font-size: 12px !important; color: var(--muted); margin: -10px 0 16px !important; }
 .related-projects { border-top: 1px dashed var(--line); padding-block: 42px; margin-top: 50px; }

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 4b84d80ec95f6f6deefc531bbf6fe75ca48e6928 (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 1ec04350bdbd02cf18d765b19ce6f6268feea1bf (2026-09-30). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei 是一款罗马尼亚语网页应用，用于管理班级经费：按孩子记录缴费、共同开支、快速收款、PDF 报表、多个班级，以及供家长和审核人员使用的只读访问。">
     <title>Casierul clasei - 项目详情</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=9">
+    <link rel="stylesheet" href="../project.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -66,6 +66,7 @@
                     <img src="../assets/Casierul/08-incasare-laptop-1366x768.png" alt="在笔记本电脑上收款，缴费项目和确认信息并排显示" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="平板上附有凭证的一笔付款" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="在平板应用内以 PDF 预览的缴费明细表" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/09-ajutor-tableta-768x1024.png" alt="平板上的内置图解帮助，逐步展示激活设备的每个步骤" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>它是如何运作的</h2>
@@ -76,20 +77,31 @@
                     <li><strong>付款并记账。</strong> 记录付出的款项，包括去向以及可选的对应开支，并在账本中查看班级余额。</li>
                 </ol>
 
+                <h2>所有流程一览</h2>
+                <p>四张可打印的图表涵盖全部 15 个流程，与应用内置帮助所引导的流程相同。和应用一样，它们是罗马尼亚语的。</p>
+                <div class="gallery-grid gallery-flows">
+                    <img src="../assets/Casierul/flows/01-pornire-si-organizare.svg" alt="入门：激活、班级设置、孩子与联系人，以及开支" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/flows/02-bani-si-corectii.svg" alt="资金与更正：收款、停止收取、孩子的预付款、账本和更正" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/flows/03-documente-si-comunicare.svg" alt="单据与沟通：证明单据、WhatsApp 与付款信息，以及报表" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/flows/04-acces-siguranta-si-date.svg" alt="访问、安全与数据：多个班级和角色、连接与更新，以及导出与备份" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
                 <h2>功能</h2>
                 <ul>
                     <li><strong>每个孩子的账户：</strong> 每个孩子的缴费、欠款、预付款和完整历史。</li>
                     <li><strong>算得清的预付款：</strong> 预付款之后可以抵扣其他缴费，也可以退还；使用预付款绝不会被算作新的收入。</li>
                     <li><strong>收款时直接结清：</strong> 孩子的预付款可以直接在收款界面使用，现金只需收取剩余部分。如果剩下不超过 1 列伊，可以继续记为欠款、用预付款抵扣，或作为舍入调整结清。现金本身始终按实际金额准确记录。</li>
+                    <li><strong>停止收取：</strong> 当某项分摊款不再收取时，只要仍然可行，就可以把孩子从分摊的开支中移除，其他所有人的份额会重新计算。也可以用某人垫付给班费的钱，部分或全额抵扣这笔分摊款。这样班级欠此人的金额会减少，现金不会再次变动，孩子也永远不会显示为由家长付清。</li>
                     <li><strong>更正不删除：</strong> 已确认的操作通过一条单独的更正记录并注明原因来撤销，因此历史始终完整。</li>
                     <li><strong>精确到最后一个巴尼：</strong> 金额以整数巴尼（罗马尼亚的分）存储，分摊总额时会把每一个巴尼都精确分配。</li>
                     <li><strong>网络不稳也安全：</strong> 保存需要联网，但如果响应丢失，重试会确认同一请求，不会重复记账。在其他设备上做出的更改需要先核对再保存。</li>
                     <li><strong>垫付给班费的钱：</strong> 有人自掏腰包为班级付款时，应用会记录这笔钱，必要时关联到某项开支，并显示班级还欠对方多少，直到部分或全部归还。</li>
                     <li><strong>凭证文件：</strong> 为开支和付款附上 PDF 或照片，例如收据。每个文件都有数字指纹，由出纳决定只给出纳和审核人员查看，还是也向班级家长公开。</li>
                     <li><strong>PDF 报表：</strong> 在应用内直接预览、分享或下载报表，并用颜色区分：绿色表示已付清，黄色表示部分付款，红色表示逾期，蓝色表示余额和已付出的款项。每份 PDF 都保留签发时学校和班级的徽标与配色。</li>
-                    <li><strong>开支覆盖率：</strong> 班级概况、每项开支的报表和缴费明细表都会为每项开支显示一个进度条和百分比：所需金额中已经向孩子们收齐了多少。</li>
+                    <li><strong>开支覆盖率：</strong> 班级概况、每份开支报表和分摊款表会为每项开支显示一个进度条和百分比：所需金额已覆盖多少，家长付的钱和由班费抵扣的金额分开显示。</li>
                     <li><strong>WhatsApp 提醒：</strong> 每个孩子最多可保存两个 WhatsApp 联系人，并打开一个已写好孩子余额的私聊，还可以选择一并分享其 PDF 报告。不会自动发送任何内容，联系人只有出纳能看到：家长和审核人员永远看不到，PDF 和导出文件中也永远不会出现。</li>
                     <li><strong>付款信息：</strong> 班级的 Revolut.me 链接、收款人姓名和 IBAN 保存在设置中，并会出现在个人、班级和开支报表以及提醒中，可直接复制或分享。</li>
+                    <li><strong>每个界面都有帮助：</strong> 页眉中的问号可打开全部 15 个流程的图解指南，并按你的角色调整。每个主要界面都会打开对应的指南，查看如何收款也不会丢失已输入的金额。</li>
                     <li><strong>多个班级，彼此隔离：</strong> 每个班级都有独立的数据库、孩子、开支、报表、徽标和权限。页眉中的选择器可以切换班级，同一台设备在不同班级中可以拥有不同角色。</li>
                     <li><strong>家长只能看到自己的孩子：</strong> 家长的设备只会收到班级汇总和自己孩子的信息，绝不会收到其他孩子的姓名或付款记录。</li>
                     <li><strong>适配各种屏幕：</strong> 在手机上，收款操作随手可及。在平板上，列表会分栏排列；在笔记本电脑上，导航移到侧边，账本会把余额和历史并排显示。旋转屏幕或调整窗口大小时，正在输入的内容会保留。</li>
