@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
 <head>
-    <!-- Content checked against casierul-clasei commit 4b84d80ec95f6f6deefc531bbf6fe75ca48e6928 (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 1ec04350bdbd02cf18d765b19ce6f6268feea1bf (2026-09-30). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei is a Romanian web app for keeping school class funds: contributions per child, shared expenses, quick collection, PDF reports, several classes, and read-only access for parents and auditors.">
     <title>Casierul clasei - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <link rel="stylesheet" href="workshop.css?v=3">
-    <link rel="stylesheet" href="project.css?v=9">
+    <link rel="stylesheet" href="project.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/brand/lion-light-v2.png">
 
@@ -66,6 +66,7 @@
                     <img src="assets/Casierul/08-incasare-laptop-1366x768.png" alt="Collecting money on a laptop, with the contributions and the confirmation side by side" class="gallery-img" loading="lazy" decoding="async">
                     <img src="assets/Casierul/06-documente-tableta-768x1024.png" alt="A payment with its supporting document attached, on a tablet" class="gallery-img" loading="lazy" decoding="async">
                     <img src="assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="The contributions table previewed as a PDF in the app, on a tablet" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Casierul/09-ajutor-tableta-768x1024.png" alt="The built-in visual help on a tablet, with each step of activating a device" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>How it works</h2>
@@ -76,20 +77,31 @@
                     <li><strong>Pay and keep records.</strong> Record money paid out, with where it went and, optionally, the expense it belongs to, and follow the class balance in the ledger.</li>
                 </ol>
 
+                <h2>Every flow at a glance</h2>
+                <p>Four printable diagrams map all 15 workflows, the same ones the app's built-in help walks you through. Like the app, they are in Romanian.</p>
+                <div class="gallery-grid gallery-flows">
+                    <img src="assets/Casierul/flows/01-pornire-si-organizare.svg" alt="Getting started: activation, class setup, children and contacts, and expenses" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Casierul/flows/02-bani-si-corectii.svg" alt="Money and corrections: collecting, stopping collection, a child's advance, the ledger, and corrections" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Casierul/flows/03-documente-si-comunicare.svg" alt="Documents and communication: supporting documents, WhatsApp and payment details, and reports" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Casierul/flows/04-acces-siguranta-si-date.svg" alt="Access, safety, and data: several classes and roles, connection and updates, and export and backup" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
                 <h2>Features</h2>
                 <ul>
                     <li><strong>Every child's account:</strong> Contributions, amounts still owed, advances, and the full history for each child.</li>
                     <li><strong>Advances that add up:</strong> An advance can later cover another contribution or be refunded, and using it never counts as new money coming in.</li>
                     <li><strong>Settled at the till:</strong> A child's advance can be used right in the collection screen, so only the rest is asked for in cash. If at most 1 leu is left over, it can stay owed, be covered from the advance, or be closed as a rounding adjustment. The cash itself is always recorded exactly.</li>
+                    <li><strong>Stop collecting:</strong> When a contribution will not be collected, the child can be taken out of a split expense while that is still possible, and everyone else's share is recalculated. Or the contribution can be covered, in part or in full, from money someone advanced to the fund. That lowers what the class owes them without moving cash again, and the child is never shown as paid by their parents.</li>
                     <li><strong>Corrections without erasing:</strong> A confirmed operation is undone by a separate correction with a reason, so the history always stays complete.</li>
                     <li><strong>Exact to the last ban:</strong> Amounts are stored in whole bani, the Romanian cents, and splitting a total shares out every last one exactly.</li>
                     <li><strong>Safe on a shaky connection:</strong> Saving needs the internet, but if a reply gets lost, a retry confirms the same request without recording the payment twice. Changes made on another device have to be checked before saving.</li>
                     <li><strong>Money advanced to the fund:</strong> When someone pays for the class out of their own pocket, the app records it, links it to an expense if needed, and shows how much the class still owes them until it is repaid in part or in full.</li>
                     <li><strong>Supporting documents:</strong> Attach PDFs or photos, such as receipts, to expenses and payments. Each file is fingerprinted, and the treasurer decides whether it stays with the treasurer and auditors or is shared with the class's parents.</li>
                     <li><strong>PDF reports:</strong> Preview, share, or download reports right in the app, colour-coded green for paid, yellow for partly paid, red for overdue, and blue for balances and money paid out. Each PDF keeps the school and class logos and colours it was issued with.</li>
-                    <li><strong>Expense coverage:</strong> The class summary, each expense report, and the contributions table show a bar and a percentage for every expense: how much of what is needed has been collected from the children.</li>
+                    <li><strong>Expense coverage:</strong> The class summary, each expense report, and the contributions table show a bar and a percentage for every expense: how much of what is needed has been covered, with money from parents and amounts covered by the fund shown apart.</li>
                     <li><strong>WhatsApp reminders:</strong> Save up to two WhatsApp contacts per child and open a private chat with the child's balance already written, optionally sharing their PDF report too. Nothing is sent automatically, and the contacts are only ever seen by the treasurer: never by parents or auditors, and never in PDFs or exports.</li>
                     <li><strong>Payment details:</strong> The class's Revolut.me link, beneficiary name, and IBAN are kept in the settings and appear in individual, class, and expense reports and in reminders, ready to copy or share.</li>
+                    <li><strong>Help on every screen:</strong> The question mark in the header opens visual guides for all 15 workflows, tailored to your role. Each main screen opens its own guide, and checking how to collect never loses an amount you have already typed.</li>
                     <li><strong>Several classes, kept apart:</strong> Each class has its own database, children, expenses, reports, logos, and permissions. A selector in the header switches between classes, and the same device can have different roles in different classes.</li>
                     <li><strong>Parents see only their own child:</strong> A parent's device receives the class totals and their child's details, and never the names or payments of the other children.</li>
                     <li><strong>Made for every screen:</strong> On a phone, collecting money stays within easy reach. On a tablet, lists spread into columns; on a laptop, the navigation moves to the side and the ledger shows the balance and the history next to each other. Rotating or resizing keeps whatever you were in the middle of typing.</li>

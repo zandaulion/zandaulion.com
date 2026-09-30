@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="de-DE" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 4b84d80ec95f6f6deefc531bbf6fe75ca48e6928 (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 1ec04350bdbd02cf18d765b19ce6f6268feea1bf (2026-09-30). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei ist eine rumänischsprachige Web-App für Klassenkassen: Beiträge pro Kind, gemeinsame Ausgaben, schnelles Kassieren, PDF-Berichte, mehrere Klassen und Lesezugriff für Eltern und Prüfer.">
     <title>Casierul clasei - Projektdetails</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=9">
+    <link rel="stylesheet" href="../project.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -66,6 +66,7 @@
                     <img src="../assets/Casierul/08-incasare-laptop-1366x768.png" alt="Kassieren auf dem Laptop, mit Beiträgen und Bestätigung nebeneinander" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="Eine Zahlung mit angehängtem Beleg auf dem Tablet" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="Die Beitragstabelle als PDF-Vorschau in der App auf dem Tablet" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/09-ajutor-tableta-768x1024.png" alt="Die eingebaute visuelle Hilfe auf einem Tablet, mit jedem Schritt zum Aktivieren eines Geräts" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Wie es funktioniert</h2>
@@ -76,20 +77,31 @@
                     <li><strong>Bezahlen und Buch führen.</strong> Erfassen Sie ausgezahltes Geld mit dem Empfänger und, falls gewünscht, der zugehörigen Ausgabe, und verfolgen Sie den Kassenstand der Klasse im Kassenbuch.</li>
                 </ol>
 
+                <h2>Alle Abläufe auf einen Blick</h2>
+                <p>Vier druckbare Diagramme zeigen alle 15 Abläufe, dieselben, durch die auch die eingebaute Hilfe der App führt. Wie die App sind sie auf Rumänisch.</p>
+                <div class="gallery-grid gallery-flows">
+                    <img src="../assets/Casierul/flows/01-pornire-si-organizare.svg" alt="Einstieg und Organisation: Aktivierung, Einrichtung der Klasse, Kinder und Kontakte sowie Ausgaben" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/flows/02-bani-si-corectii.svg" alt="Geld und Korrekturen: Einsammeln, Einzug beenden, das Guthaben eines Kindes, das Kassenbuch und Korrekturen" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/flows/03-documente-si-comunicare.svg" alt="Belege und Kommunikation: Belege, WhatsApp und Zahlungsdaten sowie Berichte" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/flows/04-acces-siguranta-si-date.svg" alt="Zugang, Sicherheit und Daten: mehrere Klassen und Rollen, Verbindung und Updates sowie Export und Sicherung" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
                 <h2>Funktionen</h2>
                 <ul>
                     <li><strong>Das Konto jedes Kindes:</strong> Beiträge, offene Beträge, Guthaben und der vollständige Verlauf für jedes Kind.</li>
                     <li><strong>Guthaben, die aufgehen:</strong> Ein Guthaben kann später einen anderen Beitrag decken oder zurückgezahlt werden, und seine Verwendung zählt nie als neu eingenommenes Geld.</li>
                     <li><strong>Direkt an der Kasse verrechnet:</strong> Das Guthaben eines Kindes lässt sich direkt im Einzugsbildschirm verwenden, sodass nur der Rest in bar verlangt wird. Bleibt höchstens 1 Leu übrig, kann er offen bleiben, aus dem Guthaben gedeckt oder als Rundungsausgleich abgeschlossen werden. Das Bargeld selbst wird immer exakt erfasst.</li>
+                    <li><strong>Einzug beenden:</strong> Wird ein Beitrag nicht mehr eingesammelt, lässt sich das Kind aus einer aufgeteilten Ausgabe herausnehmen, solange das noch möglich ist, und die Anteile aller anderen werden neu berechnet. Oder der Beitrag wird ganz oder teilweise aus Geld gedeckt, das jemand dem Fonds vorgestreckt hat. Das verringert, was die Klasse dieser Person schuldet, ohne dass erneut Bargeld bewegt wird, und das Kind erscheint nie als von den Eltern bezahlt.</li>
                     <li><strong>Korrekturen ohne Löschen:</strong> Ein bestätigter Vorgang wird durch eine eigene Korrektur mit Begründung rückgängig gemacht, sodass der Verlauf immer vollständig bleibt.</li>
                     <li><strong>Genau bis zum letzten Ban:</strong> Beträge werden in ganzen Bani gespeichert, den rumänischen Cents, und beim Aufteilen einer Summe wird jeder letzte davon genau verteilt.</li>
                     <li><strong>Sicher bei wackliger Verbindung:</strong> Speichern braucht Internet, doch wenn eine Antwort verloren geht, bestätigt ein neuer Versuch dieselbe Anfrage, ohne die Zahlung doppelt zu erfassen. Änderungen von einem anderen Gerät müssen vor dem Speichern geprüft werden.</li>
                     <li><strong>Vorgestrecktes Geld:</strong> Zahlt jemand etwas für die Klasse aus eigener Tasche, erfasst die App den Betrag, verknüpft ihn bei Bedarf mit einer Ausgabe und zeigt, wie viel die Klasse dieser Person noch schuldet, bis er teilweise oder ganz zurückgezahlt ist.</li>
                     <li><strong>Belege:</strong> Hängen Sie PDFs oder Fotos, etwa Kassenbons, an Ausgaben und Zahlungen an. Jede Datei erhält einen digitalen Fingerabdruck, und der Kassierer entscheidet, ob sie nur für Kassierer und Prüfer bleibt oder auch für die Eltern der Klasse sichtbar ist.</li>
                     <li><strong>PDF-Berichte:</strong> Berichte direkt in der App ansehen, teilen oder herunterladen, farblich markiert: grün für bezahlt, gelb für teilweise bezahlt, rot für überfällig und blau für Salden und ausgezahltes Geld. Jedes PDF behält die Logos von Schule und Klasse und die Farben vom Zeitpunkt der Ausstellung.</li>
-                    <li><strong>Deckung der Ausgaben:</strong> Die Klassenübersicht, jeder Ausgabenbericht und die Beitragstabelle zeigen für jede Ausgabe einen Balken und einen Prozentwert: wie viel des benötigten Betrags schon von den Kindern eingesammelt wurde.</li>
+                    <li><strong>Deckung der Ausgaben:</strong> Die Klassenübersicht, jeder Ausgabenbericht und die Beitragstabelle zeigen für jede Ausgabe einen Balken und einen Prozentwert: wie viel des Bedarfs gedeckt ist, wobei Geld von den Eltern und aus dem Fonds gedeckte Beträge getrennt ausgewiesen werden.</li>
                     <li><strong>WhatsApp-Erinnerungen:</strong> Speichern Sie bis zu zwei WhatsApp-Kontakte pro Kind und öffnen Sie einen privaten Chat, in dem der Saldo des Kindes schon geschrieben steht, auf Wunsch auch mit seinem PDF-Bericht. Nichts wird automatisch gesendet, und die Kontakte sieht nur der Kassierer: nie Eltern oder Prüfer und nie in PDFs oder Exporten.</li>
                     <li><strong>Zahlungsdaten:</strong> Der Revolut.me-Link der Klasse, der Name des Empfängers und die IBAN werden in den Einstellungen gespeichert und erscheinen in Einzel-, Klassen- und Ausgabenberichten sowie in Erinnerungen, bereit zum Kopieren oder Teilen.</li>
+                    <li><strong>Hilfe auf jedem Bildschirm:</strong> Das Fragezeichen in der Kopfzeile öffnet visuelle Anleitungen für alle 15 Abläufe, zugeschnitten auf Ihre Rolle. Jeder Hauptbildschirm öffnet seine eigene Anleitung, und wer nachschaut, wie das Einsammeln geht, verliert nie einen bereits eingegebenen Betrag.</li>
                     <li><strong>Mehrere Klassen, sauber getrennt:</strong> Jede Klasse hat ihre eigene Datenbank, Kinder, Ausgaben, Berichte, Logos und Berechtigungen. Ein Auswahlfeld in der Kopfzeile wechselt zwischen den Klassen, und dasselbe Gerät kann in verschiedenen Klassen unterschiedliche Rollen haben.</li>
                     <li><strong>Eltern sehen nur ihr eigenes Kind:</strong> Das Gerät eines Elternteils erhält die Summen der Klasse und die Daten seines Kindes, nie aber die Namen oder Zahlungen der anderen Kinder.</li>
                     <li><strong>Für jeden Bildschirm gemacht:</strong> Auf dem Smartphone bleibt das Kassieren gut erreichbar. Auf dem Tablet verteilen sich Listen auf Spalten; auf dem Laptop wandert die Navigation an die Seite, und das Kassenbuch zeigt Kassenstand und Verlauf nebeneinander. Drehen oder Ändern der Fenstergröße behält bei, was Sie gerade eingeben.</li>
