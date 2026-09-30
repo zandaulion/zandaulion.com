@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es-ES" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against casierul-clasei commit 4b84d80ec95f6f6deefc531bbf6fe75ca48e6928 (2026-09-29). -->
+    <!-- Content checked against casierul-clasei commit 1ec04350bdbd02cf18d765b19ce6f6268feea1bf (2026-09-30). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casierul clasei es una aplicación web en rumano para llevar los fondos de las clases: aportaciones por niño, gastos compartidos, cobro rápido, informes PDF, varias clases y acceso de solo lectura para padres y auditores.">
     <title>Casierul clasei - Detalles del proyecto</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=9">
+    <link rel="stylesheet" href="../project.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -66,6 +66,7 @@
                     <img src="../assets/Casierul/08-incasare-laptop-1366x768.png" alt="Cobro en un portátil, con las aportaciones y la confirmación una al lado de la otra" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/06-documente-tableta-768x1024.png" alt="Un pago con su justificante adjunto, en una tableta" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Casierul/07-raport-pdf-tableta-1024x768.png" alt="La tabla de aportaciones en vista previa PDF dentro de la aplicación, en una tableta" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/09-ajutor-tableta-768x1024.png" alt="La ayuda visual integrada en una tableta, con cada paso para activar un dispositivo" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>como funciona</h2>
@@ -76,20 +77,31 @@
                     <li><strong>Pague y lleve las cuentas.</strong> Registre el dinero pagado, con su destino y, si quiere, el gasto al que corresponde, y siga el saldo de la clase en el registro.</li>
                 </ol>
 
+                <h2>Todos los flujos de un vistazo</h2>
+                <p>Cuatro diagramas imprimibles recorren los 15 flujos, los mismos por los que guía la ayuda integrada de la aplicación. Como la aplicación, están en rumano.</p>
+                <div class="gallery-grid gallery-flows">
+                    <img src="../assets/Casierul/flows/01-pornire-si-organizare.svg" alt="Primeros pasos: activación, configuración de la clase, niños y contactos, y gastos" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/flows/02-bani-si-corectii.svg" alt="Dinero y correcciones: cobros, dejar de cobrar, el anticipo de un niño, el registro y las correcciones" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/flows/03-documente-si-comunicare.svg" alt="Documentos y comunicación: justificantes, WhatsApp y datos de pago, e informes" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Casierul/flows/04-acces-siguranta-si-date.svg" alt="Acceso, seguridad y datos: varias clases y roles, conexión y actualizaciones, y exportación y copias de seguridad" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+
                 <h2>Funciones</h2>
                 <ul>
                     <li><strong>La cuenta de cada niño:</strong> Aportaciones, importes pendientes, anticipos y el historial completo de cada niño.</li>
                     <li><strong>Anticipos que cuadran:</strong> Un anticipo puede cubrir más adelante otra aportación o devolverse, y usarlo nunca cuenta como dinero nuevo.</li>
                     <li><strong>Liquidado al cobrar:</strong> El anticipo de un niño se puede usar directamente en la pantalla de cobro, así que solo se pide el resto en efectivo. Si queda como mucho 1 leu, puede quedar pendiente, cubrirse con el anticipo o cerrarse como ajuste por redondeo. El efectivo en sí siempre se registra con exactitud.</li>
+                    <li><strong>Dejar de cobrar:</strong> Cuando una aportación ya no se va a cobrar, el niño puede salir de un gasto repartido mientras aún sea posible, y se recalcula la parte de todos los demás. O la aportación puede cubrirse, en parte o por completo, con dinero que alguien adelantó al fondo. Así baja lo que la clase le debe a esa persona sin volver a mover efectivo, y el niño nunca aparece como pagado por sus padres.</li>
                     <li><strong>Correcciones sin borrar:</strong> Una operación confirmada se anula con una corrección aparte, con su motivo, así que el historial siempre queda completo.</li>
                     <li><strong>Exacto hasta el último ban:</strong> Los importes se guardan en bani enteros, los céntimos rumanos, y al repartir un total se distribuye exactamente hasta el último.</li>
                     <li><strong>Seguro con una conexión inestable:</strong> Guardar requiere internet, pero si se pierde una respuesta, un reintento confirma la misma solicitud sin registrar el pago dos veces. Los cambios hechos en otro dispositivo deben revisarse antes de guardar.</li>
                     <li><strong>Dinero adelantado al fondo:</strong> Cuando alguien paga algo para la clase de su propio bolsillo, la aplicación lo registra, lo vincula a un gasto si hace falta y muestra cuánto le debe aún la clase hasta que se le devuelva en parte o del todo.</li>
                     <li><strong>Justificantes:</strong> Adjunte PDF o fotos, como tiques de compra, a gastos y pagos. Cada archivo lleva una huella digital, y el tesorero decide si queda solo para el tesorero y los auditores o si lo ven también los padres de la clase.</li>
                     <li><strong>Informes PDF:</strong> Vea, comparta o descargue informes desde la propia aplicación, con colores: verde para pagado, amarillo para pagado en parte, rojo para atrasado y azul para saldos y dinero pagado. Cada PDF conserva los logotipos y colores del colegio y de la clase del momento en que se emitió.</li>
-                    <li><strong>Cobertura de los gastos:</strong> La situación de la clase, el informe de cada gasto y la tabla de aportaciones muestran para cada gasto una barra y un porcentaje: cuánto de lo necesario se ha recaudado ya de los niños.</li>
+                    <li><strong>Cobertura de los gastos:</strong> El resumen de la clase, cada informe de gasto y la tabla de aportaciones muestran una barra y un porcentaje por gasto: cuánto de lo necesario está cubierto, con el dinero de los padres y lo cubierto por el fondo por separado.</li>
                     <li><strong>Recordatorios por WhatsApp:</strong> Guarde hasta dos contactos de WhatsApp por niño y abra un chat privado con el saldo del niño ya escrito, compartiendo también, si quiere, su informe en PDF. No se envía nada automáticamente, y los contactos solo los ve el tesorero: nunca los padres ni los auditores, y nunca aparecen en PDF ni exportaciones.</li>
                     <li><strong>Datos de pago:</strong> El enlace Revolut.me de la clase, el nombre del beneficiario y el IBAN se guardan en los ajustes y aparecen en los informes individuales, de clase y de gastos y en los recordatorios, listos para copiar o compartir.</li>
+                    <li><strong>Ayuda en cada pantalla:</strong> El signo de interrogación de la cabecera abre guías visuales de los 15 flujos, adaptadas a su rol. Cada pantalla principal abre su propia guía, y consultar cómo cobrar nunca borra un importe ya escrito.</li>
                     <li><strong>Varias clases, bien separadas:</strong> Cada clase tiene su propia base de datos, niños, gastos, informes, logotipos y permisos. Un selector en la cabecera cambia de clase, y el mismo dispositivo puede tener roles distintos en clases distintas.</li>
                     <li><strong>Los padres solo ven a su hijo:</strong> El dispositivo de un padre o una madre recibe los totales de la clase y los datos de su hijo, nunca los nombres ni los pagos de los demás niños.</li>
                     <li><strong>Pensado para cualquier pantalla:</strong> En el móvil, el cobro queda a mano. En la tableta, las listas se reparten en columnas; en el portátil, la navegación pasa al lateral y el registro muestra el saldo y el historial uno junto al otro. Girar o cambiar el tamaño de la ventana conserva lo que estaba escribiendo.</li>
