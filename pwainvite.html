@@ -7,7 +7,7 @@
     <title>PWA Invite Console 🔐 - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <link rel="stylesheet" href="workshop.css?v=3">
-    <link rel="stylesheet" href="project.css?v=5">
+    <link rel="stylesheet" href="project.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/brand/lion-light-v2.png">
 
@@ -44,7 +44,7 @@
                     <a href="https://github.com/zandaulion/pwa-invite-console" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">View on GitHub</a>
                 </div>
                 </div>
-                <img src="assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console" class="project-hero-image">
+                <img src="assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="The console on a desktop, with every app in the sidebar and the devices of Casierul clasei" class="project-hero-image hero-landscape hero-top">
             </div>
 
             <div class="project-content reveal">
@@ -56,14 +56,27 @@
                 <p>Tailscale TLS terminates in front of the private listener, restricting administrative access strictly to authorized Tailnet nodes with zero exposed public endpoints or hardcoded passwords.</p>
 
                 <h2>Gallery</h2>
+                <p>Names, invitation recipients, classes, and children in these screenshots are anonymized and blurred.</p>
+                <h3>On a desktop</h3>
                 <div class="gallery-grid">
-                    <img src="assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console Graphic" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="Every app in the sidebar, with the devices of one app, their roles, and their status" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PWA-Invite-Console/02-desktop-invitations-light.png" alt="An app's invitations, with when each was created and used" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PWA-Invite-Console/03-desktop-parent-invitation.png" alt="A new Casierul clasei invitation with a class, a parent role, a child, and an access end date" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PWA-Invite-Console/04-desktop-account-invitation-dark.png" alt="A simple new invitation in the dark theme" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>On a phone</h3>
+                <div class="gallery-grid gallery-tall">
+                    <img src="assets/PWA-Invite-Console/05-mobile-devices-light.png" alt="An app's devices on a phone" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PWA-Invite-Console/06-mobile-app-picker-dark.png" alt="The app picker on a phone, with icons and search, in the dark theme" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/PWA-Invite-Console/07-mobile-parent-invitation.png" alt="A parent invitation for Casierul clasei on a phone" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Features</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔑 Unified Invite Lifecycle:</strong> Generate, share, track expiration, and monitor redemption of app invitation links across services from one place.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Device Management:</strong> Inspect enrolled client devices, view last-seen timestamps, assign friendly labels, and instantly revoke compromised sessions.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎟️ App-Specific Invitations:</strong> An app can offer its own access options. For Casierul clasei, an invitation picks the class, the role, the child for a parent, and the date access ends, while every other app keeps the simple one-step invitation.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌗 Desktop and Phone, Light and Dark:</strong> A sidebar of every app on a desktop, a searchable app picker on a phone, and a light and a dark theme.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Tailnet Private Security:</strong> No credentials stored in front-end code; authenticated via private reverse-proxy header injection reachable only through Tailscale.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Zero-Dependency PWA:</strong> Vanilla JavaScript single-page application with immediate revalidation and zero framework bloat.</li>
                 </ul>
