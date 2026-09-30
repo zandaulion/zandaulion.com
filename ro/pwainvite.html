@@ -7,7 +7,7 @@
     <title>PWA Invite Console 🔐 - Detalii proiect</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=5">
+    <link rel="stylesheet" href="../project.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
 
@@ -44,7 +44,7 @@
                     <a href="https://github.com/zandaulion/pwa-invite-console" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Vezi pe GitHub</a>
                 </div>
                 </div>
-                <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console" class="project-hero-image">
+                <img src="../assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="Consola pe desktop, cu toate aplicațiile în bara laterală și dispozitivele din Casierul clasei" class="project-hero-image hero-landscape hero-top">
             </div>
 
             <div class="project-content reveal">
@@ -56,14 +56,27 @@
                 <p>Tailscale TLS se termină în fața ascultătorului privat, restricționând accesul administrativ strict la nodurile Tailnet autorizate cu zero puncte finale publice expuse sau parole hardcoded.</p>
 
                 <h2>Galerie</h2>
+                <p>Numele, destinatarii invitațiilor, clasele și copiii din aceste capturi sunt anonimizate și estompate.</p>
+                <h3>Pe desktop</h3>
                 <div class="gallery-grid">
-                    <img src="../assets/PWA-Invite-Console/feature_graphic.jpg" alt="PWA Invite Console Grafic" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/01-desktop-devices-light.png" alt="Toate aplicațiile în bara laterală, cu dispozitivele unei aplicații, rolurile și starea lor" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/02-desktop-invitations-light.png" alt="Invitațiile unei aplicații, cu data la care fiecare a fost creată și folosită" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/03-desktop-parent-invitation.png" alt="O invitație nouă în Casierul clasei, cu o clasă, rolul de părinte, un copil și data de încheiere a accesului" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/04-desktop-account-invitation-dark.png" alt="O invitație nouă simplă, în tema întunecată" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>Pe telefon</h3>
+                <div class="gallery-grid gallery-tall">
+                    <img src="../assets/PWA-Invite-Console/05-mobile-devices-light.png" alt="Dispozitivele unei aplicații pe telefon" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/06-mobile-app-picker-dark.png" alt="Selectorul de aplicații pe telefon, cu pictograme și căutare, în tema întunecată" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/PWA-Invite-Console/07-mobile-parent-invitation.png" alt="O invitație pentru un părinte în Casierul clasei, pe telefon" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Funcționalități</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔑 Ciclul de viață al invitației unificate:</strong> Generați, partajați, urmăriți expirarea și monitorizați valorificarea linkurilor de invitație la aplicații între servicii dintr-un singur loc.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Gestionarea dispozitivelor:</strong> Inspectați dispozitivele client înscrise, vizualizați marcajele de timp ultimele văzute, atribuiți etichete prietenoase și revocați instantaneu sesiunile compromise.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎟️ Invitații specifice fiecărei aplicații:</strong> O aplicație își poate oferi propriile opțiuni de acces. Pentru Casierul clasei, invitația alege clasa, rolul, copilul în cazul unui părinte și data la care se încheie accesul, iar toate celelalte aplicații păstrează invitația simplă, dintr-un singur pas.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌗 Desktop și telefon, luminos și întunecat:</strong> O bară laterală cu toate aplicațiile pe desktop, un selector de aplicații cu căutare pe telefon, plus o temă luminoasă și una întunecată.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Tailnet Private Security:</strong> Fără acreditări stocate în codul front-end; autentificat prin injecție de antet de proxy invers privat accesibil doar prin Tailscale.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ PWA cu dependență zero:</strong> Aplicație Vanilla JavaScript pe o singură pagină, cu revalidare imediată și zero umflare a cadrului.</li>
                 </ul>
