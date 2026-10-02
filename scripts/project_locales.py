@@ -10,14 +10,14 @@ FILES = ('admitere.html', 'bankdwhstudio.html', 'bpdigitizer.html', 'casierul.ht
          'gravitytdg.html', 'gravitywarp.html', 'intarzieri.html', 'kerfloom.html',
          'magpie.html', 'miscare.html', 'olxdeals.html', 'omaha.html', 'orbitpuzzles.html',
          'palebluedot.html', 'plate.html', 'pwainvite.html', 'pwakit.html', 'sankey.html', 'screenshotkit.html',
-         'spendosaurus.html', 'thermostat.html')
+         'spendosaurus.html', 'thermostat.html', 'threadmark.html')
 PROJECTS = {lang: FILES for lang, path, _, _ in LANGUAGES if path}
 PATHS = {lang: path for lang, path, _, _ in LANGUAGES}
 BRANDS = {'Zandaulion', 'Admitere Liceu Kit', 'Bank DWH Studio', 'BP Digitizer', 'Faceslice', 'Gravity Garden',
           'GravityTDG', 'Gravity Warp', 'Întârzieri Tren', 'Kerfloom', 'Magpie', 'Mișcare',
           'OLX Deals', 'Omaha', 'OrbitPuzzles', 'Pale Blue Dot', 'Bitey', 'PWA Invite',
           'PWA Kit', 'Sankey', 'Spendosaurus', 'Thermostat', 'PWAInvite', 'PWAKit'}
-BRANDS.update({'Android Store Screenshot Kit', 'Casierul clasei', 'Intârzieri Tren', 'OLX Deal Finder', 'Pocket Omaha', 'PWA Invite Console',
+BRANDS.update({'Android Store Screenshot Kit', 'Casierul clasei', 'Threadmark', 'Intârzieri Tren', 'OLX Deal Finder', 'Pocket Omaha', 'PWA Invite Console',
                'pwa-kit', 'Thermostat Monitor'})
 UI = {
     'explore': 'Keep exploring', 'viewer': 'Project image viewer',

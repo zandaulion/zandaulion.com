@@ -8,7 +8,7 @@ Un atelier jucăuș pentru idei curioase: aplicații, jocuri și mici unelte de 
 
 **[Vizitați zandaulion.com](https://zandaulion.com/)** · [Colecția românească](https://zandaulion.com/ro/index.html)
 
-Acest depozit conține site-ul web Zandaulion: o colecție de 23 de proiecte care poate fi căutată, pagini de proiecte individuale și un editor de diagrame Sankey interactiv. Pagina principală și fiecare pagină de proiect sunt disponibile în 12 limbi. Site-ul este static HTML, CSS și vanilla JavaScript, găzduit pe GitHub Pages.
+Acest depozit conține site-ul web Zandaulion: o colecție de 24 de proiecte care poate fi căutată, pagini de proiecte individuale și un editor de diagrame Sankey interactiv. Pagina principală și fiecare pagină de proiect sunt disponibile în 12 limbi. Site-ul este static HTML, CSS și vanilla JavaScript, găzduit pe GitHub Pages.
 
 ## Traducerile README
 
@@ -52,6 +52,7 @@ Editați fișierul README în limba engleză și cataloagele corespunzătoare î
 | Editor de diagrame Sankey | [sankey.html](sankey.html) |
 | Spendosaurus | [spendosaurus.html](spendosaurus.html) |
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
+| Threadmark | [threadmark.html](threadmark.html) |
 
 Arhivele de aplicații sunt separate de acest site web. Arhivele redenumite sunt [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) și [kerfloom](https://github.com/zandaulion/kerfloom).
 
