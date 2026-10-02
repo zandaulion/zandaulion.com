@@ -8,7 +8,7 @@ Un atelier ludique pour les idées curieuses : des applications, des jeux et de 
 
 **[Visitez zandaulion.com](https://zandaulion.com/)** · [RCollection roumaine](https://zandaulion.com/ro/index.html)
 
-Ce référentiel contient le site Web Zandaulion : une collection consultable de 23 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
+Ce référentiel contient le site Web Zandaulion : une collection consultable de 24 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
 
 ## Traductions du README
 
@@ -52,6 +52,7 @@ Modifiez le README anglais et les catalogues correspondants dans `locales/readme
 | Éditeur de diagramme Sankey | [sankey.html](sankey.html) |
 | Spendosaurus | [spendosaurus.html](spendosaurus.html) |
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
+| Threadmark | [threadmark.html](threadmark.html) |
 
 Les référentiels d'applications sont distincts de ce site Web. Les référentiels renommés sont [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) et [kerfloom](https://github.com/zandaulion/kerfloom).
 
