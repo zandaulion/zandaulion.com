@@ -8,7 +8,7 @@ Un taller lleno de juego para ideas curiosas: aplicaciones, juegos y pequeñas h
 
 **[Visita zandaulion.com](https://zandaulion.com/)** · [Colección rumana](https://zandaulion.com/ro/index.html)
 
-Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 23 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
+Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 24 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
 
 ## Traducciones del README
 
@@ -52,6 +52,7 @@ Edite el archivo README en inglés y los catálogos correspondientes en `locales
 | Editor de diagramas Sankey | [sankey.html](sankey.html) |
 | Spendosaurus | [spendosaurus.html](spendosaurus.html) |
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
+| Threadmark | [threadmark.html](threadmark.html) |
 
 Los repositorios de aplicaciones están separados de este sitio web. Los repositorios renombrados son [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) y [kerfloom](https://github.com/zandaulion/kerfloom).
 

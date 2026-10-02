@@ -8,7 +8,7 @@
 
 **[Відвідайте zandaulion.com](https://zandaulion.com/)** · [Румунська колекція](https://zandaulion.com/ro/index.html)
 
-Це сховище містить веб-сайт Zandaulion: доступну для пошуку колекцію з 23 проекту, окремі сторінки проекту та інтерактивний редактор діаграм Sankey. Домашня сторінка та кожна сторінка проекту доступні 12 мовами. Сайт є статичним HTML, CSS і ванільним JavaScript, розміщеним на GitHub Pages.
+Це сховище містить веб-сайт Zandaulion: доступну для пошуку колекцію з 24 проекту, окремі сторінки проекту та інтерактивний редактор діаграм Sankey. Домашня сторінка та кожна сторінка проекту доступні 12 мовами. Сайт є статичним HTML, CSS і ванільним JavaScript, розміщеним на GitHub Pages.
 
 ## Переклади README
 
@@ -52,6 +52,7 @@
 | Редактор діаграм Sankey | [sankey.html](sankey.html) |
 | Spendosaurus | [spendosaurus.html](spendosaurus.html) |
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
+| Threadmark | [threadmark.html](threadmark.html) |
 
 Репозиторії додатків відокремлені від цього веб-сайту. Перейменовані сховища: [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) і [kerfloom](https://github.com/zandaulion/kerfloom).
 
