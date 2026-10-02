@@ -10,7 +10,7 @@
 
 **[قم بزيارة zandaulion.com](https://zandaulion.com/)** · [المجموعة الرومانية](https://zandaulion.com/ro/index.html)
 
-يحتوي هذا المستودع على موقع Zandaulion: مجموعة قابلة للبحث مكونة من 23 مشروعًا، وصفحات مشاريع فردية، ومحرر الرسوم البيانية التفاعلي Sankey. الصفحة الرئيسية وكل صفحة مشروع متاحة بـ 12 لغة. الموقع ثابت HTML، CSS، وفانيليا JavaScript، مستضاف على GitHub Pages.
+يحتوي هذا المستودع على موقع Zandaulion: مجموعة قابلة للبحث مكونة من 24 مشروعًا، وصفحات مشاريع فردية، ومحرر الرسوم البيانية التفاعلي Sankey. الصفحة الرئيسية وكل صفحة مشروع متاحة بـ 12 لغة. الموقع ثابت HTML، CSS، وفانيليا JavaScript، مستضاف على GitHub Pages.
 
 ## ترجمات README
 
@@ -54,6 +54,7 @@
 | محرر المخططات Sankey | [sankey.html](sankey.html) |
 | Spendosaurus | [spendosaurus.html](spendosaurus.html) |
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
+| Threadmark | [threadmark.html](threadmark.html) |
 
 مستودعات التطبيقات منفصلة عن هذا الموقع. المستودعات التي تمت إعادة تسميتها هي [zandaulion.com](https://github.com/zandaulion/zandaulion.com) و[bitey](https://github.com/zandaulion/bitey) و[kerfloom](https://github.com/zandaulion/kerfloom).
 

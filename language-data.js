@@ -82,7 +82,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "واصل الاستكشاف",
@@ -160,7 +161,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "继续探索",
@@ -238,7 +240,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "Continuez à explorer",
@@ -316,7 +319,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "Weiter entdecken",
@@ -394,7 +398,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "खोज जारी रखें",
@@ -472,7 +477,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "探索を続ける",
@@ -550,7 +556,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "계속 둘러보기",
@@ -628,7 +635,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "Continue explorando",
@@ -706,7 +714,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "Continuă explorarea",
@@ -784,7 +793,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "Sigue explorando",
@@ -862,7 +872,8 @@ window.ZandaulionLocales = [
       "sankey.html",
       "screenshotkit.html",
       "spendosaurus.html",
-      "thermostat.html"
+      "thermostat.html",
+      "threadmark.html"
     ],
     "ui": {
       "explore": "Продовжити знайомство",

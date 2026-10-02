@@ -8,7 +8,7 @@
 
 **[zandaulion.com पर जाएँ](https://zandaulion.com/)** · [रोमानियाई संग्रह](https://zandaulion.com/ro/index.html)
 
-इस रिपॉजिटरी में Zandaulion वेबसाइट शामिल है: 23 परियोजनाओं, व्यक्तिगत प्रोजेक्ट पेजों और एक इंटरैक्टिव Sankey आरेख संपादक का खोजने योग्य संग्रह। मुखपृष्ठ और प्रत्येक परियोजना पृष्ठ 12 भाषाओं में उपलब्ध हैं। साइट स्थिर HTML, CSS, और वेनिला JavaScript है, जो GitHub Pages पर होस्ट की गई है।
+इस रिपॉजिटरी में Zandaulion वेबसाइट शामिल है: 24 परियोजनाओं, व्यक्तिगत प्रोजेक्ट पेजों और एक इंटरैक्टिव Sankey आरेख संपादक का खोजने योग्य संग्रह। मुखपृष्ठ और प्रत्येक परियोजना पृष्ठ 12 भाषाओं में उपलब्ध हैं। साइट स्थिर HTML, CSS, और वेनिला JavaScript है, जो GitHub Pages पर होस्ट की गई है।
 
 ## README के अनुवाद
 
@@ -52,6 +52,7 @@
 | Sankey आरेख संपादक | [sankey.html](sankey.html) |
 | Spendosaurus | [spendosaurus.html](spendosaurus.html) |
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
+| Threadmark | [threadmark.html](threadmark.html) |
 
 ऐप रिपॉजिटरी इस वेबसाइट से अलग हैं। नामांकित रिपॉजिटरी [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey), और [kerfloom](https://github.com/zandaulion/kerfloom) हैं।
 
