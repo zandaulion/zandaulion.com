@@ -18,7 +18,7 @@
             <div class="privacy-content">
                 <h1>Bitey — Private Food Log: Privacy Policy</h1>
                 <p>
-                    <strong>Last updated:</strong> 25 September 2026<br>
+                    <strong>Last updated:</strong> 3 October 2026<br>
                     <strong>Developer:</strong> Zandaulion<br>
                     <strong>Privacy contact:</strong> <a href="mailto:zandaulion@gmail.com"><strong>zandaulion@gmail.com</strong></a>
                 </p>
@@ -31,7 +31,7 @@
                     <li><strong>Barcode lookups</strong> send a barcode you scanned directly to Open Food Facts.</li>
                     <li><strong>Bitey AI</strong>, an optional paid feature, sends a food photograph you choose &mdash; and any correction you type &mdash; to Bitey&rsquo;s analysis server, where Google&rsquo;s Gemini reads it. Bitey asks for your consent before the first photograph is sent.</li>
                 </ul>
-                <p>Nothing else leaves your device: not your diary, weight, profile, or other photos.</p>
+                <p>Using Bitey AI also involves two Google services, Google Play&rsquo;s billing and Google&rsquo;s app-verification check, which are described below. Nothing else leaves your device: not your diary, weight, profile, or other photos.</p>
 
                 <h2>Information Bitey stores on your device</h2>
                 <p>Bitey stores the following information in Android app-private storage on the device where you use it:</p>
@@ -50,7 +50,7 @@
 
                 <h2>Bitey AI photo analysis</h2>
                 <p>Bitey AI is an optional paid subscription, bought and managed through Google Play. When you use it, Bitey estimates what is on your plate from a photograph. Before the first photograph is sent, Bitey shows what will be sent and asks for your consent. You can withdraw consent at any time in Bitey&rsquo;s Settings; the next photograph will ask again.</p>
-                <p><strong>What is sent.</strong> Each time you ask Bitey AI to read a photograph, your device sends, over HTTPS, to Bitey&rsquo;s analysis server (a Google Cloud function operated by the developer):</p>
+                <p><strong>What is sent.</strong> Each time you ask Bitey AI to read a photograph, your device sends, over HTTPS, to Bitey&rsquo;s analysis server, a Google Cloud function operated by the developer in Belgium (Google Cloud region europe-west1):</p>
                 <ul>
                     <li>The photograph you took or chose.</li>
                     <li>Any correction you typed about it, such as &ldquo;it is vegetarian&rdquo;.</li>
@@ -59,8 +59,14 @@
                     <li>Standard connection information that any internet service receives, such as your IP address and request time.</li>
                 </ul>
                 <p>Your diary, weight, profile, other photographs and backups are not sent.</p>
-                <p><strong>What happens to it.</strong> The server asks Google Play whether the purchase token belongs to an active Bitey AI subscription, then passes the photograph and your correction to Google&rsquo;s Gemini, which returns an estimate of the foods and nutrition. Google processes the photograph on the developer&rsquo;s behalf under the Gemini API&rsquo;s terms for paid services, which do not permit Google to use it to improve Google&rsquo;s products. Google may keep it for a limited period to detect abuse, as those terms describe. The estimate comes back to your device, where you review and save it like any other diary entry.</p>
-                <p><strong>What is kept.</strong> Bitey&rsquo;s server does not store the photograph, your correction, or the estimate. To enforce the daily limit of readings, it keeps a counter for each subscription and day: a one-way hash of the purchase token, the date, and the number of readings used. The token itself is not stored. Each counter is deleted automatically seven days after its day ends. The server&rsquo;s logs record technical details &mdash; the hash, token counts, and whether a request succeeded &mdash; but not the photograph, your correction, or the estimate.</p>
+                <p><strong>What happens to it.</strong> The server asks Google Play whether the purchase token belongs to an active Bitey AI subscription, then passes the photograph and your correction to Google&rsquo;s Gemini, which returns an estimate of the foods and nutrition. Google processes the photograph on the developer&rsquo;s behalf under the Gemini API&rsquo;s terms for paid services, which do not permit Google to use it to improve Google&rsquo;s products. Google may keep it for a limited period to detect abuse, as those terms describe. Gemini is a separate Google service from the server: while the server runs in Belgium, Gemini may process the photograph in Google data centres outside the European Union. The estimate comes back to your device, where you review and save it like any other diary entry.</p>
+                <p><strong>What is kept.</strong> Bitey&rsquo;s server does not store the photograph, your correction, or the estimate. To enforce the daily limit of readings, it keeps a counter for each subscription and day: a one-way hash of the purchase token, the date, and the number of readings used. The token itself is not stored. The counters are held in Belgium too, and each is deleted automatically seven days after its day ends. The server&rsquo;s own logs record technical details &mdash; the hash, token counts, and whether a request succeeded &mdash; but not the photograph, your correction, or the estimate. Separately, Google Cloud keeps standard request logs for the server, which record each request&rsquo;s IP address, time, and outcome, for 30 days. Bitey does not use them to work out where you are.</p>
+
+                <h2>Google services used with Bitey AI</h2>
+                <p>Two Google libraries built into Bitey contact Google, and only in connection with Bitey AI. Neither receives your photographs, diary, weight, or profile.</p>
+                <p><strong>Google Play Billing.</strong> Bitey AI is bought and managed through Google Play. Bitey connects to Google Play&rsquo;s billing service only after you first use a Bitey AI feature &mdash; a photo action, the plans, Restore or Manage &mdash; and from then on it checks your subscription when Bitey opens. When it connects, Google&rsquo;s billing library sends Google technical information such as your device model and Android version, country, mobile network and language. Google uses it to operate Play billing; Bitey does not receive it. If you only keep a diary, Bitey never connects to Google Play&rsquo;s billing service.</p>
+                <p><strong>App verification (Firebase App Check with Google Play Integrity).</strong> Before a photograph is sent to Bitey AI, Bitey asks Google Play to confirm that the request comes from the genuine Bitey app, installed from Google Play, on a genuine device. To answer, Google Play checks the app&rsquo;s package, version, signing certificate and licence, and an attestation from your device; Firebase, Google&rsquo;s app platform, then issues a short-lived token that Bitey&rsquo;s server checks before it accepts the photograph. Firebase also receives technical details such as the library and Android versions. This keeps the paid service from being used by copies of the app or by scripts. Bitey does not create an identifier for you or your device for this, and Bitey&rsquo;s server does not store the token.</p>
+                <p>Google handles this information under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
 
                 <h2>Optional Open Food Facts barcode lookups</h2>
                 <p>Bitey includes a packaged food database and first checks food data already stored on your device. If a scanned barcode is not cached, Bitey asks before contacting Open Food Facts. You may allow that one lookup, decline it and enter the food manually, or choose &ldquo;always allow&rdquo; for future cache misses. You can turn that setting off in Bitey&rsquo;s Settings at any time.</p>
@@ -73,7 +79,7 @@
 
                 <h2>Search, analytics, advertising, and tracking</h2>
                 <p>Manual food search uses a food table packaged with the app. It does not send your search terms to the developer or a search provider.</p>
-                <p>Bitey does not include advertising, advertising identifiers, behavioral analytics, or third-party analytics SDKs. It does not sell, rent, or share your personal or health-related information for advertising or marketing.</p>
+                <p>Bitey does not include advertising, advertising identifiers, behavioral analytics, or third-party analytics SDKs. Barcodes are read on the device by an open-source library that has no network access. It does not sell, rent, or share your personal or health-related information for advertising or marketing.</p>
 
                 <h2>Backups and exports</h2>
                 <p>When you choose to export a backup, Bitey creates a ZIP file containing the diary data and, if selected, your photos. The app writes the file only to the location you choose through Android&rsquo;s file picker. Bitey does not upload or sync the backup. If you choose a cloud folder, email it, or otherwise share it, the provider or recipient you choose handles that copy under its own terms.</p>
@@ -82,7 +88,7 @@
                 <h2>Retention and deletion</h2>
                 <p>Your data remains on your device until you delete it, replace it by restoring a backup, clear Bitey&rsquo;s storage in Android Settings, or uninstall Bitey. Deleting or uninstalling the app removes the app&rsquo;s local copy; because Bitey does not operate a diary server, there is no remote diary copy for us to delete.</p>
                 <p>Exported backups are separate files. Deleting the app does not delete backups you saved elsewhere; delete those files yourself if you no longer want them. Cached barcode foods are removed with Bitey&rsquo;s app storage.</p>
-                <p>For Bitey AI, the daily reading counters described above are deleted automatically seven days after their day ends. Your subscription itself is held by Google Play; cancel it in Google Play&rsquo;s subscription settings.</p>
+                <p>For Bitey AI, the daily reading counters described above are deleted automatically seven days after their day ends, and the server&rsquo;s request logs after 30 days. Your subscription itself is held by Google Play; cancel it in Google Play&rsquo;s subscription settings.</p>
 
                 <h2>Security</h2>
                 <p>Bitey keeps diary data in Android app-private storage and limits its packaged WebView to the app&rsquo;s own local interface. Optional Open Food Facts requests and Bitey AI requests use HTTPS. The Google Play purchase token is handled only by Bitey&rsquo;s native code and is never exposed to the app&rsquo;s web interface. No method of storage or transmission is completely secure, so protect your device and any backups with the security controls available to you.</p>
@@ -108,9 +114,11 @@
                    this document alone. Audit the optional Open Food Facts barcode transfer,
                    the camera permission, and — from 1.0.5 — the Bitey AI photo and purchase
                    token transfer in particular.
-                4. Before 1.0.5 reaches testers: enable the Firestore TTL policy on collection
-                   group `ai_usage`, field `expireAt`. The seven-day retention stated above
-                   depends on it; without it the counters are never deleted.
+                4. The Firestore TTL policy on collection group `ai_usage`, field `expireAt`,
+                   is what keeps the seven-day retention stated above. It is declared in
+                   `firestore.indexes.json` and was deployed on 3 October 2026 (until then the
+                   counters were not being deleted). Check it with
+                   `firebase firestore:indexes --project plate-cc703`.
                 5. Update this notice, the Data safety form, and the in-app disclosure before
                    enabling cloud sync, analytics, or any other new third-party data flow.
                 -->

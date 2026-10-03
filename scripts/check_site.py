@@ -18,6 +18,7 @@ PRIVACY_PATHS = (
     "gravitygarden-privacy.html",
     "gravitytdg-privacy.html",
     "gravitywarp-privacy.html",
+    "omaha-privacy.html",
     "orbitpuzzles-privacy.html",
     "palebluedot-privacy.html",
     "plate-privacy.html",
