@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Pocket Omaha, the Android app and web app.">
+    <title>Privacy Policy - Pocket Omaha</title>
+    <style>
+        .privacy-table { overflow-x: auto; margin: 16px 0 24px; }
+        .privacy-table table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 0.95rem; }
+        .privacy-table th, .privacy-table td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border-light); line-height: 1.5; }
+        .privacy-table th { font-weight: 700; }
+        @media (max-width: 640px) {
+            .privacy-table table { min-width: 0; }
+            .privacy-table thead { display: none; }
+            .privacy-table tr { display: block; padding: 12px 0; border-bottom: 1px solid var(--border-light); }
+            .privacy-table td { display: block; padding: 4px 0; border: 0; }
+            .privacy-table td::before { content: attr(data-label); display: block; font-weight: 700; }
+        }
+    </style>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/brand/logo.jpg">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="omaha-privacy.html"></portfolio-header>
+
+    <main>
+        <div class="container reveal">
+            <div class="privacy-content">
+                <h1>Privacy Policy</h1>
+                <p><strong>Pocket Omaha (Android app and web app)</strong> &middot; Effective 3 October 2026</p>
+
+                <p>Pocket Omaha helps long-term stock owners record why they follow a company and review whether those reasons still hold. This policy explains what data the app handles, where it goes, and the choices you have. In short: <strong>your watchlists and investment notes stay on your device</strong>, we do not sell data, and we do not show ads or use advertising IDs.</p>
+                <p>&ldquo;We&rdquo; means the developer of Pocket Omaha, zandaulion. Contact details are at the end.</p>
+
+                <h2>1. What stays on your device</h2>
+                <p>On Android, the following is stored only in the app&rsquo;s private storage on your phone:</p>
+                <ul>
+                    <li>Watchlists and the tickers you follow</li>
+                    <li>Your theses, reasons, reconsideration conditions, journal entries, and review history</li>
+                    <li>Cached market data and scores, alert settings and alert history, and app settings</li>
+                </ul>
+                <p>We do not collect position sizes or portfolio holdings because the app does not ask for them. Android alerts are generated on your device; no notification server is involved. Uninstalling the app or clearing its data deletes this information, except for any backup file you chose to export (see section 6).</p>
+
+                <h2>2. Data that leaves your device</h2>
+                <div class="privacy-table">
+                    <table>
+                        <thead>
+                            <tr><th scope="col">Why</th><th scope="col">What is sent</th><th scope="col">To whom</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td data-label="Why">Market data and filings</td><td data-label="What is sent">The ticker or search text you request, plus the normal technical data any request carries (IP address, user agent, timing)</td><td data-label="To whom">SEC EDGAR and Yahoo Finance</td></tr>
+                            <tr><td data-label="Why">AI summaries (optional)</td><td data-label="What is sent">The scored company data for the stock. <strong>Your notes are included only if you turn on &ldquo;Include my notes in AI analysis&rdquo;</strong>, which is off by default. If on, this can include conviction, target price, rationale, tags, conditions and journal content.</td><td data-label="To whom">Our Firebase Cloud Functions and Google Gemini</td></tr>
+                            <tr><td data-label="Why">Google sign-in (needed for AI credits)</td><td data-label="What is sent">Your Google account identifier, display name and email, through Google sign-in and Firebase Authentication. The app never opens the account picker on its own.</td><td data-label="To whom">Google / Firebase</td></tr>
+                            <tr><td data-label="Why">Credit purchases</td><td data-label="What is sent">A Google Play purchase token and order ID, which our server verifies with the Google Play Developer API and credits once per order. We never see your payment card details.</td><td data-label="To whom">Google Play</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>We store your Firebase user ID, email, and credit balance, and records of credit redemptions, so that credits can be granted and not double-spent. We also cache AI output: notes-free output is cached by ticker and can be read without sign-in; output generated with your notes is cached under your account only and is not publicly readable.</p>
+
+                <h2>3. The web app (PWA)</h2>
+                <p>The web app at omaha.zandaulion.com stores your watchlists, notes, settings and alert data in a database on the server that hosts it, because the web app has no on-device database. Access is by invite code; the server sets a cookie and stores a device token to recognise your registered device. If you enable web push, your browser&rsquo;s push subscription (endpoint and public keys) is stored so alerts can be delivered through your browser&rsquo;s push service. The same optional AI rules apply: your notes go to Gemini only if you opt in. The web app also keeps a last-good copy of stock data in your browser for offline display. Clearing site data removes it.</p>
+
+                <h2>4. Permissions</h2>
+                <p>The Android app requests only <strong>Internet</strong> and <strong>network state</strong> (to fetch data and decide when to sync) and <strong>notifications</strong> (to show alerts, where Android asks you first). It does not access your contacts, location, camera, microphone, photos or files, SMS, or advertising ID.</p>
+
+                <h2>5. What we do not do</h2>
+                <ul>
+                    <li>No advertising, ad networks, or cross-app tracking</li>
+                    <li>No sale or rental of personal data</li>
+                    <li>No third-party analytics SDK in the app</li>
+                </ul>
+                <p>We use your data only to provide the features above. Third parties listed in section 2 process data under their own terms, including <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&rsquo;s Privacy Policy</a>, and we do not control their retention.</p>
+
+                <h2>6. Backups and your choices</h2>
+                <ul>
+                    <li><strong>Export:</strong> you can export your theses and watchlists to a JSON file at a location you choose. This file is <strong>not encrypted</strong>; store it carefully.</li>
+                    <li><strong>AI notes:</strong> leave &ldquo;Include my notes in AI analysis&rdquo; off to keep your writing out of AI requests.</li>
+                    <li><strong>Sign-in:</strong> you can use the research and review features without signing in; sign-in is only for AI credits.</li>
+                    <li><strong>Deletion:</strong> uninstall the app or clear its storage to remove on-device data. To have your account data (user ID, email, credit and redemption records, and any account-scoped AI cache) or web-app data deleted from our servers, contact us. We will act on verified requests within 30 days.</li>
+                </ul>
+
+                <h2>7. Retention</h2>
+                <p>On-device data remains until you delete it. Account records are kept while your account is active and for as long as needed to prevent credit fraud and meet legal obligations, then removed. Server-side web-app data remains until you or the operator delete it. Invite codes are cleared after use.</p>
+
+                <h2>8. Security</h2>
+                <p>Data in transit uses HTTPS. Our Firebase database rules deny all direct client access; data is reached only through server functions, and credit changes are made transactionally on the server. On-device data relies on your phone&rsquo;s own protections (screen lock, device encryption). The app has no separate app lock.</p>
+
+                <h2>9. Children</h2>
+                <p>Pocket Omaha is not directed to children under 13 (or the minimum age in your country), and we do not knowingly collect their data.</p>
+
+                <h2>10. Not investment advice</h2>
+                <p>Scores and AI-generated text are produced from public filings and may be stale, incomplete or wrong. They are not financial advice.</p>
+
+                <h2>11. Changes</h2>
+                <p>If we change this policy we will update the date above and, for material changes, tell you in the app.</p>
+
+                <h2>12. Contact</h2>
+                <p>Questions or deletion requests: <a href="mailto:zandaulion@gmail.com">zandaulion@gmail.com</a></p>
+
+                <hr style="border: none; border-top: 1px solid var(--border-light); margin: 32px 0;">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Pocket Omaha &mdash; Zandaulion. All rights reserved.</p>
+            </div>
+        </div>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="main.js?v=2.0"></script>
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P7K6214YH8');kofiwidget2.draw();</script></div>
+</body>
+</html>
