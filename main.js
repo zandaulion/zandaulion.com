@@ -135,6 +135,7 @@ class PortfolioFooter extends HTMLElement {
                   <a href="gravitygarden-privacy.html">Gravity Garden Privacy</a>
                   <a href="orbitpuzzles-privacy.html">OrbitPuzzles Privacy</a>
                   <a href="gravitytdg-privacy.html">GravityTDG Privacy</a>
+                  <a href="omaha-privacy.html">Pocket Omaha Privacy</a>
               </div>
               <p>&copy; <span id="current-year">${new Date().getFullYear()}</span> Zandaulion. All rights reserved.</p>
               <p style="margin-top: 10px; color: var(--text-muted);"><a href="mailto:zandaulion@gmail.com" style="color: var(--accent-blue); text-decoration: none;">zandaulion@gmail.com</a></p>
