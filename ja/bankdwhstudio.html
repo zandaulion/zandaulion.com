@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja-JP" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against semantic-layer-poc commit 9b955f52fe7291050214a05e413d210332d9c70f (2026-09-27). -->
+    <!-- Content checked against semantic-layer-poc commit 27ddf4de0e11da9c7f4cc3847c6206c13d335dc9 (2026-10-03). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio は、自然言語による銀行の質問を編集・レビュー可能な PostgreSQL の SQL ドラフトに変換し、モデルが正解する頻度を測定します。">
+    <meta name="description" content="Bank DWH Studio は、自然な言葉で書いた銀行業務の質問を、編集・確認できる PostgreSQL の SQL 下書きに変えます。合成データのウェアハウスで SQL を試すエージェントを備え、モデルがどれだけ正しく答えるかも測定します。">
     <title>Bank DWH Studio - レビュー可能な SQL ドラフト</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -53,24 +53,26 @@
 
             <div class="project-content reveal">
                 <h2>質問は調べられるものになる</h2>
-                <p>Bank DWH Studio は、自然言語を通じて大規模な銀行データ ウェアハウスを探索するための個人的な概念実証です。質問をし、必要に応じて銀行のサブジェクト領域を選択すると、アプリは PostgreSQL SQL を作成する前に最も関連性の高いスキーマ コンテキストを取得します。</p>
-                <p>結果は意図的にコードブロック以上のものになります。編集可能なドラフトの横に、取得した表、解釈、仮定、レビューメモ、および基本的なチェックが表示されます。 8 月末のリクエストの年など、必要な詳細が不足している場合、アシスタントは説明を求めることができます。</p>
+                <p>Bank DWH Studio は、大規模な銀行データウェアハウスを自然な言葉で探るための個人的な概念実証です。質問を入力し、必要なら銀行業務の分野を選び、答え方を決めます。テーブルを調べて SQL を試すエージェントか、スキーマを取得して 1 ステップで PostgreSQL の SQL を書くパイプラインかです。</p>
+                <p>結果は、あえて単なるコードブロック以上のものにしています。編集できる下書きの横に、使われたテーブル、解釈、前提、確認メモ、基本的なチェックが並び、下書きがウェアハウスの合成コピーから返す行も表示されます。8 月末についての依頼で年が抜けているときのように、必要な情報が足りない場合は、アシスタントが聞き返せます。</p>
 
                 <h2>仕組み</h2>
                 <ol>
-                    <li><strong>日常の言葉で尋ねてください。</strong> 必要な銀行業務に関する回答を説明し、必要に応じて対象分野に検索を絞り込みます。</li>
-                    <li><strong>スキーマの境界付きスライスを取得します。</strong> Node バックエンドは、関連するテーブルと列の Elasticsearch メタデータを検索します。</li>
-                    <li><strong>コンテキストを含めて下書きします。</strong> ホストされた GPT-OSS モデルは、その制限されたスキーマから SQL を作成しますが、カタログに基づいたルールは、サポートされている一般的な質問を処理します。</li>
-                    <li><strong>使用する前に確認してください。</strong> ドラフトを編集またはコピーし、そのコンテキストと仮定を検査して、独自の SQL クライアントで個別に実行します。</li>
+                    <li><strong>日常の言葉で尋ねてください。</strong> 必要な銀行業務の答えを説明し、役立つときは検索を分野に絞り、それまでの答えを踏まえた追加の質問ができます。</li>
+                    <li><strong>エージェントに調べさせる。</strong> エージェントモードでは、モデルがテーブルの索引を検索し、使うつもりのテーブルの定義を読み、ウェアハウスで下書きを試し、データベースが受け付けなかった部分を直してから答えます。</li>
+                    <li><strong>あるいは 1 ステップで書く。</strong> パイプラインモードでは、Node のバックエンドが Elasticsearch からスキーマの限られた部分を取得し、モデルがそれをもとに 1 回の呼び出しで下書きを作ります。よくある質問のいくつかは、カタログに基づくルールが処理します。</li>
+                    <li><strong>使用する前に確認してください。</strong> エージェントの手順をリアルタイムで見守り、そのあと下書きを編集またはコピーし、返された行を確認し、文脈と前提を点検します。</li>
                 </ol>
 
                 <h2>作業台の上にあるもの</h2>
                 <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
                     <div class="feature-item"><h3>100 の合成テーブル</h3><p>生成された銀行倉庫フィクスチャは、5,000 の列、リレーションシップ、PostgreSQL DDL、カタログ、および小さなシードを提供します。</p></div>
-                    <div class="feature-item"><h3>スキーマに基づいた検索</h3><p>Elasticsearch は、モデルに何かが送信される前に、大規模なカタログを質問に必要なメタデータに絞り込みます。</p></div>
+                    <div class="feature-item"><h3>2 つの答え方</h3><p>テーブルを調べて SQL を試すエージェントか、Elasticsearch からスキーマを取得して 1 回の呼び出しで書くパイプラインか。モードは利用者ごとに選べます。</p></div>
+                    <div class="feature-item"><h3>読み取り専用のコピーで検証</h3><p>下書きは、ベンチマーク用にデータを投入した合成ウェアハウスで、読み取りしかできないユーザーとして実行されます。制限時間は 15 秒で、行数にも上限があります。コピーは起動のたびに元データから作り直されます。</p></div>
                     <div class="feature-item"><h3>目に見える推論コンテキスト</h3><p>取得した表、解釈、仮定、メモ、チェックは表示されたままになるため、ドラフトを盲目的に受け入れるのではなく異議を唱えることができます。</p></div>
                     <div class="feature-item"><h3>あとから見返せる回答</h3><p>すべての回答は、あなたへの確認の質問も含め、端末上の履歴に保存されます。以前のドラフトを復元したり、不要になったものを削除したりできます。</p></div>
                     <div class="feature-item"><h3>モデルテストを内蔵</h3><p>2 つのタブで、オープンウェイトかクローズドウェイトかを示したうえですべてのベンチマーク実行を表示し、結果を PDF にエクスポートできます。承認された端末では、レンタル GPU 上または OpenRouter 経由で新しいモデルをテストし、進捗をリアルタイムで確認できます。</p></div>
+                    <div class="feature-item"><h3>すべての手順を記録</h3><p>追記専用の監査ログが、すべての質問、実行されたすべての文とその実行者、すべての答えを、端末上の履歴とは別に記録します。</p></div>
                     <div class="feature-item"><h3>1 つの PWA、多くの画面</h3><p>招待専用インターフェイスはインストール可能で、ワイドデスクトップ画面からコンパクトな電話まで適応します。</p></div>
                 </div>
 
@@ -98,6 +100,32 @@
                     <li><strong>GPT-6 Luna：</strong> 慎重すぎて、69 問中 53 問に聞き返しで答え、正答率はわずか 22%。</li>
                 </ul>
                 <p>クローズドモデルは比較のためだけに含めています。銀行自身のハードウェアでは動かせないため、OpenRouter 経由で呼び出します。オープンウェイトのモデルはレンタル GPU 上の vLLM で動かし、終了後に GPU を削除します。通常は 12 分以内、費用は 1 ドルを大きく下回ります。</p>
+
+                <h2>エージェントかパイプラインか</h2>
+                <p>10 月からアプリはエージェントとしても答えられるようになり、ベンチマークは同じ質問、データ、モデルで両方のモードを実行します。過去の日付時点でのレコードの履歴、日次レートでの通貨換算、中央値、全四半期に取引のあった顧客など、より難しい 17 問も加わりました。これらの実行は A100 上で分かりにくい名前を使い、各質問を 3 回ずつ尋ねています。</p>
+                <div class="table-scroll" role="region" aria-label="エージェントとパイプラインの結果(スクロール可能)" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>モデル</th><th class="num">難しい質問、エージェント</th><th class="num">難しい質問、パイプライン</th><th class="num">元の 23 問、エージェント</th><th class="num">元の 23 問、パイプライン</th><th class="num">エージェントの自信を持った誤答</th><th class="num">エージェントの回答時間</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">47%</td><td class="num">98.6%</td><td class="num">71%</td><td class="num">1</td><td class="num">60 秒</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">51%</td><td class="num">92.8%</td><td class="num">65%</td><td class="num">5</td><td class="num">22 秒</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">92%</td><td class="num">39%</td><td class="num">97.1%</td><td class="num">61%</td><td class="num">1</td><td class="num">23 秒</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span> <span>EXPLAIN のみ</span></span></td><td class="num">84%</td><td class="num">—</td><td class="num">100%</td><td class="num">—</td><td class="num">0</td><td class="num">19 秒</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">オープン</span> <span>A100</span></span></td><td class="num">76%</td><td class="num">49%</td><td class="num">91.3%</td><td class="num">49%</td><td class="num">3</td><td class="num">11 秒</td></tr>
+                    </tbody>
+                </table></div>
+                <p>自信を持った誤答は、元の 23 問と、存在しないデータについての質問でのエージェントの誤りを数えたものです。回答時間は中央値です。比較として、パイプラインとして動かしたクローズドモデルの難しい質問での正答率は、Claude Sonnet 5 が 71%、Gemini 3.8 Flash が 69%、GPT-4.1 mini が 55%、GPT-4.1 が 49%、GPT-6 Luna が 22% でした。GPT-6 Luna はほとんどの質問で聞き返します。エージェントとして動かしたオープンモデルは、どれもパイプラインとして動かしたどのクローズドモデルより高い点を取りました。</p>
+
+                <h3>向上の源</h3>
+                <p>エージェントを分解し、gpt-oss-20b で元の 23 問を試すと、各部分の貢献が分かります。</p>
+                <ul>
+                    <li><strong>テーブルを調べることで安全になる:</strong> 何も実行しないうちから、自信を持った誤答が 17 件から 3〜4 件に減ります。パイプラインの検索では一度も返されなかったテーブルを、エージェントが見つけるからです。</li>
+                    <li><strong>下書きを試すことで正しくなる:</strong> SQL を実行できないと、下書きの約半数が失敗します。多くは日付テーブルの列を推測で書いたためです。データベースのエラーメッセージがあれば直せますし、行を 1 つも見ずに EXPLAIN だけで確認しても、向上のほぼすべてが保たれます。</li>
+                    <li><strong>業務ルールに測れる効果はない:</strong> エージェントは、渡される短い銀行業務ルールの一覧がなくても同じくらいの成績でした。</li>
+                    <li><strong>代償はトークンと時間:</strong> エージェントへの質問は、パイプラインへの質問の数倍のトークンを使い、2〜3 倍の時間がかかります。</li>
+                </ul>
+                <p>難しい質問での gpt-oss-20b の誤りは、実行はできるが間違った答えを返す下書きで、試行では見つけられません。</p>
 
                 <h2 id="full-results">すべての結果</h2>
                 <div class="project-links" style="margin-bottom: 20px;">
@@ -168,11 +196,11 @@
                 </div>
 
                 <h2>人間は常にループの中にいます</h2>
-                <p>このアプリは SQL の草案を作成するだけで、銀行のデータウェアハウスに接続したり、クエリを実行したりすることはありません。利用者は結果を編集またはコピーし、自分のデータベースクライアントで別途実行します。ブラウザーにモデルの API キーが渡ることはありません。</p>
+                <p>アプリは SQL の下書きを書いて試しますが、それはウェアハウスの合成コピー上だけで、読み取りしかできないユーザーとしてです。実際の銀行ウェアハウスには一切接続しません。利用者はこれまでどおり結果を確認し、編集またはコピーして自分のデータベースクライアントで実行します。ブラウザーがモデルの API キーを受け取ることはありません。</p>
                 <p>自動チェックの対象は、読み取り専用ステートメントの基本形と既知のテーブル参照です。SQL の構文、列参照、業務上の意味は引き続き人による確認が必要です。ウェアハウス内の名称、関係、指標はすべて合成したテスト資料であり、承認済みの銀行業務定義ではありません。</p>
 
                 <h2>ボンネットの下で</h2>
-                <p>デプロイされた概念実証では、Oracle Ampere A1 インスタンス上で Node バックエンドと Elasticsearch を rootless コンテナとして実行し、ホスト型プロバイダー経由の gpt-oss-20b で SQL をドラフトします。このリポジトリには、小規模にデプロイされた POC とは明確に区別された、より広範な将来のアーキテクチャも文書化されています。</p>
+                <p>公開中の概念実証は、Node のバックエンド、Elasticsearch、読み取り専用の PostgreSQL ウェアハウスを、Oracle Ampere A1 インスタンス上の root 権限なしコンテナとして動かし、ホスティング事業者経由の gpt-oss-20b で SQL を書きます。リポジトリには将来のより広いアーキテクチャも記載されていますが、公開中の小さな POC とは明確に分けられています。</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">招待専用の PWA を開きます</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">10 件の例をすべて参照する</a>

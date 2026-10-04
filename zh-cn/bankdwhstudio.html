@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against semantic-layer-poc commit 9b955f52fe7291050214a05e413d210332d9c70f (2026-09-27). -->
+    <!-- Content checked against semantic-layer-poc commit 27ddf4de0e11da9c7f4cc3847c6206c13d335dc9 (2026-10-03). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio 将自然语言的银行问题转换为可编辑、可审阅的 PostgreSQL SQL 草稿，并衡量模型答对的频率。">
+    <meta name="description" content="Bank DWH Studio 把用自然语言提出的银行业务问题转换为可编辑、可审核的 PostgreSQL SQL 草稿，配有一个在合成数据仓库上测试 SQL 的智能体，并衡量模型答对的频率。">
     <title>Bank DWH Studio - 可审查的 SQL 草稿</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -53,24 +53,26 @@
 
             <div class="project-content reveal">
                 <h2>问题变成了你可以检查的东西</h2>
-                <p>Bank DWH Studio 是通过自然语言探索大型银行数据仓库的个人概念证明。提出问题，可选择选择银行主题领域，应用程序会在起草 PostgreSQL SQL 之前检索最相关的架构上下文。</p>
-                <p>结果故意不仅仅是一个代码块。它显示了检索到的表格、解释、假设、审查注释和可编辑草稿旁边的基本检查。当缺少必要的细节时（例如八月底请求中的年份），助理可以要求澄清。</p>
+                <p>Bank DWH Studio 是一个个人概念验证项目，用自然语言探索大型银行数据仓库。提出问题，按需选择一个银行业务领域，再决定回答方式：由智能体查找数据表并测试 SQL，或由流水线检索模式并一步写出 PostgreSQL SQL。</p>
+                <p>结果特意不只是一段代码。可编辑的草稿旁边会显示所用的数据表、理解、假设、审核备注和基本检查，以及草稿从数据仓库合成副本中返回的行。缺少必要信息时，例如关于八月底的请求没有写年份，助手可以请你澄清。</p>
 
                 <h2>它是如何运作的</h2>
                 <ol>
-                    <li><strong>用日常用语提问。</strong> 描述您需要的银行业答案，并在有用时将搜索范围缩小到某个主题领域。</li>
-                    <li><strong>检索模式的有界切片。</strong> Node 后端在 Elasticsearch 元数据中搜索相关表和列。</li>
-                    <li><strong>草稿与上下文。</strong> 托管的 GPT-OSS 模型从该有界架构创建 SQL，而基于目录的规则则处理支持的常见问题。</li>
-                    <li><strong>使用前请检查。</strong> 编辑或复制草稿，检查其上下文和假设，然后在您自己的 SQL 客户端中单独运行它。</li>
+                    <li><strong>用日常用语提问。</strong> 描述你需要的银行业务答案，必要时把搜索限定在某个领域，并基于之前的回答继续追问。</li>
+                    <li><strong>让智能体去查。</strong> 在智能体模式下，模型会搜索数据表索引，阅读打算使用的数据表的定义，在数据仓库上测试草稿，并在回答前修正数据库拒绝的部分。</li>
+                    <li><strong>或一步写出。</strong> 在流水线模式下，Node 后端从 Elasticsearch 检索模式中有限的一部分，模型据此在一次调用中写出草稿，另有基于目录的规则处理少数常见问题。</li>
+                    <li><strong>使用前请检查。</strong> 实时查看智能体的每一步，然后编辑或复制草稿，检查它返回的行，并审视其上下文和假设。</li>
                 </ol>
 
                 <h2>工作台上有什么</h2>
                 <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
                     <div class="feature-item"><h3>100张合成桌子</h3><p>生成的银行仓库固定装置提供 5,000 个列、关系、PostgreSQL DDL、目录和小种子。</p></div>
-                    <div class="feature-item"><h3>基于模式的检索</h3><p>在将任何内容发送到模型之前，Elasticsearch 将大型目录缩小到问题所需的元数据。</p></div>
+                    <div class="feature-item"><h3>两种回答方式</h3><p>由智能体查找数据表并测试 SQL，或由流水线从 Elasticsearch 检索模式并在一次调用中写出草稿。每位用户自行选择模式。</p></div>
+                    <div class="feature-item"><h3>在只读副本上测试</h3><p>草稿在基准测试的合成数据仓库上运行，该仓库已填充数据，运行身份是只能读取的用户，时限 15 秒，并限制行数。每次启动都会从种子数据重建副本。</p></div>
                     <div class="feature-item"><h3>可见的推理上下文</h3><p>检索到的表格、解释、假设、注释和检查保持可见，因此草案可以受到质疑，而不是盲目接受。</p></div>
                     <div class="feature-item"><h3>可随时回看的回答</h3><p>每条回答，包括向你提出的追问，都会保存在你设备上的历史记录中。你可以恢复之前的草稿，或删除不再需要的记录。</p></div>
                     <div class="feature-item"><h3>内置模型测试</h3><p>两个标签页展示每一次基准测试运行，并标明是开放权重还是封闭权重；可将结果导出为 PDF，并允许获批设备在租用的 GPU 上或通过 OpenRouter 测试新模型，实时显示进度。</p></div>
+                    <div class="feature-item"><h3>每一步都有记录</h3><p>只追加的审计日志会记录每个问题、每条执行的语句及其执行者，以及每个回答，并与设备上的历史记录分开保存。</p></div>
                     <div class="feature-item"><h3>一台PWA，多个屏幕</h3><p>仅限邀请的界面是可安装的，并且适用于从宽桌面屏幕到紧凑型手机。</p></div>
                 </div>
 
@@ -98,6 +100,32 @@
                     <li><strong>GPT-6 Luna：</strong> 过于谨慎：69 个问题中有 53 个以追问作答，正确率只有 22%。</li>
                 </ul>
                 <p>封闭模型仅用于比较。它们无法在银行自己的硬件上运行，因此通过 OpenRouter 调用。开放权重模型在租用的 GPU 上用 vLLM 运行，结束后删除 GPU，通常不超过 12 分钟，花费远低于一美元。</p>
+
+                <h2>智能体还是流水线</h2>
+                <p>从十月起，应用也可以作为智能体回答，基准测试会用相同的问题、数据和模型运行两种模式。它新增了 17 道更难的问题，例如某条记录在过去某一日期的历史、按每日汇率换算货币、中位数，以及每个季度都活跃的客户。这些测试在 A100 上使用晦涩名称，每道题问三次。</p>
+                <div class="table-scroll" role="region" aria-label="智能体与流水线的可滚动结果" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>模型</th><th class="num">更难的问题，智能体</th><th class="num">更难的问题，流水线</th><th class="num">原有 23 题，智能体</th><th class="num">原有 23 题，流水线</th><th class="num">智能体自信地答错</th><th class="num">智能体回答时间</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">开放</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">47%</td><td class="num">98.6%</td><td class="num">71%</td><td class="num">1</td><td class="num">60 秒</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">开放</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">51%</td><td class="num">92.8%</td><td class="num">65%</td><td class="num">5</td><td class="num">22 秒</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">开放</span> <span>A100</span></span></td><td class="num">92%</td><td class="num">39%</td><td class="num">97.1%</td><td class="num">61%</td><td class="num">1</td><td class="num">23 秒</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">开放</span> <span>A100</span> <span>仅 EXPLAIN</span></span></td><td class="num">84%</td><td class="num">—</td><td class="num">100%</td><td class="num">—</td><td class="num">0</td><td class="num">19 秒</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">开放</span> <span>A100</span></span></td><td class="num">76%</td><td class="num">49%</td><td class="num">91.3%</td><td class="num">49%</td><td class="num">3</td><td class="num">11 秒</td></tr>
+                    </tbody>
+                </table></div>
+                <p>自信地答错统计的是智能体在原有 23 题以及关于不存在数据的问题上的错误。回答时间为中位数。作为对比，以流水线方式运行的闭源模型在更难问题上的得分为：Claude Sonnet 5 71%，Gemini 3.8 Flash 69%，GPT-4.1 mini 55%，GPT-4.1 49%，GPT-6 Luna 22%，因为它对大多数问题都会反问。每个以智能体方式运行的开源模型，得分都高于任何以流水线方式运行的闭源模型。</p>
+
+                <h3>提升从何而来</h3>
+                <p>把智能体拆开来看，用 gpt-oss-20b 回答原有 23 题，就能看出每个部分的贡献。</p>
+                <ul>
+                    <li><strong>查找数据表让它更安全：</strong> 在执行任何内容之前，自信地答错的回答就从 17 个降到 3 或 4 个，因为智能体能找到流水线搜索从未返回的数据表。</li>
+                    <li><strong>测试草稿让它更正确：</strong> 如果无法运行自己的 SQL，大约一半的草稿会失败，主要是猜错了日期表的列。数据库的错误信息足以修正这些问题，只用 EXPLAIN 检查、一行数据都不看，也几乎保留了全部提升。</li>
+                    <li><strong>业务规则没有可测量的作用：</strong> 去掉提供给智能体的那份简短银行业务规则，它的表现同样好。</li>
+                    <li><strong>代价是令牌和时间：</strong> 一个智能体问题消耗的令牌是流水线问题的数倍，耗时是其两到三倍。</li>
+                </ul>
+                <p>在更难的问题上，gpt-oss-20b 的错误是能运行但返回错误答案的草稿，测试无法发现这类错误。</p>
 
                 <h2 id="full-results">完整结果</h2>
                 <div class="project-links" style="margin-bottom: 20px;">
@@ -168,11 +196,11 @@
                 </div>
 
                 <h2>人类留在循环中</h2>
-                <p>应用只生成 SQL 草稿；它不会连接银行数据仓库，也不会执行查询。用户可编辑或复制结果，再在自己的数据库客户端中单独运行。浏览器不会收到模型 API 密钥。</p>
+                <p>应用会编写并测试 SQL 草稿，但只在数据仓库的合成副本上进行，且以只能读取的用户身份运行；它从不连接真实的银行数据仓库。用户仍需审核结果，再编辑或复制，并在自己的数据库客户端中运行。浏览器永远不会收到模型的 API 密钥。</p>
                 <p>自动检查仅涵盖只读语句的基本形态和已知表引用。SQL 语法、字段引用和业务含义仍须人工审查。仓库中的所有名称、关系和指标都是合成测试材料，并非获批准的银行业务定义。</p>
 
                 <h2>在引擎盖下</h2>
-                <p>已部署的概念验证在 Oracle Ampere A1 实例上以 rootless 容器运行 Node 后端和 Elasticsearch，并通过托管服务商使用 gpt-oss-20b 起草 SQL。代码库还记录了一个更广泛的未来架构，与规模更小的已部署 POC 明确区分。</p>
+                <p>已部署的概念验证在 Oracle Ampere A1 实例上以无 root 权限容器运行 Node 后端、Elasticsearch 和只读的 PostgreSQL 数据仓库，并通过托管服务商使用 gpt-oss-20b 编写 SQL。代码库还记录了一个更宏大的未来架构，与已部署的小型 POC 明确分开。</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">打开仅限邀请的 PWA</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">浏览全部 10 个示例</a>
