@@ -39,7 +39,7 @@
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
-| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Kerfspan，原名 Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
@@ -54,7 +54,7 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 | Threadmark | [threadmark.html](threadmark.html) |
 
-应用程序存储库与本网站是分开的。重命名的存储库为 [zandaulion.com](https://github.com/zandaulion/zandaulion.com)、[bitey](https://github.com/zandaulion/bitey) 和 [kerfloom](https://github.com/zandaulion/kerfloom)。
+应用程序存储库与本网站是分开的。重命名的存储库为 [zandaulion.com](https://github.com/zandaulion/zandaulion.com)、[bitey](https://github.com/zandaulion/bitey) 和 [kerfspan](https://github.com/zandaulion/kerfspan)。
 
 Bank DWH Studio 源和合成仓库固定装置位于 [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc) 中。
 

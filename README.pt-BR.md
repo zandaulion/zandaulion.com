@@ -39,7 +39,7 @@ Edite o README em inglês e os catálogos correspondentes em `locales/readme/` e
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
-| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Kerfspan, anteriormente Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
@@ -54,7 +54,7 @@ Edite o README em inglês e os catálogos correspondentes em `locales/readme/` e
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 | Threadmark | [threadmark.html](threadmark.html) |
 
-Os repositórios de aplicativos são separados deste site. Os repositórios renomeados são [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) e [kerfloom](https://github.com/zandaulion/kerfloom).
+Os repositórios de aplicativos são separados deste site. Os repositórios renomeados são [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) e [kerfspan](https://github.com/zandaulion/kerfspan).
 
 A fonte Bank DWH Studio e o acessório de armazém sintético residem em [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 

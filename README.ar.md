@@ -41,7 +41,7 @@
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
-| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Kerfspan، سابقًا Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
@@ -56,7 +56,7 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 | Threadmark | [threadmark.html](threadmark.html) |
 
-مستودعات التطبيقات منفصلة عن هذا الموقع. المستودعات التي تمت إعادة تسميتها هي [zandaulion.com](https://github.com/zandaulion/zandaulion.com) و[bitey](https://github.com/zandaulion/bitey) و[kerfloom](https://github.com/zandaulion/kerfloom).
+مستودعات التطبيقات منفصلة عن هذا الموقع. المستودعات التي تمت إعادة تسميتها هي [zandaulion.com](https://github.com/zandaulion/zandaulion.com) و[bitey](https://github.com/zandaulion/bitey) و[kerfspan](https://github.com/zandaulion/kerfspan).
 
 مصدر Bank DWH Studio وتركيبات المستودعات الاصطناعية موجودة في [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 

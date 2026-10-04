@@ -14,7 +14,7 @@ FILES = ('admitere.html', 'bankdwhstudio.html', 'bpdigitizer.html', 'casierul.ht
 PROJECTS = {lang: FILES for lang, path, _, _ in LANGUAGES if path}
 PATHS = {lang: path for lang, path, _, _ in LANGUAGES}
 BRANDS = {'Zandaulion', 'Admitere Liceu Kit', 'Bank DWH Studio', 'BP Digitizer', 'Faceslice', 'Gravity Garden',
-          'GravityTDG', 'Gravity Warp', 'Întârzieri Tren', 'Kerfloom', 'Magpie', 'Mișcare',
+          'GravityTDG', 'Gravity Warp', 'Întârzieri Tren', 'Kerfloom', 'Kerfspan', 'Magpie', 'Mișcare',
           'OLX Deals', 'Omaha', 'OrbitPuzzles', 'Pale Blue Dot', 'Bitey', 'PWA Invite',
           'PWA Kit', 'Sankey', 'Spendosaurus', 'Thermostat', 'PWAInvite', 'PWAKit'}
 BRANDS.update({'Android Store Screenshot Kit', 'Casierul clasei', 'Threadmark', 'Intârzieri Tren', 'OLX Deal Finder', 'Pocket Omaha', 'PWA Invite Console',

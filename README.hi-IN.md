@@ -39,7 +39,7 @@
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
-| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Kerfspan, पहले Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
@@ -54,7 +54,7 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 | Threadmark | [threadmark.html](threadmark.html) |
 
-ऐप रिपॉजिटरी इस वेबसाइट से अलग हैं। नामांकित रिपॉजिटरी [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey), और [kerfloom](https://github.com/zandaulion/kerfloom) हैं।
+ऐप रिपॉजिटरी इस वेबसाइट से अलग हैं। नामांकित रिपॉजिटरी [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey), और [kerfspan](https://github.com/zandaulion/kerfspan) हैं।
 
 Bank DWH Studio स्रोत और सिंथेटिक वेयरहाउस फिक्स्चर [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc) में रहते हैं।
 
