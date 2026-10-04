@@ -58,7 +58,7 @@ class PortfolioHeader extends HTMLElement {
                               <a href="plate.html" class="${activePage === 'plate.html' ? 'active' : ''}">Bitey</a>
                               <a href="miscare.html" class="${activePage === 'miscare.html' ? 'active' : ''}">Mișcare</a>
                               <a href="faceslice.html" class="${activePage === 'faceslice.html' ? 'active' : ''}">Faceslice</a>
-                              <a href="kerfloom.html" class="${activePage === 'kerfloom.html' ? 'active' : ''}">Kerfloom</a>
+                              <a href="kerfloom.html" class="${activePage === 'kerfloom.html' ? 'active' : ''}">Kerfspan</a>
                               <a href="spendosaurus.html" class="${activePage === 'spendosaurus.html' ? 'active' : ''}">Spendosaurus</a>
                               <a href="magpie.html" class="${activePage === 'magpie.html' ? 'active' : ''}">Magpie</a>
                               <a href="bpdigitizer.html" class="${activePage === 'bpdigitizer.html' ? 'active' : ''}">BP Digitizer (Android &amp; Web)</a>

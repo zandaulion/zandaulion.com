@@ -39,7 +39,7 @@
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
-| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Kerfspan, 이전 이름 Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
@@ -54,7 +54,7 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 | Threadmark | [threadmark.html](threadmark.html) |
 
-앱 저장소는 이 웹사이트와 별개입니다. 이름이 변경된 리포지토리는 [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) 및 [kerfloom](https://github.com/zandaulion/kerfloom)입니다.
+앱 저장소는 이 웹사이트와 별개입니다. 이름이 변경된 리포지토리는 [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) 및 [kerfspan](https://github.com/zandaulion/kerfspan)입니다.
 
 Bank DWH Studio 소스 및 합성 웨어하우스 고정 장치는 [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc)에 있습니다.
 

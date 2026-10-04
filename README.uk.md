@@ -39,7 +39,7 @@
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
-| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Kerfspan, колишня назва Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
@@ -54,7 +54,7 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 | Threadmark | [threadmark.html](threadmark.html) |
 
-Репозиторії додатків відокремлені від цього веб-сайту. Перейменовані сховища: [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) і [kerfloom](https://github.com/zandaulion/kerfloom).
+Репозиторії додатків відокремлені від цього веб-сайту. Перейменовані сховища: [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) і [kerfspan](https://github.com/zandaulion/kerfspan).
 
 Джерело Bank DWH Studio і синтетичний складський прилад доступні в [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 

@@ -49,7 +49,7 @@ paths, code examples, and link destinations are preserved.
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
-| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Kerfspan, formerly Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
@@ -67,7 +67,7 @@ paths, code examples, and link destinations are preserved.
 The app repositories are separate from this website. The renamed repositories
 are [zandaulion.com](https://github.com/zandaulion/zandaulion.com),
 [bitey](https://github.com/zandaulion/bitey), and
-[kerfloom](https://github.com/zandaulion/kerfloom).
+[kerfspan](https://github.com/zandaulion/kerfspan).
 
 The Bank DWH Studio source and synthetic warehouse fixture live in
 [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).

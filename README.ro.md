@@ -39,7 +39,7 @@ Editați fișierul README în limba engleză și cataloagele corespunzătoare î
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
-| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Kerfspan, fostul Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
@@ -54,7 +54,7 @@ Editați fișierul README în limba engleză și cataloagele corespunzătoare î
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 | Threadmark | [threadmark.html](threadmark.html) |
 
-Arhivele de aplicații sunt separate de acest site web. Arhivele redenumite sunt [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) și [kerfloom](https://github.com/zandaulion/kerfloom).
+Arhivele de aplicații sunt separate de acest site web. Arhivele redenumite sunt [zandaulion.com](https://github.com/zandaulion/zandaulion.com), [bitey](https://github.com/zandaulion/bitey) și [kerfspan](https://github.com/zandaulion/kerfspan).
 
 Sursa Bank DWH Studio și dispozitivul de depozitare sintetică trăiesc în [semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc).
 

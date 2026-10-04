@@ -39,7 +39,7 @@
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
-| Kerfloom | [kerfloom.html](kerfloom.html) |
+| Kerfspan（旧称Kerfloom） | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
@@ -54,7 +54,7 @@
 | Thermostat Monitor | [thermostat.html](thermostat.html) |
 | Threadmark | [threadmark.html](threadmark.html) |
 
-アプリのリポジトリはこの Web サイトとは別のものです。名前が変更されたリポジトリは、[zandaulion.com](https://github.com/zandaulion/zandaulion.com)、[bitey](https://github.com/zandaulion/bitey)、および [kerfloom](https://github.com/zandaulion/kerfloom) です。
+アプリのリポジトリはこの Web サイトとは別のものです。名前が変更されたリポジトリは、[zandaulion.com](https://github.com/zandaulion/zandaulion.com)、[bitey](https://github.com/zandaulion/bitey)、および [kerfspan](https://github.com/zandaulion/kerfspan) です。
 
 Bank DWH Studio ソースと合成ウェアハウス フィクスチャは、[semantic-layer-poc](https://github.com/zandaulion/semantic-layer-poc) に存在します。
 
