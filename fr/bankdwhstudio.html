@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr-FR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against semantic-layer-poc commit 9b955f52fe7291050214a05e413d210332d9c70f (2026-09-27). -->
+    <!-- Content checked against semantic-layer-poc commit 27ddf4de0e11da9c7f4cc3847c6206c13d335dc9 (2026-10-03). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio transforme des questions bancaires en langage naturel en brouillons SQL PostgreSQL modifiables et vérifiables, et mesure la fréquence à laquelle le modèle a raison.">
+    <meta name="description" content="Bank DWH Studio transforme des questions bancaires en langage naturel en brouillons SQL PostgreSQL modifiables et vérifiables, avec un agent qui teste son SQL sur un entrepôt de données synthétique, et mesure à quelle fréquence le modèle a raison.">
     <title>Bank DWH Studio - Brouillons SQL révisables</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -53,24 +53,26 @@
 
             <div class="project-content reveal">
                 <h2>Une question devient quelque chose que vous pouvez inspecter</h2>
-                <p>Bank DWH Studio est une preuve de concept personnelle pour explorer un vaste entrepôt de données bancaires via le langage naturel. Posez une question, choisissez éventuellement un domaine bancaire et l'application récupère le contexte de schéma le plus pertinent avant de rédiger PostgreSQL SQL.</p>
-                <p>Le résultat est délibérément plus qu’un bloc de code. Il affiche les tableaux récupérés, l'interprétation, les hypothèses, les notes de révision et les vérifications de base à côté d'un brouillon modifiable. Lorsqu'un détail nécessaire manque, comme l'année dans une demande de fin août, l'assistant peut demander des éclaircissements.</p>
+                <p>Bank DWH Studio est une preuve de concept personnelle pour explorer un grand entrepôt de données bancaires en langage naturel. Posez une question, choisissez si vous le souhaitez un domaine bancaire, et décidez comment elle est traitée : par un agent qui consulte les tables et teste son SQL, ou par un pipeline qui récupère le schéma et rédige le SQL PostgreSQL en une seule étape.</p>
+                <p>Le résultat est volontairement plus qu'un bloc de code. À côté du brouillon modifiable figurent les tables utilisées, l'interprétation, les hypothèses, des notes de relecture et des contrôles de base, ainsi que les lignes que le brouillon renvoie depuis une copie synthétique de l'entrepôt. Quand un détail nécessaire manque, comme l'année dans une demande sur la fin août, l'assistant peut demander une précision.</p>
 
                 <h2>Comment ça marche</h2>
                 <ol>
-                    <li><strong>Demandez dans le langage courant.</strong> Décrivez la réponse bancaire dont vous avez besoin et limitez la recherche à un domaine lorsque cela est utile.</li>
-                    <li><strong>Récupérez une tranche délimitée du schéma.</strong> Un backend Node recherche les métadonnées Elasticsearch pour les tables et colonnes pertinentes.</li>
-                    <li><strong>Brouillon avec contexte.</strong> Un modèle GPT-OSS hébergé crée SQL à partir de ce schéma limité, tandis que les règles basées sur le catalogue gèrent les questions courantes prises en charge.</li>
-                    <li><strong>Vérifiez avant d'utiliser.</strong> Modifiez ou copiez le brouillon, inspectez son contexte et ses hypothèses, puis exécutez-le séparément dans votre propre client SQL.</li>
+                    <li><strong>Demandez dans le langage courant.</strong> Décrivez la réponse bancaire dont vous avez besoin, limitez la recherche à un domaine si c'est utile, et posez des questions de suivi qui s'appuient sur les réponses précédentes.</li>
+                    <li><strong>Laissez l'agent chercher.</strong> En mode agent, le modèle cherche dans un index des tables, lit la définition de celles qu'il compte utiliser, teste son brouillon sur l'entrepôt et corrige tout ce que la base de données refuse avant de répondre.</li>
+                    <li><strong>Ou rédigez en une étape.</strong> En mode pipeline, un backend Node récupère dans Elasticsearch une portion limitée du schéma, et le modèle rédige à partir d'elle en un seul appel, tandis que des règles fondées sur le catalogue traitent quelques questions courantes.</li>
+                    <li><strong>Vérifiez avant d'utiliser.</strong> Suivez les étapes de l'agent en direct, puis modifiez ou copiez le brouillon, vérifiez les lignes qu'il renvoie et examinez son contexte et ses hypothèses.</li>
                 </ol>
 
                 <h2>Qu'y a-t-il sur l'établi</h2>
                 <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
                     <div class="feature-item"><h3>100 tableaux synthétiques</h3><p>Un appareil d'entrepôt bancaire généré fournit 5 000 colonnes, des relations, PostgreSQL DDL, un catalogue et une petite graine.</p></div>
-                    <div class="feature-item"><h3>Récupération basée sur un schéma</h3><p>Elasticsearch restreint un vaste catalogue aux métadonnées nécessaires à la question avant que quoi que ce soit ne soit envoyé au modèle.</p></div>
+                    <div class="feature-item"><h3>Deux façons de répondre</h3><p>Un agent qui consulte les tables et teste son SQL, ou un pipeline qui récupère le schéma dans Elasticsearch et rédige en un seul appel. Chacun choisit le mode.</p></div>
+                    <div class="feature-item"><h3>Testé sur une copie en lecture seule</h3><p>Les brouillons s'exécutent sur l'entrepôt synthétique et alimenté du benchmark, sous un utilisateur qui ne peut que lire, avec une limite de 15 secondes et un plafond de lignes. La copie est reconstruite à partir des données d'origine à chaque démarrage.</p></div>
                     <div class="feature-item"><h3>Contexte de raisonnement visible</h3><p>Les tableaux, interprétations, hypothèses, notes et vérifications récupérés restent visibles afin que le projet puisse être contesté plutôt qu'accepté aveuglément.</p></div>
                     <div class="feature-item"><h3>Des réponses à retrouver</h3><p>Chaque réponse, y compris une question qui vous est posée en retour, est enregistrée dans un historique sur votre appareil. Restaurez un brouillon précédent ou supprimez ceux dont vous n'avez plus besoin.</p></div>
                     <div class="feature-item"><h3>Tests de modèles intégrés</h3><p>Deux onglets affichent chaque exécution du benchmark, marquée poids ouverts ou fermés, exportent les résultats en PDF et permettent aux appareils autorisés de tester un nouveau modèle, sur un GPU loué ou via OpenRouter, avec une progression en direct.</p></div>
+                    <div class="feature-item"><h3>Chaque étape consignée</h3><p>Un journal d'audit en ajout seul conserve chaque question, chaque instruction exécutée et son auteur, et chaque réponse, séparément de l'historique de votre appareil.</p></div>
                     <div class="feature-item"><h3>Un PWA, plusieurs écrans</h3><p>L'interface sur invitation uniquement est installable et s'adapte des écrans de bureau larges aux téléphones compacts.</p></div>
                 </div>
 
@@ -98,6 +100,32 @@
                     <li><strong>GPT-6 Luna :</strong> a poussé la prudence trop loin : il a répondu par une question à 53 questions sur 69 et n'a eu juste que dans 22 % des cas.</li>
                 </ul>
                 <p>Les modèles fermés ne sont là que pour comparaison. Ils ne pourraient pas tourner sur le matériel d'une banque ; ils sont donc appelés via OpenRouter. Les modèles à poids ouverts tournent sur un GPU loué avec vLLM, supprimé ensuite, généralement en 12 minutes au plus et pour bien moins d'un dollar.</p>
+
+                <h2>Agent ou pipeline</h2>
+                <p>Depuis octobre, l'application peut aussi répondre en tant qu'agent, et le benchmark fait tourner les deux modes sur les mêmes questions, données et modèles. Il ajoute 17 questions plus difficiles, comme l'historique d'un enregistrement à une date passée, la conversion de devises avec des cours quotidiens, des médianes et les clients actifs à chaque trimestre. Ces séries ont utilisé des noms cryptiques, sur une A100, chaque question étant posée trois fois.</p>
+                <div class="table-scroll" role="region" aria-label="Résultats défilants pour l&#x27;agent et le pipeline" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Modèle</th><th class="num">Questions plus difficiles, agent</th><th class="num">Questions plus difficiles, pipeline</th><th class="num">Les 23 d'origine, agent</th><th class="num">Les 23 d'origine, pipeline</th><th class="num">Agent faux avec assurance</th><th class="num">Temps de réponse de l'agent</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">47%</td><td class="num">98.6%</td><td class="num">71%</td><td class="num">1</td><td class="num">60 s</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">51%</td><td class="num">92.8%</td><td class="num">65%</td><td class="num">5</td><td class="num">22 s</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">92%</td><td class="num">39%</td><td class="num">97.1%</td><td class="num">61%</td><td class="num">1</td><td class="num">23 s</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span> <span>EXPLAIN seul</span></span></td><td class="num">84%</td><td class="num">—</td><td class="num">100%</td><td class="num">—</td><td class="num">0</td><td class="num">19 s</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Ouverts</span> <span>A100</span></span></td><td class="num">76%</td><td class="num">49%</td><td class="num">91.3%</td><td class="num">49%</td><td class="num">3</td><td class="num">11 s</td></tr>
+                    </tbody>
+                </table></div>
+                <p>Faux avec assurance compte les erreurs de l'agent sur les 23 questions d'origine et sur les questions portant sur des données absentes. Le temps de réponse est la médiane. À titre de comparaison, les modèles fermés utilisés en pipeline ont obtenu sur les questions plus difficiles : Claude Sonnet 5 71 %, Gemini 3.8 Flash 69 %, GPT-4.1 mini 55 %, GPT-4.1 49 % et GPT-6 Luna 22 %, car il redemande des précisions sur la plupart. Chaque modèle ouvert utilisé en agent a fait mieux que chaque modèle fermé utilisé en pipeline.</p>
+
+                <h3>D'où vient le gain</h3>
+                <p>En démontant l'agent, avec gpt-oss-20b sur les 23 questions d'origine, on voit ce que chaque partie apporte.</p>
+                <ul>
+                    <li><strong>Consulter les tables le rend sûr :</strong> Les réponses fausses avec assurance passent de 17 à 3 ou 4 avant toute exécution, car l'agent trouve des tables que la recherche du pipeline n'a jamais renvoyées.</li>
+                    <li><strong>Tester le brouillon le rend juste :</strong> Sans pouvoir exécuter son SQL, environ la moitié des brouillons échouent, surtout sur des colonnes devinées de la table des dates. Le message d'erreur de la base suffit à les corriger, et une simple vérification avec EXPLAIN, sans voir une seule ligne, conserve presque tout le gain.</li>
+                    <li><strong>Les règles métier n'apportent rien de mesurable :</strong> L'agent a fait aussi bien sans la courte liste de règles bancaires qu'il reçoit.</li>
+                    <li><strong>Le prix, ce sont des tokens et du temps :</strong> Une question à l'agent consomme plusieurs fois les tokens d'une question au pipeline et prend deux à trois fois plus de temps.</li>
+                </ul>
+                <p>Sur les questions plus difficiles, les erreurs de gpt-oss-20b sont des brouillons qui s'exécutent et renvoient une mauvaise réponse, ce que les tests ne peuvent pas détecter.</p>
 
                 <h2 id="full-results">Tous les résultats</h2>
                 <div class="project-links" style="margin-bottom: 20px;">
@@ -168,11 +196,11 @@
                 </div>
 
                 <h2>L’humain reste au courant</h2>
-                <p>L’application rédige du SQL ; elle ne se connecte jamais à un entrepôt de données bancaire et n’exécute aucune requête. Les utilisateurs modifient ou copient le résultat, puis l’exécutent séparément dans leur propre client SQL. Le navigateur ne reçoit jamais la clé API du modèle.</p>
+                <p>L'application rédige et teste des brouillons SQL, mais uniquement sur une copie synthétique de l'entrepôt et sous un utilisateur qui ne peut que lire ; elle ne se connecte jamais à un véritable entrepôt bancaire. Les utilisateurs relisent toujours le résultat, puis le modifient ou le copient et l'exécutent dans leur propre client de base de données. Le navigateur ne reçoit jamais la clé d'API du modèle.</p>
                 <p>Les contrôles automatisés vérifient la forme en lecture seule de l’instruction et les références aux tables connues. La syntaxe SQL, les références aux colonnes et le sens métier nécessitent toujours une revue humaine. Tous les noms, relations et indicateurs de l’entrepôt sont des données de test synthétiques, et non des définitions bancaires approuvées.</p>
 
                 <h2>Sous le capot</h2>
-                <p>La preuve de concept déployée exécute un backend Node et Elasticsearch dans des conteneurs rootless sur une instance Oracle Ampere A1, et rédige le SQL avec gpt-oss-20b via un fournisseur hébergé. Le référentiel documente également une architecture future plus large, clairement séparée du plus petit POC déployé.</p>
+                <p>La preuve de concept déployée fait tourner un backend Node, Elasticsearch et l'entrepôt PostgreSQL en lecture seule dans des conteneurs sans root sur une instance Oracle Ampere A1, et rédige le SQL avec gpt-oss-20b via un fournisseur hébergé. Le dépôt documente aussi une architecture future plus large, clairement séparée du POC déployé, plus petit.</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Ouvrez le PWA sur invitation uniquement</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Parcourez les 10 exemples</a>

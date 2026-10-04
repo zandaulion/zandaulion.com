@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es-ES" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against semantic-layer-poc commit 9b955f52fe7291050214a05e413d210332d9c70f (2026-09-27). -->
+    <!-- Content checked against semantic-layer-poc commit 27ddf4de0e11da9c7f4cc3847c6206c13d335dc9 (2026-10-03). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio convierte preguntas bancarias en lenguaje natural en borradores SQL de PostgreSQL editables y revisables, y mide con qué frecuencia acierta el modelo.">
+    <meta name="description" content="Bank DWH Studio convierte preguntas bancarias en lenguaje natural en borradores SQL de PostgreSQL editables y revisables, con un agente que prueba su SQL en un almacén de datos sintético, y mide con qué frecuencia acierta el modelo.">
     <title>Bank DWH Studio - Borradores revisables de SQL</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -53,24 +53,26 @@
 
             <div class="project-content reveal">
                 <h2>Una pregunta se convierte en algo que puedes inspeccionar.</h2>
-                <p>Bank DWH Studio es una prueba de concepto personal para explorar un gran almacén de datos bancarios a través del lenguaje natural. Haga una pregunta, elija opcionalmente un área temática bancaria y la aplicación recuperará el contexto del esquema más relevante antes de redactar PostgreSQL SQL.</p>
-                <p>El resultado es deliberadamente más que un bloque de código. Muestra las tablas recuperadas, la interpretación, los supuestos, las notas de revisión y las comprobaciones básicas junto a un borrador editable. Cuando falta un detalle necesario (como el año en una solicitud de finales de agosto), el asistente puede pedir una aclaración.</p>
+                <p>Bank DWH Studio es una prueba de concepto personal para explorar un gran almacén de datos bancario en lenguaje natural. Haz una pregunta, elige si quieres un área bancaria y decide cómo se responde: un agente que consulta las tablas y prueba su SQL, o un pipeline que recupera el esquema y redacta SQL de PostgreSQL en un solo paso.</p>
+                <p>El resultado es, a propósito, más que un bloque de código. Junto al borrador editable muestra las tablas usadas, la interpretación, los supuestos, las notas de revisión y comprobaciones básicas, además de las filas que devuelve el borrador en una copia sintética del almacén. Cuando falta un dato necesario, como el año en una consulta sobre finales de agosto, el asistente puede pedir una aclaración.</p>
 
                 <h2>como funciona</h2>
                 <ol>
-                    <li><strong>Pregunta en el lenguaje cotidiano.</strong> Describe la respuesta bancaria que necesitas y limita la búsqueda a un área temática cuando sea útil.</li>
-                    <li><strong>Recupera una porción limitada del esquema.</strong> Un backend Node busca metadatos de Elasticsearch para tablas y columnas relevantes.</li>
-                    <li><strong>Borrador con contexto.</strong> Un modelo alojado GPT-OSS crea SQL a partir de ese esquema limitado, mientras que las reglas basadas en catálogo manejan preguntas comunes admitidas.</li>
-                    <li><strong>Revisar antes de usar.</strong> Edite o copie el borrador, inspeccione su contexto y suposiciones, luego ejecútelo por separado en su propio cliente SQL.</li>
+                    <li><strong>Pregunta en el lenguaje cotidiano.</strong> Describe la respuesta bancaria que necesitas, limita la búsqueda a un área cuando convenga y haz preguntas de seguimiento que partan de las respuestas anteriores.</li>
+                    <li><strong>Deja que el agente lo consulte.</strong> En modo agente, el modelo busca en un índice de tablas, lee las definiciones de las que piensa usar, prueba su borrador en el almacén y corrige lo que la base de datos rechace antes de responder.</li>
+                    <li><strong>O redacta en un solo paso.</strong> En modo pipeline, un backend Node recupera de Elasticsearch una parte acotada del esquema y el modelo redacta a partir de ella en una sola llamada, mientras unas reglas basadas en el catálogo resuelven algunas preguntas habituales.</li>
+                    <li><strong>Revisar antes de usar.</strong> Sigue los pasos del agente a medida que ocurren y después edita o copia el borrador, comprueba las filas que devuelve y revisa su contexto y sus supuestos.</li>
                 </ol>
 
                 <h2>¿Qué hay en el banco de trabajo?</h2>
                 <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
                     <div class="feature-item"><h3>100 mesas sintéticas</h3><p>Un dispositivo de almacén bancario generado proporciona 5000 columnas, relaciones, PostgreSQL DDL, un catálogo y una pequeña semilla.</p></div>
-                    <div class="feature-item"><h3>Recuperación basada en esquemas</h3><p>Elasticsearch reduce un catálogo grande a los metadatos necesarios para la pregunta antes de enviar algo al modelo.</p></div>
+                    <div class="feature-item"><h3>Dos formas de responder</h3><p>Un agente que consulta las tablas y prueba su SQL, o un pipeline que recupera el esquema de Elasticsearch y redacta en una sola llamada. Cada usuario elige el modo.</p></div>
+                    <div class="feature-item"><h3>Probado en una copia de solo lectura</h3><p>Los borradores se ejecutan en el almacén sintético y con datos del benchmark, como un usuario que solo puede leer, con un límite de 15 segundos y un tope de filas. La copia se reconstruye a partir de los datos de origen en cada arranque.</p></div>
                     <div class="feature-item"><h3>Contexto de razonamiento visible</h3><p>Las tablas, interpretaciones, suposiciones, notas y comprobaciones recuperadas permanecen visibles para que el borrador pueda cuestionarse en lugar de aceptarse ciegamente.</p></div>
                     <div class="feature-item"><h3>Respuestas a las que puedes volver</h3><p>Cada respuesta, incluida una pregunta de vuelta, se guarda en un historial en tu dispositivo. Restaura un borrador anterior o elimina los que ya no necesites.</p></div>
                     <div class="feature-item"><h3>Pruebas de modelos integradas</h3><p>Dos pestañas muestran cada ejecución del benchmark, marcada como de pesos abiertos o cerrados, exportan los resultados en PDF y permiten a los dispositivos autorizados probar un modelo nuevo, en una GPU alquilada o a través de OpenRouter, con el progreso en directo.</p></div>
+                    <div class="feature-item"><h3>Cada paso queda registrado</h3><p>Un registro de auditoría al que solo se añade guarda cada pregunta, cada sentencia ejecutada y quién la ejecutó, y cada respuesta, aparte del historial de tu dispositivo.</p></div>
                     <div class="feature-item"><h3>Un PWA, muchas pantallas</h3><p>La interfaz solo por invitación se puede instalar y se adapta desde pantallas de escritorio anchas hasta teléfonos compactos.</p></div>
                 </div>
 
@@ -98,6 +100,32 @@
                     <li><strong>GPT-6 Luna:</strong> llevó la prudencia demasiado lejos: respondió con una pregunta en 53 de 69 casos y solo acertó el 22 %.</li>
                 </ul>
                 <p>Los modelos cerrados están solo para comparar. No podrían ejecutarse en el hardware propio de un banco, así que se llaman a través de OpenRouter. Los modelos de pesos abiertos se ejecutan en una GPU alquilada con vLLM, que se elimina al terminar, normalmente en 12 minutos como mucho y por bastante menos de un dólar.</p>
+
+                <h2>Agente o pipeline</h2>
+                <p>Desde octubre la aplicación también puede responder como agente, y el benchmark ejecuta ambos modos con las mismas preguntas, datos y modelo. Añade 17 preguntas más difíciles, como el historial de un registro en una fecha pasada, la conversión de divisas con tipos diarios, medianas y los clientes activos en todos los trimestres. Estas ejecuciones usaron nombres crípticos, en una A100, y cada pregunta se hizo tres veces.</p>
+                <div class="table-scroll" role="region" aria-label="Resultados desplazables del agente y del pipeline" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Modelo</th><th class="num">Preguntas más difíciles, agente</th><th class="num">Preguntas más difíciles, pipeline</th><th class="num">Las 23 originales, agente</th><th class="num">Las 23 originales, pipeline</th><th class="num">Agente: errores con seguridad</th><th class="num">Tiempo de respuesta del agente</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Abierto</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">47%</td><td class="num">98.6%</td><td class="num">71%</td><td class="num">1</td><td class="num">60 s</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Abierto</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">51%</td><td class="num">92.8%</td><td class="num">65%</td><td class="num">5</td><td class="num">22 s</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Abierto</span> <span>A100</span></span></td><td class="num">92%</td><td class="num">39%</td><td class="num">97.1%</td><td class="num">61%</td><td class="num">1</td><td class="num">23 s</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Abierto</span> <span>A100</span> <span>Solo EXPLAIN</span></span></td><td class="num">84%</td><td class="num">—</td><td class="num">100%</td><td class="num">—</td><td class="num">0</td><td class="num">19 s</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Abierto</span> <span>A100</span></span></td><td class="num">76%</td><td class="num">49%</td><td class="num">91.3%</td><td class="num">49%</td><td class="num">3</td><td class="num">11 s</td></tr>
+                    </tbody>
+                </table></div>
+                <p>Errores con seguridad cuenta los fallos del agente en las 23 preguntas originales y en las preguntas sobre datos que faltan. El tiempo de respuesta es la mediana. Como comparación, los modelos cerrados trabajando como pipeline obtuvieron en las preguntas más difíciles: Claude Sonnet 5 un 71 %, Gemini 3.8 Flash un 69 %, GPT-4.1 mini un 55 %, GPT-4.1 un 49 % y GPT-6 Luna un 22 %, porque en la mayoría pregunta de vuelta. Todos los modelos abiertos trabajando como agente superaron a todos los modelos cerrados trabajando como pipeline.</p>
+
+                <h3>De dónde sale la mejora</h3>
+                <p>Al desmontar el agente, con gpt-oss-20b en las 23 preguntas originales, se ve lo que aporta cada parte.</p>
+                <ul>
+                    <li><strong>Consultar las tablas lo hace seguro:</strong> Las respuestas erróneas con seguridad bajan de 17 a 3 o 4 antes de ejecutar nada, porque el agente encuentra tablas que la búsqueda del pipeline nunca devolvió.</li>
+                    <li><strong>Probar el borrador lo hace correcto:</strong> Sin poder ejecutar su SQL, cerca de la mitad de los borradores fallan, sobre todo por columnas inventadas de la tabla de fechas. El mensaje de error de la base de datos basta para corregirlos, y comprobar solo con EXPLAIN, sin ver ni una fila, conserva casi toda la mejora.</li>
+                    <li><strong>Las reglas de negocio no aportan nada medible:</strong> El agente rindió igual sin la breve lista de reglas bancarias que recibe.</li>
+                    <li><strong>El coste son tokens y tiempo:</strong> Una pregunta al agente usa varias veces los tokens de una pregunta al pipeline y tarda de dos a tres veces más.</li>
+                </ul>
+                <p>En las preguntas más difíciles, los fallos de gpt-oss-20b son borradores que se ejecutan y devuelven una respuesta errónea, algo que las pruebas no pueden detectar.</p>
 
                 <h2 id="full-results">Todos los resultados</h2>
                 <div class="project-links" style="margin-bottom: 20px;">
@@ -168,11 +196,11 @@
                 </div>
 
                 <h2>El ser humano se mantiene informado</h2>
-                <p>La aplicación solo redacta SQL; nunca se conecta a un almacén de datos bancario ni ejecuta consultas. El usuario edita o copia el resultado y lo ejecuta por separado en su propio cliente de base de datos. El navegador nunca recibe la clave API del modelo.</p>
+                <p>La aplicación escribe y prueba borradores SQL, pero solo en una copia sintética del almacén y como un usuario que solo puede leer; nunca se conecta a un almacén bancario real. Los usuarios siguen revisando el resultado y después lo editan o lo copian y lo ejecutan en su propio cliente de base de datos. El navegador nunca recibe la clave de API del modelo.</p>
                 <p>Las comprobaciones automáticas cubren la estructura de una instrucción de solo lectura y las referencias a tablas conocidas. La sintaxis SQL, las referencias de columnas y el significado de negocio todavía requieren revisión humana. Todos los nombres, relaciones e indicadores del almacén son material de prueba sintético, no definiciones bancarias aprobadas.</p>
 
                 <h2>Debajo del capó</h2>
-                <p>La prueba de concepto implementada ejecuta un backend Node y Elasticsearch en contenedores rootless en una instancia Oracle Ampere A1, y redacta el SQL con gpt-oss-20b a través de un proveedor alojado. El repositorio también documenta una arquitectura futura más amplia, claramente separada del POC más pequeño implementado.</p>
+                <p>La prueba de concepto desplegada ejecuta un backend Node, Elasticsearch y el almacén PostgreSQL de solo lectura como contenedores sin root en una instancia Oracle Ampere A1, y redacta SQL con gpt-oss-20b a través de un proveedor alojado. El repositorio también documenta una arquitectura futura más amplia, claramente separada del POC desplegado, más pequeño.</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Abra el PWA solo por invitación</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Explore los 10 ejemplos</a>

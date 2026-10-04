@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
 <head>
-    <!-- Content checked against semantic-layer-poc commit 9b955f52fe7291050214a05e413d210332d9c70f (2026-09-27). -->
+    <!-- Content checked against semantic-layer-poc commit 27ddf4de0e11da9c7f4cc3847c6206c13d335dc9 (2026-10-03). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio turns natural-language banking questions into editable, reviewable PostgreSQL SQL drafts, and measures how often the model gets them right.">
+    <meta name="description" content="Bank DWH Studio turns natural-language banking questions into editable, reviewable PostgreSQL SQL drafts, with an agent that tests its SQL on a synthetic warehouse, and measures how often the model gets them right.">
     <title>Bank DWH Studio - Reviewable SQL Drafts</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <link rel="stylesheet" href="workshop.css?v=3">
@@ -53,24 +53,26 @@
 
             <div class="project-content reveal">
                 <h2>A question becomes something you can inspect</h2>
-                <p>Bank DWH Studio is a personal proof of concept for exploring a large banking data warehouse through natural language. Ask a question, optionally choose a banking subject area, and the app retrieves the most relevant schema context before drafting PostgreSQL SQL.</p>
-                <p>The result is deliberately more than a code block. It shows the retrieved tables, interpretation, assumptions, review notes, and basic checks beside an editable draft. When a necessary detail is missing—such as the year in an end-of-August request—the assistant can ask for clarification.</p>
+                <p>Bank DWH Studio is a personal proof of concept for exploring a large banking data warehouse through natural language. Ask a question, optionally choose a banking subject area, and pick how it is answered: an agent that looks tables up and tests its SQL, or a pipeline that retrieves the schema and drafts PostgreSQL SQL in one step.</p>
+                <p>The result is deliberately more than a code block. It shows the tables used, interpretation, assumptions, review notes, and basic checks beside an editable draft, along with the rows the draft returns from a synthetic copy of the warehouse. When a necessary detail is missing—such as the year in an end-of-August request—the assistant can ask for clarification.</p>
 
                 <h2>How it works</h2>
                 <ol>
-                    <li><strong>Ask in everyday language.</strong> Describe the banking answer you need and narrow the search to a subject area when useful.</li>
-                    <li><strong>Retrieve a bounded slice of the schema.</strong> A Node backend searches Elasticsearch metadata for relevant tables and columns.</li>
-                    <li><strong>Draft with context.</strong> A hosted GPT-OSS model creates SQL from that bounded schema, while catalog-grounded rules handle supported common questions.</li>
-                    <li><strong>Review before using.</strong> Edit or copy the draft, inspect its context and assumptions, then run it separately in your own SQL client.</li>
+                    <li><strong>Ask in everyday language.</strong> Describe the banking answer you need, narrow the search to a subject area when useful, and ask follow-ups that build on the earlier answers.</li>
+                    <li><strong>Let the agent look it up.</strong> In agent mode, the model searches an index of the tables, reads the definitions of the ones it means to use, tests its draft against the warehouse, and fixes whatever the database rejects before it answers.</li>
+                    <li><strong>Or draft in one step.</strong> In pipeline mode, a Node backend retrieves a bounded slice of the schema from Elasticsearch and the model drafts from it in a single call, while catalog-grounded rules handle a few common questions.</li>
+                    <li><strong>Review before using.</strong> Watch the agent's steps as they happen, then edit or copy the draft, check the rows it returns, and inspect its context and assumptions.</li>
                 </ol>
 
                 <h2>What is on the workbench</h2>
                 <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
                     <div class="feature-item"><h3>100 synthetic tables</h3><p>A generated banking warehouse fixture provides 5,000 columns, relationships, PostgreSQL DDL, a catalog, and a small seed.</p></div>
-                    <div class="feature-item"><h3>Schema-grounded retrieval</h3><p>Elasticsearch narrows a large catalog to the metadata needed for the question before anything is sent to the model.</p></div>
+                    <div class="feature-item"><h3>Two ways to answer</h3><p>An agent that looks tables up and tests its SQL, or a pipeline that retrieves the schema from Elasticsearch and drafts in one call. Each user picks the mode.</p></div>
+                    <div class="feature-item"><h3>Tested on a read-only copy</h3><p>Drafts run against the benchmark's seeded, synthetic warehouse as a user that can only read, with a 15-second limit and a row cap. The copy is rebuilt from the seed at every start.</p></div>
                     <div class="feature-item"><h3>Visible reasoning context</h3><p>Retrieved tables, interpretation, assumptions, notes, and checks stay visible so the draft can be challenged rather than accepted blindly.</p></div>
                     <div class="feature-item"><h3>Answers you can return to</h3><p>Every answer, including a question back to you, is saved to a history on your device. Restore an earlier draft or delete the ones you no longer need.</p></div>
                     <div class="feature-item"><h3>Model tests, built in</h3><p>Two tabs show every benchmark run, marked as open or closed weights, export the results as a PDF, and let approved devices test a new model, on a rented GPU or through OpenRouter, with live progress.</p></div>
+                    <div class="feature-item"><h3>Every step on record</h3><p>An append-only audit log keeps every question, every statement run and by whom, and every answer, separately from the history on your device.</p></div>
                     <div class="feature-item"><h3>One PWA, many screens</h3><p>The invite-only interface is installable and adapts from wide desktop screens to compact phones.</p></div>
                 </div>
 
@@ -98,6 +100,32 @@
                     <li><strong>GPT-6 Luna:</strong> took caution too far, asking back on 53 of 69 questions and getting only 22% right.</li>
                 </ul>
                 <p>The closed models are there for comparison only. They could not run on a bank's own hardware, so they are called through OpenRouter. Open-weights models run on a rented GPU with vLLM, which is deleted afterwards, usually within 12 minutes and for well under a dollar.</p>
+
+                <h2>Agent or pipeline</h2>
+                <p>Since October the app can also answer as an agent, and the benchmark runs both modes on the same questions, data, and model. It adds 17 harder questions, such as a record's history as of a past date, currency conversion with daily rates, medians, and customers active in every quarter. These runs used cryptic names, on an A100, with each question asked three times.</p>
+                <div class="table-scroll" role="region" aria-label="Scrollable results for the agent and the pipeline" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Model</th><th class="num">Harder questions, agent</th><th class="num">Harder questions, pipeline</th><th class="num">Original 23, agent</th><th class="num">Original 23, pipeline</th><th class="num">Agent confidently wrong</th><th class="num">Agent answer time</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">47%</td><td class="num">98.6%</td><td class="num">71%</td><td class="num">1</td><td class="num">60 s</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">51%</td><td class="num">92.8%</td><td class="num">65%</td><td class="num">5</td><td class="num">22 s</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">92%</td><td class="num">39%</td><td class="num">97.1%</td><td class="num">61%</td><td class="num">1</td><td class="num">23 s</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span> <span>EXPLAIN only</span></span></td><td class="num">84%</td><td class="num">—</td><td class="num">100%</td><td class="num">—</td><td class="num">0</td><td class="num">19 s</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Open</span> <span>A100</span></span></td><td class="num">76%</td><td class="num">49%</td><td class="num">91.3%</td><td class="num">49%</td><td class="num">3</td><td class="num">11 s</td></tr>
+                    </tbody>
+                </table></div>
+                <p>Confidently wrong counts the agent's mistakes on the original 23 questions and on the questions about missing data. Answer time is the median. For comparison, the closed models working as a pipeline scored on the harder questions: Claude Sonnet 5 71%, Gemini 3.8 Flash 69%, GPT-4.1 mini 55%, GPT-4.1 49%, and GPT-6 Luna 22%, as it asks back on most of them. Every open model working as an agent scored above every closed model working as a pipeline.</p>
+
+                <h3>Where the gain comes from</h3>
+                <p>Taking the agent apart, with gpt-oss-20b on the original 23 questions, shows what each part contributes.</p>
+                <ul>
+                    <li><strong>Looking tables up makes it safe:</strong> Confidently wrong answers fall from 17 to 3 or 4 before anything is run, because the agent finds tables that the pipeline's search never returned.</li>
+                    <li><strong>Testing the draft makes it right:</strong> Without a way to run its SQL, about half the drafts fail, mostly on guessed columns of the date table. The database's error message is enough to fix them, and checking with EXPLAIN alone, without seeing a single row, keeps nearly all of the gain.</li>
+                    <li><strong>The business rules add nothing measurable:</strong> The agent did as well without the short list of banking rules it is given.</li>
+                    <li><strong>The cost is tokens and time:</strong> An agent question uses several times the tokens of a pipeline question and takes two to three times as long.</li>
+                </ul>
+                <p>On the harder questions, gpt-oss-20b's misses are drafts that run and return the wrong answer, which testing cannot catch.</p>
 
                 <h2 id="full-results">The full results</h2>
                 <div class="project-links" style="margin-bottom: 20px;">
@@ -168,11 +196,11 @@
                 </div>
 
                 <h2>The human stays in the loop</h2>
-                <p>The app drafts SQL; it never connects to a banking warehouse and never executes a query. Users edit or copy the result and run it separately in their own database client. The browser never receives the model API key.</p>
+                <p>The app writes and tests SQL drafts, but only against a synthetic copy of the warehouse, as a user that can only read; it never connects to a real banking warehouse. Users still review the result, then edit or copy it and run it in their own database client. The browser never receives the model API key.</p>
                 <p>Automated checks cover read-only statement shape and known table references. SQL syntax, column references, and business meaning still require human review. All warehouse names, relationships, and measures in the repository are synthetic test material rather than approved banking definitions.</p>
 
                 <h2>Under the hood</h2>
-                <p>The deployed proof of concept runs a Node backend and Elasticsearch as rootless containers on an Oracle Ampere A1 instance, and drafts SQL with gpt-oss-20b through a hosted provider. The repository also documents a broader future architecture, clearly separated from the smaller deployed POC.</p>
+                <p>The deployed proof of concept runs a Node backend, Elasticsearch, and the read-only PostgreSQL warehouse as rootless containers on an Oracle Ampere A1 instance, and drafts SQL with gpt-oss-20b through a hosted provider. The repository also documents a broader future architecture, clearly separated from the smaller deployed POC.</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open the invite-only PWA</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Browse all 10 examples</a>

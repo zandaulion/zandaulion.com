@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="de-DE" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against semantic-layer-poc commit 9b955f52fe7291050214a05e413d210332d9c70f (2026-09-27). -->
+    <!-- Content checked against semantic-layer-poc commit 27ddf4de0e11da9c7f4cc3847c6206c13d335dc9 (2026-10-03). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bank DWH Studio verwandelt Bankfragen in natürlicher Sprache in bearbeitbare, überprüfbare PostgreSQL-SQL-Entwürfe und misst, wie oft das Modell richtig liegt.">
+    <meta name="description" content="Bank DWH Studio macht aus Bankfragen in Alltagssprache bearbeitbare, prüfbare PostgreSQL-SQL-Entwürfe, mit einem Agenten, der sein SQL an einem synthetischen Data Warehouse testet, und misst, wie oft das Modell richtig liegt.">
     <title>Bank DWH Studio – Überprüfbare SQL-Entwürfe</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -53,24 +53,26 @@
 
             <div class="project-content reveal">
                 <h2>Eine Frage wird zu etwas, das Sie untersuchen können</h2>
-                <p>Bank DWH Studio ist ein persönlicher Proof of Concept für die Erkundung eines großen Bankdatenlagers mithilfe natürlicher Sprache. Stellen Sie eine Frage, wählen Sie optional einen Bankthemenbereich aus, und die App ruft den relevantesten Schemakontext ab, bevor PostgreSQL SQL erstellt wird.</p>
-                <p>Das Ergebnis ist bewusst mehr als ein Codeblock. Es zeigt die abgerufenen Tabellen, Interpretationen, Annahmen, Überprüfungsnotizen und grundlegenden Überprüfungen neben einem bearbeitbaren Entwurf. Wenn ein notwendiges Detail fehlt – wie zum Beispiel das Jahr in einer Ende-August-Anfrage – kann der Assistent um Klarstellung bitten.</p>
+                <p>Bank DWH Studio ist ein persönlicher Machbarkeitsnachweis, um ein großes Bank-Data-Warehouse in natürlicher Sprache zu erkunden. Sie stellen eine Frage, wählen bei Bedarf einen Bankbereich und entscheiden, wie sie beantwortet wird: von einem Agenten, der Tabellen nachschlägt und sein SQL testet, oder von einer Pipeline, die das Schema abruft und PostgreSQL-SQL in einem Schritt entwirft.</p>
+                <p>Das Ergebnis ist bewusst mehr als ein Codeblock. Neben dem bearbeitbaren Entwurf stehen die verwendeten Tabellen, die Interpretation, Annahmen, Prüfhinweise und einfache Kontrollen, dazu die Zeilen, die der Entwurf aus einer synthetischen Kopie des Warehouse liefert. Fehlt eine nötige Angabe, etwa das Jahr bei einer Frage zum Ende August, kann der Assistent nachfragen.</p>
 
                 <h2>Wie es funktioniert</h2>
                 <ol>
-                    <li><strong>Fragen Sie in der Alltagssprache.</strong> Beschreiben Sie die Bankantwort, die Sie benötigen, und schränken Sie die Suche bei Bedarf auf einen Themenbereich ein.</li>
-                    <li><strong>Rufen Sie einen begrenzten Ausschnitt des Schemas ab.</strong> Ein Node-Backend durchsucht Elasticsearch-Metadaten nach relevanten Tabellen und Spalten.</li>
-                    <li><strong>Entwurf mit Kontext.</strong> Ein gehostetes GPT-OSS-Modell erstellt SQL aus diesem begrenzten Schema, während katalogbasierte Regeln unterstützte häufige Fragen behandeln.</li>
-                    <li><strong>Vor der Verwendung überprüfen.</strong> Bearbeiten oder kopieren Sie den Entwurf, überprüfen Sie seinen Kontext und seine Annahmen und führen Sie ihn dann separat in Ihrem eigenen SQL-Client aus.</li>
+                    <li><strong>Fragen Sie in der Alltagssprache.</strong> Beschreiben Sie die Bankauswertung, die Sie brauchen, grenzen Sie die Suche bei Bedarf auf einen Bereich ein und stellen Sie Folgefragen, die auf den bisherigen Antworten aufbauen.</li>
+                    <li><strong>Den Agenten nachschlagen lassen.</strong> Im Agentenmodus durchsucht das Modell einen Tabellenindex, liest die Definitionen der Tabellen, die es verwenden will, testet seinen Entwurf am Warehouse und behebt alles, was die Datenbank ablehnt, bevor es antwortet.</li>
+                    <li><strong>Oder in einem Schritt entwerfen.</strong> Im Pipeline-Modus holt ein Node-Backend einen begrenzten Ausschnitt des Schemas aus Elasticsearch, und das Modell entwirft daraus in einem einzigen Aufruf, während katalogbasierte Regeln einige häufige Fragen abdecken.</li>
+                    <li><strong>Vor der Verwendung überprüfen.</strong> Verfolgen Sie die Schritte des Agenten live, bearbeiten oder kopieren Sie dann den Entwurf, prüfen Sie die zurückgegebenen Zeilen und sehen Sie sich Kontext und Annahmen an.</li>
                 </ol>
 
                 <h2>Was liegt auf der Werkbank?</h2>
                 <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
                     <div class="feature-item"><h3>100 synthetische Tische</h3><p>Eine generierte Bank-Warehouse-Fixture bietet 5.000 Spalten, Beziehungen, PostgreSQL DDL, einen Katalog und einen kleinen Startwert.</p></div>
-                    <div class="feature-item"><h3>Schemabasierter Abruf</h3><p>Elasticsearch schränkt einen großen Katalog auf die für die Frage erforderlichen Metadaten ein, bevor etwas an das Modell gesendet wird.</p></div>
+                    <div class="feature-item"><h3>Zwei Wege zur Antwort</h3><p>Ein Agent, der Tabellen nachschlägt und sein SQL testet, oder eine Pipeline, die das Schema aus Elasticsearch abruft und in einem Aufruf entwirft. Jede Person wählt den Modus selbst.</p></div>
+                    <div class="feature-item"><h3>An einer schreibgeschützten Kopie getestet</h3><p>Entwürfe laufen am befüllten, synthetischen Warehouse des Benchmarks, als Benutzer, der nur lesen darf, mit einem Limit von 15 Sekunden und einer Zeilenobergrenze. Die Kopie wird bei jedem Start neu aus den Ausgangsdaten aufgebaut.</p></div>
                     <div class="feature-item"><h3>Sichtbarer Argumentationskontext</h3><p>Abgerufene Tabellen, Interpretationen, Annahmen, Notizen und Überprüfungen bleiben sichtbar, sodass der Entwurf angefochten und nicht blind akzeptiert werden kann.</p></div>
                     <div class="feature-item"><h3>Antworten, zu denen Sie zurückkehren können</h3><p>Jede Antwort, auch eine Rückfrage an Sie, wird in einem Verlauf auf Ihrem Gerät gespeichert. Stellen Sie einen früheren Entwurf wieder her oder löschen Sie die, die Sie nicht mehr brauchen.</p></div>
                     <div class="feature-item"><h3>Modelltests inklusive</h3><p>Zwei Tabs zeigen jeden Benchmark-Lauf, gekennzeichnet als offene oder geschlossene Gewichte, exportieren die Ergebnisse als PDF und lassen freigegebene Geräte ein neues Modell testen, auf einer gemieteten GPU oder über OpenRouter, mit Live-Fortschritt.</p></div>
+                    <div class="feature-item"><h3>Jeder Schritt protokolliert</h3><p>Ein Audit-Log, an das nur angehängt wird, hält jede Frage, jede ausgeführte Anweisung samt Urheber und jede Antwort fest, getrennt vom Verlauf auf Ihrem Gerät.</p></div>
                     <div class="feature-item"><h3>Ein PWA, viele Bildschirme</h3><p>Die nur auf Einladung zugängliche Schnittstelle ist installierbar und passt sich von breiten Desktop-Bildschirmen bis hin zu kompakten Telefonen an.</p></div>
                 </div>
 
@@ -98,6 +100,32 @@
                     <li><strong>GPT-6 Luna:</strong> übertrieb die Vorsicht: fragte bei 53 von 69 Fragen zurück und lag nur bei 22 % richtig.</li>
                 </ul>
                 <p>Die geschlossenen Modelle dienen nur zum Vergleich. Sie könnten nicht auf der eigenen Hardware einer Bank laufen und werden deshalb über OpenRouter aufgerufen. Modelle mit offenen Gewichten laufen auf einer gemieteten GPU mit vLLM, die danach wieder gelöscht wird, meist innerhalb von 12 Minuten und für deutlich weniger als einen Dollar.</p>
+
+                <h2>Agent oder Pipeline</h2>
+                <p>Seit Oktober kann die App auch als Agent antworten, und der Benchmark lässt beide Modi mit denselben Fragen, Daten und Modellen laufen. Er ergänzt 17 schwierigere Fragen, etwa den Stand eines Datensatzes zu einem früheren Datum, Währungsumrechnung mit Tageskursen, Mediane und Kunden, die in jedem Quartal aktiv waren. Diese Läufe nutzten kryptische Namen auf einer A100, und jede Frage wurde dreimal gestellt.</p>
+                <div class="table-scroll" role="region" aria-label="Scrollbare Ergebnisse für Agent und Pipeline" tabindex="0"><table class="spec-table results-table">
+                    <thead>
+                        <tr><th>Modell</th><th class="num">Schwierigere Fragen, Agent</th><th class="num">Schwierigere Fragen, Pipeline</th><th class="num">Ursprüngliche 23, Agent</th><th class="num">Ursprüngliche 23, Pipeline</th><th class="num">Agent selbstsicher falsch</th><th class="num">Antwortzeit des Agenten</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="weights-open"><td><code>qwen3.8-27b</code><span class="run-meta"><span class="weights-tag">Offen</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">47%</td><td class="num">98.6%</td><td class="num">71%</td><td class="num">1</td><td class="num">60 s</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-120b</code><span class="run-meta"><span class="weights-tag">Offen</span> <span>A100</span></span></td><td class="num">96%</td><td class="num">51%</td><td class="num">92.8%</td><td class="num">65%</td><td class="num">5</td><td class="num">22 s</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Offen</span> <span>A100</span></span></td><td class="num">92%</td><td class="num">39%</td><td class="num">97.1%</td><td class="num">61%</td><td class="num">1</td><td class="num">23 s</td></tr>
+                        <tr class="weights-open"><td><code>qwen3.6-35b-a3b</code><span class="run-meta"><span class="weights-tag">Offen</span> <span>A100</span> <span>Nur EXPLAIN</span></span></td><td class="num">84%</td><td class="num">—</td><td class="num">100%</td><td class="num">—</td><td class="num">0</td><td class="num">19 s</td></tr>
+                        <tr class="weights-open"><td><code>gpt-oss-20b</code><span class="run-meta"><span class="weights-tag">Offen</span> <span>A100</span></span></td><td class="num">76%</td><td class="num">49%</td><td class="num">91.3%</td><td class="num">49%</td><td class="num">3</td><td class="num">11 s</td></tr>
+                    </tbody>
+                </table></div>
+                <p>Selbstsicher falsch zählt die Fehler des Agenten bei den ursprünglichen 23 Fragen und bei den Fragen zu fehlenden Daten. Die Antwortzeit ist der Median. Zum Vergleich erreichten die geschlossenen Modelle als Pipeline bei den schwierigeren Fragen: Claude Sonnet 5 71 %, Gemini 3.8 Flash 69 %, GPT-4.1 mini 55 %, GPT-4.1 49 % und GPT-6 Luna 22 %, weil es bei den meisten nachfragt. Jedes offene Modell als Agent schnitt besser ab als jedes geschlossene Modell als Pipeline.</p>
+
+                <h3>Woher der Gewinn kommt</h3>
+                <p>Zerlegt man den Agenten, mit gpt-oss-20b bei den ursprünglichen 23 Fragen, zeigt sich, was jeder Teil beiträgt.</p>
+                <ul>
+                    <li><strong>Das Nachschlagen macht ihn sicher:</strong> Selbstsicher falsche Antworten sinken von 17 auf 3 oder 4, noch bevor etwas ausgeführt wird, weil der Agent Tabellen findet, die die Suche der Pipeline nie geliefert hat.</li>
+                    <li><strong>Das Testen macht ihn richtig:</strong> Ohne die Möglichkeit, sein SQL auszuführen, scheitert etwa die Hälfte der Entwürfe, meist an geratenen Spalten der Datumstabelle. Die Fehlermeldung der Datenbank genügt, um sie zu beheben, und schon eine Prüfung allein mit EXPLAIN, ohne eine einzige Zeile zu sehen, erhält fast den ganzen Gewinn.</li>
+                    <li><strong>Die Geschäftsregeln bringen nichts Messbares:</strong> Der Agent schnitt ohne die kurze Liste von Bankregeln, die er erhält, genauso gut ab.</li>
+                    <li><strong>Der Preis sind Tokens und Zeit:</strong> Eine Agentenfrage verbraucht ein Mehrfaches an Tokens einer Pipelinefrage und dauert zwei- bis dreimal so lange.</li>
+                </ul>
+                <p>Bei den schwierigeren Fragen sind die Fehler von gpt-oss-20b Entwürfe, die laufen und das falsche Ergebnis liefern, was Testen nicht aufdecken kann.</p>
 
                 <h2 id="full-results">Alle Ergebnisse</h2>
                 <div class="project-links" style="margin-bottom: 20px;">
@@ -168,11 +196,11 @@
                 </div>
 
                 <h2>Der Mensch bleibt auf dem Laufenden</h2>
-                <p>Die App erstellt SQL-Entwürfe; sie verbindet sich nie mit einem Bank-Data-Warehouse und führt keine Abfragen aus. Nutzer bearbeiten oder kopieren das Ergebnis und führen es separat in ihrem eigenen Datenbank-Client aus. Der Browser erhält den API-Schlüssel des Modells zu keinem Zeitpunkt.</p>
+                <p>Die App schreibt und testet SQL-Entwürfe, aber nur an einer synthetischen Kopie des Warehouse und als Benutzer, der nur lesen darf; mit einem echten Bank-Warehouse verbindet sie sich nie. Nutzer prüfen das Ergebnis weiterhin, bearbeiten oder kopieren es und führen es in ihrem eigenen Datenbankclient aus. Der Browser erhält nie den API-Schlüssel des Modells.</p>
                 <p>Automatisierte Prüfungen decken die schreibgeschützte Form der Anweisung und Verweise auf bekannte Tabellen ab. SQL-Syntax, Spaltenverweise und fachliche Bedeutung müssen weiterhin von Menschen geprüft werden. Alle Namen, Beziehungen und Kennzahlen im Warehouse sind synthetisches Testmaterial und keine freigegebenen bankfachlichen Definitionen.</p>
 
                 <h2>Unter der Haube</h2>
-                <p>Der bereitgestellte Proof of Concept betreibt ein Node-Backend und Elasticsearch als rootless Container auf einer Oracle Ampere A1-Instanz und erstellt SQL-Entwürfe mit gpt-oss-20b über einen gehosteten Anbieter. Das Repository dokumentiert auch eine breitere zukünftige Architektur, klar getrennt vom kleineren bereitgestellten POC.</p>
+                <p>Der bereitgestellte Machbarkeitsnachweis betreibt ein Node-Backend, Elasticsearch und das schreibgeschützte PostgreSQL-Warehouse als rootlose Container auf einer Oracle-Ampere-A1-Instanz und entwirft SQL mit gpt-oss-20b über einen gehosteten Anbieter. Das Repository dokumentiert außerdem eine umfassendere künftige Architektur, klar getrennt vom kleineren bereitgestellten POC.</p>
                 <div class="project-links" style="margin-top: 24px;">
                     <a href="https://semantic-layer-poc.zandaulion.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Öffnen Sie das nur auf Einladung zugängliche PWA</a>
                     <a href="https://github.com/zandaulion/semantic-layer-poc/tree/main/portfolio" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Durchsuchen Sie alle 10 Beispiele</a>
