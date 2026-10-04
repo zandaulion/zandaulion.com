@@ -10,6 +10,8 @@
         .privacy-table table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 0.95rem; }
         .privacy-table th, .privacy-table td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border-light); line-height: 1.5; }
         .privacy-table th { font-weight: 700; }
+        .privacy-content ol { color: var(--text-muted); margin-bottom: 16px; padding-left: 24px; }
+        #deleting-your-data { scroll-margin-top: 24px; }
         @media (max-width: 640px) {
             .privacy-table table { min-width: 0; }
             .privacy-table thead { display: none; }
@@ -52,7 +54,7 @@
                         </thead>
                         <tbody>
                             <tr><td data-label="Why">Market data and filings</td><td data-label="What is sent">The ticker or search text you request, plus the normal technical data any request carries (IP address, user agent, timing)</td><td data-label="To whom">SEC EDGAR and Yahoo Finance</td></tr>
-                            <tr><td data-label="Why">AI summaries (optional)</td><td data-label="What is sent">The scored company data for the stock. <strong>Your notes are included only if you turn on &ldquo;Include my notes in AI analysis&rdquo;</strong>, which is off by default. If on, this can include conviction, target price, rationale, tags, conditions and journal content.</td><td data-label="To whom">Our Firebase Cloud Functions and Google Gemini</td></tr>
+                            <tr><td data-label="Why">AI summaries (optional)</td><td data-label="What is sent">The scored company data for the stock. <strong>Your notes are included only if you turn on &ldquo;Include my notes in AI analysis&rdquo;</strong>, which is off by default. If on, this can include conviction, target price, rationale, tags, conditions and journal content.</td><td data-label="To whom">Our Firebase Cloud Functions and Google Gemini (paid API tier, so Google does not use this content to train its models)</td></tr>
                             <tr><td data-label="Why">Google sign-in (needed for AI credits)</td><td data-label="What is sent">Your Google account identifier, display name and email, through Google sign-in and Firebase Authentication. The app never opens the account picker on its own.</td><td data-label="To whom">Google / Firebase</td></tr>
                             <tr><td data-label="Why">Credit purchases</td><td data-label="What is sent">A Google Play purchase token and order ID, which our server verifies with the Google Play Developer API and credits once per order. We never see your payment card details.</td><td data-label="To whom">Google Play</td></tr>
                         </tbody>
@@ -79,11 +81,36 @@
                     <li><strong>Export:</strong> you can export your theses and watchlists to a JSON file at a location you choose. This file is <strong>not encrypted</strong>; store it carefully.</li>
                     <li><strong>AI notes:</strong> leave &ldquo;Include my notes in AI analysis&rdquo; off to keep your writing out of AI requests.</li>
                     <li><strong>Sign-in:</strong> you can use the research and review features without signing in; sign-in is only for AI credits.</li>
-                    <li><strong>Deletion:</strong> uninstall the app or clear its storage to remove on-device data. To have your account data (user ID, email, credit and redemption records, and any account-scoped AI cache) or web-app data deleted from our servers, contact us. We will act on verified requests within 30 days.</li>
+                    <li><strong>Deletion:</strong> see <a href="#deleting-your-data">Deleting your data</a> below.</li>
                 </ul>
 
+                <h2 id="deleting-your-data">Deleting your data</h2>
+                <p>This section explains how to delete your Pocket Omaha data, either your whole account or only part of it.</p>
+                <p><strong>Data on your phone.</strong> Uninstall Pocket Omaha, or go to Android Settings &rarr; Apps &rarr; Pocket Omaha &rarr; Storage &rarr; Clear storage. This removes your watchlists, notes, reviews, alerts, cached data and settings immediately. It does not remove a backup file you exported yourself. Delete that file separately.</p>
+                <p><strong>Data on our servers (Google sign-in and AI credits).</strong></p>
+                <ol>
+                    <li>Email <strong><a href="mailto:zandaulion@gmail.com">zandaulion@gmail.com</a></strong> with the subject <strong>&ldquo;Pocket Omaha data deletion&rdquo;</strong>.</li>
+                    <li>Send it from the Google account you signed in with, so we can verify the request is yours.</li>
+                    <li>Say whether you want <strong>everything</strong> deleted, or only part of it (for example, only your saved AI analyses).</li>
+                </ol>
+                <p>We confirm by email and complete the deletion within <strong>30 days</strong>.</p>
+                <p><strong>What is deleted:</strong></p>
+                <ul>
+                    <li>Your sign-in record: Google account ID, name and email address</li>
+                    <li>Your credit balance and free-credit record</li>
+                    <li>AI analyses generated with your notes, which are stored under your account</li>
+                    <li>Data from the web app, if you used it</li>
+                </ul>
+                <p><strong>What is kept:</strong></p>
+                <ul>
+                    <li><strong>Purchase order records.</strong> For each credit purchase we keep the Google Play order ID, product, credit amount and date, <strong>with your user ID removed</strong>. We keep these indefinitely so the same order can never be credited twice. On their own they do not identify you.</li>
+                    <li><strong>AI analyses generated without notes.</strong> These are shared by ticker, contain nothing about you, and are not deleted.</li>
+                    <li><strong>Records held by Google.</strong> Google keeps its own records of your Google account and Play purchases under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&rsquo;s Privacy Policy</a>.</li>
+                </ul>
+                <p>Unused credits are lost when your account is deleted.</p>
+
                 <h2>7. Retention</h2>
-                <p>On-device data remains until you delete it. Account records are kept while your account is active and for as long as needed to prevent credit fraud and meet legal obligations, then removed. Server-side web-app data remains until you or the operator delete it. Invite codes are cleared after use.</p>
+                <p>On-device data remains until you delete it. Account data is kept while your account is active and deleted on request as described in <a href="#deleting-your-data">Deleting your data</a>. Purchase order records without your user ID are kept indefinitely to prevent duplicate crediting. Server-side web-app data remains until you or the operator delete it. Invite codes are cleared after use.</p>
 
                 <h2>8. Security</h2>
                 <p>Data in transit uses HTTPS. Our Firebase database rules deny all direct client access; data is reached only through server functions, and credit changes are made transactionally on the server. On-device data relies on your phone&rsquo;s own protections (screen lock, device encryption). The app has no separate app lock.</p>
