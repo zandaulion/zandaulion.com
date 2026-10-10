@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against bp-digitizer-web commit 49c61ee1e1d5e2c9f6c8812ae6bdc38d62fd867b and BloodPressureMonitor commit ce1383530ca2741db6bf8bdbff68ba5dffcb8952 (2026-10-10). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BP Digitizer para Android e web: registre leituras de pressão arterial, explore tendências e exporte seu histórico.">
@@ -41,7 +42,7 @@
                     <h1>BP Digitizer</h1>
                                         <p class="project-lead">Um registro de pressão arterial, em formato Android e web. Grave suas leituras, explore tendências e exporte seu histórico.</p>
                     <div class="project-links">
-                        <a href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Abra o aplicativo da web</a>
+                        <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Abra o aplicativo da web</a>
                         <a href="#android-version" class="btn btn-outline">Explore o aplicativo Android</a>
                         <a href="../bpdigitizer-privacy.html" class="btn btn-outline" hreflang="en-US">Política de privacidade do Android</a>
                     </div>
@@ -51,93 +52,80 @@
 
             <div class="project-content">
                 <h2>Um aplicativo. Duas maneiras de usá-lo.</h2>
-                <p>BP Digitizer ajuda a registrar leituras de pressão arterial, explorar seu histórico e manter seus próprios registros. Use o aplicativo Android nativo ou abra PWA em seu navegador. A versão web, anteriormente listada aqui como wBP Digitizer, faz parte do mesmo projeto.</p>
+                <p>O BP Digitizer ajuda você a registrar suas medições de pressão arterial, explorar o histórico e manter seus próprios registros. Use o app nativo para Android ou abra a PWA no navegador. Os dois podem ler o seu medidor com a câmera, no seu próprio aparelho, e nenhum precisa de conta. A versão web, antes listada aqui como wBP Digitizer, faz parte do mesmo projeto.</p>
                 <div class="platform-options" aria-label="Escolha uma plataforma">
                     <section class="platform-option">
                         <span class="section-number">No seu navegador · PWA</span>
                         <h3>Abra-o e comece.</h3>
-                        <p>Registre leituras, visualize gráficos e exporte relatórios. Instale-o na tela inicial para uso offline; as leituras são armazenadas no seu navegador.</p>
-                        <a class="btn btn-primary" href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer">Abra o aplicativo da web ↗</a>
+                        <p>Registre medições, escaneie o medidor com a câmera, veja gráficos e exporte relatórios. Instale na tela inicial para usar offline; as medições ficam guardadas no navegador.</p>
+                        <a class="btn btn-primary" href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">Abra o aplicativo da web ↗</a>
                     </section>
                     <section class="platform-option">
                         <span class="section-number">No seu telefone · Android</span>
                         <h3>Um companheiro nativo do dia a dia.</h3>
-                        <p>Explore a digitalização da câmera da versão Android, a integração do Health Connect e os lembretes.</p>
-                        <p class="platform-status">O APK do Android não está disponível no momento. Você pode usar a versão web agora.</p>
+                        <p>Leitura pela câmera no celular, Health Connect e lembretes, em um app sem nenhuma permissão de internet.</p>
+                        <p class="platform-status">O app para Android foi enviado ao F-Droid e ainda não está disponível para download. Você já pode usar a versão web.</p>
                         <a class="btn btn-outline" href="#android-version">Veja a versão do Android ↓</a>
                     </section>
                 </div>
 
                 <section id="web-version" aria-labelledby="web-title">
                     <h2 id="web-title">BP Digitizer para a web</h2>
-                    <p>O PWA traz o mesmo projeto para o seu navegador, com entrada manual, gráficos e exportações. As leituras residem localmente no IndexedDB do seu navegador. Instale-o na tela inicial para mantê-lo sempre à mão.</p>
+                    <p>A PWA leva o mesmo projeto ao navegador, com leitura pela câmera, entrada manual, gráficos e exportações. As medições ficam no IndexedDB do navegador, e o app é servido pelo GitHub Pages, sem servidor, conta ou convite por trás. Instale na tela inicial para tê-lo sempre à mão.</p>
                     <p><a href="https://github.com/zandaulion/bp-digitizer-web" target="_blank" rel="noopener noreferrer">Explore a fonte da web em GitHub ↗</a></p>
                     <h3>Dentro do aplicativo da web</h3>
+                    <p>Todas as medições e os dados de perfil destas capturas são inventados.</p>
 <div class="gallery-grid">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-35-44-031_com.android.chrome.jpg" alt="Captura de tela 1 da web BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-35-56-427_com.android.chrome.jpg" alt="Captura de tela 2 da web BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-03-493_com.android.chrome.jpg" alt="Captura de tela 3 da web BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-07-825_com.android.chrome.jpg" alt="Captura de tela 4 da web BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-15-532_com.android.chrome.jpg" alt="Captura de tela 5 da web BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-24-148_com.android.chrome.jpg" alt="Captura de tela 6 da web BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-32-019_com.android.chrome.jpg" alt="Captura de tela 7 da web BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-51-488_com.android.chrome.jpg" alt="Captura de tela 8 da web BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-56-240_com.android.chrome.jpg" alt="Captura de tela da web BP Digitizer 9" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-37-03-180_com.android.chrome.jpg" alt="Captura de tela da web BP Digitizer 10" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-37-09-725_com.android.chrome.jpg" alt="Captura de tela da web BP Digitizer 11" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/web/dashboard-synthetic.png" alt="O painel com a tendência de 30 dias, observações e uma avaliação de risco" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/web/add-reading-synthetic.png" alt="Adicionando uma medição com controles deslizantes e campos numéricos" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/web/profile-synthetic.png" alt="O perfil de saúde" class="gallery-img" loading="lazy" decoding="async">
                 </div>
                     <h3>Recursos da web</h3>
 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 Local primeiro e PWA:</strong> Instala na tela inicial e funciona offline. As leituras ficam no IndexedDB do seu navegador e nunca são enviadas para lugar nenhum.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ Entrada rápida:</strong> Entrada manual com controles deslizantes gerados a partir de sua última leitura.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 Leitura pela câmera, no aparelho:</strong> Aponte a câmera para um medidor vertical de três linhas, e modelos que rodam no seu navegador leem SYS, DIA e pulso. Você confirma os três valores antes de salvar, e uma foto que não pode ser lida com segurança é recusada em vez de adivinhada.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ Entrada rápida:</strong> Controles deslizantes que partem da última medição, campos numéricos e passos ao manter pressionado.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 Gráficos abrangentes:</strong> Gráfico de tendência (sistólica + diastólica, linhas de referência 120/80) e dispersão sistólica versus diastólica. 7/30/90 dias e intervalos de todos os tempos.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 Análise Inteligente:</strong> A média contínua recolhe as leituras consecutivas em um único ponto. Insights computados no dispositivo (manhã x noite, horário no intervalo, sequências saudáveis, tags de contexto).</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🩺 Lógica Clínica:</strong> Zonas AHA (Normal/Elevada/Estágio 1/Estágio 2/Crise), PAM e pressão de pulso. Avaliação de risco a partir do seu perfil de saúde.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 Exportação e relatórios:</strong> Exportação CSV e JSON. Relatórios detalhados em PDF contendo páginas de visão geral, gráficos e histórico de tabelas.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Globais:</strong> 12 idiomas, transferidos do aplicativo Android em vez de traduzidos novamente.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🩺 Lógica Clínica:</strong> Faixas da AHA (Normal / Elevada / Estágio 1 / Estágio 2 / Crise), PAM e pressão de pulso, IMC e uma avaliação de risco a partir do seu perfil de saúde.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 Exportação e relatórios:</strong> Importação e exportação em CSV e JSON, além de relatórios PDF para imprimir e baixar.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 Backup criptografado:</strong> Faça backup das medições e do perfil em um arquivo criptografado com a sua senha e restaure em outro aparelho. Ninguém consegue recuperar uma senha perdida.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Globais:</strong> 12 idiomas, herdados do app para Android em vez de retraduzidos, com suporte da direita para a esquerda para o árabe.</li>
                 </ul>
                 </section>
 
                 <section id="android-version" aria-labelledby="android-title">
                     <h2 id="android-title">BP Digitizer para Android</h2>
-                    <p>O aplicativo Android nativo combina entrada manual rápida com digitalização de câmera Premium opcional, visualizações de tendências, integração Health Connect, exportações de PDF e lembretes. Suas leituras permanecem no seu dispositivo.</p>
-                    <p class="platform-status">O download do APK não está disponível no momento. <a href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer">Abra a versão web ↗</a></p>
+                    <p>O app nativo para Android lê o seu medidor com a câmera inteiramente no celular, junto com entrada manual rápida, visões de tendência, Health Connect, exportação em PDF e lembretes. Ele não tem permissão de internet, e o backup em nuvem do Android e a transferência entre celulares estão desativados para ele, então suas medições ficam no seu celular, a menos que você as exporte. Funciona em celulares ARM64 com Android 8.0 ou mais recente.</p>
+                    <p class="platform-status">O app foi enviado ao F-Droid e ainda não está disponível para download. <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">Abra a versão web ↗</a></p>
+                    <p><a href="https://github.com/zandaulion/BloodPressureMonitor" target="_blank" rel="noopener noreferrer">Ver o código-fonte do Android no GitHub ↗</a></p>
                     <p><a href="../bpdigitizer-privacy.html" hreflang="en-US">Leia a política de privacidade do Android ↗</a></p>
                     <h3>Dentro do aplicativo Android</h3>
+                    <p>Capturas da versão 1.6.2. Todas as medições e os dados de perfil são inventados.</p>
 <div class="gallery-grid">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-32-59-186_com.zandaulion.bpdigitized.jpg" alt="Captura de tela 1 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-10-577_com.zandaulion.bpdigitized.jpg" alt="Captura de tela 2 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-22-212_com.zandaulion.bpdigitized.jpg" alt="Captura de tela 3 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-38-550_com.zandaulion.bpdigitized.jpg" alt="Captura de tela 4 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-47-244_com.zandaulion.bpdigitized.jpg" alt="Captura de tela 5 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-54-635_com.zandaulion.bpdigitized.jpg" alt="Captura de tela 6 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-13-782_com.zandaulion.bpdigitized.jpg" alt="Captura de tela 7 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-20-725_com.zandaulion.bpdigitized.jpg" alt="Captura de tela 8 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-33-414_com.zandaulion.bpdigitized.jpg" alt="Captura de tela 9 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-43-874_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer Captura de tela 10 do Android" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-35-09-916_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer Captura de tela 11 do Android" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-41-13-557_com.google.android.apps.docs.jpg" alt="BP Digitizer Captura de tela 12 do Android" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214338.png" alt="Captura de tela 13 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214352.png" alt="BP Digitizer Captura de tela 14 do Android" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214403.png" alt="BP Digitizer Captura de tela 15 do Android" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214653.png" alt="BP Digitizer Captura de tela 16 do Android" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214703.png" alt="BP Digitizer Captura de tela 17 do Android" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214716.png" alt="Captura de tela 18 do Android BP Digitizer" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214748.png" alt="BP Digitizer Captura de tela 19 do Android" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214804.png" alt="BP Digitizer Captura de tela 20 do Android" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214825.png" alt="BP Digitizer Captura de tela 21 do Android" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/01-welcome.png" alt="A tela de boas-vindas" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/02-dashboard.png" alt="Tendências da semana e histórico de medições" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/03-scatter.png" alt="Um gráfico de dispersão 3D de sistólica, diastólica e pulso" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/04-reading-entry.png" alt="Registrando uma medição com controles deslizantes" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/05-health-profile.png" alt="O perfil de saúde" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/06-reminders.png" alt="Lembretes de manhã e à noite" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/07-export.png" alt="Exportando um backup JSON, um CSV ou um relatório PDF" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/08-backup-help.png" alt="Ajuda para importar backups" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/09-offline-scanning.png" alt="Ajuda para a leitura pela câmera, offline" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/10-landscape-charts.png" alt="O gráfico de tendência e o de dispersão 3D lado a lado na horizontal" class="gallery-img" loading="lazy" decoding="async">
                 </div>
                     <h3>Recursos do Android</h3>
 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏃 Construído para um estilo de vida ativo:</strong> A pressão arterial é uma métrica central de bem-estar, junto com seus passos, treinos e sono. Registre-o em segundos e mantenha-o como parte da rotina que o mantém em movimento.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ Registre suas leituras gratuitamente, em segundos:</strong> Controles deslizantes rápidos e fáceis de tocar permitem definir sistólica, diastólica e pulso em instantes. Totalmente gratuito, funciona off-line e não precisa de conta. Comece a rastrear na primeira vez que abrir o aplicativo.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 Ou digitalize com a câmera (Premium):</strong> Não quer digitar? Tire uma foto da tela do seu monitor e os números serão inseridos para você. A digitalização da câmera é um recurso Premium opcional para a entrada mais fácil possível.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 Observe suas tendências:</strong> Veja como seus números se movem ao longo dos dias, semanas e meses. Alterne entre uma linha de tendência e uma dispersão 3D que você pode girar com um dedo para explorar a pressão sistólica, diastólica e a pulsação juntas. A suavização inteligente "Média" mescla leituras consecutivas em um ponto de dados único e honesto, para que sua tendência reflita a realidade.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 Ou escaneie com a câmera, offline:</strong> Não quer digitar? Fotografe a tela do seu medidor e modelos embutidos no app leem os valores no seu celular, sem conexão com a internet. É grátis, e você sempre confere os valores antes de salvar.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 Observe suas tendências:</strong> Veja como seus números se movem ao longo dos dias, semanas e meses. Alterne entre uma linha de tendência e uma dispersão 3D que você pode girar com um dedo para explorar a pressão sistólica, diastólica e a pulsação juntas. A suavização inteligente "Média" mescla leituras consecutivas em um ponto de dados único e honesto, para que sua tendência reflita a realidade. Gire o celular para ver os dois gráficos lado a lado.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏷️ Veja o que movimenta seus números:</strong> Identifique qualquer leitura com contexto – exercício, cafeína, refeição salgada, sono insatisfatório, estresse – e descubra como sua atividade e estilo de vida moldam seus números ao longo do tempo.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ Conecta-se com o Health Connect:</strong> Sincronize com o Android Health Connect para manter sua pressão arterial ao lado de suas atividades, treinos e outros dados de condicionamento físico – nos seus termos, com sua permissão.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 Mantenha seus próprios registros:</strong> Exporte um PDF simples do seu histórico – gráficos e leituras incluídas.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ Conecta-se com o Health Connect:</strong> Copie suas medições para o Android Health Connect pelo painel para manter a pressão arterial junto da sua atividade, dos treinos e de outros dados de condicionamento. É opcional e só acontece quando você escolhe.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 Mantenha seus próprios registros:</strong> Exporte um backup JSON, um arquivo CSV ou um relatório PDF de várias páginas com gráficos e medições, e importe backups deste app ou da versão web.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏰ Crie um hábito consistente:</strong> Lembretes suaves opcionais ajudam você a registrar no mesmo horário todas as manhãs e noites, para que suas tendências permaneçam completas.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Privado por design:</strong> Seus dados permanecem no seu dispositivo. Nenhuma conta para criar, nenhuma inscrição na nuvem, nada vendido ou compartilhado. Seus números são da sua conta – e somente seus.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Privado por design:</strong> O app não tem nenhuma permissão de internet. Nenhuma conta para criar, nenhum cadastro na nuvem, nada é vendido ou compartilhado. Para guardar uma cópia ou mudar de celular, exporte um backup JSON. Seus números só dizem respeito a você.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 12 idiomas:</strong> inglês, árabe, chinês, francês, alemão, hindi, japonês, coreano, português, romeno, espanhol e ucraniano.</li>
                 </ul>
                 </section>
             </div>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against bp-digitizer-web commit 49c61ee1e1d5e2c9f6c8812ae6bdc38d62fd867b and BloodPressureMonitor commit ce1383530ca2741db6bf8bdbff68ba5dffcb8952 (2026-10-10). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BP Digitizer 适用于 Android 和网络：记录血压读数、探索趋势并导出历史记录。">
@@ -41,7 +42,7 @@
                     <h1>BP Digitizer</h1>
                                         <p class="project-lead">一份血压日志，采用 Android 和 Web 形式。记录您的读数、探索趋势并导出您的历史记录。</p>
                     <div class="project-links">
-                        <a href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">打开网络应用程序</a>
+                        <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">打开网络应用程序</a>
                         <a href="#android-version" class="btn btn-outline">探索 Android 应用程序</a>
                         <a href="../bpdigitizer-privacy.html" class="btn btn-outline" hreflang="en-US">安卓隐私政策</a>
                     </div>
@@ -51,93 +52,80 @@
 
             <div class="project-content">
                 <h2>一个应用程序。有两种使用方法。</h2>
-                <p>BP Digitizer 帮助您记录血压读数、探索血压历史并保存您自己的记录。使用本机 Android 应用程序或在浏览器中打开 PWA。网络版本（之前在此处列为 wBP Digitizer）是同一项目的一部分。</p>
+                <p>BP Digitizer 帮助你记录血压读数、查看历史并保存自己的记录。你可以使用原生 Android 应用，也可以在浏览器中打开 PWA。两者都能在你自己的设备上用摄像头读取血压计，也都不需要账号。网页版此前在这里以 wBP Digitizer 的名称列出，它是同一项目的一部分。</p>
                 <div class="platform-options" aria-label="选择平台">
                     <section class="platform-option">
                         <span class="section-number">在您的浏览器中 · PWA</span>
                         <h3>打开它并开始。</h3>
-                        <p>记录读数、查看图表和导出报告。将其安装到主屏幕以供离线使用；读数存储在您的浏览器中。</p>
-                        <a class="btn btn-primary" href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer">打开网络应用程序 ↗</a>
+                        <p>记录读数，用摄像头扫描血压计，查看图表并导出报告。把它安装到主屏幕即可离线使用；读数保存在你的浏览器中。</p>
+                        <a class="btn btn-primary" href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">打开网络应用程序 ↗</a>
                     </section>
                     <section class="platform-option">
                         <span class="section-number">在您的手机上 · Android</span>
                         <h3>本土的日常伴侣。</h3>
-                        <p>探索 Android 版本的摄像头扫描、Health Connect 集成和提醒。</p>
-                        <p class="platform-status">Android APK 目前不可用。您现在可以使用网页版。</p>
+                        <p>在手机上用摄像头扫描、Health Connect 和提醒，而且应用完全没有联网权限。</p>
+                        <p class="platform-status">Android 应用已提交到 F-Droid，目前还不能下载。你现在就可以使用网页版。</p>
                         <a class="btn btn-outline" href="#android-version">查看安卓版本↓</a>
                     </section>
                 </div>
 
                 <section id="web-version" aria-labelledby="web-title">
                     <h2 id="web-title">BP Digitizer 网页版</h2>
-                    <p>PWA 将相同的项目带到您的浏览器中，并具有手动输入、图表和导出功能。读数存储在本地浏览器的 IndexedDB 中。将其安装到主屏幕以使其触手可及。</p>
+                    <p>PWA 把同一项目带到浏览器中，提供摄像头扫描、手动录入、图表和导出。读数保存在浏览器的 IndexedDB 中，应用由 GitHub Pages 提供，背后没有服务器、账号或邀请。把它安装到主屏幕，随时取用。</p>
                     <p><a href="https://github.com/zandaulion/bp-digitizer-web" target="_blank" rel="noopener noreferrer">探索 GitHub 上的网络源代码 ↗</a></p>
                     <h3>在网络应用程序内部</h3>
+                    <p>这些截图中的所有读数和个人资料都是虚构的。</p>
 <div class="gallery-grid">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-35-44-031_com.android.chrome.jpg" alt="BP Digitizer网页截图1" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-35-56-427_com.android.chrome.jpg" alt="BP Digitizer 网页截图2" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-03-493_com.android.chrome.jpg" alt="BP Digitizer网页截图3" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-07-825_com.android.chrome.jpg" alt="BP Digitizer网页截图4" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-15-532_com.android.chrome.jpg" alt="BP Digitizer网页截图5" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-24-148_com.android.chrome.jpg" alt="BP Digitizer网页截图6" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-32-019_com.android.chrome.jpg" alt="BP Digitizer网页截图7" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-51-488_com.android.chrome.jpg" alt="BP Digitizer网页截图8" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-56-240_com.android.chrome.jpg" alt="BP Digitizer网页截图9" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-37-03-180_com.android.chrome.jpg" alt="BP Digitizer网页截图10" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-37-09-725_com.android.chrome.jpg" alt="BP Digitizer网页截图11" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/web/dashboard-synthetic.png" alt="显示 30 天趋势、洞察和风险评估的仪表盘" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/web/add-reading-synthetic.png" alt="用滑块和数字框添加读数" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/web/profile-synthetic.png" alt="健康档案" class="gallery-img" loading="lazy" decoding="async">
                 </div>
                     <h3>网页功能</h3>
 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 本地优先 &amp; PWA：</strong> 安装到主屏幕并离线工作。读数存在于浏览器的 IndexedDB 中，并且永远不会发送到任何地方。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️快速进入：</strong> 使用上次阅读的滑块进行手动输入。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 在设备上用摄像头读取：</strong> 把摄像头对准显示三行数字的竖式血压计，在浏览器中运行的模型会读取 SYS、DIA 和脉搏。保存前你需要确认全部三个数值，无法可靠读取的照片会被拒绝，而不是靠猜测。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️快速进入：</strong> 从上次读数开始的滑块、数字框，以及长按快速调整。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈综合图表：</strong> 趋势图（收缩压 + 舒张压，120/80 参考线）和收缩压与舒张压散点图。 7 / 30 / 90 天和所有时间范围。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 智能分析：</strong> 突发平均将连续读取的读数压缩为一个点。在设备上计算的见解（早上与晚上、范围内的时间、健康的条纹、上下文标签）。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🩺 临床逻辑：</strong> AHA 区域（正常/升高/第一阶段/第二阶段/危机）、MAP 和脉压。根据您的健康状况进行风险评估。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 导出和报告：</strong> CSV 和 JSON 出口。详细的 PDF 报告包含概述页面、图表和表格历史记录。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 全球：</strong> 12 种语言，从 Android 应用程序继承而不是重新翻译。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🩺 临床逻辑：</strong> AHA 分区(正常 / 偏高 / 1 期 / 2 期 / 危象)、平均动脉压和脉压、BMI，以及基于健康档案的风险评估。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 导出和报告：</strong> CSV 和 JSON 导入与导出，以及可打印、可下载的 PDF 报告。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 加密备份：</strong> 把读数和健康档案备份到用你的口令加密的文件中，并在另一台设备上恢复。丢失的口令任何人都无法找回。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 全球：</strong> 12 种语言直接沿用 Android 应用的翻译，而非重新翻译，并支持阿拉伯语从右到左显示。</li>
                 </ul>
                 </section>
 
                 <section id="android-version" aria-labelledby="android-title">
                     <h2 id="android-title">BP Digitizer 适用于 Android</h2>
-                    <p>本机 Android 应用程序将快速手动输入与可选的高级相机扫描、趋势视图、Health Connect 集成、PDF 导出和提醒相结合。您的读数保留在您的设备上。</p>
-                    <p class="platform-status">目前无法下载 APK。 <a href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer">请打开网页版 ↗</a></p>
+                    <p>原生 Android 应用完全在手机上用摄像头读取血压计，还提供快速手动录入、趋势视图、Health Connect、PDF 导出和提醒。它没有联网权限，Android 的云备份和手机间迁移对它也已关闭，因此除非你导出，读数只会留在手机上。它可在 Android 8.0 及以上的 ARM64 手机上运行。</p>
+                    <p class="platform-status">应用已提交到 F-Droid，目前还不能下载。 <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">请打开网页版 ↗</a></p>
+                    <p><a href="https://github.com/zandaulion/BloodPressureMonitor" target="_blank" rel="noopener noreferrer">在 GitHub 上查看 Android 源代码 ↗</a></p>
                     <p><a href="../bpdigitizer-privacy.html" hreflang="en-US">阅读 Android 隐私政策 ↗</a></p>
                     <h3>Android 应用程序内部</h3>
+                    <p>截取自 1.6.2 版。所有读数和档案数值都是虚构的。</p>
 <div class="gallery-grid">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-32-59-186_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer Android 截图 1" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-10-577_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 安卓截图2" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-22-212_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 安卓截图3" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-38-550_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 安卓截图4" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-47-244_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 安卓截图5" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-54-635_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 安卓截图6" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-13-782_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer Android 截图 7" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-20-725_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer Android 截图 8" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-33-414_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer Android 截图 9" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-43-874_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 安卓截图10" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-35-09-916_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 安卓截图11" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-41-13-557_com.google.android.apps.docs.jpg" alt="BP Digitizer Android 截图 12" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214338.png" alt="BP Digitizer 安卓截图13" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214352.png" alt="BP Digitizer Android 截图 14" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214403.png" alt="BP Digitizer Android 截图 15" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214653.png" alt="BP Digitizer Android 截图 16" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214703.png" alt="BP Digitizer Android 截图 17" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214716.png" alt="BP Digitizer Android 截图 18" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214748.png" alt="BP Digitizer Android 截图 19" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214804.png" alt="BP Digitizer Android 截图 20" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214825.png" alt="BP Digitizer Android 截图 21" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/01-welcome.png" alt="欢迎界面" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/02-dashboard.png" alt="每周趋势和读数历史" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/03-scatter.png" alt="收缩压、舒张压和脉搏的 3D 散点图" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/04-reading-entry.png" alt="用滑块录入读数" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/05-health-profile.png" alt="健康档案" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/06-reminders.png" alt="早晚提醒" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/07-export.png" alt="导出 JSON 备份、CSV 或 PDF 报告" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/08-backup-help.png" alt="导入备份的帮助" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/09-offline-scanning.png" alt="离线摄像头扫描的帮助" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/10-landscape-charts.png" alt="横屏时并排显示的趋势图和 3D 散点图" class="gallery-img" loading="lazy" decoding="async">
                 </div>
                     <h3>安卓功能</h3>
 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏃 专为积极的生活方式而打造：</strong> 血压是一项核心健康指标，与步数、锻炼和睡眠一样。只需几秒钟即可记录下来，并将其作为让您不断前进的日常活动的一部分。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ 在几秒钟内免费记录您的读数：</strong> 快速、易于点击的滑块可让您立即设置收缩压、舒张压和脉搏。完全免费，离线工作，无需帐户 - 从您第一次打开应用程序时开始跟踪。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 或使用相机扫描（高级）：</strong> 不想打字？拍一张显示器显示屏的照片，系统就会为您输入数字。相机扫描是一项可选的高级功能，可实现最简单的进入。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 观察你的趋势：</strong> 查看您的数字在几天、几周和几个月内的变化情况。在趋势线和 3D 散点图之间切换，您可以用手指旋转来一起探索收缩压、舒张压和脉搏。智能“平均”平滑将背靠背读数合并为单个、诚实的数据点，因此您的趋势反映了现实。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 或离线用摄像头扫描：</strong> 不想手动输入？拍下血压计的屏幕，应用内置的模型就会在手机上读取数值，无需联网。这项功能免费，保存前你始终会核对数值。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 观察你的趋势：</strong> 查看您的数字在几天、几周和几个月内的变化情况。在趋势线和 3D 散点图之间切换，您可以用手指旋转来一起探索收缩压、舒张压和脉搏。智能“平均”平滑将背靠背读数合并为单个、诚实的数据点，因此您的趋势反映了现实。把手机横过来，即可并排查看两张图表。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏷️ 看看是什么改变了你的数字：</strong> 给任何阅读的内容加上背景信息——锻炼、咖啡因、咸食、睡眠质量差、压力——并发现你的活动和生活方式如何随着时间的推移影响你的数字。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ 与 Health Connect 连接：</strong> 与 Android Health Connect 同步，让您的血压与您的活动、锻炼和其他健身数据保持一致 — 根据您的条件并经您许可。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 保留自己的记录：</strong> 导出您的历史记录的简单 PDF — 包括图表和读数。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ 与 Health Connect 连接：</strong> 从仪表盘把读数复制到 Android Health Connect，让血压与你的活动、锻炼和其他健身数据放在一起。这是可选功能，只在你选择时进行。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 保留自己的记录：</strong> 导出 JSON 备份、CSV 文件或包含图表和读数的多页 PDF 报告，并可导入本应用或网页版的备份。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏰ 养成一致的习惯：</strong> 可选的温和提醒可帮助您每天早晚同时记录，让您的趋势保持完整。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 设计上的私密性：</strong> 您的数据保留在您的设备上。无需创建帐户，无需云注册，无需出售或共享任何内容。您的数字是您的事——而且只属于您的事。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 设计上的私密性：</strong> 应用完全没有联网权限。无需创建账号，无需注册云服务，也不会出售或分享任何数据。要保留副本或换新手机，请导出 JSON 备份。你的数字只属于你自己。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 12 种语言：</strong> 英语、阿拉伯语、中文、法语、德语、印地语、日语、韩语、葡萄牙语、罗马尼亚语、西班牙语和乌克兰语。</li>
                 </ul>
                 </section>
             </div>
