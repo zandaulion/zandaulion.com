@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against bitey commit de26d96 (1.0.13, 2026-10-10). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bitey - Un PWA de suivi des calories et des macros axé sur la vision, soutenu par le Gemini et l&#x27;étalonnage des portions par l&#x27;homme dans la boucle.">
@@ -44,7 +45,7 @@
                     <a href="https://plate.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ouvrir l’application web</a>
                     <a href="https://github.com/zandaulion/bitey" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Voir sur GitHub</a>
                     <a href="../plate-privacy.html" class="btn btn-outline" hreflang="en-US">Politique de confidentialité (en anglais)</a>
-                    <button type="button" class="btn btn-outline btn-soon" disabled>Version Android bientôt disponible</button>
+                    <button type="button" class="btn btn-outline btn-soon" disabled>Application Android en test fermé</button>
                 </div>
                 </div>
                 <img src="../assets/Plate/bitey-hero.png" alt="Application Bitey" class="project-hero-image hero-landscape">
@@ -58,7 +59,29 @@
 <p>Bitey (anciennement Plate) est un journal de calories et de macros dont l'entrée principale est une photo. Le modèle de vision multimodale identifie les aliments dans l'assiette ; la personne qui l'a mangé corrige le poids. Cette division du travail n’est pas une commodité – c’est la découverte fondamentale sur laquelle repose toute la conception.</p>
 <p>Évaluée sur 145 plaques de l'ensemble de données Nutrition5k avec une vérité terrain pondérée, il a été prouvé que la correction visuelle humaine permet de récupérer environ la moitié du gain de précision d'une balance physique, créant ainsi un équilibre idéal entre une faible friction quotidienne et une précision nutritionnelle.</p>
 
-                <h2>Galerie</h2>
+                <p>L'application Android, Bitey — Journal alimentaire privé, garde le journal sur votre téléphone, sans compte et sans serveur qui conserve votre suivi. Ajoutez des aliments à la main, par code-barres ou comme petite collation, et gardez pesées, tendances et sauvegardes sur l'appareil. Bitey AI, un abonnement facultatif, lit la photo d'un repas ou une description que vous tapez, et vous vérifiez et ajustez chaque estimation avant de l'enregistrer.</p>
+
+                <h2>Bitey pour Android</h2>
+                <p class="platform-status">L'application Android est en test fermé sur Google Play et n'est pas encore disponible publiquement.</p>
+                <p>Nouveau dans la version 1.0.13 : décrivez un repas avec vos propres mots, puis vérifiez l'estimation de Bitey AI avant de l'enregistrer. La recherche d'aliments et la saisie des valeurs exactes d'une étiquette restent gratuites. Les captures utilisent des aliments d'exemple fictifs.</p>
+                <div class="gallery-grid">
+                    <img src="../assets/Plate/android/02-manual-entry.png" alt="Décrire un repas pour estimer calories et macros avec Bitey AI, ou choisir la recherche gratuite d&#x27;aliments ou la saisie de valeurs exactes" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/05-text-review.png" alt="Vérifier un repas estimé, avec ses portions supposées, ses calories et ses macros, avant l&#x27;enregistrement" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/06-exact-numbers.png" alt="Saisir la portion et les valeurs nutritionnelles d&#x27;un aliment directement depuis une étiquette ou un menu" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>Fonctionnalités Android</h3>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Privé par défaut :</strong> Votre journal, vos photos, vos pesées et les aliments par code-barres en cache restent sur votre téléphone. Pas de compte, pas de publicité, pas d'analyse d'utilisation.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Bitey AI lit vos photos :</strong> Photographiez un repas, ou choisissez-en un dans votre galerie, et obtenez ses aliments, portions et calories à vérifier et enregistrer. Il compte les aliments en vrac comme le raisin ou les noix, et peut comparer une photo des restes pour savoir combien vous avez mangé.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✍️ Ou décrivez le repas :</strong> Tapez ce que vous avez mangé et Bitey AI estime les calories, protéines, glucides et lipides. Vous vérifiez et ajustez chaque aliment avant d'enregistrer.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 « Pas ce que vous avez mangé ? » :</strong> Dites à Bitey AI ce qu'était vraiment un plat, et il relit la même photo.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 Votre régime, si vous voulez :</strong> Un réglage facultatif permet à Bitey AI de tenir compte d'un régime végétarien, végan ou pescétarien pour les plats qui pourraient se préparer de deux façons. Il reste désactivé tant que vous ne l'activez pas.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 Des accès gratuits :</strong> Cherchez dans une table de près de 900 aliments et plats courants nommés dans chaque langue de l'application, scannez un code-barres ou tapez les valeurs d'une étiquette. Un code-barres ne quitte le téléphone que si vous acceptez une recherche Open Food Facts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Pesées et sauvegardes :</strong> Notez votre poids, suivez vos tendances d'alimentation et de poids, et sauvegardez ou restaurez vos données quand vous changez de téléphone.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Abonnement Bitey AI :</strong> Acheté et géré via Google Play, avec le premier mois gratuit. Bitey demande votre accord avant que la première photo ou description ne quitte votre téléphone, et vous pouvez le retirer dans les Réglages.</li>
+                </ul>
+
+                <h2>L'application web</h2>
                 <div class="gallery-grid">
                     <img src="../assets/Plate/screenshot_06_bitey_suggestions.jpg" alt="Bitey Coaching proactif et suggestions diététiques" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Plate/screenshot_01_dashboard.jpg" alt="Tableau de bord quotidien et résumé calorique Bitey" class="gallery-img" loading="lazy" decoding="async">
@@ -68,7 +91,7 @@
                     <img src="../assets/Plate/screenshot_05_profile_settings.jpg" alt="Configuration du profil utilisateur et des préférences alimentaires" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
-                <h2>Fonctionnalités</h2>
+                <h3>Fonctionnalités de l'application web</h3>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Enregistrement des aliments Vision-First :</strong> Prenez une photo et laissez le modèle de vision identifier les aliments, décomposer les repas composés et estimer instantanément la nutrition de base.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Calibrage empirique des portions :</strong> Bandes d'erreur transparentes à trois niveaux selon que le poids a été mesuré sur une balance, ajusté à l'œil nu par l'utilisateur ou estimé par un modèle.</li>
