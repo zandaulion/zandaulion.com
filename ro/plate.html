@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against bitey commit de26d96 (1.0.13, 2026-10-10). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bitey — Jurnal de calorii și macronutrienți pornind de la fotografii, cu analiza Gemini și porții ajustate de tine.">
@@ -44,7 +45,7 @@
                     <a href="https://plate.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Deschide aplicația web</a>
                     <a href="https://github.com/zandaulion/bitey" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Vezi pe GitHub</a>
                     <a href="../plate-privacy.html" class="btn btn-outline" hreflang="en-US">Politica de confidențialitate (în engleză)</a>
-                    <button type="button" class="btn btn-outline btn-soon" disabled>Versiunea Android vine în curând</button>
+                    <button type="button" class="btn btn-outline btn-soon" disabled>Aplicația Android este în testare închisă</button>
                 </div>
                 </div>
                 <img src="../assets/Plate/bitey-hero.png" alt="Aplicația Bitey" class="project-hero-image hero-landscape">
@@ -58,7 +59,29 @@
 <p>Bitey (fostul Plate) este un jurnal de calorii și macronutrienți în care totul pornește de la o fotografie. Modelul de analiză vizuală identifică alimentele din farfurie, iar persoana care le-a mâncat corectează greutatea. Această împărțire a sarcinilor este ideea pe care se bazează întregul proiect.</p>
 <p>În testele pe 145 de farfurii din setul Nutrition5k, cu greutăți măsurate ca reper, corectarea vizuală de către utilizator a recuperat aproximativ jumătate din câștigul de precizie oferit de un cântar. Este un compromis între ușurința folosirii zilnice și precizia estimărilor nutriționale.</p>
 
-                <h2>Galerie</h2>
+                <p>Aplicația Android, Bitey — Jurnal alimentar privat, păstrează jurnalul pe telefonul tău, fără cont și fără server care să-l țină. Adaugă alimente manual, prin cod de bare sau ca gustare rapidă, iar cântăririle, tendințele și copiile de siguranță rămân pe dispozitiv. Bitey AI, un abonament opțional, citește fotografia unei mese sau o descriere pe care o scrii, iar tu verifici și ajustezi fiecare estimare înainte de salvare.</p>
+
+                <h2>Bitey pentru Android</h2>
+                <p class="platform-status">Aplicația Android este în testare închisă pe Google Play și nu este încă disponibilă public.</p>
+                <p>Nou în versiunea 1.0.13: descrie o masă în cuvintele tale, apoi verifică estimarea Bitey AI înainte de salvare. Căutarea alimentelor și valorile exacte de pe etichetă rămân gratuite. Capturile folosesc alimente inventate.</p>
+                <div class="gallery-grid">
+                    <img src="../assets/Plate/android/02-manual-entry.png" alt="Descrie o masă pentru a estima caloriile și macronutrienții cu Bitey AI sau alege căutarea gratuită ori introducerea valorilor exacte" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/05-text-review.png" alt="Verificarea unei mese estimate, cu porțiile presupuse, caloriile și macronutrienții, înainte de salvare" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/06-exact-numbers.png" alt="Introducerea porției și a valorilor nutriționale ale unui aliment direct de pe etichetă sau din meniu" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>Caracteristici Android</h3>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Privat din start:</strong> Jurnalul, fotografiile, cântăririle și alimentele cu cod de bare din cache rămân pe telefon. Nu există cont, reclame sau analize de utilizare.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Bitey AI îți citește fotografiile:</strong> Fotografiază o masă sau alege una din galerie și primești alimentele, porțiile și caloriile, ca să le verifici și să le salvezi. Numără alimentele mărunte, precum strugurii și nucile, și poate compara o fotografie cu ce a rămas în farfurie ca să afle cât ai mâncat.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✍️ Sau descrie masa:</strong> Scrie ce ai mâncat, iar Bitey AI estimează caloriile, proteinele, carbohidrații și grăsimile. Verifici și ajustezi fiecare aliment înainte de salvare.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 „Nu asta ai mâncat?”:</strong> Spune-i lui Bitey AI ce era de fapt felul de mâncare, iar el citește din nou aceeași fotografie.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 Dieta ta, dacă vrei:</strong> O setare opțională îi permite lui Bitey AI să țină cont de o dietă vegetariană, vegană sau pescetariană pentru preparatele care pot fi făcute în ambele feluri. Este oprită dacă nu o pornești.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 Variante gratuite:</strong> Caută într-un tabel cu aproape 900 de alimente și preparate obișnuite, denumite în toate limbile aplicației, scanează un cod de bare sau scrie valorile de pe etichetă. Un cod de bare părăsește telefonul doar dacă accepți o căutare în Open Food Facts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Cântăriri și copii de siguranță:</strong> Înregistrează-ți greutatea, urmărește tendințele alimentației și ale greutății și fă copii de siguranță sau restaurează datele când schimbi telefonul.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Abonamentul Bitey AI:</strong> Se cumpără și se gestionează prin Google Play, cu prima lună gratuită. Bitey cere acordul înainte ca prima fotografie sau descriere să plece de pe telefon, iar acordul poate fi retras din Setări.</li>
+                </ul>
+
+                <h2>Aplicația web</h2>
                 <div class="gallery-grid">
                     <img src="../assets/Plate/screenshot_06_bitey_suggestions.jpg" alt="Bitey — Îndrumări și sugestii alimentare" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Plate/screenshot_01_dashboard.jpg" alt="Bitey — Panoul zilnic și rezumatul caloriilor" class="gallery-img" loading="lazy" decoding="async">
@@ -68,7 +91,7 @@
                     <img src="../assets/Plate/screenshot_05_profile_settings.jpg" alt="Configurarea profilului și a preferințelor alimentare" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
-                <h2>Funcționalități</h2>
+                <h3>Funcționalitățile aplicației web</h3>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Jurnal alimentar pornind de la fotografii:</strong> Fă o fotografie, iar modelul vizual identifică alimentele, separă componentele preparatelor și oferă o primă estimare nutrițională.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Ajustarea porțiilor:</strong> Trei niveluri de incertitudine, explicate clar, în funcție de greutatea măsurată cu un cântar, ajustată din ochi de tine sau estimată de model.</li>

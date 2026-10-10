@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
 <head>
+    <!-- Content checked against bitey commit de26d96 (1.0.13, 2026-10-10). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bitey - A vision-first calorie and macro tracking PWA backed by Gemini and human-in-the-loop portion calibration.">
@@ -44,7 +45,7 @@
                     <a href="https://plate.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Launch Web App</a>
                     <a href="https://github.com/zandaulion/bitey" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
                     <a href="plate-privacy.html" class="btn btn-outline">Privacy Policy</a>
-                    <button type="button" class="btn btn-outline btn-soon" disabled>Android version coming soon</button>
+                    <button type="button" class="btn btn-outline btn-soon" disabled>Android app in closed testing</button>
                 </div>
                 </div>
                 <img src="assets/Plate/bitey-hero.png" alt="Bitey App" class="project-hero-image hero-landscape">
@@ -58,7 +59,29 @@
 <p>Bitey (formerly Plate) is a calorie and macro log whose primary input is a photo. The multimodal vision model identifies the food on the plate; the person who ate it corrects the weight. That division of labour is not a convenience &mdash; it is the core finding the entire design rests on.</p>
 <p>Benchmarked across 145 plates from the Nutrition5k dataset with weighed ground truth, visual human correction was proven to recover roughly half of the accuracy gain of a physical scale, creating an ideal balance between low daily friction and nutritional precision.</p>
 
-                <h2>Gallery</h2>
+                <p>The Android app, Bitey — Private Food Log, keeps the diary on your phone, with no account and no server holding your log. Add food by hand, from a barcode, or as a quick bite, and keep weigh-ins, trends, and backups on the device. Bitey AI, an optional subscription, reads a meal photo or a description you type, and you review and adjust every estimate before saving.</p>
+
+                <h2>Bitey for Android</h2>
+                <p class="platform-status">The Android app is in closed testing on Google Play and is not publicly available yet.</p>
+                <p>New in version 1.0.13: describe a meal in your own words, then check Bitey AI's estimate before you save it. Food search and exact numbers from a label stay free. The screenshots use made-up example foods.</p>
+                <div class="gallery-grid">
+                    <img src="assets/Plate/android/02-manual-entry.png" alt="Describe a meal to estimate calories and macros with Bitey AI, or choose free food search or exact-number entry" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Plate/android/05-text-review.png" alt="Reviewing an estimated meal, with its assumed portions, calories, and macros, before saving" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Plate/android/06-exact-numbers.png" alt="Entering a food's portion and nutrition values directly from a label or menu" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>Android features</h3>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Private by default:</strong> Your diary, photos, weigh-ins, and cached barcode foods stay on your phone. There is no account, no advertising, and no analytics.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Bitey AI reads your photos:</strong> Photograph a meal, or pick one from your gallery, and get its foods, portions, and calories to check and save. It counts loose foods like grapes and nuts, and can compare a photo of what's left to work out how much you ate.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✍️ Or describe the meal:</strong> Type what you ate and Bitey AI estimates its calories, protein, carbs, and fat. You review and adjust each food before saving.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 "Not what you ate?":</strong> Tell Bitey AI what a dish really was, and it reads the same photo again.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 Your diet, if you want:</strong> An optional setting lets Bitey AI use a vegetarian, vegan, or pescatarian diet for dishes that could be made either way. It is off unless you turn it on.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 Free ways in:</strong> Search a food table with nearly 900 common foods and dishes named in every app language, scan a barcode, or type the numbers from a label. A barcode leaves the phone only if you agree to an Open Food Facts lookup.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Weigh-ins and backups:</strong> Record your weight, follow your food and weight trends, and back up or restore your data when you move phones.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Bitey AI subscription:</strong> Bought and managed through Google Play, with the first month free. Bitey asks before the first photo or description leaves your phone, and you can withdraw that in Settings.</li>
+                </ul>
+
+                <h2>The web app</h2>
                 <div class="gallery-grid">
                     <img src="assets/Plate/screenshot_06_bitey_suggestions.jpg" alt="Bitey Proactive Coaching & Dietary Suggestions" class="gallery-img" loading="lazy" decoding="async">
                     <img src="assets/Plate/screenshot_01_dashboard.jpg" alt="Bitey Daily Dashboard & Caloric Summary" class="gallery-img" loading="lazy" decoding="async">
@@ -68,7 +91,7 @@
                     <img src="assets/Plate/screenshot_05_profile_settings.jpg" alt="User Profile & Dietary Preferences Setup" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
-                <h2>Features</h2>
+                <h3>Web app features</h3>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Vision-First Food Logging:</strong> Snap a photo and let the vision model identify foods, decompose composite meals, and estimate baseline nutrition instantly.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Empirical Portion Calibration:</strong> Transparent three-tier error bands based on whether weight was scale-measured, user-adjusted by eye, or model-estimated.</li>

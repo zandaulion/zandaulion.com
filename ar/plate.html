@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" data-theme="light" dir="rtl">
 <head>
+    <!-- Content checked against bitey commit de26d96 (1.0.13, 2026-10-10). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bitey - تتبع الرؤية الأولى للسعرات الحرارية والكلية PWA مدعوم بـ Gemini ومعايرة الجزء البشري في الحلقة.">
@@ -44,7 +45,7 @@
                     <a href="https://plate.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">فتح تطبيق الويب</a>
                     <a href="https://github.com/zandaulion/bitey" target="_blank" rel="noopener noreferrer" class="btn btn-outline">عرض على GitHub</a>
                     <a href="../plate-privacy.html" class="btn btn-outline" hreflang="en-US">سياسة الخصوصية (بالإنجليزية)</a>
-                    <button type="button" class="btn btn-outline btn-soon" disabled>نسخة Android قريبًا</button>
+                    <button type="button" class="btn btn-outline btn-soon" disabled>تطبيق Android في اختبار مغلق</button>
                 </div>
                 </div>
                 <img src="../assets/Plate/bitey-hero.png" alt="تطبيق Bitey" class="project-hero-image hero-landscape">
@@ -58,7 +59,29 @@
 <p>Bitey (اللوحة سابقًا) عبارة عن سجل للسعرات الحرارية والماكرو يكون مدخله الأساسي عبارة عن صورة. يحدد نموذج الرؤية متعدد الوسائط الطعام الموجود على الطبق؛ فالشخص الذي أكله يصحح الوزن. إن تقسيم العمل هذا ليس أمرًا مريحًا، بل هو جوهر النتيجة التي يرتكز عليها التصميم بأكمله.</p>
 <p>تم قياس القياس عبر 145 لوحة من مجموعة بيانات Nutrition5k مع الحقيقة الأرضية الموزونة، وقد ثبت أن التصحيح البشري البصري يستعيد ما يقرب من نصف اكتساب الدقة للمقياس المادي، مما يخلق توازنًا مثاليًا بين الاحتكاك اليومي المنخفض والدقة الغذائية.</p>
 
-                <h2>معرض الصور</h2>
+                <p>يحفظ تطبيق Android، Bitey — سجل طعام خاص، يومياتك على هاتفك، دون حساب ودون خادم يحتفظ بسجلك. أضف الطعام يدويًا أو بالباركود أو كوجبة خفيفة سريعة، وتبقى قياسات الوزن والاتجاهات والنسخ الاحتياطية على الجهاز. ويقرأ Bitey AI، وهو اشتراك اختياري، صورة الوجبة أو وصفًا تكتبه، وتراجع كل تقدير وتعدّله قبل الحفظ.</p>
+
+                <h2>Bitey على Android</h2>
+                <p class="platform-status">تطبيق Android في اختبار مغلق على Google Play وغير متاح للعامة بعد.</p>
+                <p>جديد في الإصدار 1.0.13: صِف وجبة بكلماتك، ثم راجع تقدير Bitey AI قبل حفظه. ويبقى البحث عن الأطعمة وإدخال القيم الدقيقة من الملصق مجانيين. تستخدم لقطات الشاشة أطعمة أمثلة مختلَقة.</p>
+                <div class="gallery-grid">
+                    <img src="../assets/Plate/android/02-manual-entry.png" alt="وصف وجبة لتقدير السعرات والمغذيات الكبرى باستخدام Bitey AI، أو اختيار البحث المجاني عن الأطعمة أو إدخال القيم الدقيقة" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/05-text-review.png" alt="مراجعة وجبة مقدّرة، بحصصها المفترضة وسعراتها ومغذياتها الكبرى، قبل الحفظ" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/06-exact-numbers.png" alt="إدخال حصة طعام وقيمه الغذائية مباشرة من ملصق أو قائمة طعام" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>مميزات الاندرويد</h3>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 خاص افتراضيًا:</strong> تبقى يومياتك وصورك وقياسات وزنك وأطعمة الباركود المخزنة مؤقتًا على هاتفك. لا حساب ولا إعلانات ولا تحليلات.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 يقرأ Bitey AI صورك:</strong> صوّر وجبة، أو اختر صورة من معرضك، واحصل على أطعمتها وحصصها وسعراتها لتراجعها وتحفظها. ويعدّ الأطعمة المتفرقة كالعنب والمكسرات، ويستطيع مقارنة صورة لما تبقّى ليحسب كم أكلت.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✍️ أو صِف الوجبة:</strong> اكتب ما أكلته فيقدّر Bitey AI السعرات والبروتين والكربوهيدرات والدهون. وتراجع كل طعام وتعدّله قبل الحفظ.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 «ليس ما أكلته؟»:</strong> أخبر Bitey AI بحقيقة الطبق، فيعيد قراءة الصورة نفسها.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 نظامك الغذائي، إن شئت:</strong> يسمح إعداد اختياري لـ Bitey AI بمراعاة نظام نباتي أو نباتي صرف أو نباتي مع الأسماك في الأطباق التي قد تُحضَّر بأي من الطريقتين. ويبقى متوقفًا ما لم تشغّله.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 طرق مجانية:</strong> ابحث في جدول يضم قرابة 900 طعام وطبق شائع مسمّاة بكل لغات التطبيق، أو امسح باركودًا، أو اكتب القيم من الملصق. ولا يغادر الباركود الهاتف إلا إذا وافقت على بحث في Open Food Facts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ قياسات الوزن والنسخ الاحتياطية:</strong> سجّل وزنك، وتابع اتجاهات طعامك ووزنك، وأنشئ نسخة احتياطية أو استعد بياناتك عند تغيير الهاتف.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 اشتراك Bitey AI:</strong> يُشترى ويُدار عبر Google Play، والشهر الأول مجاني. يطلب Bitey إذنك قبل أن تغادر أول صورة أو أول وصف هاتفك، ويمكنك سحب ذلك من الإعدادات.</li>
+                </ul>
+
+                <h2>تطبيق الويب</h2>
                 <div class="gallery-grid">
                     <img src="../assets/Plate/screenshot_06_bitey_suggestions.jpg" alt="Bitey التدريب الاستباقي والاقتراحات الغذائية" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Plate/screenshot_01_dashboard.jpg" alt="Bitey لوحة المعلومات اليومية وملخص السعرات الحرارية" class="gallery-img" loading="lazy" decoding="async">
@@ -68,7 +91,7 @@
                     <img src="../assets/Plate/screenshot_05_profile_settings.jpg" alt="ملف تعريف المستخدم وإعداد التفضيلات الغذائية" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
-                <h2>المزايا</h2>
+                <h3>ميزات تطبيق الويب</h3>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 تسجيل الغذاء الرؤية أولاً:</strong> التقط صورة ودع نموذج الرؤية يحدد الأطعمة ويتحلل الوجبات المركبة ويقدر التغذية الأساسية على الفور.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ معايرة الجزء التجريبي:</strong> نطاقات خطأ شفافة ثلاثية المستويات بناءً على ما إذا كان الوزن قد تم قياسه بالمقياس، أو تم ضبطه بواسطة المستخدم بالعين، أو تم تقديره بواسطة النموذج.</li>

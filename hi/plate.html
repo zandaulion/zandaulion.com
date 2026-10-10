@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="hi-IN" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against bitey commit de26d96 (1.0.13, 2026-10-10). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bitey - एक दृष्टि-प्रथम कैलोरी और मैक्रो ट्रैकिंग PWA जो Gemini और मानव-इन-द-लूप भाग अंशांकन द्वारा समर्थित है।">
@@ -44,7 +45,7 @@
                     <a href="https://plate.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">वेब ऐप खोलें</a>
                     <a href="https://github.com/zandaulion/bitey" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub पर देखें</a>
                     <a href="../plate-privacy.html" class="btn btn-outline" hreflang="en-US">गोपनीयता नीति (अंग्रेज़ी में)</a>
-                    <button type="button" class="btn btn-outline btn-soon" disabled>Android संस्करण जल्द आ रहा है</button>
+                    <button type="button" class="btn btn-outline btn-soon" disabled>Android ऐप बंद टेस्टिंग में</button>
                 </div>
                 </div>
                 <img src="../assets/Plate/bitey-hero.png" alt="Bitey ऐप" class="project-hero-image hero-landscape">
@@ -58,7 +59,29 @@
 <p>Bitey (पूर्व में प्लेट) एक कैलोरी और मैक्रो लॉग है जिसका प्राथमिक इनपुट एक फोटो है। मल्टीमॉडल विज़न मॉडल प्लेट में भोजन की पहचान करता है; इसे खाने वाले का वजन सही हो जाता है। श्रम का विभाजन कोई सुविधा नहीं है - यह वह मूल खोज है जिस पर पूरा डिज़ाइन टिका हुआ है।</p>
 <p>जमीनी सच्चाई के साथ Nutrition5k डेटासेट से 145 प्लेटों में बेंचमार्क किया गया, दृश्य मानव सुधार भौतिक पैमाने की सटीकता के लगभग आधे लाभ को पुनर्प्राप्त करने में सिद्ध हुआ, जिससे कम दैनिक घर्षण और पोषण संबंधी सटीकता के बीच एक आदर्श संतुलन बना।</p>
 
-                <h2>चित्र संग्रह</h2>
+                <p>Android ऐप, Bitey — निजी फूड लॉग, आपकी डायरी आपके फ़ोन पर रखता है, बिना खाते और बिना ऐसे सर्वर के जो आपका लॉग रखे। खाना हाथ से, बारकोड से या झटपट नाश्ते के रूप में जोड़ें, और वज़न, ट्रेंड और बैकअप डिवाइस पर ही रखें। Bitey AI, एक वैकल्पिक सदस्यता, भोजन की फ़ोटो या आपका लिखा विवरण पढ़ता है, और आप सहेजने से पहले हर अनुमान की समीक्षा करके उसे बदलते हैं।</p>
+
+                <h2>Android के लिए Bitey</h2>
+                <p class="platform-status">Android ऐप Google Play पर बंद टेस्टिंग में है और अभी सार्वजनिक रूप से उपलब्ध नहीं है।</p>
+                <p>वर्ज़न 1.0.13 में नया: अपने शब्दों में भोजन बताएँ, फिर सहेजने से पहले Bitey AI का अनुमान जाँचें। खाद्य खोज और लेबल से सटीक मान दर्ज करना मुफ़्त है। स्क्रीनशॉट में काल्पनिक उदाहरण खाद्य हैं।</p>
+                <div class="gallery-grid">
+                    <img src="../assets/Plate/android/02-manual-entry.png" alt="Bitey AI से कैलोरी और मैक्रो का अनुमान लगाने के लिए भोजन बताएँ, या मुफ़्त खाद्य खोज या सटीक मान दर्ज करना चुनें" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/05-text-review.png" alt="सहेजने से पहले अनुमानित भोजन की समीक्षा, उसके माने गए हिस्सों, कैलोरी और मैक्रो के साथ" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/06-exact-numbers.png" alt="किसी खाद्य का हिस्सा और पोषण मान सीधे लेबल या मेनू से दर्ज करना" class="gallery-img" loading="lazy" decoding="async">
+                </div>
+                <h3>एंड्रॉइड सुविधाएँ</h3>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 शुरू से निजी:</strong> आपकी डायरी, फ़ोटो, वज़न और कैश किए गए बारकोड खाद्य आपके फ़ोन पर रहते हैं। कोई खाता, विज्ञापन या एनालिटिक्स नहीं।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Bitey AI आपकी फ़ोटो पढ़ता है:</strong> भोजन की फ़ोटो लें या गैलरी से चुनें, और जाँचने व सहेजने के लिए उसके खाद्य, हिस्से और कैलोरी पाएँ। यह अंगूर और मेवों जैसे छोटे खाद्य गिनता है, और बचे हुए खाने की फ़ोटो से तुलना करके बता सकता है कि आपने कितना खाया।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✍️ या भोजन बताएँ:</strong> आपने क्या खाया, लिखें, और Bitey AI कैलोरी, प्रोटीन, कार्ब और वसा का अनुमान लगाता है। सहेजने से पहले आप हर खाद्य की समीक्षा करके उसे बदलते हैं।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 "यह नहीं खाया?":</strong> Bitey AI को बताएँ कि व्यंजन असल में क्या था, और वह वही फ़ोटो दोबारा पढ़ता है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 चाहें तो आपका आहार:</strong> एक वैकल्पिक सेटिंग Bitey AI को ऐसे व्यंजनों के लिए शाकाहारी, वीगन या पेस्केटेरियन आहार ध्यान में रखने देती है जो दोनों तरह बन सकते हैं। जब तक आप इसे चालू न करें, यह बंद रहती है।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 मुफ़्त तरीके:</strong> ऐप की हर भाषा में नाम वाले लगभग 900 आम खाद्य और व्यंजनों की तालिका में खोजें, बारकोड स्कैन करें, या लेबल से मान लिखें। बारकोड फ़ोन से तभी बाहर जाता है जब आप Open Food Facts खोज की अनुमति दें।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ वज़न और बैकअप:</strong> अपना वज़न दर्ज करें, खाने और वज़न के ट्रेंड देखें, और फ़ोन बदलते समय डेटा का बैकअप लें या उसे वापस लाएँ।</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Bitey AI सदस्यता:</strong> Google Play से ख़रीदी और सँभाली जाती है, पहला महीना मुफ़्त। पहली फ़ोटो या विवरण फ़ोन से बाहर जाने से पहले Bitey अनुमति माँगता है, और आप इसे सेटिंग में वापस ले सकते हैं।</li>
+                </ul>
+
+                <h2>वेब ऐप</h2>
                 <div class="gallery-grid">
                     <img src="../assets/Plate/screenshot_06_bitey_suggestions.jpg" alt="Bitey प्रोएक्टिव कोचिंग और आहार संबंधी सुझाव" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Plate/screenshot_01_dashboard.jpg" alt="Bitey दैनिक डैशबोर्ड और कैलोरी सारांश" class="gallery-img" loading="lazy" decoding="async">
@@ -68,7 +91,7 @@
                     <img src="../assets/Plate/screenshot_05_profile_settings.jpg" alt="उपयोगकर्ता प्रोफ़ाइल और आहार प्राथमिकताएँ सेटअप" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
-                <h2>विशेषताएँ</h2>
+                <h3>वेब ऐप की सुविधाएँ</h3>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 विजन-फर्स्ट फूड लॉगिंग:</strong> एक फोटो खींचें और विज़न मॉडल को खाद्य पदार्थों की पहचान करने दें, मिश्रित भोजन को विघटित करें और तुरंत आधारभूत पोषण का अनुमान लगाएं।</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ अनुभवजन्य भाग अंशांकन:</strong> पारदर्शी त्रि-स्तरीय त्रुटि बैंड इस पर आधारित है कि वजन स्केल-मापा गया था, उपयोगकर्ता-आंख से समायोजित किया गया था, या मॉडल-अनुमानित किया गया था।</li>

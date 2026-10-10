@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR" data-theme="light" dir="ltr">
 <head>
+    <!-- Content checked against bp-digitizer-web commit 49c61ee1e1d5e2c9f6c8812ae6bdc38d62fd867b and BloodPressureMonitor commit ce1383530ca2741db6bf8bdbff68ba5dffcb8952 (2026-10-10). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android 및 웹용 BP Digitizer: 혈압 측정값을 기록하고, 추세를 탐색하고, 기록을 내보냅니다.">
@@ -41,7 +42,7 @@
                     <h1>BP Digitizer</h1>
                                         <p class="project-lead">Android 및 웹 형식의 혈압 기록 1개. 판독값을 기록하고, 추세를 탐색하고, 기록을 내보냅니다.</p>
                     <div class="project-links">
-                        <a href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">웹 앱 열기</a>
+                        <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">웹 앱 열기</a>
                         <a href="#android-version" class="btn btn-outline">Android 앱 살펴보기</a>
                         <a href="../bpdigitizer-privacy.html" class="btn btn-outline" hreflang="en-US">안드로이드 개인정보 보호정책</a>
                     </div>
@@ -51,93 +52,80 @@
 
             <div class="project-content">
                 <h2>하나의 앱. 그것을 사용하는 두 가지 방법.</h2>
-                <p>BP Digitizer는 혈압 측정값을 기록하고, 기록을 탐색하고, 자신의 기록을 유지하는 데 도움이 됩니다. 기본 Android 앱을 사용하거나 브라우저에서 PWA를 엽니다. 이전에 여기에 wBP Digitizer로 나열된 웹 버전은 동일한 프로젝트의 일부입니다.</p>
+                <p>BP Digitizer는 혈압 측정값을 기록하고, 기록을 살펴보고, 나만의 기록을 보관하도록 돕습니다. Android 네이티브 앱을 쓰거나 브라우저에서 PWA를 여세요. 둘 다 내 기기에서 카메라로 혈압계를 읽을 수 있으며, 어느 쪽도 계정이 필요 없습니다. 예전에 여기서 wBP Digitizer로 소개한 웹 버전도 같은 프로젝트입니다.</p>
                 <div class="platform-options" aria-label="플랫폼을 선택하세요">
                     <section class="platform-option">
                         <span class="section-number">브라우저에서 · PWA</span>
                         <h3>그것을 열고 시작하십시오.</h3>
-                        <p>판독값을 기록하고, 차트를 보고, 보고서를 내보냅니다. 오프라인 사용을 위해 홈 화면에 설치하세요. 판독값은 브라우저에 저장됩니다.</p>
-                        <a class="btn btn-primary" href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer">웹 앱 열기 ↗</a>
+                        <p>측정값을 기록하고, 카메라로 혈압계를 스캔하고, 차트를 보고, 보고서를 내보내세요. 홈 화면에 설치하면 오프라인으로 쓸 수 있으며, 측정값은 브라우저에 저장됩니다.</p>
+                        <a class="btn btn-primary" href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">웹 앱 열기 ↗</a>
                     </section>
                     <section class="platform-option">
                         <span class="section-number">휴대전화 · Android</span>
                         <h3>네이티브 일상의 동반자.</h3>
-                        <p>Android 버전의 카메라 스캔, 헬스 커넥트 통합, 알림을 살펴보세요.</p>
-                        <p class="platform-status">현재 Android APK를 사용할 수 없습니다. 이제 웹 버전을 사용할 수 있습니다.</p>
+                        <p>휴대폰에서의 카메라 스캔, Health Connect, 알림을 인터넷 권한이 전혀 없는 앱에 담았습니다.</p>
+                        <p class="platform-status">Android 앱은 F-Droid에 제출되었으며 아직 내려받을 수 없습니다. 지금은 웹 버전을 사용하세요.</p>
                         <a class="btn btn-outline" href="#android-version">안드로이드 버전 보기 ↓</a>
                     </section>
                 </div>
 
                 <section id="web-version" aria-labelledby="web-title">
                     <h2 id="web-title">웹용 BP Digitizer</h2>
-                    <p>PWA는 수동 입력, 차트 및 내보내기 기능을 통해 동일한 프로젝트를 브라우저에 제공합니다. 판독값은 브라우저의 IndexedDB에 로컬로 저장됩니다. 홈 화면에 설치하여 가까이에 두세요.</p>
+                    <p>PWA는 같은 프로젝트를 브라우저로 옮겨, 카메라 스캔, 직접 입력, 차트, 내보내기를 제공합니다. 측정값은 브라우저의 IndexedDB에 로컬로 저장되고, 앱은 서버, 계정, 초대 없이 GitHub Pages에서 제공됩니다. 홈 화면에 설치해 가까이 두세요.</p>
                     <p><a href="https://github.com/zandaulion/bp-digitizer-web" target="_blank" rel="noopener noreferrer">GitHub에서 웹 소스 탐색 ↗</a></p>
                     <h3>웹 앱 내부</h3>
+                    <p>이 스크린샷의 측정값과 프로필 정보는 모두 가상입니다.</p>
 <div class="gallery-grid">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-35-44-031_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 1" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-35-56-427_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 2" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-03-493_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 3" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-07-825_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 4" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-15-532_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 5" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-24-148_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 6" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-32-019_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 7" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-51-488_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 8" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-36-56-240_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 9" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-37-03-180_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 10" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/wBP Digitizer/Screenshot_2026-08-17-14-37-09-725_com.android.chrome.jpg" alt="BP Digitizer 웹 스크린샷 11" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/web/dashboard-synthetic.png" alt="30일 추세, 인사이트, 위험 평가가 있는 대시보드" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/web/add-reading-synthetic.png" alt="슬라이더와 숫자 입력란으로 측정값 추가" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/web/profile-synthetic.png" alt="건강 프로필" class="gallery-img" loading="lazy" decoding="async">
                 </div>
                     <h3>웹 기능</h3>
 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📱 로컬 우선 및 PWA:</strong> 홈 화면에 설치하고 오프라인으로 작동합니다. 판독값은 브라우저의 IndexedDB에 있으며 어디에도 전송되지 않습니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ 빠른 입장:</strong> 마지막 판독값에서 시드된 슬라이더를 사용한 수동 입력입니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 기기에서 카메라로 읽기:</strong> 세 줄로 표시되는 세로형 혈압계에 카메라를 대면, 브라우저에서 실행되는 모델이 SYS, DIA, 맥박을 읽습니다. 저장 전에 세 값을 모두 확인하며, 확실히 읽을 수 없는 사진은 추측하지 않고 거부합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ 빠른 입장:</strong> 마지막 측정값에서 시작하는 슬라이더, 숫자 입력란, 길게 눌러 조절하기.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 종합 차트:</strong> 추세 차트(수축기 + 확장기, 120/80 기준선) 및 수축기-이완기 분산. 7/30/90일 및 전체 기간.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 스마트 분석:</strong> 버스트 평균화는 연속적으로 수행된 판독값을 단일 지점으로 축소합니다. 장치에서 계산된 통찰력(아침 vs 저녁, 범위 내 시간, 정상적인 연속 기록, 컨텍스트 태그)</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🩺 임상 논리:</strong> AHA 구역(정상/상승/1단계/2단계/위기), MAP 및 맥압. 귀하의 건강 프로필을 통한 위험 평가.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 내보내기 및 보고서:</strong> CSV 및 JSON 내보내기. 개요 페이지, 차트 및 테이블 기록이 포함된 자세한 PDF 보고서입니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 글로벌:</strong> 12개 언어가 재번역되지 않고 Android 앱에서 전달됩니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🩺 임상 논리:</strong> AHA 구간(정상 / 주의 / 1단계 / 2단계 / 위기), 평균 동맥압과 맥압, BMI, 건강 프로필에 따른 위험 평가.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 내보내기 및 보고서:</strong> CSV와 JSON 가져오기와 내보내기, 인쇄하거나 내려받을 수 있는 PDF 보고서.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 암호화 백업:</strong> 측정값과 프로필을 암호 문구로 암호화한 파일로 백업하고, 다른 기기에서 복원하세요. 잃어버린 암호 문구는 아무도 복구할 수 없습니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 글로벌:</strong> Android 앱에서 가져온 12개 언어로, 새로 번역하지 않았으며 아랍어의 오른쪽에서 왼쪽 표시도 지원합니다.</li>
                 </ul>
                 </section>
 
                 <section id="android-version" aria-labelledby="android-title">
                     <h2 id="android-title">안드로이드용 BP Digitizer</h2>
-                    <p>기본 Android 앱은 빠른 수동 입력과 선택적 프리미엄 카메라 스캔, 추세 보기, 헬스 커넥트 통합, PDF 내보내기 및 알림을 결합합니다. 판독값은 장치에 유지됩니다.</p>
-                    <p class="platform-status">현재 APK 다운로드를 사용할 수 없습니다. <a href="https://bp.zandaulion.com" target="_blank" rel="noopener noreferrer">대신 웹 버전을 열어보세요 ↗</a></p>
+                    <p>Android 네이티브 앱은 카메라로 혈압계를 읽는 과정을 모두 휴대폰에서 처리하며, 빠른 직접 입력, 추세 보기, Health Connect, PDF 내보내기, 알림도 제공합니다. 인터넷 권한이 없고, Android의 클라우드 백업과 기기 간 이전도 이 앱에서는 꺼져 있어, 내보내지 않는 한 측정값은 휴대폰에만 남습니다. Android 8.0 이상의 ARM64 휴대폰에서 작동합니다.</p>
+                    <p class="platform-status">앱은 F-Droid에 제출되었으며 아직 내려받을 수 없습니다. <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">대신 웹 버전을 열어보세요 ↗</a></p>
+                    <p><a href="https://github.com/zandaulion/BloodPressureMonitor" target="_blank" rel="noopener noreferrer">GitHub에서 Android 소스 코드 보기 ↗</a></p>
                     <p><a href="../bpdigitizer-privacy.html" hreflang="en-US">Android 개인정보 보호정책을 읽어보세요 ↗</a></p>
                     <h3>안드로이드 앱 내부</h3>
+                    <p>버전 1.6.2에서 캡처했습니다. 측정값과 프로필 값은 모두 가상입니다.</p>
 <div class="gallery-grid">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-32-59-186_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 1" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-10-577_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 2" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-22-212_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 3" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-38-550_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 4" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-47-244_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 5" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-33-54-635_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 6" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-13-782_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 7" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-20-725_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 8" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-33-414_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 9" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-34-43-874_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 10" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-35-09-916_com.zandaulion.bpdigitized.jpg" alt="BP Digitizer 안드로이드 스크린샷 11" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_2026-06-19-20-41-13-557_com.google.android.apps.docs.jpg" alt="BP Digitizer 안드로이드 스크린샷 12" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214338.png" alt="BP Digitizer 안드로이드 스크린샷 13" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214352.png" alt="BP Digitizer 안드로이드 스크린샷 14" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214403.png" alt="BP Digitizer 안드로이드 스크린샷 15" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214653.png" alt="BP Digitizer 안드로이드 스크린샷 16" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214703.png" alt="BP Digitizer 안드로이드 스크린샷 17" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214716.png" alt="BP Digitizer 안드로이드 스크린샷 18" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214748.png" alt="BP Digitizer 안드로이드 스크린샷 19" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214804.png" alt="BP Digitizer 안드로이드 스크린샷 20" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/BP Digitizer/Screenshot_20260619_214825.png" alt="BP Digitizer 안드로이드 스크린샷 21" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/01-welcome.png" alt="시작 화면" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/02-dashboard.png" alt="주간 추세와 측정 기록" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/03-scatter.png" alt="수축기, 이완기, 맥박의 3D 산점도" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/04-reading-entry.png" alt="슬라이더로 측정값 입력" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/05-health-profile.png" alt="건강 프로필" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/06-reminders.png" alt="아침과 저녁 알림" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/07-export.png" alt="JSON 백업, CSV, PDF 보고서 내보내기" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/08-backup-help.png" alt="백업 가져오기 도움말" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/09-offline-scanning.png" alt="오프라인 카메라 스캔 도움말" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/BPDigitizer/android/10-landscape-charts.png" alt="가로 화면에서 나란히 보이는 추세 차트와 3D 산점도" class="gallery-img" loading="lazy" decoding="async">
                 </div>
                     <h3>안드로이드 기능</h3>
 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏃 활동적인 라이프스타일을 위해 제작되었습니다:</strong> 혈압은 걸음 수, 운동, 수면과 함께 핵심적인 건강 지표입니다. 몇 초 안에 기록하고 계속해서 움직이는 루틴의 일부로 유지하세요.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✏️ 몇 초 안에 무료로 판독값을 기록하세요.</strong> 빠르고 탭하기 쉬운 슬라이더를 사용하면 수축기, 확장기 및 맥박을 즉시 설정할 수 있습니다. 완전히 무료이고 오프라인으로 작동하며 계정이 필요하지 않습니다. 앱을 처음 열 때부터 추적을 시작하세요.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 또는 카메라로 스캔하세요(프리미엄):</strong> 입력하고 싶지 않으신가요? 모니터 디스플레이의 사진을 찍으면 숫자가 자동으로 입력됩니다. 카메라 스캐닝은 가장 쉬운 진입을 위한 옵션 프리미엄 기능입니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 트렌드를 살펴보세요:</strong> 일, 주, 월별로 수치가 어떻게 변하는지 확인하세요. 추세선과 3D 분산형 사이를 전환하고 손가락으로 회전하여 수축기, 확장기 및 맥박을 함께 탐색할 수 있습니다. 스마트 "평균" 평활화는 연속 판독값을 하나의 정직한 데이터 포인트로 병합하므로 추세가 현실을 반영합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📷 또는 카메라로 오프라인 스캔:</strong> 직접 입력하기 싫으신가요? 혈압계 화면을 찍으면 앱에 내장된 모델이 인터넷 연결 없이 휴대폰에서 값을 읽습니다. 무료이며, 저장하기 전에 항상 값을 확인합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📈 트렌드를 살펴보세요:</strong> 일, 주, 월별로 수치가 어떻게 변하는지 확인하세요. 추세선과 3D 분산형 사이를 전환하고 손가락으로 회전하여 수축기, 확장기 및 맥박을 함께 탐색할 수 있습니다. 스마트 "평균" 평활화는 연속 판독값을 하나의 정직한 데이터 포인트로 병합하므로 추세가 현실을 반영합니다. 휴대폰을 가로로 돌리면 두 차트를 나란히 볼 수 있습니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏷️ 무엇이 당신의 숫자를 움직이는지 확인하세요:</strong> 운동, 카페인, 짠 식사, 수면 부족, 스트레스 등 맥락에 따라 읽은 내용에 태그를 지정하고 활동과 라이프스타일이 시간이 지남에 따라 수치에 어떻게 영향을 미치는지 알아보세요.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ 헬스 커넥트와 연결:</strong> Android 헬스 커넥트와 동기화하여 귀하의 허가를 받아 귀하의 조건에 따라 활동, 운동 및 기타 피트니스 데이터와 함께 혈압을 바로 유지하세요.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 나만의 기록을 보관하세요:</strong> 기록과 차트 및 판독값이 포함된 간단한 PDF를 내보냅니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ 헬스 커넥트와 연결:</strong> 대시보드에서 측정값을 Android Health Connect로 복사해 혈압을 활동, 운동, 기타 피트니스 데이터와 함께 관리하세요. 선택 사항이며 직접 선택할 때만 이루어집니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📄 나만의 기록을 보관하세요:</strong> JSON 백업, CSV 파일, 차트와 측정값을 담은 여러 페이지짜리 PDF 보고서를 내보내고, 이 앱이나 웹 버전의 백업을 가져오세요.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⏰ 일관된 습관을 기르세요:</strong> 선택적 알림 기능을 사용하면 매일 아침 저녁으로 같은 시간에 기록할 수 있으므로 추세가 완벽하게 유지됩니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 비공개 설계:</strong> 귀하의 데이터는 귀하의 장치에 유지됩니다. 만들 계정도 없고, 클라우드 가입도 없고, 판매하거나 공유할 것도 없습니다. 귀하의 전화번호는 귀하의 사업이며 오직 귀하의 것입니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 비공개 설계:</strong> 앱에는 인터넷 권한이 전혀 없습니다. 만들 계정도, 클라우드 가입도 없으며, 아무것도 판매하거나 공유하지 않습니다. 사본을 보관하거나 새 휴대폰으로 옮기려면 JSON 백업을 내보내세요. 당신의 수치는 오직 당신의 것입니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 12개 언어:</strong> 영어, 아랍어, 중국어, 프랑스어, 독일어, 힌디어, 일본어, 한국어, 포르투갈어, 루마니아어, 스페인어, 우크라이나어.</li>
                 </ul>
                 </section>
             </div>
