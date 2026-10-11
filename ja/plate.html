@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-JP" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against bitey commit de26d96 (1.0.13, 2026-10-10). -->
+    <!-- Content checked against bitey commit 42c6b6a (1.0.15, 2026-10-11). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bitey - Gemini と人間参加型部分のキャリブレーションによって裏付けられたビジョンファーストのカロリーおよびマクロ追跡 PWA。">
@@ -63,20 +63,25 @@
 
                 <h2>Android 版 Bitey</h2>
                 <p class="platform-status">Android アプリは Google Play でクローズドテスト中で、まだ一般公開されていません。</p>
-                <p>バージョン 1.0.13 の新機能: 食事を自分の言葉で説明し、Bitey AI の推定を確認してから保存できます。食品検索とラベルの正確な値の入力は引き続き無料です。スクリーンショットの食品は架空の例です。</p>
+                <p>バージョン 1.0.15 は Google Play で審査中です。Bitey AI が説明された食事を推定している間は、進行状況バーと楽しいメッセージが付き添い、推定に失敗したときは、いつも接続のせいにするのではなく理由を表示するようになりました。スクリーンショットは Android アプリのもので、架空のサンプルデータを使っています。</p>
                 <div class="gallery-grid">
-                    <img src="../assets/Plate/android/02-manual-entry.png" alt="Bitey AI でカロリーとマクロ栄養素を推定するために食事を説明するか、無料の食品検索や正確な値の入力を選ぶ画面" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Plate/android/05-text-review.png" alt="保存前に、想定した分量、カロリー、マクロ栄養素とともに推定された食事を確認する画面" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Plate/android/06-exact-numbers.png" alt="ラベルやメニューから食品の分量と栄養値を直接入力する画面" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/01-day.png" alt="1 日の画面: 消費量に対するカロリー、マクロ栄養素、Bitey のコメント、体重の傾向、ちょっとした間食" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/02-meals.png" alt="その日の食事。そのうち 1 つは説明から推定" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/03-describe.png" alt="Bitey AI のために食事を説明する画面。下には無料の食品検索と正確な値の入力" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/04-estimate.png" alt="チキンサラダラップとラテに対する Bitey AI の推定を、分量を調整しながら確認する画面" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/05-search.png" alt="内蔵の食品表でサーモンを検索" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/06-trends.png" alt="30 日間の体重と摂取量の傾向、消費量との比較" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/07-privacy.png" alt="Bitey AI のサブスクリプション、食事スタイルのスイッチ、プライバシーの設定" class="gallery-img" loading="lazy" decoding="async">
                 </div>
                 <h3>Androidの機能</h3>
                 <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📏 完璧より、続けること:</strong> 写真、ひとこと、ちょっとした間食など、おおまかでも毎日記録すれば、小さなズレは数週間で平均化されます。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 最初からプライベート:</strong> 日記、写真、体重、キャッシュしたバーコード食品はスマートフォンに残ります。アカウント、広告、分析はありません。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Bitey AI が写真を読み取る:</strong> 食事を撮影するかギャラリーから選ぶと、食品、分量、カロリーが表示され、確認して保存できます。ぶどうやナッツのようなばらばらの食品も数え、食べ残しの写真と比べて食べた量を割り出すこともできます。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✍️ または食事を説明:</strong> 食べたものを入力すると、Bitey AI がカロリー、たんぱく質、炭水化物、脂質を推定します。保存前に各食品を確認・調整します。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 「食べたのはこれじゃない?」:</strong> 料理が実際に何だったかを Bitey AI に伝えると、同じ写真をもう一度読み取ります。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 必要なら食生活も:</strong> オプション設定で、どちらの作り方もありうる料理について、ベジタリアン、ヴィーガン、ペスカタリアンの食生活を Bitey AI に考慮させられます。オンにしない限りオフです。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 無料の方法:</strong> アプリのすべての言語で名前がついた約 900 の一般的な食品・料理の表を検索したり、バーコードをスキャンしたり、ラベルの値を入力したりできます。バーコードがスマートフォンの外に出るのは、Open Food Facts での検索に同意したときだけです。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 無料の方法:</strong> 16,000 品目以上を収録した内蔵の食品表を検索したり（よく食べる食品や料理はあなたの言語で表示されます）、バーコードをスキャンしたり、ラベルの値を入力したりできます。入力した値は Bitey がそのバーコード用に覚えます。バーコードがスマートフォンの外に出るのは、Open Food Facts での検索に同意したときだけです。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ 体重とバックアップ:</strong> 体重を記録し、食事と体重の推移を確認し、機種変更の際にはデータをバックアップ・復元できます。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Bitey AI のサブスクリプション:</strong> Google Play で購入・管理し、最初の 1 か月は無料です。最初の写真や説明がスマートフォンから送られる前に Bitey が確認し、設定でいつでも取り消せます。</li>
                 </ul>

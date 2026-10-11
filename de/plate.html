@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de-DE" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against bitey commit de26d96 (1.0.13, 2026-10-10). -->
+    <!-- Content checked against bitey commit 42c6b6a (1.0.15, 2026-10-11). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bitey – Ein visionäres Kalorien- und Makro-Tracking PWA, unterstützt durch Gemini und eine Human-in-the-Loop-Portionskalibrierung.">
@@ -63,20 +63,25 @@
 
                 <h2>Bitey für Android</h2>
                 <p class="platform-status">Die Android-App ist im geschlossenen Test bei Google Play und noch nicht öffentlich verfügbar.</p>
-                <p>Neu in Version 1.0.13: Beschreiben Sie eine Mahlzeit in eigenen Worten und prüfen Sie dann die Schätzung von Bitey AI vor dem Speichern. Lebensmittelsuche und exakte Werte vom Etikett bleiben kostenlos. Die Screenshots zeigen erfundene Beispiel-Lebensmittel.</p>
+                <p>Version 1.0.15 wird gerade bei Google Play geprüft: Während Bitey AI eine beschriebene Mahlzeit schätzt, leisten Ihnen ein Fortschrittsbalken und lustige Nachrichten Gesellschaft, und eine fehlgeschlagene Schätzung nennt jetzt den Grund, statt immer die Verbindung verantwortlich zu machen. Die Screenshots stammen aus der Android-App, mit erfundenen Beispieldaten.</p>
                 <div class="gallery-grid">
-                    <img src="../assets/Plate/android/02-manual-entry.png" alt="Eine Mahlzeit beschreiben, um Kalorien und Makros mit Bitey AI zu schätzen, oder kostenlose Lebensmittelsuche bzw. Eingabe exakter Werte wählen" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Plate/android/05-text-review.png" alt="Eine geschätzte Mahlzeit mit angenommenen Portionen, Kalorien und Makros vor dem Speichern prüfen" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Plate/android/06-exact-numbers.png" alt="Portion und Nährwerte eines Lebensmittels direkt vom Etikett oder der Speisekarte eingeben" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/01-day.png" alt="Der Tag: Kalorien im Vergleich zu Ihrem Verbrauch, Makros, Biteys Kommentar, der Gewichtstrend und schnelle Snacks" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/02-meals.png" alt="Die Mahlzeiten des Tages, eine davon aus einer Beschreibung geschätzt" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/03-describe.png" alt="Eine Mahlzeit für Bitey AI beschreiben, darunter die kostenlose Lebensmittelsuche und exakte Werte" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/04-estimate.png" alt="Die Schätzung von Bitey AI für einen Hähnchensalat-Wrap und einen Latte prüfen, mit anpassbaren Portionen" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/05-search.png" alt="Lachs in der eingebauten Lebensmitteltabelle suchen" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/06-trends.png" alt="Gewichts- und Kalorientrends über 30 Tage, im Vergleich zu Ihrem Verbrauch" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/07-privacy.png" alt="Einstellungen für das Bitey AI-Abo, den Ernährungsschalter und den Datenschutz" class="gallery-img" loading="lazy" decoding="async">
                 </div>
                 <h3>Android-Funktionen</h3>
                 <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📏 Regelmäßig schlägt perfekt:</strong> Erfassen Sie Ihre Mahlzeiten ungefähr, aber regelmäßig — ein Foto, ein paar Worte, ein schneller Snack — und kleine Ungenauigkeiten gleichen sich über die Wochen aus.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Von Haus aus privat:</strong> Ihr Tagebuch, Ihre Fotos, Wiegungen und zwischengespeicherte Barcode-Lebensmittel bleiben auf Ihrem Telefon. Es gibt kein Konto, keine Werbung und keine Analyse.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Bitey AI liest Ihre Fotos:</strong> Fotografieren Sie eine Mahlzeit oder wählen Sie eine aus der Galerie, und erhalten Sie Lebensmittel, Portionen und Kalorien zum Prüfen und Speichern. Lose Lebensmittel wie Trauben und Nüsse werden gezählt, und ein Foto der Reste lässt sich vergleichen, um zu ermitteln, wie viel Sie gegessen haben.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✍️ Oder beschreiben Sie die Mahlzeit:</strong> Tippen Sie ein, was Sie gegessen haben, und Bitey AI schätzt Kalorien, Eiweiß, Kohlenhydrate und Fett. Sie prüfen und passen jedes Lebensmittel vor dem Speichern an.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 „Nicht, was Sie gegessen haben?“:</strong> Sagen Sie Bitey AI, was ein Gericht wirklich war, und es liest dasselbe Foto erneut.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 Ihre Ernährungsweise, wenn Sie möchten:</strong> Eine optionale Einstellung lässt Bitey AI eine vegetarische, vegane oder pescetarische Ernährung bei Gerichten berücksichtigen, die so oder so zubereitet sein könnten. Sie ist aus, solange Sie sie nicht einschalten.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 Kostenlose Wege:</strong> Durchsuchen Sie eine Lebensmitteltabelle mit fast 900 gängigen Lebensmitteln und Gerichten, benannt in jeder App-Sprache, scannen Sie einen Barcode oder tippen Sie die Werte vom Etikett ab. Ein Barcode verlässt das Telefon nur, wenn Sie einer Open-Food-Facts-Abfrage zustimmen.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 Kostenlose Wege:</strong> Durchsuchen Sie eine eingebaute Tabelle mit über 16.000 Lebensmitteln, gängige Lebensmittel und Gerichte in Ihrer Sprache benannt, scannen Sie einen Barcode oder tippen Sie die Werte vom Etikett ab, die sich Bitey für diesen Barcode merkt. Ein Barcode verlässt das Telefon nur, wenn Sie einer Open-Food-Facts-Abfrage zustimmen.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Wiegungen und Sicherungen:</strong> Erfassen Sie Ihr Gewicht, verfolgen Sie Ernährungs- und Gewichtsverläufe und sichern oder stellen Sie Ihre Daten bei einem Telefonwechsel wieder her.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Bitey-AI-Abo:</strong> Gekauft und verwaltet über Google Play, mit dem ersten Monat kostenlos. Bitey fragt, bevor das erste Foto oder die erste Beschreibung Ihr Telefon verlässt, und Sie können das in den Einstellungen widerrufen.</li>
                 </ul>

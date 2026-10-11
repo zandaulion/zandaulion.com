@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against bitey commit de26d96 (1.0.13, 2026-10-10). -->
+    <!-- Content checked against bitey commit 42c6b6a (1.0.15, 2026-10-11). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bitey – першокласне відстеження калорій і макросів PWA на основі Gemini і калібрування порцій за допомогою людини.">
@@ -63,20 +63,25 @@
 
                 <h2>Bitey для Android</h2>
                 <p class="platform-status">Застосунок для Android перебуває в закритому тестуванні в Google Play і поки не доступний публічно.</p>
-                <p>Нове у версії 1.0.13: опишіть страву своїми словами, а потім перевірте оцінку Bitey AI перед збереженням. Пошук продуктів і точні значення з етикетки лишаються безкоштовними. На знімках вигадані приклади продуктів.</p>
+                <p>Версія 1.0.15 проходить перевірку в Google Play: поки Bitey AI оцінює описану страву, вам складають компанію індикатор прогресу й веселі повідомлення, а невдала оцінка тепер пояснює причину, а не завжди звинувачує з’єднання. Знімки екрана зроблено в застосунку Android із вигаданими прикладами даних.</p>
                 <div class="gallery-grid">
-                    <img src="../assets/Plate/android/02-manual-entry.png" alt="Опис страви для оцінки калорій і макронутрієнтів із Bitey AI або вибір безкоштовного пошуку продуктів чи введення точних значень" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Plate/android/05-text-review.png" alt="Перевірка оціненої страви з припущеними порціями, калоріями й макронутрієнтами перед збереженням" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Plate/android/06-exact-numbers.png" alt="Введення порції та харчових значень продукту просто з етикетки чи меню" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/01-day.png" alt="День: калорії порівняно з тим, що ви спалюєте, макронутрієнти, коментар Bitey, тренд ваги та швидкі перекуси" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/02-meals.png" alt="Страви за день, одну з яких оцінено за описом" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/03-describe.png" alt="Опис страви для Bitey AI, нижче — безкоштовний пошук продуктів і точні значення" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/04-estimate.png" alt="Перевірка оцінки Bitey AI для роліту з курячим салатом і лате з порціями, які можна змінити" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/05-search.png" alt="Пошук лосося у вбудованій таблиці продуктів" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/06-trends.png" alt="Тренди ваги та споживання за 30 днів порівняно з тим, що ви спалюєте" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Plate/android/07-privacy.png" alt="Налаштування підписки Bitey AI, перемикача дієти та конфіденційності" class="gallery-img" loading="lazy" decoding="async">
                 </div>
                 <h3>Функції Android</h3>
                 <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📏 Регулярність важливіша за досконалість:</strong> Записуйте їжу приблизно, але регулярно — фото, кілька слів, швидкий перекус — і дрібні неточності врівноважаться за кілька тижнів.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔒 Приватно за замовчуванням:</strong> Ваш щоденник, фото, зважування й кешовані продукти за штрихкодом лишаються на телефоні. Немає облікового запису, реклами й аналітики.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Bitey AI читає ваші фото:</strong> Сфотографуйте страву або виберіть фото з галереї й отримайте продукти, порції та калорії для перевірки й збереження. Він рахує дрібні продукти на кшталт винограду й горіхів і може порівняти фото залишків, щоб визначити, скільки ви з'їли.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>✍️ Або опишіть страву:</strong> Введіть, що ви з'їли, і Bitey AI оцінить калорії, білки, вуглеводи й жири. Ви перевіряєте й коригуєте кожен продукт перед збереженням.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 «Не те, що ви їли?»:</strong> Скажіть Bitey AI, якою страва була насправді, і він прочитає те саме фото ще раз.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 Ваша дієта, якщо бажаєте:</strong> Необов'язкове налаштування дозволяє Bitey AI враховувати вегетаріанську, веганську чи пескетаріанську дієту для страв, які можна приготувати по-різному. Воно вимкнене, доки ви його не ввімкнете.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 Безкоштовні способи:</strong> Шукайте в таблиці з майже 900 поширених продуктів і страв, названих усіма мовами застосунку, скануйте штрихкод або вводьте значення з етикетки. Штрихкод залишає телефон, лише якщо ви погодитеся на пошук в Open Food Facts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 Безкоштовні способи:</strong> Шукайте у вбудованій таблиці з понад 16 000 продуктів, де поширені продукти й страви названо вашою мовою, скануйте штрихкод або вводьте значення з етикетки, які Bitey запам’ятовує для цього штрихкоду. Штрихкод залишає телефон, лише якщо ви погодитеся на пошук в Open Food Facts.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Зважування й резервні копії:</strong> Записуйте вагу, стежте за трендами харчування й ваги, створюйте резервні копії й відновлюйте дані під час зміни телефона.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Підписка Bitey AI:</strong> Купується й керується через Google Play, перший місяць безкоштовний. Bitey запитує згоду, перш ніж перше фото чи опис залишить телефон, і цю згоду можна відкликати в налаштуваннях.</li>
                 </ul>
