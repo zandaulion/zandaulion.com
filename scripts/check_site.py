@@ -23,6 +23,7 @@ PRIVACY_PATHS = (
     "palebluedot-privacy.html",
     "plate-privacy.html",
 )
+PRIVACY_CANONICAL = {"plate-privacy.html": "bitey-privacy.html"}
 
 
 class Links(HTMLParser):
@@ -64,6 +65,13 @@ def check(base_url=None):
     for route in PRIVACY_PATHS:
         if not (ROOT / route).is_file():
             errors.append(f"Missing established privacy URL: /{route}")
+            continue
+        parser = Links()
+        parser.feed((ROOT / route).read_text(encoding="utf-8"))
+        # plate-privacy.html duplicates the Bitey notice; Search Console should index one URL.
+        expected = ORIGIN + PRIVACY_CANONICAL.get(route, route)
+        if parser.canonicals != [expected]:
+            errors.append(f"{route}: canonical must be {expected}")
     for lang, filenames in PROJECTS.items():
         for filename in filenames:
             page = ROOT / PATHS[lang] / filename
