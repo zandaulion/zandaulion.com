@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against Threadmark commit 03d1afb92015f4a7f100986df22af76b0da286dc (2026-10-02). -->
+    <!-- Content checked against Threadmark commit 534d9feabe15ca8de6e0bd0e81ed9f8a0dfffff7 (2026-10-15). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Threadmark 是一个私密的自托管注意力收件箱，面向你选定的 WhatsApp 群组和联系人：它会挑出付款、会议、截止日期以及符合你自定义规则的消息，并且在设计上只读。">
@@ -40,7 +40,7 @@
                 <div class="project-intro">
                     <span class="section-number">日常工具</span>
                     <h1>Threadmark</h1>
-                    <p class="project-lead">把热闹的 WhatsApp 群聊变成一份需要你处理的简短清单：付款、会议和截止日期。</p>
+                    <p class="project-lead">把热闹的 WhatsApp 群组和 Gmail 变成一份简短清单，只列出需要你处理的事：付款、会议和截止日期。</p>
                     <div class="project-links">
                         <a href="https://github.com/zandaulion/Threadmark" class="btn btn-outline" target="_blank" rel="noopener noreferrer">在 GitHub 上查看</a>
                     </div>
@@ -51,43 +51,50 @@
 
             <div class="project-content reveal">
                 <h2>关于该应用程序</h2>
-                <p>Threadmark 是一个私密的注意力收件箱，面向你选定的 WhatsApp 群组和联系人。新消息一到它就会读取，挑出付款、会议、截止日期以及你让它留意的其他内容，并且只显示这些。其余内容都留在 WhatsApp 里。</p>
+                <p>Threadmark 是一个私人的待关注收件箱，服务于你选定的 WhatsApp 群组和联系人，以及 Gmail 标签和发件人。它会在新消息到达时读取，挑出付款、会议、截止日期以及你让它留意的其他内容，并只显示这些。其余的仍留在 WhatsApp 或 Gmail 里。</p>
                 <p>它像 WhatsApp Web 一样以关联设备的身份连接，并且在设计上只读：从不发送消息，从不把聊天标为已读，从不显示你在线，也从不读取旧的聊天记录。这种连接并非官方方式，WhatsApp 可能会改变它，或限制使用它的账号。</p>
-                <p>每个群组和联系人在你开启之前都处于关闭状态。其他聊天的消息会在检查或存储之前被丢弃，选定聊天中没有匹配任何内容的消息也不会保留。</p>
+                <p>Gmail 通过 Google 的只读权限连接，因此 Threadmark 无法发送、删除邮件或将其标为已读。它从连接那一刻开始工作，不导入旧邮件，只从你开启的标签或发件人那里获取完整邮件，也从不下载附件。</p>
+                <p>每个群组、联系人、Gmail 标签和发件人在你开启之前都处于关闭状态。来自其他来源的消息会在检查或存储之前被丢弃，选中但没有匹配任何规则的消息也不会保留。</p>
 
                 <h2>图片集</h2>
                 <p>这些截图中的聊天均为虚构。</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/Threadmark/threadmark-desktop-1920x1080.png" alt="宽屏桌面上的收件箱，显示 Personal 和 Dev 两个配置、待处理事项和正在关注的来源" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Threadmark/threadmark-tablet-landscape-1180x820.png" alt="横屏平板上的收件箱，旁边是活动来源面板" class="gallery-img" loading="lazy" decoding="async">
+                </div>
                 <div class="gallery-grid">
-                    <img src="../assets/Threadmark/threadmark-desktop-1440x1000.png" alt="桌面上的收件箱：一张待查看的照片、一条带截止日期的学校请求和一条快递消息" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Threadmark/threadmark-mobile-390x844.png" alt="手机上的收件箱：待处理事项、付款和会议" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Threadmark/threadmark-tablet-rules-834x1112.png" alt="平板上的本地短语规则和 AI 监控" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Threadmark/threadmark-mobile-sources-390x844.png" alt="在手机上选择要关注的 WhatsApp 群组和联系人、Gmail 标签和发件人" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Threadmark/threadmark-tablet-rules-834x1112.png" alt="平板上的本地短语规则和 Jev 监控" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Threadmark/threadmark-mobile-rules-390x844.png" alt="手机上的规则" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>它是如何运作的</h2>
                 <ol>
-                    <li><strong>连接 WhatsApp。</strong> 用二维码或配对码把 Threadmark 关联为设备。</li>
-                    <li><strong>选择聊天。</strong> 只开启需要关注的群组和联系人。可以按名称或号码搜索，也可以从手机导入联系人。</li>
+                    <li><strong>连接你的来源。</strong> 用二维码或配对码把 WhatsApp 关联为设备，也可以选择用只读权限连接 Gmail。</li>
+                    <li><strong>选择要关注的内容。</strong> 只开启需要关注的群组、联系人、Gmail 标签和发件人。可以按名称或号码搜索，也可以从手机导入联系人。</li>
                     <li><strong>让它来筛选。</strong> 内置检测器和你自己的短语规则会在服务器上检查每条新消息。如果都没有匹配且开启了 Jev，AI 服务会再看一遍。</li>
                     <li><strong>处理要紧的事。</strong> 可以把事项标记为完成、稍后提醒、添加到日历，或在 Threadmark 判断错误时告诉它。</li>
                 </ol>
 
                 <h2>功能</h2>
                 <ul>
-                    <li><strong>在本地识别付款和会议：</strong> 内置检测器读取罗马尼亚语和英语消息，提取金额、币种、IBAN、日期、时间和链接。</li>
-                    <li><strong>你自己的规则：</strong> 短语规则会查找你指定的任一或全部词语，不区分大小写和重音符号，并且从不离开服务器。每条规则都可以限定在部分聊天，选择是否提醒，并先用示例测试。</li>
+                    <li><strong>在本地识别付款和会议：</strong> 内置检测器读取罗马尼亚语和英语消息，提取金额、币种、IBAN、日期、时间和链接。即使没有金额也能识别发票，会跟踪订阅续费、价格变动和付款失败，而收据或有人已完成付款的通知则不会打扰你。</li>
+                    <li><strong>你自己的规则：</strong> 短语规则可以匹配你给出的任意一个或全部词语，不区分大小写和重音符号，而且绝不会离开服务器。每条规则都可以限定在部分聊天中，选择是否发送提醒，并可先用示例测试。规则和监控可以导出且不含任何个人数据，便于分享或纳入版本控制。</li>
                     <li><strong>用日常语言写的监控：</strong> 用一句话描述要留意的内容，比如需要处理的包裹或预订，并设置 Jev 要有多大把握才标记一条消息。</li>
-                    <li><strong>AI 仅作后备：</strong> 本地没有匹配时，TypeSafe AI 提供的可选服务 Jev 会查找付款、会议和提醒，并评估紧急程度。它只会收到消息正文，绝不会收到聊天名称、发送者、电话号码或 WhatsApp ID。</li>
+                    <li><strong>AI 仅作后备：</strong> 当本地没有任何匹配时，TypeSafe AI 提供的可选服务 Jev 会查找付款、会议和提醒，并评估紧急程度。它只接收消息正文，绝不会收到聊天名称、发件人、电子邮件地址、电话号码或 WhatsApp 和 Gmail 的 ID。</li>
+                    <li><strong>促销放一边：</strong> 不需要你做任何事的新闻简报和群发优惠会悄悄进入 Promotional 视图，而不是收件箱。发票、付款请求和你自己的规则命中的内容始终留在收件箱里，放错位置的条目轻点一下即可移回。</li>
+                    <li><strong>Personal 与 Dev 配置：</strong> 把工作用的 Gmail 账号单独分开，拥有自己的信息流、来源、规则和计数。顶部的切换开关会显示每个配置中有多少条目需要关注。</li>
                     <li><strong>截止日期和紧急程度：</strong> 会从消息中读取到期日期，事项会显示即将到期和已逾期标记，紧急事项排在最前。</li>
                     <li><strong>付款警示：</strong> 银行信息变更、金额变动、可能的重复以及索要密码或付款的异常请求，都会被标出，提醒你再核实一次。</li>
                     <li><strong>附件也在本地读取：</strong> 照片、PDF 和语音消息可以在服务器上通过文字识别和语音转写读取，随后立即删除。无法识别的手写便条会变成一条提醒，让你查看原照片。</li>
                     <li><strong>变更与回复：</strong> Threadmark 可以发现计划被更正或取消，并在你回复后关闭回复提醒。两项功能默认关闭，最多只保留 48 小时的近期文本。</li>
-                    <li><strong>提醒和每日摘要：</strong> 新事项会推送通知，紧急事项会使用紧急标题，还可以在你选定的时间收到每日摘要。</li>
+                    <li><strong>提醒和每日摘要：</strong> 新条目的推送通知，在支持的平台上带有 Done 和 Actions 按钮，紧急条目会显示紧急标题，还可以在你选定的时间收到每日摘要。仍在屏幕上的提醒会合并成一条摘要，而不是越堆越多。</li>
                     <li><strong>只短暂保留：</strong> 识别出的摘录默认在 30 天后删除，除非对应事项仍未处理。</li>
                 </ul>
 
                 <h2>在引擎盖下</h2>
-                <p>Threadmark 由两部分组成，各自运行在独立的无 root 权限 Podman 容器中。桥接服务通过 Baileys 库保持与 WhatsApp 的连接，并把每条消息保存在队列中，直到应用收到为止。应用运行在 Node.js 24 及其内置 SQLite 上，通过 server-sent events 和 Web Push 向浏览器实时推送更新。桥接服务不对外开放任何端口。访问需要邀请，邀请由 PWA Invite Console 管理，应用通过 pwa-kit 自动更新。消息以中立格式传给应用，因此以后可以接入 Telegram 或电子邮件等其他来源。该项目以 GPL-3.0 许可证开源。</p>
+                <p>Threadmark 把每个部分都放在各自的无 root 权限 Podman 容器中运行。桥接服务通过 Baileys 库维持与 WhatsApp 的连接，Personal 和 Dev 配置各有独立的 Gmail 连接器，分别保存自己加密的登录信息，每个连接器都会把每条消息保留在队列中，直到应用收到为止。应用运行在 Node.js 24 及其内置的 SQLite 上，并通过 server-sent events 和 Web Push 向浏览器实时推送更新。连接器不对外开放任何端口。访问需要邀请，由 PWA Invite Console 管理，应用通过 pwa-kit 自动更新。消息以中立格式到达应用，Gmail 正是这样加入 WhatsApp 的，之后 Telegram 等其他来源也可以接入。该项目以 GPL-3.0 许可证开源。</p>
             </div>
         </div>
 
