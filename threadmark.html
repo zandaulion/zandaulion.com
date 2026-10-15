@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
 <head>
-    <!-- Content checked against Threadmark commit 03d1afb92015f4a7f100986df22af76b0da286dc (2026-10-02). -->
+    <!-- Content checked against Threadmark commit 534d9feabe15ca8de6e0bd0e81ed9f8a0dfffff7 (2026-10-15). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Threadmark is a private, self-hosted attention inbox for selected WhatsApp groups and people: it surfaces payments, meetings, deadlines, and your own rules, and is read-only by design.">
@@ -40,7 +40,7 @@
                 <div class="project-intro">
                     <span class="section-number">Everyday tools</span>
                     <h1>Threadmark</h1>
-                    <p class="project-lead">Turn busy WhatsApp groups into a short list of what needs you: payments, meetings, and deadlines.</p>
+                    <p class="project-lead">Turn busy WhatsApp groups and Gmail into a short list of what needs you: payments, meetings, and deadlines.</p>
                     <div class="project-links">
                         <a href="https://github.com/zandaulion/Threadmark" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                     </div>
@@ -51,43 +51,50 @@
 
             <div class="project-content reveal">
                 <h2>About The App</h2>
-                <p>Threadmark is a private attention inbox for the WhatsApp groups and people you choose. It reads new messages as they arrive, picks out payments, meetings, deadlines, and anything else you ask it to watch for, and shows only those. Everything else stays in WhatsApp.</p>
+                <p>Threadmark is a private attention inbox for the WhatsApp groups and people, and the Gmail labels and senders, that you choose. It reads new messages as they arrive, picks out payments, meetings, deadlines, and anything else you ask it to watch for, and shows only those. Everything else stays in WhatsApp or Gmail.</p>
                 <p>It connects as a linked device, like WhatsApp Web, and is read-only by design: it never sends messages, never marks chats as read, never shows you as online, and never reads old history. The connection is unofficial, so WhatsApp could change it or restrict an account that uses it.</p>
-                <p>Every group and person is off until you switch them on. Messages from other chats are discarded before they are checked or stored, and selected messages that match nothing are not kept.</p>
+                <p>Gmail connects through Google&rsquo;s read-only access, so Threadmark cannot send, delete, or mark email as read. It starts from the moment you connect, without importing old mail, fetches a full email only from a label or sender you have turned on, and never downloads attachments.</p>
+                <p>Every group, person, Gmail label, and sender is off until you switch it on. Messages from other sources are discarded before they are checked or stored, and selected messages that match nothing are not kept.</p>
 
                 <h2>Gallery</h2>
                 <p>The chats in these screenshots are made up.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="assets/Threadmark/threadmark-desktop-1920x1080.png" alt="The inbox on a wide desktop, with the Personal and Dev profiles, open items, and the sources being followed" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Threadmark/threadmark-tablet-landscape-1180x820.png" alt="The inbox on a tablet in landscape, beside the live sources panel" class="gallery-img" loading="lazy" decoding="async">
+                </div>
                 <div class="gallery-grid">
-                    <img src="assets/Threadmark/threadmark-desktop-1440x1000.png" alt="The inbox on a desktop, with a photo to review, a school request with a deadline, and a delivery" class="gallery-img" loading="lazy" decoding="async">
                     <img src="assets/Threadmark/threadmark-mobile-390x844.png" alt="The inbox on a phone, with the open items, payments, and meetings" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="assets/Threadmark/threadmark-tablet-rules-834x1112.png" alt="Local phrase rules and AI monitors on a tablet" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Threadmark/threadmark-mobile-sources-390x844.png" alt="Choosing the WhatsApp groups and people, Gmail labels, and senders to follow, on a phone" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/Threadmark/threadmark-tablet-rules-834x1112.png" alt="Local phrase rules and Jev monitors on a tablet" class="gallery-img" loading="lazy" decoding="async">
                     <img src="assets/Threadmark/threadmark-mobile-rules-390x844.png" alt="The rules on a phone" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>How it works</h2>
                 <ol>
-                    <li><strong>Connect WhatsApp.</strong> Link Threadmark as a device with a QR code or a pairing code.</li>
-                    <li><strong>Choose the chats.</strong> Turn on only the groups and people to watch. Search by name or number, or import contacts from your phone.</li>
+                    <li><strong>Connect your sources.</strong> Link WhatsApp as a device with a QR code or a pairing code, and optionally connect Gmail with read-only access.</li>
+                    <li><strong>Choose what to follow.</strong> Turn on only the groups, people, Gmail labels, and senders to watch. Search by name or number, or import contacts from your phone.</li>
                     <li><strong>Let it sort.</strong> Built-in detectors and your own phrase rules check each new message on the server. If nothing matches and Jev is on, the AI service takes a second look.</li>
                     <li><strong>Act on what matters.</strong> Mark items done, snooze them, add them to a calendar, or tell Threadmark when it got something wrong.</li>
                 </ol>
 
                 <h2>Features</h2>
                 <ul>
-                    <li><strong>Payments and meetings, found locally:</strong> Built-in detectors read Romanian and English messages and pull out amounts, currencies, IBANs, dates, times, and links.</li>
-                    <li><strong>Your own rules:</strong> Phrase rules match any or all of your words, ignoring case and accents, and never leave the server. Each one can be limited to some chats, send an alert or not, and be tested on a sample first.</li>
+                    <li><strong>Payments and meetings, found locally:</strong> Built-in detectors read Romanian and English messages and pull out amounts, currencies, IBANs, dates, times, and links. Invoices are caught even without an amount, subscription renewals, price changes, and failed payments are tracked, and receipts or reports of payments someone already made stay quiet.</li>
+                    <li><strong>Your own rules:</strong> Phrase rules match any or all of your words, ignoring case and accents, and never leave the server. Each one can be limited to some chats, send an alert or not, and be tested on a sample first. Rules and monitors can be exported without any personal data, to share or keep under version control.</li>
                     <li><strong>Monitors in plain language:</strong> Describe what to watch for in a sentence, such as a parcel or a reservation that needs attention, and choose how sure Jev must be before it flags a message.</li>
-                    <li><strong>AI only as a fallback:</strong> When nothing matches locally, the optional Jev service from TypeSafe AI checks for payments, meetings, and reminders and scores urgency. It receives only the message text, never the chat name, the sender, phone numbers, or WhatsApp IDs.</li>
+                    <li><strong>AI only as a fallback:</strong> When nothing matches locally, the optional Jev service from TypeSafe AI checks for payments, meetings, and reminders and scores urgency. It receives only the message text, never the chat name, the sender, email addresses, phone numbers, or WhatsApp and Gmail IDs.</li>
+                    <li><strong>Promotions set aside:</strong> Newsletters and mass offers that ask nothing of you move quietly to a Promotional view instead of the inbox. Invoices, payment requests, and your own rules always stay in the inbox, and one tap moves a misplaced item back.</li>
+                    <li><strong>Personal and Dev profiles:</strong> Keep a work Gmail account apart, with its own feed, sources, rules, and counts. A switch at the top shows how many items need attention in each.</li>
                     <li><strong>Deadlines and urgency:</strong> Due dates are read from the message, items show due and overdue badges, and urgent ones rise to the top.</li>
                     <li><strong>Payment warnings:</strong> Changed bank details, changed amounts, possible duplicates, and unusual requests for passwords or payments are flagged for a second look.</li>
                     <li><strong>Attachments, read locally:</strong> Photos, PDFs, and voice notes can be read with text recognition and speech transcription on the server, then deleted straight away. A handwritten note it cannot read becomes a reminder to check the photo.</li>
                     <li><strong>Changes and replies:</strong> Threadmark can notice when a plan is corrected or cancelled, and close a reply reminder once you answer. Both are off by default and keep at most 48 hours of recent text.</li>
-                    <li><strong>Alerts and a daily digest:</strong> Push notifications for new items, an urgent title for urgent ones, and an optional daily summary at the time you choose.</li>
+                    <li><strong>Alerts and a daily digest:</strong> Push notifications for new items, with Done and Actions buttons where supported, an urgent title for urgent ones, and an optional daily summary at the time you choose. Alerts still on screen fold into one summary instead of piling up.</li>
                     <li><strong>Kept short:</strong> Matched excerpts are deleted after 30 days by default, unless their item is still open.</li>
                 </ul>
 
                 <h2>Under the hood</h2>
-                <p>Threadmark has two parts, each in its own rootless Podman container. A bridge holds the WhatsApp connection through the Baileys library and keeps every message in a queue until the app has received it. The app runs on Node.js 24 with its built-in SQLite and sends live updates to the browser through server-sent events and Web Push. The bridge opens no port to the outside. Access is by invitation, managed from PWA Invite Console, and the app updates itself with pwa-kit. Messages reach the app in a neutral format, so other sources, such as Telegram or email, could be added later. The project is open source under the GPL-3.0 licence.</p>
+                <p>Threadmark runs each part in its own rootless Podman container. A bridge holds the WhatsApp connection through the Baileys library, separate Gmail connectors for the Personal and Dev profiles each keep their own encrypted sign-in, and every connector keeps each message in a queue until the app has received it. The app runs on Node.js 24 with its built-in SQLite and sends live updates to the browser through server-sent events and Web Push. The connectors open no port to the outside. Access is by invitation, managed from PWA Invite Console, and the app updates itself with pwa-kit. Messages reach the app in a neutral format, which is how Gmail joined WhatsApp, and other sources, such as Telegram, could follow. The project is open source under the GPL-3.0 licence.</p>
             </div>
         </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against Threadmark commit 03d1afb92015f4a7f100986df22af76b0da286dc (2026-10-02). -->
+    <!-- Content checked against Threadmark commit 534d9feabe15ca8de6e0bd0e81ed9f8a0dfffff7 (2026-10-15). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Threadmark est une boîte d&#x27;attention privée et auto-hébergée pour les groupes et contacts WhatsApp choisis : elle fait ressortir paiements, rendez-vous, échéances et vos propres règles, et se contente de lire par conception.">
@@ -40,7 +40,7 @@
                 <div class="project-intro">
                     <span class="section-number">Outils du quotidien</span>
                     <h1>Threadmark</h1>
-                    <p class="project-lead">Transforme les groupes WhatsApp chargés en une courte liste de ce qui vous concerne : paiements, rendez-vous et échéances.</p>
+                    <p class="project-lead">Transformez des groupes WhatsApp chargés et Gmail en une courte liste de ce qui vous concerne : paiements, réunions et échéances.</p>
                     <div class="project-links">
                         <a href="https://github.com/zandaulion/Threadmark" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
                     </div>
@@ -51,43 +51,50 @@
 
             <div class="project-content reveal">
                 <h2>À propos de l'application</h2>
-                <p>Threadmark est une boîte d'attention privée pour les groupes et contacts WhatsApp que vous choisissez. Elle lit les nouveaux messages dès leur arrivée, en extrait les paiements, les rendez-vous, les échéances et tout ce que vous lui demandez de surveiller, et ne vous montre que cela. Tout le reste reste dans WhatsApp.</p>
+                <p>Threadmark est une boîte d'attention privée pour les groupes et personnes WhatsApp, ainsi que les libellés et expéditeurs Gmail, que vous choisissez. Il lit les nouveaux messages à leur arrivée, repère les paiements, réunions, échéances et tout ce que vous lui demandez de surveiller, et n'affiche que cela. Le reste reste dans WhatsApp ou Gmail.</p>
                 <p>Elle se connecte comme appareil associé, à la manière de WhatsApp Web, et se contente de lire par conception : elle n'envoie jamais de message, ne marque jamais une discussion comme lue, ne vous affiche jamais en ligne et ne lit jamais l'historique. La connexion n'est pas officielle : WhatsApp pourrait la modifier ou restreindre un compte qui l'utilise.</p>
-                <p>Chaque groupe et chaque contact est désactivé tant que vous ne l'activez pas. Les messages des autres discussions sont écartés avant toute analyse ou tout stockage, et les messages sélectionnés qui ne correspondent à rien ne sont pas conservés.</p>
+                <p>Gmail se connecte par l'accès en lecture seule de Google : Threadmark ne peut donc ni envoyer, ni supprimer, ni marquer un e-mail comme lu. Il démarre au moment de la connexion, sans importer d'anciens e-mails, ne récupère un e-mail complet que depuis un libellé ou un expéditeur que vous avez activé, et ne télécharge jamais les pièces jointes.</p>
+                <p>Chaque groupe, personne, libellé Gmail et expéditeur est désactivé jusqu'à ce que vous l'activiez. Les messages des autres sources sont écartés avant d'être vérifiés ou stockés, et les messages sélectionnés qui ne correspondent à rien ne sont pas conservés.</p>
 
                 <h2>Galerie</h2>
                 <p>Les discussions de ces captures sont inventées.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/Threadmark/threadmark-desktop-1920x1080.png" alt="La boîte de réception sur un grand écran, avec les profils Personal et Dev, les éléments ouverts et les sources suivies" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Threadmark/threadmark-tablet-landscape-1180x820.png" alt="La boîte de réception sur une tablette en paysage, à côté du panneau des sources actives" class="gallery-img" loading="lazy" decoding="async">
+                </div>
                 <div class="gallery-grid">
-                    <img src="../assets/Threadmark/threadmark-desktop-1440x1000.png" alt="La boîte sur un ordinateur, avec une photo à vérifier, une demande de l&#x27;école avec échéance et une livraison" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Threadmark/threadmark-mobile-390x844.png" alt="La boîte sur un téléphone, avec les éléments ouverts, les paiements et les rendez-vous" class="gallery-img" loading="lazy" decoding="async">
-                    <img src="../assets/Threadmark/threadmark-tablet-rules-834x1112.png" alt="Règles locales par expressions et moniteurs IA sur une tablette" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Threadmark/threadmark-mobile-sources-390x844.png" alt="Choisir les groupes et personnes WhatsApp, les libellés Gmail et les expéditeurs à suivre, sur un téléphone" class="gallery-img" loading="lazy" decoding="async">
+                    <img src="../assets/Threadmark/threadmark-tablet-rules-834x1112.png" alt="Règles d&#x27;expressions locales et moniteurs Jev sur une tablette" class="gallery-img" loading="lazy" decoding="async">
                     <img src="../assets/Threadmark/threadmark-mobile-rules-390x844.png" alt="Les règles sur un téléphone" class="gallery-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2>Comment ça marche</h2>
                 <ol>
-                    <li><strong>Connectez WhatsApp.</strong> Associez Threadmark comme appareil avec un code QR ou un code d'association.</li>
-                    <li><strong>Choisissez les discussions.</strong> Activez uniquement les groupes et contacts à surveiller. Cherchez par nom ou par numéro, ou importez des contacts depuis votre téléphone.</li>
+                    <li><strong>Connectez vos sources.</strong> Associez WhatsApp comme appareil avec un code QR ou un code d'association et, si vous le souhaitez, connectez Gmail en lecture seule.</li>
+                    <li><strong>Choisissez quoi suivre.</strong> Activez seulement les groupes, personnes, libellés Gmail et expéditeurs à surveiller. Cherchez par nom ou numéro, ou importez des contacts depuis votre téléphone.</li>
                     <li><strong>Laissez-la trier.</strong> Les détecteurs intégrés et vos propres règles par expressions vérifient chaque nouveau message sur le serveur. Si rien ne correspond et que Jev est activé, le service d'IA jette un second coup d'œil.</li>
                     <li><strong>Occupez-vous de l'essentiel.</strong> Marquez des éléments comme faits, reportez-les, ajoutez-les à un agenda ou signalez à Threadmark quand il s'est trompé.</li>
                 </ol>
 
                 <h2>Fonctionnalités</h2>
                 <ul>
-                    <li><strong>Paiements et rendez-vous, repérés localement :</strong> Les détecteurs intégrés lisent les messages en roumain et en anglais et en extraient montants, devises, IBAN, dates, heures et liens.</li>
-                    <li><strong>Vos propres règles :</strong> Les règles par expressions cherchent un ou tous vos mots, sans tenir compte de la casse ni des accents, et ne quittent jamais le serveur. Chacune peut être limitée à certaines discussions, envoyer ou non une alerte et être testée d'abord sur un exemple.</li>
+                    <li><strong>Paiements et rendez-vous, repérés localement :</strong> Des détecteurs intégrés lisent les messages en roumain et en anglais et en extraient montants, devises, IBAN, dates, heures et liens. Les factures sont repérées même sans montant, les renouvellements d'abonnement, changements de prix et paiements échoués sont suivis, et les reçus ou les annonces de paiements déjà effectués restent discrets.</li>
+                    <li><strong>Vos propres règles :</strong> Les règles d'expressions correspondent à l'un ou à tous vos mots, sans tenir compte de la casse ni des accents, et ne quittent jamais le serveur. Chacune peut être limitée à certaines discussions, envoyer une alerte ou non, et être testée d'abord sur un exemple. Règles et moniteurs peuvent être exportés sans aucune donnée personnelle, pour les partager ou les versionner.</li>
                     <li><strong>Des moniteurs en langage courant :</strong> Décrivez en une phrase ce qu'il faut surveiller, comme un colis ou une réservation qui demande votre attention, et choisissez le degré de certitude que Jev doit atteindre avant de signaler un message.</li>
-                    <li><strong>L'IA seulement en renfort :</strong> Quand rien ne correspond localement, le service facultatif Jev de TypeSafe AI cherche paiements, rendez-vous et rappels, et évalue l'urgence. Il ne reçoit que le texte du message, jamais le nom de la discussion, l'expéditeur, les numéros de téléphone ni les identifiants WhatsApp.</li>
+                    <li><strong>L'IA seulement en renfort :</strong> Quand rien ne correspond localement, le service facultatif Jev de TypeSafe AI cherche les paiements, réunions et rappels et évalue l'urgence. Il ne reçoit que le texte du message, jamais le nom de la discussion, l'expéditeur, les adresses e-mail, les numéros de téléphone ni les identifiants WhatsApp et Gmail.</li>
+                    <li><strong>Les promotions mises de côté :</strong> Les newsletters et offres de masse qui ne vous demandent rien passent discrètement dans une vue Promotional plutôt que dans la boîte de réception. Factures, demandes de paiement et vos propres règles restent toujours dans la boîte, et un seul geste ramène un élément mal classé.</li>
+                    <li><strong>Profils Personal et Dev :</strong> Gardez un compte Gmail professionnel à part, avec son propre fil, ses sources, ses règles et ses compteurs. Un sélecteur en haut indique combien d'éléments demandent votre attention dans chacun.</li>
                     <li><strong>Échéances et urgence :</strong> Les dates limites sont lues dans le message, les éléments affichent des badges à échéance et en retard, et les plus urgents remontent en tête.</li>
                     <li><strong>Alertes sur les paiements :</strong> Coordonnées bancaires modifiées, montants changés, doublons possibles et demandes inhabituelles de mots de passe ou de paiements sont signalés pour une seconde vérification.</li>
                     <li><strong>Pièces jointes, lues localement :</strong> Photos, PDF et messages vocaux peuvent être lus sur le serveur par reconnaissance de texte et transcription de la parole, puis supprimés aussitôt. Une note manuscrite illisible devient un rappel pour vérifier la photo.</li>
                     <li><strong>Changements et réponses :</strong> Threadmark peut repérer qu'un projet est corrigé ou annulé, et clôturer un rappel de réponse une fois que vous avez répondu. Les deux sont désactivés par défaut et conservent au plus 48 heures de texte récent.</li>
-                    <li><strong>Alertes et résumé quotidien :</strong> Des notifications push pour les nouveaux éléments, un titre urgent pour les urgents et, en option, un résumé quotidien à l'heure choisie.</li>
+                    <li><strong>Alertes et résumé quotidien :</strong> Des notifications push pour les nouveaux éléments, avec les boutons Done et Actions là où c'est possible, un titre d'urgence pour les éléments urgents et un résumé quotidien facultatif à l'heure choisie. Les alertes encore affichées se regroupent en un seul résumé au lieu de s'empiler.</li>
                     <li><strong>Conservé peu de temps :</strong> Les extraits repérés sont supprimés après 30 jours par défaut, sauf si leur élément est encore ouvert.</li>
                 </ul>
 
                 <h2>Sous le capot</h2>
-                <p>Threadmark comporte deux parties, chacune dans son propre conteneur Podman sans root. Un pont maintient la connexion à WhatsApp grâce à la bibliothèque Baileys et garde chaque message en file d'attente jusqu'à ce que l'application l'ait reçu. L'application tourne sur Node.js 24 avec son SQLite intégré et envoie des mises à jour en direct au navigateur par server-sent events et Web Push. Le pont n'ouvre aucun port vers l'extérieur. L'accès se fait sur invitation, gérée depuis PWA Invite Console, et l'application se met à jour seule avec pwa-kit. Les messages arrivent dans un format neutre : d'autres sources, comme Telegram ou l'e-mail, pourraient s'ajouter plus tard. Le projet est open source sous licence GPL-3.0.</p>
+                <p>Threadmark fait tourner chaque partie dans son propre conteneur Podman sans root. Un pont maintient la connexion à WhatsApp grâce à la bibliothèque Baileys, des connecteurs Gmail distincts pour les profils Personal et Dev conservent chacun leur propre connexion chiffrée, et chaque connecteur garde chaque message en file d'attente jusqu'à ce que l'application l'ait reçu. L'application tourne sur Node.js 24 avec son SQLite intégré et envoie des mises à jour en direct au navigateur par server-sent events et Web Push. Les connecteurs n'ouvrent aucun port vers l'extérieur. L'accès se fait sur invitation, gérée depuis PWA Invite Console, et l'application se met à jour seule avec pwa-kit. Les messages arrivent dans un format neutre : c'est ainsi que Gmail a rejoint WhatsApp, et d'autres sources, comme Telegram, pourraient suivre. Le projet est open source sous licence GPL-3.0.</p>
             </div>
         </div>
 
