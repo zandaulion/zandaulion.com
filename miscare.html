@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mișcare — An adaptive, zero-friction daily movement PWA designed from zero with Gemini Vision equipment recognition and a no-shaming philosophy.">
+    <meta name="description" content="Mișcare offers adaptive guided routines and an exercise journal, with a local Android preview and a self-hosted web edition. Start from zero, at your own pace.">
     <title>Mișcare - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <link rel="stylesheet" href="workshop.css?v=3">
@@ -43,6 +43,8 @@
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Launch Web App</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">Download Android preview</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Release notes &amp; checksums</a>
                     <a href="miscare-privacy.html" class="btn btn-outline">Privacy Policy</a>
                 </div>
                 </div>
@@ -52,11 +54,15 @@
             <div class="project-content reveal">
 
 
+                <h2>Android Preview</h2>
+                <p><strong>Mișcare 0.1.0</strong> is an early-access Android download for Android 7.0 or newer. It bundles guided routines, 45 illustrated exercises, 12 interface languages, and a local workout journal. No account, server, or Internet permission is required.</p>
+                <p>The Android app starts with separate local data; it does not import PWA history automatically. JSON import replaces the current profile and journal. See the <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">installation and backup guide</a> for checksums, signing compatibility, and remaining validation. Reminders are not implemented.</p>
+
                 <h2>About The Project</h2>
                 <p>Start from zero. Move at your own pace. No guilt, just adjustment.</p>
-                <p>Mișcare is an adaptive Progressive Web App (PWA) designed to remove every layer of psychological and physical friction associated with daily fitness. Engineered specifically for absolute beginners or individuals returning after long pauses, Mișcare eliminates complicated set/rep spreadsheets, punitive streak counters, and intimidating gym jargon.</p>
+                <p>Mișcare is an adaptive exercise app with a local Android edition and a self-hosted web edition. It is designed for beginners and people returning after a break, with short routines, equipment choices, and a journal. Progression is a choice, and rest days carry no lost-streak penalty.</p>
                 <p>Upon opening the app, users are greeted directly with "Today's Session" — ready to launch with a single tap. If life gets busy, a one-click "Make it 5 minutes" option shortens the workout. If life gets in the way for days, there are no broken streaks or guilt messages; the app simply welcomes you back with a gentle re-entry routine.</p>
-                <p>Built with Vanilla JavaScript (ES modules) and Node.js with native SQLite, Mișcare integrates with Gemini Vision to recognize available home equipment from photos, pwa-kit for zero-downtime offline caching and seamless updates, and pwa-invite-console for passwordless device onboarding.</p>
+                <p>The self-hosted PWA uses Vanilla JavaScript, Node.js and SQLite, with pwa-kit updates and pwa-invite-console device invitations. The Android app bundles the interface and adaptive engine in Capacitor, stores its profile and journal locally in IndexedDB, and receives executable updates through APK installation.</p>
 
                 <h2>Gallery</h2>
                 <div class="gallery-grid">
@@ -68,12 +74,12 @@
 
                 <h2>Features</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Starting from Zero:</strong> Safe, foundational bodyweight movements (wall push-ups, chair sit-to-stand, gentle glute bridges, shoulder mobility stretches) paired with warm illustrated visual guides and protection filters for knees, lower back, and wrists.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Starting from Zero:</strong> Foundational bodyweight movements (wall push-ups, chair sit-to-stand, gentle glute bridges, shoulder mobility stretches) paired with warm illustrated visual guides and protection filters for knees, lower back, and wrists.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Zero-Friction Daily Sessions:</strong> The home screen serves today's routine immediately. Includes one-tap variations like <em>"Make it 5 min"</em> and <em>"Swap exercise"</em>, accompanied by a quiet timer and Web Audio API chime.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Gemini Vision Equipment Recognition:</strong> Take a photo of household items or exercise equipment (dumbbells, resistance bands, yoga mats, or sturdy chairs). Google Gemini Vision automatically detects items and unlocks matching exercise variants.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Equipment filters:</strong> Choose the equipment you have and the areas you want to protect; routines adapt to those selections.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 "No Shaming" Adaptive Logic:</strong> Active days are accumulated as permanent milestones rather than fragile streaks. If a session is rated "A bit tough", the next routine scales intensity down automatically; if returning after a break, an automatic gentle re-adaptation session is scheduled.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 Instant Updates via PWA Kit:</strong> Integrated with <code>pwa-kit</code> for network-first service worker caching with content-hash version stamping and non-disruptive update prompts.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 Passwordless Device Pairing:</strong> Seamless onboarding via <code>pwa-invite-console</code> pairing codes (<code>XXXX-YYYY-ZZZZ</code>) issuing secure, long-lived device session tokens.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 PWA Updates:</strong> Integrated with <code>pwa-kit</code> for network-first service worker caching with content-hash version stamping and non-disruptive update prompts.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 PWA Device Pairing:</strong> Seamless onboarding via <code>pwa-invite-console</code> pairing codes (<code>XXXX-YYYY-ZZZZ</code>) issuing secure, long-lived device session tokens.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 Dual Theme &amp; Offline Resilience:</strong> Automatic light/dark palette with forest-emerald accents, fully functional offline backed by IndexedDB and LocalStorage.</li>
                 </ul>
 
@@ -85,7 +91,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>Backend Engine</h3>
-                        <p>Node.js v24 leveraging native <code>DatabaseSync</code> from <code>node:sqlite</code>, Express REST endpoints, and Google Gemini Multimodal Vision API integration.</p>
+                        <p>The PWA uses Node.js 24, native <code>node:sqlite</code>, and Express REST endpoints. The Android build runs the shared routine engine locally and needs no backend.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Integrations</h3>
