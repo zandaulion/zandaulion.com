@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <!-- Conținutul despre kitul pentru dezvoltatori a fost verificat cu android-store-screenshot-kit v0.1.0. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android Store Screenshot Kit produce capturi de ecran repetabile pentru Google Play din aplicații Android reale, pe Firebase Test Lab, apoi le verifică și înregistrează fiecare rulare.">
@@ -42,6 +42,8 @@
                     <h1>Android Store Screenshot Kit</h1>
                     <p class="project-lead">Capturi reale din aplicații Android reale, făcute la fel de fiecare dată și gata pentru Google Play.</p>
                     <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/download/v0.1.0/android-store-screenshot-kit-0.1.0.zip" class="btn btn-primary">Descarcă kitul pentru dezvoltatori · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Note și SHA-256</a>
                         <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Vezi pe GitHub</a>
                     </div>
                 </div>
@@ -52,6 +54,7 @@
                 <h2>Despre proiect</h2>
                 <p>Capturile pentru magazin se învechesc de fiecare dată când aplicația se schimbă, iar a le face de mână pe telefon e lent și niciodată la fel de două ori. Acest kit le transformă într-un pas repetabil: fiecare aplicație păstrează un mic test care își pregătește propriile date și îi parcurge ecranele, iar kitul se ocupă de rest.</p>
                 <p>Construiește aplicația și testul ei, le rulează pe un dispozitiv Firebase Test Lab ales, urmărește rularea până la capăt, descarcă capturile și le verifică după cerințele Google Play înainte de a le copia în folderul de magazin al aplicației.</p>
+                <p>Arhiva conține cod sursă și o configurație sintetică, nu un APK sau capturi gata pentru magazin. Rularea în Test Lab necesită propriul proiect cloud și poate consuma cotă plătită.</p>
 
                 <h2>Cum funcționează</h2>
                 <ol>
@@ -88,7 +91,7 @@
                 </ul>
 
                 <h2>Cum este construit</h2>
-                <p>Instrumentul din linia de comandă este un singur script Python care nu are nevoie de nimic în afară de Python 3.11. Funcțiile comune sunt o mică bibliotecă Android scrisă în Java, așa că nu impun nicio versiune de Kotlin aplicațiilor care le folosesc și funcționează atât cu AGP 8, cât și cu AGP 9. În CI, dispozitivele virtuale pot rula la fiecare pull request, iar cele fizice pot fi păstrate pentru versiunile candidate. Kitul este open source, sub licența GPL-3.0.</p>
+                <p>Instrumentul din linia de comandă este un singur script Python care nu are nevoie de nimic în afară de Python 3.11. Funcțiile comune sunt o mică bibliotecă Android scrisă în Java, așa că nu impun nicio versiune de Kotlin aplicațiilor care le folosesc și funcționează atât cu AGP 8, cât și cu AGP 9. În CI, dispozitivele virtuale pot rula la fiecare pull request, iar cele fizice pot fi păstrate pentru versiunile candidate. Codul și documentația originale ale kitului sunt licențiate GPL-3.0-or-later.</p>
             </div>
         </div>
 

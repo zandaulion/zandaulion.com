@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
 <head>
-    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <!-- Developer-kit content checked against android-store-screenshot-kit v0.1.0. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android Store Screenshot Kit produces repeatable Google Play screenshots from real Android apps on Firebase Test Lab, then validates them and records every run.">
@@ -42,6 +42,8 @@
                     <h1>Android Store Screenshot Kit</h1>
                     <p class="project-lead">Real screenshots of real Android apps, taken the same way every time and ready for Google Play.</p>
                     <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/download/v0.1.0/android-store-screenshot-kit-0.1.0.zip" class="btn btn-primary">Download developer kit · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Release notes &amp; SHA-256</a>
                         <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                     </div>
                 </div>
@@ -52,6 +54,7 @@
                 <h2>About The Project</h2>
                 <p>Store screenshots go out of date every time an app changes, and taking them by hand on a phone is slow and never quite the same twice. This kit turns them into a repeatable step: each app keeps a small test that sets up its own data and walks through its screens, and the kit does everything else.</p>
                 <p>It builds the app and its test, runs them on a chosen Firebase Test Lab device, follows the run to the end, downloads the screenshots, and checks them against Google Play's requirements before copying them into the app's store folder.</p>
+                <p>The download contains source code and a synthetic configuration, not an APK or store screenshots. Running Test Lab needs your own cloud project and may use billed quota.</p>
 
                 <h2>How it works</h2>
                 <ol>
@@ -88,7 +91,7 @@
                 </ul>
 
                 <h2>Under the hood</h2>
-                <p>The command-line tool is a single Python script that needs nothing beyond Python 3.11. The shared helpers are a small Android library written in Java, so they add no Kotlin version requirement to the apps that use them and work with both AGP 8 and AGP 9. In CI, virtual devices can run on every pull request, with physical devices kept for release candidates. The kit is open source under the GPL-3.0 licence.</p>
+                <p>The command-line tool is a single Python script that needs nothing beyond Python 3.11. The shared helpers are a small Android library written in Java, so they add no Kotlin version requirement to the apps that use them and work with both AGP 8 and AGP 9. In CI, virtual devices can run on every pull request, with physical devices kept for release candidates. The original kit code and documentation are licensed under GPL-3.0-or-later.</p>
             </div>
         </div>
 
