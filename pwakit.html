@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pwa-kit - A zero-dependency, self-updating PWA mechanism extracted and generalised from Bitey.">
+    <meta name="description" content="pwa-kit - A dependency-free service-worker update helper for web apps.">
     <title>pwa-kit ⚡ - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <link rel="stylesheet" href="workshop.css?v=3">
@@ -39,8 +39,10 @@
                 <div class="project-intro">
                     <span class="section-number">Behind the scenes</span>
                     <h1>pwa-kit</h1>
-                    <p class="project-lead">The little building block that helps web apps work offline and stay up to date.</p>
+                    <p class="project-lead">A small update helper with an offline fallback for previously visited resources.</p>
                     <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/download/v0.1.0/pwa-kit-0.1.0.zip" class="btn btn-primary" style="margin-right: 12px;">Download developer kit · 0.1.0</a>
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Release notes &amp; SHA-256</a>
                     <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">View on GitHub</a>
                 </div>
                 </div>
@@ -51,9 +53,9 @@
 
 
                 <h2>About The Project</h2>
-                <p>The update mechanism from Bitey, generalised: a PWA that updates itself and says so afterwards, rather than asking permission it does not need.</p>
-                <p>Copy <code>sw.js</code> and <code>pwa-update.js</code> into an app's web root and wire them up. There is no build step, no bundler, and zero dependencies &mdash; which is the point: these apps are static directories.</p>
-                <p>A new service worker installs and activates immediately without waiting for tabs to close. Each open window safely completes current work before reloading seamlessly onto the latest version.</p>
+                <p>A small service-worker update helper for web apps, with a visible update notice and a guard for unfinished work.</p>
+                <p>Copy <code>sw.js</code>, <code>sw-update.js</code> and <code>pwa-update.js</code> into an app's web root and wire them up. There is no frontend build step or package dependency. The ZIP also has an example and optional server integration files.</p>
+                <p>A new service worker activates immediately. Visible pages can postpone reloading while work is unfinished; unresponsive clients reload after a short grace period. Adapt the reference cache policy before using it for private content.</p>
 
                 <h2>Gallery</h2>
                 <div class="gallery-grid">
@@ -63,7 +65,7 @@
                 <h2>Features</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Immediate Activation:</strong> New workers install and take over without stale workers lingering for days across open browser tabs.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Unsaved Work Protection (<code>isBusy</code>):</strong> The worker asks rather than blindly navigating; pages defer reloads until pending edits or form states are safely resolved.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Unsaved Work Guard (<code>isBusy</code>):</strong> Responsive, visible pages can defer reloads while edits are unfinished; apps should save important drafts separately.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Network-First Freshness:</strong> Online requests always win to ensure deployed changes take effect on the very next reload, falling back to cache when offline.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 Clean Session Storage Notifications:</strong> Avoids polluting URL query strings with update flags, informing users cleanly through in-app toasts.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 Built-in Cache Escape Hatch:</strong> Includes an emergency unregister and cache-bust mechanism for wedged clients.</li>
