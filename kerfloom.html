@@ -153,7 +153,7 @@
                 <h2>Run your own copy</h2>
                 <p>Kerfspan is open source, and a Compose quick start runs both of its services with Docker or Podman. It needs about 3 GB of disk for the two images, which build for x86-64 and ARM64. Set an admin token and a project encryption key, start the containers, and create a one-time invite for your first browser. Keep a backup of the encryption key: projects cannot be decrypted without it.</p>
                 <p>Kerfspan needs a secure connection: HTTPS, or localhost on the machine that runs it. To use it from other devices, put it behind a reverse proxy that handles TLS, such as Caddy or Tailscale. Over plain HTTP, the sign-in page explains why it cannot continue.</p>
-                <div class="project-links" style="margin-bottom: 24px;"><a href="https://github.com/zandaulion/kerfspan#quick-start" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Read the quick start</a></div>
+                <div class="project-links" style="margin-bottom: 24px;"><a href="https://github.com/zandaulion/kerfspan/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download self-host kit</a><a href="https://github.com/zandaulion/kerfspan#quick-start" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Read the quick start</a></div>
 
                 <h2>Behind the scenes</h2>
                 <p>The browser handles line-art conversion, deterministic geometry, editing, and the offline cache. A Node/Express service manages invite-based device access and encrypted workspaces; a private Python/FastAPI service uses OpenCV and MediaPipe for photographic analysis and style rendering. The application is licensed under GPL-3.0-or-later.</p>
