@@ -55,7 +55,7 @@
                 <h2>关于项目</h2>
                 <p>从正面照片生成分层肖像的切割图案，将金属薄板逐层手工粘合，组成宛如地形图的浮雕。</p>
                 <p>Faceslice 将正面照片转换为金属片或卡片纸上分层浮雕的切割图案。输入以毫米为单位的瞳距 (IPD) 以设置比例。结果是头部可见侧的浮雕，而不是整个头部的扫描。</p>
-                <p>Faceslice结合了三种计算机视觉模型来估计浮雕：分割追踪轮廓；单眼深度估计广阔的体积；面部标志添加鼻子、眼睛和嘴唇周围的细节。几何形状是对单个图像的估计。</p>
+                <p>Faceslice 结合三种计算机视觉模型估计浮雕形状：分割模型提取剪影，单目深度估计整体形体，面部关键点补充鼻子、眼睛和嘴唇周围的细节。几何形状只是基于单张图像的估计。</p>
                 <p>浮雕以可调角度切成平行平面。正面切片相互嵌套，并带有雕刻的对齐指南。该工具可以去除隐藏的内部材料并导出 DXF 切割片。制造前与车间检查尺寸和切割设置。</p>
 
                 <h2>图片集</h2>
@@ -69,14 +69,14 @@
 
                 <h2>功能</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 单张照片救济：</strong> 将一张正面照片转换为分层浮雕，并使用您提供的瞳孔距离测量值进行缩放。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 单张照片生成浮雕：</strong> 将一张正面照片转换为分层浮雕，并使用您提供的瞳孔距离测量值进行缩放。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 3模型AI融合引擎：</strong> 结合 MediaPipe 多类分割、ONNX 单眼深度估计 (Depth Anything V2) 和 MediaPipe 面部标志器，以平衡头骨体积和面部清晰度。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️地形轮廓切片：</strong> 将实体切成具有自由角度控制的平行平面（正面用于同心嵌套等高面，水平用于侧面剖面叠层）。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 自对准装配指南：</strong> 当正面切片时，每个金属层都嵌套在下面的金属层内，并且下一块金属板的边界线直接雕刻在其表面上，以便无需夹具即可轻松对齐。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ 内部镂空&amp;材料经济：</strong> 自动去除隐藏的内部几何形状，减少材料消耗和重量高达 80%（例如，10 公斤实心钢减少到 1.9 公斤空心环），同时保持坚固的粘合边缘。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ 参数化制造控制：</strong> 板材厚度（0.5-10 毫米）、浮雕压缩、切口补偿、面部浮雕夸张和切片角度的实时交互式调整。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ 材料和重量估计：</strong> 显示钢、黄铜和铝的板数、轮廓、板材面积、堆叠高度和估计重量。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 DXF 出口：</strong> 导出尺寸适合所选库存的矢量切割片材。切割前与制造商核实。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 DXF 导出：</strong> 导出与所选板材尺寸相符的矢量切割图。切割前请与加工方核对。</li>
                 </ul>
 
                 <h2>架构与技术堆栈</h2>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>视觉与几何引擎</h3>
-                        <p>Python 3 引擎使用 MediaPipe、ONNX 运行时、NumPy、SciPy 和 OpenCV。它自己的几何形状和 DXF 模块可处理切片和切割片材。</p>
+                        <p>Python 3 引擎使用 MediaPipe、ONNX Runtime、NumPy、SciPy 和 OpenCV。自有几何与 DXF 模块负责生成分层和切割图。</p>
                     </div>
                     <div class="feature-item">
                         <h3>部署注意事项</h3>

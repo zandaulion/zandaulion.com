@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hearth OCR este un prototip care citește fotografii ale tensiometrului în browser. Rulează demonstrația locală și verifică fiecare valoare pe aparat.">
+    <title>Hearth OCR - Detalii proiect</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ro/hearth.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/hearth.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/hearth.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/hearth.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/hearth.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/hearth.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/hearth.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/hearth.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/hearth.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/hearth.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/hearth.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/hearth.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/hearth.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/hearth.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="hearth.html"></portfolio-header>
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ro">← Înapoi în atelier</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">În culise</span>
+                    <h1>Hearth OCR</h1>
+                    <p class="project-lead">Un prototip pentru citirea fotografiilor tensiometrului în browser. Verifică personal fiecare valoare pe aparat.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/download/v0.1.0/hearth-bp-ocr-v0.1.0.zip" class="btn btn-primary">Descarcă versiunea experimentală · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Note de lansare și SHA-256</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Vezi pe GitHub</a>
+                    </div>
+                </div>
+                <img src="../assets/Hearth/feature.svg" alt="Ilustrația unui ecran de tensiometru alături de o listă de verificare" class="project-hero-image hero-landscape" width="800" height="420">
+            </div>
+            <div class="project-content reveal">
+                <h2>Versiune experimentală pentru browser</h2>
+                <p>Hearth citește tensiunea sistolică (SYS), tensiunea diastolică (DIA) și pulsul din fotografii ale ecranelor verticale obișnuite de tensiometru, cu trei rânduri. Alege o fotografie sau folosește camera, decupează ecranul și corectează rezultatul înainte de copiere.</p>
+                <p class="platform-status"><strong>Verifică fiecare valoare pe tensiometru înainte de a folosi sau copia rezultatul.</strong> Acesta este un prototip OCR experimental, fără validare medicală. Precizia recunoașterii pe fotografii noi, realizate în condiții reale, rămâne nedovedită.</p>
+                <h2>Încearcă versiunea experimentală</h2>
+                <p>Descarcă și dezarhivează fișierul ZIP atașat versiunii. Include codul-sursă, două modele ONNX și fișierele necesare rulării în browser. Nu necesită cont, instalare prin npm sau antrenarea modelelor. Se recomandă Python 3.12 sau mai nou.</p>
+                <p>Din directorul dezarhivat, rulează:</p>
+                <pre dir="ltr"><code>python3 prototype/serve.py</code></pre>
+                <p>Deschide demonstrația locală într-un browser actualizat, pe același calculator:</p>
+                <p><a href="http://127.0.0.1:8765/" dir="ltr"><code>http://127.0.0.1:8765/</code></a></p>
+                <p>Serverul ascultă doar pe computerul dvs. Accesul la cameră de pe un alt dispozitiv necesită un context de browser securizat, cum ar fi HTTPS.</p>
+                <h2>Cum funcționează</h2>
+                <p>Un detector găsește ecranul, iar un model de recunoaștere citește cifrele de pe rândurile sale. Inferența ONNX rulează într-un worker al browserului. Verificările de consistență și reluările cu alte decupaje pot respinge rezultatele incerte sau repeta recunoașterea; nu garantează o citire corectă.</p>
+                <h2>Confidențialitate și utilizare offline</h2>
+                <p>În utilizarea obișnuită, fotografiile sunt procesate în memoria browserului: aplicația nu le trimite pe server și nu le salvează. După o primă încărcare completă, un service worker păstrează aplicația și modelele în cache pentru utilizare offline. Instrumentele locale de evaluare pentru dezvoltare reprezintă un flux separat.</p>
+                <h2>Reutilizare și integrare</h2>
+                <p>Codul original și modelele incluse sunt licențiate AGPL-3.0-only. ONNX Runtime Web își păstrează licența MIT. Fișa modelului explică proveniența, sumele de verificare și limitele; ghidul de integrare descrie reutilizarea într-o altă aplicație.</p>
+                <div class="project-links">
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/MODEL_CARD.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Citește fișa modelului</a>
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/INTEGRATION.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Citește ghidul de integrare</a>
+                </div>
+            </div>
+        </div>
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Descoperă o altă pistă</span><h2 id="related-title">Poate îți mai place și…</h2></div><p><a href="index.html#collection" hreflang="ro">Vezi întreaga colecție ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="bpdigitizer.html" hreflang="ro"><div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">Unelte de zi cu zi</div><h3>BP Digitizer <span aria-hidden="true">↗</span></h3><p>Înregistrează tensiunea arterială, urmărește evoluția și exportă istoricul. O singură aplicație pentru Android și web.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ro"><div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">În culise</div><h3>pwa-kit <span aria-hidden="true">↗</span></h3><p>Mica piesă care ajută aplicațiile web să funcționeze offline și să rămână la zi.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="screenshotkit.html" hreflang="ro"><div class="collection-image"><img src="../assets/ScreenshotKit/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">În culise</div><h3>Android Store Screenshot Kit <span aria-hidden="true">↗</span></h3><p>Capturi reale pentru Play Store, din aplicații Android reale, făcute la fel de fiecare dată.</p></a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=6" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

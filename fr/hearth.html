@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr-FR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hearth OCR lit expérimentalement des photos de tensiomètres dans le navigateur. Lancez la version fournie localement et vérifiez chaque valeur sur l&#x27;appareil.">
+    <title>Hearth OCR - Détails du projet</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/fr/hearth.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/hearth.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/hearth.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/hearth.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/hearth.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/hearth.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/hearth.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/hearth.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/hearth.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/hearth.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/hearth.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/hearth.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/hearth.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/hearth.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="hearth.html"></portfolio-header>
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="fr-FR">← Retour à l’atelier</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Dans les coulisses</span>
+                    <h1>Hearth OCR</h1>
+                    <p class="project-lead">Un outil expérimental qui lit des photos de tensiomètres dans le navigateur. Chaque valeur doit être vérifiée par vos soins.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/download/v0.1.0/hearth-bp-ocr-v0.1.0.zip" class="btn btn-primary">Télécharger l'aperçu expérimental · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Notes de version et SHA-256</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                    </div>
+                </div>
+                <img src="../assets/Hearth/feature.svg" alt="Illustration d&#x27;un écran de tensiomètre à côté d&#x27;une liste de vérification" class="project-hero-image hero-landscape" width="800" height="420">
+            </div>
+            <div class="project-content reveal">
+                <h2>Version expérimentale pour navigateur</h2>
+                <p>Hearth lit la pression systolique (SYS), la pression diastolique (DIA) et le pouls sur des photos d'écrans de tensiomètres courants, verticaux et à trois lignes. Choisissez une photo ou utilisez l'appareil photo, recadrez l'écran et corrigez le résultat avant de le copier.</p>
+                <p class="platform-status"><strong>Vérifiez chaque valeur sur le tensiomètre avant d'utiliser ou de copier une mesure.</strong> Il s'agit d'un OCR expérimental, pas d'un lecteur médical validé. La précision de la reconnaissance sur les nouvelles photos du monde réel n’a pas encore été prouvée.</p>
+                <h2>Essayez l'aperçu</h2>
+                <p>Téléchargez et extrayez la version ci-jointe ZIP. Il comprend la source, deux modèles ONNX et le runtime du navigateur. Aucun compte, aucune installation npm ou formation de modèle n'est nécessaire. Python 3.12 ou version ultérieure est recommandé.</p>
+                <p>Depuis le dossier extrait, exécutez :</p>
+                <pre dir="ltr"><code>python3 prototype/serve.py</code></pre>
+                <p>Utilisez un navigateur actuel sur le même ordinateur pour ouvrir l'aperçu local :</p>
+                <p><a href="http://127.0.0.1:8765/" dir="ltr"><code>http://127.0.0.1:8765/</code></a></p>
+                <p>Le serveur écoute uniquement sur votre ordinateur. L'accès à la caméra depuis un autre appareil nécessite un contexte de navigateur sécurisé tel que HTTPS.</p>
+                <h2>Comment ça marche</h2>
+                <p>Un détecteur repère l'écran et un modèle de reconnaissance lit les chiffres de ses lignes. L'inférence ONNX s'exécute dans un worker du navigateur. Les contrôles de cohérence et les nouveaux essais de recadrage peuvent rejeter un résultat incertain ou relancer la reconnaissance ; ils ne garantissent pas une lecture correcte.</p>
+                <h2>Confidentialité et utilisation hors ligne</h2>
+                <p>En utilisation normale, les photos sont traitées dans la mémoire du navigateur : l'application ne les envoie pas à un serveur et ne les enregistre pas. Après un premier chargement complet, le service worker met l'application et les modèles en cache pour une utilisation hors ligne. Les outils locaux d'évaluation pour le développement constituent un flux distinct.</p>
+                <h2>Réutilisation et intégration</h2>
+                <p>Le code original et les modèles fournis sont sous licence AGPL-3.0-only. ONNX Runtime Web conserve sa licence MIT. La fiche du modèle explique la provenance, les sommes de contrôle et les limites ; le guide d'intégration décrit la réutilisation dans une autre application.</p>
+                <div class="project-links">
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/MODEL_CARD.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Lire la fiche modèle</a>
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/INTEGRATION.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Lire le guide d'intégration</a>
+                </div>
+            </div>
+        </div>
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Poursuivez la découverte</span><h2 id="related-title">Vous aimerez peut-être aussi…</h2></div><p><a href="index.html#collection" hreflang="fr-FR">Voir toute la collection ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="bpdigitizer.html" hreflang="fr-FR"><div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">Outils du quotidien</div><h3>BP Digitizer <span aria-hidden="true">↗</span></h3><p>Notez votre tension, suivez son évolution et exportez votre historique. Une seule application pour Android et le Web.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="fr-FR"><div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">Dans les coulisses</div><h3>pwa-kit <span aria-hidden="true">↗</span></h3><p>Une petite brique qui aide les applications Web à fonctionner hors connexion et à rester à jour.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="screenshotkit.html" hreflang="fr-FR"><div class="collection-image"><img src="../assets/ScreenshotKit/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">Dans les coulisses</div><h3>Android Store Screenshot Kit <span aria-hidden="true">↗</span></h3><p>De vraies captures pour le Play Store, prises dans de vraies applications Android, de la même façon à chaque fois.</p></a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=6" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

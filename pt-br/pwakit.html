@@ -53,7 +53,7 @@
 
 
                 <h2>Sobre o projeto</h2>
-                <p>Um pequeno auxiliar de atualização do service trabalhador para aplicativos da web, com um aviso de atualização visível e uma proteção para trabalhos inacabados.</p>
+                <p>Um pequeno auxiliar de atualização por service worker para aplicativos web, com aviso visível e proteção do trabalho inacabado.</p>
                 <p>Cópia <code>sw.js</code>, <code>sw-update.js</code> e <code>pwa-update.js</code> na raiz da web de um aplicativo e conecte-os. Não há etapa de construção de frontend ou dependência de pacote. O ZIP também possui um exemplo e arquivos opcionais de integração de servidor.</p>
                 <p>Um novo service worker é ativado imediatamente. As páginas visíveis podem adiar o recarregamento enquanto o trabalho está inacabado; clientes que não respondem são recarregados após um curto período de carência. Adapte a política de cache de referência antes de usá-la para conteúdo privado.</p>
 
@@ -65,7 +65,7 @@
                 <h2>Recursos</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Ativação imediata:</strong> Novos trabalhadores são instalados e assumidos sem que trabalhadores obsoletos permaneçam por dias nas guias abertas do navegador.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Guarda de trabalho não salvo (<code>isBusy</code>):</strong> Páginas responsivas e visíveis podem adiar recarregamentos enquanto as edições estão inacabadas; os aplicativos devem salvar rascunhos importantes separadamente.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Proteção de alterações não salvas (<code>isBusy</code>):</strong> Páginas visíveis que respondem podem adiar a recarga enquanto houver alterações inacabadas; os aplicativos devem salvar rascunhos importantes separadamente.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Atualização da rede em primeiro lugar:</strong> As solicitações on-line sempre vencem para garantir que as alterações implantadas entrem em vigor na próxima recarga, voltando ao cache quando estiver off-line.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 Notificações de armazenamento de sessão limpa:</strong> Evita poluir strings de consulta de URL com sinalizadores de atualização, informando os usuários de forma clara por meio de brindes no aplicativo.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 Escotilha de escape de cache integrada:</strong> Inclui um mecanismo de cancelamento de registro de emergência e bloqueio de cache para clientes bloqueados.</li>

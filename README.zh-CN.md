@@ -8,7 +8,7 @@
 
 **[访问 zandaulion.com](https://zandaulion.com/)** · [罗马尼亚系列](https://zandaulion.com/ro/index.html)
 
-该存储库包含 Zandaulion 网站：24 个项目的可搜索集合、各个项目页面和交互式 Sankey 图表编辑器。主页和每个项目页面都有 12 种语言版本。该站点是静态 HTML、CSS 和普通 JavaScript，托管在 GitHub Pages 上。
+该存储库包含 Zandaulion 网站：25 个项目的可搜索集合、各个项目页面和交互式 Sankey 图表编辑器。主页和每个项目页面都有 12 种语言版本。该站点是静态 HTML、CSS 和普通 JavaScript，托管在 GitHub Pages 上。
 
 ## README 译本
 
@@ -38,6 +38,7 @@
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
+| Hearth OCR | [hearth.html](hearth.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan，原名 Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -125,7 +126,7 @@ python -m http.server 8765 --bind 127.0.0.1
 python scripts/build_locales.py
 ```
 
-该生成器生成 12 个主页、264 个翻译项目页面和 `language-data.js`。它还在 24 个英语项目页面上维护规范和替代语言链接。提交这些生成的输出及其来源； GitHub Pages 直接为他们服务，无需运行 Python 生成器。
+该生成器生成 12 个主页、275 个翻译项目页面和 `language-data.js`。它还在 25 个英语项目页面上维护规范和替代语言链接。提交这些生成的输出及其来源； GitHub Pages 直接为他们服务，无需运行 Python 生成器。
 
 不要直接编辑生成的主页、翻译的 HTML 或 `language-data.js`：重新生成将替换这些编辑。主页目录必须具有匹配的非空键。项目目录使用源文本作为键，因此对英文副本的更改需要相应的翻译更新。缺少翻译会导致构建失败。
 
@@ -154,7 +155,7 @@ node --test scripts/test_language.cjs
 ```
 
 - 构建检查会检测过时的生成输出和丢失的翻译。
-- 站点检查涵盖了所有 311 个 HTML 页面：12 个主页、288 个项目页面、10 个隐私声明和 1 个兼容性重定向。它检查本地链接、资产、保留的隐私标记之外的重复 ID、项目语言元数据、相互 SEO 链接和阿拉伯语方向。对于 `--url`，它还检查 HTTP 响应并将提供的隐私声明与其源文件进行比较。
+- 站点检查涵盖了所有 323 个 HTML 页面：12 个主页、300 个项目页面、10 个隐私声明和 1 个兼容性重定向。它检查本地链接、资产、保留的隐私标记之外的重复 ID、项目语言元数据、相互 SEO 链接和阿拉伯语方向。对于 `--url`，它还检查 HTTP 响应并将提供的隐私声明与其源文件进行比较。
 - 语言测试涵盖首选项优先级、区域匹配、阻止存储、文件和子目录根、重定向行为和部分保存。
 
 对于离线链接检查，请运行 `python scripts/check_site.py`，而不运行 `--url`。还要在浏览器中查看受影响的页面：移动布局、阿拉伯语方向、语言切换、图库键盘控件和编辑器交互。

@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 from site_locales import LANGUAGES
 
 FILES = ('admitere.html', 'bankdwhstudio.html', 'bpdigitizer.html', 'casierul.html', 'faceslice.html', 'gravitygarden.html',
-         'gravitytdg.html', 'gravitywarp.html', 'intarzieri.html', 'kerfloom.html',
+         'gravitytdg.html', 'gravitywarp.html', 'hearth.html', 'intarzieri.html', 'kerfloom.html',
          'magpie.html', 'miscare.html', 'olxdeals.html', 'omaha.html', 'orbitpuzzles.html',
          'palebluedot.html', 'plate.html', 'pwainvite.html', 'pwakit.html', 'sankey.html', 'screenshotkit.html',
          'spendosaurus.html', 'thermostat.html', 'threadmark.html')
@@ -18,7 +18,7 @@ BRANDS = {'Zandaulion', 'Admitere Liceu Kit', 'Bank DWH Studio', 'BP Digitizer',
           'OLX Deals', 'Omaha', 'OrbitPuzzles', 'Pale Blue Dot', 'Bitey', 'PWA Invite',
           'PWA Kit', 'Sankey', 'Spendosaurus', 'Thermostat', 'PWAInvite', 'PWAKit'}
 BRANDS.update({'Android Store Screenshot Kit', 'Casierul clasei', 'Threadmark', 'Intârzieri Tren', 'OLX Deal Finder', 'Pocket Omaha', 'PWA Invite Console',
-               'pwa-kit', 'Thermostat Monitor'})
+               'pwa-kit', 'Thermostat Monitor', 'Hearth OCR', 'Pocket Omaha Core'})
 UI = {
     'explore': 'Keep exploring', 'viewer': 'Project image viewer',
     'closeLabel': 'Close image viewer', 'close': 'Close ×',

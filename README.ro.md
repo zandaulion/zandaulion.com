@@ -8,7 +8,7 @@ Un atelier jucăuș pentru idei curioase: aplicații, jocuri și mici unelte de 
 
 **[Vizitați zandaulion.com](https://zandaulion.com/)** · [Colecția românească](https://zandaulion.com/ro/index.html)
 
-Acest depozit conține site-ul web Zandaulion: o colecție de 24 de proiecte care poate fi căutată, pagini de proiecte individuale și un editor de diagrame Sankey interactiv. Pagina principală și fiecare pagină de proiect sunt disponibile în 12 limbi. Site-ul este static HTML, CSS și vanilla JavaScript, găzduit pe GitHub Pages.
+Acest depozit conține site-ul web Zandaulion: o colecție de 25 de proiecte care poate fi căutată, pagini de proiecte individuale și un editor de diagrame Sankey interactiv. Pagina principală și fiecare pagină de proiect sunt disponibile în 12 limbi. Site-ul este static HTML, CSS și vanilla JavaScript, găzduit pe GitHub Pages.
 
 ## Traducerile README
 
@@ -38,6 +38,7 @@ Editați fișierul README în limba engleză și cataloagele corespunzătoare î
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
+| Hearth OCR | [hearth.html](hearth.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan, fostul Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -125,7 +126,7 @@ După editarea conținutului sursă sau a cataloagelor, regenerează site-ul:
 python scripts/build_locales.py
 ```
 
-Generatorul produce 12 pagini de start, 264 pagini de proiect traduse și `language-data.js`. De asemenea, menține linkuri canonice și în limbi alternative pe cele 24 de pagini ale proiectului în limba engleză. Angajați aceste rezultate generate cu sursele lor; GitHub Pages le servește direct, fără a rula generatorul Python.
+Generatorul produce 12 pagini principale, 275 de pagini de proiect traduse și `language-data.js`. Menține și linkurile canonice și pentru limbile alternative pe cele 25 de pagini de proiect în engleză. Include fișierele generate în același commit cu sursele lor; GitHub Pages le publică direct, fără a rula generatorul Python.
 
 Nu editați paginile de pornire generate, HTML traduse sau `language-data.js` direct: regenerarea înlocuiește acele editări. Cataloagele paginii de pornire trebuie să aibă chei care nu se potrivesc. Cataloagele de proiecte folosesc textul sursă ca chei, astfel încât modificările aduse copiei în limba engleză necesită actualizări corespunzătoare ale traducerii. Traducerile lipsă eșuează construcția.
 
@@ -154,7 +155,7 @@ node --test scripts/test_language.cjs
 ```
 
 - Verificarea build-ului detectează ieșirile generate obținute și traducerile lipsă.
-- Verificarea site-ului acoperă toate cele 311 pagini HTML: 12 pagini de start, 288 pagini de proiect, zece notificări de confidențialitate și o redirecționare de compatibilitate. Verifică linkurile locale, materialele, ID-urile duplicate în afara markupului de confidențialitate păstrat, metadatele limbajului proiectului, linkurile SEO reciproce și direcția arabă. Cu `--url`, verifică, de asemenea, răspunsurile HTTP și compară notificările de confidențialitate difuzate cu fișierele lor sursă.
+- Verificarea site-ului acoperă toate cele 323 pagini HTML: 12 pagini de start, 300 pagini de proiect, zece notificări de confidențialitate și o redirecționare de compatibilitate. Verifică linkurile locale, materialele, ID-urile duplicate în afara markupului de confidențialitate păstrat, metadatele limbajului proiectului, linkurile SEO reciproce și direcția arabă. Cu `--url`, verifică, de asemenea, răspunsurile HTTP și compară notificările de confidențialitate difuzate cu fișierele lor sursă.
 - Testele de limbă acoperă prioritatea preferințelor, potrivirea regională, stocarea blocată, rădăcinile fișierelor și subdirectoarelor, comportamentul de redirecționare și păstrarea secțiunilor.
 
 Pentru verificări offline, rulați `python scripts/check_site.py` fără `--url`. Examinați paginile afectate și în browser: aspectul mobil, direcția arabă, schimbarea limbii, comenzile de la tastatură din galerie și interacțiunile editorului.

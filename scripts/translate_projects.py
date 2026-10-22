@@ -21,7 +21,8 @@ PROTECTED = sorted(BRANDS | {
     'JSON', 'CSV', 'SVG', 'DXF', 'PNG', 'ZIP', 'CNC', 'CAM', 'HTTPS', 'WebGL', 'Escape',
     'SQL', 'PostgreSQL', 'Elasticsearch', 'GPT-OSS', 'Node', 'Oracle Ampere A1', 'DDL', 'POC',
     'Run all checks', 'Save to Projects', 'Save offline', 'New project', 'Undo/Redo',
-    'GPL-3.0-or-later', 'Node/Express', 'Python/FastAPI',
+    'GPL-3.0-or-later', 'AGPL-3.0-only', 'Node/Express', 'Python/FastAPI',
+    'Hearth', 'ONNX Runtime Web', 'ONNX Runtime', 'ONNX', 'NumPy', 'SciPy', 'IndexedDB', 'SYS', 'DIA',
     '{n}', '{total}', '{ nodes: [], links: [] }'
 }, key=len, reverse=True)
 PATTERN = re.compile(r'(?<!\w)(?:\d{4}-\d{2}-\d{2}(?:\.\d+)?|[A-Z][A-Z0-9_-]+\.html|'

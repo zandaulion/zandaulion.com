@@ -54,7 +54,7 @@
 
                 <h2>프로젝트 소개</h2>
                 <p>정면 사진을 층층이 쌓는 초상화의 절단 패턴으로 바꿉니다. 금속판을 손으로 한 층씩 접착해 지형도 같은 입체 부조를 만듭니다.</p>
-                <p>Faceslice는 정면 사진을 판금 또는 카드지의 레이어 릴리프용 절단 패턴으로 변환합니다. 눈금을 설정하려면 동공 간 거리(IPD)를 밀리미터 단위로 입력하세요. 그 결과 머리 전체를 스캔하는 것이 아니라 머리의 보이는 부분만 완화됩니다.</p>
+                <p>Faceslice는 정면 사진을 금속판이나 두꺼운 종이로 쌓아 만드는 부조의 절단 패턴으로 바꿉니다. 축척을 정하려면 동공 사이 거리(IPD)를 밀리미터 단위로 입력하세요. 결과물은 보이는 쪽을 표현한 부조이며 머리 전체의 스캔이 아닙니다.</p>
                 <p>Faceslice는 세 가지 컴퓨터 비전 모델을 결합하여 릴리프를 추정합니다. 분할은 실루엣을 추적합니다. 단안 깊이는 광범위한 볼륨을 추정합니다. 얼굴 랜드마크는 코, 눈, 입술 주위에 디테일을 추가합니다. 기하학은 단일 이미지의 추정치입니다.</p>
                 <p>릴리프는 조정 가능한 각도로 평행한 평면으로 절단됩니다. 정면 슬라이스는 정렬 가이드가 새겨져 서로 중첩되어 있습니다. 이 도구는 숨겨진 내부 재료를 제거하고 DXF 커팅 시트를 내보낼 수 있습니다. 제작 전 작업장에 치수와 절단 설정을 확인하세요.</p>
 
@@ -69,14 +69,14 @@
 
                 <h2>기능</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 단일 사진 부조:</strong> 사용자가 제공한 동공 거리 측정값을 사용하여 크기가 조정된 정면 사진 한 장을 계층형 부조로 바꿉니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 단일 사진 부조:</strong> 정면 사진 한 장을 여러 층의 부조로 변환하며, 사용자가 입력한 동공 사이 거리로 축척을 정합니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 3가지 모델 AI 융합 엔진:</strong> MediaPipe 다중 클래스 분할, ONNX 단안 깊이 추정(Depth Anything V2) 및 MediaPipe 얼굴 랜드마크를 결합하여 균형 잡힌 두개골 볼륨과 얼굴 선명도를 제공합니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️ 지형학적 윤곽 슬라이싱:</strong> 자유로운 각도 제어를 사용하여 솔리드를 평행 평면으로 자릅니다(동심 중첩 아이소힙프의 경우 정면, 측면 프로파일 적층의 경우 수평).</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 자체 정렬 조립 가이드:</strong> 정면에서 자르면 각 금속층이 아래 금속층 안에 중첩되고, 다음 판의 경계선이 표면에 직접 새겨져 있어 지그 없이 쉽게 정렬할 수 있습니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ 인테리어 공동화 및 재료 경제:</strong> 숨겨진 내부 형상을 자동으로 제거하여 재료 소비와 무게를 최대 80%까지 줄이면서(예: 10kg의 단단한 강철을 1.9kg의 중공 링으로 줄임) 견고한 접착 마진을 유지합니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ 파라메트릭 제작 제어:</strong> 시트 두께(0.5~10mm), 릴리프 압축, 커프 보상, 안면 릴리프 과장 및 슬라이스 각도를 실시간으로 대화식으로 조정합니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ 재료 및 무게 추정:</strong> 강철, 황동 및 알루미늄의 플레이트 수, 윤곽선, 시트 면적, 스택 높이 및 예상 무게를 표시합니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 DXF 내보내기:</strong> 선택한 용지에 맞는 크기의 벡터 커팅 시트를 내보냅니다. 절단하기 전에 제작자에게 확인하십시오.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 DXF 내보내기:</strong> 선택한 판재 크기에 맞는 벡터 절단 도면을 내보냅니다. 절단하기 전에 제작업체와 확인하세요.</li>
                 </ul>
 
                 <h2>아키텍처 및 기술 스택</h2>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>비전 및 기하학 엔진</h3>
-                        <p>Python 3 엔진은 MediaPipe, ONNX 런타임, NumPy, SciPy 및 OpenCV를 사용합니다. 자체 형상과 DXF 모듈은 슬라이싱 및 절단 시트를 처리합니다.</p>
+                        <p>Python 3 엔진은 MediaPipe, ONNX Runtime, NumPy, SciPy, OpenCV를 사용합니다. 자체 형상 및 DXF 모듈이 층과 절단 도면을 생성합니다.</p>
                     </div>
                     <div class="feature-item">
                         <h3>배포 노트</h3>

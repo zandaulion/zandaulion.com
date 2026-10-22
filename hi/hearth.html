@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hi-IN" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hearth OCR ब्राउज़र में रक्तचाप मॉनिटर की फ़ोटो पढ़ने वाला प्रयोगात्मक टूल है। इसे स्थानीय रूप से चलाएँ और हर मान का उपकरण के डिस्प्ले से मिलान करें।">
+    <title>Hearth OCR - परियोजना विवरण</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/hi/hearth.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/hearth.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/hearth.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/hearth.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/hearth.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/hearth.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/hearth.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/hearth.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/hearth.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/hearth.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/hearth.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/hearth.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/hearth.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/hearth.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="hearth.html"></portfolio-header>
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="hi-IN">← कार्यशाला में वापस जाएँ</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">पर्दे के पीछे</span>
+                    <h1>Hearth OCR</h1>
+                    <p class="project-lead">ब्राउज़र में रक्तचाप मॉनिटर की फ़ोटो पढ़ने वाला प्रयोगात्मक टूल। हर मान का मिलान आपको स्वयं करना होगा।</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/download/v0.1.0/hearth-bp-ocr-v0.1.0.zip" class="btn btn-primary">प्रयोगात्मक पूर्वावलोकन डाउनलोड करें · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">रिलीज़ नोट्स और SHA-256</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub पर देखें</a>
+                    </div>
+                </div>
+                <img src="../assets/Hearth/feature.svg" alt="रीडिंग चेकलिस्ट के बगल में मॉनिटर डिस्प्ले का चित्रण" class="project-hero-image hero-landscape" width="800" height="420">
+            </div>
+            <div class="project-content reveal">
+                <h2>प्रायोगिक ब्राउज़र पूर्वावलोकन</h2>
+                <p>Hearth आम रक्तचाप मॉनिटर के सीधे, तीन पंक्तियों वाले डिस्प्ले की फ़ोटो से सिस्टोलिक दबाव (SYS), डायस्टोलिक दबाव (DIA) और नाड़ी पढ़ता है। फ़ोटो चुनें या कैमरे का उपयोग करें, डिस्प्ले का हिस्सा क्रॉप करें और कॉपी करने से पहले परिणाम सुधारें।</p>
+                <p class="platform-status"><strong>रीडिंग का उपयोग करने या कॉपी करने से पहले हर मान का मॉनिटर के डिस्प्ले से मिलान करें।</strong> यह प्रायोगिक ओसीआर है, मान्य मेडिकल रीडर नहीं। नई वास्तविक दुनिया की तस्वीरों पर पहचान की सटीकता अप्रमाणित बनी हुई है।</p>
+                <h2>पूर्वावलोकन आज़माएँ</h2>
+                <p>संलग्न रिलीज़ ZIP को डाउनलोड करें और निकालें। इसमें स्रोत, दो ONNX मॉडल और ब्राउज़र रनटाइम शामिल हैं। किसी खाते, एनपीएम इंस्टाल या मॉडल प्रशिक्षण की आवश्यकता नहीं है। पायथन 3.12 या नए संस्करण की अनुशंसा की जाती है।</p>
+                <p>निकाले गए फ़ोल्डर से, चलाएँ:</p>
+                <pre dir="ltr"><code>python3 prototype/serve.py</code></pre>
+                <p>स्थानीय पूर्वावलोकन खोलने के लिए उसी कंप्यूटर पर वर्तमान ब्राउज़र का उपयोग करें:</p>
+                <p><a href="http://127.0.0.1:8765/" dir="ltr"><code>http://127.0.0.1:8765/</code></a></p>
+                <p>सर्वर केवल आपके कंप्यूटर पर ही सुनता है. किसी अन्य डिवाइस से कैमरा एक्सेस के लिए HTTPS जैसे सुरक्षित ब्राउज़र संदर्भ की आवश्यकता होती है।</p>
+                <h2>यह कैसे काम करता है</h2>
+                <p>डिटेक्टर डिस्प्ले खोजता है और अंक पहचानने वाला मॉडल उसकी पंक्तियाँ पढ़ता है। ONNX अनुमान ब्राउज़र वर्कर में चलता है। संगति जाँच और अलग क्रॉप के साथ दोबारा कोशिश अनिश्चित परिणाम अस्वीकार कर सकती है या पहचान फिर चला सकती है; सही रीडिंग की गारंटी नहीं है।</p>
+                <h2>गोपनीयता और ऑफ़लाइन उपयोग</h2>
+                <p>सामान्य उपयोग में फ़ोटो ब्राउज़र की मेमोरी में ही संसाधित होती हैं: ऐप उन्हें सर्वर पर अपलोड या सेव नहीं करता। पहली पूरी लोडिंग के बाद service worker ऐप और मॉडल को ऑफ़लाइन उपयोग के लिए कैश करता है। विकास के दौरान स्थानीय मूल्यांकन के टूल एक अलग वर्कफ़्लो हैं।</p>
+                <h2>पुन: उपयोग और एकीकरण</h2>
+                <p>मूल कोड और साथ दिए गए मॉडल AGPL-3.0-only के अंतर्गत हैं। ONNX Runtime Web का MIT लाइसेंस बरकरार है। मॉडल कार्ड में स्रोत, चेकसम और सीमाएँ हैं; इंटीग्रेशन गाइड दूसरे ऐप में इसे इस्तेमाल करने का तरीका बताती है।</p>
+                <div class="project-links">
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/MODEL_CARD.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">मॉडल कार्ड पढ़ें</a>
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/INTEGRATION.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">एकीकरण मार्गदर्शिका पढ़ें</a>
+                </div>
+            </div>
+        </div>
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">कुछ और खोजें</span><h2 id="related-title">आपको ये भी पसंद आ सकते हैं…</h2></div><p><a href="index.html#collection" hreflang="hi-IN">पूरा संग्रह देखें ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="bpdigitizer.html" hreflang="hi-IN"><div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">रोज़मर्रा के औज़ार</div><h3>BP Digitizer <span aria-hidden="true">↗</span></h3><p>रक्तचाप दर्ज करें, रुझान देखें और अपना इतिहास निर्यात करें। Android और वेब के लिए एक ऐप।</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="hi-IN"><div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">पर्दे के पीछे</div><h3>pwa-kit <span aria-hidden="true">↗</span></h3><p>एक छोटा घटक जो वेब ऐप को ऑफ़लाइन चलने और अपडेट रहने में मदद करता है।</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="screenshotkit.html" hreflang="hi-IN"><div class="collection-image"><img src="../assets/ScreenshotKit/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">पर्दे के पीछे</div><h3>Android Store Screenshot Kit <span aria-hidden="true">↗</span></h3><p>असली Android ऐप्स से असली Play Store स्क्रीनशॉट, हर बार एक ही तरीके से लिए गए।</p></a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=6" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

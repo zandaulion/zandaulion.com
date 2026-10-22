@@ -75,8 +75,8 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 Guides d'assemblage à alignement automatique :</strong> Lorsqu'elle est tranchée frontalement, chaque couche métallique est emboîtée dans celle du dessous et la ligne de délimitation de la plaque suivante est gravée directement sur sa surface pour un alignement facile sans gabarits.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ Creux intérieur et économie de matériaux :</strong> Supprime automatiquement la géométrie interne cachée, réduisant ainsi la consommation de matériaux et le poids jusqu'à 80 % (par exemple, 10 kg d'acier massif jusqu'à 1,9 kg d'anneaux creux) tout en conservant des marges de liaison solides.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ Contrôles de fabrication paramétriques :</strong> Ajustement interactif en temps réel de l'épaisseur de la feuille (0,5 à 10 mm), de la compression du relief, de la compensation du trait de scie, de l'exagération du relief facial et des angles de coupe.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Estimations du matériel et du poids :</strong> Affiche le nombre de plaques, les contours, la surface de la feuille, la hauteur de la pile et le poids estimé pour l'acier, le laiton et l'aluminium.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 DXF Exportation :</strong> Exporte des feuilles de découpe vectorielles dimensionnées pour le stock sélectionné. Vérifiez-les auprès de votre fabricant avant de couper.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Estimation des matériaux et du poids :</strong> Affiche le nombre de plaques, les contours, la surface de la feuille, la hauteur de la pile et le poids estimé pour l'acier, le laiton et l'aluminium.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 Export DXF :</strong> Exporte des plans de découpe vectoriels aux dimensions des tôles choisies. Faites-les vérifier par l'atelier avant la découpe.</li>
                 </ul>
 
                 <h2>Architecture et pile technologique</h2>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>Moteur de vision et de géométrie</h3>
-                        <p>Le moteur Python 3 utilise MediaPipe, ONNX Runtime, NumPy, SciPy et OpenCV. Sa propre géométrie et ses modules DXF permettent de trancher et de découper des feuilles.</p>
+                        <p>Le moteur Python 3 utilise MediaPipe, ONNX Runtime, NumPy, SciPy et OpenCV. Ses propres modules de géométrie et de DXF préparent les couches et les plans de découpe.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Notes de déploiement</h3>

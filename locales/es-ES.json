@@ -93,5 +93,6 @@
   "count_label": "Proyectos mostrados",
   "translation_note": "Las páginas de los proyectos están disponibles en los 12 idiomas. Los avisos de privacidad siguen en inglés, en sus direcciones actuales.",
   "return_home": "Volver al inicio en tu idioma",
-  "english_page": "La página de este proyecto está actualmente en inglés."
+  "english_page": "La página de este proyecto está actualmente en inglés.",
+  "hearth_card": "OCR experimental que lee una foto del tensiómetro en el navegador. Comprueba cada valor en el aparato."
 }

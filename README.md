@@ -8,7 +8,7 @@ A playful workshop for curious ideas: apps, games, and small tools to explore.
 
 **[Visit zandaulion.com](https://zandaulion.com/)** · [Romanian collection](https://zandaulion.com/ro/index.html)
 
-This repository contains the Zandaulion website: a searchable collection of 24
+This repository contains the Zandaulion website: a searchable collection of 25
 projects, individual project pages, and an interactive Sankey diagram editor.
 The homepage and every project page are available in 12 languages. The site is
 static HTML, CSS, and vanilla JavaScript, hosted on GitHub Pages.
@@ -48,6 +48,7 @@ paths, code examples, and link destinations are preserved.
 | Gravity Garden | [gravitygarden.html](gravitygarden.html) |
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
+| Hearth OCR | [hearth.html](hearth.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan, formerly Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -160,9 +161,9 @@ After editing source content or catalogs, regenerate the site:
 python scripts/build_locales.py
 ```
 
-The generator produces 12 homepages, 264 translated project pages, and
+The generator produces 12 homepages, 275 translated project pages, and
 `language-data.js`. It also maintains canonical and alternate-language links on
-the 24 English project pages. Commit these generated outputs with their sources;
+the 25 English project pages. Commit these generated outputs with their sources;
 GitHub Pages serves them directly without running the Python generator.
 
 Do not edit generated homepages, translated HTML, or `language-data.js` directly:
@@ -208,7 +209,7 @@ node --test scripts/test_language.cjs
 ```
 
 - The build check detects stale generated outputs and missing translations.
-- The site check covers all 311 HTML pages: 12 homepages, 288 project pages,
+- The site check covers all 323 HTML pages: 12 homepages, 300 project pages,
   ten privacy notices, and one compatibility redirect. It checks local links,
   assets, duplicate IDs outside the preserved privacy markup, project language
   metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also

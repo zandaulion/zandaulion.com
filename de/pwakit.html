@@ -53,9 +53,9 @@
 
 
                 <h2>Über das Projekt</h2>
-                <p>Ein kleiner Service-Worker-Update-Helfer für Web-Apps mit einer sichtbaren Update-Benachrichtigung und einem Wächter für nicht abgeschlossene Arbeiten.</p>
-                <p>Kopie <code>sw.js</code>, <code>sw-update.js</code> und <code>pwa-update.js</code> in das Web-Root einer App und vernetzen sie. Es gibt keinen Frontend-Build-Schritt oder eine Paketabhängigkeit. Der ZIP verfügt außerdem über ein Beispiel und optionale Serverintegrationsdateien.</p>
-                <p>Ein neuer Servicemitarbeiter wird sofort aktiviert. Sichtbare Seiten können das Neuladen verzögern, solange die Arbeit noch nicht abgeschlossen ist. Nicht reagierende Clients werden nach einer kurzen Wartezeit neu geladen. Passen Sie die Referenz-Cache-Richtlinie an, bevor Sie sie für private Inhalte verwenden.</p>
+                <p>Ein kleiner Service-Worker-Update-Helfer für Web-Apps mit sichtbarer Update-Meldung und Schutz für noch nicht abgeschlossene Arbeiten.</p>
+                <p>Kopie <code>sw.js</code>, <code>sw-update.js</code> und <code>pwa-update.js</code> in das Web-Stammverzeichnis der App und binden Sie sie ein. Es gibt weder einen Frontend-Build-Schritt noch Paketabhängigkeiten. Die ZIP-Datei enthält außerdem ein Beispiel und optionale Dateien für die Serverintegration.</p>
+                <p>Ein neuer Service Worker wird sofort aktiviert. Sichtbare Seiten können das Neuladen bei unvollendeter Arbeit aufschieben; nicht antwortende Clients werden nach einer kurzen Wartezeit neu geladen. Passen Sie die Cache-Richtlinie des Beispiels an, bevor Sie sie für private Inhalte verwenden.</p>
 
                 <h2>Galerie</h2>
                 <div class="gallery-grid">
@@ -65,7 +65,7 @@
                 <h2>Funktionen</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Sofortige Aktivierung:</strong> Neue Mitarbeiter installieren und übernehmen, ohne dass veraltete Mitarbeiter tagelang in geöffneten Browser-Registerkarten verweilen.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Nicht gespeicherte Arbeitswache (<code>isBusy</code>):</strong> Responsive, sichtbare Seiten können das Neuladen verzögern, während die Bearbeitungen noch nicht abgeschlossen sind. Apps sollten wichtige Entwürfe separat speichern.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Schutz für ungespeicherte Änderungen (<code>isBusy</code>):</strong> Sichtbare Seiten, die antworten, können das Neuladen bei unvollendeten Änderungen aufschieben; wichtige Entwürfe sollten Apps separat speichern.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Network-First-Frische:</strong> Online-Anfragen haben immer Vorrang, um sicherzustellen, dass bereitgestellte Änderungen beim nächsten Neuladen wirksam werden und im Offline-Zustand auf den Cache zurückgreifen.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 Benachrichtigungen zum Bereinigen des Sitzungsspeichers:</strong> Vermeidet verunreinigende URL-Abfragezeichenfolgen mit Update-Flags und informiert Benutzer sauber durch In-App-Toasts.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 Integrierte Cache-Fluchtluke:</strong> Beinhaltet einen Notabmelde- und Cache-Bust-Mechanismus für blockierte Clients.</li>

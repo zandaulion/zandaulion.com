@@ -11,7 +11,7 @@
   "About The Project": "프로젝트 소개",
   "Store screenshots go out of date every time an app changes, and taking them by hand on a phone is slow and never quite the same twice. This kit turns them into a repeatable step: each app keeps a small test that sets up its own data and walks through its screens, and the kit does everything else.": "스토어 스크린샷은 앱이 바뀔 때마다 낡고, 휴대폰으로 직접 찍으면 느린 데다 두 번 똑같이 나오지 않습니다. 이 키트는 이를 반복 가능한 단계로 바꿉니다. 각 앱은 자체 데이터를 준비하고 화면을 차례로 여는 작은 테스트만 갖고, 나머지는 키트가 맡습니다.",
   "It builds the app and its test, runs them on a chosen Firebase Test Lab device, follows the run to the end, downloads the screenshots, and checks them against Google Play's requirements before copying them into the app's store folder.": "앱과 테스트를 빌드하고, 선택한 Firebase Test Lab 기기에서 실행해 끝까지 따라간 뒤, 스크린샷을 내려받아 Google Play 요구 사항에 맞는지 확인하고 앱의 스토어 폴더에 복사합니다.",
-  "The download contains source code and a synthetic configuration, not an APK or store screenshots. Running Test Lab needs your own cloud project and may use billed quota.": "다운로드에는 APK나 스토어 스크린샷이 아닌 소스 코드와 합성 구성이 포함되어 있습니다. Test Lab을 실행하려면 자체 클라우드 프로젝트가 필요하며 청구된 할당량을 사용할 수 있습니다.",
+  "The download contains source code and a synthetic configuration, not an APK or store screenshots. Running Test Lab needs your own cloud project and may use billed quota.": "다운로드에는 소스 코드와 가상 예제 설정이 포함되며 APK나 스토어 스크린샷은 없습니다. Test Lab에는 본인의 클라우드 프로젝트가 필요하며 유료 할당량이 사용될 수 있습니다.",
   "How it works": "작동 원리",
   "Describe the run.": "실행을 정의합니다.",
   "A short TOML file names the app, its test, the devices to use, and the number and size of screenshots to expect.": "짧은 TOML 파일에 앱, 테스트, 사용할 기기, 예상 스크린샷 개수와 크기를 적습니다.",

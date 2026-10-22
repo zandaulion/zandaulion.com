@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pwa-kit - 用于 Web 应用程序的无依赖服务工作人员更新帮助程序。">
+    <meta name="description" content="pwa-kit — 无依赖的 Web 应用 service worker 更新工具。">
     <title>pwa-kit ⚡ - 项目详情</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -53,9 +53,9 @@
 
 
                 <h2>关于项目</h2>
-                <p>一个用于网络应用程序的小型服务工作者更新助手，具有可见的更新通知和未完成工作的保护。</p>
+                <p>小型 Web 应用 service worker 更新工具，提供可见的更新提示，并保护尚未完成的工作。</p>
                 <p>复制 <code>sw.js</code>, <code>sw-update.js</code> 和 <code>pwa-update.js</code> 进入应用程序的网络根目录并将它们连接起来。没有前端构建步骤或包依赖性。 ZIP 还具有示例和可选服务器集成文件。</p>
-                <p>新的 Service Worker 立即激活。可见页面可以在工作未完成时推迟重新加载；无响应的客户端会在短暂的宽限期后重新加载。在将引用缓存策略用于私有内容之前调整引用缓存策略。</p>
+                <p>新的 service worker 会立即激活。工作尚未完成时，可见页面可以延迟重新加载；无响应的客户端会在短暂等待后重新加载。用于私密内容前，请调整示例中的缓存策略。</p>
 
                 <h2>图片集</h2>
                 <div class="gallery-grid">
@@ -65,7 +65,7 @@
                 <h2>功能</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 立即激活：</strong> 新的工作人员可以安装并接管，而旧工作人员不会在打开的浏览器选项卡上徘徊数天。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存的工作卫士 (<code>isBusy</code>):</strong> 响应式可见页面可以在编辑未完成时推迟重新加载；应用程序应单独保存重要的草稿。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存的工作卫士 (<code>isBusy</code>):</strong> 仍能响应的可见页面可以在编辑未完成时延迟重新加载；应用应单独保存重要草稿。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 网络第一的新鲜度：</strong> 在线请求总是获胜，以确保部署的更改在下一次重新加载时生效，并在离线时回退到缓存。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 清理会话存储通知：</strong> 避免使用更新标志污染 URL 查询字符串，通过应用内 toast 清楚地通知用户。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 内置缓存逃生舱口：</strong> 包括针对楔入客户端的紧急取消注册和缓存清除机制。</li>

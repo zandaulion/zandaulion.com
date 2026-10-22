@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hearth OCR — експериментальний інструмент для зчитування фото тонометра у браузері. Запустіть локальну версію та звірте кожне значення з приладом.">
+    <title>Hearth OCR - Деталі проекту</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/uk/hearth.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/hearth.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/hearth.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/hearth.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/hearth.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/hearth.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/hearth.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/hearth.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/hearth.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/hearth.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/hearth.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/hearth.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/hearth.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/hearth.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="hearth.html"></portfolio-header>
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="uk">← Назад до майстерні</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">За лаштунками</span>
+                    <h1>Hearth OCR</h1>
+                    <p class="project-lead">Експериментальний інструмент для зчитування фото тонометра у браузері. Кожне значення потрібно звірити самостійно.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/download/v0.1.0/hearth-bp-ocr-v0.1.0.zip" class="btn btn-primary">Завантажити експериментальний попередній перегляд · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Примітки до випуску та SHA-256</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Переглянути на GitHub</a>
+                    </div>
+                </div>
+                <img src="../assets/Hearth/feature.svg" alt="Ілюстрація дисплея тонометра поруч із переліком перевірок" class="project-hero-image hero-landscape" width="800" height="420">
+            </div>
+            <div class="project-content reveal">
+                <h2>Експериментальна версія для браузера</h2>
+                <p>Hearth зчитує систолічний тиск (SYS), діастолічний тиск (DIA) і пульс із фото поширених тонометрів із вертикальним трирядним дисплеєм. Виберіть фото або скористайтеся камерою, обріжте область дисплея й виправте результат перед копіюванням.</p>
+                <p class="platform-status"><strong>Звірте кожне значення з дисплеєм тонометра перед використанням або копіюванням результату.</strong> Це експериментальний OCR, а не валідований медичний зчитувач. Точність розпізнавання на нових фотографіях реального світу залишається недоведеною.</p>
+                <h2>Спробуйте попередній перегляд</h2>
+                <p>Завантажте та розпакуйте доданий випуск ZIP. Він включає джерело, дві моделі ONNX і середовище виконання браузера. Не потрібні облікові записи, інсталяції npm або навчання моделі. Рекомендується Python 3.12 або новіша версія.</p>
+                <p>З витягнутої папки запустіть:</p>
+                <pre dir="ltr"><code>python3 prototype/serve.py</code></pre>
+                <p>Використовуйте поточний браузер на тому самому комп’ютері, щоб відкрити локальний попередній перегляд:</p>
+                <p><a href="http://127.0.0.1:8765/" dir="ltr"><code>http://127.0.0.1:8765/</code></a></p>
+                <p>Сервер слухає лише ваш комп’ютер. Для доступу до камери з іншого пристрою потрібен безпечний контекст браузера, наприклад HTTPS.</p>
+                <h2>Як це працює</h2>
+                <p>Детектор знаходить дисплей, а розпізнавач цифр зчитує його рядки. Обчислення ONNX виконуються у worker-потоці браузера. Перевірки узгодженості та нові спроби з іншими обрізаними ділянками можуть відхилити непевний результат або повторити розпізнавання; правильне зчитування не гарантується.</p>
+                <h2>Конфіденційність і використання в автономному режимі</h2>
+                <p>За звичайного використання фото обробляються в пам’яті браузера: застосунок не надсилає їх на сервер і не зберігає. Після першого повного завантаження service worker кешує застосунок і моделі для роботи офлайн. Локальні засоби оцінювання під час розробки становлять окремий процес.</p>
+                <h2>Повторне використання та інтеграція</h2>
+                <p>Оригінальний код і моделі в комплекті використовують AGPL-3.0-only. ONNX Runtime Web зберігає умови MIT. Картка моделі пояснює походження, контрольні суми та обмеження; посібник з інтеграції документує повторне використання в іншій програмі.</p>
+                <div class="project-links">
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/MODEL_CARD.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Прочитайте картку моделі</a>
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/INTEGRATION.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Прочитайте посібник з інтеграції</a>
+                </div>
+            </div>
+        </div>
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Продовжуйте відкривати</span><h2 id="related-title">Можливо, вам також сподобається…</h2></div><p><a href="index.html#collection" hreflang="uk">Переглянути всю колекцію ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="bpdigitizer.html" hreflang="uk"><div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">Щоденні інструменти</div><h3>BP Digitizer <span aria-hidden="true">↗</span></h3><p>Записуйте артеріальний тиск, стежте за тенденціями й експортуйте історію. Один застосунок для Android і вебу.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="uk"><div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">За лаштунками</div><h3>pwa-kit <span aria-hidden="true">↗</span></h3><p>Маленька складова, що допомагає вебзастосункам працювати офлайн і залишатися актуальними.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="screenshotkit.html" hreflang="uk"><div class="collection-image"><img src="../assets/ScreenshotKit/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">За лаштунками</div><h3>Android Store Screenshot Kit <span aria-hidden="true">↗</span></h3><p>Справжні знімки для Play Store зі справжніх застосунків Android, щоразу зроблені однаково.</p></a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=6" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

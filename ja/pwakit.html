@@ -54,7 +54,7 @@
 
                 <h2>プロジェクトについて</h2>
                 <p>Web アプリ用の小さな Service Worker 更新ヘルパー。更新通知が表示され、未完了の作業をガードします。</p>
-                <p>コピー <code>sw.js</code>, <code>sw-update.js</code> そして <code>pwa-update.js</code> アプリの Web ルートに接続し、それらを接続します。フロントエンドのビルドステップやパッケージの依存関係はありません。 ZIP には、サンプルとオプションのサーバー統合ファイルもあります。</p>
+                <p>コピー <code>sw.js</code>, <code>sw-update.js</code> そして <code>pwa-update.js</code> をアプリのウェブルートに配置し、連携を設定します。フロントエンドのビルド工程やパッケージ依存関係はありません。ZIP にはサンプルと任意のサーバー連携ファイルも含まれます。</p>
                 <p>新しい Service Worker はすぐにアクティブ化されます。作業が完了していない間、表示されているページのリロードが延期されることがあります。応答しないクライアントは、短い猶予期間の後にリロードされます。プライベート コンテンツに使用する前に、参照キャッシュ ポリシーを適応させます。</p>
 
                 <h2>ギャラリー</h2>
@@ -65,7 +65,7 @@
                 <h2>機能</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 即時アクティベーション:</strong> 新しいワーカーはインストールして引き継ぎますが、開いているブラウザーのタブに古くなったワーカーが何日も滞留することはありません。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存のワークガード (<code>isBusy</code>):</strong> 応答性が高く、表示されるページは、編集が完了していない間はリロードを延期できます。アプリは重要な下書きを個別に保存する必要があります。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存のワークガード (<code>isBusy</code>):</strong> 表示中で応答するページは、編集が未完了の間は再読み込みを延期できます。重要な下書きは、アプリ側で別途保存してください。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 ネットワークファーストの鮮度:</strong> オンライン要求は常に優先され、デプロイされた変更が次回のリロード時に確実に有効になり、オフライン時にはキャッシュにフォールバックされます。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 セッションストレージのクリーンアップ通知:</strong> 更新フラグによる URL クエリ文字列の汚染を回避し、アプリ内のトーストを通じてユーザーに明確に通知します。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 内蔵キャッシュエスケープハッチ:</strong> ウェッジされたクライアントのための緊急登録解除およびキャッシュ無効化メカニズムが含まれています。</li>

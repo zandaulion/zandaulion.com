@@ -93,5 +93,6 @@
   "count_label": "Angezeigte Projekte",
   "translation_note": "Die Projektseiten sind in allen 12 Sprachen verfügbar. Die Datenschutzhinweise bleiben auf Englisch unter den bisherigen Adressen.",
   "return_home": "Zur Startseite in deiner Sprache",
-  "english_page": "Diese Projektseite ist derzeit auf Englisch."
+  "english_page": "Diese Projektseite ist derzeit auf Englisch.",
+  "hearth_card": "Experimentelle OCR für Fotos von Blutdruckmessgeräten direkt im Browser. Prüfen Sie jeden Wert selbst am Gerät."
 }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="light" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hearth OCR أداة تجريبية لقراءة صور شاشات أجهزة قياس ضغط الدم داخل المتصفح. شغّل النسخة المحلية وتحقق من كل قيمة على الجهاز.">
+    <title>Hearth OCR - تفاصيل المشروع</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ar/hearth.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/hearth.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/hearth.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/hearth.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/hearth.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/hearth.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/hearth.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/hearth.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/hearth.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/hearth.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/hearth.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/hearth.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/hearth.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/hearth.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="hearth.html"></portfolio-header>
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ar">← العودة إلى الورشة</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">خلف الكواليس</span>
+                    <h1>Hearth OCR</h1>
+                    <p class="project-lead">أداة تجريبية تقرأ صور شاشات أجهزة قياس ضغط الدم في المتصفح. يجب أن تتحقق بنفسك من كل قيمة.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/download/v0.1.0/hearth-bp-ocr-v0.1.0.zip" class="btn btn-primary">تنزيل المعاينة التجريبية · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">ملاحظات الإصدار وSHA-256</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr" class="btn btn-outline" target="_blank" rel="noopener noreferrer">عرض على GitHub</a>
+                    </div>
+                </div>
+                <img src="../assets/Hearth/feature.svg" alt="رسم توضيحي لشاشة عرض بجانب قائمة مراجعة القراءة" class="project-hero-image hero-landscape" width="800" height="420">
+            </div>
+            <div class="project-content reveal">
+                <h2>نسخة تجريبية للمتصفح</h2>
+                <p>يقرأ Hearth الضغط الانقباضي (SYS) والانبساطي (DIA) والنبض من صور أجهزة قياس ضغط الدم الشائعة ذات الشاشة العمودية المكوّنة من ثلاثة صفوف. اختر صورة أو استخدم الكاميرا، واقتصّ منطقة الشاشة، وصحّح النتيجة قبل نسخها.</p>
+                <p class="platform-status"><strong>تحقق من كل قيمة على جهاز قياس ضغط الدم قبل استخدام القراءة أو نسخها.</strong> هذا هو التعرف الضوئي على الحروف التجريبي، وليس قارئ طبي معتمد. لا تزال دقة التعرف على الصور الواقعية الجديدة غير مثبتة.</p>
+                <h2>جرب المعاينة</h2>
+                <p>قم بتحميل واستخراج الإصدار المرفق ZIP. ويتضمن المصدر ونموذجين ONNX ووقت تشغيل المتصفح. ليست هناك حاجة إلى حساب أو تثبيت npm أو تدريب على النموذج. يوصى باستخدام Python 3.12 أو الأحدث.</p>
+                <p>من المجلد المستخرج، قم بتشغيل:</p>
+                <pre dir="ltr"><code>python3 prototype/serve.py</code></pre>
+                <p>استخدم متصفحًا حاليًا على نفس الكمبيوتر لفتح المعاينة المحلية:</p>
+                <p><a href="http://127.0.0.1:8765/" dir="ltr"><code>http://127.0.0.1:8765/</code></a></p>
+                <p>يستمع الخادم فقط على جهاز الكمبيوتر الخاص بك. يتطلب الوصول إلى الكاميرا من جهاز آخر سياق متصفح آمن مثل HTTPS.</p>
+                <h2>كيف يعمل</h2>
+                <p>يعثر الكاشف على الشاشة، ويقوم جهاز التعرف على الأرقام بقراءة صفوفها. يتم تشغيل استنتاج ONNX في عامل المتصفح. قد تؤدي عمليات التحقق من الاتساق وإعادة محاولة الاقتصاص إلى رفض النتائج غير المؤكدة أو إعادة المحاولة؛ فهي لا تضمن القراءة الصحيحة.</p>
+                <h2>الخصوصية والاستخدام دون اتصال بالإنترنت</h2>
+                <p>في الاستخدام العادي، تُعالج الصور في ذاكرة المتصفح: لا يرسل التطبيق صورك إلى خادم ولا يحفظها. بعد التحميل الأول الكامل، يخزّن service worker التطبيق والنماذج مؤقتًا للاستخدام دون اتصال. أدوات التقييم المحلية الخاصة بالتطوير تمثل مسار عمل منفصلًا.</p>
+                <h2>إعادة الاستخدام والتكامل</h2>
+                <p>الكود الأصلي والنماذج المرفقة مرخّصة بموجب AGPL-3.0-only. يحتفظ ONNX Runtime Web بترخيص MIT. تشرح بطاقة النموذج المنشأ والمجاميع الاختبارية والقيود؛ ويشرح دليل التكامل كيفية إعادة الاستخدام في تطبيق آخر.</p>
+                <div class="project-links">
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/MODEL_CARD.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">اقرأ بطاقة النموذج</a>
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/INTEGRATION.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">اقرأ دليل التكامل</a>
+                </div>
+            </div>
+        </div>
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">واصل الاكتشاف</span><h2 id="related-title">قد يعجبك أيضًا…</h2></div><p><a href="index.html#collection" hreflang="ar">استعرض المجموعة كاملة ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="bpdigitizer.html" hreflang="ar"><div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">أدوات يومية</div><h3>BP Digitizer <span aria-hidden="true">↗</span></h3><p>سجّل قراءات ضغط الدم، وتابع الاتجاهات، وصدّر سجلك. تطبيق واحد لأندرويد والويب.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ar"><div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">خلف الكواليس</div><h3>pwa-kit <span aria-hidden="true">↗</span></h3><p>لبنة صغيرة تساعد تطبيقات الويب على العمل دون اتصال والبقاء محدثة.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="screenshotkit.html" hreflang="ar"><div class="collection-image"><img src="../assets/ScreenshotKit/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">خلف الكواليس</div><h3>Android Store Screenshot Kit <span aria-hidden="true">↗</span></h3><p>لقطات حقيقية لمتجر Play من تطبيقات Android حقيقية، تُلتقط بالطريقة نفسها في كل مرة.</p></a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=6" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

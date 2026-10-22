@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pwa-kit - 웹 앱을 위한 종속성이 없는 서비스 작업자 업데이트 도우미입니다.">
+    <meta name="description" content="pwa-kit — 의존성이 없는 웹 앱용 service worker 업데이트 도우미.">
     <title>pwa-kit ⚡ - 프로젝트 세부정보</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -54,7 +54,7 @@
 
                 <h2>프로젝트 소개</h2>
                 <p>눈에 보이는 업데이트 알림과 완료되지 않은 작업에 대한 보호 기능을 갖춘 웹 앱용 소규모 서비스 워커 업데이트 도우미입니다.</p>
-                <p>복사 <code>sw.js</code>, <code>sw-update.js</code> 그리고 <code>pwa-update.js</code> 앱의 웹 루트에 연결하고 연결합니다. 프런트엔드 빌드 단계나 패키지 종속성이 없습니다. ZIP에는 예제와 선택적 서버 통합 파일도 있습니다.</p>
+                <p>복사 <code>sw.js</code>, <code>sw-update.js</code> 그리고 <code>pwa-update.js</code> 파일을 앱의 웹 루트에 배치하고 연동하세요. 프런트엔드 빌드 단계나 패키지 의존성은 없습니다. ZIP에는 예제와 선택 사항인 서버 연동 파일도 포함됩니다.</p>
                 <p>새로운 서비스 워커가 즉시 활성화됩니다. 작업이 완료되지 않은 동안 표시되는 페이지는 다시 로드를 연기할 수 있습니다. 응답하지 않는 클라이언트는 짧은 유예 기간 후에 다시 로드됩니다. 비공개 콘텐츠에 사용하기 전에 참조 캐시 정책을 조정하세요.</p>
 
                 <h2>갤러리</h2>
@@ -65,7 +65,7 @@
                 <h2>기능</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 즉시 활성화:</strong> 열려 있는 브라우저 탭에서 며칠 동안 머무르지 않는 오래된 작업자 없이 새로운 작업자가 설치하고 인계받습니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 저장되지 않은 작업 가드(<code>isBusy</code>):</strong> 반응형이며 표시되는 페이지는 편집이 완료되지 않은 동안 다시 로드를 연기할 수 있습니다. 앱은 중요한 초안을 별도로 저장해야 합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 저장되지 않은 작업 가드(<code>isBusy</code>):</strong> 응답하는 가시 상태의 페이지는 편집이 끝나지 않았을 때 새로고침을 미룰 수 있습니다. 앱은 중요한 초안을 별도로 저장해야 합니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 네트워크 우선 신선도:</strong> 온라인 요청은 항상 승리하여 배포된 변경 사항이 다음 번 다시 로드 시 적용되도록 하고 오프라인일 때는 캐시로 돌아갑니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 클린 세션 저장 알림:</strong> 업데이트 플래그를 사용하여 URL 쿼리 문자열을 오염시키는 것을 방지하고 인앱 토스트를 통해 사용자에게 명확하게 알립니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 내장 캐시 탈출 해치:</strong> 고정된 클라이언트를 위한 긴급 등록 취소 및 캐시 버스트 메커니즘이 포함되어 있습니다.</li>

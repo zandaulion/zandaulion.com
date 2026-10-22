@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pwa-kit - Un ajutor de actualizare a lucrătorilor de servicii fără dependențe pentru aplicații web.">
+    <meta name="description" content="pwa-kit — un utilitar de actualizare prin service worker pentru aplicații web, fără dependențe.">
     <title>pwa-kit ⚡ - Detalii proiect</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -39,9 +39,9 @@
                 <div class="project-intro">
                     <span class="section-number">În culise</span>
                     <h1>pwa-kit</h1>
-                    <p class="project-lead">Un mic ajutor de actualizare cu o rezervă offline pentru resursele vizitate anterior.</p>
+                    <p class="project-lead">Un mic utilitar de actualizare, cu acces offline de rezervă la resursele vizitate anterior.</p>
                     <div class="project-links" style="margin-bottom: 32px;">
-                    <a href="https://github.com/zandaulion/pwa-kit/releases/download/v0.1.0/pwa-kit-0.1.0.zip" class="btn btn-primary" style="margin-right: 12px;">Descărcați kitul pentru dezvoltatori · 0.1.0</a>
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/download/v0.1.0/pwa-kit-0.1.0.zip" class="btn btn-primary" style="margin-right: 12px;">Descarcă pachetul pentru dezvoltatori · 0.1.0</a>
                     <a href="https://github.com/zandaulion/pwa-kit/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Note de lansare și SHA-256</a>
                     <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Vezi pe GitHub</a>
                 </div>
@@ -53,9 +53,9 @@
 
 
                 <h2>Despre proiect</h2>
-                <p>Un mic asistent de actualizare pentru lucrătorii de service pentru aplicațiile web, cu o notificare vizibilă de actualizare și un gard pentru munca neterminată.</p>
-                <p>Copiere <code>sw.js</code>, <code>sw-update.js</code> şi <code>pwa-update.js</code> în rădăcina web a unei aplicații și conectați-le. Nu există nici un pas de construire frontend sau dependență de pachet. ZIP are, de asemenea, un exemplu și fișiere opționale de integrare a serverului.</p>
-                <p>Un nou lucrător de service se activează imediat. Paginile vizibile pot amâna reîncărcarea în timp ce munca este neterminată; clienții care nu răspund se reîncarcă după o scurtă perioadă de grație. Adaptați politica cache-ului de referință înainte de a o folosi pentru conținut privat.</p>
+                <p>Un mic utilitar de actualizare prin service worker pentru aplicații web, cu notificare vizibilă și protecție pentru lucrul neterminat.</p>
+                <p>Copiere <code>sw.js</code>, <code>sw-update.js</code> şi <code>pwa-update.js</code> în rădăcina web a aplicației și configurează integrarea. Nu există un pas de compilare frontend sau dependențe de pachete. Arhiva ZIP include și un exemplu și fișiere opționale pentru integrarea pe server.</p>
+                <p>Un service worker nou se activează imediat. Paginile vizibile pot amâna reîncărcarea cât timp există lucru neterminat; clienții care nu răspund se reîncarcă după un scurt interval de așteptare. Adaptează politica de cache din exemplu înainte de a o folosi pentru conținut privat.</p>
 
                 <h2>Galerie</h2>
                 <div class="gallery-grid">
@@ -65,7 +65,7 @@
                 <h2>Funcționalități</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Activare imediată:</strong> Noi lucrători instalează și preiau controlul fără ca lucrătorii învechiți să zăbovească zile întregi în filele deschise ale browserului.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Garda de lucru nesalvată (<code>isBusy</code>):</strong> Paginile receptive și vizibile pot amâna reîncărcările în timp ce editările sunt neterminate; aplicațiile ar trebui să salveze separat schițele importante.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Protecție pentru modificări nesalvate (<code>isBusy</code>):</strong> Paginile vizibile care răspund pot amâna reîncărcarea cât timp editările sunt neterminate; aplicațiile trebuie să salveze separat ciornele importante.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Rețea-First Freshness:</strong> Solicitările online câștigă întotdeauna pentru a se asigura că modificările implementate vor avea efect chiar la următoarea reîncărcare, revenind în cache atunci când sunt offline.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 Notificări pentru stocarea sesiunii curate:</strong> Evită poluarea șirurilor de interogări URL cu semnalizatoare de actualizare, informând utilizatorii în mod curat prin toast-uri în aplicație.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 Trapă de evacuare în cache încorporată:</strong> Include un mecanism de anulare a înregistrării în caz de urgență și un mecanism de blocare a memoriei cache pentru clienții blocați.</li>

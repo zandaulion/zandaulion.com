@@ -93,5 +93,6 @@
   "count_label": "Projects shown",
   "translation_note": "Project pages are available in all 12 languages. Privacy notices remain in English at their existing URLs.",
   "return_home": "Return to the homepage in your language",
-  "english_page": "This project page is currently in English."
+  "english_page": "This project page is currently in English.",
+  "hearth_card": "Experimental OCR that reads a blood-pressure monitor photo in your browser, with every value checked by you."
 }

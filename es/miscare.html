@@ -56,11 +56,11 @@
 
                 <h2>Vista previa de Android</h2>
                 <p><strong>Mișcare 0.1.0</strong> es una descarga de Android de acceso temprano para Android 7.0 o posterior. Incluye rutinas guiadas, 45 ejercicios ilustrados, 12 idiomas de interfaz y un diario de ejercicios local. No se requiere cuenta, servidor o permiso de Internet.</p>
-                <p>La aplicación de Android comienza con datos locales separados; no importa el historial PWA automáticamente. La importación JSON reemplaza el perfil y el diario actuales. Ver el <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">guía de instalación y respaldo</a> para sumas de verificación, compatibilidad de firmas y validación restante. Los recordatorios no están implementados.</p>
+                <p>La aplicación Android empieza con datos locales separados; no importa automáticamente el historial de la PWA. La importación JSON sustituye el perfil y el diario actuales. Consulta la <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">guía de instalación y copias de seguridad</a> para sumas de verificación, compatibilidad de firmas y validación restante. Los recordatorios no están implementados.</p>
 
                 <h2>Sobre el proyecto</h2>
                 <p>Empezar desde cero. Muévete a tu propio ritmo. Sin culpa, sólo adaptación.</p>
-                <p>Mișcare es una aplicación de ejercicio adaptable con una edición local de Android y una edición web autohospedada. Está diseñado para principiantes y personas que regresan después de un descanso, con rutinas breves, opciones de equipo y un diario. La progresión es una elección y los días de descanso no conllevan ninguna penalización por la racha perdida.</p>
+                <p>Mișcare es una aplicación de ejercicio adaptativo con una edición Android local y otra web con alojamiento propio. Está pensada para principiantes y personas que retoman el ejercicio, con rutinas cortas, opciones de equipo y un diario. Progresar es una elección; los días de descanso no penalizan por interrumpir una racha de días activos.</p>
                 <p>Al abrir la aplicación, los usuarios son recibidos directamente con la "Sesión de hoy", lista para iniciarse con un solo toque. Si la vida se vuelve ajetreada, la opción "Hacerlo en 5 minutos" con un solo clic acorta el entrenamiento. Si la vida se interpone durante días, no hay rachas rotas ni mensajes de culpa; la aplicación simplemente le da la bienvenida con una suave rutina de reingreso.</p>
                 <p>El PWA autohospedado utiliza Vanilla JavaScript, Node.js y SQLite, con actualizaciones de pwa-kit e invitaciones a dispositivos pwa-invite-console. La aplicación de Android incluye la interfaz y el motor adaptativo en Capacitor, almacena su perfil y diario localmente en IndexedDB y recibe actualizaciones ejecutables mediante la instalación de APK.</p>
 
@@ -91,7 +91,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>Motor de fondo</h3>
-                        <p>El PWA usa Node.js 24, nativo <code>node:sqlite</code>y puntos finales REST Express. La compilación de Android ejecuta el motor de rutina compartido localmente y no necesita backend.</p>
+                        <p>La PWA utiliza Node.js 24, su módulo nativo <code>node:sqlite</code>y API REST de Express. La versión Android ejecuta localmente el motor de rutinas compartido y no necesita backend.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Integraciones</h3>

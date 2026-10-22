@@ -56,11 +56,11 @@
 
                 <h2>Aperçu Android</h2>
                 <p><strong>Mișcare 0.1.0</strong> est un téléchargement Android à accès anticipé pour Android 7.0 ou version ultérieure. Il regroupe des routines guidées, 45 exercices illustrés, 12 langues d'interface et un journal d'entraînement local. Aucun compte, serveur ou autorisation Internet n'est requis.</p>
-                <p>L'application Android démarre avec des données locales distinctes ; il n'importe pas automatiquement l'historique PWA. L'importation JSON remplace le profil et le journal actuels. Voir le <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">guide d'installation et de sauvegarde</a> pour les sommes de contrôle, la compatibilité des signatures et la validation restante. Les rappels ne sont pas mis en œuvre.</p>
+                <p>L'application Android dispose de données locales distinctes et n'importe pas automatiquement l'historique de la PWA. L'import JSON remplace le profil et le journal actuels. Consultez le <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">guide d'installation et de sauvegarde</a> pour les sommes de contrôle, la compatibilité des signatures et la validation restante. Les rappels ne sont pas mis en œuvre.</p>
 
                 <h2>À propos du projet</h2>
                 <p>Repartir de zéro. Déplacez-vous à votre rythme. Pas de culpabilité, juste un ajustement.</p>
-                <p>Mișcare est une application d'exercices adaptatifs avec une édition Android locale et une édition Web auto-hébergée. Il est conçu pour les débutants et les personnes revenant après une pause, avec des routines courtes, des choix d'équipement et un journal. La progression est un choix et les jours de repos ne comportent aucune pénalité de séquence de défaites.</p>
+                <p>Mișcare est une application d'exercice adaptatif avec une édition Android locale et une édition web auto-hébergée. Elle s'adresse aux débutants et aux personnes qui reprennent après une pause, avec des séances courtes, un choix d'équipement et un journal. La progression reste un choix, et les jours de repos n'entraînent aucune pénalité pour une série de jours actifs interrompue.</p>
                 <p>À l'ouverture de l'application, les utilisateurs sont accueillis directement par « Session du jour » – prêts à être lancés en un seul clic. Si la vie est chargée, une option en un clic « Faites-en 5 minutes » raccourcit l'entraînement. Si la vie vous gêne pendant des jours, il n’y a pas de séquences interrompues ni de messages de culpabilité ; l'application vous accueille simplement avec une routine de rentrée en douceur.</p>
                 <p>Le PWA auto-hébergé utilise Vanilla JavaScript, Node.js et SQLite, avec des mises à jour pwa-kit et des invitations d'appareils pwa-invite-console. L'application Android regroupe l'interface et le moteur adaptatif dans Capacitor, stocke son profil et son journal localement dans IndexedDB et reçoit des mises à jour exécutables via l'installation de l'APK.</p>
 
@@ -74,7 +74,7 @@
 
                 <h2>Fonctionnalités</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 En partant de zéro :</strong> Mouvements fondamentaux du poids du corps (pompes murales, position assise sur chaise, ponts doux des fessiers, étirements de mobilité des épaules) associés à des guides visuels illustrés chaleureux et des filtres de protection pour les genoux, le bas du dos et les poignets.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 En partant de zéro :</strong> Des exercices de base au poids du corps — pompes contre un mur, passages assis-debout depuis une chaise, ponts fessiers doux et étirements de mobilité des épaules — accompagnés de guides illustrés et de filtres pour protéger les genoux, le bas du dos et les poignets.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Séances quotidiennes sans friction :</strong> L'écran d'accueil sert immédiatement la routine d'aujourd'hui. Comprend des variantes en un seul clic comme <em>"Faites 5 minutes"</em> et <em>"Exercice d'échange"</em>, accompagné d'une minuterie silencieuse et d'un carillon Web Audio API.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Filtres d'équipement :</strong> Choisissez le matériel dont vous disposez et les zones que vous souhaitez protéger ; les routines s’adaptent à ces sélections.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 Logique adaptative « No Shaming » :</strong> Les journées actives sont accumulées sous forme de jalons permanents plutôt que de séquences fragiles. Si une séance est classée « Un peu difficile », la routine suivante réduit automatiquement l'intensité ; en cas de retour après une pause, une séance automatique de réadaptation douce est programmée.</li>
@@ -91,7 +91,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>Moteur back-end</h3>
-                        <p>Le PWA utilise Node.js 24, natif <code>node:sqlite</code>et les points de terminaison Express REST. La version Android exécute le moteur de routine partagé localement et ne nécessite aucun backend.</p>
+                        <p>La PWA utilise Node.js 24, son module natif <code>node:sqlite</code>et des API REST Express. La version Android exécute localement le moteur de routines partagé et ne nécessite pas de backend.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Intégrations</h3>

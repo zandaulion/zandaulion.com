@@ -93,5 +93,6 @@
   "count_label": "Projetos exibidos",
   "translation_note": "As páginas dos projetos estão disponíveis nos 12 idiomas. Os avisos de privacidade continuam em inglês, nos endereços atuais.",
   "return_home": "Voltar à página inicial no seu idioma",
-  "english_page": "A página deste projeto está atualmente em inglês."
+  "english_page": "A página deste projeto está atualmente em inglês.",
+  "hearth_card": "OCR experimental que lê uma foto do medidor de pressão no navegador. Confira cada valor no aparelho."
 }

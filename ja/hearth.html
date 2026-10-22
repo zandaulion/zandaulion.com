@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hearth OCR は血圧計の写真をブラウザー内で読み取る実験的なツールです。付属のプレビューをローカル実行し、各数値を血圧計の表示と照合してください。">
+    <title>Hearth OCR - プロジェクトの詳細</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ja/hearth.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/hearth.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/hearth.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/hearth.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/hearth.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/hearth.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/hearth.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/hearth.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/hearth.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/hearth.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/hearth.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/hearth.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/hearth.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/hearth.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="hearth.html"></portfolio-header>
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ja-JP">← 工房に戻る</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">舞台裏の道具</span>
+                    <h1>Hearth OCR</h1>
+                    <p class="project-lead">血圧計の写真をブラウザー内で読み取る実験的なツールです。すべての数値をご自身で確認してください。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/download/v0.1.0/hearth-bp-ocr-v0.1.0.zip" class="btn btn-primary">実験的プレビューをダウンロード · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">リリースノートとSHA-256</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHubで見る</a>
+                    </div>
+                </div>
+                <img src="../assets/Hearth/feature.svg" alt="血圧計の画面と読み取り確認リストのイラスト" class="project-hero-image hero-landscape" width="800" height="420">
+            </div>
+            <div class="project-content reveal">
+                <h2>ブラウザー用の実験的なプレビュー</h2>
+                <p>Hearth は、一般的な縦型・3行表示の血圧計の写真から最高血圧（SYS）、最低血圧（DIA）、脈拍を読み取ります。写真を選択するかカメラを使い、画面部分を切り抜いて、コピー前に結果を修正してください。</p>
+                <p class="platform-status"><strong>結果を使用またはコピーする前に、すべての数値を血圧計の表示と照合してください。</strong> これは実験的な OCR であり、検証された医療リーダーではありません。新しい現実世界の写真の認識精度はまだ証明されていません。</p>
+                <h2>プレビューを試してみる</h2>
+                <p>添付のリリース ZIP をダウンロードして解凍します。これには、ソース、2 つの ONNX モデル、およびブラウザー ランタイムが含まれています。アカウント、npm インストール、モデルのトレーニングは必要ありません。 Python 3.12 以降を推奨します。</p>
+                <p>抽出したフォルダーから次を実行します。</p>
+                <pre dir="ltr"><code>python3 prototype/serve.py</code></pre>
+                <p>同じコンピュータ上の現在のブラウザを使用して、ローカル プレビューを開きます。</p>
+                <p><a href="http://127.0.0.1:8765/" dir="ltr"><code>http://127.0.0.1:8765/</code></a></p>
+                <p>サーバーはあなたのコンピュータ上でのみリッスンします。別のデバイスからのカメラ アクセスには、HTTPS などの安全なブラウザ コンテキストが必要です。</p>
+                <h2>仕組み</h2>
+                <p>検出器がディスプレイを検出し、数字認識器がその行を読み取ります。 ONNX 推論はブラウザー ワーカーで実行されます。整合性チェックとクロップの再試行では、不確実な結果が拒否または再試行される可能性があります。正しい読み取りを保証するものではありません。</p>
+                <h2>プライバシーとオフラインでの使用</h2>
+                <p>通常の写真処理はブラウザのメモリに残ります。アプリは写真をアップロードしたり保存したりしません。最初の読み込みが完了すると、Service Worker はオフラインで使用できるようにアプリとモデルをキャッシュします。ローカル開発評価ツールは別のワークフローです。</p>
+                <h2>再利用と統合</h2>
+                <p>オリジナルコードと同梱モデルは AGPL-3.0-only です。ONNX Runtime Web は MIT ライセンスを維持します。モデルカードには来歴、チェックサム、制約を、統合ガイドには別のアプリで再利用する方法を記載しています。</p>
+                <div class="project-links">
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/MODEL_CARD.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">モデルカードを読む</a>
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/INTEGRATION.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">統合ガイドを読む</a>
+                </div>
+            </div>
+        </div>
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">もっと発見する</span><h2 id="related-title">こちらもいかがですか</h2></div><p><a href="index.html#collection" hreflang="ja-JP">すべての作品を見る ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="bpdigitizer.html" hreflang="ja-JP"><div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">毎日の道具</div><h3>BP Digitizer <span aria-hidden="true">↗</span></h3><p>血圧を記録し、傾向を見て、履歴を書き出せます。AndroidとWebで使えるひとつのアプリ。</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ja-JP"><div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">舞台裏の道具</div><h3>pwa-kit <span aria-hidden="true">↗</span></h3><p>Webアプリのオフライン動作と更新を支える、小さな部品。</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="screenshotkit.html" hreflang="ja-JP"><div class="collection-image"><img src="../assets/ScreenshotKit/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">舞台裏の道具</div><h3>Android Store Screenshot Kit <span aria-hidden="true">↗</span></h3><p>実際の Android アプリから、毎回同じ方法で撮る Play ストア用スクリーンショット。</p></a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=6" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

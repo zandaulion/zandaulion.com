@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hearth OCR는 브라우저에서 혈압계 사진을 읽는 실험용 도구입니다. 로컬 미리보기를 실행하고 모든 수치를 혈압계 표시와 대조하세요.">
+    <title>Hearth OCR - 프로젝트 세부정보</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=3">
+    <link rel="stylesheet" href="../project.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2.png">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ko/hearth.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/hearth.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/hearth.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/hearth.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/hearth.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/hearth.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/hearth.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/hearth.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/hearth.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/hearth.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/hearth.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/hearth.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/hearth.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/hearth.html">
+    <!-- project-locales:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="hearth.html"></portfolio-header>
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ko-KR">← 작업실로 돌아가기</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">무대 뒤 도구</span>
+                    <h1>Hearth OCR</h1>
+                    <p class="project-lead">브라우저에서 혈압계 사진을 읽는 실험용 도구입니다. 모든 수치는 직접 확인해야 합니다.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/download/v0.1.0/hearth-bp-ocr-v0.1.0.zip" class="btn btn-primary">실험적 미리보기 다운로드 · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">릴리스 노트 및 SHA-256</a>
+                        <a href="https://github.com/zandaulion/hearth-bp-ocr" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub에서 보기</a>
+                    </div>
+                </div>
+                <img src="../assets/Hearth/feature.svg" alt="혈압계 표시 화면과 수치 확인 목록을 나란히 그린 그림" class="project-hero-image hero-landscape" width="800" height="420">
+            </div>
+            <div class="project-content reveal">
+                <h2>브라우저용 실험 버전</h2>
+                <p>Hearth는 일반적인 세로형 3줄 표시 혈압계의 사진에서 수축기 혈압(SYS), 이완기 혈압(DIA), 맥박을 읽습니다. 사진을 선택하거나 카메라를 사용하고, 표시 영역을 자른 뒤 복사 전에 결과를 수정하세요.</p>
+                <p class="platform-status"><strong>결과를 사용하거나 복사하기 전에 모든 수치를 혈압계 표시와 대조하세요.</strong> 이것은 검증된 의료 판독기가 아닌 실험적인 OCR입니다. 새로운 실제 사진의 인식 정확도는 아직 입증되지 않았습니다.</p>
+                <h2>미리보기를 사용해 보세요</h2>
+                <p>첨부된 릴리스 ZIP를 다운로드하고 추출합니다. 여기에는 소스, 두 개의 ONNX 모델 및 브라우저 런타임이 포함됩니다. 계정, npm 설치 또는 모델 교육이 필요하지 않습니다. Python 3.12 이상이 권장됩니다.</p>
+                <p>추출된 폴더에서 다음을 실행합니다.</p>
+                <pre dir="ltr"><code>python3 prototype/serve.py</code></pre>
+                <p>동일한 컴퓨터에서 현재 브라우저를 사용하여 로컬 미리보기를 엽니다.</p>
+                <p><a href="http://127.0.0.1:8765/" dir="ltr"><code>http://127.0.0.1:8765/</code></a></p>
+                <p>서버는 사용자의 컴퓨터에서만 수신합니다. 다른 장치에서 카메라에 액세스하려면 HTTPS와 같은 보안 브라우저 컨텍스트가 필요합니다.</p>
+                <h2>작동 원리</h2>
+                <p>감지기가 디스플레이를 찾고 숫자 인식기가 해당 행을 읽습니다. ONNX 추론은 브라우저 작업자에서 실행됩니다. 일관성 확인 및 자르기 재시도는 불확실한 결과를 거부하거나 재시도할 수 있습니다. 올바른 판독을 보장하지 않습니다.</p>
+                <h2>개인정보 보호 및 오프라인 사용</h2>
+                <p>일반적인 사진 처리는 브라우저의 메모리에 유지됩니다. 앱은 사진을 업로드하거나 저장하지 않습니다. 첫 번째 로드가 완료된 후 서비스 워커는 오프라인 사용을 위해 앱과 모델을 캐시합니다. 로컬 개발 평가 도구는 별도의 워크플로입니다.</p>
+                <h2>재사용 및 통합</h2>
+                <p>원본 코드와 포함된 모델은 AGPL-3.0-only 라이선스를 따릅니다. ONNX Runtime Web은 MIT 라이선스를 유지합니다. 모델 카드는 출처, 체크섬, 한계를 설명하며 통합 가이드는 다른 앱에서 재사용하는 방법을 안내합니다.</p>
+                <div class="project-links">
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/MODEL_CARD.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">모델 카드 읽기</a>
+                    <a href="https://github.com/zandaulion/hearth-bp-ocr/blob/v0.1.0/docs/INTEGRATION.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">통합 가이드 읽기</a>
+                </div>
+            </div>
+        </div>
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">계속 둘러보기</span><h2 id="related-title">이런 작품도 만나보세요</h2></div><p><a href="index.html#collection" hreflang="ko-KR">전체 모음 보기 ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="bpdigitizer.html" hreflang="ko-KR"><div class="collection-image"><img src="../assets/BP Digitizer/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">일상 도구</div><h3>BP Digitizer <span aria-hidden="true">↗</span></h3><p>혈압을 기록하고 추이를 살펴보며 기록을 내보내세요. Android와 웹에서 쓰는 하나의 앱.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwakit.html" hreflang="ko-KR"><div class="collection-image"><img src="../assets/PWA-Kit/feature_graphic.jpg" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">무대 뒤 도구</div><h3>pwa-kit <span aria-hidden="true">↗</span></h3><p>웹 앱이 오프라인에서도 작동하고 최신 상태를 유지하도록 돕는 작은 구성 요소.</p></a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="screenshotkit.html" hreflang="ko-KR"><div class="collection-image"><img src="../assets/ScreenshotKit/feature-graphic.png" alt="" loading="lazy" decoding="async" width="800" height="420"></div><div class="collection-tag">무대 뒤 도구</div><h3>Android Store Screenshot Kit <span aria-hidden="true">↗</span></h3><p>실제 Android 앱에서 매번 같은 방식으로 찍는 Play 스토어 스크린샷.</p></a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=6" defer></script>
+    <script src="../project.js?v=5" defer></script>
+    <script src="../language.js?v=6" defer></script>
+</body>
+</html>

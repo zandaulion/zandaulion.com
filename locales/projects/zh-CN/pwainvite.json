@@ -8,7 +8,7 @@
   "Download self-hosting ZIP": "下载自托管 ZIP",
   "The console on a desktop, with every app in the sidebar and the devices of Casierul clasei": "桌面上的控制台，侧边栏列出所有应用，并显示 Casierul clasei 的设备",
   "About The Project": "关于项目",
-  "The downloadable bundle has a synthetic example configuration for a local preview. Real administration requires your own compatible backend behind an authenticated private HTTPS listener.": "可下载的捆绑包具有用于本地预览的综合示例配置。真正的管理需要您自己的兼容后端位于经过身份验证的私有 HTTPS 侦听器后面。",
+  "The downloadable bundle has a synthetic example configuration for a local preview. Real administration requires your own compatible backend behind an authenticated private HTTPS listener.": "下载包包含用于本地演示的虚构示例配置。实际管理需要你自己的兼容后端，并通过带身份验证的私有 HTTPS 服务访问。",
   "One page for the invite and device administration of every app behind the invite mechanism.": "邀请机制背后的每个应用程序的邀请和设备管理的页面。",
   "It is the only administration GUI — the apps used to carry one each, which meant multiple tabs open and multiple places to remember. It lives in its own repository because it belongs to none of the apps it fronts.": "它是唯一的管理 GUI——过去每个应用程序都带有一个，这意味着打开多个选项卡并记住多个位置。它存在于自己的存储库中，因为它不属于它前面的任何应用程序。",
   "Tailscale TLS terminates in front of the private listener, restricting administrative access strictly to authorized Tailnet nodes with zero exposed public endpoints or hardcoded passwords.": "Tailscale TLS 在私有侦听器前面终止，将管理访问严格限制在具有零公开公共端点或硬编码密码的授权 Tailnet 节点。",

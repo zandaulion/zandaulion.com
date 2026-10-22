@@ -93,5 +93,6 @@
   "count_label": "已显示项目",
   "translation_note": "项目页面支持全部 12 种语言。隐私声明保留英文内容及原有链接。",
   "return_home": "返回你的语言版本首页",
-  "english_page": "此项目页面目前为英文。"
+  "english_page": "此项目页面目前为英文。",
+  "hearth_card": "在浏览器中读取血压计照片的实验性 OCR 工具，每个数值都需由你核对。"
 }

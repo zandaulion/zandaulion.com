@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pwa-kit: un asistente de actualización del trabajador de servicio sin dependencia para aplicaciones web.">
+    <meta name="description" content="pwa-kit: un asistente de actualización mediante service worker para aplicaciones web, sin dependencias.">
     <title>pwa-kit ⚡ - Detalles del proyecto</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -53,9 +53,9 @@
 
 
                 <h2>Sobre el proyecto</h2>
-                <p>Un pequeño asistente de actualización del trabajador de servicio para aplicaciones web, con un aviso de actualización visible y un protector para el trabajo inacabado.</p>
+                <p>Un pequeño asistente de actualización mediante service worker para aplicaciones web, con un aviso visible y protección del trabajo sin terminar.</p>
                 <p>Copiar <code>sw.js</code>, <code>sw-update.js</code> y <code>pwa-update.js</code> en la raíz web de una aplicación y conéctelos. No hay ningún paso de compilación de frontend ni dependencia de paquetes. El ZIP también tiene un ejemplo y archivos de integración de servidor opcionales.</p>
-                <p>Un nuevo trabajador de servicio se activa inmediatamente. Las páginas visibles pueden posponer la recarga mientras el trabajo no está terminado; los clientes que no responden se recargan después de un breve período de gracia. Adapte la política de caché de referencia antes de usarla para contenido privado.</p>
+                <p>Un nuevo service worker se activa inmediatamente. Las páginas visibles pueden aplazar la recarga mientras haya trabajo sin terminar; los clientes que no responden se recargan tras un breve periodo de espera. Adapta la política de caché del ejemplo antes de utilizarla con contenido privado.</p>
 
                 <h2>Galería</h2>
                 <div class="gallery-grid">
@@ -65,7 +65,7 @@
                 <h2>Funciones</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Activación Inmediata:</strong> Los nuevos trabajadores se instalan y toman el control sin que los trabajadores obsoletos permanezcan durante días en las pestañas abiertas del navegador.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Guardia de trabajo no guardada (<code>isBusy</code>):</strong> Las páginas responsivas y visibles pueden posponer las recargas mientras las ediciones no están terminadas; Las aplicaciones deben guardar borradores importantes por separado.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Protección de cambios sin guardar (<code>isBusy</code>):</strong> Las páginas visibles que responden pueden aplazar la recarga mientras haya cambios sin terminar; las aplicaciones deben guardar por separado los borradores importantes.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Frescura primero en la red:</strong> Las solicitudes en línea siempre ganan para garantizar que los cambios implementados entren en vigor en la próxima recarga y vuelvan a la caché cuando estén fuera de línea.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 Notificaciones de almacenamiento de sesión limpia:</strong> Evita cadenas de consulta de URL contaminadas con indicadores de actualización, informando a los usuarios de forma clara a través de notificaciones dentro de la aplicación.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 Trampilla de escape de caché incorporada:</strong> Incluye un mecanismo de cancelación de registro de emergencia y de eliminación de caché para clientes bloqueados.</li>

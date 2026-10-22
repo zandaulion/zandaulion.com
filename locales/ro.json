@@ -93,5 +93,6 @@
   "count_label": "Proiecte afișate",
   "translation_note": "Paginile proiectelor sunt disponibile în toate cele 12 limbi. Politicile de confidențialitate rămân în engleză, la adresele existente.",
   "return_home": "Înapoi la pagina principală în limba ta",
-  "english_page": "Această pagină de proiect este momentan în engleză."
+  "english_page": "Această pagină de proiect este momentan în engleză.",
+  "hearth_card": "OCR experimental care citește o fotografie a tensiometrului în browser. Verificați personal fiecare valoare pe aparat."
 }
