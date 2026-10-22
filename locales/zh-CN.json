@@ -94,5 +94,9 @@
   "translation_note": "项目页面支持全部 12 种语言。隐私声明保留英文内容及原有链接。",
   "return_home": "返回你的语言版本首页",
   "english_page": "此项目页面目前为英文。",
-  "hearth_card": "在浏览器中读取血压计照片的实验性 OCR 工具，每个数值都需由你核对。"
+  "hearth_card": "在浏览器中读取血压计照片的实验性 OCR 工具，每个数值都需由你核对。",
+  "not_found_page_title": "找不到页面",
+  "not_found_title": "这个页面走丢了。",
+  "not_found_description": "链接可能已过期，或地址中有拼写错误。作品集中还有很多值得探索的内容。",
+  "not_found_home": "返回作品集"
 }

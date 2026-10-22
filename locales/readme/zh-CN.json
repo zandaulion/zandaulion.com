@@ -122,5 +122,8 @@
   "The [Site checks](.github/workflows/site-checks.yml) workflow runs on every push and pull request, and can also be started manually. It verifies generated pages and README translations, checks links and served privacy notices, and runs the language tests. GitHub Pages deployment remains a separate workflow.": "[Site checks](.github/workflows/site-checks.yml) 工作流在每次推送和拉取请求时运行，也可以手动启动。它验证生成的页面和 README 翻译，检查链接与实际提供的隐私声明，并运行语言测试。GitHub Pages 部署仍由独立的工作流处理。",
   "Run these commands from the repository root. Page generation and checks use only the Python standard library. Node.js with the built-in test runner is needed for the language tests. There is no npm install or frontend bundler step.": "请在仓库根目录运行这些命令。页面生成和检查仅使用 Python 标准库。语言测试需要带有内置测试运行器的 Node.js。无需执行 npm install 或前端打包步骤。",
   "Responsive image sources and variants": "响应式图片源文件与变体",
-  "[Image authoring guide](scripts/IMAGES.md)": "[图片制作指南](scripts/IMAGES.md)"
+  "[Image authoring guide](scripts/IMAGES.md)": "[图片制作指南](scripts/IMAGES.md)",
+  "The site check covers all 324 HTML pages: 12 homepages, 300 project pages, ten privacy notices, one compatibility redirect, and the 404 page. It checks local links, assets, duplicate IDs outside the preserved privacy markup, project language metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also checks HTTP responses and compares served privacy notices with their source files.": "网站检查涵盖全部 324 个 HTML 页面：12 个主页、300 个项目页面、10 个隐私声明、1 个兼容性重定向页面和 404 页面。 它检查本地链接、资产、保留的隐私标记之外的重复 ID、项目语言元数据、相互 SEO 链接和阿拉伯语方向。对于 `--url`，它还检查 HTTP 响应并将提供的隐私声明与其源文件进行比较。",
+  "Search, sharing, and error pages": "搜索、分享和错误页面",
+  "[Discovery and sharing guide](scripts/DISCOVERY.md)": "[发现与分享指南](scripts/DISCOVERY.md)"
 }

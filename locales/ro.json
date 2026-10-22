@@ -94,5 +94,9 @@
   "translation_note": "Paginile proiectelor sunt disponibile în toate cele 12 limbi. Politicile de confidențialitate rămân în engleză, la adresele existente.",
   "return_home": "Înapoi la pagina principală în limba ta",
   "english_page": "Această pagină de proiect este momentan în engleză.",
-  "hearth_card": "OCR experimental care citește o fotografie a tensiometrului în browser. Verificați personal fiecare valoare pe aparat."
+  "hearth_card": "OCR experimental care citește o fotografie a tensiometrului în browser. Verificați personal fiecare valoare pe aparat.",
+  "not_found_page_title": "Pagina nu a fost găsită",
+  "not_found_title": "Pagina aceasta s-a rătăcit.",
+  "not_found_description": "Poate că linkul este vechi sau adresa conține o greșeală de tastare. Mai sunt multe de descoperit în colecție.",
+  "not_found_home": "Înapoi la colecție"
 }

@@ -122,5 +122,8 @@
   "The [Site checks](.github/workflows/site-checks.yml) workflow runs on every push and pull request, and can also be started manually. It verifies generated pages and README translations, checks links and served privacy notices, and runs the language tests. GitHub Pages deployment remains a separate workflow.": "[Site checks](.github/workflows/site-checks.yml) ワークフローは push と pull request のたびに実行され、手動でも開始できます。生成されたページと README の翻訳、リンク、配信されるプライバシー通知を検証し、言語テストを実行します。GitHub Pages へのデプロイは別のワークフローです。",
   "Run these commands from the repository root. Page generation and checks use only the Python standard library. Node.js with the built-in test runner is needed for the language tests. There is no npm install or frontend bundler step.": "これらのコマンドはリポジトリのルートで実行してください。ページの生成とチェックでは Python 標準ライブラリのみを使用します。言語テストには、組み込みテストランナーを備えた Node.js が必要です。npm install やフロントエンドのバンドル処理は不要です。",
   "Responsive image sources and variants": "レスポンシブ画像のソースと各サイズの画像",
-  "[Image authoring guide](scripts/IMAGES.md)": "[画像の作成ガイド](scripts/IMAGES.md)"
+  "[Image authoring guide](scripts/IMAGES.md)": "[画像の作成ガイド](scripts/IMAGES.md)",
+  "The site check covers all 324 HTML pages: 12 homepages, 300 project pages, ten privacy notices, one compatibility redirect, and the 404 page. It checks local links, assets, duplicate IDs outside the preserved privacy markup, project language metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also checks HTTP responses and compares served privacy notices with their source files.": "サイトチェックは、12 のホームページ、300 のプロジェクトページ、10 のプライバシー通知、1 つの互換性リダイレクト、404 ページを含む、全 324 HTML ページを対象とします。 ローカル リンク、アセット、保存されたプライバシー マークアップ外の重複 ID、プロジェクト言語メタデータ、SEO 相互リンク、およびアラビア語の方向をチェックします。 `--url` では、HTTP の応答もチェックし、提供されたプライバシー通知とそのソース ファイルを比較します。",
+  "Search, sharing, and error pages": "検索、共有、エラーページ",
+  "[Discovery and sharing guide](scripts/DISCOVERY.md)": "[検索と共有のガイド](scripts/DISCOVERY.md)"
 }

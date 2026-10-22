@@ -108,6 +108,7 @@ Les liens de langue de la page d'accueil sont présents dans le HTML et fonction
 
 | Que changer | Source à modifier |
 | --- | --- |
+| Recherche, partage et pages d’erreur | [Guide de découverte et de partage](scripts/DISCOVERY.md) |
 | Sources et variantes des images adaptatives | [Guide de préparation des images](scripts/IMAGES.md) |
 | Disposition de la page d'accueil | `templates/home.html` |
 | Texte de la page d'accueil dans chaque langue | `locales/<locale>.json` |
@@ -161,7 +162,7 @@ node --test scripts/test_language.cjs
 ```
 
 - La vérification de build détecte les sorties générées obsolètes et les traductions manquantes.
-- La vérification du site couvre les 323 pages HTML : 12 pages d'accueil, 300 pages de projet, dix avis de confidentialité et une redirection de compatibilité. Il vérifie les liens locaux, les actifs, les identifiants en double en dehors du balisage de confidentialité préservé, les métadonnées de la langue du projet, les liens SEO réciproques et la direction arabe. Avec `--url`, il vérifie également les réponses HTTP et compare les avis de confidentialité envoyés avec leurs fichiers sources.
+- La vérification du site couvre les 324 pages HTML : 12 pages d’accueil, 300 pages de projet, dix avis de confidentialité, une redirection de compatibilité et la page 404. Il vérifie les liens locaux, les actifs, les identifiants en double en dehors du balisage de confidentialité préservé, les métadonnées de la langue du projet, les liens SEO réciproques et la direction arabe. Avec `--url`, il vérifie également les réponses HTTP et compare les avis de confidentialité envoyés avec leurs fichiers sources.
 - Les tests linguistiques couvrent la priorité des préférences, la correspondance régionale, le stockage bloqué, les racines des fichiers et des sous-répertoires, le comportement de redirection et la préservation des sections.
 
 Pour les vérifications de liens hors ligne, exécutez `python scripts/check_site.py` sans `--url`. Examinez également les pages concernées dans le navigateur : mise en page mobile, direction arabe, changement de langue, commandes du clavier de la galerie et interactions avec l'éditeur.

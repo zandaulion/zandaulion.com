@@ -5,6 +5,8 @@ from html import escape
 from html.parser import HTMLParser
 from urllib.parse import urlsplit
 from site_locales import LANGUAGES
+from site_contracts import ORIGIN
+from discovery import SOCIAL_BLOCK, project_social, social_images
 
 FILES = ('admitere.html', 'bankdwhstudio.html', 'bpdigitizer.html', 'casierul.html', 'faceslice.html', 'gravitygarden.html',
          'gravitytdg.html', 'gravitywarp.html', 'hearth.html', 'intarzieri.html', 'kerfloom.html',
@@ -36,7 +38,6 @@ SANKEY = (
     'Data exported! Are you sure you want to completely clear the diagram now?',
     'Are you sure you want to completely reset the diagram? This cannot be undone.',
 )
-ORIGIN = 'https://zandaulion.com/'
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 BLOCK = re.compile(r'\s*<!-- project-locales:start -->.*?<!-- project-locales:end -->', re.S)
 
@@ -135,12 +136,13 @@ def project_strings(root, filename):
                 self.translations[key] = key
             return text
     parser = Collector({}, 'ro', filename)
-    parser.feed(BLOCK.sub('', (root / filename).read_text(encoding='utf-8')))
+    parser.feed(SOCIAL_BLOCK.sub('', BLOCK.sub('', (root / filename).read_text(encoding='utf-8'))))
     return parser.translations
 
 
 def project_outputs(root):
     outputs = {}
+    images, dimensions = social_images(root, FILES)
     english = json.loads((root / 'locales/en-US.json').read_text(encoding='utf-8'))
     for lang, filenames in PROJECTS.items():
         catalog = json.loads((root / f'locales/{lang}.json').read_text(encoding='utf-8'))
@@ -151,12 +153,14 @@ def project_outputs(root):
             translations.update(json.loads((root / f'locales/projects/{lang}/{filename[:-5]}.json').read_text(encoding='utf-8')))
             if any(not isinstance(value, str) or not value.strip() for value in translations.values()):
                 raise ValueError(f'{lang}/{filename}: translations must be non-empty strings')
-            source = BLOCK.sub('', (root / filename).read_text(encoding='utf-8'))
+            source = SOCIAL_BLOCK.sub('', BLOCK.sub('', (root / filename).read_text(encoding='utf-8')))
             # Earlier English pages may already have a standalone canonical.
             source = re.sub(r'^[ \t]*<link rel="canonical"[^>]*>\s*\n', '', source, flags=re.M)
-            outputs[root / filename] = source.replace('</head>', seo(filename, 'en-US') + '\n</head>').rstrip() + '\n'
+            english_output = source.replace('</head>', seo(filename, 'en-US') + '\n</head>')
+            image = images['projects'][filename]
+            outputs[root / filename] = project_social(english_output, image, dimensions[image]).rstrip() + '\n'
             parser = ProjectTranslator(translations, lang, filename)
             parser.feed(source)
             output = ''.join(parser.output).replace('</head>', seo(filename, lang) + '\n</head>')
-            outputs[root / PATHS[lang] / filename] = output.rstrip() + '\n'
+            outputs[root / PATHS[lang] / filename] = project_social(output, image, dimensions[image]).rstrip() + '\n'
     return outputs

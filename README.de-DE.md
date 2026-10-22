@@ -108,6 +108,7 @@ Homepage-Sprachlinks sind im HTML vorhanden und funktionieren auch ohne JavaScri
 
 | Was zu ändern ist | Quelle zum Bearbeiten |
 | --- | --- |
+| Suche, Teilen und Fehlerseiten | [Anleitung zu Auffindbarkeit und Teilen](scripts/DISCOVERY.md) |
 | Quelldateien und Varianten responsiver Bilder | [Anleitung zur Bildaufbereitung](scripts/IMAGES.md) |
 | Homepage-Layout | `templates/home.html` |
 | Homepagetext in jeder Sprache | `locales/<locale>.json` |
@@ -161,7 +162,7 @@ node --test scripts/test_language.cjs
 ```
 
 - Die Build-Prüfung erkennt veraltete generierte Ausgaben und fehlende Übersetzungen.
-- Der Site-Check umfasst alle 323 HTML-Seiten: 12 Homepages, 300 Projektseiten, zehn Datenschutzhinweise und eine Kompatibilitätsweiterleitung. Es überprüft lokale Links, Assets, doppelte IDs außerhalb des beibehaltenen Datenschutz-Markups, Metadaten der Projektsprache, wechselseitige SEO-Links und die arabische Richtung. Mit `--url` werden auch HTTP-Antworten überprüft und zugestellte Datenschutzhinweise mit ihren Quelldateien verglichen.
+- Die Website-Prüfung umfasst alle 324 HTML-Seiten: 12 Startseiten, 300 Projektseiten, zehn Datenschutzhinweise, eine Kompatibilitätsweiterleitung und die 404-Seite. Es überprüft lokale Links, Assets, doppelte IDs außerhalb des beibehaltenen Datenschutz-Markups, Metadaten der Projektsprache, wechselseitige SEO-Links und die arabische Richtung. Mit `--url` werden auch HTTP-Antworten überprüft und zugestellte Datenschutzhinweise mit ihren Quelldateien verglichen.
 - Die Sprachtests umfassen Präferenzpriorität, regionale Übereinstimmung, blockierten Speicher, Datei- und Unterverzeichnisstämme, Umleitungsverhalten und Abschnittserhaltung.
 
 Führen Sie für Offline-Linkprüfungen `python scripts/check_site.py` ohne `--url` aus. Überprüfen Sie auch die betroffenen Seiten im Browser: mobiles Layout, arabische Ausrichtung, Sprachumschaltung, Tastatursteuerung in der Galerie und Interaktionen mit dem Editor.

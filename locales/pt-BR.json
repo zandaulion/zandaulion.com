@@ -94,5 +94,9 @@
   "translation_note": "As páginas dos projetos estão disponíveis nos 12 idiomas. Os avisos de privacidade continuam em inglês, nos endereços atuais.",
   "return_home": "Voltar à página inicial no seu idioma",
   "english_page": "A página deste projeto está atualmente em inglês.",
-  "hearth_card": "OCR experimental que lê uma foto do medidor de pressão no navegador. Confira cada valor no aparelho."
+  "hearth_card": "OCR experimental que lê uma foto do medidor de pressão no navegador. Confira cada valor no aparelho.",
+  "not_found_page_title": "Página não encontrada",
+  "not_found_title": "Esta página se perdeu pelo caminho.",
+  "not_found_description": "O link pode estar desatualizado ou o endereço pode ter um erro de digitação. Ainda há muito para explorar na coleção.",
+  "not_found_home": "Voltar à coleção"
 }

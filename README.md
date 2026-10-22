@@ -140,6 +140,7 @@ because browsers may isolate storage for each file.
 
 | What to change | Source to edit |
 | --- | --- |
+| Search, sharing, and error pages | [Discovery and sharing guide](scripts/DISCOVERY.md) |
 | Responsive image sources and variants | [Image authoring guide](scripts/IMAGES.md) |
 | Homepage layout | `templates/home.html` |
 | Homepage text in each language | `locales/<locale>.json` |
@@ -215,11 +216,7 @@ node --test scripts/test_language.cjs
 ```
 
 - The build check detects stale generated outputs and missing translations.
-- The site check covers all 323 HTML pages: 12 homepages, 300 project pages,
-  ten privacy notices, and one compatibility redirect. It checks local links,
-  assets, duplicate IDs outside the preserved privacy markup, project language
-  metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also
-  checks HTTP responses and compares served privacy notices with their source files.
+- The site check covers all 324 HTML pages: 12 homepages, 300 project pages, ten privacy notices, one compatibility redirect, and the 404 page. It checks local links, assets, duplicate IDs outside the preserved privacy markup, project language metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also checks HTTP responses and compares served privacy notices with their source files.
 - The language tests cover preference precedence, regional matching, blocked
   storage, file and subdirectory roots, redirect behavior, and section preservation.
 

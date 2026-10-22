@@ -1,0 +1,44 @@
+{
+  "home": "assets/brand/social-home.png",
+  "projects": {
+    "admitere.html": "assets/Admitere/feature_graphic.jpg",
+    "bankdwhstudio.html": "assets/BankDWHStudio/01-top5-wire-customers-desktop.png",
+    "bpdigitizer.html": "assets/BP Digitizer/feature_graphic.jpg",
+    "casierul.html": "assets/Casierul/05-registru-desktop-1440x900.png",
+    "faceslice.html": "assets/Faceslice/feature_graphic.jpg",
+    "gravitygarden.html": "assets/Gravity Garden/workshop-hero.jpg",
+    "gravitytdg.html": "assets/GravityTDG/workshop-hero.png",
+    "gravitywarp.html": "assets/GravityWarp/workshop-hero.png",
+    "hearth.html": "assets/Hearth/social.png",
+    "intarzieri.html": "assets/Intarzieri/feature_graphic.jpg",
+    "kerfloom.html": "assets/Kerfspan/feature_graphic.jpg",
+    "magpie.html": "assets/Magpie/feature_graphic.jpg",
+    "miscare.html": "assets/Miscare/feature_graphic.jpg",
+    "olxdeals.html": "assets/OLX/feature_graphic.jpg",
+    "omaha.html": "assets/omaha/feature-graphic.png",
+    "orbitpuzzles.html": "assets/OrbitPuzzles/feature_graphic.jpg",
+    "palebluedot.html": "assets/PaleBlueDot/feature-graphic.png",
+    "plate.html": "assets/Plate/bitey-hero.png",
+    "pwainvite.html": "assets/PWA-Invite-Console/card.jpg",
+    "pwakit.html": "assets/PWA-Kit/feature_graphic.jpg",
+    "sankey.html": "assets/Sankey/feature_graphic.jpg",
+    "screenshotkit.html": "assets/ScreenshotKit/feature-graphic.png",
+    "spendosaurus.html": "assets/Spendosaurus/feature_graphic.jpg",
+    "thermostat.html": "assets/Thermostat/feature_graphic.jpg",
+    "threadmark.html": "assets/Threadmark/card.jpg"
+  },
+  "generated": [
+    {
+      "source": "assets/brand/social-home.svg",
+      "output": "assets/brand/social-home.png",
+      "source_sha256": "75fc85b990f4b51438af6a02b78a469b2dbbfa7949d83980b0d4d34685a9e557",
+      "sha256": "4515ecd5a0d12d0a3f0c377f35be1165e905cf193235c42bbba3e5ab14a989a9"
+    },
+    {
+      "source": "assets/Hearth/feature.svg",
+      "output": "assets/Hearth/social.png",
+      "source_sha256": "8c65a20b93935fb144e8ba9a8d791a07b2c3701a5be1d1d661224a140451a5d1",
+      "sha256": "95f673858041b09c96712105bc39035ec7e54c4644b2303c7b29f4522e47f103"
+    }
+  ]
+}

@@ -3,3 +3,4 @@ __pycache__/
 .translation-cache/
 .codex-remote-attachments/
 .venv-images/
+node_modules/

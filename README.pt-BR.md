@@ -108,6 +108,7 @@ Os links de idiomas da página inicial estão presentes no HTML e funcionam sem 
 
 | O que mudar | Fonte para editar |
 | --- | --- |
+| Busca, compartilhamento e páginas de erro | [Guia de descoberta e compartilhamento](scripts/DISCOVERY.md) |
 | Fontes e variantes de imagens responsivas | [Guia de preparação de imagens](scripts/IMAGES.md) |
 | Layout da página inicial | `templates/home.html` |
 | Texto da página inicial em cada idioma | `locales/<locale>.json` |
@@ -161,7 +162,7 @@ node --test scripts/test_language.cjs
 ```
 
 - A verificação de construção detecta saídas geradas obsoletas e traduções ausentes.
-- A verificação do site cobre todas as 323 páginas HTML: 12 páginas iniciais, 300 páginas de projetos, dez avisos de privacidade e um redirecionamento de compatibilidade. Ele verifica links locais, ativos, IDs duplicados fora da marcação de privacidade preservada, metadados de idioma do projeto, links SEO recíprocos e direção árabe. Com `--url`, ele também verifica as respostas HTTP e compara os avisos de privacidade fornecidos com seus arquivos de origem.
+- A verificação do site cobre todas as 324 páginas HTML: 12 páginas iniciais, 300 páginas de projetos, dez avisos de privacidade, um redirecionamento de compatibilidade e a página 404. Ele verifica links locais, ativos, IDs duplicados fora da marcação de privacidade preservada, metadados de idioma do projeto, links SEO recíprocos e direção árabe. Com `--url`, ele também verifica as respostas HTTP e compara os avisos de privacidade fornecidos com seus arquivos de origem.
 - Os testes de idioma cobrem precedência de preferência, correspondência regional, armazenamento bloqueado, raízes de arquivos e subdiretórios, comportamento de redirecionamento e preservação de seção.
 
 Para verificações de link offline, execute `python scripts/check_site.py` sem `--url`. Revise também as páginas afetadas no navegador: layout móvel, direção árabe, mudança de idioma, controles de teclado da galeria e interações do editor.

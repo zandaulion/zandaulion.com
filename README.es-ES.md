@@ -108,6 +108,7 @@ Los enlaces de idioma de la página de inicio están presentes en el HTML y func
 
 | que cambiar | Fuente para editar |
 | --- | --- |
+| Búsqueda, difusión y páginas de error | [Guía de descubrimiento y difusión](scripts/DISCOVERY.md) |
 | Fuentes y variantes de imágenes adaptables | [Guía de preparación de imágenes](scripts/IMAGES.md) |
 | Diseño de página de inicio | `templates/home.html` |
 | Texto de la página de inicio en cada idioma. | `locales/<locale>.json` |
@@ -161,7 +162,7 @@ node --test scripts/test_language.cjs
 ```
 
 - La verificación de compilación detecta resultados generados obsoletos y traducciones faltantes.
-- La verificación del sitio cubre las 323 páginas HTML: 12 páginas de inicio, 300 páginas de proyectos, diez avisos de privacidad y una redirección de compatibilidad. Comprueba enlaces locales, activos, ID duplicados fuera del marcado de privacidad preservado, metadatos del idioma del proyecto, enlaces recíprocos SEO y dirección árabe. Con `--url`, también verifica las respuestas de HTTP y compara los avisos de privacidad entregados con sus archivos fuente.
+- La comprobación del sitio abarca las 324 páginas HTML: 12 páginas de inicio, 300 páginas de proyectos, diez avisos de privacidad, una redirección de compatibilidad y la página 404. Comprueba enlaces locales, activos, ID duplicados fuera del marcado de privacidad preservado, metadatos del idioma del proyecto, enlaces recíprocos SEO y dirección árabe. Con `--url`, también verifica las respuestas de HTTP y compara los avisos de privacidad entregados con sus archivos fuente.
 - Las pruebas de idioma cubren la precedencia de preferencias, la coincidencia regional, el almacenamiento bloqueado, las raíces de archivos y subdirectorios, el comportamiento de redireccionamiento y la preservación de secciones.
 
 Para verificaciones de enlaces sin conexión, ejecute `python scripts/check_site.py` sin `--url`. Revise también las páginas afectadas en el navegador: diseño móvil, dirección árabe, cambio de idioma, controles del teclado de la galería e interacciones del editor.

@@ -94,5 +94,9 @@
   "translation_note": "Project pages are available in all 12 languages. Privacy notices remain in English at their existing URLs.",
   "return_home": "Return to the homepage in your language",
   "english_page": "This project page is currently in English.",
-  "hearth_card": "Experimental OCR that reads a blood-pressure monitor photo in your browser, with every value checked by you."
+  "hearth_card": "Experimental OCR that reads a blood-pressure monitor photo in your browser, with every value checked by you.",
+  "not_found_page_title": "Page not found",
+  "not_found_title": "This page wandered off.",
+  "not_found_description": "The link may be old or the address may have a typo. There’s still plenty to explore in the collection.",
+  "not_found_home": "Back to the collection"
 }

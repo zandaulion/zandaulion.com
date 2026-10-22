@@ -94,5 +94,9 @@
   "translation_note": "Die Projektseiten sind in allen 12 Sprachen verfügbar. Die Datenschutzhinweise bleiben auf Englisch unter den bisherigen Adressen.",
   "return_home": "Zur Startseite in deiner Sprache",
   "english_page": "Diese Projektseite ist derzeit auf Englisch.",
-  "hearth_card": "Experimentelle OCR für Fotos von Blutdruckmessgeräten direkt im Browser. Prüfen Sie jeden Wert selbst am Gerät."
+  "hearth_card": "Experimentelle OCR für Fotos von Blutdruckmessgeräten direkt im Browser. Prüfen Sie jeden Wert selbst am Gerät.",
+  "not_found_page_title": "Seite nicht gefunden",
+  "not_found_title": "Diese Seite hat sich verlaufen.",
+  "not_found_description": "Vielleicht ist der Link veraltet oder die Adresse enthält einen Tippfehler. In der Sammlung gibt es noch viel zu entdecken.",
+  "not_found_home": "Zurück zur Sammlung"
 }

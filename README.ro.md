@@ -108,6 +108,7 @@ Link-urile pentru limbile paginii de pornire sunt prezente în HTML și funcțio
 
 | Ce să schimbi | Sursa de editat |
 | --- | --- |
+| Căutare, distribuire și pagini de eroare | [Ghid pentru descoperire și distribuire](scripts/DISCOVERY.md) |
 | Surse și variante pentru imagini responsive | [Ghid pentru pregătirea imaginilor](scripts/IMAGES.md) |
 | Aspectul paginii de pornire | `templates/home.html` |
 | Textul paginii de pornire în fiecare limbă | `locales/<locale>.json` |
@@ -161,7 +162,7 @@ node --test scripts/test_language.cjs
 ```
 
 - Verificarea build-ului detectează ieșirile generate obținute și traducerile lipsă.
-- Verificarea site-ului acoperă toate cele 323 pagini HTML: 12 pagini de start, 300 pagini de proiect, zece notificări de confidențialitate și o redirecționare de compatibilitate. Verifică linkurile locale, materialele, ID-urile duplicate în afara markupului de confidențialitate păstrat, metadatele limbajului proiectului, linkurile SEO reciproce și direcția arabă. Cu `--url`, verifică, de asemenea, răspunsurile HTTP și compară notificările de confidențialitate difuzate cu fișierele lor sursă.
+- Verificarea site-ului acoperă toate cele 324 de pagini HTML: 12 pagini principale, 300 de pagini de proiect, zece notificări de confidențialitate, o redirecționare de compatibilitate și pagina 404. Verifică linkurile locale, materialele, ID-urile duplicate în afara markupului de confidențialitate păstrat, metadatele limbajului proiectului, linkurile SEO reciproce și direcția arabă. Cu `--url`, verifică, de asemenea, răspunsurile HTTP și compară notificările de confidențialitate difuzate cu fișierele lor sursă.
 - Testele de limbă acoperă prioritatea preferințelor, potrivirea regională, stocarea blocată, rădăcinile fișierelor și subdirectoarelor, comportamentul de redirecționare și păstrarea secțiunilor.
 
 Pentru verificări offline, rulați `python scripts/check_site.py` fără `--url`. Examinați paginile afectate și în browser: aspectul mobil, direcția arabă, schimbarea limbii, comenzile de la tastatură din galerie și interacțiunile editorului.

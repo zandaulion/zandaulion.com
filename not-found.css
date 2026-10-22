@@ -1,0 +1,16 @@
+/* Error pages can be served at any depth; keep their presentation independent. */
+.error-main { display: grid; grid-template-columns: 1.6fr 1fr; align-items: center; gap: 64px; padding-block: 70px 60px; }
+.error-copy h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 500; line-height: 1.12; letter-spacing: -1.5px; margin: 24px 0; }
+.error-description { max-width: 520px; color: var(--muted); font-size: 18px; margin-bottom: 30px; }
+.error-art { width: 100%; max-width: 360px; justify-self: center; }
+.error-languages { display: flex; flex-wrap: wrap; gap: 12px 24px; padding-block: 28px 40px; border-top: 1px solid var(--line); }
+.error-languages a { padding: 4px; text-underline-offset: 5px; }
+[lang="hi-IN"] { font-family: 'Noto Sans Devanagari', system-ui, sans-serif; }
+[lang="ja-JP"] { font-family: 'Noto Sans JP', system-ui, sans-serif; }
+[lang="ko-KR"] { font-family: 'Noto Sans KR', system-ui, sans-serif; }
+[lang="zh-CN"] { font-family: 'Noto Sans SC', system-ui, sans-serif; }
+@media (max-width: 700px) {
+  .error-main { grid-template-columns: 1fr; gap: 32px; padding-block: 42px; }
+  .error-art { max-width: 220px; }
+  .error-copy h1 { font-size: 40px; }
+}
