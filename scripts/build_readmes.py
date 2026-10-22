@@ -152,7 +152,8 @@ def build(check=False, fetch=False):
             if not path.exists() or path.read_text(encoding='utf-8') != content:
                 stale.append(path.name)
         else:
-            path.write_text(content, encoding='utf-8', newline='\n')
+            with path.open('w', encoding='utf-8', newline='\n') as stream:
+                stream.write(content)
     if stale:
         raise SystemExit('Rebuild stale READMEs: ' + ', '.join(stale))
     print(f'PASS: 12 READMEs {"verified" if check else "built"}.')

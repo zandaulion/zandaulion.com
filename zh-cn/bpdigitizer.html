@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against bp-digitizer-web commit 49c61ee1e1d5e2c9f6c8812ae6bdc38d62fd867b and BloodPressureMonitor commit ce1383530ca2741db6bf8bdbff68ba5dffcb8952 (2026-10-10). -->
+    <!-- Content checked against bp-digitizer-web release v0.1.0 (089477bc3b31a2f9b2592c411ef1de69da45b03c) and BloodPressureMonitor release v1.6.3 (8dee5237a37324d1ea719b9fb79954c0731d28af) on 2026-10-21. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BP Digitizer 适用于 Android 和网络：记录血压读数、探索趋势并导出历史记录。">
@@ -43,7 +43,7 @@
                                         <p class="project-lead">一份血压日志，采用 Android 和 Web 形式。记录您的读数、探索趋势并导出您的历史记录。</p>
                     <div class="project-links">
                         <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">打开网络应用程序</a>
-                        <a href="#android-version" class="btn btn-outline">探索 Android 应用程序</a>
+                        <a href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-outline">下载安卓 APK</a>
                         <a href="../bpdigitizer-privacy.html" class="btn btn-outline" hreflang="en-US">安卓隐私政策</a>
                     </div>
                 </div>
@@ -64,14 +64,15 @@
                         <span class="section-number">在您的手机上 · Android</span>
                         <h3>本土的日常伴侣。</h3>
                         <p>在手机上用摄像头扫描、Health Connect 和提醒，而且应用完全没有联网权限。</p>
-                        <p class="platform-status">Android 应用已提交到 F-Droid，目前还不能下载。你现在就可以使用网页版。</p>
-                        <a class="btn btn-outline" href="#android-version">查看安卓版本↓</a>
+                        <p class="platform-status">签名的 APK 适用于运行 Android 8.0 或更高版本的 ARM64 手机。</p>
+                        <a class="btn btn-outline" href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer">下载安卓 APK ↗</a>
                     </section>
                 </div>
 
                 <section id="web-version" aria-labelledby="web-title">
                     <h2 id="web-title">BP Digitizer 网页版</h2>
                     <p>PWA 把同一项目带到浏览器中，提供摄像头扫描、手动录入、图表和导出。读数保存在浏览器的 IndexedDB 中，应用由 GitHub Pages 提供，背后没有服务器、账号或邀请。把它安装到主屏幕，随时取用。</p>
+                    <p>更喜欢自己的主机？ <a href="https://github.com/zandaulion/bp-digitizer-web/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">下载自托管 ZIP ↗</a>。它包括即用型应用程序、OCR 模型和源。服务其 <code>site/</code> HTTPS 上的目录。要将现有读数移动到另一个站点地址，请在旧应用程序中进行加密备份，然后在新应用程序中恢复。</p>
                     <p><a href="https://github.com/zandaulion/bp-digitizer-web" target="_blank" rel="noopener noreferrer">探索 GitHub 上的网络源代码 ↗</a></p>
                     <h3>在网络应用程序内部</h3>
                     <p>这些截图中的所有读数和个人资料都是虚构的。</p>
@@ -97,7 +98,7 @@
                 <section id="android-version" aria-labelledby="android-title">
                     <h2 id="android-title">BP Digitizer 适用于 Android</h2>
                     <p>原生 Android 应用完全在手机上用摄像头读取血压计，还提供快速手动录入、趋势视图、Health Connect、PDF 导出和提醒。它没有联网权限，Android 的云备份和手机间迁移对它也已关闭，因此除非你导出，读数只会留在手机上。它可在 Android 8.0 及以上的 ARM64 手机上运行。</p>
-                    <p class="platform-status">应用已提交到 F-Droid，目前还不能下载。 <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">请打开网页版 ↗</a></p>
+                    <p class="platform-status"><a href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer">下载签名的 Android APK ↗</a>。该版本包括安装说明、校验和和签名详细信息。从另一个版本切换之前，导出 JSON 备份；卸载会删除本地读数和配置文件。</p>
                     <p><a href="https://github.com/zandaulion/BloodPressureMonitor" target="_blank" rel="noopener noreferrer">在 GitHub 上查看 Android 源代码 ↗</a></p>
                     <p><a href="../bpdigitizer-privacy.html" hreflang="en-US">阅读 Android 隐私政策 ↗</a></p>
                     <h3>Android 应用程序内部</h3>

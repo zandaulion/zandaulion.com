@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pwa-kit - Un mécanisme PWA sans dépendance et à mise à jour automatique extrait et généralisé de Bitey.">
+    <meta name="description" content="pwa-kit - Un assistant de mise à jour de service-worker sans dépendance pour les applications Web.">
     <title>pwa-kit ⚡ - Détails du projet</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -39,8 +39,10 @@
                 <div class="project-intro">
                     <span class="section-number">Dans les coulisses</span>
                     <h1>pwa-kit</h1>
-                    <p class="project-lead">Une petite brique qui aide les applications Web à fonctionner hors connexion et à rester à jour.</p>
+                    <p class="project-lead">Une petite aide à la mise à jour avec une solution de secours hors ligne pour les ressources précédemment visitées.</p>
                     <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/download/v0.1.0/pwa-kit-0.1.0.zip" class="btn btn-primary" style="margin-right: 12px;">Télécharger le kit de développement · 0.1.0</a>
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Notes de version et SHA-256</a>
                     <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">Voir sur GitHub</a>
                 </div>
                 </div>
@@ -51,9 +53,9 @@
 
 
                 <h2>À propos du projet</h2>
-                <p>Le mécanisme de mise à jour de Bitey, généralisé : un PWA qui se met à jour et le dit après, plutôt que de demander une autorisation dont il n'a pas besoin.</p>
-                <p>Copie <code>sw.js</code> et <code>pwa-update.js</code> dans la racine Web d'une application et connectez-les. Il n’y a pas d’étape de construction, pas de bundler et aucune dépendance – c’est là le point : ces applications sont des répertoires statiques.</p>
-                <p>Un nouveau service worker s'installe et s'active immédiatement sans attendre la fermeture des onglets. Chaque fenêtre ouverte termine le travail en cours en toute sécurité avant de recharger de manière transparente sur la dernière version.</p>
+                <p>Un petit assistant de mise à jour pour les applications Web, avec un avis de mise à jour visible et une protection pour le travail inachevé.</p>
+                <p>Copie <code>sw.js</code>, <code>sw-update.js</code> et <code>pwa-update.js</code> dans la racine Web d'une application et connectez-les. Il n’y a pas d’étape de construction frontale ni de dépendance de package. Le ZIP dispose également d'un exemple et de fichiers d'intégration de serveur en option.</p>
+                <p>Un nouveau service worker s'active immédiatement. Les pages visibles peuvent retarder le rechargement alors que le travail n'est pas terminé ; les clients qui ne répondent pas rechargent après une courte période de grâce. Adaptez la politique du cache de référence avant de l'utiliser pour du contenu privé.</p>
 
                 <h2>Galerie</h2>
                 <div class="gallery-grid">
@@ -63,7 +65,7 @@
                 <h2>Fonctionnalités</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Activation immédiate :</strong> Les nouveaux travailleurs s'installent et prennent le relais sans que les travailleurs obsolètes ne s'attardent pendant des jours dans les onglets ouverts du navigateur.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Protection du travail non enregistrée (<code>isBusy</code>):</strong> Le travailleur demande plutôt que de naviguer aveuglément ; les pages reportent les rechargements jusqu'à ce que les modifications en attente ou les états de formulaire soient résolus en toute sécurité.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ Garde de travail non enregistrée (<code>isBusy</code>):</strong> Les pages réactives et visibles peuvent différer les rechargements pendant que les modifications ne sont pas terminées ; les applications doivent enregistrer les brouillons importants séparément.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 Fraîcheur axée sur le réseau :</strong> Les requêtes en ligne sont toujours gagnantes pour garantir que les modifications déployées prennent effet dès le prochain rechargement, en revenant au cache lorsqu'elles sont hors ligne.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 Nettoyer les notifications de stockage de session :</strong> Évite de polluer les chaînes de requête d'URL avec des indicateurs de mise à jour, en informant les utilisateurs proprement via des toasts dans l'application.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 Trappe d'évacuation du cache intégrée :</strong> Comprend un mécanisme de désenregistrement d’urgence et de suppression du cache pour les clients coincés.</li>

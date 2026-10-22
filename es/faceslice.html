@@ -54,9 +54,9 @@
 
                 <h2>Sobre el proyecto</h2>
                 <p>De una fotografía frontal a los patrones de corte de un retrato por capas: un relieve topográfico de chapa metálica, pegado a mano, capa a capa.</p>
-                <p>Faceslice transforma una selfie 2D estándar en esculturas topográficas en capas físicas hechas de cartulina o chapa cortada con láser. En lugar de exigir una compleja fotogrametría multicámara o complicadas aplicaciones de escaneo 3D, Faceslice requiere solo una fotografía frontal y una medición de la distancia interpupilar (IPD) en milímetros para fijar la escala física.</p>
-                <p>Para reconstruir una cabeza genuina a partir de una foto, Faceslice organiza un proceso de fusión de visión por computadora de tres modelos donde cada modelo aporta lo que mejor sabe hacer: la segmentación de la silueta captura el cabello, las orejas y la mandíbula; la profundidad monocular estima el volumen amplio del cráneo; y los modelos de puntos de referencia de malla facial extraen puntos de referencia faciales nítidos (nariz, cuencas de los ojos, labios) como desplazamiento de superficie residual.</p>
-                <p>El sólido 3D resultante se corta en planos paralelos en ángulos personalizados. El corte frontal produce isohipsis de contorno anidadas autoalineantes, completas con guías de alineación grabadas en cada placa, interiores huecos ocultos para una reducción de peso de hasta un 80 % y exportación instantánea de DXF con calidad de producción.</p>
+                <p>Faceslice convierte una fotografía frontal en patrones de corte para un relieve en capas en chapa o cartulina. Introduzca una distancia interpupilar (IPD) en milímetros para configurar la escala. El resultado es un relieve del lado visible de la cabeza, no un escaneo de toda la cabeza.</p>
+                <p>Faceslice combina tres modelos de visión por computadora para estimar el relieve: la segmentación traza la silueta; la profundidad monocular estima un amplio volumen; y los puntos de referencia faciales añaden detalles alrededor de la nariz, los ojos y los labios. La geometría es una estimación a partir de una sola imagen.</p>
+                <p>El relieve se corta en planos paralelos en ángulos ajustables. Las rodajas frontales se anidan una dentro de la otra, con guías de alineación grabadas. La herramienta puede eliminar material interior oculto y exportar hojas de corte DXF. Verifique las dimensiones y los ajustes de corte con el taller antes de la fabricación.</p>
 
                 <h2>Galería</h2>
                 <div class="gallery-grid">
@@ -69,14 +69,14 @@
 
                 <h2>Funciones</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Reconstrucción 3D de una sola foto:</strong> Convierte una sola selfie frontal en un sólido completo con relieve de profundidad, calibrado a dimensiones del mundo real usando la distancia de la pupila.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Relieve de una sola foto:</strong> Convierte una fotografía frontal en un relieve en capas, escalado usando una medida de distancia entre pupilas que usted proporcione.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 Motor de fusión de IA de 3 modelos:</strong> Combina la segmentación multiclase MediaPipe, la estimación de profundidad monocular ONNX (Depth Anything V2) y los puntos de referencia faciales MediaPipe para equilibrar el volumen del cráneo y la nitidez facial.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️ Corte de contorno topográfico:</strong> Corta sólidos en planos paralelos con control de ángulo libre (frontal para isohipsis anidadas concéntricas, horizontal para laminaciones de perfil lateral).</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 Guías de montaje autoalineantes:</strong> Cuando se corta frontalmente, cada capa de metal se anida dentro de la de abajo, y la línea delimitadora de la siguiente placa se graba directamente en su superficie para una fácil alineación sin plantillas.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ Huecado interior y economía de materiales:</strong> Elimina automáticamente la geometría interna oculta, lo que reduce el consumo de material y el peso hasta en un 80 % (por ejemplo, de 10 kg de acero macizo a 1,9 kg de anillos huecos) y, al mismo tiempo, mantiene márgenes de unión resistentes.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ Controles de fabricación paramétricos:</strong> Ajuste interactivo en tiempo real del espesor de la hoja (0,5 a 10 mm), compresión del relieve, compensación de corte, exageración del relieve facial y ángulos de corte.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Estimador de peso y material en tiempo real:</strong> Calcula dinámicamente el número de placas, los contornos únicos, el área de chapa requerida (dm²), la altura de la pila y la masa exacta de acero, latón y aluminio.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 Exportación DXF lista para producción:</strong> Exporta archivos DXF totalmente vectorizados, preparados para láser/chorro de agua/plasma CAM, anidados en dimensiones de stock de hojas personalizadas con un solo clic.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Estimaciones de material y peso:</strong> Muestra el número de placas, los contornos, el área de las láminas, la altura de la pila y el peso estimado de acero, latón y aluminio.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 DXF Exportar:</strong> Exporta hojas de corte vectoriales del tamaño del stock seleccionado. Verifíquelos con su fabricante antes de cortar.</li>
                 </ul>
 
                 <h2>Pila de arquitectura y tecnología</h2>
@@ -87,11 +87,11 @@
                     </div>
                     <div class="feature-item">
                         <h3>Motor de visión y geometría</h3>
-                        <p>Núcleo computacional Python 3 que utiliza MediaPipe (segmentación y malla facial), ONNX Runtime (Depth Anything V2 Small), Shapely para booleanos y huecos de polígonos 2D, y ezdxf para generación CAD.</p>
+                        <p>El motor Python 3 utiliza MediaPipe, ONNX Runtime, NumPy, SciPy y OpenCV. Su propia geometría y módulos DXF se encargan del corte y corte de láminas.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Despliegue de producción</h3>
-                        <p>En contenedores con Podman y systemd Quadlet, estampado automatizado de versiones de hash de activos a través de <code>deploy.sh</code>y servido a través del proxy inverso Caddy con tiempos de respuesta de subsegundos en la CPU.</p>
+                        <h3>Notas de implementación</h3>
+                        <p>La fuente incluye una receta de contenedor Podman e instrucciones de ejecución local. El tiempo de procesamiento de la CPU depende de la imagen y la máquina. Una implementación pública necesita HTTPS y un punto final de administración privado.</p>
                     </div>
                 </div>
 

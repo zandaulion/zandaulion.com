@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pwa-kit - Bitey から抽出され一般化された、依存性ゼロの自己更新 PWA メカニズム。">
+    <meta name="description" content="pwa-kit - Web アプリ用の依存関係のない Service Worker 更新ヘルパー。">
     <title>pwa-kit ⚡ - プロジェクトの詳細</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -39,8 +39,10 @@
                 <div class="project-intro">
                     <span class="section-number">舞台裏の道具</span>
                     <h1>pwa-kit</h1>
-                    <p class="project-lead">Webアプリのオフライン動作と更新を支える、小さな部品。</p>
+                    <p class="project-lead">以前にアクセスしたリソースのオフライン フォールバックを備えた小規模な更新ヘルパー。</p>
                     <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/download/v0.1.0/pwa-kit-0.1.0.zip" class="btn btn-primary" style="margin-right: 12px;">開発者キットをダウンロード · 0.1.0</a>
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">リリースノートとSHA-256</a>
                     <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">GitHubで見る</a>
                 </div>
                 </div>
@@ -51,9 +53,9 @@
 
 
                 <h2>プロジェクトについて</h2>
-                <p>Bitey の更新メカニズムを一般化したものです。必要のない許可を求めるのではなく、自分自身を更新し、後で更新する PWA です。</p>
-                <p>コピー <code>sw.js</code> そして <code>pwa-update.js</code> アプリの Web ルートに接続し、それらを接続します。ビルド ステップ、バンドラー、依存関係はありません。これが重要です。これらのアプリは静的ディレクトリです。</p>
-                <p>新しい Service Worker は、タブが閉じるのを待たずにすぐにインストールされ、アクティブ化されます。開いている各ウィンドウは現在の作業を安全に完了してから、最新バージョンにシームレスにリロードします。</p>
+                <p>Web アプリ用の小さな Service Worker 更新ヘルパー。更新通知が表示され、未完了の作業をガードします。</p>
+                <p>コピー <code>sw.js</code>, <code>sw-update.js</code> そして <code>pwa-update.js</code> アプリの Web ルートに接続し、それらを接続します。フロントエンドのビルドステップやパッケージの依存関係はありません。 ZIP には、サンプルとオプションのサーバー統合ファイルもあります。</p>
+                <p>新しい Service Worker はすぐにアクティブ化されます。作業が完了していない間、表示されているページのリロードが延期されることがあります。応答しないクライアントは、短い猶予期間の後にリロードされます。プライベート コンテンツに使用する前に、参照キャッシュ ポリシーを適応させます。</p>
 
                 <h2>ギャラリー</h2>
                 <div class="gallery-grid">
@@ -63,7 +65,7 @@
                 <h2>機能</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 即時アクティベーション:</strong> 新しいワーカーはインストールして引き継ぎますが、開いているブラウザーのタブに古くなったワーカーが何日も滞留することはありません。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存の作業保護 (<code>isBusy</code>):</strong> 労働者は盲目的にナビゲートするのではなく、質問します。保留中の編集またはフォームの状態が安全に解決されるまで、ページのリロードは延期されます。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存のワークガード (<code>isBusy</code>):</strong> 応答性が高く、表示されるページは、編集が完了していない間はリロードを延期できます。アプリは重要な下書きを個別に保存する必要があります。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 ネットワークファーストの鮮度:</strong> オンライン要求は常に優先され、デプロイされた変更が次回のリロード時に確実に有効になり、オフライン時にはキャッシュにフォールバックされます。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 セッションストレージのクリーンアップ通知:</strong> 更新フラグによる URL クエリ文字列の汚染を回避し、アプリ内のトーストを通じてユーザーに明確に通知します。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 内蔵キャッシュエスケープハッチ:</strong> ウェッジされたクライアントのための緊急登録解除およびキャッシュ無効化メカニズムが含まれています。</li>

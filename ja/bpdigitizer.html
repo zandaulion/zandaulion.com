@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-JP" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against bp-digitizer-web commit 49c61ee1e1d5e2c9f6c8812ae6bdc38d62fd867b and BloodPressureMonitor commit ce1383530ca2741db6bf8bdbff68ba5dffcb8952 (2026-10-10). -->
+    <!-- Content checked against bp-digitizer-web release v0.1.0 (089477bc3b31a2f9b2592c411ef1de69da45b03c) and BloodPressureMonitor release v1.6.3 (8dee5237a37324d1ea719b9fb79954c0731d28af) on 2026-10-21. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android および Web 用の BP Digitizer: 血圧測定値を記録し、傾向を調査し、履歴をエクスポートします。">
@@ -43,7 +43,7 @@
                                         <p class="project-lead">Android および Web 形式の 1 つの血圧ログ。測定値を記録し、傾向を調査し、履歴をエクスポートします。</p>
                     <div class="project-links">
                         <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">ウェブアプリを開く</a>
-                        <a href="#android-version" class="btn btn-outline">Android アプリを探索する</a>
+                        <a href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Android APKをダウンロード</a>
                         <a href="../bpdigitizer-privacy.html" class="btn btn-outline" hreflang="en-US">Android プライバシー ポリシー</a>
                     </div>
                 </div>
@@ -64,14 +64,15 @@
                         <span class="section-number">携帯電話・Android で</span>
                         <h3>ネイティブの毎日の相棒。</h3>
                         <p>スマートフォン上でのカメラ読み取り、Health Connect、リマインダー。インターネットの権限を一切持たないアプリです。</p>
-                        <p class="platform-status">Android アプリは F-Droid に提出済みで、まだダウンロードできません。ウェブ版は今すぐ使えます。</p>
-                        <a class="btn btn-outline" href="#android-version">Android版はこちら↓</a>
+                        <p class="platform-status">署名付き APK は、Android 8.0 以降を実行する ARM64 スマートフォンで利用できます。</p>
+                        <a class="btn btn-outline" href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer">Android APK をダウンロード ↗</a>
                     </section>
                 </div>
 
                 <section id="web-version" aria-labelledby="web-title">
                     <h2 id="web-title">ウェブ用 BP Digitizer</h2>
                     <p>PWA は同じプロジェクトをブラウザーで使えるようにしたもので、カメラ読み取り、手入力、グラフ、書き出しに対応しています。測定値はブラウザーの IndexedDB にローカル保存され、アプリは GitHub Pages から配信されます。背後にサーバー、アカウント、招待はありません。ホーム画面にインストールしておくと便利です。</p>
+                    <p>自分のホストの方がいいですか? <a href="https://github.com/zandaulion/bp-digitizer-web/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">セルフホスティング ZIP をダウンロード ↗</a>。これには、すぐに提供できるアプリ、OCR モデル、ソースが含まれています。そのサービスを提供する <code>site/</code> HTTPS 上のディレクトリ。既存の測定値を別のサイト アドレスに移動するには、古いアプリで暗号化されたバックアップを作成し、それを新しいアプリで復元します。</p>
                     <p><a href="https://github.com/zandaulion/bp-digitizer-web" target="_blank" rel="noopener noreferrer">GitHub の Web ソースを探索する ↗</a></p>
                     <h3>ウェブアプリの内部</h3>
                     <p>これらのスクリーンショットの測定値とプロフィール情報はすべて架空のものです。</p>
@@ -97,7 +98,7 @@
                 <section id="android-version" aria-labelledby="android-title">
                     <h2 id="android-title">Android用BP Digitizer</h2>
                     <p>Android のネイティブアプリは、カメラでの血圧計の読み取りをすべてスマートフォン上で行い、すばやい手入力、推移の表示、Health Connect、PDF の書き出し、リマインダーも備えています。インターネットの権限はなく、Android のクラウドバックアップと端末間の移行もこのアプリでは無効なので、書き出さない限り測定値はスマートフォンの中に残ります。Android 8.0 以降の ARM64 スマートフォンで動作します。</p>
-                    <p class="platform-status">アプリは F-Droid に提出済みで、まだダウンロードできません。 <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">代わりに Web バージョンを開いてください ↗</a></p>
+                    <p class="platform-status"><a href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer">署名された Android APK をダウンロード ↗</a>。このリリースには、インストール手順、チェックサム、署名の詳細が含まれています。別のビルドから切り替える前に、JSON バックアップをエクスポートします。アンインストールすると、ローカルの測定値とプロファイルが削除されます。</p>
                     <p><a href="https://github.com/zandaulion/BloodPressureMonitor" target="_blank" rel="noopener noreferrer">GitHub で Android 版のソースコードを見る ↗</a></p>
                     <p><a href="../bpdigitizer-privacy.html" hreflang="en-US">Android プライバシー ポリシーを読む ↗</a></p>
                     <h3>Android アプリ内</h3>

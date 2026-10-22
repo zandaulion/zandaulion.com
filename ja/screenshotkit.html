@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-JP" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <!-- Developer-kit content checked against android-store-screenshot-kit v0.1.0. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android Store Screenshot Kit は、Firebase Test Lab 上で実際の Android アプリから再現性のある Google Play 用スクリーンショットを作成し、検証したうえで各実行を記録します。">
@@ -42,6 +42,8 @@
                     <h1>Android Store Screenshot Kit</h1>
                     <p class="project-lead">実際の Android アプリの本物のスクリーンショットを、毎回同じ方法で撮影し、そのまま Google Play に使えます。</p>
                     <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/download/v0.1.0/android-store-screenshot-kit-0.1.0.zip" class="btn btn-primary">開発者キットをダウンロード · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">リリースノートとSHA-256</a>
                         <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHubで見る</a>
                     </div>
                 </div>
@@ -52,6 +54,7 @@
                 <h2>プロジェクトについて</h2>
                 <p>ストア用スクリーンショットはアプリを変更するたびに古くなり、スマートフォンで手作業で撮ると時間がかかるうえ、毎回まったく同じにはなりません。このキットはそれを繰り返せる手順に変えます。各アプリは自分のデータを準備して画面をたどる小さなテストだけを持ち、残りはキットが引き受けます。</p>
                 <p>アプリとテストをビルドし、選んだ Firebase Test Lab のデバイスで実行して最後まで追跡し、スクリーンショットをダウンロードして Google Play の要件に照らして確認してから、アプリのストア用フォルダーにコピーします。</p>
+                <p>ダウンロードには、APK やストアのスクリーンショットではなく、ソース コードと合成構成が含まれます。 Test Lab を実行するには独自のクラウド プロジェクトが必要であり、請求されたクォータを使用する場合があります。</p>
 
                 <h2>仕組み</h2>
                 <ol>
@@ -88,7 +91,7 @@
                 </ul>
 
                 <h2>ボンネットの下で</h2>
-                <p>コマンドラインツールは Python 3.11 さえあれば動く単一の Python スクリプトです。共通ヘルパーは Java で書かれた小さな Android ライブラリなので、利用するアプリに Kotlin のバージョンを押し付けず、AGP 8 と AGP 9 の両方で動作します。CI では仮想デバイスをプルリクエストごとに実行し、実機はリリース候補に取っておけます。このキットは GPL-3.0 ライセンスのオープンソースです。</p>
+                <p>コマンドライン ツールは単一の Python スクリプトであり、Python 3.11 以降は何も必要としません。共有ヘルパーは Java で書かれた小さな Android ライブラリであるため、共有ヘルパーを使用するアプリに Kotlin バージョン要件は追加されず、AGP 8 と AGP 9 の両方で動作します。 CI では、仮想デバイスはすべてのプル リクエストで実行でき、物理デバイスはリリース候補として保持されます。オリジナルのキット コードとドキュメントは、GPL-3.0-or-later の下でライセンスされています。</p>
             </div>
         </div>
 

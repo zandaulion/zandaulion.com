@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mișcare - حركة يومية متكيفة خالية من الاحتكاك PWA مصممة من الصفر مع التعرف على معدات الرؤية Gemini وفلسفة عدم الخجل.">
+    <meta name="description" content="يقدم Mișcare إجراءات روتينية موجهة قابلة للتكيف ومجلة تمارين، مع معاينة Android المحلية وإصدار ويب مستضاف ذاتيًا. ابدأ من الصفر، بالسرعة التي تناسبك.">
     <title>Mișcare - تفاصيل المشروع</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -43,6 +43,8 @@
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">فتح تطبيق الويب</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">عرض على GitHub</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">تنزيل معاينة أندرويد</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">ملاحظات الإصدار والمجاميع الاختبارية</a>
                     <a href="../miscare-privacy.html" class="btn btn-outline" hreflang="en-US">سياسة الخصوصية (بالإنجليزية)</a>
                 </div>
                 </div>
@@ -52,11 +54,15 @@
             <div class="project-content reveal">
 
 
+                <h2>معاينة أندرويد</h2>
+                <p><strong>Mișcare 0.1.0</strong> هو تنزيل Android للوصول المبكر لنظام Android 7.0 أو الأحدث. فهو يجمع بين الإجراءات الروتينية الموجهة و45 تمرينًا مصورًا و12 لغة واجهة ومجلة تمرين محلية. لا يلزم وجود حساب أو خادم أو إذن إنترنت.</p>
+                <p>يبدأ تطبيق Android ببيانات محلية منفصلة؛ ولا يقوم باستيراد سجل PWA تلقائيًا. يؤدي استيراد JSON إلى استبدال ملف التعريف الحالي ودفتر اليومية. انظر <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">دليل التثبيت والنسخ الاحتياطي</a> للحصول على المجاميع الاختبارية وتوافق التوقيع والتحقق المتبقي. لم يتم تنفيذ التذكيرات.</p>
+
                 <h2>عن المشروع</h2>
                 <p>ابدأ من الصفر. تحرك بالسرعة التي تناسبك. لا ذنب، مجرد تعديل.</p>
-                <p>Mișcare هو تطبيق ويب تقدمي تكيفي (PWA) مصمم لإزالة كل طبقة من الاحتكاك النفسي والجسدي المرتبط باللياقة البدنية اليومية. تم تصميم Mișcare خصيصًا للمبتدئين أو الأفراد العائدين بعد فترات توقف طويلة، وهو يزيل جداول البيانات المعقدة للمجموعات/الممثلين، وعدادات الخطوط العقابية، والمصطلحات الرياضية المخيفة.</p>
+                <p>Mișcare هو تطبيق تمرين تكيفي مع إصدار Android محلي وإصدار ويب مستضاف ذاتيًا. إنه مصمم للمبتدئين والأشخاص العائدين بعد فترة راحة، مع إجراءات روتينية قصيرة، واختيارات للمعدات، ومذكرة. التقدم هو اختيار، وأيام الراحة لا تحمل أي عقوبة خسارة متتالية.</p>
                 <p>عند فتح التطبيق، يتم الترحيب بالمستخدمين مباشرة من خلال "جلسة اليوم" - وهي جاهزة للبدء بنقرة واحدة. إذا أصبحت الحياة مزدحمة، فإن خيار "اجعلها 5 دقائق" بنقرة واحدة يؤدي إلى تقصير فترة التمرين. إذا كانت الحياة تعترض طريقك لعدة أيام، فلن تكون هناك خطوط مكسورة أو رسائل ذنب؛ يرحب بك التطبيق ببساطة من خلال روتين إعادة الدخول اللطيف.</p>
-                <p>تم تصميم Mișcare باستخدام Vanilla JavaScript (وحدات ES) وNode.js مع SQLite الأصلي، ويتكامل مع Gemini Vision للتعرف على المعدات المنزلية المتاحة من الصور، وpwa-kit للتخزين المؤقت دون توقف دون اتصال بالإنترنت والتحديثات السلسة، ووحدة تحكم pwa-invite لتشغيل الجهاز بدون كلمة مرور.</p>
+                <p>يستخدم PWA المستضاف ذاتيًا Vanilla JavaScript وNode.js وSQLite، مع تحديثات pwa-kit ودعوات جهاز pwa-invite-console. يجمع تطبيق Android الواجهة والمحرك التكيفي في Capacitor، ويخزن ملف التعريف الخاص به والمجلة محليًا في IndexedDB، ويتلقى التحديثات القابلة للتنفيذ من خلال تثبيت APK.</p>
 
                 <h2>معرض الصور</h2>
                 <div class="gallery-grid">
@@ -68,12 +74,12 @@
 
                 <h2>المزايا</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 البدء من الصفر:</strong> حركات آمنة وتأسيسية لوزن الجسم (تمارين الضغط على الحائط، والجلوس على الكرسي، والجسور اللطيفة، وتمديد حركة الكتف) مقترنة بأدلة مرئية مصورة دافئة ومرشحات حماية للركبتين وأسفل الظهر والمعصمين.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 البدء من الصفر:</strong> حركات وزن الجسم الأساسية (تمارين الضغط على الحائط، والجلوس على الكرسي، والجسور اللطيفة، وتمديد حركة الكتف) مقترنة بأدلة مرئية مصورة دافئة ومرشحات حماية للركبتين وأسفل الظهر والمعصمين.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ جلسات يومية خالية من الاحتكاك:</strong> تخدم الشاشة الرئيسية روتين اليوم على الفور. يتضمن اختلافات بنقرة واحدة مثل <em>"اجعلها 5 دقائق"</em> و <em>"تمرين المبادلة"</em>، مصحوبًا بمؤقت هادئ وصوت الويب API.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 التعرف على معدات الرؤية Gemini:</strong> التقط صورة للأدوات المنزلية أو معدات التمارين الرياضية (الدمبل، أو أشرطة المقاومة، أو سجادات اليوغا، أو الكراسي القوية). تكتشف Google Gemini Vision تلقائيًا العناصر وتفتح متغيرات التمرين المطابقة.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>مرشحات المعدات:</strong> اختر المعدات المتوفرة لديك والمناطق التي تريد حمايتها؛ تتكيف الإجراءات الروتينية مع تلك الاختيارات.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 المنطق التكيفي "لا للخجل":</strong> يتم تجميع الأيام النشطة كمعالم دائمة بدلاً من الخطوط الهشة. إذا تم تصنيف الجلسة على أنها "صعبة بعض الشيء"، فإن الروتين التالي يخفض شدتها تلقائيًا؛ في حالة العودة بعد فترة راحة، يتم جدولة جلسة إعادة التكيف اللطيفة تلقائيًا.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 تحديثات فورية عبر PWA Kit:</strong> متكاملة مع <code>pwa-kit</code> للتخزين المؤقت لعامل الخدمة على الشبكة أولاً مع ختم إصدار تجزئة المحتوى ومطالبات التحديث غير المزعجة.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 اقتران الجهاز بدون كلمة مرور:</strong> تأهيل سلس عبر <code>pwa-invite-console</code> رموز الاقتران (<code>XXXX-YYYY-ZZZZ</code>) إصدار رموز مميزة آمنة وطويلة الأمد لجلسة الجهاز.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 تحديثات PWA:</strong> متكاملة مع <code>pwa-kit</code> للتخزين المؤقت لعامل الخدمة على الشبكة أولاً مع ختم إصدار تجزئة المحتوى ومطالبات التحديث غير المزعجة.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐إقران جهاز PWA:</strong> تأهيل سلس عبر <code>pwa-invite-console</code> رموز الاقتران (<code>XXXX-YYYY-ZZZZ</code>) إصدار رموز مميزة آمنة وطويلة الأمد لجلسة الجهاز.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 الموضوع المزدوج والمرونة في وضع عدم الاتصال:</strong> لوحة ألوان فاتحة/داكنة تلقائية مع لمسات من زمرد الغابة، تعمل بكامل طاقتها دون اتصال بالإنترنت ومدعومة بـ IndexedDB وLocalStorage.</li>
                 </ul>
 
@@ -85,7 +91,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>المحرك الخلفي</h3>
-                        <p>الاستفادة من Node.js v24 الأصلي <code>DatabaseSync</code> من <code>node:sqlite</code>ونقاط نهاية Express REST وتكامل Google Gemini Multimodal Vision API.</p>
+                        <p>يستخدم PWA Node.js 24، الأصلي <code>node:sqlite</code>ونقاط نهاية REST السريعة. يعمل إصدار Android على تشغيل المحرك الروتيني المشترك محليًا ولا يحتاج إلى واجهة خلفية.</p>
                     </div>
                     <div class="feature-item">
                         <h3>التكامل</h3>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against bp-digitizer-web commit 49c61ee1e1d5e2c9f6c8812ae6bdc38d62fd867b and BloodPressureMonitor commit ce1383530ca2741db6bf8bdbff68ba5dffcb8952 (2026-10-10). -->
+    <!-- Content checked against bp-digitizer-web release v0.1.0 (089477bc3b31a2f9b2592c411ef1de69da45b03c) and BloodPressureMonitor release v1.6.3 (8dee5237a37324d1ea719b9fb79954c0731d28af) on 2026-10-21. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android 및 웹용 BP Digitizer: 혈압 측정값을 기록하고, 추세를 탐색하고, 기록을 내보냅니다.">
@@ -43,7 +43,7 @@
                                         <p class="project-lead">Android 및 웹 형식의 혈압 기록 1개. 판독값을 기록하고, 추세를 탐색하고, 기록을 내보냅니다.</p>
                     <div class="project-links">
                         <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">웹 앱 열기</a>
-                        <a href="#android-version" class="btn btn-outline">Android 앱 살펴보기</a>
+                        <a href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-outline">안드로이드 APK 다운로드</a>
                         <a href="../bpdigitizer-privacy.html" class="btn btn-outline" hreflang="en-US">안드로이드 개인정보 보호정책</a>
                     </div>
                 </div>
@@ -64,14 +64,15 @@
                         <span class="section-number">휴대전화 · Android</span>
                         <h3>네이티브 일상의 동반자.</h3>
                         <p>휴대폰에서의 카메라 스캔, Health Connect, 알림을 인터넷 권한이 전혀 없는 앱에 담았습니다.</p>
-                        <p class="platform-status">Android 앱은 F-Droid에 제출되었으며 아직 내려받을 수 없습니다. 지금은 웹 버전을 사용하세요.</p>
-                        <a class="btn btn-outline" href="#android-version">안드로이드 버전 보기 ↓</a>
+                        <p class="platform-status">서명된 APK는 Android 8.0 이상을 실행하는 ARM64 휴대폰에서 사용할 수 있습니다.</p>
+                        <a class="btn btn-outline" href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer">안드로이드 APK 다운로드 ↗</a>
                     </section>
                 </div>
 
                 <section id="web-version" aria-labelledby="web-title">
                     <h2 id="web-title">웹용 BP Digitizer</h2>
                     <p>PWA는 같은 프로젝트를 브라우저로 옮겨, 카메라 스캔, 직접 입력, 차트, 내보내기를 제공합니다. 측정값은 브라우저의 IndexedDB에 로컬로 저장되고, 앱은 서버, 계정, 초대 없이 GitHub Pages에서 제공됩니다. 홈 화면에 설치해 가까이 두세요.</p>
+                    <p>자신의 호스트를 선호하십니까? <a href="https://github.com/zandaulion/bp-digitizer-web/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">자체 호스팅 ZIP 다운로드 ↗</a>. 여기에는 즉시 제공 가능한 앱, OCR 모델 및 소스가 포함됩니다. 봉사하다 <code>site/</code> HTTPS 이상의 디렉터리입니다. 기존 판독값을 다른 사이트 주소로 이동하려면 이전 앱에서 암호화된 백업을 만들고 새 앱에서 복원하세요.</p>
                     <p><a href="https://github.com/zandaulion/bp-digitizer-web" target="_blank" rel="noopener noreferrer">GitHub에서 웹 소스 탐색 ↗</a></p>
                     <h3>웹 앱 내부</h3>
                     <p>이 스크린샷의 측정값과 프로필 정보는 모두 가상입니다.</p>
@@ -97,7 +98,7 @@
                 <section id="android-version" aria-labelledby="android-title">
                     <h2 id="android-title">안드로이드용 BP Digitizer</h2>
                     <p>Android 네이티브 앱은 카메라로 혈압계를 읽는 과정을 모두 휴대폰에서 처리하며, 빠른 직접 입력, 추세 보기, Health Connect, PDF 내보내기, 알림도 제공합니다. 인터넷 권한이 없고, Android의 클라우드 백업과 기기 간 이전도 이 앱에서는 꺼져 있어, 내보내지 않는 한 측정값은 휴대폰에만 남습니다. Android 8.0 이상의 ARM64 휴대폰에서 작동합니다.</p>
-                    <p class="platform-status">앱은 F-Droid에 제출되었으며 아직 내려받을 수 없습니다. <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">대신 웹 버전을 열어보세요 ↗</a></p>
+                    <p class="platform-status"><a href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer">서명된 Android APK 다운로드 ↗</a>. 릴리스에는 설치 지침, 체크섬 및 서명 세부 정보가 포함됩니다. 다른 빌드에서 전환하기 전에 JSON 백업을 내보내십시오. 제거하면 로컬 판독값과 프로필이 삭제됩니다.</p>
                     <p><a href="https://github.com/zandaulion/BloodPressureMonitor" target="_blank" rel="noopener noreferrer">GitHub에서 Android 소스 코드 보기 ↗</a></p>
                     <p><a href="../bpdigitizer-privacy.html" hreflang="en-US">Android 개인정보 보호정책을 읽어보세요 ↗</a></p>
                     <h3>안드로이드 앱 내부</h3>

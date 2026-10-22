@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against bp-digitizer-web commit 49c61ee1e1d5e2c9f6c8812ae6bdc38d62fd867b and BloodPressureMonitor commit ce1383530ca2741db6bf8bdbff68ba5dffcb8952 (2026-10-10). -->
+    <!-- Content checked against bp-digitizer-web release v0.1.0 (089477bc3b31a2f9b2592c411ef1de69da45b03c) and BloodPressureMonitor release v1.6.3 (8dee5237a37324d1ea719b9fb79954c0731d28af) on 2026-10-21. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BP Digitizer para Android e web: registre leituras de pressão arterial, explore tendências e exporte seu histórico.">
@@ -43,7 +43,7 @@
                                         <p class="project-lead">Um registro de pressão arterial, em formato Android e web. Grave suas leituras, explore tendências e exporte seu histórico.</p>
                     <div class="project-links">
                         <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Abra o aplicativo da web</a>
-                        <a href="#android-version" class="btn btn-outline">Explore o aplicativo Android</a>
+                        <a href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Baixe o APK do Android</a>
                         <a href="../bpdigitizer-privacy.html" class="btn btn-outline" hreflang="en-US">Política de privacidade do Android</a>
                     </div>
                 </div>
@@ -64,14 +64,15 @@
                         <span class="section-number">No seu telefone · Android</span>
                         <h3>Um companheiro nativo do dia a dia.</h3>
                         <p>Leitura pela câmera no celular, Health Connect e lembretes, em um app sem nenhuma permissão de internet.</p>
-                        <p class="platform-status">O app para Android foi enviado ao F-Droid e ainda não está disponível para download. Você já pode usar a versão web.</p>
-                        <a class="btn btn-outline" href="#android-version">Veja a versão do Android ↓</a>
+                        <p class="platform-status">Um APK assinado está disponível para telefones ARM64 com Android 8.0 ou posterior.</p>
+                        <a class="btn btn-outline" href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer">Baixar Android APK ↗</a>
                     </section>
                 </div>
 
                 <section id="web-version" aria-labelledby="web-title">
                     <h2 id="web-title">BP Digitizer para a web</h2>
                     <p>A PWA leva o mesmo projeto ao navegador, com leitura pela câmera, entrada manual, gráficos e exportações. As medições ficam no IndexedDB do navegador, e o app é servido pelo GitHub Pages, sem servidor, conta ou convite por trás. Instale na tela inicial para tê-lo sempre à mão.</p>
+                    <p>Prefere seu próprio host? <a href="https://github.com/zandaulion/bp-digitizer-web/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">Baixe o ZIP auto-hospedado ↗</a>. Inclui o aplicativo pronto para uso, modelos de OCR e fonte. Sirva seu <code>site/</code> diretório sobre HTTPS. Para mover as leituras existentes para outro endereço de site, faça um backup criptografado no aplicativo antigo e restaure-o no novo.</p>
                     <p><a href="https://github.com/zandaulion/bp-digitizer-web" target="_blank" rel="noopener noreferrer">Explore a fonte da web em GitHub ↗</a></p>
                     <h3>Dentro do aplicativo da web</h3>
                     <p>Todas as medições e os dados de perfil destas capturas são inventados.</p>
@@ -97,7 +98,7 @@
                 <section id="android-version" aria-labelledby="android-title">
                     <h2 id="android-title">BP Digitizer para Android</h2>
                     <p>O app nativo para Android lê o seu medidor com a câmera inteiramente no celular, junto com entrada manual rápida, visões de tendência, Health Connect, exportação em PDF e lembretes. Ele não tem permissão de internet, e o backup em nuvem do Android e a transferência entre celulares estão desativados para ele, então suas medições ficam no seu celular, a menos que você as exporte. Funciona em celulares ARM64 com Android 8.0 ou mais recente.</p>
-                    <p class="platform-status">O app foi enviado ao F-Droid e ainda não está disponível para download. <a href="https://zandaulion.github.io/bp-digitizer-web/" target="_blank" rel="noopener noreferrer">Abra a versão web ↗</a></p>
+                    <p class="platform-status"><a href="https://github.com/zandaulion/BloodPressureMonitor/releases/latest" target="_blank" rel="noopener noreferrer">Baixe o APK Android assinado ↗</a>. A versão inclui instruções de instalação, somas de verificação e detalhes de assinatura. Antes de mudar de outra compilação, exporte um backup JSON; a desinstalação exclui as leituras locais e o perfil.</p>
                     <p><a href="https://github.com/zandaulion/BloodPressureMonitor" target="_blank" rel="noopener noreferrer">Ver o código-fonte do Android no GitHub ↗</a></p>
                     <p><a href="../bpdigitizer-privacy.html" hreflang="en-US">Leia a política de privacidade do Android ↗</a></p>
                     <h3>Dentro do aplicativo Android</h3>

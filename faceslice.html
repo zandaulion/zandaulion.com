@@ -54,9 +54,9 @@
 
                 <h2>About The Project</h2>
                 <p>From a frontal photograph to cutting patterns for a layered portrait — a topographic relief made from sheet metal, bonded by hand, layer by layer.</p>
-                <p>Faceslice transforms a standard 2D selfie into physical layered topographic sculptures made from laser-cut sheet metal or cardstock. Instead of demanding complex multi-camera photogrammetry or finicky 3D scanning apps, Faceslice requires just a single frontal photograph and an interpupillary distance (IPD) measurement in millimeters to fix the physical scale.</p>
-                <p>To reconstruct a genuine head from one photo, Faceslice orchestrates a three-model computer vision fusion pipeline where each model contributes what it does best: silhouette segmentation captures hair, ears, and jawlines; monocular depth estimates broad skull volume; and facial mesh landmarker models extract crisp facial landmarks (nose, eye sockets, lips) as residual surface displacement.</p>
-                <p>The resulting 3D solid is sliced into parallel planes at custom angles. Frontal slicing produces self-aligning nested contour isohypses, complete with etched alignment guides on every plate, hollowed-out hidden interiors for up to 80% weight reduction, and instant production-grade DXF export.</p>
+                <p>Faceslice turns a frontal photograph into cutting patterns for a layered relief in sheet metal or cardstock. Enter an interpupillary distance (IPD) in millimeters to set the scale. The result is a relief of the visible side of the head, not a scan of the whole head.</p>
+                <p>Faceslice combines three computer vision models to estimate the relief: segmentation traces the silhouette; monocular depth estimates broad volume; and facial landmarks add detail around the nose, eyes, and lips. The geometry is an estimate from a single image.</p>
+                <p>The relief is sliced into parallel planes at adjustable angles. Frontal slices nest inside one another, with engraved alignment guides. The tool can remove concealed interior material and export DXF cutting sheets. Check dimensions and cutting settings with the workshop before fabrication.</p>
 
                 <h2>Gallery</h2>
                 <div class="gallery-grid">
@@ -69,14 +69,14 @@
 
                 <h2>Features</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Single-Photo 3D Reconstruction:</strong> Converts a single frontal selfie into a complete depth-relief solid, calibrated to real-world dimensions using pupil distance.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Single-Photo Relief:</strong> Turns one frontal photograph into a layered relief, scaled using a pupil-distance measurement you provide.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 3-Model AI Fusion Engine:</strong> Combines MediaPipe multiclass segmentation, ONNX monocular depth estimation (Depth Anything V2), and MediaPipe face landmarkers for balanced skull volume and facial sharpness.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️ Topographic Contour Slicing:</strong> Slices solids into parallel planes with free angle control (frontal for concentric nested isohypses, horizontal for side-profile laminations).</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 Self-Aligning Assembly Guides:</strong> When sliced frontally, each metal layer is nested inside the one below, and the bounding line of the next plate is engraved directly on its surface for easy alignment without jigs.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ Interior Hollowing &amp; Material Economy:</strong> Automatically removes concealed internal geometry, reducing material consumption and weight by up to 80% (e.g. 10 kg solid steel down to 1.9 kg hollow rings) while keeping sturdy bonding margins.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ Parametric Fabrication Controls:</strong> Real-time interactive adjustment of sheet thickness (0.5–10 mm), relief compression, kerf compensation, facial relief exaggeration, and slice angles.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Real-Time Material &amp; Weight Estimator:</strong> Dynamically calculates plate count, unique contours, required sheet metal area (dm²), stack height, and exact mass for Steel, Brass, and Aluminum.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 Production-Ready DXF Export:</strong> Exports fully vectorized, laser/waterjet/plasma CAM-ready DXF files nested to custom sheet stock dimensions with a single click.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Material &amp; Weight Estimates:</strong> Shows plate count, contours, sheet area, stack height, and estimated weight for steel, brass, and aluminum.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 DXF Export:</strong> Exports vector cutting sheets sized for selected stock. Verify them with your fabricator before cutting.</li>
                 </ul>
 
                 <h2>Architecture &amp; Tech Stack</h2>
@@ -87,11 +87,11 @@
                     </div>
                     <div class="feature-item">
                         <h3>Vision &amp; Geometry Engine</h3>
-                        <p>Python 3 computational core utilizing MediaPipe (Segmentation &amp; Face Mesh), ONNX Runtime (Depth Anything V2 Small), Shapely for 2D polygon booleans and hollowing, and ezdxf for CAD generation.</p>
+                        <p>The Python 3 engine uses MediaPipe, ONNX Runtime, NumPy, SciPy, and OpenCV. Its own geometry and DXF modules handle slicing and cutting sheets.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Production Deployment</h3>
-                        <p>Containerized with Podman and systemd Quadlet, automated asset hash version stamping via <code>deploy.sh</code>, and served through Caddy reverse proxy with sub-second slicing response times on CPU.</p>
+                        <h3>Deployment Notes</h3>
+                        <p>The source includes a Podman container recipe and local run instructions. CPU processing time depends on the image and machine. A public deployment needs HTTPS and a private administration endpoint.</p>
                     </div>
                 </div>
 

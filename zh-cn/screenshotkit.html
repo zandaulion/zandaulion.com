@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <!-- Developer-kit content checked against android-store-screenshot-kit v0.1.0. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android Store Screenshot Kit 在 Firebase Test Lab 上从真实的 Android 应用生成可复现的 Google Play 截图，然后进行校验并记录每一次运行。">
@@ -42,6 +42,8 @@
                     <h1>Android Store Screenshot Kit</h1>
                     <p class="project-lead">真实 Android 应用的真实截图，每次都以相同方式生成，可直接用于 Google Play。</p>
                     <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/download/v0.1.0/android-store-screenshot-kit-0.1.0.zip" class="btn btn-primary">下载开发工具包·0.1.0</a>
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">发行说明和 SHA-256</a>
                         <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">在 GitHub 上查看</a>
                     </div>
                 </div>
@@ -52,6 +54,7 @@
                 <h2>关于项目</h2>
                 <p>应用每次更新，商店截图就会过时；在手机上手动截图既慢，又很难两次完全一致。这个工具包把截图变成可重复的步骤：每个应用只保留一个小测试，用来准备自己的数据并逐个打开页面，其余工作都交给工具包。</p>
                 <p>它会构建应用及其测试，在选定的 Firebase Test Lab 设备上运行，全程跟踪运行过程，下载截图，并按照 Google Play 的要求检查，再复制到应用的商店素材文件夹。</p>
+                <p>下载包含源代码和综合配置，而不是 APK 或商店屏幕截图。运行测试实验室需要您自己的云项目，并且可能使用计费配额。</p>
 
                 <h2>它是如何运作的</h2>
                 <ol>
@@ -88,7 +91,7 @@
                 </ul>
 
                 <h2>在引擎盖下</h2>
-                <p>命令行工具是一个 Python 脚本，除了 Python 3.11 之外不需要任何东西。共享辅助函数是一个用 Java 编写的小型 Android 库，因此不会强制使用它的应用采用特定的 Kotlin 版本，并且同时支持 AGP 8 和 AGP 9。在 CI 中，可以在每个拉取请求上运行虚拟设备，把实体设备留给候选发布版本。该工具包以 GPL-3.0 许可证开源。</p>
+                <p>该命令行工具是一个单独的 Python 脚本，不需要 Python 3.11 以外的任何版本。共享助手是一个用 Java 编写的小型 Android 库，因此它们不会向使用它们的应用程序添加 Kotlin 版本要求，并且可以与 AGP 8 和 AGP 9 一起使用。在 CI 中，虚拟设备可以在每个拉取请求上运行，而物理设备则保留用于候选版本。原始套件代码和文档已获得 GPL-3.0-or-later 的许可。</p>
             </div>
         </div>
 

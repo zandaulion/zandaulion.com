@@ -153,7 +153,7 @@
                 <h2>شغّل نسختك الخاصة</h2>
                 <p>Kerfspan مفتوح المصدر، ويشغّل دليل البدء السريع باستخدام Compose خدمتيه كلتيهما عبر Docker أو Podman. ويحتاج إلى نحو 3 غيغابايت من المساحة للصورتين، اللتين تُبنيان لمعماريتي x86-64 وARM64. عيّن رمز مسؤول ومفتاح تشفير للمشاريع، وشغّل الحاويات، وأنشئ دعوة لمرة واحدة لمتصفحك الأول. واحتفظ بنسخة احتياطية من مفتاح التشفير، فلا يمكن فك تشفير المشاريع من دونه.</p>
                 <p>يحتاج Kerfspan إلى اتصال آمن: HTTPS، أو localhost على الجهاز الذي يشغّله. ولاستخدامه من أجهزة أخرى، ضعه خلف وكيل عكسي يتولى TLS، مثل Caddy أو Tailscale. وعبر HTTP العادي، توضح صفحة تسجيل الدخول سبب تعذّر المتابعة.</p>
-                <div class="project-links" style="margin-bottom: 24px;"><a href="https://github.com/zandaulion/kerfspan#quick-start" target="_blank" rel="noopener noreferrer" class="btn btn-outline">اقرأ دليل البدء السريع</a></div>
+                <div class="project-links" style="margin-bottom: 24px;"><a href="https://github.com/zandaulion/kerfspan/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-primary">قم بتنزيل مجموعة المضيف الذاتي</a><a href="https://github.com/zandaulion/kerfspan#quick-start" target="_blank" rel="noopener noreferrer" class="btn btn-outline">اقرأ دليل البدء السريع</a></div>
 
                 <h2>خلف الكواليس</h2>
                 <p>يتعامل المتصفح مع تحويل الخطوط الفنية والهندسة الحتمية والتحرير وذاكرة التخزين المؤقت غير المتصلة بالإنترنت. تدير خدمة Node/Express الوصول إلى الأجهزة المستندة إلى الدعوة ومساحات العمل المشفرة؛ تستخدم خدمة Python/FastAPI الخاصة OpenCV وMediaPipe لتحليل الصور الفوتوغرافية وعرض الأنماط. تم ترخيص التطبيق تحت GPL-3.0-or-later.</p>

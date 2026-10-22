@@ -24,7 +24,8 @@ PROTECTED = sorted(BRANDS | {
     'GPL-3.0-or-later', 'Node/Express', 'Python/FastAPI',
     '{n}', '{total}', '{ nodes: [], links: [] }'
 }, key=len, reverse=True)
-PATTERN = re.compile(r'(?<!\w)(?:' + '|'.join(re.escape(word) for word in PROTECTED) + r')(?!\w)')
+PATTERN = re.compile(r'(?<!\w)(?:\d{4}-\d{2}-\d{2}(?:\.\d+)?|[A-Z][A-Z0-9_-]+\.html|'
+                     + '|'.join(re.escape(word) for word in PROTECTED) + r')(?!\w)')
 
 
 def read(path):

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mișcare — O mișcare zilnică adaptivă, fără frecare PWA, proiectată de la zero, cu recunoașterea echipamentului Gemini Vision și o filozofie fără rușine.">
+    <meta name="description" content="Mișcare oferă rutine ghidate adaptive și un jurnal de exerciții, cu o previzualizare Android locală și o ediție web auto-găzduită. Începe de la zero, în ritmul tău.">
     <title>Mișcare - Detalii proiect</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -43,6 +43,8 @@
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Deschide aplicația web</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Vezi pe GitHub</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">Descărcați previzualizarea Android</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Note de lansare și sume de control</a>
                     <a href="../miscare-privacy.html" class="btn btn-outline" hreflang="en-US">Politica de confidențialitate (în engleză)</a>
                 </div>
                 </div>
@@ -52,11 +54,15 @@
             <div class="project-content reveal">
 
 
+                <h2>Previzualizare Android</h2>
+                <p><strong>Mișcare 0.1.0</strong> este o descărcare Android cu acces anticipat pentru Android 7.0 sau mai nou. Acesta include rutine ghidate, 45 de exerciții ilustrate, 12 limbi de interfață și un jurnal de antrenament local. Nu este necesară nicio permisiune de cont, server sau Internet.</p>
+                <p>Aplicația Android începe cu date locale separate; nu importă automat istoricul PWA. Importul JSON înlocuiește profilul și jurnalul curent. Vezi <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">ghid de instalare și backup</a> pentru sumele de verificare, compatibilitatea semnării și validarea rămasă. Mementourile nu sunt implementate.</p>
+
                 <h2>Despre proiect</h2>
                 <p>Începe de la zero. Mișcă-te în ritmul tău. Fără vină, doar ajustare.</p>
-                <p>Mișcare este o aplicație web progresivă adaptivă (PWA) concepută pentru a elimina fiecare strat de frecare psihologică și fizică asociată cu fitnessul zilnic. Proiectat special pentru începătorii absoluti sau persoanele care se întorc după pauze lungi, Mișcare elimină foile de calcul complicate de setări/repetiții, contoarele punitive și jargonul intimidant al sălii de sport.</p>
+                <p>Mișcare este o aplicație de exerciții adaptive cu o ediție locală pentru Android și o ediție web găzduită de sine. Este conceput pentru începători și pentru persoanele care se întorc după o pauză, cu rutine scurte, alegeri de echipamente și un jurnal. Progresul este o alegere, iar zilele de odihnă nu implică penalizări pentru pierderi.</p>
                 <p>La deschiderea aplicației, utilizatorii sunt întâmpinați direct cu „Sesiunea de astăzi” – gata să se lanseze cu o singură atingere. Dacă viața devine ocupată, o opțiune „Make it 5 minute” cu un singur clic scurtează antrenamentul. Dacă viața ține în cale zile întregi, nu există dâre întrerupte sau mesaje de vinovăție; aplicația pur și simplu vă întâmpină înapoi cu o rutină blândă de reintrare.</p>
-                <p>Construit cu Vanilla JavaScript (module ES) și Node.js cu SQLite nativ, Mișcare se integrează cu Gemini Vision pentru a recunoaște echipamentele de acasă disponibile din fotografii, pwa-kit pentru cache offline fără timpi de nefuncționare și actualizări fără întreruperi și pwa-invite-console pentru dispozitivul fără parolă integrat.</p>
+                <p>PWA auto-găzduit folosește Vanilla JavaScript, Node.js și SQLite, cu actualizări pwa-kit și invitații pentru dispozitive pwa-invite-console. Aplicația Android include interfața și motorul adaptiv în Capacitor, își stochează profilul și jurnalul local în IndexedDB și primește actualizări executabile prin instalarea APK.</p>
 
                 <h2>Galerie</h2>
                 <div class="gallery-grid">
@@ -68,12 +74,12 @@
 
                 <h2>Funcționalități</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Începând de la zero:</strong> Mișcări sigure, fundamentale ale greutății corporale (împotări de perete, scaun în picioare, poduri blânde pentru glute, întinderi pentru mobilitatea umerilor) asociate cu ghiduri vizuale ilustrate calde și filtre de protecție pentru genunchi, spate și încheieturi.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Începând de la zero:</strong> Mișcările fundamentale ale greutății corporale (împotări pe perete, scaun în picioare, punți blânde pentru glute, întinderi de mobilitate a umerilor) asociate cu ghiduri vizuale ilustrate calde și filtre de protecție pentru genunchi, spate și încheieturi.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Sesiuni zilnice cu zero frecări:</strong> Ecranul de start servește imediat rutina de astăzi. Include variații cu o singură atingere, cum ar fi <em>„Faceți 5 minute”</em> şi <em>„Exercițiu de schimb”</em>, însoțit de un temporizator silențios și de un sonerie Web Audio API.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Gemini Recunoașterea echipamentului de vedere:</strong> Faceți o fotografie a obiectelor de uz casnic sau a echipamentelor de exercițiu (gantere, benzi de rezistență, covorașe de yoga sau scaune rezistente). Google Gemini Vision detectează automat articolele și deblochează variantele de exerciții potrivite.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Filtre echipamente:</strong> Alege echipamentele pe care le ai si zonele pe care vrei sa le protejezi; rutinele se adaptează la acele selecții.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 Logica adaptivă „Fără rușine”:</strong> Zilele active sunt acumulate ca repere permanente, mai degrabă decât firide fragile. Dacă o sesiune este evaluată „Puțin dură”, următoarea rutină scade intensitatea automat; dacă se întoarce după o pauză, este programată o sesiune automată de readaptare blândă.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 Actualizări instantanee prin PWA Kit:</strong> Integrat cu <code>pwa-kit</code> pentru memorarea în cache a lucrătorului de servicii de rețea cu ștampilarea versiunii de hash de conținut și solicitări de actualizare fără perturbări.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 Împerecherea dispozitivului fără parolă:</strong> Integrare fără probleme prin <code>pwa-invite-console</code> coduri de asociere (<code>XXXX-YYYY-ZZZZ</code>) emiterea de jetoane de sesiune pentru dispozitive sigure, cu durată lungă de viață.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 Actualizări PWA:</strong> Integrat cu <code>pwa-kit</code> pentru memorarea în cache a lucrătorului de servicii de rețea cu ștampilarea versiunii de hash de conținut și solicitări de actualizare fără perturbări.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 Asocierea dispozitivului PWA:</strong> Integrare fără probleme prin <code>pwa-invite-console</code> coduri de asociere (<code>XXXX-YYYY-ZZZZ</code>) emiterea de jetoane de sesiune pentru dispozitive sigure, cu durată lungă de viață.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 Temă dublă și rezistență offline:</strong> Paletă automată de lumină/întuneric cu accente de pădure-smarald, complet funcțională offline, susținută de IndexedDB și LocalStorage.</li>
                 </ul>
 
@@ -85,7 +91,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>Motorul de backend</h3>
-                        <p>Node.js v24 utilizând nativ <code>DatabaseSync</code> din <code>node:sqlite</code>, punctele finale Express REST și integrarea Google Gemini Multimodal Vision API.</p>
+                        <p>PWA utilizează Node.js 24, nativ <code>node:sqlite</code>și punctele finale Express REST. Versiunea Android rulează motorul de rutină partajată la nivel local și nu are nevoie de backend.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Integrari</h3>

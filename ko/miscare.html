@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mișcare — Gemini 비전 장비 인식 및 부끄러움 없는 철학을 바탕으로 제로부터 설계된 적응형 무마찰 일일 무브먼트 PWA입니다.">
+    <meta name="description" content="Mișcare는 로컬 Android 미리보기 및 자체 호스팅 웹 에디션과 함께 적응형 가이드 루틴 및 운동 저널을 제공합니다. 자신만의 속도로 0부터 시작해 보세요.">
     <title>Mișcare - 프로젝트 세부정보</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -43,6 +43,8 @@
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">웹 앱 열기</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub에서 보기</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">Android 미리보기 다운로드</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">릴리스 노트 및 체크섬</a>
                     <a href="../miscare-privacy.html" class="btn btn-outline" hreflang="en-US">개인정보 처리방침 (영어)</a>
                 </div>
                 </div>
@@ -52,11 +54,15 @@
             <div class="project-content reveal">
 
 
+                <h2>안드로이드 미리보기</h2>
+                <p><strong>Mișcare 0.1.0</strong> Android 7.0 이상용 초기 액세스 Android 다운로드입니다. 가이드 루틴, 45가지 운동 그림, 12가지 인터페이스 언어 및 로컬 운동 일지를 번들로 제공합니다. 계정, 서버 또는 인터넷 권한이 필요하지 않습니다.</p>
+                <p>Android 앱은 별도의 로컬 데이터로 시작됩니다. PWA 기록을 자동으로 가져오지 않습니다. JSON 가져오기는 현재 프로필과 저널을 대체합니다. 참조 <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">설치 및 백업 가이드</a> 체크섬, 서명 호환성 및 남은 유효성 검사를 위해. 알림은 구현되지 않습니다.</p>
+
                 <h2>프로젝트 소개</h2>
                 <p>0부터 시작하세요. 자신만의 속도로 움직이세요. 죄책감은 없고 조정만 하면 됩니다.</p>
-                <p>Mișcare는 일일 피트니스와 관련된 모든 심리적, 육체적 마찰을 제거하도록 설계된 적응형 프로그레시브 웹 앱(PWA)입니다. 완전 초보자나 오랜 휴식 후 복귀하는 개인을 위해 특별히 설계된 Mișcare는 복잡한 세트/회수 스프레드시트, 징벌적인 연속 카운터 및 위협적인 체육관 전문 용어를 제거합니다.</p>
+                <p>Mișcare는 로컬 Android 버전과 자체 호스팅 웹 버전을 갖춘 적응형 운동 앱입니다. 짧은 루틴, 장비 선택 및 일지를 포함하여 초보자와 휴식 후 복귀하는 사람들을 위해 설계되었습니다. 진행은 선택 사항이며, 휴식일에는 연패 페널티가 적용되지 않습니다.</p>
                 <p>앱을 열면 사용자에게 "오늘의 세션"이 바로 표시됩니다. 탭 한 번으로 시작할 준비가 되어 있습니다. 생활이 바쁘다면 원클릭 "5분만 투자" 옵션으로 운동 시간을 단축하세요. 며칠 동안 삶이 방해가 되더라도 끊어진 줄무늬나 죄책감 메시지는 없습니다. 앱은 부드러운 재진입 루틴으로 귀하를 다시 환영합니다.</p>
-                <p>Vanilla JavaScript(ES 모듈) 및 Node.js와 기본 SQLite로 구축된 Mișcare는 ​​Gemini Vision과 통합되어 사진에서 사용 가능한 가정용 장비를 인식하고, pwa-kit는 다운타임 없는 오프라인 캐싱과 원활한 업데이트를 제공하며, 비밀번호 없는 장치 온보딩을 위한 pwa-invite-console을 통합합니다.</p>
+                <p>자체 호스팅 PWA는 pwa-kit 업데이트 및 pwa-invite-console 장치 초대와 함께 Vanilla JavaScript, Node.js 및 SQLite를 사용합니다. Android 앱은 인터페이스와 적응형 엔진을 Capacitor에 번들로 묶고 해당 프로필과 저널을 IndexedDB에 로컬로 저장하며 APK 설치를 통해 실행 가능한 업데이트를 받습니다.</p>
 
                 <h2>갤러리</h2>
                 <div class="gallery-grid">
@@ -68,12 +74,12 @@
 
                 <h2>기능</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 제로부터 시작하기:</strong> 안전하고 기초적인 체중 운동(벽 팔굽혀펴기, 의자에 앉았다 일어서기, 부드러운 둔부 다리, 어깨 가동성 스트레칭)과 함께 따뜻한 그림의 시각적 가이드 및 무릎, 허리, 손목 보호 필터가 함께 제공됩니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 제로부터 시작하기:</strong> 기초적인 체중 운동(벽 팔굽혀펴기, 의자에 앉았다 일어서기, 부드러운 둔부 다리, 어깨 가동성 스트레칭)과 함께 따뜻한 그림이 포함된 시각적 가이드 및 무릎, 허리, 손목 보호 필터가 함께 제공됩니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 마찰이 없는 일일 세션:</strong> 홈 화면에서는 오늘의 루틴을 바로 확인할 수 있습니다. 다음과 같은 원탭 변형이 포함됩니다. <em>"5분만 해주세요"</em> 그리고 <em>"스왑 운동"</em>, 무음 타이머와 웹 오디오 API 차임벨이 함께 울립니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Gemini 비전 장비 인식:</strong> 생활용품이나 운동기구(아령, 저항밴드, 요가매트, 튼튼한 의자 등) 사진을 찍어두세요. Google Gemini Vision은 자동으로 항목을 감지하고 일치하는 운동 변형을 잠금 해제합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>장비 필터:</strong> 보유하고 있는 장비와 보호하려는 영역을 선택하세요. 루틴은 이러한 선택에 맞춰 조정됩니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ "부끄러움 없음" 적응 논리:</strong> 활동적인 날은 깨지기 쉬운 연속 기록이 아닌 영구적인 이정표로 누적됩니다. 세션이 "약간 어려움"으로 평가되면 다음 루틴에서 자동으로 강도를 낮춥니다. 휴식 후 돌아오면 자동으로 부드러운 재적응 세션이 예약됩니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 PWA Kit를 통한 즉각적인 업데이트:</strong> 와 통합 <code>pwa-kit</code> 콘텐츠 해시 버전 스탬핑 및 무중단 업데이트 프롬프트를 통한 네트워크 우선 서비스 워커 캐싱을 위한 것입니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 비밀번호 없는 장치 페어링:</strong> 원활한 온보딩 <code>pwa-invite-console</code> 페어링 코드(<code>XXXX-YYYY-ZZZZ</code>) 안전하고 수명이 긴 장치 세션 토큰을 발행합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 PWA 업데이트:</strong> 와 통합 <code>pwa-kit</code> 콘텐츠 해시 버전 스탬핑 및 무중단 업데이트 프롬프트를 통한 네트워크 우선 서비스 워커 캐싱을 위한 것입니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 PWA 장치 페어링:</strong> 원활한 온보딩 <code>pwa-invite-console</code> 페어링 코드(<code>XXXX-YYYY-ZZZZ</code>) 안전하고 수명이 긴 장치 세션 토큰을 발행합니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 듀얼 테마 및 오프라인 탄력성:</strong> 숲 에메랄드 액센트가 있는 자동 밝은/어두운 팔레트, IndexedDB 및 LocalStorage가 지원하는 완전한 기능의 오프라인.</li>
                 </ul>
 
@@ -85,7 +91,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>백엔드 엔진</h3>
-                        <p>네이티브를 활용하는 Node.js v24 <code>DatabaseSync</code> 에서 <code>node:sqlite</code>, Express REST 엔드포인트 및 Google Gemini 다중 모드 비전 API 통합.</p>
+                        <p>PWA는 기본 Node.js 24를 사용합니다. <code>node:sqlite</code>및 Express REST 엔드포인트. Android 빌드는 공유 루틴 엔진을 로컬로 실행하며 백엔드가 필요하지 않습니다.</p>
                     </div>
                     <div class="feature-item">
                         <h3>통합</h3>

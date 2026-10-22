@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pwa-kit - آلية PWA ذاتية التحديث مستخرجة ومعممة من Bitey.">
+    <meta name="description" content="pwa-kit - مساعد تحديث عامل الخدمة الخالي من التبعية لتطبيقات الويب.">
     <title>pwa-kit ⚡ - تفاصيل المشروع</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -39,8 +39,10 @@
                 <div class="project-intro">
                     <span class="section-number">خلف الكواليس</span>
                     <h1>pwa-kit</h1>
-                    <p class="project-lead">لبنة صغيرة تساعد تطبيقات الويب على العمل دون اتصال والبقاء محدثة.</p>
+                    <p class="project-lead">مساعد تحديث صغير مع إمكانية الرجوع دون اتصال بالإنترنت للموارد التي تمت زيارتها مسبقًا.</p>
                     <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/download/v0.1.0/pwa-kit-0.1.0.zip" class="btn btn-primary" style="margin-right: 12px;">تنزيل مجموعة المطورين · 0.1.0</a>
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">ملاحظات الإصدار وSHA-256</a>
                     <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">عرض على GitHub</a>
                 </div>
                 </div>
@@ -51,9 +53,9 @@
 
 
                 <h2>عن المشروع</h2>
-                <p>آلية التحديث من Bitey معممة: PWA يقوم بتحديث نفسه ويقول ذلك بعد ذلك، بدلاً من طلب الإذن الذي لا يحتاج إليه.</p>
-                <p>ينسخ <code>sw.js</code> و <code>pwa-update.js</code> في جذر الويب الخاص بالتطبيق وقم بتوصيله. لا توجد خطوة بناء، ولا مجمع، ولا تبعيات - وهذا هو بيت القصيد: هذه التطبيقات هي أدلة ثابتة.</p>
-                <p>يقوم عامل الخدمة الجديد بالتثبيت والتنشيط على الفور دون انتظار إغلاق علامات التبويب. تُكمل كل نافذة مفتوحة العمل الحالي بأمان قبل إعادة التحميل بسلاسة على الإصدار الأحدث.</p>
+                <p>مساعد تحديث صغير لعمال الخدمة لتطبيقات الويب، مع إشعار تحديث مرئي وحارس للعمل غير المكتمل.</p>
+                <p>ينسخ <code>sw.js</code>, <code>sw-update.js</code> و <code>pwa-update.js</code> في جذر الويب الخاص بالتطبيق وقم بتوصيله. لا توجد خطوة بناء للواجهة الأمامية أو تبعية الحزمة. يحتوي ZIP أيضًا على مثال وملفات تكامل خادم اختيارية.</p>
+                <p>يتم تنشيط عامل الخدمة الجديد على الفور. يمكن للصفحات المرئية تأجيل إعادة التحميل بينما يكون العمل غير مكتمل؛ يتم إعادة تحميل العملاء غير المستجيبين بعد فترة سماح قصيرة. قم بتكييف سياسة ذاكرة التخزين المؤقت المرجعية قبل استخدامها للمحتوى الخاص.</p>
 
                 <h2>معرض الصور</h2>
                 <div class="gallery-grid">
@@ -63,7 +65,7 @@
                 <h2>المزايا</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ التفعيل فوري:</strong> يتم تثبيت العمال الجدد وتولي المهمة دون بقاء العمال الذين لا معنى لهم لعدة أيام عبر علامات تبويب المتصفح المفتوحة.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ حماية العمل غير المحفوظ (<code>isBusy</code>):</strong> فالعامل يسأل بدلاً من أن يبحر بشكل أعمى؛ تؤجل الصفحات عمليات إعادة التحميل حتى يتم حل التعديلات المعلقة أو حالات النموذج بأمان.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ حارس العمل غير المحفوظ (<code>isBusy</code>):</strong> يمكن للصفحات المرئية سريعة الاستجابة أن تؤجل عمليات إعادة التحميل بينما تكون التعديلات غير مكتملة؛ يجب أن تقوم التطبيقات بحفظ المسودات المهمة بشكل منفصل.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 نضارة الشبكة أولاً:</strong> تفوز الطلبات عبر الإنترنت دائمًا لضمان سريان التغييرات المنشورة عند إعادة التحميل التالية، وتعود إلى ذاكرة التخزين المؤقت عندما تكون غير متصل بالإنترنت.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 إشعارات تخزين الجلسة النظيفة:</strong> يتجنب تلويث سلاسل استعلام URL باستخدام علامات التحديث، وإبلاغ المستخدمين بشكل نظيف من خلال الخبز المحمص داخل التطبيق.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 فتحة الهروب من ذاكرة التخزين المؤقت المدمجة:</strong> يتضمن آلية إلغاء التسجيل في حالات الطوارئ وإلغاء التخزين المؤقت للعملاء المثبتين.</li>

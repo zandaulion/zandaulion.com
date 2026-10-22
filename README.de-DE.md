@@ -125,7 +125,7 @@ Nachdem Sie Quellinhalte oder Kataloge bearbeitet haben, generieren Sie die Site
 python scripts/build_locales.py
 ```
 
-Der Generator erzeugt 12 Homepages, 220 übersetzte Projektseiten und `language-data.js`. Auf den 20 englischsprachigen Projektseiten werden außerdem kanonische und alternativsprachige Links gepflegt. Übertragen Sie diese generierten Ausgaben mit ihren Quellen. GitHub Pages versorgt sie direkt, ohne den Python-Generator zu betreiben.
+Der Generator erzeugt 12 Homepages, 264 übersetzte Projektseiten und `language-data.js`. Auf den 24 englischsprachigen Projektseiten werden außerdem kanonische und alternativsprachige Links gepflegt. Übertragen Sie diese generierten Ausgaben mit ihren Quellen. GitHub Pages bedient sie direkt, ohne den Python-Generator zu betreiben.
 
 Bearbeiten Sie generierte Homepages, übersetzte HTML oder `language-data.js` nicht direkt: Durch die Neugenerierung werden diese Änderungen ersetzt. Homepage-Kataloge müssen übereinstimmende, nicht leere Schlüssel haben. Projektkataloge verwenden Quelltext als Schlüssel, daher erfordern Änderungen an der englischen Kopie entsprechende Übersetzungsaktualisierungen. Fehlende Übersetzungen schlagen beim Build fehl.
 
@@ -154,7 +154,7 @@ node --test scripts/test_language.cjs
 ```
 
 - Die Build-Prüfung erkennt veraltete generierte Ausgaben und fehlende Übersetzungen.
-- Der Site-Check umfasst alle 261 HTML-Seiten: 12 Homepages, 240 Projektseiten, acht Datenschutzhinweise und eine Kompatibilitätsweiterleitung. Es überprüft lokale Links, Assets, doppelte IDs außerhalb des beibehaltenen Datenschutz-Markups, Metadaten der Projektsprache, wechselseitige SEO-Links und die arabische Richtung. Mit `--url` werden auch HTTP-Antworten überprüft und zugestellte Datenschutzhinweise mit ihren Quelldateien verglichen.
+- Der Site-Check umfasst alle 311 HTML-Seiten: 12 Homepages, 288 Projektseiten, zehn Datenschutzhinweise und eine Kompatibilitätsweiterleitung. Es überprüft lokale Links, Assets, doppelte IDs außerhalb des beibehaltenen Datenschutz-Markups, Metadaten der Projektsprache, wechselseitige SEO-Links und die arabische Richtung. Mit `--url` werden auch HTTP-Antworten überprüft und zugestellte Datenschutzhinweise mit ihren Quelldateien verglichen.
 - Die Sprachtests umfassen Präferenzpriorität, regionale Übereinstimmung, blockierten Speicher, Datei- und Unterverzeichnisstämme, Umleitungsverhalten und Abschnittserhaltung.
 
 Führen Sie für Offline-Linkprüfungen `python scripts/check_site.py` ohne `--url` aus. Überprüfen Sie auch die betroffenen Seiten im Browser: mobiles Layout, arabische Ausrichtung, Sprachumschaltung, Tastatursteuerung in der Galerie und Interaktionen mit dem Editor.

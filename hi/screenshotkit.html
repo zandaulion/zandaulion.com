@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hi-IN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <!-- Developer-kit content checked against android-store-screenshot-kit v0.1.0. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android Store Screenshot Kit, Firebase Test Lab पर असली Android ऐप्स से दोहराए जा सकने वाले Google Play स्क्रीनशॉट बनाता है, फिर उनकी जाँच करता है और हर रन का रिकॉर्ड रखता है।">
@@ -42,6 +42,8 @@
                     <h1>Android Store Screenshot Kit</h1>
                     <p class="project-lead">असली Android ऐप्स के असली स्क्रीनशॉट, हर बार एक ही तरीके से लिए गए और Google Play के लिए तैयार।</p>
                     <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/download/v0.1.0/android-store-screenshot-kit-0.1.0.zip" class="btn btn-primary">डेवलपर किट डाउनलोड करें · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">रिलीज़ नोट्स और SHA-256</a>
                         <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub पर देखें</a>
                     </div>
                 </div>
@@ -52,6 +54,7 @@
                 <h2>परियोजना के बारे में</h2>
                 <p>ऐप में हर बदलाव के साथ स्टोर स्क्रीनशॉट पुराने हो जाते हैं, और फ़ोन पर हाथ से लेना धीमा है और कभी दो बार एक जैसा नहीं होता। यह किट इसे दोहराने योग्य कदम बना देती है: हर ऐप बस एक छोटा टेस्ट रखता है जो अपना डेटा तैयार करता है और उसकी स्क्रीनों से गुज़रता है, बाकी सब किट सँभालती है।</p>
                 <p>यह ऐप और उसका टेस्ट बनाती है, उन्हें चुने गए Firebase Test Lab डिवाइस पर चलाती है, रन को अंत तक देखती है, स्क्रीनशॉट डाउनलोड करती है और उन्हें ऐप के स्टोर फ़ोल्डर में कॉपी करने से पहले Google Play की ज़रूरतों के हिसाब से जाँचती है।</p>
+                <p>डाउनलोड में स्रोत कोड और सिंथेटिक कॉन्फ़िगरेशन शामिल है, एपीके या स्टोर स्क्रीनशॉट नहीं। रनिंग टेस्ट लैब को आपके स्वयं के क्लाउड प्रोजेक्ट की आवश्यकता है और बिल कोटा का उपयोग कर सकते हैं।</p>
 
                 <h2>यह कैसे काम करता है</h2>
                 <ol>
@@ -88,7 +91,7 @@
                 </ul>
 
                 <h2>हुड के नीचे</h2>
-                <p>कमांड-लाइन टूल एक अकेली Python स्क्रिप्ट है जिसे Python 3.11 के अलावा कुछ नहीं चाहिए। साझा सहायक फ़ंक्शन Java में लिखी एक छोटी Android लाइब्रेरी हैं, इसलिए वे इस्तेमाल करने वाले ऐप्स पर कोई Kotlin संस्करण नहीं थोपते और AGP 8 व AGP 9 दोनों के साथ काम करते हैं। CI में हर pull request पर वर्चुअल डिवाइस चल सकते हैं, जबकि असली डिवाइस रिलीज़ कैंडिडेट के लिए रखे जा सकते हैं। यह किट GPL-3.0 लाइसेंस के तहत ओपन सोर्स है।</p>
+                <p>कमांड-लाइन टूल एक एकल पायथन स्क्रिप्ट है जिसे पायथन 3.11 से परे किसी चीज़ की आवश्यकता नहीं है। साझा सहायक जावा में लिखी गई एक छोटी एंड्रॉइड लाइब्रेरी हैं, इसलिए वे उन ऐप्स के लिए कोई कोटलिन संस्करण की आवश्यकता नहीं जोड़ते हैं जो उनका उपयोग करते हैं और एजीपी 8 और एजीपी 9 दोनों के साथ काम करते हैं। सीआई में, वर्चुअल डिवाइस प्रत्येक पुल अनुरोध पर चल सकते हैं, रिलीज उम्मीदवारों के लिए भौतिक डिवाइस रखे जाते हैं। मूल किट कोड और दस्तावेज़ीकरण GPL-3.0-or-later के तहत लाइसेंस प्राप्त हैं।</p>
             </div>
         </div>
 

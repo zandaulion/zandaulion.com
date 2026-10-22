@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mișcare — Gemini ビジョン機器の認識と恥じない哲学をもとにゼロから設計された、適応性のあるゼロフリクションのデイリームーブメント PWA。">
+    <meta name="description" content="Mișcare は、ローカルの Android プレビューと自己ホスト型 Web エディションを備えた、適応型のガイド付きルーチンとエクササイズ ジャーナルを提供します。自分のペースでゼロから始めましょう。">
     <title>Mișcare - プロジェクトの詳細</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -43,6 +43,8 @@
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">ウェブアプリを開く</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHubで見る</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">Android プレビューをダウンロード</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">リリースノートとチェックサム</a>
                     <a href="../miscare-privacy.html" class="btn btn-outline" hreflang="en-US">プライバシーポリシー（英語）</a>
                 </div>
                 </div>
@@ -52,11 +54,15 @@
             <div class="project-content reveal">
 
 
+                <h2>Android プレビュー</h2>
+                <p><strong>Mișcare 0.1.0</strong> は、Android 7.0 以降向けの早期アクセス Android ダウンロードです。ガイド付きルーチン、45 のイラスト入りエクササイズ、12 のインターフェイス言語、ローカル ワークアウト ジャーナルがバンドルされています。アカウント、サーバー、インターネットの許可は必要ありません。</p>
+                <p>Android アプリは別のローカル データから開始します。 PWA 履歴は自動的にインポートされません。 JSON インポートにより、現在のプロファイルとジャーナルが置き換えられます。を参照してください。 <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">インストールとバックアップのガイド</a> チェックサム、署名の互換性、残りの検証について。リマインダーは実装されていません。</p>
+
                 <h2>プロジェクトについて</h2>
                 <p>ゼロから始めましょう。自分のペースで動きましょう。罪悪感はありません、調整するだけです。</p>
-                <p>Mișcare は、日々のフィットネスに伴う心理的および物理的な摩擦をあらゆる層から取り除くように設計されたアダプティブ プログレッシブ Web アプリ (PWA) です。 Mișcare は、まったくの初心者や長い休止から復帰した人向けに特別に設計されており、複雑なセット/レップ スプレッドシート、懲罰的なストリーク カウンター、威圧的なジムの専門用語を排除しています。</p>
+                <p>Mișcare は、ローカル Android エディションと自己ホスト型 Web エディションを備えたアダプティブ エクササイズ アプリです。初心者や休憩後に戻る人向けに設計されており、短いルーティン、装備の選択、日記が含まれています。進行は選択であり、休息日には連敗ペナルティはありません。</p>
                 <p>アプリを開くと、ユーザーには「今日のセッション」が直接表示され、ワンタップで起動できるようになります。忙しい場合は、ワンクリックの「5 分にする」オプションを使用してワークアウトを短縮します。たとえ何日も生活に支障をきたしても、途切れたり罪悪感を感じたりすることはありません。アプリは、穏やかな再入場ルーチンであなたを歓迎するだけです。</p>
-                <p>Vanilla JavaScript (ES モジュール) とネイティブ SQLite を備えた Node.js で構築された Mișcare は、Gemini Vision と統合して写真から利用可能な家庭用機器を認識し、pwa-kit はダウンタイムなしのオフライン キャッシュとシームレスなアップデートを実現し、pwa-invite-console はパスワードなしのデバイス オンボーディングを実現します。</p>
+                <p>セルフホスト型 PWA は、バニラ JavaScript、Node.js、SQLite を使用し、pwa-kit 更新と pwa-invite-console デバイス招待を備えています。 Android アプリは、Capacitor にインターフェイスとアダプティブ エンジンをバンドルし、プロファイルとジャーナルを IndexedDB にローカルに保存し、APK インストールを通じて実行可能アップデートを受け取ります。</p>
 
                 <h2>ギャラリー</h2>
                 <div class="gallery-grid">
@@ -68,12 +74,12 @@
 
                 <h2>機能</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 ゼロから始める:</strong> 安全で基本的な自重運動 (壁腕立て伏せ、椅子に座って立つ動作、緩やかな臀筋ブリッジ、肩の可動性ストレッチ) と、温かみのあるイラスト入りのビジュアルガイドおよび膝、腰、手首の保護フィルターが組み合わされています。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 ゼロから始める:</strong> 基本的な自重動作 (壁での腕立て伏せ、椅子での座り立ち、緩やかな臀筋ブリッジ、肩の可動性ストレッチ) に、温かみのあるイラスト入りの視覚ガイドと膝、腰、手首の保護フィルターを組み合わせました。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ ゼロフリクションの毎日のセッション:</strong> ホーム画面では、今日のルーチンがすぐに実行されます。などのワンタップのバリエーションが含まれています <em>「5分くらいにしてください」</em> そして <em>「スワップ練習」</em>、静かなタイマーと Web オーディオ API チャイムが伴います。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Gemini ビジョン機器の認識:</strong> 家庭用品や運動器具（ダンベル、レジスタンスバンド、ヨガマット、頑丈な椅子）の写真を撮ります。 Google Gemini Vision はアイテムを自動的に検出し、一致するエクササイズのバリエーションのロックを解除します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>機器フィルター:</strong> 所有している機器と保護したい領域を選択してください。ルーチンはそれらの選択に適応します。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿「恥をかかない」適応ロジック:</strong> アクティブな日数は、壊れやすい連続記録ではなく、永続的なマイルストーンとして蓄積されます。セッションが「少し厳しい」と評価された場合、次のルーチンは自動的に強度を下げます。休憩後に戻った場合は、自動的に穏やかな再適応セッションがスケジュールされます。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 PWA Kit 経由の即時アップデート:</strong> と統合 <code>pwa-kit</code> コンテンツ ハッシュ バージョン スタンピングと無停止更新プロンプトを備えたネットワーク ファーストの Service Worker キャッシュ用。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 パスワードレスのデバイスペアリング:</strong> シームレスなオンボーディング <code>pwa-invite-console</code> ペアリングコード (<code>XXXX-YYYY-ZZZZ</code>) 安全で有効期間の長いデバイス セッション トークンを発行します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 PWA アップデート:</strong> と統合 <code>pwa-kit</code> コンテンツ ハッシュ バージョン スタンピングと無停止更新プロンプトを備えたネットワーク ファーストの Service Worker キャッシュ用。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 PWA デバイスのペアリング:</strong> シームレスなオンボーディング <code>pwa-invite-console</code> ペアリングコード (<code>XXXX-YYYY-ZZZZ</code>) 安全で有効期間の長いデバイス セッション トークンを発行します。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 デュアルテーマとオフライン復元力:</strong> 森のエメラルドのアクセントを備えた自動明暗パレット。IndexedDB と LocalStorage によってオフラインで完全に機能します。</li>
                 </ul>
 
@@ -85,7 +91,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>バックエンドエンジン</h3>
-                        <p>ネイティブを活用した Node.js v24 <code>DatabaseSync</code> から <code>node:sqlite</code>、Express REST エンドポイント、および Google Gemini Multimodal Vision API 統合。</p>
+                        <p>PWA は Node.js 24、ネイティブを使用します <code>node:sqlite</code>、Express REST エンドポイント。 Android ビルドは共有ルーチン エンジンをローカルで実行するため、バックエンドは必要ありません。</p>
                     </div>
                     <div class="feature-item">
                         <h3>統合</h3>

@@ -54,9 +54,9 @@
 
                 <h2>À propos du projet</h2>
                 <p>D’une photo de face aux patrons de découpe d’un portrait en couches : un relief topographique en tôle, collé à la main, couche après couche.</p>
-                <p>Le Faceslice transforme un selfie 2D standard en sculptures topographiques physiques en couches fabriquées à partir de tôle ou de papier cartonné découpé au laser. Au lieu d'exiger une photogrammétrie multi-caméras complexe ou des applications de numérisation 3D capricieuses, le Faceslice ne nécessite qu'une seule photographie frontale et une mesure de la distance interpupillaire (IPD) en millimètres pour fixer l'échelle physique.</p>
-                <p>Pour reconstruire une véritable tête à partir d'une seule photo, Faceslice orchestre un pipeline de fusion de vision par ordinateur de trois modèles où chaque modèle apporte ce qu'il fait de mieux : la segmentation de la silhouette capture les cheveux, les oreilles et les mâchoires ; la profondeur monoculaire estime le volume du crâne large ; et les modèles de repères de maillage facial extraient des repères faciaux nets (nez, orbites, lèvres) sous forme de déplacement de surface résiduel.</p>
-                <p>Le solide 3D résultant est découpé en plans parallèles selon des angles personnalisés. Le tranchage frontal produit des isohypses de contour imbriquées à alignement automatique, avec des guides d'alignement gravés sur chaque plaque, des intérieurs cachés évidés pour une réduction de poids allant jusqu'à 80 % et une exportation instantanée DXF de qualité production.</p>
+                <p>Faceslice transforme une photographie frontale en motifs de découpe pour un relief superposé en tôle ou en papier cartonné. Entrez une distance interpupillaire (IPD) en millimètres pour définir l'échelle. Le résultat est un relief du côté visible de la tête, et non un balayage de la tête entière.</p>
+                <p>Faceslice combine trois modèles de vision par ordinateur pour estimer le relief : la segmentation trace la silhouette ; la profondeur monoculaire estime un large volume ; et les repères du visage ajoutent des détails autour du nez, des yeux et des lèvres. La géométrie est une estimation à partir d'une seule image.</p>
+                <p>Le relief est découpé en plans parallèles aux angles réglables. Les tranches frontales s'emboîtent les unes dans les autres, avec des guides d'alignement gravés. L'outil peut supprimer les matériaux intérieurs dissimulés et exporter les feuilles de découpe DXF. Vérifier les dimensions et les réglages de découpe auprès de l'atelier avant fabrication.</p>
 
                 <h2>Galerie</h2>
                 <div class="gallery-grid">
@@ -69,14 +69,14 @@
 
                 <h2>Fonctionnalités</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Reconstruction 3D sur une seule photo :</strong> Convertit un seul selfie frontal en un solide complet en relief, calibré aux dimensions du monde réel en utilisant la distance pupillaire.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Relief avec une seule photo :</strong> Transforme une photographie frontale en un relief superposé, mis à l'échelle à l'aide d'une mesure de distance pupillaire que vous fournissez.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 Moteur de fusion AI à 3 modèles :</strong> Combine la segmentation multiclasse MediaPipe, l'estimation de profondeur monoculaire ONNX (Depth Anything V2) et les repères de visage MediaPipe pour un volume de crâne et une netteté du visage équilibrés.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️ Découpage de contours topographiques :</strong> Découpe les solides en plans parallèles avec contrôle d'angle libre (frontal pour les isohypses concentriques imbriquées, horizontal pour les stratifications latérales).</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 Guides d'assemblage à alignement automatique :</strong> Lorsqu'elle est tranchée frontalement, chaque couche métallique est emboîtée dans celle du dessous et la ligne de délimitation de la plaque suivante est gravée directement sur sa surface pour un alignement facile sans gabarits.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ Creux intérieur et économie de matériaux :</strong> Supprime automatiquement la géométrie interne cachée, réduisant ainsi la consommation de matériaux et le poids jusqu'à 80 % (par exemple, 10 kg d'acier massif jusqu'à 1,9 kg d'anneaux creux) tout en conservant des marges de liaison solides.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ Contrôles de fabrication paramétriques :</strong> Ajustement interactif en temps réel de l'épaisseur de la feuille (0,5 à 10 mm), de la compression du relief, de la compensation du trait de scie, de l'exagération du relief facial et des angles de coupe.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Estimateur de matériaux et de poids en temps réel :</strong> Calcule dynamiquement le nombre de plaques, les contours uniques, la surface de tôle requise (dm²), la hauteur de la pile et la masse exacte pour l'acier, le laiton et l'aluminium.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 Exportation DXF prête pour la production :</strong> Exporte des fichiers DXF entièrement vectorisés, prêts pour la CAM laser/jet d'eau/plasma, imbriqués dans des dimensions de feuilles personnalisées en un seul clic.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Estimations du matériel et du poids :</strong> Affiche le nombre de plaques, les contours, la surface de la feuille, la hauteur de la pile et le poids estimé pour l'acier, le laiton et l'aluminium.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 DXF Exportation :</strong> Exporte des feuilles de découpe vectorielles dimensionnées pour le stock sélectionné. Vérifiez-les auprès de votre fabricant avant de couper.</li>
                 </ul>
 
                 <h2>Architecture et pile technologique</h2>
@@ -87,11 +87,11 @@
                     </div>
                     <div class="feature-item">
                         <h3>Moteur de vision et de géométrie</h3>
-                        <p>Noyau de calcul Python 3 utilisant MediaPipe (segmentation et maillage de visage), ONNX Runtime (Depth Anything V2 Small), Shapely pour les booléens et les creux de polygones 2D, et ezdxf pour la génération CAO.</p>
+                        <p>Le moteur Python 3 utilise MediaPipe, ONNX Runtime, NumPy, SciPy et OpenCV. Sa propre géométrie et ses modules DXF permettent de trancher et de découper des feuilles.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Déploiement de production</h3>
-                        <p>Conteneurisé avec Podman et systemd Quadlet, estampage automatisé des versions de hachage des actifs via <code>deploy.sh</code>, et servi via le proxy inverse Caddy avec des temps de réponse de découpage inférieurs à la seconde sur le processeur.</p>
+                        <h3>Notes de déploiement</h3>
+                        <p>La source comprend une recette de conteneur Podman et des instructions d'exécution locales. Le temps de traitement du processeur dépend de l'image et de la machine. Un déploiement public nécessite HTTPS et un point de terminaison d'administration privé.</p>
                     </div>
                 </div>
 

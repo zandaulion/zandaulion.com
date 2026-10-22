@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <!-- Developer-kit content checked against android-store-screenshot-kit v0.1.0. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android Store Screenshot Kit는 Firebase Test Lab에서 실제 Android 앱으로 재현 가능한 Google Play 스크린샷을 만들고, 검증한 뒤 모든 실행을 기록합니다.">
@@ -42,6 +42,8 @@
                     <h1>Android Store Screenshot Kit</h1>
                     <p class="project-lead">실제 Android 앱의 진짜 스크린샷을 매번 같은 방식으로 찍어 Google Play에 바로 쓸 수 있습니다.</p>
                     <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/download/v0.1.0/android-store-screenshot-kit-0.1.0.zip" class="btn btn-primary">개발자 키트 다운로드 · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">릴리스 노트 및 SHA-256</a>
                         <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub에서 보기</a>
                     </div>
                 </div>
@@ -52,6 +54,7 @@
                 <h2>프로젝트 소개</h2>
                 <p>스토어 스크린샷은 앱이 바뀔 때마다 낡고, 휴대폰으로 직접 찍으면 느린 데다 두 번 똑같이 나오지 않습니다. 이 키트는 이를 반복 가능한 단계로 바꿉니다. 각 앱은 자체 데이터를 준비하고 화면을 차례로 여는 작은 테스트만 갖고, 나머지는 키트가 맡습니다.</p>
                 <p>앱과 테스트를 빌드하고, 선택한 Firebase Test Lab 기기에서 실행해 끝까지 따라간 뒤, 스크린샷을 내려받아 Google Play 요구 사항에 맞는지 확인하고 앱의 스토어 폴더에 복사합니다.</p>
+                <p>다운로드에는 APK나 스토어 스크린샷이 아닌 소스 코드와 합성 구성이 포함되어 있습니다. Test Lab을 실행하려면 자체 클라우드 프로젝트가 필요하며 청구된 할당량을 사용할 수 있습니다.</p>
 
                 <h2>작동 원리</h2>
                 <ol>
@@ -88,7 +91,7 @@
                 </ul>
 
                 <h2>후드 아래</h2>
-                <p>명령줄 도구는 Python 3.11만 있으면 되는 단일 Python 스크립트입니다. 공용 도우미는 Java로 작성한 작은 Android 라이브러리여서, 이를 쓰는 앱에 특정 Kotlin 버전을 강요하지 않고 AGP 8과 AGP 9에서 모두 작동합니다. CI에서는 모든 pull request마다 가상 기기를 실행하고, 실기기는 출시 후보용으로 남겨 둘 수 있습니다. 이 키트는 GPL-3.0 라이선스의 오픈 소스입니다.</p>
+                <p>명령줄 도구는 Python 3.11 외에는 아무것도 필요하지 않은 단일 Python 스크립트입니다. 공유 도우미는 Java로 작성된 작은 Android 라이브러리이므로 이를 사용하고 AGP 8 및 AGP 9와 함께 작동하는 앱에 Kotlin 버전 요구 사항을 추가하지 않습니다. CI에서 가상 장치는 모든 풀 요청에 대해 실행될 수 있으며 물리적 장치는 릴리스 후보용으로 유지됩니다. 원래 키트 코드와 문서는 GPL-3.0-or-later에 따라 라이센스가 부여됩니다.</p>
             </div>
         </div>
 

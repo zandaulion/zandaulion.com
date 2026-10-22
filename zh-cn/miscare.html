@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mișcare — 一款自适应、零摩擦日常机芯 PWA 从零开始设计，具有 Gemini Vision 设备识别和无羞耻理念。">
+    <meta name="description" content="Mișcare 提供自适应指导例程和锻炼日志，以及本地 Android 预览和自托管网络版本。从零开始，按照自己的节奏。">
     <title>Mișcare - 项目详情</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -43,6 +43,8 @@
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">打开网页应用</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">在 GitHub 上查看</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">下载安卓预览版</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">发行说明和校验和</a>
                     <a href="../miscare-privacy.html" class="btn btn-outline" hreflang="en-US">隐私政策（英文）</a>
                 </div>
                 </div>
@@ -52,11 +54,15 @@
             <div class="project-content reveal">
 
 
+                <h2>安卓预览版</h2>
+                <p><strong>Mișcare 0.1.0</strong> 是适用于 Android 7.0 或更高版本的抢先体验 Android 下载。它捆绑了指导性例程、45 个图解练习、12 种界面语言和本地锻炼日志。不需要帐户、服务器或互联网权限。</p>
+                <p>Android 应用程序以单独的本地数据启动；它不会自动导入 PWA 历史记录。 JSON 导入替换当前配置文件和日志。请参阅 <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">安装与备份指南</a> 用于校验和、签名兼容性和剩余验证。提醒未实施。</p>
+
                 <h2>关于项目</h2>
                 <p>从零开始。按照自己的步调移动。没有愧疚，只是调整。</p>
-                <p>Mișcare 是一款自适应渐进式 Web 应用程序 (PWA)，旨在消除与日常健身相关的每一层心理和身体摩擦。 Mișcare 专为绝对初学者或长时间休息后返回的个人而设计，消除了复杂的组/次数电子表格、惩罚性连胜计数器和令人生畏的健身术语。</p>
+                <p>Mișcare是一款自适应运动应用程序，具有本地Android版本和自托管Web版本。它是为初学者和休息后回来的人设计的，有简短的例程、设备选择和日记。晋级是一种选择，休息日不会带来连败惩罚。</p>
                 <p>打开应用程序后，用户会直接看到“今天的会话”——只需轻按一下即可启动。如果生活变得忙碌，一键“Make it 5 分钟”选项可以缩短锻炼时间。如果生活连续几天受到阻碍，也不会出现中断的情况或内疚的信息；该应用程序只是以温和的重新进入程序欢迎您回来。</p>
-                <p>Mișcare 采用 Vanilla JavaScript（ES 模块）和 Node.js 以及本机 SQLite 构建，与 Gemini Vision 集成，可从照片中识别可用的家用设备，pwa-kit 可实现零停机离线缓存和无缝更新，并与 pwa-invite-console 集成，可实现无密码设备登录。</p>
+                <p>自托管 PWA 使用 Vanilla JavaScript、Node.js 和 SQLite，并具有 pwa-kit 更新和 pwa-invite-console 设备邀请。 Android 应用程序将界面和自适应引擎捆绑在 Capacitor 中，将其配置文件和日志本地存储在 IndexedDB 中，并通过 APK 安装接收可执行更新。</p>
 
                 <h2>图片集</h2>
                 <div class="gallery-grid">
@@ -68,12 +74,12 @@
 
                 <h2>功能</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱从零开始：</strong> 安全、基础的体重运动（靠墙俯卧撑、椅子坐站、温和的臀桥、肩部活动伸展）搭配温暖的插图视觉指南和针对膝盖、下背部和手腕的保护过滤器。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱从零开始：</strong> 基础自重运动（靠墙俯卧撑、椅子坐站、轻柔臀桥、肩部活动伸展）搭配温暖的插图视觉指南和针对膝盖、下背部和手腕的保护过滤器。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 零摩擦每日课程：</strong> 主屏幕立即满足今天的日常需求。包括一键变体，例如 <em>“5分钟”</em> 和 <em>《交换练习》</em>，伴随着安静的计时器和网络音频 API 铃声。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Gemini 视觉设备识别：</strong> 拍摄家居用品或健身器材（哑铃、阻力带、瑜伽垫或坚固的椅子）的照片。 Google Gemini Vision 自动检测项目并解锁匹配的练习变体。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>设备过滤器：</strong> 选择您拥有的设备和您想要保护的区域；例程会适应这些选择。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿“不羞辱”自适应逻辑：</strong> 活跃天数是作为永久的里程碑累积起来的，而不是脆弱的连续记录。如果某次训练被评为“有点困难”，则下一次训练会自动降低强度；如果休息后返回，则会安排自动温和的重新适应课程。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 通过 PWA Kit 即时更新：</strong> 集成于 <code>pwa-kit</code> 用于网络优先的 Service Worker 缓存，具有内容哈希版本标记和无中断更新提示。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 无密码设备配对：</strong> 无缝入职通过 <code>pwa-invite-console</code> 配对码（<code>XXXX-YYYY-ZZZZ</code>）发出安全、长期的设备会话令牌。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄PWA 更新：</strong> 集成于 <code>pwa-kit</code> 用于网络优先的 Service Worker 缓存，具有内容哈希版本标记和无中断更新提示。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 PWA 设备配对：</strong> 无缝入职通过 <code>pwa-invite-console</code> 配对码（<code>XXXX-YYYY-ZZZZ</code>）发出安全、长期的设备会话令牌。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 双主题和离线弹性：</strong> 自动明/暗调色板，带有森林翡翠色调，功能齐全的离线功能，由 IndexedDB 和 LocalStorage 支持。</li>
                 </ul>
 
@@ -85,7 +91,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>后端引擎</h3>
-                        <p>Node.js v24 利用原生 <code>DatabaseSync</code> 来自 <code>node:sqlite</code>、Express REST 端点和 Google Gemini Multimodal Vision API 集成。</p>
+                        <p>PWA 使用 Node.js 24，本机 <code>node:sqlite</code>和 Express REST 端点。 Android 版本在本地运行共享例程引擎，不需要后端。</p>
                     </div>
                     <div class="feature-item">
                         <h3>集成</h3>

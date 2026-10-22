@@ -125,7 +125,7 @@ Depois de editar o conteúdo ou catálogos de origem, gere novamente o site:
 python scripts/build_locales.py
 ```
 
-O gerador produz 12 páginas iniciais, 220 páginas de projetos traduzidas e `language-data.js`. Ele também mantém links canônicos e de idiomas alternativos nas 20 páginas do projeto em inglês. Comprometa esses resultados gerados com suas fontes; GitHub Pages os atende diretamente sem executar o gerador Python.
+O gerador produz 12 páginas iniciais, 264 páginas de projetos traduzidas e `language-data.js`. Ele também mantém links canônicos e em idiomas alternativos nas 24 páginas do projeto em inglês. Comprometa esses resultados gerados com suas fontes; GitHub Pages os atende diretamente sem executar o gerador Python.
 
 Não edite páginas iniciais geradas, HTML traduzidas ou `language-data.js` diretamente: a regeneração substitui essas edições. Os catálogos da página inicial devem ter chaves não vazias correspondentes. Os catálogos de projetos usam o texto fonte como chaves, portanto, as alterações na cópia em inglês exigem atualizações de tradução correspondentes. Traduções ausentes falham na compilação.
 
@@ -154,7 +154,7 @@ node --test scripts/test_language.cjs
 ```
 
 - A verificação de construção detecta saídas geradas obsoletas e traduções ausentes.
-- A verificação do site cobre todas as 261 páginas HTML: 12 páginas iniciais, 240 páginas de projetos, oito avisos de privacidade e um redirecionamento de compatibilidade. Ele verifica links locais, ativos, IDs duplicados fora da marcação de privacidade preservada, metadados de idioma do projeto, links recíprocos SEO e direção árabe. Com `--url`, ele também verifica as respostas HTTP e compara os avisos de privacidade fornecidos com seus arquivos de origem.
+- A verificação do site cobre todas as 311 páginas HTML: 12 páginas iniciais, 288 páginas de projetos, dez avisos de privacidade e um redirecionamento de compatibilidade. Ele verifica links locais, ativos, IDs duplicados fora da marcação de privacidade preservada, metadados de idioma do projeto, links SEO recíprocos e direção árabe. Com `--url`, ele também verifica as respostas HTTP e compara os avisos de privacidade fornecidos com seus arquivos de origem.
 - Os testes de idioma cobrem precedência de preferência, correspondência regional, armazenamento bloqueado, raízes de arquivos e subdiretórios, comportamento de redirecionamento e preservação de seção.
 
 Para verificações de link offline, execute `python scripts/check_site.py` sem `--url`. Revise também as páginas afetadas no navegador: layout móvel, direção árabe, mudança de idioma, controles de teclado da galeria e interações do editor.

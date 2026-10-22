@@ -54,9 +54,9 @@
 
                 <h2>Despre proiect</h2>
                 <p>De la o fotografie frontală la plăcile de tăiat pentru un portret în straturi — un relief ca o hartă topografică, din tablă, lipit manual strat peste strat.</p>
-                <p>Faceslice transformă un selfie 2D standard în sculpturi topografice stratificate fizice realizate din tablă sau carton tăiată cu laser. În loc să solicite fotogrammetrie complexă cu mai multe camere sau aplicații de scanare 3D capricioase, Faceslice necesită doar o singură fotografie frontală și o măsurare a distanței interpupilare (IPD) în milimetri pentru a fixa scara fizică.</p>
-                <p>Pentru a reconstrui un cap autentic dintr-o fotografie, Faceslice orchestrează o conductă de fuziune cu trei modele de viziune computerizată, în care fiecare model contribuie cu ceea ce face cel mai bine: segmentarea siluetei surprinde părul, urechile și liniile maxilarului; adâncimea monoculară estimează volumul larg al craniului; iar modelele de repere cu plasă facială extrag reperele faciale clare (nas, orbite, buze) ca deplasare reziduală a suprafeței.</p>
-                <p>Solidul 3D rezultat este tăiat în planuri paralele la unghiuri personalizate. Tăierea frontală produce izohipse de contur imbricate cu auto-aliniere, completate cu ghidaje de aliniere gravate pe fiecare placă, interioare ascunse scobite pentru o reducere a greutății de până la 80% și export instantaneu DXF la nivel de producție.</p>
+                <p>Faceslice transformă o fotografie frontală în modele de tăiere pentru un relief stratificat din tablă sau carton. Introduceți distanța interpupilară (IPD) în milimetri pentru a stabili scara. Rezultatul reprezintă partea vizibilă a capului, nu o scanare a întregului cap.</p>
+                <p>Faceslice combină trei modele de viziune computerizată pentru a estima relieful: segmentarea conturează silueta, estimarea monoculară a adâncimii sugerează volumul general, iar reperele faciale adaugă detalii în jurul nasului, ochilor și buzelor. Geometria rămâne o estimare bazată pe o singură imagine.</p>
+                <p>Relieful este tăiat în planuri paralele la unghiuri reglabile. Feliile frontale se cuibăresc una în alta, cu ghidaje de aliniere gravate. Instrumentul poate îndepărta materialul interior ascuns și poate exporta foi de tăiere DXF. Verificați dimensiunile și setările de tăiere cu atelierul înainte de fabricare.</p>
 
                 <h2>Galerie</h2>
                 <div class="gallery-grid">
@@ -69,14 +69,14 @@
 
                 <h2>Funcționalități</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Reconstrucție 3D cu o singură fotografie:</strong> Transformă un singur selfie frontal într-un solid cu relief complet de adâncime, calibrat la dimensiunile din lumea reală folosind distanța pupilei.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Relief cu o singură fotografie:</strong> Transformă o fotografie frontală într-un relief stratificat, scalat folosind distanța dintre pupile introdusă de dumneavoastră.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🧠 Motor de fuziune AI cu 3 modele:</strong> Combină segmentarea multiclasă MediaPipe, estimarea profunzimii monoculare ONNX (Depth Anything V2) și reperele de față MediaPipe pentru volum echilibrat al craniului și claritate facială.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🗺️ Tăierea conturului topografic:</strong> Taie solidele în planuri paralele cu control al unghiului liber (frontal pentru izohipsele imbricate concentrice, orizontală pentru laminările cu profil lateral).</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎯 Ghiduri de asamblare cu auto-aliniere:</strong> Când este feliat frontal, fiecare strat de metal este imbricat în interiorul celui de dedesubt, iar linia de delimitare a plăcii următoare este gravată direct pe suprafața sa pentru o aliniere ușoară fără jiguri.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>♻️ Golire interioară și economie de material:</strong> Îndepărtează automat geometria interioară ascunsă, reducând consumul de material și greutatea cu până la 80% (de exemplu, 10 kg oțel solid până la 1,9 kg inele goale), păstrând în același timp marginile de lipire robuste.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚙️ Controale parametrice de fabricație:</strong> Reglarea interactivă în timp real a grosimii foii (0,5–10 mm), compresia de relief, compensarea canturilor, exagerarea reliefului facial și unghiurile de tăiere.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Estimator de material și greutate în timp real:</strong> Calculează dinamic numărul plăcilor, contururile unice, suprafața necesară de tablă (dm²), înălțimea stivei și masa exactă pentru oțel, alamă și aluminiu.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 Export DXF gata de producție:</strong> Exportă fișiere DXF complet vectorizate, cu laser/jet de apă/plasmă CAM-ready imbricate la dimensiuni personalizate ale stocului de foi cu un singur clic.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Estimări de material și greutate:</strong> Afișează numărul de plăci, contururile, suprafața foii, înălțimea stivei și greutatea estimată pentru oțel, alamă și aluminiu.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📐 DXF Export:</strong> Exportă planșe vectoriale de tăiere pentru dimensiunile alese ale tablei. Verificați-le cu atelierul înainte de tăiere.</li>
                 </ul>
 
                 <h2>Arhitectură și stivă tehnologică</h2>
@@ -87,11 +87,11 @@
                     </div>
                     <div class="feature-item">
                         <h3>Motor de viziune și geometrie</h3>
-                        <p>Miez de calcul Python 3 care utilizează MediaPipe (Segmentare și Face Mesh), ONNX Runtime (Depth Anything V2 Small), Shapely pentru boolean și hollowing poligon 2D și ezdxf pentru generarea CAD.</p>
+                        <p>Motorul Python 3 folosește MediaPipe, ONNX Runtime, NumPy, SciPy și OpenCV. Modulele proprii de geometrie și DXF pregătesc straturile și planșele de tăiere.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Desfăşurarea producţiei</h3>
-                        <p>Containerizat cu Podman și Systemd Quadlet, ștampilare automată a versiunii hash a activelor prin <code>deploy.sh</code>, și servit prin proxy invers Caddy cu timpi de răspuns sub secunde pe CPU.</p>
+                        <h3>Note de implementare</h3>
+                        <p>Sursa include o rețetă de container Podman și instrucțiuni de rulare locală. Timpul de procesare CPU depinde de imagine și mașină. O implementare publică necesită HTTPS și un punct final de administrare privat.</p>
                     </div>
                 </div>
 

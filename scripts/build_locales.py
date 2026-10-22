@@ -67,7 +67,8 @@ def build(check=False):
                 stale.append(str(output.relative_to(ROOT)))
         else:
             output.parent.mkdir(parents=True, exist_ok=True)
-            output.write_text(content, encoding='utf-8', newline='\n')
+            with output.open('w', encoding='utf-8', newline='\n') as stream:
+                stream.write(content)
     if stale:
         raise SystemExit('Rebuild stale outputs: ' + ', '.join(stale))
     print(f'PASS: {len(LANGUAGES)} complete catalogs; static pages {"verified" if check else "built"}.')

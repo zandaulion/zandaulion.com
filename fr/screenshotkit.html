@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against android-store-screenshot-kit commit 535c2f135e576f504335a7312cc1b8d1ce167ef2 (2026-09-28). -->
+    <!-- Developer-kit content checked against android-store-screenshot-kit v0.1.0. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Android Store Screenshot Kit produit des captures Google Play reproductibles à partir de vraies applications Android sur Firebase Test Lab, puis les vérifie et consigne chaque exécution.">
@@ -42,6 +42,8 @@
                     <h1>Android Store Screenshot Kit</h1>
                     <p class="project-lead">De vraies captures de vraies applications Android, prises de la même façon à chaque fois et prêtes pour Google Play.</p>
                     <div class="project-links">
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/download/v0.1.0/android-store-screenshot-kit-0.1.0.zip" class="btn btn-primary">Télécharger le kit de développement · 0.1.0</a>
+                        <a href="https://github.com/zandaulion/android-store-screenshot-kit/releases/tag/v0.1.0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Notes de version et SHA-256</a>
                         <a href="https://github.com/zandaulion/android-store-screenshot-kit" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
                     </div>
                 </div>
@@ -52,6 +54,7 @@
                 <h2>À propos du projet</h2>
                 <p>Les captures du store se périment à chaque changement de l'application, et les faire à la main sur un téléphone est lent et jamais tout à fait identique. Ce kit en fait une étape reproductible : chaque application garde un petit test qui prépare ses propres données et parcourt ses écrans, et le kit s'occupe du reste.</p>
                 <p>Il compile l'application et son test, les exécute sur l'appareil Firebase Test Lab choisi, suit l'exécution jusqu'au bout, télécharge les captures et les vérifie selon les exigences de Google Play avant de les copier dans le dossier store de l'application.</p>
+                <p>Le téléchargement contient du code source et une configuration synthétique, pas un APK ni des captures d'écran de magasin. L’exécution de Test Lab nécessite votre propre projet cloud et peut utiliser un quota facturé.</p>
 
                 <h2>Comment ça marche</h2>
                 <ol>
@@ -88,7 +91,7 @@
                 </ul>
 
                 <h2>Sous le capot</h2>
-                <p>L'outil en ligne de commande est un seul script Python qui ne demande rien d'autre que Python 3.11. Les fonctions communes forment une petite bibliothèque Android écrite en Java : elles n'imposent aucune version de Kotlin aux applications qui les utilisent et fonctionnent avec AGP 8 comme avec AGP 9. En CI, des appareils virtuels peuvent tourner à chaque pull request, les appareils physiques étant réservés aux versions candidates. Le kit est open source sous licence GPL-3.0.</p>
+                <p>L'outil de ligne de commande est un script Python unique qui ne nécessite rien d'autre que Python 3.11. Les assistants partagés sont une petite bibliothèque Android écrite en Java, ils n'ajoutent donc aucune exigence de version Kotlin aux applications qui les utilisent et fonctionnent à la fois avec AGP 8 et AGP 9. Dans CI, les appareils virtuels peuvent s'exécuter à chaque demande d'extraction, les appareils physiques étant réservés aux versions candidates. Le code du kit d'origine et la documentation sont sous licence GPL-3.0-or-later.</p>
             </div>
         </div>
 

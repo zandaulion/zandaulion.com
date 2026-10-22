@@ -160,9 +160,9 @@ After editing source content or catalogs, regenerate the site:
 python scripts/build_locales.py
 ```
 
-The generator produces 12 homepages, 220 translated project pages, and
+The generator produces 12 homepages, 264 translated project pages, and
 `language-data.js`. It also maintains canonical and alternate-language links on
-the 20 English project pages. Commit these generated outputs with their sources;
+the 24 English project pages. Commit these generated outputs with their sources;
 GitHub Pages serves them directly without running the Python generator.
 
 Do not edit generated homepages, translated HTML, or `language-data.js` directly:
@@ -208,8 +208,8 @@ node --test scripts/test_language.cjs
 ```
 
 - The build check detects stale generated outputs and missing translations.
-- The site check covers all 261 HTML pages: 12 homepages, 240 project pages,
-  eight privacy notices, and one compatibility redirect. It checks local links,
+- The site check covers all 311 HTML pages: 12 homepages, 288 project pages,
+  ten privacy notices, and one compatibility redirect. It checks local links,
   assets, duplicate IDs outside the preserved privacy markup, project language
   metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also
   checks HTTP responses and compares served privacy notices with their source files.

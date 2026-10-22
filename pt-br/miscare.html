@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mișcare — Um movimento diário adaptativo e sem atrito PWA projetado do zero com o reconhecimento do equipamento Gemini Vision e uma filosofia sem vergonha.">
+    <meta name="description" content="Mișcare oferece rotinas guiadas adaptativas e um diário de exercícios, com uma visualização local do Android e uma edição web auto-hospedada. Comece do zero, no seu próprio ritmo.">
     <title>Mișcare - Detalhes do Projeto</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -43,6 +43,8 @@
                     <div class="project-links" style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Abrir o aplicativo web</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver no GitHub</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">Baixe a visualização do Android</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Notas de lançamento e somas de verificação</a>
                     <a href="../miscare-privacy.html" class="btn btn-outline" hreflang="en-US">Política de privacidade (em inglês)</a>
                 </div>
                 </div>
@@ -52,11 +54,15 @@
             <div class="project-content reveal">
 
 
+                <h2>Pré-visualização do Android</h2>
+                <p><strong>Mișcare 0.1.0</strong> é um download Android de acesso antecipado para Android 7.0 ou mais recente. Ele reúne rotinas guiadas, 45 exercícios ilustrados, 12 idiomas de interface e um diário de exercícios local. Nenhuma conta, servidor ou permissão de Internet é necessária.</p>
+                <p>O aplicativo Android começa com dados locais separados; ele não importa o histórico PWA automaticamente. A importação JSON substitui o perfil e diário atuais. Veja o <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">guia de instalação e backup</a> para somas de verificação, compatibilidade de assinatura e validação restante. Lembretes não são implementados.</p>
+
                 <h2>Sobre o projeto</h2>
                 <p>Comece do zero. Mova-se no seu próprio ritmo. Sem culpa, apenas ajuste.</p>
-                <p>Mișcare é um aplicativo da Web progressivo adaptativo (PWA) projetado para remover todas as camadas de atrito psicológico e físico associado ao condicionamento físico diário. Projetado especificamente para iniciantes ou indivíduos que retornam após longas pausas, o Mișcare elimina planilhas complicadas de séries/repetições, contadores de sequências punitivas e jargões de ginástica intimidantes.</p>
+                <p>Mișcare é um aplicativo de exercícios adaptativo com uma edição local para Android e uma edição web auto-hospedada. Ele é projetado para iniciantes e pessoas que retornam após um intervalo, com rotinas curtas, opções de equipamentos e um diário. A progressão é uma escolha e os dias de descanso não acarretam penalidade por sequência perdida.</p>
                 <p>Ao abrir o aplicativo, os usuários são recebidos diretamente com a “Sessão de Hoje” – pronta para iniciar com um único toque. Se a vida ficar agitada, a opção "Faça 5 minutos" com um clique encurta o treino. Se a vida atrapalhar por dias, não haverá falhas ou mensagens de culpa; o aplicativo simplesmente dá as boas-vindas a você com uma rotina suave de reentrada.</p>
-                <p>Construído com Vanilla JavaScript (módulos ES) e Node.js com SQLite nativo, Mișcare integra-se com Gemini Vision para reconhecer equipamentos domésticos disponíveis a partir de fotos, pwa-kit para cache offline com tempo de inatividade zero e atualizações contínuas, e pwa-invite-console para integração de dispositivos sem senha.</p>
+                <p>O PWA auto-hospedado usa Vanilla JavaScript, Node.js e SQLite, com atualizações pwa-kit e convites de dispositivos pwa-invite-console. O aplicativo Android agrupa a interface e o mecanismo adaptativo no Capacitor, armazena seu perfil e diário localmente no IndexedDB e recebe atualizações executáveis ​​por meio da instalação do APK.</p>
 
                 <h2>Galeria</h2>
                 <div class="gallery-grid">
@@ -68,12 +74,12 @@
 
                 <h2>Recursos</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Começando do Zero:</strong> Movimentos seguros e básicos de peso corporal (flexões de parede, sentar e levantar da cadeira, pontes suaves para os glúteos, alongamentos para mobilidade dos ombros) combinados com guias visuais ilustrados e filtros de proteção para joelhos, parte inferior das costas e pulsos.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Começando do Zero:</strong> Movimentos básicos de peso corporal (flexões de parede, sentar e levantar da cadeira, pontes suaves para glúteos, alongamentos para mobilidade dos ombros) combinados com guias visuais ilustrados e filtros de proteção para joelhos, parte inferior das costas e pulsos.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Sessões diárias de fricção zero:</strong> A tela inicial atende imediatamente à rotina de hoje. Inclui variações de um toque, como <em>"Faça 5 minutos"</em> e <em>"Exercício de troca"</em>, acompanhado por um temporizador silencioso e um sinal sonoro Web Audio API.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>📸 Reconhecimento de equipamento de visão Gemini:</strong> Tire uma foto de utensílios domésticos ou equipamentos de ginástica (halteres, faixas de resistência, tapetes de ioga ou cadeiras resistentes). O Google Gemini Vision detecta itens automaticamente e desbloqueia variantes de exercícios correspondentes.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Filtros de equipamentos:</strong> Escolha os equipamentos que possui e as áreas que deseja proteger; as rotinas se adaptam a essas seleções.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 Lógica adaptativa "No Shaming":</strong> Os dias ativos são acumulados como marcos permanentes, em vez de sequências frágeis. Se uma sessão for classificada como "Um pouco difícil", a próxima rotina diminui a intensidade automaticamente; se retornar após um intervalo, é agendada uma sessão automática de readaptação suave.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 Atualizações instantâneas via PWA Kit:</strong> Integrado com <code>pwa-kit</code> para armazenamento em cache do service worker que prioriza a rede com carimbo de versão de hash de conteúdo e prompts de atualização sem interrupções.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 Emparelhamento de dispositivos sem senha:</strong> Integração perfeita por meio de <code>pwa-invite-console</code> códigos de emparelhamento (<code>XXXX-YYYY-ZZZZ</code>) emitindo tokens de sessão de dispositivo seguros e de longa duração.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 Atualizações PWA:</strong> Integrado com <code>pwa-kit</code> para armazenamento em cache do service worker que prioriza a rede com carimbo de versão de hash de conteúdo e prompts de atualização sem interrupções.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 Emparelhamento de dispositivo PWA:</strong> Integração perfeita por meio de <code>pwa-invite-console</code> códigos de emparelhamento (<code>XXXX-YYYY-ZZZZ</code>) emitindo tokens de sessão de dispositivo seguros e de longa duração.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 Tema duplo e resiliência offline:</strong> Paleta automática de claro/escuro com detalhes em esmeralda florestal, off-line totalmente funcional, apoiada por IndexedDB e LocalStorage.</li>
                 </ul>
 
@@ -85,7 +91,7 @@
                     </div>
                     <div class="feature-item">
                         <h3>Mecanismo de back-end</h3>
-                        <p>Node.js v24 aproveitando nativo <code>DatabaseSync</code> de <code>node:sqlite</code>, endpoints Express REST e integração Google Gemini Multimodal Vision API.</p>
+                        <p>O PWA usa Node.js 24, nativo <code>node:sqlite</code>e terminais REST expressos. A versão do Android executa o mecanismo de rotina compartilhada localmente e não precisa de back-end.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Integrações</h3>

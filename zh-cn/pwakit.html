@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pwa-kit - 从 Bitey 中提取和推广的零依赖、自我更新的 PWA 机制。">
+    <meta name="description" content="pwa-kit - 用于 Web 应用程序的无依赖服务工作人员更新帮助程序。">
     <title>pwa-kit ⚡ - 项目详情</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=3">
@@ -39,8 +39,10 @@
                 <div class="project-intro">
                     <span class="section-number">幕后工具</span>
                     <h1>pwa-kit</h1>
-                    <p class="project-lead">帮助网页应用离线运行并保持更新的小小构件。</p>
+                    <p class="project-lead">一个小型更新助手，可以离线回退以前访问过的资源。</p>
                     <div class="project-links" style="margin-bottom: 32px;">
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/download/v0.1.0/pwa-kit-0.1.0.zip" class="btn btn-primary" style="margin-right: 12px;">下载开发工具包·0.1.0</a>
+                    <a href="https://github.com/zandaulion/pwa-kit/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">发行说明和 SHA-256</a>
                     <a href="https://github.com/zandaulion/pwa-kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 12px;">在 GitHub 上查看</a>
                 </div>
                 </div>
@@ -51,9 +53,9 @@
 
 
                 <h2>关于项目</h2>
-                <p>Bitey 的更新机制概括为：PWA 会自我更新并在事后如此说明，而不是请求不需要的许可。</p>
-                <p>复制 <code>sw.js</code> 和 <code>pwa-update.js</code> 进入应用程序的网络根目录并将它们连接起来。没有构建步骤，没有捆绑程序，并且零依赖关系 - 这就是要点：这些应用程序是静态目录。</p>
-                <p>新的 Service Worker 会立即安装并激活，无需等待选项卡关闭。每个打开的窗口都会安全地完成当前工作，然后无缝地重新加载到最新版本。</p>
+                <p>一个用于网络应用程序的小型服务工作者更新助手，具有可见的更新通知和未完成工作的保护。</p>
+                <p>复制 <code>sw.js</code>, <code>sw-update.js</code> 和 <code>pwa-update.js</code> 进入应用程序的网络根目录并将它们连接起来。没有前端构建步骤或包依赖性。 ZIP 还具有示例和可选服务器集成文件。</p>
+                <p>新的 Service Worker 立即激活。可见页面可以在工作未完成时推迟重新加载；无响应的客户端会在短暂的宽限期后重新加载。在将引用缓存策略用于私有内容之前调整引用缓存策略。</p>
 
                 <h2>图片集</h2>
                 <div class="gallery-grid">
@@ -63,7 +65,7 @@
                 <h2>功能</h2>
                 <ul>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 立即激活：</strong> 新的工作人员可以安装并接管，而旧工作人员不会在打开的浏览器选项卡上徘徊数天。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存的工作保护 (<code>isBusy</code>):</strong> 工人主动询问，而不是盲目导航；页面推迟重新加载，直到安全地解决待处理的编辑或表单状态。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🛡️ 未保存的工作卫士 (<code>isBusy</code>):</strong> 响应式可见页面可以在编辑未完成时推迟重新加载；应用程序应单独保存重要的草稿。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌐 网络第一的新鲜度：</strong> 在线请求总是获胜，以确保部署的更改在下一次重新加载时生效，并在离线时回退到缓存。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔔 清理会话存储通知：</strong> 避免使用更新标志污染 URL 查询字符串，通过应用内 toast 清楚地通知用户。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🚨 内置缓存逃生舱口：</strong> 包括针对楔入客户端的紧急取消注册和缓存清除机制。</li>
