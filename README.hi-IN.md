@@ -63,7 +63,7 @@ Bitey स्थापित `plate.html` पेज रखता है। BP Dig
 
 ## स्थानीय पूर्वावलोकन
 
-इन कमांड को रिपॉजिटरी रूट से चलाएँ। जनरेटर और जांच के लिए Python की आवश्यकता है; Python स्क्रिप्ट केवल मानक लाइब्रेरी का उपयोग करती हैं। भाषा परीक्षणों के लिए बिल्ट-इन टेस्ट रनर के साथ Node.js की आवश्यकता होती है। कोई npm इंस्टॉल या फ्रंटएंड बंडलर चरण नहीं है।
+ये कमांड रिपॉज़िटरी के मूल फ़ोल्डर से चलाएँ। पेज बनाने और जाँचने के लिए केवल Python की मानक लाइब्रेरी का उपयोग होता है। भाषा परीक्षणों के लिए अंतर्निहित टेस्ट रनर वाला Node.js चाहिए। npm install या फ़्रंटएंड बंडलर का कोई चरण नहीं है।
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ python -m http.server 8765 --bind 127.0.0.1
 
 | क्या बदलना है | संपादित करने के लिए स्रोत |
 | --- | --- |
+| रिस्पॉन्सिव इमेज के स्रोत और संस्करण | [इमेज तैयार करने की मार्गदर्शिका](scripts/IMAGES.md) |
 | मुखपृष्ठ लेआउट | `templates/home.html` |
 | प्रत्येक भाषा में मुखपृष्ठ पाठ | `locales/<locale>.json` |
 | अंग्रेजी परियोजना सामग्री और लेआउट | रूट प्रोजेक्ट HTML फ़ाइलें, जैसे `kerfloom.html` |
@@ -153,6 +154,8 @@ python scripts/translate_projects.py --fetch --language ro
 ```sh
 python scripts/build_locales.py --check
 python scripts/build_readmes.py --check
+python scripts/build_images.py --check
+python -m unittest discover -s scripts -p 'test_*.py'
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

@@ -63,7 +63,7 @@ Bitey păstrează pagina `plate.html` stabilită. BP Digitizer are o pagină pen
 
 ## Previzualizare locală
 
-Rulați aceste comenzi din rădăcina depozitului. Python este necesar pentru generator și verificări; scripturile Python folosesc numai biblioteca standard. Node.js cu runner de testare încorporat este necesar pentru testele de limbă. Nu există nicio instalare npm sau pas de bundler frontend.
+Rulează aceste comenzi din rădăcina repository-ului. Generarea paginilor și verificările folosesc doar biblioteca standard Python. Testele pentru limbi necesită Node.js cu instrumentul de testare inclus. Nu este nevoie de npm install sau de un bundler pentru interfață.
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ Link-urile pentru limbile paginii de pornire sunt prezente în HTML și funcțio
 
 | Ce să schimbi | Sursa de editat |
 | --- | --- |
+| Surse și variante pentru imagini responsive | [Ghid pentru pregătirea imaginilor](scripts/IMAGES.md) |
 | Aspectul paginii de pornire | `templates/home.html` |
 | Textul paginii de pornire în fiecare limbă | `locales/<locale>.json` |
 | Conținutul și aspectul proiectului în limba engleză | Fișierele de proiect HTML rădăcină, cum ar fi `kerfloom.html` |
@@ -153,6 +154,8 @@ Cu serverul de previzualizare local care rulează, rulați aceste comenzi într-
 ```sh
 python scripts/build_locales.py --check
 python scripts/build_readmes.py --check
+python scripts/build_images.py --check
+python -m unittest discover -s scripts -p 'test_*.py'
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

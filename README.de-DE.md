@@ -63,7 +63,7 @@ Bitey behält die etablierte Seite `plate.html` bei. BP Digitizer hat eine Seite
 
 ## Lokale Vorschau
 
-Führen Sie diese Befehle im Repository-Stammverzeichnis aus. Python wird für den Generator und die Prüfungen benötigt; Die Python-Skripte verwenden nur die Standardbibliothek. Für die Sprachtests wird Node.js mit dem integrierten Test-Runner benötigt. Es gibt keinen npm-Installations- oder Frontend-Bundler-Schritt.
+Führe diese Befehle im Stammverzeichnis des Repositorys aus. Seitengenerierung und Prüfungen verwenden nur die Python-Standardbibliothek. Für die Sprachtests wird Node.js mit dem integrierten Test-Runner benötigt. Ein npm install oder ein Frontend-Bundler ist nicht erforderlich.
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ Homepage-Sprachlinks sind im HTML vorhanden und funktionieren auch ohne JavaScri
 
 | Was zu ändern ist | Quelle zum Bearbeiten |
 | --- | --- |
+| Quelldateien und Varianten responsiver Bilder | [Anleitung zur Bildaufbereitung](scripts/IMAGES.md) |
 | Homepage-Layout | `templates/home.html` |
 | Homepagetext in jeder Sprache | `locales/<locale>.json` |
 | Englischer Projektinhalt und Layout | Root-Projekt HTML-Dateien, z. B. `kerfloom.html` |
@@ -153,6 +154,8 @@ Führen Sie bei laufendem lokalen Vorschauserver diese Befehle in einem anderen 
 ```sh
 python scripts/build_locales.py --check
 python scripts/build_readmes.py --check
+python scripts/build_images.py --check
+python -m unittest discover -s scripts -p 'test_*.py'
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

@@ -63,7 +63,7 @@ Bitey зберігає встановлену сторінку `plate.html`. BP 
 
 ## Локальний попередній перегляд
 
-Виконайте ці команди з кореня сховища. Python потрібен для генератора і чеків; сценарії Python використовують лише стандартну бібліотеку. Для мовних тестів потрібен Node.js із вбудованим запуском тестів. Немає етапу встановлення npm або інтерфейсу комплектування.
+Виконуйте ці команди з кореня репозиторію. Генерація сторінок і перевірки використовують лише стандартну бібліотеку Python. Для мовних тестів потрібен Node.js із вбудованим засобом запуску тестів. Виконувати npm install або збирати фронтенд не потрібно.
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ python -m http.server 8765 --bind 127.0.0.1
 
 | Що змінити | Джерело для редагування |
 | --- | --- |
+| Джерела та варіанти адаптивних зображень | [Посібник із підготовки зображень](scripts/IMAGES.md) |
 | Макет домашньої сторінки | `templates/home.html` |
 | Текст домашньої сторінки кожною мовою | `locales/<locale>.json` |
 | Зміст та макет проекту англійською мовою | Кореневі файли проекту HTML, наприклад `kerfloom.html` |
@@ -153,6 +154,8 @@ python scripts/translate_projects.py --fetch --language ro
 ```sh
 python scripts/build_locales.py --check
 python scripts/build_readmes.py --check
+python scripts/build_images.py --check
+python -m unittest discover -s scripts -p 'test_*.py'
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

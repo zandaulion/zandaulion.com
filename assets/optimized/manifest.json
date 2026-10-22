@@ -1,0 +1,1063 @@
+{
+  "version": 1,
+  "config": {
+    "widths": [
+      320,
+      640,
+      960,
+      1280
+    ],
+    "quality": 88,
+    "logo": "assets/brand/lion-light-v2.png",
+    "logo_widths": [
+      32,
+      52,
+      104,
+      156
+    ],
+    "images": [
+      "assets/PaleBlueDot/Screenshot_20260501_090925.png",
+      "assets/Kerfspan/cut_style_03_radial_cuts.png",
+      "assets/Kerfspan/cut_style_01_slats.png",
+      "assets/BankDWHStudio/08-mobile-transactions-phone.png",
+      "assets/Plate/bitey-hero.png",
+      "assets/Kerfspan/feature_graphic.jpg",
+      "assets/PaleBlueDot/feature-graphic.png",
+      "assets/Casierul/05-registru-desktop-1440x900.png",
+      "assets/Threadmark/card.jpg",
+      "assets/Faceslice/feature_graphic.jpg",
+      "assets/Gravity Garden/workshop-hero.jpg",
+      "assets/Magpie/feature_graphic.jpg",
+      "assets/Sankey/feature_graphic.jpg",
+      "assets/Miscare/feature_graphic.jpg",
+      "assets/GravityWarp/workshop-hero.png",
+      "assets/omaha/feature-graphic.png",
+      "assets/Spendosaurus/feature_graphic.jpg",
+      "assets/OrbitPuzzles/feature_graphic.jpg",
+      "assets/Intarzieri/feature_graphic.jpg",
+      "assets/Thermostat/feature_graphic.jpg",
+      "assets/GravityTDG/workshop-hero.png",
+      "assets/OLX/feature_graphic.jpg",
+      "assets/BP Digitizer/feature_graphic.jpg",
+      "assets/Admitere/feature_graphic.jpg",
+      "assets/BankDWHStudio/01-top5-wire-customers-desktop.png",
+      "assets/PWA-Kit/feature_graphic.jpg",
+      "assets/PWA-Invite-Console/card.jpg",
+      "assets/ScreenshotKit/feature-graphic.png"
+    ]
+  },
+  "encoder": {
+    "Pillow": "13.0.0",
+    "WebP": "1.6.0"
+  },
+  "sources": {
+    "assets/brand/lion-light-v2.png": {
+      "sha256": "1d9fd397b036ef5e2ea12d704aa51ccb4d68ce38992e7708568184c677f2e608",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "path": "assets/brand/lion-light-v2-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 2420,
+          "sha256": "0dab19059477c130872fb32c04f0a3b7bc85e95e7ff987b37d4479b067b9e35e"
+        },
+        {
+          "path": "assets/brand/lion-light-v2-52.png",
+          "width": 52,
+          "height": 52,
+          "bytes": 5466,
+          "sha256": "c28f07f476c0a01eb0f7c7b85051f7255a4d3a2b55c85886e3ee244c81585edc"
+        },
+        {
+          "path": "assets/brand/lion-light-v2-104.png",
+          "width": 104,
+          "height": 104,
+          "bytes": 15462,
+          "sha256": "59ea346b022271f26de7d72d7499e9ce7a16fd52f45a2fc6682306a19f2ca3c9"
+        },
+        {
+          "path": "assets/brand/lion-light-v2-156.png",
+          "width": 156,
+          "height": 156,
+          "bytes": 28373,
+          "sha256": "a79e1b98503fde88fc92a3769b0c658f0ff61d9da063b69b849f7b401e0c72d1"
+        }
+      ]
+    },
+    "assets/PaleBlueDot/Screenshot_20260501_090925.png": {
+      "sha256": "0eadf7af746b7eca0ec5ad7cb984cd7ded289730810ef188c8b3a63ddd22dfdc",
+      "width": 2076,
+      "height": 2152,
+      "variants": [
+        {
+          "path": "assets/optimized/palebluedot-screenshot-20260501-090925-5351a52f-320.webp",
+          "width": 320,
+          "height": 332,
+          "bytes": 6698,
+          "sha256": "0a1052b3572ea2f0e640c40cef2577499cd17b391bf7d3b1df5ee76a294615df"
+        },
+        {
+          "path": "assets/optimized/palebluedot-screenshot-20260501-090925-5351a52f-640.webp",
+          "width": 640,
+          "height": 663,
+          "bytes": 18970,
+          "sha256": "1da64fae5186aca4d465d73eaa31451fb99297528991ed9096abfb28d28b8ecb"
+        },
+        {
+          "path": "assets/optimized/palebluedot-screenshot-20260501-090925-5351a52f-960.webp",
+          "width": 960,
+          "height": 995,
+          "bytes": 34266,
+          "sha256": "f3a236b13f2e0267672ba109340c6df44acc1ed379b813c7c704c0d8845596d3"
+        },
+        {
+          "path": "assets/optimized/palebluedot-screenshot-20260501-090925-5351a52f-1280.webp",
+          "width": 1280,
+          "height": 1327,
+          "bytes": 50990,
+          "sha256": "e508e338041c1279a461aaf18ff93ed676f5560dfb8231c2f0b3cc696493af88"
+        }
+      ]
+    },
+    "assets/Kerfspan/cut_style_03_radial_cuts.png": {
+      "sha256": "01ea0b1ec48ffc32240874fb52898574f0e469ee9fa43e4f71c64d2dc357d826",
+      "width": 1024,
+      "height": 512,
+      "variants": [
+        {
+          "path": "assets/optimized/kerfspan-cut-style-03-radial-cuts-330acd02-320.webp",
+          "width": 320,
+          "height": 160,
+          "bytes": 17544,
+          "sha256": "4768121f6fc617139df2fabf50f668dc009daeaa10d4c9cfcdb56c58d6c30b39"
+        },
+        {
+          "path": "assets/optimized/kerfspan-cut-style-03-radial-cuts-330acd02-640.webp",
+          "width": 640,
+          "height": 320,
+          "bytes": 54172,
+          "sha256": "8eb6acd9cbf7af857e87cd7b376aaa923e2aefe95d48fe522abe96ba2d22423c"
+        },
+        {
+          "path": "assets/optimized/kerfspan-cut-style-03-radial-cuts-330acd02-960.webp",
+          "width": 960,
+          "height": 480,
+          "bytes": 92174,
+          "sha256": "cb9133f4d091e56880c56b90daf55115806d375992cb61e242d6d817cc5a43e4"
+        },
+        {
+          "path": "assets/optimized/kerfspan-cut-style-03-radial-cuts-330acd02-1024.webp",
+          "width": 1024,
+          "height": 512,
+          "bytes": 98454,
+          "sha256": "b65cf842f915a14f2bc0f2e16d8faa930937831401740157441c560520f02167"
+        }
+      ]
+    },
+    "assets/Kerfspan/cut_style_01_slats.png": {
+      "sha256": "be93d1065d9c5a8e2f19b21a252c223267b321c3e44143eb7c036c4e334a839b",
+      "width": 1024,
+      "height": 512,
+      "variants": [
+        {
+          "path": "assets/optimized/kerfspan-cut-style-01-slats-27d8c4e5-320.webp",
+          "width": 320,
+          "height": 160,
+          "bytes": 18350,
+          "sha256": "8e1d1c67a7bdc47ccac4a00fb9141a73dc759c02b4356905431f52ca802a153b"
+        },
+        {
+          "path": "assets/optimized/kerfspan-cut-style-01-slats-27d8c4e5-640.webp",
+          "width": 640,
+          "height": 320,
+          "bytes": 44986,
+          "sha256": "043b639e0d62bb86cc1a20977c56d54d5ca508f9da747ec4e44869f4b82f35aa"
+        },
+        {
+          "path": "assets/optimized/kerfspan-cut-style-01-slats-27d8c4e5-960.webp",
+          "width": 960,
+          "height": 480,
+          "bytes": 68804,
+          "sha256": "3bea4c6b796a625d606a1246f94e936a31b7bbf39b85444e6e9d5042f9712068"
+        },
+        {
+          "path": "assets/optimized/kerfspan-cut-style-01-slats-27d8c4e5-1024.webp",
+          "width": 1024,
+          "height": 512,
+          "bytes": 72450,
+          "sha256": "ce9c8074ecf70e674b9205e77edfa4d5c6211c42cfcc736305b3579c4f30b6c6"
+        }
+      ]
+    },
+    "assets/BankDWHStudio/08-mobile-transactions-phone.png": {
+      "sha256": "1c18a997acfaaf353dd2f7fd9a7f7305441452fd259c80eadffd5c33edee4c2c",
+      "width": 780,
+      "height": 4556,
+      "variants": [
+        {
+          "path": "assets/optimized/bankdwhstudio-08-mobile-transactions-phone-e77e8dc4-320.webp",
+          "width": 320,
+          "height": 1869,
+          "bytes": 56012,
+          "sha256": "48dc8c19eb78a83c36bb1a7361372a323ef6bcb8d4e18f912bb585a348647578"
+        },
+        {
+          "path": "assets/optimized/bankdwhstudio-08-mobile-transactions-phone-e77e8dc4-640.webp",
+          "width": 640,
+          "height": 3738,
+          "bytes": 148788,
+          "sha256": "a5acf562db8b1a1a4726c8365caf87851c639880e9765b1873dcfc7054a1b3e5"
+        },
+        {
+          "path": "assets/optimized/bankdwhstudio-08-mobile-transactions-phone-e77e8dc4-780.webp",
+          "width": 780,
+          "height": 4556,
+          "bytes": 183560,
+          "sha256": "db5c8db473745c0f6c3ad3ebd741d3f7033a89fad6f1d2e9480982524c4390ed"
+        }
+      ]
+    },
+    "assets/Plate/bitey-hero.png": {
+      "sha256": "09f8dae0dfccc8835fa472aa20d7c7590b8e869b516467aedda79cc58a1a261c",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/plate-bitey-hero-9d3baf84-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 7704,
+          "sha256": "6e5e81e1173f6b129b7bc0602438c05eb2819cb3b07e694178b3afbf49cb2044"
+        },
+        {
+          "path": "assets/optimized/plate-bitey-hero-9d3baf84-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 17054,
+          "sha256": "1171633fcd3fda5a5f9964399e466ce998964add4aebbe3753d382699a96eef6"
+        },
+        {
+          "path": "assets/optimized/plate-bitey-hero-9d3baf84-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 26320,
+          "sha256": "8f252b75c483e95719ee57699d8272c9dd93126ae2eb0472c3efac69e088b6ec"
+        },
+        {
+          "path": "assets/optimized/plate-bitey-hero-9d3baf84-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 28116,
+          "sha256": "7c3f175421bcec7b997236c0ba975fa6cc23086d8f72b6d5a2df5b9da0a83b7c"
+        }
+      ]
+    },
+    "assets/Kerfspan/feature_graphic.jpg": {
+      "sha256": "95e69b23fd4b0b1daec394dd3bbd8b024f7eba4b895d899fc945f009799276b7",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/kerfspan-feature-graphic-60451ea5-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 6920,
+          "sha256": "030afbf1ca1c27dd9b38c8710265e8cb440ceed4e7acc8d4acc0430cf0f80073"
+        },
+        {
+          "path": "assets/optimized/kerfspan-feature-graphic-60451ea5-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 21528,
+          "sha256": "31199b9250ebbb690bae99bf28207c7e1e704765e30ad7b6da7364545850d261"
+        },
+        {
+          "path": "assets/optimized/kerfspan-feature-graphic-60451ea5-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 41908,
+          "sha256": "c0ae0546240674a4e378a7264e78128b8f7ab87909b8ca2bd569e520f89b9fa4"
+        },
+        {
+          "path": "assets/optimized/kerfspan-feature-graphic-60451ea5-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 65492,
+          "sha256": "17e2b588dc8390e7396f6410a9bb7504d1d08d1ccbae0b643ca319dc591c1708"
+        }
+      ]
+    },
+    "assets/PaleBlueDot/feature-graphic.png": {
+      "sha256": "dea8edc54c0fc0dfc018ad09df2b591a2e30b1c14bc296a816ee708b5bff2c12",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/palebluedot-feature-graphic-136fde38-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 7958,
+          "sha256": "eec995d39a51c6ce10e1f256ed295c0580497a210f4ee8c32cb12828af07979a"
+        },
+        {
+          "path": "assets/optimized/palebluedot-feature-graphic-136fde38-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 21844,
+          "sha256": "8991148e68748ef705610fb6137cafc87b81fca5a5d265fbb3221550609fae80"
+        },
+        {
+          "path": "assets/optimized/palebluedot-feature-graphic-136fde38-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 37980,
+          "sha256": "032b67675f11a91afdca1328e6a65f300bd1f63533dc3540cbb4807d498513f8"
+        },
+        {
+          "path": "assets/optimized/palebluedot-feature-graphic-136fde38-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 42124,
+          "sha256": "6573ddd2704e031f4ce24081ac72c6d0c37be3761b02319218ecaa84d6101d1c"
+        }
+      ]
+    },
+    "assets/Casierul/05-registru-desktop-1440x900.png": {
+      "sha256": "cdbddcc71e695e72f668ede317d8726bdf40867089c5c6ce1def2ba3126f99e1",
+      "width": 1440,
+      "height": 900,
+      "variants": [
+        {
+          "path": "assets/optimized/casierul-05-registru-desktop-1440x900-7c86313f-320.webp",
+          "width": 320,
+          "height": 200,
+          "bytes": 5006,
+          "sha256": "da28776d88e9118cb146bb73a9193a69dd840a08f956b2867772369e7aa4ecb4"
+        },
+        {
+          "path": "assets/optimized/casierul-05-registru-desktop-1440x900-7c86313f-640.webp",
+          "width": 640,
+          "height": 400,
+          "bytes": 15894,
+          "sha256": "0d1d538e54a1c2164694ff4790a1742cda84a17149ca076e25f623bd8b66ec63"
+        },
+        {
+          "path": "assets/optimized/casierul-05-registru-desktop-1440x900-7c86313f-960.webp",
+          "width": 960,
+          "height": 600,
+          "bytes": 29700,
+          "sha256": "383e6d1f20ec4f078f5f8bb707ff7fc6dea616f11819b43105b9bd17399555b7"
+        },
+        {
+          "path": "assets/optimized/casierul-05-registru-desktop-1440x900-7c86313f-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "bytes": 43916,
+          "sha256": "9879379ce297ef0a05e7317b1e05b60740d2a30b11ddd8e5fb568e0af9ff0304"
+        }
+      ]
+    },
+    "assets/Threadmark/card.jpg": {
+      "sha256": "a335c9602146ea1462ef73c660491c0454a67ab552b8bb3575ec0585b96b10bb",
+      "width": 1200,
+      "height": 630,
+      "variants": [
+        {
+          "path": "assets/optimized/threadmark-card-2b075900-320.webp",
+          "width": 320,
+          "height": 168,
+          "bytes": 7926,
+          "sha256": "87be235125aac37496ced8e620fe824c485a9578cee767a2a3bd59bad6d1819a"
+        },
+        {
+          "path": "assets/optimized/threadmark-card-2b075900-640.webp",
+          "width": 640,
+          "height": 336,
+          "bytes": 22060,
+          "sha256": "1e1dabb09559618cc6a32d8fcb80dbf7111ae9bcacc84785e54a24fe0c143579"
+        },
+        {
+          "path": "assets/optimized/threadmark-card-2b075900-960.webp",
+          "width": 960,
+          "height": 504,
+          "bytes": 38184,
+          "sha256": "32c7653126e7710d98b7bd6e5c9a5497e1762171f0336630a78c789c9a4d64a4"
+        },
+        {
+          "path": "assets/optimized/threadmark-card-2b075900-1200.webp",
+          "width": 1200,
+          "height": 630,
+          "bytes": 53610,
+          "sha256": "bc39adae6b95e17bbc18a634bf02a4ad03a5bde6eaf51a6166b2dde2b17dbb76"
+        }
+      ]
+    },
+    "assets/Faceslice/feature_graphic.jpg": {
+      "sha256": "1814a609e4a03c7768bfbad366589620f71e7ff60a1b5a0bafca7052885b0cef",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/faceslice-feature-graphic-0ec6b099-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 6018,
+          "sha256": "a8ac4653b750d9379e21cefa0eefc874f75b6789687ef90d7e9646952bd2da4e"
+        },
+        {
+          "path": "assets/optimized/faceslice-feature-graphic-0ec6b099-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 18066,
+          "sha256": "9c2f7fed2f08728b3ac07842794ccb3ffdf315819021ad1386d66d9b63c334f5"
+        },
+        {
+          "path": "assets/optimized/faceslice-feature-graphic-0ec6b099-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 34058,
+          "sha256": "c15de4ddf41e6b7f5832bf97b51d4ccce680f78f602480a486245230d4549bcc"
+        },
+        {
+          "path": "assets/optimized/faceslice-feature-graphic-0ec6b099-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 51508,
+          "sha256": "037c3403b6108f04862265a00e1e3374da414f993fbaa2431a2bd09b0e3a3d4f"
+        }
+      ]
+    },
+    "assets/Gravity Garden/workshop-hero.jpg": {
+      "sha256": "f9bfe29bdb6d6fa24246c8c87bd81fbabc6f6bc34db7c4e13c0a29829da40350",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/gravity-garden-workshop-hero-e6ae8234-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 16364,
+          "sha256": "6aa7054f95dc0495320bd4d948f3130ac3368fbf925c1ef690f290779dfbc52d"
+        },
+        {
+          "path": "assets/optimized/gravity-garden-workshop-hero-e6ae8234-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 61140,
+          "sha256": "58a3f8c8daebe3ff0e310e45a7bf78bc903aee28669a1d071ef5b72415cec50d"
+        },
+        {
+          "path": "assets/optimized/gravity-garden-workshop-hero-e6ae8234-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 143026,
+          "sha256": "d92954516511095a84c348a618347ef0eec02c6fa324059489f27b3e196dbf53"
+        },
+        {
+          "path": "assets/optimized/gravity-garden-workshop-hero-e6ae8234-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 171136,
+          "sha256": "250e11ab8511be84964fc2a994464830a7a1386cfbb8277cd1c40a2457209b42"
+        }
+      ]
+    },
+    "assets/Magpie/feature_graphic.jpg": {
+      "sha256": "002313e309bace34b36d61ed6a9d61ad2eb93581f0611266ef1d6e234d3d7899",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/magpie-feature-graphic-30f477bd-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 4328,
+          "sha256": "1f83427e9bc4b3f638bba89ddf3b81d3e17788bb61f38f67c12aace0ec772981"
+        },
+        {
+          "path": "assets/optimized/magpie-feature-graphic-30f477bd-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 12794,
+          "sha256": "b4b54d57abfddeeee909ef2766e0f9729c034d41cc45d37ecb506d77d8f9b592"
+        },
+        {
+          "path": "assets/optimized/magpie-feature-graphic-30f477bd-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 25546,
+          "sha256": "5fcbaafc2262ff39cc5ff23171f18ccc4fb2b7d2b41c343a692086a2cc7996ed"
+        },
+        {
+          "path": "assets/optimized/magpie-feature-graphic-30f477bd-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 39428,
+          "sha256": "e8d64e8f5a07427dfdb857faf9b3724055c37bf7de3ec3ea13fbf48393663714"
+        }
+      ]
+    },
+    "assets/Sankey/feature_graphic.jpg": {
+      "sha256": "3fff16ee3643588e9bec516fe29991efa07727776db3e3887d0d08c83c116321",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/sankey-feature-graphic-6482b227-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 15254,
+          "sha256": "41636fad2a9378e3372e9af8d3b67f5fe0f35c31c83bf27d0c8dae02de670909"
+        },
+        {
+          "path": "assets/optimized/sankey-feature-graphic-6482b227-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 45216,
+          "sha256": "88be619f7fc50cc22b58ce9f92ba83427f1e61d5ce07844bb123b7548bc84b32"
+        },
+        {
+          "path": "assets/optimized/sankey-feature-graphic-6482b227-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 80420,
+          "sha256": "7a51da6e5b726ec376b1cd03d097e771e0a0d59b9ad505cbebbb23e44a9b61c0"
+        },
+        {
+          "path": "assets/optimized/sankey-feature-graphic-6482b227-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 119036,
+          "sha256": "fa8ad094aa48b22c06a908decdba371545d6bbd4ad17a8617733b6e1ca36a7c8"
+        }
+      ]
+    },
+    "assets/Miscare/feature_graphic.jpg": {
+      "sha256": "63575025498481a9c36d980c4b146c14ff90d498c58adca8e53009df27726124",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/miscare-feature-graphic-8d1992b0-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 5270,
+          "sha256": "78aa70a91463221dee189365eceba85e1f440fecbaa4de320ff818816d00a4f8"
+        },
+        {
+          "path": "assets/optimized/miscare-feature-graphic-8d1992b0-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 15838,
+          "sha256": "2d86830879724c5573bc95b916d147a3e924f7ae5ba773fc1c8c8a50f371ffcd"
+        },
+        {
+          "path": "assets/optimized/miscare-feature-graphic-8d1992b0-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 29770,
+          "sha256": "d12202859b2a1c6449ca5f1e95b8fe16139f61111d1a0ddd1a7977922282b9a2"
+        },
+        {
+          "path": "assets/optimized/miscare-feature-graphic-8d1992b0-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 43046,
+          "sha256": "9ae98214cd1cf3854d3130901f99d75b1f75749357b2d8e96f2dc33cfcde60f4"
+        }
+      ]
+    },
+    "assets/GravityWarp/workshop-hero.png": {
+      "sha256": "89b3f5f32e9e24918ce2961f528d3ae349f340703673dace32b8ca94b209505a",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/gravitywarp-workshop-hero-c5fdaefa-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 3612,
+          "sha256": "2eb3826ffdede601c5b53207b87150bc29adc78a042f490e1ebf9c58ab7ecde8"
+        },
+        {
+          "path": "assets/optimized/gravitywarp-workshop-hero-c5fdaefa-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 9856,
+          "sha256": "b0cbebbc45750e74b3afac05c97f5367754a63aa91088df8ed35f49c281c4bc5"
+        },
+        {
+          "path": "assets/optimized/gravitywarp-workshop-hero-c5fdaefa-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 16268,
+          "sha256": "81d1b7cc7e10eccd04ceef5213519b8f62697102b12297326a77cada677da697"
+        },
+        {
+          "path": "assets/optimized/gravitywarp-workshop-hero-c5fdaefa-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 17686,
+          "sha256": "5ea990fa423f686cdde41521b4907af180ed3eda0b67846c62dc658c2e769877"
+        }
+      ]
+    },
+    "assets/omaha/feature-graphic.png": {
+      "sha256": "330c9d47eef82b89e2999d295a5b4cd8a224c075d2b9f7eca8cc490d92c1b754",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/omaha-feature-graphic-0420be71-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 6052,
+          "sha256": "8562948ad959eb995cb78f39d26ac0f9b4c03afed20a4009469548f64f045b42"
+        },
+        {
+          "path": "assets/optimized/omaha-feature-graphic-0420be71-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 16946,
+          "sha256": "e2359b99be7efa273232f9eef3c8790e2a5e6596179aa6af1318e9532f223c0e"
+        },
+        {
+          "path": "assets/optimized/omaha-feature-graphic-0420be71-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 30194,
+          "sha256": "ceab458208b49739e2c8f0b44c4c246a73fa7605698fdf0af92172ad1971e3e1"
+        },
+        {
+          "path": "assets/optimized/omaha-feature-graphic-0420be71-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 33790,
+          "sha256": "7c932d6db3bdfa48244ed669cd28460ed9dc49a5e9f77aae49be6d860befbb09"
+        }
+      ]
+    },
+    "assets/Spendosaurus/feature_graphic.jpg": {
+      "sha256": "d080d7c9a55b2a2ecee43de9289892c4f0034bca5d31a58a745ccafcedc0db00",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/spendosaurus-feature-graphic-ebcc05c4-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 6038,
+          "sha256": "17f074a06845e487e3f41521f327171e5de6571f56cc5fe5880e018782d7d823"
+        },
+        {
+          "path": "assets/optimized/spendosaurus-feature-graphic-ebcc05c4-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 17240,
+          "sha256": "522e4e0519507987a7edd8a856937b2588361be40a6582c5caf24188953b79ab"
+        },
+        {
+          "path": "assets/optimized/spendosaurus-feature-graphic-ebcc05c4-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 30622,
+          "sha256": "0ff88bc891b077283b46c4e6d9905cc69c196afbd5bf282c0633f05ede9ded4d"
+        },
+        {
+          "path": "assets/optimized/spendosaurus-feature-graphic-ebcc05c4-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 45470,
+          "sha256": "fc14f494ec201dc1f34efb932caa12b5f2e90a5d64c629cbe5e34d43fe8f4c08"
+        }
+      ]
+    },
+    "assets/OrbitPuzzles/feature_graphic.jpg": {
+      "sha256": "29fcd898a4be476a03df0efd8f9870819fc57e4383681113a22d69420619600f",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/orbitpuzzles-feature-graphic-3fbf84cb-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 4726,
+          "sha256": "3c392d57d48863aed9e42ae7db18524721ed6de5b2aa1afc9b8d64cd2ed0f13f"
+        },
+        {
+          "path": "assets/optimized/orbitpuzzles-feature-graphic-3fbf84cb-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 12046,
+          "sha256": "a23e0ea132fc4b5829b0aad0e51a31630d35bfa6054136ee771f032c1e6712ee"
+        },
+        {
+          "path": "assets/optimized/orbitpuzzles-feature-graphic-3fbf84cb-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 23252,
+          "sha256": "ae1abec1adf394aca27af1fc94a8a0e6152d48fc70ee92e7384b3ab1a022dacd"
+        },
+        {
+          "path": "assets/optimized/orbitpuzzles-feature-graphic-3fbf84cb-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 37554,
+          "sha256": "5897ed7d41e92a45884f74074d8a6e6cec3dc6b7000507915d6e5ff697bbb9b4"
+        }
+      ]
+    },
+    "assets/Intarzieri/feature_graphic.jpg": {
+      "sha256": "50b35423f9746df9e151304ea5014bb52e1cf032906867f467a029c82c433af8",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/intarzieri-feature-graphic-bd94cb6c-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 16848,
+          "sha256": "b6dd572b75833e09129030ae1ce139519f7604fed2967a1b39fac88ffeb923bc"
+        },
+        {
+          "path": "assets/optimized/intarzieri-feature-graphic-bd94cb6c-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 41464,
+          "sha256": "82d1ba00034cc5eeb4c157c5c853a7c038c0935b1fea0b002eb71a2545312edb"
+        },
+        {
+          "path": "assets/optimized/intarzieri-feature-graphic-bd94cb6c-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 68798,
+          "sha256": "d72bdf0e5e9da31e9289d29e70185e350c0900382ca7854ad10203605026daf1"
+        },
+        {
+          "path": "assets/optimized/intarzieri-feature-graphic-bd94cb6c-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 100782,
+          "sha256": "f9168b26e023a9a55b6bc85f1ec5ec9f82a5cae20ccba77bab0a89291bb05820"
+        }
+      ]
+    },
+    "assets/Thermostat/feature_graphic.jpg": {
+      "sha256": "ca40b54236f15f043bda4a6fe5c6c45e22148fb378f81b9f37a4f71653ae1bac",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/thermostat-feature-graphic-df5af629-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 6028,
+          "sha256": "85981c850acfa43cde943b3b4d6d2c431ebc20b2ad10b9d871a27e0bdda889f3"
+        },
+        {
+          "path": "assets/optimized/thermostat-feature-graphic-df5af629-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 16038,
+          "sha256": "14874bba355e2299e667306ac4e19f5698c505f3e1d9028b386bed308eb87126"
+        },
+        {
+          "path": "assets/optimized/thermostat-feature-graphic-df5af629-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 28150,
+          "sha256": "fc77237821ee0e6fc9c8d71dc7e6e0e266172a3b44e82e59e08999e8cae8df9e"
+        },
+        {
+          "path": "assets/optimized/thermostat-feature-graphic-df5af629-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 41070,
+          "sha256": "d0c0b22fec31a4f08602690883aa849d39d08c90481878ccfb279bf2b095ee88"
+        }
+      ]
+    },
+    "assets/GravityTDG/workshop-hero.png": {
+      "sha256": "14ca346b9e3b8119087fe054746152498f64f1779f7aff1d982a89127d228187",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/gravitytdg-workshop-hero-59ca3e62-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 12050,
+          "sha256": "2f86abdf6f35d861cceef67ff96c5914da5df29053cb6a5f735e0e732fe4a80b"
+        },
+        {
+          "path": "assets/optimized/gravitytdg-workshop-hero-59ca3e62-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 41530,
+          "sha256": "c818ffb5221a548895ad96117467d3f4cc9e84abcec41aa8a34b3e2694bf9b32"
+        },
+        {
+          "path": "assets/optimized/gravitytdg-workshop-hero-59ca3e62-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 82496,
+          "sha256": "ac582e6426bff51e4c126a677600bb06bdbe89b6962576e415240b061ec74dcf"
+        },
+        {
+          "path": "assets/optimized/gravitytdg-workshop-hero-59ca3e62-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 92506,
+          "sha256": "16a145ec75ec7faba7ed3705ee2f5927a051e22d2fc33d8816c5e771cc04bdde"
+        }
+      ]
+    },
+    "assets/OLX/feature_graphic.jpg": {
+      "sha256": "5c9514bb9dbf148e3a612ace55aa1842ccacb431740cbec72b7cce7ba2fec1bd",
+      "width": 1376,
+      "height": 768,
+      "variants": [
+        {
+          "path": "assets/optimized/olx-feature-graphic-07bb8eb8-320.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 5986,
+          "sha256": "9d9ecdbcd320f8592af6ce7aa660b219f3c4c90649bc56cfbe9fd33763f5c653"
+        },
+        {
+          "path": "assets/optimized/olx-feature-graphic-07bb8eb8-640.webp",
+          "width": 640,
+          "height": 357,
+          "bytes": 17036,
+          "sha256": "0ece41deceb67caf63062a72e39e191c5ad96e17c74684dd1ee15c9efb36cf5c"
+        },
+        {
+          "path": "assets/optimized/olx-feature-graphic-07bb8eb8-960.webp",
+          "width": 960,
+          "height": 536,
+          "bytes": 32894,
+          "sha256": "077fa77bf7d93f69eacb6e459e97ceb91dc67a4257f95358f0c43cfcd3a5b82e"
+        },
+        {
+          "path": "assets/optimized/olx-feature-graphic-07bb8eb8-1280.webp",
+          "width": 1280,
+          "height": 714,
+          "bytes": 48816,
+          "sha256": "0eb4946d9a16295a1b930fee93ac2dfd21716de998bea2835c8f010382f5cb2f"
+        }
+      ]
+    },
+    "assets/BP Digitizer/feature_graphic.jpg": {
+      "sha256": "b20baddef463f1c63660cbccf5da0ce2602e93b662a7c2970a0667278ad62006",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/bp-digitizer-feature-graphic-afd34027-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 7558,
+          "sha256": "18b4321812d91494dc23e6a917f82c3c2000b8d2b73104af12ba98a0bbf78efd"
+        },
+        {
+          "path": "assets/optimized/bp-digitizer-feature-graphic-afd34027-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 18136,
+          "sha256": "ab5d2ca766180ec719e7e6e0279a2907d3ae8dea52ca40f7601e49161ff655ad"
+        },
+        {
+          "path": "assets/optimized/bp-digitizer-feature-graphic-afd34027-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 30366,
+          "sha256": "652d4d74027f18272ca694d8ac97e162317236355c80f48ad1f45fbe6332efeb"
+        },
+        {
+          "path": "assets/optimized/bp-digitizer-feature-graphic-afd34027-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 31984,
+          "sha256": "d2d96f0030391ee2899e55b16234900f794581a43149b3f1da19a95db9721275"
+        }
+      ]
+    },
+    "assets/Admitere/feature_graphic.jpg": {
+      "sha256": "3810ea0ec4d22ac870b1f3646c6fbacce94afb30ff2e0b2eecc212aa3cbeca05",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/admitere-feature-graphic-ba9d176c-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 2968,
+          "sha256": "28b218986a9115e4aef8a42b644bbfa967b1a416b8d7a59ec06c310d0d71a0a8"
+        },
+        {
+          "path": "assets/optimized/admitere-feature-graphic-ba9d176c-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 7158,
+          "sha256": "92a4152711dd4888032cec186d5f650314e6e2d51c3fc6bc690eb7deffa3d6fd"
+        },
+        {
+          "path": "assets/optimized/admitere-feature-graphic-ba9d176c-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 11544,
+          "sha256": "d75f71fcecc4700302a2c9833faa081b715bc1680a3c8a0e9fbfb6fd7c6962b8"
+        },
+        {
+          "path": "assets/optimized/admitere-feature-graphic-ba9d176c-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 11720,
+          "sha256": "9d272bf126f9c5b8d02e93d0fd60decde281aa830d996c0a6ccf6cf578ca991e"
+        }
+      ]
+    },
+    "assets/BankDWHStudio/01-top5-wire-customers-desktop.png": {
+      "sha256": "b86b37fe039e0115f155ec588fa2f9b86412d8f268a7fc5b3e83ea4d7d773737",
+      "width": 2160,
+      "height": 2606,
+      "variants": [
+        {
+          "path": "assets/optimized/bankdwhstudio-01-top5-wire-customers-desktop-feb957a8-320.webp",
+          "width": 320,
+          "height": 386,
+          "bytes": 8176,
+          "sha256": "93dc474cb766b535ea25b54e05c33bbb631d458c225d26b0a9c64ddfe0da4ec9"
+        },
+        {
+          "path": "assets/optimized/bankdwhstudio-01-top5-wire-customers-desktop-feb957a8-640.webp",
+          "width": 640,
+          "height": 772,
+          "bytes": 25074,
+          "sha256": "821d294bbed2a0051283d23f3ebac58a53411040f8ed368aa98b51d78c622ed4"
+        },
+        {
+          "path": "assets/optimized/bankdwhstudio-01-top5-wire-customers-desktop-feb957a8-960.webp",
+          "width": 960,
+          "height": 1158,
+          "bytes": 49906,
+          "sha256": "f69a6be65ab7d02c85ff405f585a1f549ea88cbd2b0e1607467919d87f0bba7c"
+        },
+        {
+          "path": "assets/optimized/bankdwhstudio-01-top5-wire-customers-desktop-feb957a8-1280.webp",
+          "width": 1280,
+          "height": 1544,
+          "bytes": 77376,
+          "sha256": "b4be1d7f1ca30f6b56b1c7384bf51090537ac09bdf8ad3a4d4cffc1f5c9daa2c"
+        }
+      ]
+    },
+    "assets/PWA-Kit/feature_graphic.jpg": {
+      "sha256": "8dc484e4d73c76fc51af14e84e88bf3904e1e37329bbc9a24839e1645ab1092e",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/pwa-kit-feature-graphic-3be8c343-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 2830,
+          "sha256": "43ea83aacb757290c4af77eaec58d7c53d638a67b40593fd03a7ae8f854b3ed9"
+        },
+        {
+          "path": "assets/optimized/pwa-kit-feature-graphic-3be8c343-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 7382,
+          "sha256": "ba352c5e69072ec08617cf30ad1461b0b4820eadd6cb8f46488d55bd9154ce29"
+        },
+        {
+          "path": "assets/optimized/pwa-kit-feature-graphic-3be8c343-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 12364,
+          "sha256": "c381aba42099e4e4ad9285a1e4b324b2f1b400e0cd5c2205c002c0d50cd858dc"
+        },
+        {
+          "path": "assets/optimized/pwa-kit-feature-graphic-3be8c343-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 12690,
+          "sha256": "cbf16dd34241af05fbb76b18dffc27ee4141a9d7bac60cf0fbfe362ebb25ced4"
+        }
+      ]
+    },
+    "assets/PWA-Invite-Console/card.jpg": {
+      "sha256": "d47fc47fb94a3287084eb127d53ae77e63ddb1de918e73f97e9ae903b9ccee04",
+      "width": 1200,
+      "height": 630,
+      "variants": [
+        {
+          "path": "assets/optimized/pwa-invite-console-card-4757a021-320.webp",
+          "width": 320,
+          "height": 168,
+          "bytes": 4652,
+          "sha256": "076201c22c88c1bb03d82ee58ff24e7f0278380741a064257af3e95d354374cf"
+        },
+        {
+          "path": "assets/optimized/pwa-invite-console-card-4757a021-640.webp",
+          "width": 640,
+          "height": 336,
+          "bytes": 12866,
+          "sha256": "bccfe8ec6e1da45aa52f01e3696327efd95cdff86bd5b393aad16794e03a13c6"
+        },
+        {
+          "path": "assets/optimized/pwa-invite-console-card-4757a021-960.webp",
+          "width": 960,
+          "height": 504,
+          "bytes": 22800,
+          "sha256": "24b13f23d2f8abda2fa7db3773e8deaa60f4f1cd38decd21d1030ef74b913ee7"
+        },
+        {
+          "path": "assets/optimized/pwa-invite-console-card-4757a021-1200.webp",
+          "width": 1200,
+          "height": 630,
+          "bytes": 31702,
+          "sha256": "323cd7fb9d4301074b520f871736494f54c32bc8bea64671d912597e04f10d41"
+        }
+      ]
+    },
+    "assets/ScreenshotKit/feature-graphic.png": {
+      "sha256": "b16765af30473ba4e1685367ce62d146c3a0c892a4a1d30592b32cd58031bbcf",
+      "width": 1024,
+      "height": 500,
+      "variants": [
+        {
+          "path": "assets/optimized/screenshotkit-feature-graphic-1f46c772-320.webp",
+          "width": 320,
+          "height": 156,
+          "bytes": 7856,
+          "sha256": "48441fdbb01fe3bc065bc438803c18475940bbaa144812a272e30030ccb8bdc8"
+        },
+        {
+          "path": "assets/optimized/screenshotkit-feature-graphic-1f46c772-640.webp",
+          "width": 640,
+          "height": 312,
+          "bytes": 20868,
+          "sha256": "6ac4f9ca6167249e81b659b9067a959e2cafad36f5c74a099bfb1001e182d96d"
+        },
+        {
+          "path": "assets/optimized/screenshotkit-feature-graphic-1f46c772-960.webp",
+          "width": 960,
+          "height": 469,
+          "bytes": 33796,
+          "sha256": "3f0920885e133872c6417bbf0965d3c947dbc7cb46361a0b5decea6ddab095d7"
+        },
+        {
+          "path": "assets/optimized/screenshotkit-feature-graphic-1f46c772-1024.webp",
+          "width": 1024,
+          "height": 500,
+          "bytes": 35746,
+          "sha256": "d94cdd22506eb9f8f8d487d5762643fdc2c0e223fc4323a1a7899130c521d373"
+        }
+      ]
+    }
+  }
+}

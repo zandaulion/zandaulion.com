@@ -63,7 +63,7 @@ Bitey は、確立された `plate.html` ページを保持します。 BP Digit
 
 ## ローカルプレビュー
 
-これらのコマンドをリポジトリのルートから実行します。 Python はジェネレーターとチェックに必要です。 Python スクリプトは標準ライブラリのみを使用します。言語テストには、テスト ランナーが組み込まれた Node.js が必要です。 npm のインストールまたはフロントエンド バンドラーの手順はありません。
+これらのコマンドはリポジトリのルートで実行してください。ページの生成とチェックでは Python 標準ライブラリのみを使用します。言語テストには、組み込みテストランナーを備えた Node.js が必要です。npm install やフロントエンドのバンドル処理は不要です。
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ python -m http.server 8765 --bind 127.0.0.1
 
 | 何を変えるのか | 編集するソース |
 | --- | --- |
+| レスポンシブ画像のソースと各サイズの画像 | [画像の作成ガイド](scripts/IMAGES.md) |
 | ホームページのレイアウト | `templates/home.html` |
 | 各言語のホームページのテキスト | `locales/<locale>.json` |
 | 英語プロジェクトの内容とレイアウト | ルート プロジェクト HTML ファイル (`kerfloom.html` など) |
@@ -153,6 +154,8 @@ python scripts/translate_projects.py --fetch --language ro
 ```sh
 python scripts/build_locales.py --check
 python scripts/build_readmes.py --check
+python scripts/build_images.py --check
+python -m unittest discover -s scripts -p 'test_*.py'
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

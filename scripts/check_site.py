@@ -50,6 +50,8 @@ class Links(HTMLParser):
         for attr in ("href", "src"):
             if attr in attrs:
                 self.targets.append(attrs[attr])
+        if attrs.get('srcset'):
+            self.targets.extend(candidate.strip().split()[0] for candidate in attrs['srcset'].split(','))
 
 
 def check(base_url=None):

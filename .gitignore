@@ -2,3 +2,4 @@ __pycache__/
 *.py[cod]
 .translation-cache/
 .codex-remote-attachments/
+.venv-images/

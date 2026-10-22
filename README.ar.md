@@ -65,7 +65,7 @@
 
 ## المعاينة محليًا
 
-قم بتشغيل هذه الأوامر من جذر المستودع. هناك حاجة إلى Python للمولد والفحوصات؛ تستخدم البرامج النصية Python المكتبة القياسية فقط. هناك حاجة إلى Node.js المزود بمشغل الاختبار المدمج لإجراء اختبارات اللغة. لا توجد خطوة تثبيت npm أو أداة تجميع الواجهة الأمامية.
+شغّل هذه الأوامر من جذر المستودع. يستخدم توليد الصفحات والتحقق منها مكتبة Python القياسية فقط. تتطلب اختبارات اللغة Node.js مع مشغّل الاختبارات المدمج. لا توجد خطوة npm install أو تحزيم للواجهة الأمامية.
 
 <div dir="ltr">
 
@@ -114,6 +114,7 @@ python -m http.server 8765 --bind 127.0.0.1
 
 | ما يجب تغييره | المصدر للتحرير |
 | --- | --- |
+| مصادر الصور المتجاوبة ونسخها | [دليل إعداد الصور](scripts/IMAGES.md) |
 | تخطيط الصفحة الرئيسية | `templates/home.html` |
 | نص الصفحة الرئيسية بكل لغة | `locales/<locale>.json` |
 | محتوى المشروع وتخطيطه باللغة الإنجليزية | ملفات المشروع الجذر HTML، مثل `kerfloom.html` |
@@ -169,6 +170,8 @@ python scripts/translate_projects.py --fetch --language ro
 ```sh
 python scripts/build_locales.py --check
 python scripts/build_readmes.py --check
+python scripts/build_images.py --check
+python -m unittest discover -s scripts -p 'test_*.py'
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

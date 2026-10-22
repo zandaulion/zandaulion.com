@@ -4,12 +4,13 @@ const projectRoot = new URL('./', document.currentScript.src);
 const projectLocale = window.ZandaulionLocales.find(locale => locale.lang === document.documentElement.lang) || window.ZandaulionLocales[0];
 const projectHome = new URL(projectLocale.path ? `${projectLocale.path}/index.html` : 'index.html?lang=en-US', projectRoot).href;
 const projectCopy = projectLocale.ui;
+const projectLogo = size => new URL(`assets/brand/lion-light-v2-${size}.png`, projectRoot).href;
 const safeText = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('"', '&quot;');
 class WorkshopHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<a class="skip-link" href="#main">${safeText(projectLocale.skip)}</a>
       <header class="site-header wrap">
-        <a class="brand" href="${projectHome}" aria-label="${safeText(projectLocale.home)}"><img src="${new URL('assets/brand/lion-light-v2.png', projectRoot).href}" alt="" width="43" height="43">Zandaulion<span aria-hidden="true" style="color:var(--orange)">.</span></a>
+        <a class="brand" href="${projectHome}" aria-label="${safeText(projectLocale.home)}"><img src="${projectLogo(52)}" srcset="${projectLogo(52)} 52w, ${projectLogo(104)} 104w, ${projectLogo(156)} 156w" sizes="(max-width: 700px) 38px, 52px" alt="" width="43" height="43">Zandaulion<span aria-hidden="true" style="color:var(--orange)">.</span></a>
         <nav aria-label="${safeText(projectLocale.nav)}"><a href="${projectHome}#collection">${safeText(projectLocale.collection)}</a><a href="${projectHome}#about">${safeText(projectLocale.about)}</a><a class="nav-contact" href="mailto:zandaulion@gmail.com">${safeText(projectLocale.hello)} ↗</a></nav>
       </header>`;
   }

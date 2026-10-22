@@ -40,6 +40,11 @@ jobs:
       - name: Verify generated README translations
         run: python scripts/build_readmes.py --check
 
+      - name: Verify responsive images and localized image URLs
+        run: |
+          python scripts/build_images.py --check
+          python -m unittest discover -s scripts -p 'test_*.py'
+
       - name: Check links, metadata, and served privacy notices
         shell: bash
         run: |

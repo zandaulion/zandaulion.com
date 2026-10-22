@@ -1,0 +1,46 @@
+{
+  "widths": [
+    320,
+    640,
+    960,
+    1280
+  ],
+  "quality": 88,
+  "logo": "assets/brand/lion-light-v2.png",
+  "logo_widths": [
+    32,
+    52,
+    104,
+    156
+  ],
+  "images": [
+    "assets/PaleBlueDot/Screenshot_20260501_090925.png",
+    "assets/Kerfspan/cut_style_03_radial_cuts.png",
+    "assets/Kerfspan/cut_style_01_slats.png",
+    "assets/BankDWHStudio/08-mobile-transactions-phone.png",
+    "assets/Plate/bitey-hero.png",
+    "assets/Kerfspan/feature_graphic.jpg",
+    "assets/PaleBlueDot/feature-graphic.png",
+    "assets/Casierul/05-registru-desktop-1440x900.png",
+    "assets/Threadmark/card.jpg",
+    "assets/Faceslice/feature_graphic.jpg",
+    "assets/Gravity Garden/workshop-hero.jpg",
+    "assets/Magpie/feature_graphic.jpg",
+    "assets/Sankey/feature_graphic.jpg",
+    "assets/Miscare/feature_graphic.jpg",
+    "assets/GravityWarp/workshop-hero.png",
+    "assets/omaha/feature-graphic.png",
+    "assets/Spendosaurus/feature_graphic.jpg",
+    "assets/OrbitPuzzles/feature_graphic.jpg",
+    "assets/Intarzieri/feature_graphic.jpg",
+    "assets/Thermostat/feature_graphic.jpg",
+    "assets/GravityTDG/workshop-hero.png",
+    "assets/OLX/feature_graphic.jpg",
+    "assets/BP Digitizer/feature_graphic.jpg",
+    "assets/Admitere/feature_graphic.jpg",
+    "assets/BankDWHStudio/01-top5-wire-customers-desktop.png",
+    "assets/PWA-Kit/feature_graphic.jpg",
+    "assets/PWA-Invite-Console/card.jpg",
+    "assets/ScreenshotKit/feature-graphic.png"
+  ]
+}

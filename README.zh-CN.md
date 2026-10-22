@@ -63,7 +63,7 @@ Bitey 保留已建立的`plate.html` 页面。 BP Digitizer 两个平台都有�
 
 ## 本地预览
 
-从存储库根运行这些命令。发电机需要Python并进行检查； Python 脚本仅使用标准库。语言测试需要带有内置测试运行器的 Node.js。没有 npm 安装或前端捆绑器步骤。
+请在仓库根目录运行这些命令。页面生成和检查仅使用 Python 标准库。语言测试需要带有内置测试运行器的 Node.js。无需执行 npm install 或前端打包步骤。
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ python -m http.server 8765 --bind 127.0.0.1
 
 | 改变什么 | 要编辑的来源 |
 | --- | --- |
+| 响应式图片源文件与变体 | [图片制作指南](scripts/IMAGES.md) |
 | 主页布局 | `templates/home.html` |
 | 每种语言的主页文本 | `locales/<locale>.json` |
 | 英文项目内容及布局 | 根项目HTML文件，如`kerfloom.html` |
@@ -153,6 +154,8 @@ python scripts/translate_projects.py --fetch --language ro
 ```sh
 python scripts/build_locales.py --check
 python scripts/build_readmes.py --check
+python scripts/build_images.py --check
+python -m unittest discover -s scripts -p 'test_*.py'
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

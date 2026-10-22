@@ -89,6 +89,16 @@ class ProjectTranslator(HTMLParser):
                 if not url.scheme and not url.netloc and url.path:
                     if url.path != 'index.html' and url.path not in PROJECTS[self.lang]:
                         value = '../' + value
+            elif key == 'srcset' and value:
+                # Generated candidate URLs contain no spaces or commas.
+                candidates = []
+                for candidate in value.split(','):
+                    parts = candidate.strip().split()
+                    url = urlsplit(parts[0])
+                    if not url.scheme and not url.netloc and not url.path.startswith('/'):
+                        parts[0] = '../' + parts[0]
+                    candidates.append(' '.join(parts))
+                value = ', '.join(candidates)
             result.append(key if value is None else f'{key}="{escape(value, quote=True)}"')
         self.output.append('<' + tag + (' ' + ' '.join(result) if result else '') + '>')
         if tag not in VOID:

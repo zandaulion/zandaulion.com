@@ -79,10 +79,7 @@ platforms; `wbpdigitizer.html` remains a compatibility redirect to
 
 ## Preview locally
 
-Run these commands from the repository root. Python is needed for the generator
-and checks; the Python scripts use only the standard library. Node.js with the
-built-in test runner is needed for the language tests. There is no npm install
-or frontend bundler step.
+Run these commands from the repository root. Page generation and checks use only the Python standard library. Node.js with the built-in test runner is needed for the language tests. There is no npm install or frontend bundler step.
 
 ```sh
 python scripts/build_locales.py
@@ -143,6 +140,7 @@ because browsers may isolate storage for each file.
 
 | What to change | Source to edit |
 | --- | --- |
+| Responsive image sources and variants | [Image authoring guide](scripts/IMAGES.md) |
 | Homepage layout | `templates/home.html` |
 | Homepage text in each language | `locales/<locale>.json` |
 | English project content and layout | Root project HTML files, such as `kerfloom.html` |
@@ -210,6 +208,8 @@ With the local preview server running, run these commands in another terminal:
 ```sh
 python scripts/build_locales.py --check
 python scripts/build_readmes.py --check
+python scripts/build_images.py --check
+python -m unittest discover -s scripts -p 'test_*.py'
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

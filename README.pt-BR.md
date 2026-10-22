@@ -63,7 +63,7 @@ Bitey mantém a página `plate.html` estabelecida. BP Digitizer possui uma pági
 
 ## Prévia local
 
-Execute esses comandos na raiz do repositório. Python é necessário para o gerador e verificações; os scripts Python usam apenas a biblioteca padrão. Node.js com o executor de testes integrado é necessário para os testes de linguagem. Não há instalação do npm ou etapa do empacotador de front-end.
+Execute estes comandos na raiz do repositório. A geração de páginas e as verificações usam apenas a biblioteca padrão do Python. Os testes de idioma precisam do Node.js com seu executor de testes integrado. Não há etapa de npm install nem de empacotamento do frontend.
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ Os links de idiomas da página inicial estão presentes no HTML e funcionam sem 
 
 | O que mudar | Fonte para editar |
 | --- | --- |
+| Fontes e variantes de imagens responsivas | [Guia de preparação de imagens](scripts/IMAGES.md) |
 | Layout da página inicial | `templates/home.html` |
 | Texto da página inicial em cada idioma | `locales/<locale>.json` |
 | Conteúdo e layout do projeto em inglês | Arquivos HTML do projeto raiz, como `kerfloom.html` |
@@ -153,6 +154,8 @@ Com o servidor de visualização local em execução, execute estes comandos em 
 ```sh
 python scripts/build_locales.py --check
 python scripts/build_readmes.py --check
+python scripts/build_images.py --check
+python -m unittest discover -s scripts -p 'test_*.py'
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```
