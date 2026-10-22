@@ -146,10 +146,13 @@ python scripts/translate_projects.py --fetch --language ro
 
 ## प्रकाशन से पहले जाँच
 
+[Site checks](.github/workflows/site-checks.yml) वर्कफ़्लो हर push और pull request पर चलता है और इसे मैन्युअल रूप से भी शुरू किया जा सकता है। यह जनरेट किए गए पेज, README अनुवाद, लिंक और सर्वर से मिलने वाले गोपनीयता नोटिस जाँचता है और भाषा संबंधी टेस्ट चलाता है। GitHub Pages का डिप्लॉयमेंट अलग वर्कफ़्लो बना रहता है।
+
 स्थानीय पूर्वावलोकन सर्वर चलने के साथ, इन आदेशों को दूसरे टर्मिनल में चलाएँ:
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

@@ -146,10 +146,13 @@ python scripts/translate_projects.py --fetch --language ro
 
 ## Перевірки перед публікацією
 
+Робочий процес [Site checks](.github/workflows/site-checks.yml) запускається для кожного push і pull request; його також можна запустити вручну. Він перевіряє згенеровані сторінки, переклади README, посилання й повідомлення про конфіденційність, які віддає сервер, а також виконує мовні тести. Публікація через GitHub Pages залишається окремим процесом.
+
 Запустивши локальний сервер попереднього перегляду, виконайте ці команди в іншому терміналі:
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

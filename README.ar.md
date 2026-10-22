@@ -160,12 +160,15 @@ python scripts/translate_projects.py --fetch --language ro
 
 ## الفحوصات قبل النشر
 
+يعمل سير العمل [Site checks](.github/workflows/site-checks.yml) عند كل push وpull request، ويمكن تشغيله يدويًا أيضًا. يتحقق من الصفحات المولّدة وترجمات README والروابط وإشعارات الخصوصية المقدّمة، ثم يشغّل اختبارات اللغات. يظل نشر GitHub Pages سير عمل منفصلًا.
+
 أثناء تشغيل خادم المعاينة المحلي، قم بتشغيل هذه الأوامر في محطة طرفية أخرى:
 
 <div dir="ltr">
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

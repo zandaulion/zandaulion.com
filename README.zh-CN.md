@@ -146,10 +146,13 @@ python scripts/translate_projects.py --fetch --language ro
 
 ## 发布前检查
 
+[Site checks](.github/workflows/site-checks.yml) 工作流在每次推送和拉取请求时运行，也可以手动启动。它验证生成的页面和 README 翻译，检查链接与实际提供的隐私声明，并运行语言测试。GitHub Pages 部署仍由独立的工作流处理。
+
 在本地预览服务器运行的情况下，在另一个终端中运行以下命令：
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

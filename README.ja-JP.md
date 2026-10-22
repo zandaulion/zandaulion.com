@@ -146,10 +146,13 @@ python scripts/translate_projects.py --fetch --language ro
 
 ## 公開前の確認
 
+[Site checks](.github/workflows/site-checks.yml) ワークフローは push と pull request のたびに実行され、手動でも開始できます。生成されたページと README の翻訳、リンク、配信されるプライバシー通知を検証し、言語テストを実行します。GitHub Pages へのデプロイは別のワークフローです。
+
 ローカル プレビュー サーバーが実行されている状態で、別のターミナルで次のコマンドを実行します。
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

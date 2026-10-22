@@ -146,10 +146,13 @@ Einige gemeinsame Ausdrücke kommen auch in projektbezogenen Katalogen vor. Füg
 
 ## Prüfungen vor der Veröffentlichung
 
+Der Workflow [Site checks](.github/workflows/site-checks.yml) läuft bei jedem Push und Pull Request und lässt sich auch manuell starten. Er prüft generierte Seiten und README-Übersetzungen, Links und ausgelieferte Datenschutzhinweise und führt die Sprachtests aus. Die Bereitstellung über GitHub Pages bleibt ein separater Workflow.
+
 Führen Sie bei laufendem lokalen Vorschauserver diese Befehle in einem anderen Terminal aus:
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

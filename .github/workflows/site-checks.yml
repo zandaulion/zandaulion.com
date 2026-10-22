@@ -1,0 +1,60 @@
+name: Site checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Validate site
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Verify generated pages and translations
+        run: python scripts/build_locales.py --check
+
+      - name: Verify generated README translations
+        run: python scripts/build_readmes.py --check
+
+      - name: Check links, metadata, and served privacy notices
+        shell: bash
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/site-preview.log" 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..50}; do
+            if curl --fail --silent --output /dev/null http://127.0.0.1:8765/index.html; then
+              python scripts/check_site.py --url http://127.0.0.1:8765
+              exit 0
+            fi
+            sleep 0.1
+          done
+          cat "$RUNNER_TEMP/site-preview.log"
+          exit 1
+
+      - name: Test language navigation
+        run: node --test scripts/test_language.cjs

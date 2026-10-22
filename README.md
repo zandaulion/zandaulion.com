@@ -200,10 +200,16 @@ website never call a translation service.
 
 ## Checks before publishing
 
+The [Site checks](.github/workflows/site-checks.yml) workflow runs on every push
+and pull request, and can also be started manually. It verifies generated pages
+and README translations, checks links and served privacy notices, and runs the
+language tests. GitHub Pages deployment remains a separate workflow.
+
 With the local preview server running, run these commands in another terminal:
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

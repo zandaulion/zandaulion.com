@@ -146,10 +146,13 @@ Unele expresii partajate apar și în cataloagele pentru fiecare proiect. Introd
 
 ## Verificări înainte de publicare
 
+Workflow-ul [Site checks](.github/workflows/site-checks.yml) rulează la fiecare push și pull request și poate fi pornit și manual. Verifică paginile generate, traducerile README, linkurile și notificările de confidențialitate servite, apoi rulează testele pentru limbi. Publicarea prin GitHub Pages rămâne un workflow separat.
+
 Cu serverul de previzualizare local care rulează, rulați aceste comenzi într-un alt terminal:
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

@@ -146,10 +146,13 @@ python scripts/translate_projects.py --fetch --language ro
 
 ## 게시 전 확인
 
+[Site checks](.github/workflows/site-checks.yml) 워크플로는 모든 push와 pull request에서 실행되며 수동으로 시작할 수도 있습니다. 생성된 페이지와 README 번역, 링크, 실제로 제공되는 개인정보 보호 고지를 확인하고 언어 테스트를 실행합니다. GitHub Pages 배포는 별도의 워크플로로 유지됩니다.
+
 로컬 미리보기 서버가 실행 중인 상태에서 다른 터미널에서 다음 명령을 실행합니다.
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```

@@ -146,10 +146,13 @@ Certaines expressions partagées apparaissent également dans les catalogues par
 
 ## Vérifications avant publication
 
+Le workflow [Site checks](.github/workflows/site-checks.yml) s’exécute à chaque push et pull request et peut aussi être lancé manuellement. Il vérifie les pages générées et les traductions du README, les liens et les avis de confidentialité servis, puis exécute les tests de langue. Le déploiement GitHub Pages reste un workflow distinct.
+
 Avec le serveur de prévisualisation local en cours d'exécution, exécutez ces commandes dans un autre terminal :
 
 ```sh
 python scripts/build_locales.py --check
+python scripts/build_readmes.py --check
 python scripts/check_site.py --url http://127.0.0.1:8765
 node --test scripts/test_language.cjs
 ```
