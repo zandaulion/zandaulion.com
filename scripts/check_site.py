@@ -11,7 +11,7 @@ from urllib.parse import quote, unquote, urlsplit
 from urllib.request import urlopen
 from build_locales import LANGUAGES
 from project_locales import PROJECTS, PATHS, FILES
-from site_contracts import ORIGIN, PRIVACY_PATHS, PRIVACY_CANONICAL
+from site_contracts import ORIGIN, PRIVACY_PATHS, PRIVACY_CANONICAL, verify_privacy_assets
 from discovery import PageMetadata, SITEMAP_NS, XHTML_NS, social_images
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -50,6 +50,7 @@ class Links(HTMLParser):
 
 
 def check(base_url=None):
+    verify_privacy_assets(ROOT)
     errors = []
     images, dimensions = social_images(ROOT, FILES)
     sitemap_pages = {}

@@ -125,5 +125,8 @@
   "[Image authoring guide](scripts/IMAGES.md)": "[画像の作成ガイド](scripts/IMAGES.md)",
   "The site check covers all 324 HTML pages: 12 homepages, 300 project pages, ten privacy notices, one compatibility redirect, and the 404 page. It checks local links, assets, duplicate IDs outside the preserved privacy markup, project language metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also checks HTTP responses and compares served privacy notices with their source files.": "サイトチェックは、12 のホームページ、300 のプロジェクトページ、10 のプライバシー通知、1 つの互換性リダイレクト、404 ページを含む、全 324 HTML ページを対象とします。 ローカル リンク、アセット、保存されたプライバシー マークアップ外の重複 ID、プロジェクト言語メタデータ、SEO 相互リンク、およびアラビア語の方向をチェックします。 `--url` では、HTTP の応答もチェックし、提供されたプライバシー通知とそのソース ファイルを比較します。",
   "Search, sharing, and error pages": "検索、共有、エラーページ",
-  "[Discovery and sharing guide](scripts/DISCOVERY.md)": "[検索と共有のガイド](scripts/DISCOVERY.md)"
+  "[Discovery and sharing guide](scripts/DISCOVERY.md)": "[検索と共有のガイド](scripts/DISCOVERY.md)",
+  "Run these commands from the repository root. Page generation and checks use only the Python standard library. Node.js with the built-in test runner is needed for the language tests. Browser tests use the development dependencies documented in the accessibility guide. No frontend bundler is needed.": "これらのコマンドはリポジトリのルートで実行してください。ページの生成とチェックでは Python 標準ライブラリのみを使用します。言語テストには、組み込みテストランナーを備えた Node.js が必要です。ブラウザテストでは、アクセシビリティガイドに記載された開発用依存パッケージを使用します。フロントエンドのバンドルツールは不要です。",
+  "Accessibility and browser checks": "アクセシビリティとブラウザテスト",
+  "[Accessibility guide](scripts/ACCESSIBILITY.md)": "[アクセシビリティガイド](scripts/ACCESSIBILITY.md)"
 }

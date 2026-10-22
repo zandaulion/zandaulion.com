@@ -63,7 +63,7 @@ Bitey behält die etablierte Seite `plate.html` bei. BP Digitizer hat eine Seite
 
 ## Lokale Vorschau
 
-Führe diese Befehle im Stammverzeichnis des Repositorys aus. Seitengenerierung und Prüfungen verwenden nur die Python-Standardbibliothek. Für die Sprachtests wird Node.js mit dem integrierten Test-Runner benötigt. Ein npm install oder ein Frontend-Bundler ist nicht erforderlich.
+Führe diese Befehle im Stammverzeichnis des Repositorys aus. Seitengenerierung und Prüfungen verwenden nur die Python-Standardbibliothek. Für die Sprachtests wird Node.js mit dem integrierten Test-Runner benötigt. Browsertests verwenden die in der Anleitung zur Barrierefreiheit beschriebenen Entwicklungsabhängigkeiten. Ein Frontend-Bundler ist nicht erforderlich.
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ Homepage-Sprachlinks sind im HTML vorhanden und funktionieren auch ohne JavaScri
 
 | Was zu ändern ist | Quelle zum Bearbeiten |
 | --- | --- |
+| Barrierefreiheit und Browsertests | [Anleitung zur Barrierefreiheit](scripts/ACCESSIBILITY.md) |
 | Suche, Teilen und Fehlerseiten | [Anleitung zu Auffindbarkeit und Teilen](scripts/DISCOVERY.md) |
 | Quelldateien und Varianten responsiver Bilder | [Anleitung zur Bildaufbereitung](scripts/IMAGES.md) |
 | Homepage-Layout | `templates/home.html` |

@@ -125,5 +125,8 @@
   "[Image authoring guide](scripts/IMAGES.md)": "[دليل إعداد الصور](scripts/IMAGES.md)",
   "The site check covers all 324 HTML pages: 12 homepages, 300 project pages, ten privacy notices, one compatibility redirect, and the 404 page. It checks local links, assets, duplicate IDs outside the preserved privacy markup, project language metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also checks HTTP responses and compares served privacy notices with their source files.": "يغطي فحص الموقع جميع صفحات HTML البالغ عددها 324: 12 صفحة رئيسية، و300 صفحة مشروع، وعشرة إشعارات خصوصية، وصفحة إعادة توجيه للتوافق، وصفحة 404. فهو يتحقق من الروابط المحلية والأصول والمعرفات المكررة خارج علامة الخصوصية المحفوظة وبيانات تعريف لغة المشروع وروابط SEO المتبادلة والاتجاه العربي. باستخدام `--url`، فإنه يتحقق أيضًا من استجابات HTTP ويقارن إشعارات الخصوصية المقدمة مع ملفات المصدر الخاصة بها.",
   "Search, sharing, and error pages": "البحث والمشاركة وصفحات الأخطاء",
-  "[Discovery and sharing guide](scripts/DISCOVERY.md)": "[دليل الاكتشاف والمشاركة](scripts/DISCOVERY.md)"
+  "[Discovery and sharing guide](scripts/DISCOVERY.md)": "[دليل الاكتشاف والمشاركة](scripts/DISCOVERY.md)",
+  "Run these commands from the repository root. Page generation and checks use only the Python standard library. Node.js with the built-in test runner is needed for the language tests. Browser tests use the development dependencies documented in the accessibility guide. No frontend bundler is needed.": "شغّل هذه الأوامر من جذر المستودع. يستخدم توليد الصفحات والتحقق منها مكتبة Python القياسية فقط. تتطلب اختبارات اللغة Node.js مع مشغّل الاختبارات المدمج. تستخدم اختبارات المتصفح تبعيات التطوير الموثقة في دليل إمكانية الوصول. لا حاجة إلى أداة تحزيم للواجهة الأمامية.",
+  "Accessibility and browser checks": "إمكانية الوصول واختبارات المتصفح",
+  "[Accessibility guide](scripts/ACCESSIBILITY.md)": "[دليل إمكانية الوصول](scripts/ACCESSIBILITY.md)"
 }

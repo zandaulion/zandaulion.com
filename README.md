@@ -79,7 +79,7 @@ platforms; `wbpdigitizer.html` remains a compatibility redirect to
 
 ## Preview locally
 
-Run these commands from the repository root. Page generation and checks use only the Python standard library. Node.js with the built-in test runner is needed for the language tests. There is no npm install or frontend bundler step.
+Run these commands from the repository root. Page generation and checks use only the Python standard library. Node.js with the built-in test runner is needed for the language tests. Browser tests use the development dependencies documented in the accessibility guide. No frontend bundler is needed.
 
 ```sh
 python scripts/build_locales.py
@@ -140,6 +140,7 @@ because browsers may isolate storage for each file.
 
 | What to change | Source to edit |
 | --- | --- |
+| Accessibility and browser checks | [Accessibility guide](scripts/ACCESSIBILITY.md) |
 | Search, sharing, and error pages | [Discovery and sharing guide](scripts/DISCOVERY.md) |
 | Responsive image sources and variants | [Image authoring guide](scripts/IMAGES.md) |
 | Homepage layout | `templates/home.html` |

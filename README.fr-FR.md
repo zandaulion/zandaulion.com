@@ -63,7 +63,7 @@ Bitey conserve la page `plate.html` établie. BP Digitizer comporte une page pou
 
 ## Aperçu local
 
-Exécutez ces commandes à la racine du dépôt. La génération des pages et les vérifications utilisent uniquement la bibliothèque standard de Python. Les tests de langue nécessitent Node.js avec son exécuteur de tests intégré. Aucune étape npm install ni aucun bundler frontend ne sont nécessaires.
+Exécutez ces commandes à la racine du dépôt. La génération des pages et les vérifications utilisent uniquement la bibliothèque standard de Python. Les tests de langue nécessitent Node.js avec son exécuteur de tests intégré. Les tests de navigateur utilisent les dépendances de développement documentées dans le guide d’accessibilité. Aucun bundler frontend n’est nécessaire.
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ Les liens de langue de la page d'accueil sont présents dans le HTML et fonction
 
 | Que changer | Source à modifier |
 | --- | --- |
+| Accessibilité et tests de navigateur | [Guide d’accessibilité](scripts/ACCESSIBILITY.md) |
 | Recherche, partage et pages d’erreur | [Guide de découverte et de partage](scripts/DISCOVERY.md) |
 | Sources et variantes des images adaptatives | [Guide de préparation des images](scripts/IMAGES.md) |
 | Disposition de la page d'accueil | `templates/home.html` |

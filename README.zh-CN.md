@@ -63,7 +63,7 @@ Bitey 保留已建立的`plate.html` 页面。 BP Digitizer 两个平台都有�
 
 ## 本地预览
 
-请在仓库根目录运行这些命令。页面生成和检查仅使用 Python 标准库。语言测试需要带有内置测试运行器的 Node.js。无需执行 npm install 或前端打包步骤。
+请在仓库根目录运行这些命令。页面生成和检查仅使用 Python 标准库。语言测试需要带有内置测试运行器的 Node.js。浏览器测试使用无障碍指南中记录的开发依赖项。无需前端打包工具。
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ python -m http.server 8765 --bind 127.0.0.1
 
 | 改变什么 | 要编辑的来源 |
 | --- | --- |
+| 无障碍与浏览器检查 | [无障碍指南](scripts/ACCESSIBILITY.md) |
 | 搜索、分享和错误页面 | [发现与分享指南](scripts/DISCOVERY.md) |
 | 响应式图片源文件与变体 | [图片制作指南](scripts/IMAGES.md) |
 | 主页布局 | `templates/home.html` |

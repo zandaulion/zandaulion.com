@@ -1,6 +1,6 @@
 /* Homepage concept: a workshop for curious visitors. Intentionally scoped to
    its own stylesheet so project pages keep their existing presentation. */
-:root { color-scheme: light; --paper: #f7f5ee; --ink: #223f35; --muted: #68716a; --line: #d8dbce; --orange: #c4502d; --sage: #e6ecdd; }
+:root { color-scheme: light; --paper: #f7f5ee; --ink: #223f35; --muted: #5f6962; --line: #d8dbce; --orange: #c4502d; --sage: #e6ecdd; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 30px; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Outfit', system-ui, sans-serif; font-size: 16px; line-height: 1.6; }
@@ -9,7 +9,7 @@ a { color: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 img { display: block; max-width: 100%; }
-button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--orange); outline-offset: 5px; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--orange); outline-offset: 5px; }
 [hidden] { display: none !important; }
 .wrap { width: min(1180px, calc(100% - 80px)); margin-inline: auto; }
 .skip-link { position: absolute; top: -100px; left: 20px; padding: 12px 20px; background: var(--ink); color: white; z-index: 10; }
@@ -230,4 +230,19 @@ html[lang="zh-CN"] .intro h1, html[lang="ja-JP"] .intro h1, html[lang="ko-KR"] .
   .language-picker summary { max-width: 116px; }
   html[dir="rtl"] .planet-piece { right: 7px; }
   html[dir="rtl"] .art-piece { left: 3px; }
+}
+
+/* Keep small text readable on the cream background. */
+.bench-sticker { color: #b34525; }
+@media (max-width: 700px) {
+  /* The collage row follows its captions' height, including translated text. */
+  .workbench { height: auto; display: grid; grid-template-areas: 'collage' 'note'; }
+  html .workbench .bench-piece { position: relative; grid-area: collage; inset: auto; }
+  .workbench .planet-piece { justify-self: start; align-self: start; margin-block-start: 35px; margin-inline-start: 15px; }
+  .workbench .art-piece { justify-self: end; align-self: start; margin-block-start: 135px; margin-inline-end: 10px; }
+  html .workbench .bench-note { position: static; grid-area: note; inset: auto; transform: none; margin: 28px 12px 0; }
+}
+@media (max-width: 380px) {
+  .workbench .planet-piece { margin-inline-start: 7px; }
+  .workbench .art-piece { margin-inline-end: 3px; }
 }

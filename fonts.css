@@ -1,0 +1,6 @@
+/* Script fallbacks shared by home, project, and error pages. */
+html[lang="hi-IN"] body, [lang="hi-IN"] { font-family: 'Noto Sans Devanagari', 'Nirmala UI', system-ui, sans-serif; }
+html[lang="ja-JP"] body, [lang="ja-JP"] { font-family: 'Noto Sans JP', system-ui, sans-serif; }
+html[lang="ko-KR"] body, [lang="ko-KR"] { font-family: 'Noto Sans KR', system-ui, sans-serif; }
+html[lang="zh-CN"] body, [lang="zh-CN"] { font-family: 'Noto Sans SC', system-ui, sans-serif; }
+html:is([lang="hi-IN"], [lang="ja-JP"], [lang="ko-KR"], [lang="zh-CN"]) :is(h1 em, .interlude p, .about h2, .bench-sticker, .bench-note, .art-piece span) { font-family: inherit; }

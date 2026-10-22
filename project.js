@@ -6,6 +6,10 @@ const projectHome = new URL(projectLocale.path ? `${projectLocale.path}/index.ht
 const projectCopy = projectLocale.ui;
 const projectLogo = size => new URL(`assets/brand/lion-light-v2-${size}.png`, projectRoot).href;
 const safeText = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('"', '&quot;');
+const actionLabel = (text, description) => {
+  const visible = text.replace(/[←→×]/g, '').trim();
+  return description.toLowerCase().includes(visible.toLowerCase()) ? description : `${visible} — ${description}`;
+};
 class WorkshopHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<a class="skip-link" href="#main">${safeText(projectLocale.skip)}</a>
@@ -34,9 +38,9 @@ if (gallery.length) {
   const dialog = document.createElement('dialog');
   dialog.className = 'gallery-dialog';
   dialog.setAttribute('aria-label', projectCopy.viewer);
-  dialog.innerHTML = `<div class="gallery-toolbar"><p class="gallery-count" role="status" aria-live="polite"></p><button type="button" class="gallery-close" aria-label="${safeText(projectCopy.closeLabel)}">${safeText(projectCopy.close)}</button></div>
+  dialog.innerHTML = `<div class="gallery-toolbar"><p class="gallery-count" role="status" aria-live="polite"></p><button type="button" class="gallery-close" aria-label="${safeText(actionLabel(projectCopy.close, projectCopy.closeLabel))}">${safeText(projectCopy.close)}</button></div>
     <figure><img alt=""><figcaption></figcaption></figure>
-    <div class="gallery-navigation"><button type="button" class="gallery-previous" aria-label="${safeText(projectCopy.previousLabel)}">${safeText(projectCopy.previous)}</button><button type="button" class="gallery-next" aria-label="${safeText(projectCopy.nextLabel)}">${safeText(projectCopy.next)}</button></div>`;
+    <div class="gallery-navigation"><button type="button" class="gallery-previous" aria-label="${safeText(actionLabel(projectCopy.previous, projectCopy.previousLabel))}">${safeText(projectCopy.previous)}</button><button type="button" class="gallery-next" aria-label="${safeText(actionLabel(projectCopy.next, projectCopy.nextLabel))}">${safeText(projectCopy.next)}</button></div>`;
   document.body.append(dialog);
   const fullImage = dialog.querySelector('img');
   const caption = dialog.querySelector('figcaption');

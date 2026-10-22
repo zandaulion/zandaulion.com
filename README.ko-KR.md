@@ -63,7 +63,7 @@ Bitey는 설정된 `plate.html` 페이지를 유지합니다. BP Digitizer에는
 
 ## 로컬 미리보기
 
-저장소 루트에서 다음 명령을 실행하세요. 페이지 생성과 검사는 Python 표준 라이브러리만 사용합니다. 언어 테스트에는 내장 테스트 실행기가 있는 Node.js가 필요합니다. npm install이나 프런트엔드 번들러 단계는 없습니다.
+저장소 루트에서 다음 명령을 실행하세요. 페이지 생성과 검사는 Python 표준 라이브러리만 사용합니다. 언어 테스트에는 내장 테스트 실행기가 있는 Node.js가 필요합니다. 브라우저 테스트는 접근성 안내에 명시된 개발 의존성을 사용합니다. 프런트엔드 번들러는 필요하지 않습니다.
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ python -m http.server 8765 --bind 127.0.0.1
 
 | 무엇을 바꿔야 할까요? | 편집할 소스 |
 | --- | --- |
+| 접근성 및 브라우저 검사 | [접근성 안내](scripts/ACCESSIBILITY.md) |
 | 검색, 공유, 오류 페이지 | [검색 노출 및 공유 안내](scripts/DISCOVERY.md) |
 | 반응형 이미지 원본과 크기별 이미지 | [이미지 제작 안내](scripts/IMAGES.md) |
 | 홈페이지 레이아웃 | `templates/home.html` |

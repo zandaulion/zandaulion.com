@@ -63,3 +63,12 @@ jobs:
 
       - name: Test language navigation
         run: node --test scripts/test_language.cjs
+
+      - name: Install pinned browser regression tools
+        run: npm ci --ignore-scripts
+
+      - name: Install Chromium and its system dependencies
+        run: npx --no-install playwright install --with-deps chromium
+
+      - name: Test accessibility, zoom layouts, and keyboard workflows
+        run: npm run test:accessibility

@@ -6,12 +6,15 @@
     <meta name="description" content="Make a picture of where things flow. Build and export diagrams in your browser.">
     <title>Sankey Diagram Editor | Zandaulion</title>
     <link rel="stylesheet" href="index.css?v=2.0">
-    <link rel="stylesheet" href="workshop.css?v=3">
-    <link rel="stylesheet" href="project.css?v=5">
+    <link rel="stylesheet" href="workshop.css?v=6">
+    <link rel="stylesheet" href="project.css?v=9">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <!-- Apache ECharts -->
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <link rel="icon" type="image/png" href="assets/brand/lion-light-v2-32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&amp;family=Noto+Sans+JP&amp;family=Noto+Sans+KR&amp;family=Noto+Sans+SC&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts.css?v=1">
 
     <!-- project-locales:start -->
     <link rel="canonical" href="https://zandaulion.com/sankey.html">
@@ -77,9 +80,13 @@
                     <h3 style="margin-bottom: 16px; font-weight: 700;">Diagram Data</h3>
                     <h3>Nodes</h3>
                     <div class="input-group" style="flex-direction: column;">
+                        <label for="node-name">Node Name</label>
                         <input type="text" id="node-name" placeholder="Node Name">
-                        <div style="display: flex; gap: 8px; align-items: center;">
-                            <input type="color" id="node-color" value="#00d2ff" title="Node Color" disabled>
+                        <div class="node-settings">
+                            <div class="node-color-control">
+                                <label for="node-color">Node Color</label>
+                                <input type="color" id="node-color" value="#00d2ff" title="Node Color" disabled>
+                            </div>
                             <label style="display:flex; align-items:center; gap: 4px; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; flex: 1;">
                                 <input type="checkbox" id="auto-color" checked> Auto
                             </label>
@@ -95,12 +102,15 @@
                 <div class="editor-section">
                     <h3>Links</h3>
                     <div class="input-group stacked-inputs">
+                        <label for="link-source">Source Node</label>
                         <select id="link-source">
                             <option value="" disabled selected>Source Node</option>
                         </select>
+                        <label for="link-target">Target Node</label>
                         <select id="link-target">
                             <option value="" disabled selected>Target Node</option>
                         </select>
+                        <label for="link-value">Value (e.g. 10)</label>
                         <input type="number" id="link-value" placeholder="Value (e.g. 10)" min="1">
                         <button id="add-link-btn" class="btn btn-primary">Add Link</button>
                     </div>
@@ -162,9 +172,9 @@
 
     <portfolio-footer></portfolio-footer>
     <script src="language-data.js?v=5" defer></script>
-    <script src="project.js?v=6" defer></script>
-    <script src="language.js?v=6" defer></script>
-    <script src="sankey.js?v=3"></script>
+    <script src="project.js?v=7" defer></script>
+    <script src="language.js?v=7" defer></script>
+    <script src="sankey.js?v=4"></script>
 
 </body>
 </html>

@@ -6,12 +6,15 @@
     <meta name="description" content="दिखाएँ कि चीज़ें कैसे बहती हैं। ब्राउज़र में आरेख बनाएँ और निर्यात करें।">
     <title>Sankey आरेख संपादक | Zandaulion</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
-    <link rel="stylesheet" href="../workshop.css?v=3">
-    <link rel="stylesheet" href="../project.css?v=5">
+    <link rel="stylesheet" href="../workshop.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=9">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
     <!-- Apache ECharts -->
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2-32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&amp;family=Noto+Sans+JP&amp;family=Noto+Sans+KR&amp;family=Noto+Sans+SC&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts.css?v=1">
 
     <!-- project-locales:start -->
     <link rel="canonical" href="https://zandaulion.com/hi/sankey.html">
@@ -77,9 +80,13 @@
                     <h3 style="margin-bottom: 16px; font-weight: 700;">आरेख डेटा</h3>
                     <h3>नोड्स</h3>
                     <div class="input-group" style="flex-direction: column;">
+                        <label for="node-name">नोड नाम</label>
                         <input type="text" id="node-name" placeholder="नोड नाम">
-                        <div style="display: flex; gap: 8px; align-items: center;">
-                            <input type="color" id="node-color" value="#00d2ff" title="नोड रंग" disabled>
+                        <div class="node-settings">
+                            <div class="node-color-control">
+                                <label for="node-color">नोड रंग</label>
+                                <input type="color" id="node-color" value="#00d2ff" title="नोड रंग" disabled>
+                            </div>
                             <label style="display:flex; align-items:center; gap: 4px; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; flex: 1;">
                                 <input type="checkbox" id="auto-color" checked> ऑटो
                             </label>
@@ -95,12 +102,15 @@
                 <div class="editor-section">
                     <h3>कड़ियाँ</h3>
                     <div class="input-group stacked-inputs">
+                        <label for="link-source">स्रोत नोड</label>
                         <select id="link-source">
                             <option value="" disabled selected>स्रोत नोड</option>
                         </select>
+                        <label for="link-target">लक्ष्य नोड</label>
                         <select id="link-target">
                             <option value="" disabled selected>लक्ष्य नोड</option>
                         </select>
+                        <label for="link-value">मान (उदा. 10)</label>
                         <input type="number" id="link-value" placeholder="मान (उदा. 10)" min="1">
                         <button id="add-link-btn" class="btn btn-primary">लिंक जोड़ें</button>
                     </div>
@@ -162,9 +172,9 @@
 
     <portfolio-footer></portfolio-footer>
     <script src="../language-data.js?v=5" defer></script>
-    <script src="../project.js?v=6" defer></script>
-    <script src="../language.js?v=6" defer></script>
-    <script src="../sankey.js?v=3"></script>
+    <script src="../project.js?v=7" defer></script>
+    <script src="../language.js?v=7" defer></script>
+    <script src="../sankey.js?v=4"></script>
 
 </body>
 </html>

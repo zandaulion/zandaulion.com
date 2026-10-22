@@ -146,6 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderUI() {
+        // Rebuilding a list must not send keyboard users back to the document body.
+        const focused = document.activeElement;
+        const focusedList = focused?.matches('button') ? focused.closest('#nodes-list, #links-list') : null;
+        const focusedIndex = Number(focused?.dataset.index);
+        const focusedAction = focused?.classList.contains('delete-btn') ? 'delete-btn' :
+            (focusedList === nodesList ? 'edit-node-btn' : 'edit-link-btn');
         // Render Nodes List
         nodesList.innerHTML = '';
         linkSourceSelect.innerHTML = `<option value="" disabled selected>${html(t('Source Node'))}</option>`;
@@ -165,8 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${html(node.name)}
                 </div>
                 <div>
-                    <button class="edit-node-btn" data-index="${index}" style="background:none; border:none; color:var(--text-muted); cursor:pointer; margin-right:8px; font-size:1.1rem;" title="${html(t('Edit Node'))}">&#9998;</button>
-                    <button class="delete-btn" data-index="${index}" title="${html(t('Remove Node'))}">&times;</button>
+                    <button class="edit-node-btn" data-index="${index}" style="background:none; border:none; color:var(--text-muted); cursor:pointer; margin-right:8px; font-size:1.1rem;" title="${html(t('Edit Node'))}" aria-label="${html(t('Edit Node') + ': ' + node.name)}">&#9998;</button>
+                    <button class="delete-btn" data-index="${index}" title="${html(t('Remove Node'))}" aria-label="${html(t('Remove Node') + ': ' + node.name)}">&times;</button>
                 </div>
             `;
             nodesList.appendChild(li);
@@ -192,12 +198,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     <strong>${html(link.source)}</strong> &rarr; <strong>${html(link.target)}</strong> (${link.value})
                 </div>
                 <div>
-                    <button class="edit-link-btn" data-index="${index}" style="background:none; border:none; color:var(--text-muted); cursor:pointer; margin-right:8px; font-size:1.1rem;" title="${html(t('Edit Link'))}">&#9998;</button>
-                    <button class="delete-btn" data-index="${index}" title="${html(t('Remove Link'))}">&times;</button>
+                    <button class="edit-link-btn" data-index="${index}" style="background:none; border:none; color:var(--text-muted); cursor:pointer; margin-right:8px; font-size:1.1rem;" title="${html(t('Edit Link'))}" aria-label="${html(t('Edit Link') + ': ' + link.source + ' → ' + link.target)}">&#9998;</button>
+                    <button class="delete-btn" data-index="${index}" title="${html(t('Remove Link'))}" aria-label="${html(t('Remove Link') + ': ' + link.source + ' → ' + link.target)}">&times;</button>
                 </div>
             `;
             linksList.appendChild(li);
         });
+        if (focusedList) {
+            const buttons = focusedList.querySelectorAll('.' + focusedAction);
+            const fallback = focusedList === nodesList ? nodeNameInput : linkSourceSelect;
+            (buttons[Math.min(focusedIndex, buttons.length - 1)] || fallback).focus();
+        }
     }
 
     // Add / Update Node Event

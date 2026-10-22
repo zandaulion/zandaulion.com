@@ -63,7 +63,7 @@ Bitey păstrează pagina `plate.html` stabilită. BP Digitizer are o pagină pen
 
 ## Previzualizare locală
 
-Rulează aceste comenzi din rădăcina repository-ului. Generarea paginilor și verificările folosesc doar biblioteca standard Python. Testele pentru limbi necesită Node.js cu instrumentul de testare inclus. Nu este nevoie de npm install sau de un bundler pentru interfață.
+Rulează aceste comenzi din rădăcina repository-ului. Generarea paginilor și verificările folosesc doar biblioteca standard Python. Testele pentru limbi necesită Node.js cu instrumentul de testare inclus. Testele în browser folosesc dependențele de dezvoltare descrise în ghidul de accesibilitate. Nu este nevoie de un bundler pentru interfață.
 
 ```sh
 python scripts/build_locales.py
@@ -108,6 +108,7 @@ Link-urile pentru limbile paginii de pornire sunt prezente în HTML și funcțio
 
 | Ce să schimbi | Sursa de editat |
 | --- | --- |
+| Accesibilitate și verificări în browser | [Ghid de accesibilitate](scripts/ACCESSIBILITY.md) |
 | Căutare, distribuire și pagini de eroare | [Ghid pentru descoperire și distribuire](scripts/DISCOVERY.md) |
 | Surse și variante pentru imagini responsive | [Ghid pentru pregătirea imaginilor](scripts/IMAGES.md) |
 | Aspectul paginii de pornire | `templates/home.html` |
