@@ -86,6 +86,27 @@ async function gallery(page, label) {
   assert(await trigger.evaluate(element => element === document.activeElement));
 }
 async function sankey(page) {
+  const graph = await page.evaluate(() => {
+    const chart = echarts.getInstanceByDom(document.querySelector('#echarts-container'));
+    const series = chart.getOption().series[0];
+    return {version: echarts.version, type: series.type, nodes: series.data.map(node => node.name), links: series.links};
+  });
+  assert.equal(graph.version, '6.1.0');
+  assert.equal(graph.type, 'sankey');
+  assert.deepEqual(graph.nodes, ['Input A', 'Output B']);
+  assert.equal(graph.links[0].value, 10);
+  async function downloadFrom(selector) {
+    const [download] = await Promise.all([page.waitForEvent('download'), page.locator(selector).click()]);
+    const stream = await download.createReadStream(), chunks = [];
+    for await (const chunk of stream) chunks.push(chunk);
+    return Buffer.concat(chunks);
+  }
+  const png = await downloadFrom('#btn-export');
+  assert(png.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])), 'Sankey PNG export');
+  assert(png.readUInt32BE(16) > 0 && png.readUInt32BE(20) > 0, 'Sankey PNG dimensions');
+  const exported = JSON.parse((await downloadFrom('#btn-export-json')).toString('utf8'));
+  assert.deepEqual(exported.nodes.map(node => node.name), graph.nodes);
+  assert.equal(exported.links[0].value, 10);
   for (const id of ['node-name', 'node-color', 'link-source', 'link-target', 'link-value', 'height-slider', 'width-slider']) {
     assert(await page.locator('#' + id).evaluate(input => [...input.labels].some(label => label.textContent.trim() && label.getBoundingClientRect().height > 0)), id + ' needs a visible label');
   }
@@ -111,7 +132,7 @@ async function check(spec, width, height, interactive = false) {
   await context.route('**/*', route => {
     const url = new URL(route.request().url());
     if (url.origin === origin) return route.continue();
-    if (url.href === 'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js') return route.fulfill({path: path.join(root, 'node_modules/echarts/dist/echarts.min.js'), contentType: 'text/javascript'});
+    if (url.href === 'https://cdn.jsdelivr.net/npm/echarts@6.1.0/dist/echarts.min.js') return route.fulfill({path: path.join(root, 'node_modules/echarts/dist/echarts.min.js'), contentType: 'text/javascript'});
     if (liveFonts && ['fonts.googleapis.com', 'fonts.gstatic.com'].includes(url.hostname)) return route.continue();
     return route.abort();
   });

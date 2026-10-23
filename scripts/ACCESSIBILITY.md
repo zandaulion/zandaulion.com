@@ -33,6 +33,8 @@ and pull requests. Nothing is bundled into production by npm.
   load and keep a usable target size.
 - Visible labels on Sankey controls, visible select focus, contextual edit/delete
   names, and sensible focus after removing a row or the final row.
+- Sankey rendering with the pinned ECharts version, plus PNG and JSON downloads
+  from the same synthetic diagram before editing its rows.
 
 Each test uses a fresh context with only invented `Input A` / `Output B` chart data.
 It never opens an existing browser profile or copies personal browser/app state.
