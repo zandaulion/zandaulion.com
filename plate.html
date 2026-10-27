@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
 <head>
-    <!-- Content checked against bitey commit 10168b7 (1.1.2, 2026-10-14). -->
+    <!-- Content checked against Bitey release materials on 2026-10-27: phone 1.1.8 live; Wear OS prepared for 1.1.9. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bitey - A vision-first calorie and macro tracking PWA backed by Gemini and human-in-the-loop portion calibration.">
+    <meta name="description" content="Bitey — a private food log for Android. Photograph or describe meals, track nutrition and weight, and meet the Wear OS companion. Also available as a self-hosted web app.">
     <title>Bitey - Project Details</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <link rel="stylesheet" href="workshop.css?v=6">
@@ -36,7 +36,7 @@
     <meta property="og:site_name" content="Zandaulion">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bitey — Zandaulion">
-    <meta property="og:description" content="Bitey - A vision-first calorie and macro tracking PWA backed by Gemini and human-in-the-loop portion calibration.">
+    <meta property="og:description" content="Bitey — a private food log for Android. Photograph or describe meals, track nutrition and weight, and meet the Wear OS companion. Also available as a self-hosted web app.">
     <meta property="og:url" content="https://zandaulion.com/plate.html">
     <meta property="og:image" content="https://zandaulion.com/assets/Plate/bitey-hero.png">
     <meta property="og:image:type" content="image/png">
@@ -45,7 +45,7 @@
     <meta property="og:image:alt" content="Bitey — Zandaulion">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bitey — Zandaulion">
-    <meta name="twitter:description" content="Bitey - A vision-first calorie and macro tracking PWA backed by Gemini and human-in-the-loop portion calibration.">
+    <meta name="twitter:description" content="Bitey — a private food log for Android. Photograph or describe meals, track nutrition and weight, and meet the Wear OS companion. Also available as a self-hosted web app.">
     <meta name="twitter:image" content="https://zandaulion.com/assets/Plate/bitey-hero.png">
     <meta name="twitter:image:alt" content="Bitey — Zandaulion">
     <!-- social:end -->
@@ -77,14 +77,15 @@
 
                 <h2>About The Project</h2>
                 <p>Photograph a meal, correct the portion, log it.</p>
-<p>Bitey (formerly Plate) is a calorie and macro log whose primary input is a photo. The multimodal vision model identifies the food on the plate; the person who ate it corrects the weight. That division of labour is not a convenience &mdash; it is the core finding the entire design rests on.</p>
-<p>Benchmarked across 145 plates from the Nutrition5k dataset with weighed ground truth, visual human correction was proven to recover roughly half of the accuracy gain of a physical scale, creating an ideal balance between low daily friction and nutritional precision.</p>
+<p>Bitey (formerly Plate) is a private food log for everyday eating. Photograph a meal, describe it in a few words, search for a food, scan a barcode, or repeat something you eat often. Keep track of calories, protein, carbs, fat and fibre, with a small dinosaur for company.</p>
+<p>Photo and text estimates are a starting point: check the foods and adjust the portions before saving. Bitey is built around a log you can keep up with, with no good or bad foods and no need to weigh every gram.</p>
 
                 <p>The Android app, Bitey — Private Food Log, keeps the diary on your phone, with no account and no server holding your log. Add food by hand, from a barcode, or as a quick bite, and keep weigh-ins, trends, and backups on the device. Bitey AI, an optional subscription, reads a meal photo or a description you type, and you review and adjust every estimate before saving.</p>
 
                 <h2>Bitey for Android</h2>
                 <p class="platform-status">The Android app is live on Google Play.</p>
-                <p>The latest update, 1.1.2, gives a steadier read on what you burn: Bitey looks at six weeks of weigh-ins and leans on your profile while the evidence builds, today no longer counts until it is over, and the weight chart draws the same trend as the estimate. The screenshots come from the Android app, with made-up example data.</p>
+                <p>Log from your home screen with the Today in Bitey widget, use the Meal photo Quick Settings tile, or long-press the app icon for Photo, Gallery, Barcode and Type shortcuts. A new welcome introduces the ways to log, quick bites and repeat meals, with an optional profile that stays on your phone. Weight and intake trends help you follow your progress over time.</p>
+                <p>These screenshots show the Android app with made-up example data, including the new welcome screen.</p>
                 <div class="gallery-grid">
                     <img src="assets/Plate/android/01-day.png" alt="The day: calories against what you burn, macros, Bitey's comment, the weight trend, and quick bites" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
                     <img src="assets/Plate/android/02-meals.png" alt="The day's meals, one of them estimated from a description" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
@@ -93,6 +94,13 @@
                     <img src="assets/Plate/android/05-search.png" alt="Searching the built-in food table for salmon" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
                     <img src="assets/Plate/android/06-trends.png" alt="Weight and intake trends over 30 days, against what you burn" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
                     <img src="assets/Plate/android/07-privacy.png" alt="Settings for the Bitey AI subscription, the diet switch, and privacy" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
+                    <img src="assets/Plate/android/08-welcome.png" alt="Bitey's welcome: no good or bad foods, and an optional profile kept on your phone" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
+                </div>
+                <h3>On a tablet</h3>
+                <p>On wider screens, your day opens in two columns, with totals, weight and quick bites beside your meals.</p>
+                <div class="gallery-grid gallery-flows">
+                    <img src="assets/Plate/android/tablet-day.png" alt="Bitey on a tablet: daily totals and quick bites beside the meal diary" class="gallery-img" loading="lazy" decoding="async" width="2560" height="1600">
+                    <img src="assets/Plate/android/tablet-welcome.png" alt="Bitey's welcome on a tablet, with the optional profile explained" class="gallery-img" loading="lazy" decoding="async" width="2560" height="1600">
                 </div>
                 <h3>Android features</h3>
                 <ul>
@@ -103,9 +111,26 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 "Not what you ate?":</strong> Tell Bitey AI what a dish really was, and it reads the same photo again.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 Your diet, if you want:</strong> An optional setting lets Bitey AI use a vegetarian, vegan, or pescatarian diet for dishes that could be made either way. It is off unless you turn it on.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 Free ways in:</strong> Search a built-in table of more than 16,000 foods, with common foods and dishes named in your language, scan a barcode, or type the numbers from a label, which Bitey remembers for that barcode. A barcode leaves the phone only if you agree to an Open Food Facts lookup.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏠 Today at a glance:</strong> A resizable home-screen widget shows calories, macros and fibre, with Photo, Barcode and Type buttons. Add the Meal photo Quick Settings tile or use the app icon's shortcuts to start logging.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔁 Your usual meals:</strong> Save quick bites and log a previous meal again in one tap.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🦖 A kinder companion:</strong> A short welcome helps you get started, your profile is optional, and Bitey keeps food comments encouraging. Available in 12 languages.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ Weigh-ins and backups:</strong> Record your weight, follow your food and weight trends, and back up or restore your data when you move phones.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Bitey AI subscription:</strong> Bought and managed through Google Play, with the first month free. Bitey asks before the first photo or description leaves your phone, and you can withdraw that in Settings.</li>
                 </ul>
+
+                <h2>Bitey on Wear OS</h2>
+                <p>Prepared for the 1.1.9 release: a Wear OS companion for your paired Android phone. See today's calories and macros, log a quick bite or repeat a meal with one tap, and undo a mistaken entry on the watch.</p>
+                <p>Choose from three tiles: Today in Bitey, Bitey quick bites, or both together. Add Calories today or Macros today to your watch face. The phone keeps the diary; the watch receives today's summary and meal shortcuts.</p>
+                <p>Watch screenshots use the same made-up diary as the phone screenshots.</p>
+                <div class="gallery-grid">
+                    <img src="assets/Plate/wear/01-today.png" alt="Today on Wear OS: calories and macros against the burn estimate" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="assets/Plate/wear/02-today-tile.png" alt="The Today in Bitey watch tile, with a calorie and macro ring" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="assets/Plate/wear/03-quick-bites.png" alt="Quick bites on the watch: tap a saved snack to log it" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="assets/Plate/wear/04-quick-bites-tile.png" alt="The Bitey quick bites tile, with a shortcut to repeat meals" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="assets/Plate/wear/05-today-bites-tile.png" alt="The combined watch tile: today and quick bites in one place" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="assets/Plate/wear/06-repeat.png" alt="Repeat a meal from the watch, with meal names and calories" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="assets/Plate/wear/07-complications.png" alt="Calories and macros as complications on a watch face" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                </div>
 
                 <h2>The web app</h2>
                 <div class="gallery-grid">

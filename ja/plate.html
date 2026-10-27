@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja-JP" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against bitey commit 10168b7 (1.1.2, 2026-10-14). -->
+    <!-- Content checked against Bitey release materials on 2026-10-27: phone 1.1.8 live; Wear OS prepared for 1.1.9. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bitey - Gemini と人間参加型部分のキャリブレーションによって裏付けられたビジョンファーストのカロリーおよびマクロ追跡 PWA。">
+    <meta name="description" content="Bitey — Android 用のプライベート食べログ。食事の写真や説明、栄養と体重の追跡、Wear OS コンパニオンの紹介などを行います。セルフホスト型 Web アプリとしても利用できます。">
     <title>Bitey - プロジェクトの詳細</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=6">
@@ -36,7 +36,7 @@
     <meta property="og:site_name" content="Zandaulion">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bitey — Zandaulion">
-    <meta property="og:description" content="Bitey - Gemini と人間参加型部分のキャリブレーションによって裏付けられたビジョンファーストのカロリーおよびマクロ追跡 PWA。">
+    <meta property="og:description" content="Bitey — Android 用のプライベート食べログ。食事の写真や説明、栄養と体重の追跡、Wear OS コンパニオンの紹介などを行います。セルフホスト型 Web アプリとしても利用できます。">
     <meta property="og:url" content="https://zandaulion.com/ja/plate.html">
     <meta property="og:image" content="https://zandaulion.com/assets/Plate/bitey-hero.png">
     <meta property="og:image:type" content="image/png">
@@ -45,7 +45,7 @@
     <meta property="og:image:alt" content="Bitey — Zandaulion">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bitey — Zandaulion">
-    <meta name="twitter:description" content="Bitey - Gemini と人間参加型部分のキャリブレーションによって裏付けられたビジョンファーストのカロリーおよびマクロ追跡 PWA。">
+    <meta name="twitter:description" content="Bitey — Android 用のプライベート食べログ。食事の写真や説明、栄養と体重の追跡、Wear OS コンパニオンの紹介などを行います。セルフホスト型 Web アプリとしても利用できます。">
     <meta name="twitter:image" content="https://zandaulion.com/assets/Plate/bitey-hero.png">
     <meta name="twitter:image:alt" content="Bitey — Zandaulion">
     <!-- social:end -->
@@ -77,14 +77,15 @@
 
                 <h2>プロジェクトについて</h2>
                 <p>食事の写真を撮り、部分を修正し、記録します。</p>
-<p>Bitey (旧称 Plate) は、主な入力が写真であるカロリーおよびマクロのログです。マルチモーダル視覚モデルは皿の上の食べ物を識別します。それを食べた人が体重を修正します。この分業は便宜的なものではなく、デザイン全体の基礎となる中核的な発見です。</p>
-<p>Nutrition5k データセットの 145 枚のプレートにわたって重み付けされたグラウンド トゥルースを使用してベンチマークを行ったところ、人間による視覚的な補正により、物理的なスケールの精度向上の約半分が回復し、日常的な摩擦の少なさと栄養の正確さの間の理想的なバランスが得られることが証明されました。</p>
+<p>Bitey（旧プレート）は毎日の食べ歩きを中心とした個人的な食べログです。食事の写真を撮ったり、いくつかの言葉で説明したり、食べ物を検索したり、バーコードをスキャンしたり、よく食べるものを繰り返したりします。小さな恐竜と一緒に、カロリー、タンパク質、炭水化物、脂肪、繊維を追跡しましょう。</p>
+<p>写真とテキストの見積もりが出発点です。保存する前に、食品を確認し、分量を調整します。 Bitey は、無理なく続けられる食事記録を目指しており、食べ物に良い悪いはなく、グラムごとに計量する必要もありません。</p>
 
                 <p>Android アプリ「Bitey — プライベート食事記録」は、日記をあなたのスマートフォンに保存します。アカウントはなく、記録を保管するサーバーもありません。食品は手入力、バーコード、クイック登録で追加でき、体重、推移、バックアップも端末に残ります。オプションのサブスクリプションである Bitey AI は、食事の写真や入力した説明を読み取り、保存前にすべての推定を確認・調整できます。</p>
 
                 <h2>Android 版 Bitey</h2>
                 <p class="platform-status">Android アプリは Google Play で公開中です。</p>
-                <p>最新アップデート 1.1.2 では、消費カロリーの推定がより安定しました。Bitey は 6 週間分の体重記録を見て、データが集まるまではプロフィールを頼りにし、今日の分は一日が終わるまで数えず、体重グラフも推定と同じ傾向線を描きます。スクリーンショットは Android アプリのもので、架空のサンプルデータを使っています。</p>
+                <p>Today in Bitey ウィジェットを使用してホーム画面から食事を記録するか、食事写真のクイック設定タイルを使用するか、写真、ギャラリー、バーコード、入力のショートカットのアプリ アイコンを長押しします。新しいウェルカムでは、携帯電話に保存されるオプションのプロファイルを使用して、ログを記録したり、軽食を食べたり、食事を繰り返したりする方法が紹介されています。体重と摂取量の傾向は、時間の経過とともに進歩を追跡するのに役立ちます。</p>
+                <p>これらのスクリーンショットは、新しいようこそ画面を含む、作成されたサンプル データを含む Android アプリを示しています。</p>
                 <div class="gallery-grid">
                     <img src="../assets/Plate/android/01-day.png" alt="1 日の画面: 消費量に対するカロリー、マクロ栄養素、Bitey のコメント、体重の傾向、ちょっとした間食" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
                     <img src="../assets/Plate/android/02-meals.png" alt="その日の食事。そのうち 1 つは説明から推定" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
@@ -93,6 +94,13 @@
                     <img src="../assets/Plate/android/05-search.png" alt="内蔵の食品表でサーモンを検索" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
                     <img src="../assets/Plate/android/06-trends.png" alt="30 日間の体重と摂取量の傾向、消費量との比較" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
                     <img src="../assets/Plate/android/07-privacy.png" alt="Bitey AI のサブスクリプション、食事スタイルのスイッチ、プライバシーの設定" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
+                    <img src="../assets/Plate/android/08-welcome.png" alt="Bitey さん、大歓迎です。食べ物に良いものも悪いものもありません。オプションのプロファイルは携帯電話に保存されます。" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
+                </div>
+                <h3>タブレットでは</h3>
+                <p>広い画面では、1 日が 2 列で始まり、食事の横に合計、体重、軽食が表示されます。</p>
+                <div class="gallery-grid gallery-flows">
+                    <img src="../assets/Plate/android/tablet-day.png" alt="タブレット上の Bitey: 食事日記の横に毎日の合計と軽食を表示" class="gallery-img" loading="lazy" decoding="async" width="2560" height="1600">
+                    <img src="../assets/Plate/android/tablet-welcome.png" alt="タブレットでの Bitey の歓迎、オプションのプロファイルの説明" class="gallery-img" loading="lazy" decoding="async" width="2560" height="1600">
                 </div>
                 <h3>Androidの機能</h3>
                 <ul>
@@ -103,9 +111,26 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 「食べたのはこれじゃない?」:</strong> 料理が実際に何だったかを Bitey AI に伝えると、同じ写真をもう一度読み取ります。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 必要なら食生活も:</strong> オプション設定で、どちらの作り方もありうる料理について、ベジタリアン、ヴィーガン、ペスカタリアンの食生活を Bitey AI に考慮させられます。オンにしない限りオフです。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 無料の方法:</strong> 16,000 品目以上を収録した内蔵の食品表を検索したり（よく食べる食品や料理はあなたの言語で表示されます）、バーコードをスキャンしたり、ラベルの値を入力したりできます。入力した値は Bitey がそのバーコード用に覚えます。バーコードがスマートフォンの外に出るのは、Open Food Facts での検索に同意したときだけです。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏠 今日の概要:</strong> サイズ変更可能なホーム画面ウィジェットには、カロリー、マクロ、繊維が表示され、写真、バーコード、入力ボタンが表示されます。食事写真のクイック設定タイルを追加するか、アプリアイコンのショートカットを使用してログを開始します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔁普段の食事：</strong> 簡単な食事を保存し、ワンタップで前の食事を再度記録します。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🦖 優しい仲間:</strong> 簡単なようこそが開始に役立ちます。プロフィールはオプションです。Bitey は食べ物に関するコメントを励みにします。 12 か国語で利用可能。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ 体重とバックアップ:</strong> 体重を記録し、食事と体重の推移を確認し、機種変更の際にはデータをバックアップ・復元できます。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Bitey AI のサブスクリプション:</strong> Google Play で購入・管理し、最初の 1 か月は無料です。最初の写真や説明がスマートフォンから送られる前に Bitey が確認し、設定でいつでも取り消せます。</li>
                 </ul>
+
+                <h2>Wear OS 上の Bitey</h2>
+                <p>1.1.9 リリースに向けて準備: ペアリングされた Android スマートフォン用の Wear OS コンパニオン。今日のカロリーとマクロを確認し、ワンタップで軽食を記録したり、食事を繰り返したり、時計上の誤った入力を元に戻したりできます。</p>
+                <p>3 つのタイルから選択します: 今日の Bitey、Bitey の軽食、または両方を一緒に。「Calories today」または「Macros today」をウォッチフェイスに追加できます。電話は日記を付けます。時計は今日の概要と食事のショートカットを受信します。</p>
+                <p>時計のスクリーンショットでは、携帯電話のスクリーンショットと同じ作成された日記が使用されます。</p>
+                <div class="gallery-grid">
+                    <img src="../assets/Plate/wear/01-today.png" alt="今日の Wear OS: 燃焼推定値に対するカロリーとマクロ" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/02-today-tile.png" alt="Bitey の Today in ウォッチ タイル (カロリーとマクロ リング付き)" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/03-quick-bites.png" alt="時計の軽食: 保存した軽食をタップして記録します" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/04-quick-bites-tile.png" alt="Bitey 軽食タイル、食事を繰り返すためのショートカット付き" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/05-today-bites-tile.png" alt="組み合わせたウォッチ タイル: 今日と軽食を 1 か所で" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/06-repeat.png" alt="時計から食事を繰り返し、食事名とカロリーを表示します" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/07-complications.png" alt="ウォッチフェイスのコンプリケーションにカロリーと主要栄養素を表示" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                </div>
 
                 <h2>ウェブアプリ</h2>
                 <div class="gallery-grid">

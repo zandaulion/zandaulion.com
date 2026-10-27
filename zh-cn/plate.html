@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against bitey commit 10168b7 (1.1.2, 2026-10-14). -->
+    <!-- Content checked against Bitey release materials on 2026-10-27: phone 1.1.8 live; Wear OS prepared for 1.1.9. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bitey - 视觉优先的卡路里和宏观跟踪 PWA，由 Gemini 和人机交互部分校准支持。">
+    <meta name="description" content="Bitey — Android 的私人食物日志。拍摄或描述膳食、跟踪营养和体重，并认识 Wear OS 伴侣。也可作为自托管网络应用程序使用。">
     <title>Bitey - 项目详情</title>
     <link rel="stylesheet" href="../index.css?v=2.0">
     <link rel="stylesheet" href="../workshop.css?v=6">
@@ -36,7 +36,7 @@
     <meta property="og:site_name" content="Zandaulion">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bitey — Zandaulion">
-    <meta property="og:description" content="Bitey - 视觉优先的卡路里和宏观跟踪 PWA，由 Gemini 和人机交互部分校准支持。">
+    <meta property="og:description" content="Bitey — Android 的私人食物日志。拍摄或描述膳食、跟踪营养和体重，并认识 Wear OS 伴侣。也可作为自托管网络应用程序使用。">
     <meta property="og:url" content="https://zandaulion.com/zh-cn/plate.html">
     <meta property="og:image" content="https://zandaulion.com/assets/Plate/bitey-hero.png">
     <meta property="og:image:type" content="image/png">
@@ -45,7 +45,7 @@
     <meta property="og:image:alt" content="Bitey — Zandaulion">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bitey — Zandaulion">
-    <meta name="twitter:description" content="Bitey - 视觉优先的卡路里和宏观跟踪 PWA，由 Gemini 和人机交互部分校准支持。">
+    <meta name="twitter:description" content="Bitey — Android 的私人食物日志。拍摄或描述膳食、跟踪营养和体重，并认识 Wear OS 伴侣。也可作为自托管网络应用程序使用。">
     <meta name="twitter:image" content="https://zandaulion.com/assets/Plate/bitey-hero.png">
     <meta name="twitter:image:alt" content="Bitey — Zandaulion">
     <!-- social:end -->
@@ -77,14 +77,15 @@
 
                 <h2>关于项目</h2>
                 <p>拍摄一顿饭，纠正份量，记录下来。</p>
-<p>Bitey（以前称为 Plate）是卡路里和宏观日志，其主要输入是照片。多模态视觉模型识别盘子上的食物；吃它的人纠正体重。这种分工并不是一种便利——而是整个设计所依赖的核心发现。</p>
-<p>通过对 Nutrition5k 数据集的 145 个盘子和加权地面实况进行基准测试，视觉人工校正被证明可以恢复物理秤大约一半的准确度增益，从而在低日常摩擦和营养精度之间建立理想的平衡。</p>
+<p>Bitey（原Plate）是日常饮食的私人美食日志。拍摄一顿饭，用几句话描述它，搜索食物，扫描条形码，或者重复你经常吃的东西。与小恐龙为伴，记录卡路里、蛋白质、碳水化合物、脂肪和纤维。</p>
+<p>照片和文字估算是一个起点：在保存之前检查食物并调整份量。 Bitey 帮助您轻松坚持记录饮食，没有好坏食物，也无需称重每一克。</p>
 
                 <p>Android 应用“Bitey — 私密饮食记录”把日记保存在你的手机上，没有账号，也没有服务器保存你的记录。可以手动添加食物、扫描条码或记录快捷小食，体重、趋势和备份也都留在设备上。Bitey AI 是一项可选订阅，可以读取餐食照片或你输入的描述，每个估算在保存前都由你查看和调整。</p>
 
                 <h2>Android 版 Bitey</h2>
                 <p class="platform-status">Android 应用已在 Google Play 上架。</p>
-                <p>最新更新 1.1.2 让你的消耗估算更稳定：Bitey 会参考六周的体重记录，在数据不足时借助你的个人资料，当天在结束前不计入，体重图表也会画出与估算相同的趋势。截图来自 Android 应用，使用虚构的示例数据。</p>
+                <p>使用 Bitey 小部件中的“今日”从主屏幕记录饮食，使用“用餐照片快速设置”磁贴，或长按应用程序图标以获取照片、图库、条形码和输入快捷方式。新的欢迎信息介绍了记录、快餐和重复用餐的方式，以及保留在手机上的可选配置文件。体重和摄入量趋势可帮助您跟踪一段时间内的进展情况。</p>
+                <p>这些屏幕截图显示了带有虚构示例数据的 Android 应用程序，包括新的欢迎屏幕。</p>
                 <div class="gallery-grid">
                     <img src="../assets/Plate/android/01-day.png" alt="一天概览：热量与消耗对比、宏量营养素、Bitey 的点评、体重趋势和快捷小食" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
                     <img src="../assets/Plate/android/02-meals.png" alt="当天的餐食，其中一餐由文字描述估算" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
@@ -93,6 +94,13 @@
                     <img src="../assets/Plate/android/05-search.png" alt="在内置食物表中搜索三文鱼" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
                     <img src="../assets/Plate/android/06-trends.png" alt="30 天的体重和摄入趋势，与消耗对比" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
                     <img src="../assets/Plate/android/07-privacy.png" alt="Bitey AI 订阅、饮食开关和隐私设置" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
+                    <img src="../assets/Plate/android/08-welcome.png" alt="Bitey 的欢迎：没有好或坏的食物，并且可选的配置文件保存在您的手机上" class="gallery-img" loading="lazy" decoding="async" width="1080" height="1920">
+                </div>
+                <h3>平板上</h3>
+                <p>在更宽的屏幕上，您的一天分为两栏，在您的膳食旁边显示总计、体重和快餐。</p>
+                <div class="gallery-grid gallery-flows">
+                    <img src="../assets/Plate/android/tablet-day.png" alt="平板电脑上的 Bitey：每日总计和膳食日记旁边的快餐" class="gallery-img" loading="lazy" decoding="async" width="2560" height="1600">
+                    <img src="../assets/Plate/android/tablet-welcome.png" alt="Bitey 在平板电脑上的欢迎，并解释了可选配置文件" class="gallery-img" loading="lazy" decoding="async" width="2560" height="1600">
                 </div>
                 <h3>安卓功能</h3>
                 <ul>
@@ -103,9 +111,26 @@
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 “吃的不是这个？”：</strong> 告诉 Bitey AI 这道菜实际是什么，它会重新读取同一张照片。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🥗 按需考虑饮食习惯：</strong> 可选设置允许 Bitey AI 在可能有两种做法的菜肴上考虑素食、纯素或鱼素饮食。除非你开启，否则保持关闭。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔎 免费方式：</strong> 搜索内置的 16,000 多种食物，常见食物和菜肴都有你的语言的名称；也可以扫描条码，或输入标签上的数值，Bitey 会为该条码记住这些数值。只有在你同意通过 Open Food Facts 查询时，条码才会离开手机。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🏠 今天一览：</strong> 可调整大小的主屏幕小部件显示卡路里、宏量和纤维，并带有照片、条形码和输入按钮。添加“用餐照片快速设置”磁贴或使用应用程序图标的快捷方式开始记录。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔁您平时的饮食：</strong> 只需轻按一下即可保存快餐并再次记录上一顿饭。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🦖 更友善的伴侣：</strong> 简短的欢迎语可以帮助您开始使用，您的个人资料是可选的，Bitey 可以让美食评论保持鼓励。有 12 种语言版本。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚖️ 体重与备份：</strong> 记录体重，查看饮食和体重趋势，换手机时备份或恢复数据。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>💳 Bitey AI 订阅：</strong> 通过 Google Play 购买和管理，首月免费。第一张照片或第一段描述离开手机前，Bitey 会征求你的同意，你可以在设置中撤回。</li>
                 </ul>
+
+                <h2>Wear OS 上的 Bitey</h2>
+                <p>为 1.1.9 版本做好准备：适用于配对 Android 手机的 Wear OS 伴侣。查看今天的卡路里和宏观营养，只需轻按一下即可记录快速进食或重复一顿饭，并撤消手表上的错误输入。</p>
+                <p>从三个板块中进行选择：今天 Bitey、Bitey 快餐，或两者一起。将今天的卡路里或今天的宏添加到您的表盘。手机记日记；手表接收今天的总结和进餐快捷方式。</p>
+                <p>手表截图使用与手机截图相同的虚构日记。</p>
+                <div class="gallery-grid">
+                    <img src="../assets/Plate/wear/01-today.png" alt="今天的 Wear OS：卡路里和宏与燃烧估计" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/02-today-tile.png" alt="Bitey 手表中的 Today 瓷砖，带有卡路里和宏环" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/03-quick-bites.png" alt="在手表上快速吃东西：点击保存的零食即可记录" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/04-quick-bites-tile.png" alt="Bitey 快餐瓷砖，带有重复进餐的快捷方式" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/05-today-bites-tile.png" alt="组合手表块：今天和快餐集中在一处" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/06-repeat.png" alt="从手表上重复一餐，并显示餐食名称和卡路里" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                    <img src="../assets/Plate/wear/07-complications.png" alt="卡路里和宏作为表盘上的复杂功能" class="gallery-img" loading="lazy" decoding="async" width="454" height="454">
+                </div>
 
                 <h2>网页应用</h2>
                 <div class="gallery-grid">
