@@ -8,7 +8,7 @@
 
 **[zandaulion.com 방문](https://zandaulion.com/)** · [루마니아 컬렉션](https://zandaulion.com/ro/index.html)
 
-이 저장소에는 검색 가능한 25개 프로젝트 컬렉션, 개별 프로젝트 페이지 및 대화형 Sankey 다이어그램 편집기인 Zandaulion 웹 사이트가 포함되어 있습니다. 홈페이지와 모든 프로젝트 페이지는 12개 언어로 제공됩니다. 사이트는 GitHub Pages에서 호스팅되는 정적 HTML, CSS 및 바닐라 JavaScript입니다.
+이 저장소에는 검색 가능한 26개 프로젝트 컬렉션, 개별 프로젝트 페이지 및 대화형 Sankey 다이어그램 편집기인 Zandaulion 웹 사이트가 포함되어 있습니다. 홈페이지와 모든 프로젝트 페이지는 12개 언어로 제공됩니다. 사이트는 GitHub Pages에서 호스팅되는 정적 HTML, CSS 및 바닐라 JavaScript입니다.
 
 ## README 번역
 
@@ -39,6 +39,7 @@
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Hearth OCR | [hearth.html](hearth.html) |
+| Home Monitor | [homemonitor.html](homemonitor.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan, 이전 이름 Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -163,7 +164,7 @@ node --test scripts/test_language.cjs
 ```
 
 - 빌드 검사는 오래되어 생성된 출력과 누락된 번역을 감지합니다.
-- 사이트 검사는 홈페이지 12개, 프로젝트 페이지 300개, 개인정보 보호 안내 10개, 호환성 리디렉션 1개, 404 페이지를 포함한 HTML 페이지 324개를 모두 검사합니다. 로컬 링크, 자산, 보존된 개인 정보 보호 마크업 외부의 중복 ID, 프로젝트 언어 메타데이터, 상호 SEO 링크 및 아랍어 방향을 확인합니다. `--url`를 사용하면 HTTP 응답도 확인하고 제공된 개인정보 보호정책을 소스 파일과 비교합니다.
+- 사이트 검사는 홈페이지 12개, 프로젝트 페이지 312개, 개인정보 보호 안내 10개, 호환성 리디렉션 1개, 404 페이지를 포함한 HTML 페이지 336개를 모두 검사합니다. 로컬 링크, 자산, 보존된 개인 정보 보호 마크업 외부의 중복 ID, 프로젝트 언어 메타데이터, 상호 SEO 링크 및 아랍어 방향을 확인합니다. `--url`를 사용하면 HTTP 응답도 확인하고 제공된 개인정보 보호정책을 소스 파일과 비교합니다.
 - 언어 테스트에는 기본 설정 우선 순위, 지역 일치, 차단된 저장소, 파일 및 하위 디렉터리 루트, 리디렉션 동작 및 섹션 보존이 포함됩니다.
 
 오프라인 링크 확인을 위해서는 `--url` 없이 `python scripts/check_site.py`를 실행하세요. 모바일 레이아웃, 아랍어 방향, 언어 전환, 갤러리 키보드 컨트롤 및 편집기 상호 작용 등 영향을 받는 페이지도 브라우저에서 검토합니다.

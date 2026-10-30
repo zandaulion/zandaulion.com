@@ -8,7 +8,7 @@
 
 **[访问 zandaulion.com](https://zandaulion.com/)** · [罗马尼亚系列](https://zandaulion.com/ro/index.html)
 
-该存储库包含 Zandaulion 网站：25 个项目的可搜索集合、各个项目页面和交互式 Sankey 图表编辑器。主页和每个项目页面都有 12 种语言版本。该站点是静态 HTML、CSS 和普通 JavaScript，托管在 GitHub Pages 上。
+该存储库包含 Zandaulion 网站：26 个项目的可搜索集合、各个项目页面和交互式 Sankey 图表编辑器。主页和每个项目页面都有 12 种语言版本。该站点是静态 HTML、CSS 和普通 JavaScript，托管在 GitHub Pages 上。
 
 ## README 译本
 
@@ -39,6 +39,7 @@
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Hearth OCR | [hearth.html](hearth.html) |
+| Home Monitor | [homemonitor.html](homemonitor.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan，原名 Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -163,7 +164,7 @@ node --test scripts/test_language.cjs
 ```
 
 - 构建检查会检测过时的生成输出和丢失的翻译。
-- 网站检查涵盖全部 324 个 HTML 页面：12 个主页、300 个项目页面、10 个隐私声明、1 个兼容性重定向页面和 404 页面。 它检查本地链接、资产、保留的隐私标记之外的重复 ID、项目语言元数据、相互 SEO 链接和阿拉伯语方向。对于 `--url`，它还检查 HTTP 响应并将提供的隐私声明与其源文件进行比较。
+- 网站检查涵盖全部 336 个 HTML 页面：12 个主页、312 个项目页面、10 个隐私声明、1 个兼容性重定向页面和 404 页面。 它检查本地链接、资产、保留的隐私标记之外的重复 ID、项目语言元数据、相互 SEO 链接和阿拉伯语方向。对于 `--url`，它还检查 HTTP 响应并将提供的隐私声明与其源文件进行比较。
 - 语言测试涵盖首选项优先级、区域匹配、阻止存储、文件和子目录根、重定向行为和部分保存。
 
 对于离线链接检查，请运行 `python scripts/check_site.py`，而不运行 `--url`。还要在浏览器中查看受影响的页面：移动布局、阿拉伯语方向、语言切换、图库键盘控件和编辑器交互。

@@ -8,7 +8,7 @@ Un taller lleno de juego para ideas curiosas: aplicaciones, juegos y pequeñas h
 
 **[Visita zandaulion.com](https://zandaulion.com/)** · [Colección rumana](https://zandaulion.com/ro/index.html)
 
-Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 25 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
+Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 26 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
 
 ## Traducciones del README
 
@@ -39,6 +39,7 @@ Edite el archivo README en inglés y los catálogos correspondientes en `locales
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Hearth OCR | [hearth.html](hearth.html) |
+| Home Monitor | [homemonitor.html](homemonitor.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan, antes Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -163,7 +164,7 @@ node --test scripts/test_language.cjs
 ```
 
 - La verificación de compilación detecta resultados generados obsoletos y traducciones faltantes.
-- La comprobación del sitio abarca las 324 páginas HTML: 12 páginas de inicio, 300 páginas de proyectos, diez avisos de privacidad, una redirección de compatibilidad y la página 404. Comprueba enlaces locales, activos, ID duplicados fuera del marcado de privacidad preservado, metadatos del idioma del proyecto, enlaces recíprocos SEO y dirección árabe. Con `--url`, también verifica las respuestas de HTTP y compara los avisos de privacidad entregados con sus archivos fuente.
+- La comprobación del sitio abarca las 336 páginas HTML: 12 páginas de inicio, 312 páginas de proyectos, diez avisos de privacidad, una redirección de compatibilidad y la página 404. Comprueba enlaces locales, activos, ID duplicados fuera del marcado de privacidad preservado, metadatos del idioma del proyecto, enlaces recíprocos SEO y dirección árabe. Con `--url`, también verifica las respuestas de HTTP y compara los avisos de privacidad entregados con sus archivos fuente.
 - Las pruebas de idioma cubren la precedencia de preferencias, la coincidencia regional, el almacenamiento bloqueado, las raíces de archivos y subdirectorios, el comportamiento de redireccionamiento y la preservación de secciones.
 
 Para verificaciones de enlaces sin conexión, ejecute `python scripts/check_site.py` sin `--url`. Revise también las páginas afectadas en el navegador: diseño móvil, dirección árabe, cambio de idioma, controles del teclado de la galería e interacciones del editor.

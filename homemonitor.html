@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="light">
+<head>
+    <!-- Content checked against home-monitoring commit 8309744 (2026-10-30). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home Monitor is a self-hosted view of your home cameras: person and face recognition on your own server, a daily activity timeline, and alerts that contain no images or names.">
+    <title>Home Monitor - Project Details</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="workshop.css?v=6">
+    <link rel="stylesheet" href="project.css?v=9">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/brand/lion-light-v2-32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&amp;family=Noto+Sans+JP&amp;family=Noto+Sans+KR&amp;family=Noto+Sans+SC&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts.css?v=1">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/homemonitor.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/homemonitor.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/homemonitor.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/homemonitor.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/homemonitor.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/homemonitor.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/homemonitor.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/homemonitor.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/homemonitor.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/homemonitor.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/homemonitor.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/homemonitor.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/homemonitor.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/homemonitor.html">
+    <!-- project-locales:end -->
+
+    <!-- social:start -->
+    <meta property="og:site_name" content="Zandaulion">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home Monitor — Zandaulion">
+    <meta property="og:description" content="Home Monitor is a self-hosted view of your home cameras: person and face recognition on your own server, a daily activity timeline, and alerts that contain no images or names.">
+    <meta property="og:url" content="https://zandaulion.com/homemonitor.html">
+    <meta property="og:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Home Monitor — Zandaulion">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home Monitor — Zandaulion">
+    <meta name="twitter:description" content="Home Monitor is a self-hosted view of your home cameras: person and face recognition on your own server, a daily activity timeline, and alerts that contain no images or names.">
+    <meta name="twitter:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta name="twitter:image:alt" content="Home Monitor — Zandaulion">
+    <!-- social:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="homemonitor.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection">← Back to the workshop</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Everyday tools</span>
+                    <h1>Home Monitor</h1>
+                    <p class="project-lead">Your home cameras, with familiar faces recognised on your own server and a calm timeline of who came by.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/home-monitoring" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                    </div>
+                    <p class="availability-note">Home Monitor is self-hosted: each person runs their own private copy.</p>
+                </div>
+                <img src="assets/HomeMonitor/home-monitor-desktop.png" alt="The overview, with alert settings, camera status counts, and snapshots from three demo cameras" class="project-hero-image hero-landscape hero-top">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>About The App</h2>
+                <p>Home Monitor is a self-hosted view of your home cameras. A small collector next to the cameras samples their snapshots and sends frames when something moves. Your own server then looks for people and faces, and shows the results in an installable web app, with a timeline of the day.</p>
+                <p>Continuous video stays on the cameras&rsquo; SD cards; the server keeps only selected snapshots. Person and face recognition run on the server&rsquo;s own processor, so no outside service ever receives your images.</p>
+                <p>Recognition is an estimate. Home Monitor matches faces conservatively and leaves unclear ones unidentified, but it does not check that a face is live, guarantee an identification, or follow a person from one camera to another. Enrol only people who agree to it, and check unexpected matches yourself.</p>
+
+                <h2>Gallery</h2>
+                <p>The scenes, people, and events in these screenshots are generated by the app&rsquo;s demo; no real camera images are used.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="assets/HomeMonitor/home-monitor-desktop.png" alt="The overview on a desktop, with alert settings, camera status counts, and snapshots from three demo cameras" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                    <img src="assets/HomeMonitor/home-monitor-activity.png" alt="A day of activity across three cameras, coloured by recognised faces, unrecognised faces, and people whose face could not be seen" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                </div>
+                <div class="gallery-grid">
+                    <img src="assets/HomeMonitor/home-monitor-tablet.png" alt="The overview on a tablet, with recent activity below the cameras" class="gallery-img" loading="lazy" decoding="async" width="834" height="1112">
+                    <img src="assets/HomeMonitor/home-monitor-mobile.png" alt="Camera snapshots on a phone" class="gallery-img" loading="lazy" decoding="async" width="390" height="844">
+                </div>
+
+                <h2>How it works</h2>
+                <ol>
+                    <li><strong>Collect next to the cameras.</strong> A small machine near the cameras checks each one&rsquo;s snapshot every two seconds, and uploads frames only when something moves, plus one every 15 seconds.</li>
+                    <li><strong>Recognise on your server.</strong> The server finds people and faces on its processor, without a graphics card, and compares faces with a private library of the people you have enrolled.</li>
+                    <li><strong>Review in the app.</strong> The installable web app shows the latest snapshots, who was recognised, and a timeline of the day for each camera.</li>
+                    <li><strong>Get a discreet alert.</strong> Optional notifications say only that something happened, with no image or name, and can be snoozed on every device at once while you are in the yard.</li>
+                </ol>
+
+                <h2>Features</h2>
+                <ul>
+                    <li><strong>Familiar faces:</strong> Enrol people with their consent, and each event is marked as recognised, as an unrecognised face, or as a person whose face could not be seen clearly.</li>
+                    <li><strong>A day at a glance:</strong> The activity timeline shows each camera&rsquo;s events through the day, filtered by camera, result, and time, next to the periods when a camera was offline or alerts were snoozed.</li>
+                    <li><strong>Alerts that give nothing away:</strong> Push notifications are encrypted and contain no images or names. You can be alerted only for unrecognised faces, and snooze alerts on all devices at once.</li>
+                    <li><strong>Invitation-only access:</strong> Each phone or computer is activated with an invitation and can be revoked at any time. For now, every invited device has full access, including the face library.</li>
+                    <li><strong>Storage that stays small:</strong> Events are deleted by age and by total size, enrolled faces are kept separately, and private images never enter the app&rsquo;s offline cache.</li>
+                    <li><strong>Try it without cameras:</strong> A local demo draws invented scenes and people, uses no real recognition, and deletes itself when you stop it.</li>
+                </ul>
+
+                <h2>Under the hood</h2>
+                <p>Home Monitor has two parts. The collector needs only Python and Pillow. The server runs Python 3.12 with FastAPI and SQLite, and uses OpenCV and ONNX Runtime with three small models: YOLOX-Nano finds people, YuNet finds faces, and SFace compares them. It is designed for ARM64 processors without a graphics card. You and the collector reach the server privately through Tailscale; optional public access goes through Cloudflare Tunnel and a hardened Caddy listener. The project is open source under the GPL-3.0-or-later licence.</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Follow another rabbit hole</span><h2 id="related-title">Something else you might enjoy.</h2></div><p><a href="index.html#collection">See the whole collection ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="threadmark.html">
+                        <div class="collection-image"><img src="assets/optimized/threadmark-card-2b075900-640.webp" srcset="assets/optimized/threadmark-card-2b075900-320.webp 320w, assets/optimized/threadmark-card-2b075900-640.webp 640w, assets/optimized/threadmark-card-2b075900-960.webp 960w, assets/optimized/threadmark-card-2b075900-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Everyday tools</div>
+                        <h3>Threadmark <span aria-hidden="true">↗</span></h3>
+                        <p>Turn busy WhatsApp groups and Gmail into a short list of what needs you: payments, meetings, and deadlines.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="thermostat.html">
+                        <div class="collection-image"><img src="assets/optimized/thermostat-feature-graphic-df5af629-640.webp" srcset="assets/optimized/thermostat-feature-graphic-df5af629-320.webp 320w, assets/optimized/thermostat-feature-graphic-df5af629-640.webp 640w, assets/optimized/thermostat-feature-graphic-df5af629-960.webp 960w, assets/optimized/thermostat-feature-graphic-df5af629-1280.webp 1280w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Everyday tools</div>
+                        <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+                        <p>See how warm things are at home, with sensor history and temperature charts.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html">
+                        <div class="collection-image"><img src="assets/optimized/pwa-invite-console-card-4757a021-640.webp" srcset="assets/optimized/pwa-invite-console-card-4757a021-320.webp 320w, assets/optimized/pwa-invite-console-card-4757a021-640.webp 640w, assets/optimized/pwa-invite-console-card-4757a021-960.webp 960w, assets/optimized/pwa-invite-console-card-4757a021-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Behind the scenes</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>One small console for managing invitations and devices across private web apps.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="language-data.js?v=5" defer></script>
+    <script src="project.js?v=7" defer></script>
+    <script src="language.js?v=7" defer></script>
+</body>
+</html>

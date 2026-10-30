@@ -25,6 +25,7 @@
       "assets/PaleBlueDot/feature-graphic.png",
       "assets/Casierul/05-registru-desktop-1440x900.png",
       "assets/Threadmark/card.jpg",
+      "assets/HomeMonitor/card.jpg",
       "assets/Faceslice/feature_graphic.jpg",
       "assets/Gravity Garden/workshop-hero.jpg",
       "assets/Magpie/feature_graphic.jpg",
@@ -391,6 +392,41 @@
           "height": 630,
           "bytes": 53610,
           "sha256": "bc39adae6b95e17bbc18a634bf02a4ad03a5bde6eaf51a6166b2dde2b17dbb76"
+        }
+      ]
+    },
+    "assets/HomeMonitor/card.jpg": {
+      "sha256": "9d41cf6f7cb0b2cb66d41a27b5d6c131cd967ba67fd07b66d5517a6c77014289",
+      "width": 1200,
+      "height": 630,
+      "variants": [
+        {
+          "path": "assets/optimized/homemonitor-card-9cd937d5-320.webp",
+          "width": 320,
+          "height": 168,
+          "bytes": 5638,
+          "sha256": "69de474d1d1045f2fc9da47249a0669aa836a72b7ed43fce959b83667255e1c4"
+        },
+        {
+          "path": "assets/optimized/homemonitor-card-9cd937d5-640.webp",
+          "width": 640,
+          "height": 336,
+          "bytes": 14368,
+          "sha256": "1f35a4b05604ca1c2c65f4cbd7d3427605ef835561ca53d340073e2232789662"
+        },
+        {
+          "path": "assets/optimized/homemonitor-card-9cd937d5-960.webp",
+          "width": 960,
+          "height": 504,
+          "bytes": 24938,
+          "sha256": "22a8906d2bd7c7e1bc8ad865d5338efea39319ee2c253dcaad6686dbcae07fa2"
+        },
+        {
+          "path": "assets/optimized/homemonitor-card-9cd937d5-1200.webp",
+          "width": 1200,
+          "height": 630,
+          "bytes": 34256,
+          "sha256": "94be88428de66360ff6c8cb75ea5879a7c510e3922a4a31ed44b1957ad86da19"
         }
       ]
     },
