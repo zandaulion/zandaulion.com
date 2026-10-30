@@ -8,7 +8,7 @@ A playful workshop for curious ideas: apps, games, and small tools to explore.
 
 **[Visit zandaulion.com](https://zandaulion.com/)** · [Romanian collection](https://zandaulion.com/ro/index.html)
 
-This repository contains the Zandaulion website: a searchable collection of 25
+This repository contains the Zandaulion website: a searchable collection of 26
 projects, individual project pages, and an interactive Sankey diagram editor.
 The homepage and every project page are available in 12 languages. The site is
 static HTML, CSS, and vanilla JavaScript, hosted on GitHub Pages.
@@ -49,6 +49,7 @@ paths, code examples, and link destinations are preserved.
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Hearth OCR | [hearth.html](hearth.html) |
+| Home Monitor | [homemonitor.html](homemonitor.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan, formerly Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -217,7 +218,7 @@ node --test scripts/test_language.cjs
 ```
 
 - The build check detects stale generated outputs and missing translations.
-- The site check covers all 324 HTML pages: 12 homepages, 300 project pages, ten privacy notices, one compatibility redirect, and the 404 page. It checks local links, assets, duplicate IDs outside the preserved privacy markup, project language metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also checks HTTP responses and compares served privacy notices with their source files.
+- The site check covers all 336 HTML pages: 12 homepages, 312 project pages, ten privacy notices, one compatibility redirect, and the 404 page. It checks local links, assets, duplicate IDs outside the preserved privacy markup, project language metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also checks HTTP responses and compares served privacy notices with their source files.
 - The language tests cover preference precedence, regional matching, blocked
   storage, file and subdirectory roots, redirect behavior, and section preservation.
 

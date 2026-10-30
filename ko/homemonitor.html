@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-theme="light" dir="ltr">
+<head>
+    <!-- Content checked against home-monitoring commit 8309744 (2026-10-30). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home Monitor는 집 카메라를 직접 호스팅해서 보는 앱입니다. 사람과 얼굴 인식은 내 서버에서 하고, 하루 활동을 타임라인으로 보여 주며, 알림에는 사진도 이름도 담기지 않습니다.">
+    <title>Home Monitor - 프로젝트 상세</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=9">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2-32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&amp;family=Noto+Sans+JP&amp;family=Noto+Sans+KR&amp;family=Noto+Sans+SC&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts.css?v=1">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ko/homemonitor.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/homemonitor.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/homemonitor.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/homemonitor.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/homemonitor.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/homemonitor.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/homemonitor.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/homemonitor.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/homemonitor.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/homemonitor.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/homemonitor.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/homemonitor.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/homemonitor.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/homemonitor.html">
+    <!-- project-locales:end -->
+
+    <!-- social:start -->
+    <meta property="og:site_name" content="Zandaulion">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home Monitor — Zandaulion">
+    <meta property="og:description" content="Home Monitor는 집 카메라를 직접 호스팅해서 보는 앱입니다. 사람과 얼굴 인식은 내 서버에서 하고, 하루 활동을 타임라인으로 보여 주며, 알림에는 사진도 이름도 담기지 않습니다.">
+    <meta property="og:url" content="https://zandaulion.com/ko/homemonitor.html">
+    <meta property="og:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Home Monitor — Zandaulion">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home Monitor — Zandaulion">
+    <meta name="twitter:description" content="Home Monitor는 집 카메라를 직접 호스팅해서 보는 앱입니다. 사람과 얼굴 인식은 내 서버에서 하고, 하루 활동을 타임라인으로 보여 주며, 알림에는 사진도 이름도 담기지 않습니다.">
+    <meta name="twitter:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta name="twitter:image:alt" content="Home Monitor — Zandaulion">
+    <!-- social:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="homemonitor.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ko-KR">← 작업실로 돌아가기</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">일상 도구</span>
+                    <h1>Home Monitor</h1>
+                    <p class="project-lead">집 카메라에서 낯익은 얼굴은 내 서버에서 인식하고, 누가 다녀갔는지 차분한 타임라인으로 보여 줍니다.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/home-monitoring" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub에서 보기</a>
+                    </div>
+                    <p class="availability-note">Home Monitor는 직접 호스팅합니다. 각자 자신만의 비공개 사본을 운영합니다.</p>
+                </div>
+                <img src="../assets/HomeMonitor/home-monitor-desktop.png" alt="알림 설정, 카메라 상태, 데모 카메라 세 대의 스냅샷이 있는 개요 화면" class="project-hero-image hero-landscape hero-top">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>앱 정보</h2>
+                <p>Home Monitor는 집 카메라를 직접 호스팅해서 보는 앱입니다. 카메라 옆에 둔 작은 수집기가 카메라 스냅샷을 가져오고, 움직임이 있으면 이미지를 보냅니다. 그러면 내 서버가 사람과 얼굴을 찾아, 설치할 수 있는 웹 앱에서 하루 타임라인과 함께 결과를 보여 줍니다.</p>
+                <p>연속 영상은 카메라의 SD 카드에 남고, 서버는 선택한 스냅샷만 보관합니다. 사람과 얼굴 인식은 서버의 프로세서에서 실행되므로 외부 서비스가 내 이미지를 받는 일은 없습니다.</p>
+                <p>인식은 추정일 뿐입니다. Home Monitor는 얼굴을 신중하게 대조하고 불분명한 얼굴은 식별하지 않지만, 얼굴이 실제인지 확인하거나 신원을 보장하거나 사람을 카메라 사이에서 추적하지는 않습니다. 동의한 사람만 등록하고, 뜻밖의 일치는 직접 확인하세요.</p>
+
+                <h2>갤러리</h2>
+                <p>이 스크린샷의 장면, 사람, 이벤트는 앱의 데모가 만든 것이며 실제 카메라 이미지는 쓰지 않았습니다.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/HomeMonitor/home-monitor-desktop.png" alt="데스크톱의 개요 화면, 알림 설정과 카메라 상태, 데모 카메라 세 대의 스냅샷" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                    <img src="../assets/HomeMonitor/home-monitor-activity.png" alt="카메라 세 대의 하루 활동, 인식된 얼굴, 인식되지 않은 얼굴, 얼굴이 보이지 않은 사람에 따라 색으로 구분" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                </div>
+                <div class="gallery-grid">
+                    <img src="../assets/HomeMonitor/home-monitor-tablet.png" alt="태블릿의 개요 화면, 카메라 아래에 최근 활동" class="gallery-img" loading="lazy" decoding="async" width="834" height="1112">
+                    <img src="../assets/HomeMonitor/home-monitor-mobile.png" alt="휴대폰에서 보는 카메라 스냅샷" class="gallery-img" loading="lazy" decoding="async" width="390" height="844">
+                </div>
+
+                <h2>작동 원리</h2>
+                <ol>
+                    <li><strong>카메라 옆에서 수집합니다.</strong> 카메라 근처의 작은 기기가 2초마다 각 카메라의 스냅샷을 확인하고, 움직임이 있을 때만 이미지를 올리며, 15초마다 한 장씩 더 보냅니다.</li>
+                    <li><strong>내 서버에서 인식합니다.</strong> 서버는 그래픽 카드 없이 프로세서로 사람과 얼굴을 찾고, 등록한 사람들의 비공개 라이브러리와 얼굴을 비교합니다.</li>
+                    <li><strong>앱에서 확인합니다.</strong> 설치할 수 있는 웹 앱에서 최신 스냅샷, 인식된 사람, 카메라별 하루 타임라인을 볼 수 있습니다.</li>
+                    <li><strong>조용한 알림을 받습니다.</strong> 선택형 알림은 무슨 일이 있었다는 것만 알리고 사진이나 이름은 담지 않으며, 마당에 있는 동안 모든 기기에서 한 번에 일시 중지할 수 있습니다.</li>
+                </ol>
+
+                <h2>기능</h2>
+                <ul>
+                    <li><strong>낯익은 얼굴:</strong> 동의를 받아 사람을 등록하면 각 이벤트가 인식됨, 인식되지 않은 얼굴, 얼굴이 또렷하게 보이지 않은 사람 중 하나로 표시됩니다.</li>
+                    <li><strong>하루를 한눈에:</strong> 활동 타임라인은 하루 동안 각 카메라의 이벤트를 보여 주며 카메라, 결과, 시간으로 걸러 볼 수 있고, 카메라가 오프라인이었거나 알림이 일시 중지된 시간도 함께 표시합니다.</li>
+                    <li><strong>아무것도 드러내지 않는 알림:</strong> 푸시 알림은 암호화되며 사진이나 이름이 담기지 않습니다. 인식되지 않은 얼굴에만 알림을 받을 수 있고, 모든 기기에서 한 번에 일시 중지할 수 있습니다.</li>
+                    <li><strong>초대받은 기기만 접근:</strong> 휴대폰이나 컴퓨터는 초대로 활성화하며 언제든 취소할 수 있습니다. 지금은 초대받은 모든 기기가 얼굴 라이브러리를 포함해 전체 권한을 가집니다.</li>
+                    <li><strong>작게 유지되는 저장 공간:</strong> 이벤트는 기간과 전체 크기에 따라 삭제되고, 등록한 얼굴은 따로 보관되며, 비공개 이미지는 앱의 오프라인 캐시에 절대 들어가지 않습니다.</li>
+                    <li><strong>카메라 없이 체험:</strong> 로컬 데모는 가상의 장면과 사람을 그리고, 실제 인식은 쓰지 않으며, 멈추면 스스로 삭제됩니다.</li>
+                </ul>
+
+                <h2>후드 아래</h2>
+                <p>Home Monitor는 두 부분으로 되어 있습니다. 수집기에는 Python과 Pillow만 있으면 됩니다. 서버는 Python 3.12, FastAPI, SQLite로 동작하며 OpenCV와 ONNX Runtime으로 작은 모델 세 개를 씁니다. YOLOX-Nano는 사람을, YuNet은 얼굴을 찾고, SFace는 얼굴을 비교합니다. 그래픽 카드가 없는 ARM64 프로세서에 맞춰 설계했습니다. 사용자와 수집기는 Tailscale로 서버에 비공개로 접속하고, 선택형 공개 접속은 Cloudflare Tunnel과 보안을 강화한 Caddy 리스너를 거칩니다. 이 프로젝트는 GPL-3.0-or-later 라이선스의 오픈 소스입니다.</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">계속 둘러보기</span><h2 id="related-title">이런 작품도 만나보세요</h2></div><p><a href="index.html#collection" hreflang="ko-KR">전체 모음 보기 ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="threadmark.html" hreflang="ko-KR">
+                        <div class="collection-image"><img src="../assets/optimized/threadmark-card-2b075900-640.webp" srcset="../assets/optimized/threadmark-card-2b075900-320.webp 320w, ../assets/optimized/threadmark-card-2b075900-640.webp 640w, ../assets/optimized/threadmark-card-2b075900-960.webp 960w, ../assets/optimized/threadmark-card-2b075900-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">일상 도구</div>
+                        <h3>Threadmark <span aria-hidden="true">↗</span></h3>
+                        <p>북적이는 WhatsApp 그룹과 Gmail을 나에게 필요한 일만 담은 짧은 목록으로 바꿔 줍니다: 결제, 회의, 마감.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="thermostat.html" hreflang="ko-KR">
+                        <div class="collection-image"><img src="../assets/optimized/thermostat-feature-graphic-df5af629-640.webp" srcset="../assets/optimized/thermostat-feature-graphic-df5af629-320.webp 320w, ../assets/optimized/thermostat-feature-graphic-df5af629-640.webp 640w, ../assets/optimized/thermostat-feature-graphic-df5af629-960.webp 960w, ../assets/optimized/thermostat-feature-graphic-df5af629-1280.webp 1280w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">일상 도구</div>
+                        <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+                        <p>센서 기록과 온도 그래프로 집 안이 얼마나 따뜻한지 확인하세요.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="ko-KR">
+                        <div class="collection-image"><img src="../assets/optimized/pwa-invite-console-card-4757a021-640.webp" srcset="../assets/optimized/pwa-invite-console-card-4757a021-320.webp 320w, ../assets/optimized/pwa-invite-console-card-4757a021-640.webp 640w, ../assets/optimized/pwa-invite-console-card-4757a021-960.webp 960w, ../assets/optimized/pwa-invite-console-card-4757a021-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">무대 뒤 도구</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>비공개 웹 앱의 초대와 기기를 한곳에서 관리하는 작은 콘솔.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=7" defer></script>
+    <script src="../language.js?v=7" defer></script>
+</body>
+</html>

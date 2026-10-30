@@ -8,7 +8,7 @@ Un atelier jucăuș pentru idei curioase: aplicații, jocuri și mici unelte de 
 
 **[Vizitați zandaulion.com](https://zandaulion.com/)** · [Colecția românească](https://zandaulion.com/ro/index.html)
 
-Acest depozit conține site-ul web Zandaulion: o colecție de 25 de proiecte care poate fi căutată, pagini de proiecte individuale și un editor de diagrame Sankey interactiv. Pagina principală și fiecare pagină de proiect sunt disponibile în 12 limbi. Site-ul este static HTML, CSS și vanilla JavaScript, găzduit pe GitHub Pages.
+Acest depozit conține site-ul web Zandaulion: o colecție de 26 de proiecte care poate fi căutată, pagini de proiecte individuale și un editor de diagrame Sankey interactiv. Pagina principală și fiecare pagină de proiect sunt disponibile în 12 limbi. Site-ul este static HTML, CSS și vanilla JavaScript, găzduit pe GitHub Pages.
 
 ## Traducerile README
 
@@ -39,6 +39,7 @@ Editați fișierul README în limba engleză și cataloagele corespunzătoare î
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Hearth OCR | [hearth.html](hearth.html) |
+| Home Monitor | [homemonitor.html](homemonitor.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan, fostul Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -163,7 +164,7 @@ node --test scripts/test_language.cjs
 ```
 
 - Verificarea build-ului detectează ieșirile generate obținute și traducerile lipsă.
-- Verificarea site-ului acoperă toate cele 324 de pagini HTML: 12 pagini principale, 300 de pagini de proiect, zece notificări de confidențialitate, o redirecționare de compatibilitate și pagina 404. Verifică linkurile locale, materialele, ID-urile duplicate în afara markupului de confidențialitate păstrat, metadatele limbajului proiectului, linkurile SEO reciproce și direcția arabă. Cu `--url`, verifică, de asemenea, răspunsurile HTTP și compară notificările de confidențialitate difuzate cu fișierele lor sursă.
+- Verificarea site-ului acoperă toate cele 336 de pagini HTML: 12 pagini principale, 312 de pagini de proiect, zece notificări de confidențialitate, o redirecționare de compatibilitate și pagina 404. Verifică linkurile locale, materialele, ID-urile duplicate în afara markupului de confidențialitate păstrat, metadatele limbajului proiectului, linkurile SEO reciproce și direcția arabă. Cu `--url`, verifică, de asemenea, răspunsurile HTTP și compară notificările de confidențialitate difuzate cu fișierele lor sursă.
 - Testele de limbă acoperă prioritatea preferințelor, potrivirea regională, stocarea blocată, rădăcinile fișierelor și subdirectoarelor, comportamentul de redirecționare și păstrarea secțiunilor.
 
 Pentru verificări offline, rulați `python scripts/check_site.py` fără `--url`. Examinați paginile afectate și în browser: aspectul mobil, direcția arabă, schimbarea limbii, comenzile de la tastatură din galerie și interacțiunile editorului.

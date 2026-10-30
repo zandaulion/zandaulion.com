@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-theme="light" dir="ltr">
+<head>
+    <!-- Content checked against home-monitoring commit 8309744 (2026-10-30). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home Monitor は、自宅のカメラをセルフホストで見られるアプリです。人物と顔の認識は自分のサーバーで行い、1 日の活動をタイムラインで表示し、通知には画像も名前も含まれません。">
+    <title>Home Monitor - プロジェクトの詳細</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=9">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2-32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&amp;family=Noto+Sans+JP&amp;family=Noto+Sans+KR&amp;family=Noto+Sans+SC&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts.css?v=1">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/ja/homemonitor.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/homemonitor.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/homemonitor.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/homemonitor.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/homemonitor.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/homemonitor.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/homemonitor.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/homemonitor.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/homemonitor.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/homemonitor.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/homemonitor.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/homemonitor.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/homemonitor.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/homemonitor.html">
+    <!-- project-locales:end -->
+
+    <!-- social:start -->
+    <meta property="og:site_name" content="Zandaulion">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home Monitor — Zandaulion">
+    <meta property="og:description" content="Home Monitor は、自宅のカメラをセルフホストで見られるアプリです。人物と顔の認識は自分のサーバーで行い、1 日の活動をタイムラインで表示し、通知には画像も名前も含まれません。">
+    <meta property="og:url" content="https://zandaulion.com/ja/homemonitor.html">
+    <meta property="og:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Home Monitor — Zandaulion">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home Monitor — Zandaulion">
+    <meta name="twitter:description" content="Home Monitor は、自宅のカメラをセルフホストで見られるアプリです。人物と顔の認識は自分のサーバーで行い、1 日の活動をタイムラインで表示し、通知には画像も名前も含まれません。">
+    <meta name="twitter:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta name="twitter:image:alt" content="Home Monitor — Zandaulion">
+    <!-- social:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="homemonitor.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="ja-JP">← 工房に戻る</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">毎日の道具</span>
+                    <h1>Home Monitor</h1>
+                    <p class="project-lead">自宅のカメラで、見慣れた顔を自分のサーバーで認識し、誰が来たかを落ち着いたタイムラインで確認できます。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/home-monitoring" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHubで見る</a>
+                    </div>
+                    <p class="availability-note">Home Monitor はセルフホスト型です。各自が自分専用のコピーを動かします。</p>
+                </div>
+                <img src="../assets/HomeMonitor/home-monitor-desktop.png" alt="通知設定、カメラの状態、3 台のデモカメラのスナップショットを表示した概要画面" class="project-hero-image hero-landscape hero-top">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>アプリについて</h2>
+                <p>Home Monitor は、自宅のカメラをセルフホストで見られるアプリです。カメラのそばに置いた小さなコレクターがスナップショットを取得し、何かが動いたときに画像を送ります。その後、自分のサーバーが人物と顔を探し、インストールできるウェブアプリに結果を 1 日のタイムラインとともに表示します。</p>
+                <p>連続録画はカメラの SD カードに残り、サーバーには選んだスナップショットだけが保存されます。人物と顔の認識はサーバーのプロセッサーで行うため、外部のサービスに画像が送られることはありません。</p>
+                <p>認識はあくまで推定です。Home Monitor は顔を慎重に照合し、はっきりしない顔は特定しないままにしますが、顔が本物かどうかの確認、確実な本人特定、カメラをまたいだ人物の追跡は行いません。同意した人だけを登録し、思いがけない一致は自分で確かめてください。</p>
+
+                <h2>ギャラリー</h2>
+                <p>このスクリーンショットの場面、人物、イベントはアプリのデモで生成したもので、実際のカメラ画像は使っていません。</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/HomeMonitor/home-monitor-desktop.png" alt="デスクトップの概要画面。通知設定、カメラの状態、3 台のデモカメラのスナップショット" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                    <img src="../assets/HomeMonitor/home-monitor-activity.png" alt="3 台のカメラの 1 日の活動。認識された顔、認識されなかった顔、顔が見えなかった人で色分け" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                </div>
+                <div class="gallery-grid">
+                    <img src="../assets/HomeMonitor/home-monitor-tablet.png" alt="タブレットの概要画面。カメラの下に最近の活動" class="gallery-img" loading="lazy" decoding="async" width="834" height="1112">
+                    <img src="../assets/HomeMonitor/home-monitor-mobile.png" alt="スマートフォンで見るカメラのスナップショット" class="gallery-img" loading="lazy" decoding="async" width="390" height="844">
+                </div>
+
+                <h2>仕組み</h2>
+                <ol>
+                    <li><strong>カメラのそばで集める。</strong> カメラの近くの小さな機器が 2 秒ごとに各カメラのスナップショットを確認し、何かが動いたときだけ画像を送ります。ほかに 15 秒ごとに 1 枚送ります。</li>
+                    <li><strong>自分のサーバーで認識する。</strong> サーバーはグラフィックカードを使わずにプロセッサーで人物と顔を見つけ、登録した人のプライベートなライブラリと顔を照合します。</li>
+                    <li><strong>アプリで確認する。</strong> インストールできるウェブアプリで、最新のスナップショット、誰が認識されたか、カメラごとの 1 日のタイムラインを確認できます。</li>
+                    <li><strong>控えめな通知を受け取る。</strong> オプションの通知は何かが起きたことだけを伝え、画像も名前も含みません。庭にいる間は、すべての端末で一度に一時停止できます。</li>
+                </ol>
+
+                <h2>機能</h2>
+                <ul>
+                    <li><strong>見慣れた顔:</strong> 本人の同意を得て人物を登録すると、各イベントが「認識済み」「認識されなかった顔」「顔がはっきり見えなかった人」のいずれかで表示されます。</li>
+                    <li><strong>1 日をひと目で:</strong> 活動タイムラインは、各カメラのイベントを 1 日を通して表示し、カメラ、結果、時刻で絞り込めます。カメラがオフラインだった時間や通知を一時停止していた時間も並べて表示します。</li>
+                    <li><strong>何も明かさない通知:</strong> プッシュ通知は暗号化され、画像も名前も含みません。認識されなかった顔のときだけ通知を受け取ることも、すべての端末で一度に一時停止することもできます。</li>
+                    <li><strong>招待制のアクセス:</strong> スマートフォンやパソコンは招待で有効化し、いつでも取り消せます。現時点では、招待された端末はすべて顔のライブラリを含めて完全にアクセスできます。</li>
+                    <li><strong>小さく保たれる保存容量:</strong> イベントは経過時間と合計サイズに応じて削除され、登録した顔は別に保管されます。プライベートな画像がアプリのオフラインキャッシュに入ることはありません。</li>
+                    <li><strong>カメラなしで試す:</strong> ローカルのデモは架空の場面と人物を描き、実際の認識は使わず、停止すると自動で削除されます。</li>
+                </ul>
+
+                <h2>ボンネットの下で</h2>
+                <p>Home Monitor は 2 つの部分からなります。コレクターに必要なのは Python と Pillow だけです。サーバーは Python 3.12、FastAPI、SQLite で動き、OpenCV と ONNX Runtime で 3 つの小さなモデルを使います。YOLOX-Nano が人物を、YuNet が顔を見つけ、SFace が顔を照合します。グラフィックカードのない ARM64 プロセッサー向けに設計されています。自分とコレクターは Tailscale 経由で非公開にサーバーへ接続し、オプションの公開アクセスは Cloudflare Tunnel と強化した Caddy リスナーを通ります。このプロジェクトは GPL-3.0-or-later ライセンスのオープンソースです。</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">もっと発見する</span><h2 id="related-title">こちらもいかがですか</h2></div><p><a href="index.html#collection" hreflang="ja-JP">すべての作品を見る ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="threadmark.html" hreflang="ja-JP">
+                        <div class="collection-image"><img src="../assets/optimized/threadmark-card-2b075900-640.webp" srcset="../assets/optimized/threadmark-card-2b075900-320.webp 320w, ../assets/optimized/threadmark-card-2b075900-640.webp 640w, ../assets/optimized/threadmark-card-2b075900-960.webp 960w, ../assets/optimized/threadmark-card-2b075900-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">毎日の道具</div>
+                        <h3>Threadmark <span aria-hidden="true">↗</span></h3>
+                        <p>にぎやかな WhatsApp グループと Gmail を、自分に関係のあることだけの短いリストに。支払い、打ち合わせ、締め切りを拾い出します。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="thermostat.html" hreflang="ja-JP">
+                        <div class="collection-image"><img src="../assets/optimized/thermostat-feature-graphic-df5af629-640.webp" srcset="../assets/optimized/thermostat-feature-graphic-df5af629-320.webp 320w, ../assets/optimized/thermostat-feature-graphic-df5af629-640.webp 640w, ../assets/optimized/thermostat-feature-graphic-df5af629-960.webp 960w, ../assets/optimized/thermostat-feature-graphic-df5af629-1280.webp 1280w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">毎日の道具</div>
+                        <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+                        <p>センサーの履歴と温度グラフで、家の暖かさを確認できます。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="ja-JP">
+                        <div class="collection-image"><img src="../assets/optimized/pwa-invite-console-card-4757a021-640.webp" srcset="../assets/optimized/pwa-invite-console-card-4757a021-320.webp 320w, ../assets/optimized/pwa-invite-console-card-4757a021-640.webp 640w, ../assets/optimized/pwa-invite-console-card-4757a021-960.webp 960w, ../assets/optimized/pwa-invite-console-card-4757a021-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">舞台裏の道具</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>非公開のWebアプリへの招待や端末をまとめて管理する、小さなコンソール。</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=7" defer></script>
+    <script src="../language.js?v=7" defer></script>
+</body>
+</html>

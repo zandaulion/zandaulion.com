@@ -8,7 +8,7 @@ Un atelier ludique pour les idées curieuses : des applications, des jeux et de 
 
 **[Visitez zandaulion.com](https://zandaulion.com/)** · [RCollection roumaine](https://zandaulion.com/ro/index.html)
 
-Ce référentiel contient le site Web Zandaulion : une collection consultable de 25 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
+Ce référentiel contient le site Web Zandaulion : une collection consultable de 26 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
 
 ## Traductions du README
 
@@ -39,6 +39,7 @@ Modifiez le README anglais et les catalogues correspondants dans `locales/readme
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Hearth OCR | [hearth.html](hearth.html) |
+| Home Monitor | [homemonitor.html](homemonitor.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan, anciennement Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -163,7 +164,7 @@ node --test scripts/test_language.cjs
 ```
 
 - La vérification de build détecte les sorties générées obsolètes et les traductions manquantes.
-- La vérification du site couvre les 324 pages HTML : 12 pages d’accueil, 300 pages de projet, dix avis de confidentialité, une redirection de compatibilité et la page 404. Il vérifie les liens locaux, les actifs, les identifiants en double en dehors du balisage de confidentialité préservé, les métadonnées de la langue du projet, les liens SEO réciproques et la direction arabe. Avec `--url`, il vérifie également les réponses HTTP et compare les avis de confidentialité envoyés avec leurs fichiers sources.
+- La vérification du site couvre les 336 pages HTML : 12 pages d’accueil, 312 pages de projet, dix avis de confidentialité, une redirection de compatibilité et la page 404. Il vérifie les liens locaux, les actifs, les identifiants en double en dehors du balisage de confidentialité préservé, les métadonnées de la langue du projet, les liens SEO réciproques et la direction arabe. Avec `--url`, il vérifie également les réponses HTTP et compare les avis de confidentialité envoyés avec leurs fichiers sources.
 - Les tests linguistiques couvrent la priorité des préférences, la correspondance régionale, le stockage bloqué, les racines des fichiers et des sous-répertoires, le comportement de redirection et la préservation des sections.
 
 Pour les vérifications de liens hors ligne, exécutez `python scripts/check_site.py` sans `--url`. Examinez également les pages concernées dans le navigateur : mise en page mobile, direction arabe, changement de langue, commandes du clavier de la galerie et interactions avec l'éditeur.

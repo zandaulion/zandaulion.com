@@ -8,7 +8,7 @@
 
 **[zandaulion.com にアクセスしてください](https://zandaulion.com/)** · [ルーマニアのコレクション](https://zandaulion.com/ro/index.html)
 
-このリポジトリには、25 のプロジェクトの検索可能なコレクション、個々のプロジェクト ページ、および対話型の Sankey 図エディターである Zandaulion Web サイトが含まれています。ホームページとすべてのプロジェクト ページは 12 か国語で利用できます。サイトは静的 HTML、CSS、およびバニラ JavaScript で、GitHub Pages でホストされています。
+このリポジトリには、26 のプロジェクトの検索可能なコレクション、個々のプロジェクト ページ、および対話型の Sankey 図エディターである Zandaulion Web サイトが含まれています。ホームページとすべてのプロジェクト ページは 12 か国語で利用できます。サイトは静的 HTML、CSS、およびバニラ JavaScript で、GitHub Pages でホストされています。
 
 ## READMEの翻訳
 
@@ -39,6 +39,7 @@
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Hearth OCR | [hearth.html](hearth.html) |
+| Home Monitor | [homemonitor.html](homemonitor.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan（旧称Kerfloom） | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -163,7 +164,7 @@ node --test scripts/test_language.cjs
 ```
 
 - ビルド チェックでは、生成された出力が古くなり、翻訳が欠落していることが検出されます。
-- サイトチェックは、12 のホームページ、300 のプロジェクトページ、10 のプライバシー通知、1 つの互換性リダイレクト、404 ページを含む、全 324 HTML ページを対象とします。 ローカル リンク、アセット、保存されたプライバシー マークアップ外の重複 ID、プロジェクト言語メタデータ、SEO 相互リンク、およびアラビア語の方向をチェックします。 `--url` では、HTTP の応答もチェックし、提供されたプライバシー通知とそのソース ファイルを比較します。
+- サイトチェックは、12 のホームページ、312 のプロジェクトページ、10 のプライバシー通知、1 つの互換性リダイレクト、404 ページを含む、全 336 HTML ページを対象とします。 ローカル リンク、アセット、保存されたプライバシー マークアップ外の重複 ID、プロジェクト言語メタデータ、SEO 相互リンク、およびアラビア語の方向をチェックします。 `--url` では、HTTP の応答もチェックし、提供されたプライバシー通知とそのソース ファイルを比較します。
 - 言語テストでは、設定の優先順位、地域の一致、ブロックされたストレージ、ファイルとサブディレクトリのルート、リダイレクト動作、セクションの保存が対象になります。
 
 オフライン リンク チェックの場合は、`--url` を使用せずに `python scripts/check_site.py` を実行します。ブラウザ内の影響を受けるページも確認します: モバイル レイアウト、アラビア語の方向、言語の切り替え、ギャラリーのキーボード コントロール、エディターの操作。

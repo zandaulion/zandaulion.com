@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" dir="ltr">
+<head>
+    <!-- Content checked against home-monitoring commit 8309744 (2026-10-30). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home Monitor 是一个自托管的家庭摄像头查看应用：在你自己的服务器上识别人和人脸，提供每日活动时间线，提醒中不含任何图片或姓名。">
+    <title>Home Monitor - 项目详情</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=9">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2-32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&amp;family=Noto+Sans+JP&amp;family=Noto+Sans+KR&amp;family=Noto+Sans+SC&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts.css?v=1">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/zh-cn/homemonitor.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/homemonitor.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/homemonitor.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/homemonitor.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/homemonitor.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/homemonitor.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/homemonitor.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/homemonitor.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/homemonitor.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/homemonitor.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/homemonitor.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/homemonitor.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/homemonitor.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/homemonitor.html">
+    <!-- project-locales:end -->
+
+    <!-- social:start -->
+    <meta property="og:site_name" content="Zandaulion">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home Monitor — Zandaulion">
+    <meta property="og:description" content="Home Monitor 是一个自托管的家庭摄像头查看应用：在你自己的服务器上识别人和人脸，提供每日活动时间线，提醒中不含任何图片或姓名。">
+    <meta property="og:url" content="https://zandaulion.com/zh-cn/homemonitor.html">
+    <meta property="og:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Home Monitor — Zandaulion">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home Monitor — Zandaulion">
+    <meta name="twitter:description" content="Home Monitor 是一个自托管的家庭摄像头查看应用：在你自己的服务器上识别人和人脸，提供每日活动时间线，提醒中不含任何图片或姓名。">
+    <meta name="twitter:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta name="twitter:image:alt" content="Home Monitor — Zandaulion">
+    <!-- social:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="homemonitor.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="zh-CN">← 返回工作坊</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">日常工具</span>
+                    <h1>Home Monitor</h1>
+                    <p class="project-lead">你家里的摄像头：熟悉的面孔在你自己的服务器上识别，一条安静的时间线告诉你谁来过。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/home-monitoring" class="btn btn-outline" target="_blank" rel="noopener noreferrer">在 GitHub 上查看</a>
+                    </div>
+                    <p class="availability-note">Home Monitor 采用自托管方式：每个人运行自己的私有副本。</p>
+                </div>
+                <img src="../assets/HomeMonitor/home-monitor-desktop.png" alt="概览页面，显示提醒设置、摄像头状态，以及三个演示摄像头的快照" class="project-hero-image hero-landscape hero-top">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>关于该应用程序</h2>
+                <p>Home Monitor 是一个自托管的家庭摄像头查看应用。放在摄像头旁边的一个小型采集器获取摄像头快照，有动静时就发送画面。然后你自己的服务器查找人和人脸，并在可安装的网页应用中显示结果，附带当天的时间线。</p>
+                <p>连续录像保留在摄像头的 SD 卡上；服务器只保存选中的快照。人和人脸识别都在服务器自己的处理器上运行，因此不会有任何外部服务收到你的图片。</p>
+                <p>识别只是一种估计。Home Monitor 会谨慎地比对人脸，看不清的人脸不做识别，但它不检查人脸是否为真人，不保证一定能认出身份，也不会在不同摄像头之间跟踪某个人。只登记同意的人，遇到意外的匹配请自行核实。</p>
+
+                <h2>图片集</h2>
+                <p>这些截图中的场景、人物和事件都由应用的演示生成，没有使用任何真实的摄像头图像。</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/HomeMonitor/home-monitor-desktop.png" alt="桌面端的概览页面，显示提醒设置、摄像头状态，以及三个演示摄像头的快照" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                    <img src="../assets/HomeMonitor/home-monitor-activity.png" alt="三个摄像头一天的活动，按已识别人脸、未识别人脸以及看不到脸的人分色显示" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                </div>
+                <div class="gallery-grid">
+                    <img src="../assets/HomeMonitor/home-monitor-tablet.png" alt="平板上的概览页面，摄像头下方是最近的活动" class="gallery-img" loading="lazy" decoding="async" width="834" height="1112">
+                    <img src="../assets/HomeMonitor/home-monitor-mobile.png" alt="手机上的摄像头快照" class="gallery-img" loading="lazy" decoding="async" width="390" height="844">
+                </div>
+
+                <h2>它是如何运作的</h2>
+                <ol>
+                    <li><strong>在摄像头旁采集。</strong> 摄像头附近的一台小设备每两秒检查一次各摄像头的快照，只在有动静时上传画面，另外每 15 秒上传一张。</li>
+                    <li><strong>在你的服务器上识别。</strong> 服务器不用显卡，用处理器找出人和人脸，并将人脸与你登记的人员的私有库进行比对。</li>
+                    <li><strong>在应用中查看。</strong> 可安装的网页应用会显示最新的快照、识别出了谁，以及每个摄像头当天的时间线。</li>
+                    <li><strong>收到低调的提醒。</strong> 可选的通知只说明发生了什么，不含图片或姓名；你在院子里时，可以在所有设备上一次性暂停提醒。</li>
+                </ol>
+
+                <h2>功能</h2>
+                <ul>
+                    <li><strong>熟悉的面孔：</strong> 在征得本人同意后登记人员，每个事件都会被标记为已识别、未识别的人脸，或看不清脸的人。</li>
+                    <li><strong>一天一目了然：</strong> 活动时间线显示每个摄像头全天的事件，可按摄像头、结果和时间筛选，并同时显示摄像头离线或提醒暂停的时段。</li>
+                    <li><strong>不泄露任何信息的提醒：</strong> 推送通知经过加密，不含图片或姓名。你可以只在出现未识别人脸时收到提醒，也可以在所有设备上一次性暂停。</li>
+                    <li><strong>仅限邀请访问：</strong> 每部手机或电脑都通过邀请激活，并可随时撤销。目前，每台受邀设备都拥有完整权限，包括人脸库。</li>
+                    <li><strong>始终精简的存储：</strong> 事件会按时间和总大小删除，登记的人脸单独保存，私密图片绝不会进入应用的离线缓存。</li>
+                    <li><strong>无需摄像头即可试用：</strong> 本地演示会绘制虚构的场景和人物，不使用真实识别，停止后会自动删除。</li>
+                </ul>
+
+                <h2>在引擎盖下</h2>
+                <p>Home Monitor 由两部分组成。采集器只需要 Python 和 Pillow。服务器运行 Python 3.12、FastAPI 和 SQLite，并通过 OpenCV 和 ONNX Runtime 使用三个小模型：YOLOX-Nano 找人，YuNet 找人脸，SFace 比对人脸。它专为没有显卡的 ARM64 处理器设计。你和采集器通过 Tailscale 私密访问服务器；可选的公开访问经过 Cloudflare Tunnel 和一个加固的 Caddy 监听器。该项目以 GPL-3.0-or-later 许可证开源。</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">继续发现</span><h2 id="related-title">你可能还会喜欢…</h2></div><p><a href="index.html#collection" hreflang="zh-CN">查看全部作品 ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="threadmark.html" hreflang="zh-CN">
+                        <div class="collection-image"><img src="../assets/optimized/threadmark-card-2b075900-640.webp" srcset="../assets/optimized/threadmark-card-2b075900-320.webp 320w, ../assets/optimized/threadmark-card-2b075900-640.webp 640w, ../assets/optimized/threadmark-card-2b075900-960.webp 960w, ../assets/optimized/threadmark-card-2b075900-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">日常工具</div>
+                        <h3>Threadmark <span aria-hidden="true">↗</span></h3>
+                        <p>把热闹的 WhatsApp 群组和 Gmail 变成一份简短清单，只列出需要你处理的事：付款、会议和截止日期。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="thermostat.html" hreflang="zh-CN">
+                        <div class="collection-image"><img src="../assets/optimized/thermostat-feature-graphic-df5af629-640.webp" srcset="../assets/optimized/thermostat-feature-graphic-df5af629-320.webp 320w, ../assets/optimized/thermostat-feature-graphic-df5af629-640.webp 640w, ../assets/optimized/thermostat-feature-graphic-df5af629-960.webp 960w, ../assets/optimized/thermostat-feature-graphic-df5af629-1280.webp 1280w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">日常工具</div>
+                        <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+                        <p>通过传感器历史记录和温度图表，了解家里的冷暖。</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="zh-CN">
+                        <div class="collection-image"><img src="../assets/optimized/pwa-invite-console-card-4757a021-640.webp" srcset="../assets/optimized/pwa-invite-console-card-4757a021-320.webp 320w, ../assets/optimized/pwa-invite-console-card-4757a021-640.webp 640w, ../assets/optimized/pwa-invite-console-card-4757a021-960.webp 960w, ../assets/optimized/pwa-invite-console-card-4757a021-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">幕后工具</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>一个小控制台，统一管理私人网页应用的邀请和设备。</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=7" defer></script>
+    <script src="../language.js?v=7" defer></script>
+</body>
+</html>

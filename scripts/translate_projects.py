@@ -16,7 +16,7 @@ from site_locales import LANGUAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTECTED = sorted(BRANDS | {
-    'Google Play', 'GitHub', 'Gemini', 'OpenCV', 'MediaPipe', 'Nutrition5k', 'Box2D',
+    'Google Play', 'GitHub', 'Gemini', 'YOLOX-Nano', 'YuNet', 'SFace', 'FastAPI', 'Tailscale', 'Cloudflare Tunnel', 'Caddy', 'ARM64', 'OpenCV', 'MediaPipe', 'Nutrition5k', 'Box2D',
     'LibGDX', 'OpenGL ES', 'NASA', 'USGS', 'ISS', 'GPS', 'GPU', 'API', 'PWA',
     'JSON', 'CSV', 'SVG', 'DXF', 'PNG', 'ZIP', 'CNC', 'CAM', 'HTTPS', 'WebGL', 'Escape',
     'SQL', 'PostgreSQL', 'Elasticsearch', 'GPT-OSS', 'Node', 'Oracle Ampere A1', 'DDL', 'POC',

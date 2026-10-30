@@ -8,7 +8,7 @@ Eine spielerische Werkstatt für neugierige Ideen: Apps, Spiele und kleine Werkz
 
 **[Visit zandaulion.com](https://zandaulion.com/)** · [Rumänische Sammlung](https://zandaulion.com/ro/index.html)
 
-Dieses Repository enthält die Zandaulion-Website: eine durchsuchbare Sammlung von 25 Projekten, einzelne Projektseiten und einen interaktiven Sankey-Diagrammeditor. Die Homepage und jede Projektseite sind in 12 Sprachen verfügbar. Die Site ist statisch HTML, CSS und Vanilla JavaScript und wird auf GitHub Pages gehostet.
+Dieses Repository enthält die Zandaulion-Website: eine durchsuchbare Sammlung von 26 Projekten, einzelne Projektseiten und einen interaktiven Sankey-Diagrammeditor. Die Homepage und jede Projektseite sind in 12 Sprachen verfügbar. Die Site ist statisch HTML, CSS und Vanilla JavaScript und wird auf GitHub Pages gehostet.
 
 ## README-Übersetzungen
 
@@ -39,6 +39,7 @@ Bearbeiten Sie die englische README-Datei und die entsprechenden Kataloge in `lo
 | GravityTDG | [gravitytdg.html](gravitytdg.html) |
 | Gravity Warp | [gravitywarp.html](gravitywarp.html) |
 | Hearth OCR | [hearth.html](hearth.html) |
+| Home Monitor | [homemonitor.html](homemonitor.html) |
 | Intârzieri Tren | [intarzieri.html](intarzieri.html) |
 | Kerfspan, früher Kerfloom | [kerfloom.html](kerfloom.html) |
 | Magpie | [magpie.html](magpie.html) |
@@ -163,7 +164,7 @@ node --test scripts/test_language.cjs
 ```
 
 - Die Build-Prüfung erkennt veraltete generierte Ausgaben und fehlende Übersetzungen.
-- Die Website-Prüfung umfasst alle 324 HTML-Seiten: 12 Startseiten, 300 Projektseiten, zehn Datenschutzhinweise, eine Kompatibilitätsweiterleitung und die 404-Seite. Es überprüft lokale Links, Assets, doppelte IDs außerhalb des beibehaltenen Datenschutz-Markups, Metadaten der Projektsprache, wechselseitige SEO-Links und die arabische Richtung. Mit `--url` werden auch HTTP-Antworten überprüft und zugestellte Datenschutzhinweise mit ihren Quelldateien verglichen.
+- Die Website-Prüfung umfasst alle 336 HTML-Seiten: 12 Startseiten, 312 Projektseiten, zehn Datenschutzhinweise, eine Kompatibilitätsweiterleitung und die 404-Seite. Es überprüft lokale Links, Assets, doppelte IDs außerhalb des beibehaltenen Datenschutz-Markups, Metadaten der Projektsprache, wechselseitige SEO-Links und die arabische Richtung. Mit `--url` werden auch HTTP-Antworten überprüft und zugestellte Datenschutzhinweise mit ihren Quelldateien verglichen.
 - Die Sprachtests umfassen Präferenzpriorität, regionale Übereinstimmung, blockierten Speicher, Datei- und Unterverzeichnisstämme, Umleitungsverhalten und Abschnittserhaltung.
 
 Führen Sie für Offline-Linkprüfungen `python scripts/check_site.py` ohne `--url` aus. Überprüfen Sie auch die betroffenen Seiten im Browser: mobiles Layout, arabische Ausrichtung, Sprachumschaltung, Tastatursteuerung in der Galerie und Interaktionen mit dem Editor.

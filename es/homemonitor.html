@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es-ES" data-theme="light" dir="ltr">
+<head>
+    <!-- Content checked against home-monitoring commit 8309744 (2026-10-30). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home Monitor es una vista autoalojada de las cámaras de tu casa: reconocimiento de personas y caras en tu propio servidor, una cronología diaria de actividad y avisos que no contienen imágenes ni nombres.">
+    <title>Home Monitor - Detalles del proyecto</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=6">
+    <link rel="stylesheet" href="../project.css?v=9">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2-32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&amp;family=Noto+Sans+JP&amp;family=Noto+Sans+KR&amp;family=Noto+Sans+SC&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts.css?v=1">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/es/homemonitor.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/homemonitor.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/homemonitor.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/homemonitor.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/homemonitor.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/homemonitor.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/homemonitor.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/homemonitor.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/homemonitor.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/homemonitor.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/homemonitor.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/homemonitor.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/homemonitor.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/homemonitor.html">
+    <!-- project-locales:end -->
+
+    <!-- social:start -->
+    <meta property="og:site_name" content="Zandaulion">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home Monitor — Zandaulion">
+    <meta property="og:description" content="Home Monitor es una vista autoalojada de las cámaras de tu casa: reconocimiento de personas y caras en tu propio servidor, una cronología diaria de actividad y avisos que no contienen imágenes ni nombres.">
+    <meta property="og:url" content="https://zandaulion.com/es/homemonitor.html">
+    <meta property="og:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Home Monitor — Zandaulion">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home Monitor — Zandaulion">
+    <meta name="twitter:description" content="Home Monitor es una vista autoalojada de las cámaras de tu casa: reconocimiento de personas y caras en tu propio servidor, una cronología diaria de actividad y avisos que no contienen imágenes ni nombres.">
+    <meta name="twitter:image" content="https://zandaulion.com/assets/HomeMonitor/card.jpg">
+    <meta name="twitter:image:alt" content="Home Monitor — Zandaulion">
+    <!-- social:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="homemonitor.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="es-ES">← Volver al taller</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Herramientas cotidianas</span>
+                    <h1>Home Monitor</h1>
+                    <p class="project-lead">Las cámaras de tu casa, con las caras conocidas reconocidas en tu propio servidor y una cronología tranquila de quién ha pasado.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zandaulion/home-monitoring" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+                    </div>
+                    <p class="availability-note">Home Monitor es autoalojado: cada persona ejecuta su propia copia privada.</p>
+                </div>
+                <img src="../assets/HomeMonitor/home-monitor-desktop.png" alt="La vista general, con los ajustes de avisos, el estado de las cámaras e instantáneas de tres cámaras de demostración" class="project-hero-image hero-landscape hero-top">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>Acerca de la aplicación</h2>
+                <p>Home Monitor es una vista autoalojada de las cámaras de tu casa. Un pequeño recolector junto a las cámaras toma sus instantáneas y envía imágenes cuando algo se mueve. Después, tu propio servidor busca personas y caras y muestra los resultados en una app web instalable, con una cronología del día.</p>
+                <p>El vídeo continuo se queda en las tarjetas SD de las cámaras; el servidor solo guarda instantáneas seleccionadas. El reconocimiento de personas y caras se ejecuta en el procesador del servidor, así que ningún servicio externo recibe tus imágenes.</p>
+                <p>El reconocimiento es una estimación. Home Monitor asocia las caras con prudencia y deja sin identificar las que no son claras, pero no comprueba que una cara sea real, no garantiza una identificación ni sigue a una persona de una cámara a otra. Registra solo a personas que estén de acuerdo y revisa tú mismo las coincidencias inesperadas.</p>
+
+                <h2>Galería</h2>
+                <p>Las escenas, personas y eventos de estas capturas los genera la demo de la app; no se usa ninguna imagen real de cámaras.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/HomeMonitor/home-monitor-desktop.png" alt="La vista general en un ordenador, con los ajustes de avisos, el estado de las cámaras e instantáneas de tres cámaras de demostración" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                    <img src="../assets/HomeMonitor/home-monitor-activity.png" alt="Un día de actividad en tres cámaras, coloreado según caras reconocidas, caras no reconocidas y personas cuya cara no se veía" class="gallery-img" loading="lazy" decoding="async" width="1440" height="1000">
+                </div>
+                <div class="gallery-grid">
+                    <img src="../assets/HomeMonitor/home-monitor-tablet.png" alt="La vista general en una tableta, con la actividad reciente bajo las cámaras" class="gallery-img" loading="lazy" decoding="async" width="834" height="1112">
+                    <img src="../assets/HomeMonitor/home-monitor-mobile.png" alt="Instantáneas de las cámaras en un teléfono" class="gallery-img" loading="lazy" decoding="async" width="390" height="844">
+                </div>
+
+                <h2>como funciona</h2>
+                <ol>
+                    <li><strong>Recoge junto a las cámaras.</strong> Un pequeño equipo cerca de las cámaras revisa la instantánea de cada una cada dos segundos y sube imágenes solo cuando algo se mueve, más una cada 15 segundos.</li>
+                    <li><strong>Reconoce en tu servidor.</strong> El servidor encuentra personas y caras con su procesador, sin tarjeta gráfica, y compara las caras con una biblioteca privada de las personas que has registrado.</li>
+                    <li><strong>Revisa en la app.</strong> La app web instalable muestra las últimas instantáneas, a quién ha reconocido y una cronología del día para cada cámara.</li>
+                    <li><strong>Recibe un aviso discreto.</strong> Los avisos opcionales solo dicen que ha pasado algo, sin imagen ni nombre, y se pueden pausar en todos los dispositivos a la vez mientras estás en el patio.</li>
+                </ol>
+
+                <h2>Funciones</h2>
+                <ul>
+                    <li><strong>Caras conocidas:</strong> Registra a personas con su consentimiento, y cada evento se marca como reconocido, como cara no reconocida o como persona cuya cara no se veía con claridad.</li>
+                    <li><strong>Un día de un vistazo:</strong> La cronología de actividad muestra los eventos de cada cámara a lo largo del día, filtrados por cámara, resultado y hora, junto a los periodos en que una cámara estuvo desconectada o los avisos estaban en pausa.</li>
+                    <li><strong>Avisos que no revelan nada:</strong> Las notificaciones push están cifradas y no contienen imágenes ni nombres. Puedes recibir avisos solo por caras no reconocidas y pausarlos en todos los dispositivos a la vez.</li>
+                    <li><strong>Acceso solo por invitación:</strong> Cada teléfono u ordenador se activa con una invitación y se puede revocar en cualquier momento. Por ahora, cada dispositivo invitado tiene acceso completo, incluida la biblioteca de caras.</li>
+                    <li><strong>Un almacenamiento que se mantiene pequeño:</strong> Los eventos se borran por antigüedad y por tamaño total, las caras registradas se guardan aparte y las imágenes privadas nunca entran en la caché sin conexión de la app.</li>
+                    <li><strong>Pruébalo sin cámaras:</strong> Una demo local dibuja escenas y personas inventadas, no usa reconocimiento real y se borra sola cuando la detienes.</li>
+                </ul>
+
+                <h2>Debajo del capó</h2>
+                <p>Home Monitor tiene dos partes. El recolector solo necesita Python y Pillow. El servidor funciona con Python 3.12, FastAPI y SQLite, y usa OpenCV y ONNX Runtime con tres modelos pequeños: YOLOX-Nano encuentra personas, YuNet encuentra caras y SFace las compara. Está pensado para procesadores ARM64 sin tarjeta gráfica. Tú y el recolector llegáis al servidor de forma privada a través de Tailscale; el acceso público opcional pasa por Cloudflare Tunnel y un listener de Caddy reforzado. El proyecto es de código abierto con licencia GPL-3.0-or-later.</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Sigue descubriendo</span><h2 id="related-title">Quizá también te guste…</h2></div><p><a href="index.html#collection" hreflang="es-ES">Ver toda la colección ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+                    <a href="threadmark.html" hreflang="es-ES">
+                        <div class="collection-image"><img src="../assets/optimized/threadmark-card-2b075900-640.webp" srcset="../assets/optimized/threadmark-card-2b075900-320.webp 320w, ../assets/optimized/threadmark-card-2b075900-640.webp 640w, ../assets/optimized/threadmark-card-2b075900-960.webp 960w, ../assets/optimized/threadmark-card-2b075900-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Herramientas cotidianas</div>
+                        <h3>Threadmark <span aria-hidden="true">↗</span></h3>
+                        <p>Convierte grupos de WhatsApp saturados y Gmail en una lista corta de lo que te necesita: pagos, reuniones y plazos.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="everyday">
+                    <a href="thermostat.html" hreflang="es-ES">
+                        <div class="collection-image"><img src="../assets/optimized/thermostat-feature-graphic-df5af629-640.webp" srcset="../assets/optimized/thermostat-feature-graphic-df5af629-320.webp 320w, ../assets/optimized/thermostat-feature-graphic-df5af629-640.webp 640w, ../assets/optimized/thermostat-feature-graphic-df5af629-960.webp 960w, ../assets/optimized/thermostat-feature-graphic-df5af629-1280.webp 1280w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Herramientas cotidianas</div>
+                        <h3>Thermostat Monitor <span aria-hidden="true">↗</span></h3>
+                        <p>Consulta la temperatura de casa con el historial de sensores y gráficos.</p>
+                    </a>
+                </article>
+                <article class="collection-card" data-category="behind">
+                    <a href="pwainvite.html" hreflang="es-ES">
+                        <div class="collection-image"><img src="../assets/optimized/pwa-invite-console-card-4757a021-640.webp" srcset="../assets/optimized/pwa-invite-console-card-4757a021-320.webp 320w, ../assets/optimized/pwa-invite-console-card-4757a021-640.webp 640w, ../assets/optimized/pwa-invite-console-card-4757a021-960.webp 960w, ../assets/optimized/pwa-invite-console-card-4757a021-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+                        <div class="collection-tag">Entre bastidores</div>
+                        <h3>PWA Invite Console <span aria-hidden="true">↗</span></h3>
+                        <p>Una pequeña consola para gestionar invitaciones y dispositivos en aplicaciones web privadas.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=5" defer></script>
+    <script src="../project.js?v=7" defer></script>
+    <script src="../language.js?v=7" defer></script>
+</body>
+</html>
