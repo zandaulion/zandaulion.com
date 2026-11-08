@@ -13,6 +13,8 @@ PRIVACY_PATHS = (
     'plate-privacy.html',
 )
 PRIVACY_CANONICAL = {'plate-privacy.html': 'bitey-privacy.html'}
+# Newer app terms pages: indexed and link-checked, but not part of the preserved privacy baseline.
+LEGAL_PATHS = ('gravitytdg-terms.html',)
 
 
 def verify_privacy_assets(root):

@@ -11,7 +11,7 @@ from urllib.parse import quote, unquote, urlsplit
 from urllib.request import urlopen
 from build_locales import LANGUAGES
 from project_locales import PROJECTS, PATHS, FILES
-from site_contracts import ORIGIN, PRIVACY_PATHS, PRIVACY_CANONICAL, verify_privacy_assets
+from site_contracts import ORIGIN, PRIVACY_PATHS, PRIVACY_CANONICAL, LEGAL_PATHS, verify_privacy_assets
 from discovery import PageMetadata, SITEMAP_NS, XHTML_NS, social_images
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -74,6 +74,14 @@ def check(base_url=None):
         expected = ORIGIN + PRIVACY_CANONICAL.get(route, route)
         if parser.canonicals != [expected]:
             errors.append(f"{route}: canonical must be {expected}")
+    for route in LEGAL_PATHS:
+        if not (ROOT / route).is_file():
+            errors.append(f"Missing legal page: /{route}")
+            continue
+        parser = Links()
+        parser.feed((ROOT / route).read_text(encoding="utf-8"))
+        if parser.canonicals != [ORIGIN + route]:
+            errors.append(f"{route}: canonical must be {ORIGIN + route}")
     for lang, filenames in PROJECTS.items():
         for filename in filenames:
             page = ROOT / PATHS[lang] / filename
@@ -109,7 +117,7 @@ def check(base_url=None):
                 if not value or parser.meta.get(key) != [value]:
                     errors.append(f'{page.relative_to(ROOT)}: incorrect or duplicate {key}')
             sitemap_pages[meta.canonical] = meta.alternates
-        if page.name in PRIVACY_PATHS:
+        if page.name in PRIVACY_PATHS or page.name in LEGAL_PATHS:
             sitemap_pages[parser.canonicals[0]] = {}
         if page.name in FILES:
             expected_lang = next((lang for lang, path in PATHS.items() if path and page.parent == ROOT / path), 'en-US')

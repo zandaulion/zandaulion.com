@@ -34,13 +34,16 @@ class DiscoveryTests(unittest.TestCase):
             policy = '<link rel="canonical" href="https://zandaulion.com/policy.html">'
             (root / 'policy.html').write_text(policy)
             (root / 'old-policy.html').write_text(policy)
+            (root / 'terms.html').write_text('<link rel="canonical" href="https://zandaulion.com/terms.html">')
             content = ('<link rel="canonical" href="https://zandaulion.com/ro/">'
                        '<link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/">')
-            with patch('discovery.PRIVACY_PATHS', ('policy.html', 'old-policy.html')):
+            with patch('discovery.PRIVACY_PATHS', ('policy.html', 'old-policy.html')), \
+                    patch('discovery.LEGAL_PATHS', ('terms.html',)):
                 outputs = discovery_outputs(root, {root / 'ro/index.html': content, root / '404.html': '<h1>Error</h1>'})
             nodes = ET.fromstring(outputs[root / 'sitemap.xml']).findall(f'{{{SITEMAP_NS}}}url')
             self.assertEqual([node.findtext(f'{{{SITEMAP_NS}}}loc') for node in nodes],
-                             ['https://zandaulion.com/policy.html', 'https://zandaulion.com/ro/'])
+                             ['https://zandaulion.com/policy.html', 'https://zandaulion.com/ro/',
+                              'https://zandaulion.com/terms.html'])
             alternate = nodes[1].find(f'{{{XHTML_NS}}}link')
             self.assertEqual(alternate.attrib, {'rel': 'alternate', 'hreflang': 'ro', 'href': 'https://zandaulion.com/ro/'})
             self.assertNotIn('lastmod', outputs[root / 'sitemap.xml'])
