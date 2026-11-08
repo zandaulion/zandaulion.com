@@ -6,6 +6,7 @@
   "Thread your way through gravity wells in a retro physics arcade game.": "在复古物理街机游戏中穿行于引力井之间。",
   "Download on Google Play": "下载Google Play",
   "Privacy Policy": "隐私政策（英文）",
+  "Terms of Service": "服务条款",
   "Gravity Warp Game": "Gravity Warp 游戏",
   "About The Game": "关于游戏",
   "Gravity Warp is a high-speed, retro pixel-art physics arcade game built natively in Kotlin using the LibGDX framework. Navigate your starship through an endless, toroidal space using inverse-square gravity wells. Touching the screen creates a powerful gravitational pull that you must use to slingshot your ship, collect stardust, and outmaneuver explosive drifting and hunter mines.": "Gravity Warp 是一款高速、复古像素艺术物理街机游戏，使用 LibGDX 框架在 Kotlin 中原生构建。使用平方反比重力井驾驶您的星际飞船穿过无尽的环形空间。触摸屏幕会产生强大的引力，你必须利用它弹射你的飞船、收集星尘，并智取爆炸性漂流和猎雷。",

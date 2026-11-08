@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from html import escape
 from html.parser import HTMLParser
 from urllib.parse import quote
-from site_contracts import ORIGIN, PRIVACY_PATHS
+from site_contracts import ORIGIN, PRIVACY_PATHS, LEGAL_PATHS
 
 SOCIAL_BLOCK = re.compile(r'\s*<!-- social:start -->.*?<!-- social:end -->', re.S)
 SITEMAP_NS = 'http://www.sitemaps.org/schemas/sitemap/0.9'
@@ -111,7 +111,7 @@ def discovery_outputs(root, pages):
     urlset = ET.Element(f'{{{SITEMAP_NS}}}urlset')
     canonical_pages = {}
     candidates = [content for path, content in pages.items() if path.suffix == '.html' and path.name != '404.html']
-    candidates += [(root / filename).read_text(encoding='utf-8') for filename in PRIVACY_PATHS]
+    candidates += [(root / filename).read_text(encoding='utf-8') for filename in (*PRIVACY_PATHS, *LEGAL_PATHS)]
     for content in candidates:
         metadata = PageMetadata(content)
         if not metadata.canonical.startswith(ORIGIN):
