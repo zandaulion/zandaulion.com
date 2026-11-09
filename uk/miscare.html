@@ -65,8 +65,7 @@
                     <a href="https://play.google.com/store/apps/details?id=com.zandaulion.miscare" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Завантажити на Google Play</a>
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Відкрити вебзастосунок</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Переглянути на GitHub</a>
-                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">Завантажити попередню версію для Android</a>
-                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Примітки до випуску та контрольні суми</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Завантажити APK</a>
                 </div>
                 </div>
                 <img src="../assets/Miscare/feature_graphic.jpg" alt="Додаток Mișcare" class="project-hero-image">
@@ -75,33 +74,37 @@
             <div class="project-content reveal">
 
 
-                <h2>Попередня версія для Android</h2>
-                <p><strong>Mișcare 0.1.0</strong> — попередня версія для Android 7.0 або новішого. Вона містить тренування з підказками, 45 ілюстрованих вправ, інтерфейс 12 мовами та локальний щоденник тренувань. Обліковий запис, сервер і дозвіл на доступ до інтернету не потрібні.</p>
-                <p>Застосунок Android має окремі локальні дані й не імпортує історію PWA автоматично. Імпорт JSON замінює поточний профіль і щоденник. Перегляньте <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">посібник із встановлення та резервного копіювання</a> щодо контрольних сум, сумісності підписів і перевірок, які ще належить виконати. Нагадування не реалізовано.</p>
+                <h2>Застосунок для Android</h2>
+                <p><strong>Mișcare</strong> доступний у Google Play для Android 7.0 або новішої версії, у продакшені з версії 0.1.1 (3 листопада 2026 року). Він містить заняття з підказками, 45 ілюстрованих вправ, 12 мов інтерфейсу, світлу або темну тему й локальний щоденник тренувань з резервною копією JSON. Обліковий запис, сервер чи дозвіл на Інтернет не потрібні.</p>
+                <p>Версія 0.1.1 показує кожен екран вибраною мовою, рахує вправи на утримання в секундах, а не в повтореннях, і тримає рівень «З нуля» на вашому рівні навіть лише з власною вагою. Також з’явилася темна тема, а орієнтовний час тепер залежить від вибраної кількості підходів.</p>
+                <p>Щоб установити вручну, завантажте підписаний APK з <a href="https://github.com/zandaulion/Miscare/releases">GitHub Releases</a>. Він має інший підпис, ніж версія з Play, тож жодна не може оновити іншу: експортуйте дані перед переходом. Застосунок для Android не імпортує історію з PWA, а імпорт JSON замінює поточний профіль і щоденник. Дивіться <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">посібник із встановлення та резервного копіювання</a> щодо контрольних сум, підпису та перевірок, що залишилися. Нагадування не реалізовано.</p>
 
                 <h2>Про проєкт</h2>
                 <p>Почніть з нуля. Рухайтесь у своєму власному темпі. Жодної провини, лише пристосування.</p>
-                <p>Mișcare — застосунок для адаптивних тренувань із локальною версією для Android і вебверсією для власного сервера. Короткі тренування, вибір обладнання та щоденник призначені для початківців і тих, хто повертається після перерви. Прогресувати можна за бажанням, а дні відпочинку не караються за перервану серію активних днів.</p>
+                <p>Mișcare — адаптивний застосунок для вправ із застосунком для Android у Google Play та веб-версією, яку ви розміщуєте самі. Він створений для початківців і тих, хто повертається після перерви: короткі заняття, вибір обладнання та щоденник. Прогрес — це вибір, а дні відпочинку не обривають жодної серії.</p>
                 <p>Відкривши програму, користувачі відразу вітаються повідомленням «Сьогоднішній сеанс» — готові до запуску одним дотиком. Якщо життя насичене, опція «Зробіть це 5 хвилин» одним клацанням миші скорочує тривалість тренування. Якщо життя заважає днями, немає перерваних смуг чи повідомлень провини; програма просто вітає вас назад за допомогою м’якої процедури повторного входу.</p>
-                <p>Власний PWA використовує Vanilla JavaScript, Node.js і SQLite з оновленнями pwa-kit і запрошеннями для пристроїв pwa-invite-console. Програма Android об’єднує інтерфейс і адаптивний механізм у Capacitor, зберігає свій профіль і журнал локально в IndexedDB і отримує виконувані оновлення через інсталяцію APK.</p>
+                <p>PWA, яку ви розміщуєте самі, використовує Vanilla JavaScript, Node.js і SQLite, з оновленнями pwa-kit та запрошеннями пристроїв через pwa-invite-console. Застосунок для Android пакує інтерфейс і адаптивний рушій у Capacitor, зберігає профіль і щоденник локально в IndexedDB та оновлюється через Google Play або встановленням новішого підписаного APK.</p>
 
                 <h2>Галерея</h2>
                 <div class="gallery-grid">
-                    <img src="../assets/Miscare/screenshot_01_today.jpg" alt="Ваш рух сьогодні — щоденна сесія та рівні" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="../assets/Miscare/screenshot_02_exercises.jpg" alt="Бібліотека вправ — від рівня 0 до просунутого" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="../assets/Miscare/screenshot_03_equipment.jpg" alt="Налаштування обладнання — миттєва адаптація" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="../assets/Miscare/screenshot_04_progress.jpg" alt="Прогрес без сорому — без втрачених смуг" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
+                    <img src="../assets/Miscare/play-01-today.jpg" alt="Щоденне заняття з рівнями інтенсивності, рекомендованою тривалістю, обладнанням та інструкціями до вправ." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-02-guided-session.jpg" alt="Призупинена вправа з підказками: ілюстрація, таймер, лічильник секунд утримання та керування підходами." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-03-exercise-library.jpg" alt="Бібліотека вправ для початківців з ілюстрованими рухами та потрібним обладнанням." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-04-equipment.jpg" alt="Налаштування обладнання: власна вага, стілець, стіна та необов’язкове домашнє обладнання." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-05-journal.jpg" alt="Приклад щоденника тренувань: п’ять активних днів, 35 хвилин і завершені заняття." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-06-your-data.jpg" alt="Налаштування мови й теми з експортом, імпортом і видаленням локальних даних." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
                 </div>
 
                 <h2>Можливості</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Починаючи з нуля:</strong> Базові вправи з вагою тіла — віджимання від стіни, вставання зі стільця, легкі сідничні містки й розтягування для рухливості плечей — з ілюстрованими підказками та фільтрами для захисту колін, попереку й зап’ясть.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Щоденні сеанси без тертя:</strong> На головному екрані миттєво відображається поточна рутина. Включає варіації одним дотиком, наприклад <em>"Зробіть це 5 хвилин"</em> і <em>«Вправа обміну»</em>, що супроводжується тихим таймером і звуковим сигналом Web Audio API.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Починаючи з нуля:</strong> Базові вправи з власною вагою (віджимання від стіни, вставання зі стільця, м’який сідничний міст, розтяжка для рухливості плечей) з ілюстрованими підказками 12 мовами та фільтрами захисту для колін, попереку й зап’ясть.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Щоденні сеанси без тертя:</strong> На головному екрані миттєво відображається поточна рутина. Включає варіації одним дотиком, наприклад <em>«Зробити 5 хв»</em> і <em>«Замінити іншою»</em>, з ненав’язливим таймером і м’яким сигналом через Web Audio API. Оберіть 1, 2 або 3 підходи, і орієнтовний час підлаштується.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔁 Заняття, що чергуються:</strong> Кожне завершене заняття просуває ротацію, тож ви проходите всі вправи, що вам підходять, а пропущений день повертає пропущене заняття. Типи рухів (жим, тяга, присідання, стегна, кор, литки, перенесення) теж чергуються, тож жодна група не з’являється в кожному занятті. Вправи на утримання рахуються в секундах.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Фільтри обладнання:</strong> Виберіть обладнання, яке у вас є, і зони, які ви хочете захистити; процедури адаптуються до цих виборів.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 Адаптивна логіка "No Shaming":</strong> Активні дні накопичуються як постійні віхи, а не крихкі смуги. Якщо сеанс оцінюється як «Трохи важкий», наступна програма автоматично зменшує інтенсивність; якщо повертається після перерви, призначається сеанс автоматичної щадної реадаптації.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 Адаптивна логіка "No Shaming":</strong> Активні дні накопичуються як постійні досягнення, а не як крихкі серії. Якщо заняття позначено як «Трохи важко», наступне автоматично знижує інтенсивність; якщо ви повертаєтеся після 4 днів або більше, автоматично планується м’яке заняття для повернення.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 Оновлення PWA:</strong> Інтегровано з <code>pwa-kit</code> для мережевого кешування Service Worker із штампуванням версії хешу вмісту та підказками щодо оновлення без переривання роботи.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 Сполучення пристрою PWA:</strong> Безпроблемна адаптація через <code>pwa-invite-console</code> коди сполучення (<code>XXXX-YYYY-ZZZZ</code>) випуск захищених, довгострокових маркерів сеансу пристрою.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 Подвійна тема та автономна стійкість:</strong> Автоматична світло-темна палітра з лісово-смарагдовими акцентами, повністю функціональна в автономному режимі за підтримки IndexedDB і LocalStorage.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 Світла чи темна тема та робота офлайн:</strong> Тема як у телефоні або вибрана в Налаштуваннях, зі смарагдово-зеленими акцентами; повністю працює офлайн завдяки IndexedDB і LocalStorage.</li>
                 </ul>
 
                 <h2>Архітектура та технічний стек</h2>

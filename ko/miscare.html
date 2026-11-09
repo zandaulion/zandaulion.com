@@ -65,8 +65,7 @@
                     <a href="https://play.google.com/store/apps/details?id=com.zandaulion.miscare" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Google Play에서 다운로드</a>
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">웹 앱 열기</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub에서 보기</a>
-                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">Android 미리보기 다운로드</a>
-                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">릴리스 노트 및 체크섬</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases" target="_blank" rel="noopener noreferrer" class="btn btn-outline">APK 다운로드</a>
                 </div>
                 </div>
                 <img src="../assets/Miscare/feature_graphic.jpg" alt="Mișcare 앱" class="project-hero-image">
@@ -75,33 +74,37 @@
             <div class="project-content reveal">
 
 
-                <h2>안드로이드 미리보기</h2>
-                <p><strong>Mișcare 0.1.0</strong> Android 7.0 이상용 초기 액세스 Android 다운로드입니다. 가이드 루틴, 45가지 운동 그림, 12가지 인터페이스 언어 및 로컬 운동 일지를 번들로 제공합니다. 계정, 서버 또는 인터넷 권한이 필요하지 않습니다.</p>
-                <p>Android 앱은 별도의 로컬 데이터로 시작하며 PWA 기록을 자동으로 가져오지 않습니다. JSON을 가져오면 현재 프로필과 운동 일지가 대체됩니다. 자세한 내용은 <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">설치 및 백업 가이드</a> 에서 체크섬, 서명 호환성, 아직 필요한 검증을 확인하세요. 알림은 구현되지 않았습니다.</p>
+                <h2>Android 앱</h2>
+                <p><strong>Mișcare</strong> 은 Android 7.0 이상용으로 Google Play에 출시되었으며, 버전 0.1.1(2026년 11월 3일)부터 정식 서비스 중입니다. 가이드 루틴, 그림이 있는 45가지 운동, 12개 인터페이스 언어, 밝은 테마 또는 어두운 테마, JSON 백업이 되는 기기 내 운동 기록을 담고 있습니다. 계정, 서버, 인터넷 권한이 필요 없습니다.</p>
+                <p>버전 0.1.1은 모든 화면을 선택한 언어로 보여 주고, 버티는 운동을 반복 횟수 대신 초 단위로 세며, 맨몸만 있어도 "0에서"를 내 레벨에 맞게 유지합니다. 어두운 테마도 추가되었고, 예상 시간은 이제 선택한 세트 수에 맞춰 바뀝니다.</p>
+                <p>직접 설치하려면 서명된 APK를 <a href="https://github.com/zandaulion/Miscare/releases">GitHub Releases</a>에서 내려받으세요. Play 버전과 서명이 달라 서로 업데이트할 수 없으므로, 바꾸기 전에 데이터를 내보내세요. Android 앱은 PWA 기록을 가져오지 않으며, JSON 가져오기는 현재 프로필과 기록을 대체합니다. 체크섬, 서명, 남은 확인 사항은 <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">설치 및 백업 가이드</a> 에서 확인하세요. 알림 기능은 구현되지 않았습니다.</p>
 
                 <h2>프로젝트 소개</h2>
                 <p>0부터 시작하세요. 자신만의 속도로 움직이세요. 죄책감은 없고 조정만 하면 됩니다.</p>
-                <p>Mișcare는 로컬 Android 버전과 자체 호스팅 웹 버전을 갖춘 맞춤형 운동 앱입니다. 초보자와 운동을 다시 시작하는 사람에게 짧은 루틴, 장비 선택, 운동 일지를 제공합니다. 난이도 상승은 선택 사항이며, 휴식일로 연속 운동 기록이 끊겨도 불이익이 없습니다.</p>
+                <p>Mișcare는 Google Play의 Android 앱과 직접 호스팅하는 웹 버전을 갖춘 적응형 운동 앱입니다. 초보자와 쉬었다가 다시 시작하는 사람을 위해 만들었으며, 짧은 루틴, 장비 선택, 기록을 제공합니다. 진도는 스스로 정하고, 쉬는 날에도 연속 기록이 끊기는 불이익은 없습니다.</p>
                 <p>앱을 열면 사용자에게 "오늘의 세션"이 바로 표시됩니다. 탭 한 번으로 시작할 준비가 되어 있습니다. 생활이 바쁘다면 원클릭 "5분만 투자" 옵션으로 운동 시간을 단축하세요. 며칠 동안 삶이 방해가 되더라도 끊어진 줄무늬나 죄책감 메시지는 없습니다. 앱은 부드러운 재진입 루틴으로 귀하를 다시 환영합니다.</p>
-                <p>자체 호스팅 PWA는 pwa-kit 업데이트 및 pwa-invite-console 장치 초대와 함께 Vanilla JavaScript, Node.js 및 SQLite를 사용합니다. Android 앱은 인터페이스와 적응형 엔진을 Capacitor에 번들로 묶고 해당 프로필과 저널을 IndexedDB에 로컬로 저장하며 APK 설치를 통해 실행 가능한 업데이트를 받습니다.</p>
+                <p>직접 호스팅하는 PWA는 Vanilla JavaScript, Node.js, SQLite를 사용하며 pwa-kit 업데이트와 pwa-invite-console 기기 초대를 지원합니다. Android 앱은 인터페이스와 적응형 엔진을 Capacitor에 담고, 프로필과 기록을 IndexedDB에 기기 내로 저장하며, Google Play 또는 더 새로운 서명된 APK 설치로 업데이트됩니다.</p>
 
                 <h2>갤러리</h2>
                 <div class="gallery-grid">
-                    <img src="../assets/Miscare/screenshot_01_today.jpg" alt="오늘의 움직임 — 일일 세션 및 레벨" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="../assets/Miscare/screenshot_02_exercises.jpg" alt="연습 라이브러리 — 레벨 0부터 고급까지" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="../assets/Miscare/screenshot_03_equipment.jpg" alt="장비 설정 - 즉각적인 적응" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="../assets/Miscare/screenshot_04_progress.jpg" alt="부끄러움 없는 발전 — 연패 없음" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
+                    <img src="../assets/Miscare/play-01-today.jpg" alt="강도 단계, 권장 시간, 장비, 운동 설명이 있는 오늘의 루틴." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-02-guided-session.jpg" alt="그림, 타이머, 버틴 시간(초) 카운터, 세트 조작 버튼이 있는 일시 중지된 가이드 운동." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-03-exercise-library.jpg" alt="그림으로 된 동작과 필요한 장비를 보여 주는 초보자용 운동 목록." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-04-equipment.jpg" alt="맨몸 운동, 의자, 벽, 선택적 홈 장비에 대한 장비 설정." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-05-journal.jpg" alt="활동한 5일, 35분, 완료한 세션이 있는 운동 기록 예시." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-06-your-data.jpg" alt="언어와 테마 설정, 기기 내 데이터 내보내기·가져오기·삭제 기능." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
                 </div>
 
                 <h2>기능</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 제로부터 시작하기:</strong> 벽 팔굽혀펴기, 의자에서 일어서기, 가벼운 힙 브리지, 어깨 가동성 스트레칭 등 기본 맨몸 운동에 그림 안내와 무릎·허리·손목 보호 필터를 제공합니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 마찰이 없는 일일 세션:</strong> 홈 화면에서는 오늘의 루틴을 바로 확인할 수 있습니다. 다음과 같은 원탭 변형이 포함됩니다. <em>"5분만 해주세요"</em> 그리고 <em>"스왑 운동"</em>, 무음 타이머와 웹 오디오 API 차임벨이 함께 울립니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 제로부터 시작하기:</strong> 기본 맨몸 동작(벽 팔굽혀펴기, 의자에서 일어서기, 부드러운 글루트 브리지, 어깨 가동성 스트레칭)을 12개 언어의 그림 가이드, 무릎·허리·손목 보호 필터와 함께 제공합니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 마찰이 없는 일일 세션:</strong> 홈 화면에서는 오늘의 루틴을 바로 확인할 수 있습니다. 다음과 같은 원탭 변형이 포함됩니다. <em>"5분으로 하기"</em> 그리고 <em>"다른 종목으로 바꾸기"</em>, 조용한 타이머와 Web Audio API의 부드러운 알림음이 함께합니다. 1, 2, 3세트 중에서 고르면 예상 시간도 그에 맞게 바뀝니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔁 돌아가며 바뀌는 세션:</strong> 세션을 마칠 때마다 순서가 한 칸씩 넘어가 나에게 맞는 모든 운동을 차례로 하게 되고, 건너뛴 날이 있으면 놓친 세션을 그대로 다시 받습니다. 동작 패턴(밀기, 당기기, 스쿼트, 엉덩관절, 코어, 종아리, 들고 걷기)도 번갈아 나와 어떤 그룹도 매 세션에 들어가지 않습니다. 버티는 운동은 초 단위로 셉니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>장비 필터:</strong> 보유하고 있는 장비와 보호하려는 영역을 선택하세요. 루틴은 이러한 선택에 맞춰 조정됩니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ "부끄러움 없음" 적응 논리:</strong> 활동적인 날은 깨지기 쉬운 연속 기록이 아닌 영구적인 이정표로 누적됩니다. 세션이 "약간 어려움"으로 평가되면 다음 루틴에서 자동으로 강도를 낮춥니다. 휴식 후 돌아오면 자동으로 부드러운 재적응 세션이 예약됩니다.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>❤️ "부끄러움 없음" 적응 논리:</strong> 활동한 날은 깨지기 쉬운 연속 기록이 아니라 사라지지 않는 성취로 쌓입니다. 세션을 "조금 힘들었다"로 평가하면 다음 루틴의 강도가 자동으로 낮아지고, 4일 이상 쉬었다가 돌아오면 부드러운 재적응 세션이 자동으로 잡힙니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 PWA 업데이트:</strong> 와 통합 <code>pwa-kit</code> 콘텐츠 해시 버전 스탬핑 및 무중단 업데이트 프롬프트를 통한 네트워크 우선 서비스 워커 캐싱을 위한 것입니다.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 PWA 장치 페어링:</strong> 원활한 온보딩 <code>pwa-invite-console</code> 페어링 코드(<code>XXXX-YYYY-ZZZZ</code>) 안전하고 수명이 긴 장치 세션 토큰을 발행합니다.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 듀얼 테마 및 오프라인 탄력성:</strong> 숲 에메랄드 액센트가 있는 자동 밝은/어두운 팔레트, IndexedDB 및 LocalStorage가 지원하는 완전한 기능의 오프라인.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 밝은 테마 또는 어두운 테마 &amp; 오프라인 사용:</strong> 휴대폰 테마를 따르거나 설정에서 고를 수 있으며 에메랄드그린 포인트가 들어갑니다. IndexedDB와 LocalStorage 덕분에 오프라인에서도 모든 기능이 작동합니다.</li>
                 </ul>
 
                 <h2>아키텍처 및 기술 스택</h2>

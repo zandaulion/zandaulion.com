@@ -65,8 +65,7 @@
                     <a href="https://play.google.com/store/apps/details?id=com.zandaulion.miscare" target="_blank" rel="noopener noreferrer" class="btn btn-primary">下载Google Play</a>
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">打开网页应用</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">在 GitHub 上查看</a>
-                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">下载安卓预览版</a>
-                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">发行说明和校验和</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases" target="_blank" rel="noopener noreferrer" class="btn btn-outline">下载APK</a>
                 </div>
                 </div>
                 <img src="../assets/Miscare/feature_graphic.jpg" alt="Mișcare 应用程序" class="project-hero-image">
@@ -75,33 +74,37 @@
             <div class="project-content reveal">
 
 
-                <h2>安卓预览版</h2>
-                <p><strong>Mișcare 0.1.0</strong> 是适用于 Android 7.0 或更高版本的抢先体验 Android 下载。它捆绑了指导性例程、45 个图解练习、12 种界面语言和本地锻炼日志。不需要帐户、服务器或互联网权限。</p>
-                <p>Android 应用程序以单独的本地数据启动；它不会自动导入 PWA 历史记录。 JSON 导入替换当前配置文件和日志。请参阅 <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">安装与备份指南</a> 用于校验和、签名兼容性和剩余验证。提醒未实施。</p>
+                <h2>Android 应用</h2>
+                <p><strong>Mișcare</strong> 已在 Google Play 上架，支持 Android 7.0 或更高版本，自 0.1.1 版（2026 年 11 月 3 日）起正式发布。它包含引导训练、45 个带插图的动作、12 种界面语言、浅色或深色主题，以及可用 JSON 备份的本地训练日志。无需账号、服务器或联网权限。</p>
+                <p>0.1.1 版让每个界面都以你选择的语言显示，保持类动作按秒数而不是次数计算，并且即使只用自身体重，“从零开始”也会保持在你的级别。它还新增了深色主题，预计时长现在会随你选择的组数变化。</p>
+                <p>如果想手动安装，请从 <a href="https://github.com/zandaulion/Miscare/releases">GitHub Releases</a>下载已签名的 APK。它的签名与 Play 版本不同，因此两者不能互相更新：切换前请先导出数据。Android 应用不会导入 PWA 的历史记录，JSON 导入会替换当前的个人资料和日志。校验和、签名及尚待完成的检查请参阅 <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">安装与备份指南</a> 了解详情。尚未实现提醒功能。</p>
 
                 <h2>关于项目</h2>
                 <p>从零开始。按照自己的步调移动。没有愧疚，只是调整。</p>
-                <p>Mișcare 是一款自适应锻炼应用，提供本地 Android 版和可自行托管的网页版。它为初学者和暂停锻炼后重新开始的人提供短时训练、器材选择和锻炼日志。是否进阶由你决定，休息日不会因打断连续锻炼记录而受到惩罚。</p>
+                <p>Mișcare 是一款自适应运动应用，既有 Google Play 上的 Android 应用，也有可自行托管的网页版。它为初学者和中断一段时间后重新开始的人设计，提供简短的训练、器材选择和日志。是否进阶由你决定，休息日也不会因为中断连续记录而受罚。</p>
                 <p>打开应用程序后，用户会直接看到“今天的会话”——只需轻按一下即可启动。如果生活变得忙碌，一键“Make it 5 分钟”选项可以缩短锻炼时间。如果生活连续几天受到阻碍，也不会出现中断的情况或内疚的信息；该应用程序只是以温和的重新进入程序欢迎您回来。</p>
-                <p>自托管 PWA 使用 Vanilla JavaScript、Node.js 和 SQLite，并具有 pwa-kit 更新和 pwa-invite-console 设备邀请。 Android 应用程序将界面和自适应引擎捆绑在 Capacitor 中，将其配置文件和日志本地存储在 IndexedDB 中，并通过 APK 安装接收可执行更新。</p>
+                <p>自行托管的 PWA 使用 Vanilla JavaScript、Node.js 和 SQLite，支持 pwa-kit 更新和 pwa-invite-console 设备邀请。Android 应用将界面和自适应引擎打包在 Capacitor 中，把个人资料和日志保存在本机的 IndexedDB 里，并通过 Google Play 或安装更新的已签名 APK 来更新。</p>
 
                 <h2>图片集</h2>
                 <div class="gallery-grid">
-                    <img src="../assets/Miscare/screenshot_01_today.jpg" alt="您今天的运动量 — 每日运动量和运动量" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="../assets/Miscare/screenshot_02_exercises.jpg" alt="练习库 — 从 0 级到高级" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="../assets/Miscare/screenshot_03_equipment.jpg" alt="设备设置 - 即时适应" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="../assets/Miscare/screenshot_04_progress.jpg" alt="无耻进步——不曾失去连胜" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
+                    <img src="../assets/Miscare/play-01-today.jpg" alt="今日训练，包含强度级别、建议时长、器材和动作说明。" class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-02-guided-session.jpg" alt="已暂停的引导动作，带插图、计时器、保持秒数计数器和组数控制。" class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-03-exercise-library.jpg" alt="面向初学者的动作库，包含带插图的动作和所需器材。" class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-04-equipment.jpg" alt="器材偏好：自身体重、椅子、墙面和可选的家用器材。" class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-05-journal.jpg" alt="示例训练日志，包含五个活跃日、35 分钟和已完成的训练。" class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="../assets/Miscare/play-06-your-data.jpg" alt="语言和主题设置，以及本地数据的导出、导入和删除控件。" class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
                 </div>
 
                 <h2>功能</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱从零开始：</strong> 基础自重运动（靠墙俯卧撑、椅子坐站、轻柔臀桥、肩部活动伸展）搭配温暖的插图视觉指南和针对膝盖、下背部和手腕的保护过滤器。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 零摩擦每日课程：</strong> 主屏幕立即满足今天的日常需求。包括一键变体，例如 <em>“5分钟”</em> 和 <em>《交换练习》</em>，伴随着安静的计时器和网络音频 API 铃声。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱从零开始：</strong> 基础自重动作（扶墙俯卧撑、从椅子上起立、温和臀桥、肩部活动度拉伸），配有 12 种语言的插图指南，以及保护膝盖、下背部和手腕的筛选。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ 零摩擦每日课程：</strong> 主屏幕立即满足今天的日常需求。包括一键变体，例如 <em>“改成5分钟”</em> 和 <em>“换一个动作”</em>，配有低调的计时器和通过 Web Audio API 播放的柔和提示音。可选择 1、2 或 3 组，预计时长会随之调整。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔁 轮换的训练：</strong> 每完成一次训练，轮换就前进一步，因此你会依次做到所有适合你的动作；跳过的一天会把错过的训练还给你。动作模式（推、拉、深蹲、髋部、核心、小腿、负重行走）也会交替，所以没有哪一组会出现在每次训练中。保持类动作按秒计算。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>设备过滤器：</strong> 选择您拥有的设备和您想要保护的区域；例程会适应这些选择。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿“不羞辱”自适应逻辑：</strong> 活跃天数是作为永久的里程碑累积起来的，而不是脆弱的连续记录。如果某次训练被评为“有点困难”，则下一次训练会自动降低强度；如果休息后返回，则会安排自动温和的重新适应课程。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿“不羞辱”自适应逻辑：</strong> 活跃日会累积为永久的成就，而不是容易中断的连续记录。如果某次训练被评为“有点吃力”，下一次训练会自动降低强度；如果你在 4 天或更久之后回来，会自动安排一次温和的恢复训练。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄PWA 更新：</strong> 集成于 <code>pwa-kit</code> 用于网络优先的 Service Worker 缓存，具有内容哈希版本标记和无中断更新提示。</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 PWA 设备配对：</strong> 无缝入职通过 <code>pwa-invite-console</code> 配对码（<code>XXXX-YYYY-ZZZZ</code>）发出安全、长期的设备会话令牌。</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 双主题和离线弹性：</strong> 自动明/暗调色板，带有森林翡翠色调，功能齐全的离线功能，由 IndexedDB 和 LocalStorage 支持。</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 浅色或深色主题与离线使用：</strong> 跟随手机主题，或在设置中选择，带有翡翠绿点缀；借助 IndexedDB 和 LocalStorage，可完全离线使用。</li>
                 </ul>
 
                 <h2>架构与技术堆栈</h2>
