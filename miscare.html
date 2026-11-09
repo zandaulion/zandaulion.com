@@ -65,8 +65,7 @@
                     <a href="https://play.google.com/store/apps/details?id=com.zandaulion.miscare" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download on Google Play</a>
                     <a href="https://miscare.zandaulion.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Launch Web App</a>
                     <a href="https://github.com/zandaulion/Miscare" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
-                    <a href="https://github.com/zandaulion/Miscare/releases/download/v0.1.0/Miscare-0.1.0.apk" class="btn btn-outline">Download Android preview</a>
-                    <a href="https://github.com/zandaulion/Miscare/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Release notes &amp; checksums</a>
+                    <a href="https://github.com/zandaulion/Miscare/releases" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Download APK</a>
                 </div>
                 </div>
                 <img src="assets/Miscare/feature_graphic.jpg" alt="Mișcare App" class="project-hero-image">
@@ -75,33 +74,37 @@
             <div class="project-content reveal">
 
 
-                <h2>Android Preview</h2>
-                <p><strong>Mișcare 0.1.0</strong> is an early-access Android download for Android 7.0 or newer. It bundles guided routines, 45 illustrated exercises, 12 interface languages, and a local workout journal. No account, server, or Internet permission is required.</p>
-                <p>The Android app starts with separate local data; it does not import PWA history automatically. JSON import replaces the current profile and journal. See the <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">installation and backup guide</a> for checksums, signing compatibility, and remaining validation. Reminders are not implemented.</p>
+                <h2>Android App</h2>
+                <p><strong>Mișcare</strong> is on Google Play for Android 7.0 or newer, in production since version 0.1.1 (3 November 2026). It bundles guided routines, 45 illustrated exercises, 12 interface languages, a light or dark theme, and a local workout journal with JSON backup. No account, server, or Internet permission is required.</p>
+                <p>Version 0.1.1 shows every screen in your chosen language, counts timed holds in seconds rather than repetitions, and keeps "From zero" at your level even with bodyweight only. It also adds a dark theme, and the time estimate now follows the number of sets you choose.</p>
+                <p>To install by hand instead, download the signed APK from <a href="https://github.com/zandaulion/Miscare/releases">GitHub Releases</a>. It carries a different signature from the Play version, so neither can update the other: export your data before switching. The Android app does not import PWA history, and JSON import replaces the current profile and journal. See the <a href="https://github.com/zandaulion/Miscare/blob/main/docs/android-release.md">installation and backup guide</a> for checksums, signing, and remaining checks. Reminders are not implemented.</p>
 
                 <h2>About The Project</h2>
                 <p>Start from zero. Move at your own pace. No guilt, just adjustment.</p>
-                <p>Mișcare is an adaptive exercise app with a local Android edition and a self-hosted web edition. It is designed for beginners and people returning after a break, with short routines, equipment choices, and a journal. Progression is a choice, and rest days carry no lost-streak penalty.</p>
+                <p>Mișcare is an adaptive exercise app with an Android app on Google Play and a self-hosted web edition. It is designed for beginners and people returning after a break, with short routines, equipment choices, and a journal. Progression is a choice, and rest days carry no lost-streak penalty.</p>
                 <p>Upon opening the app, users are greeted directly with "Today's Session" — ready to launch with a single tap. If life gets busy, a one-click "Make it 5 minutes" option shortens the workout. If life gets in the way for days, there are no broken streaks or guilt messages; the app simply welcomes you back with a gentle re-entry routine.</p>
-                <p>The self-hosted PWA uses Vanilla JavaScript, Node.js and SQLite, with pwa-kit updates and pwa-invite-console device invitations. The Android app bundles the interface and adaptive engine in Capacitor, stores its profile and journal locally in IndexedDB, and receives executable updates through APK installation.</p>
+                <p>The self-hosted PWA uses Vanilla JavaScript, Node.js and SQLite, with pwa-kit updates and pwa-invite-console device invitations. The Android app bundles the interface and adaptive engine in Capacitor, stores its profile and journal locally in IndexedDB, and is updated through Google Play or by installing a newer signed APK.</p>
 
                 <h2>Gallery</h2>
                 <div class="gallery-grid">
-                    <img src="assets/Miscare/screenshot_01_today.jpg" alt="Your Movement Today — Daily Session &amp; Levels" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="assets/Miscare/screenshot_02_exercises.jpg" alt="Exercise Library — From Level 0 to Advanced" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="assets/Miscare/screenshot_03_equipment.jpg" alt="Equipment Setup — Instant Adaptation" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
-                    <img src="assets/Miscare/screenshot_04_progress.jpg" alt="Progress Without Shame — No Lost Streaks" class="gallery-img" loading="lazy" decoding="async" width="460" height="1024">
+                    <img src="assets/Miscare/play-01-today.jpg" alt="Daily routine with intensity levels, suggested duration, equipment and exercise instructions." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="assets/Miscare/play-02-guided-session.jpg" alt="Paused guided exercise with an illustration, timer, a counter for seconds held and set controls." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="assets/Miscare/play-03-exercise-library.jpg" alt="Beginner exercise library with illustrated movements and equipment requirements." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="assets/Miscare/play-04-equipment.jpg" alt="Equipment preferences for bodyweight exercise, a chair, a wall and optional home equipment." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="assets/Miscare/play-05-journal.jpg" alt="Sample workout journal with five active days, 35 minutes and completed sessions." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
+                    <img src="assets/Miscare/play-06-your-data.jpg" alt="Settings for language and theme, with local data export, import and deletion controls." class="gallery-img" loading="lazy" decoding="async" width="720" height="1280">
                 </div>
 
                 <h2>Features</h2>
                 <ul>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Starting from Zero:</strong> Foundational bodyweight movements (wall push-ups, chair sit-to-stand, gentle glute bridges, shoulder mobility stretches) paired with warm illustrated visual guides and protection filters for knees, lower back, and wrists.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Zero-Friction Daily Sessions:</strong> The home screen serves today's routine immediately. Includes one-tap variations like <em>"Make it 5 min"</em> and <em>"Swap exercise"</em>, accompanied by a quiet timer and Web Audio API chime.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌱 Starting from Zero:</strong> Foundational bodyweight movements (wall push-ups, chair sit-to-stand, gentle glute bridges, shoulder mobility stretches) paired with warm illustrated visual guides in 12 languages and protection filters for knees, lower back, and wrists.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>⚡ Zero-Friction Daily Sessions:</strong> The home screen serves today's routine immediately. Includes one-tap variations like <em>"Make it 5 min"</em> and <em>"Swap for another"</em>, accompanied by a quiet timer and Web Audio API chime. Choose 1, 2, or 3 sets and the time estimate updates to match.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔁 Sessions That Rotate:</strong> Each completed session moves the rotation forward, so you work through every exercise that suits you, and a skipped day gives back the session you missed. Movement patterns (push, pull, squat, hinge, core, calves, carry) alternate too, so no group appears in every session. Timed holds are counted in seconds.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>Equipment filters:</strong> Choose the equipment you have and the areas you want to protect; routines adapt to those selections.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 "No Shaming" Adaptive Logic:</strong> Active days are accumulated as permanent milestones rather than fragile streaks. If a session is rated "A bit tough", the next routine scales intensity down automatically; if returning after a break, an automatic gentle re-adaptation session is scheduled.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🌿 "No Shaming" Adaptive Logic:</strong> Active days are accumulated as permanent milestones rather than fragile streaks. If a session is rated "A bit hard", the next routine scales intensity down automatically; if you return after 4 days or more, an automatic gentle re-adaptation session is scheduled.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔄 PWA Updates:</strong> Integrated with <code>pwa-kit</code> for network-first service worker caching with content-hash version stamping and non-disruptive update prompts.</li>
                     <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🔐 PWA Device Pairing:</strong> Seamless onboarding via <code>pwa-invite-console</code> pairing codes (<code>XXXX-YYYY-ZZZZ</code>) issuing secure, long-lived device session tokens.</li>
-                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 Dual Theme &amp; Offline Resilience:</strong> Automatic light/dark palette with forest-emerald accents, fully functional offline backed by IndexedDB and LocalStorage.</li>
+                    <li style="color: var(--text-muted); margin-bottom: 8px;"><strong>🎨 Light or Dark Theme &amp; Offline Resilience:</strong> Follow the phone's theme or choose one in Settings, with forest-emerald accents; fully functional offline, backed by IndexedDB and LocalStorage.</li>
                 </ul>
 
                 <h2>Architecture &amp; Tech Stack</h2>
