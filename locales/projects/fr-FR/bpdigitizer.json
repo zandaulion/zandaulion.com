@@ -6,7 +6,6 @@
   "One blood pressure log, in Android and web form. Record your readings, explore trends, and export your history.": "Un journal de tension artérielle, sous forme Android et Web. Enregistrez vos lectures, explorez les tendances et exportez votre historique.",
   "Open the Web App": "Ouvrez l'application Web",
   "Download Android APK": "Télécharger l'APK Android",
-  "Android Privacy Policy": "Politique de confidentialité Android",
   "BP Digitizer App": "Application BP Digitizer",
   "One app. Two ways to use it.": "Une application. Deux façons de l'utiliser.",
   "BP Digitizer helps you log blood pressure readings, explore their history, and keep your own records. Use the native Android app or open the PWA in your browser. Both can read your monitor with the camera, on your own device, and neither needs an account. The web version, previously listed here as wBP Digitizer, is part of the same project.": "BP Digitizer vous aide à enregistrer vos mesures de tension artérielle, à explorer leur historique et à tenir vos propres dossiers. Utilisez l'application Android native ou ouvrez la PWA dans votre navigateur. Les deux peuvent lire votre tensiomètre avec l'appareil photo, sur votre propre appareil, et aucune ne demande de compte. La version web, auparavant présentée ici sous le nom wBP Digitizer, fait partie du même projet.",
@@ -95,5 +94,6 @@
   "Explore admission history and simulate high school choices in Bucharest.": "Explorez les admissions passées et simulez vos choix de lycée à Bucarest.",
   "Behind the scenes": "Dans les coulisses",
   "The little building block that helps web apps work offline and stay up to date.": "Une petite brique qui aide les applications Web à fonctionner hors connexion et à rester à jour.",
-  "One small console for managing invitations and devices across private web apps.": "Une petite console pour gérer les invitations et les appareils des applications Web privées."
+  "One small console for managing invitations and devices across private web apps.": "Une petite console pour gérer les invitations et les appareils des applications Web privées.",
+  "Android Privacy Policy": "Politique de confidentialité Android"
 }

@@ -5,8 +5,6 @@
   "Play & explore": "遊びと探索",
   "Thread your way through gravity wells in a retro physics arcade game.": "レトロな物理アーケードゲームで、重力の井戸を縫って進みましょう。",
   "Download on Google Play": "Google Playでダウンロード",
-  "Privacy Policy": "プライバシーポリシー（英語）",
-  "Terms of Service": "利用規約（英語）",
   "Gravity Warp Game": "Gravity Warp ゲーム",
   "About The Game": "ゲームについて",
   "Gravity Warp is a high-speed, retro pixel-art physics arcade game built natively in Kotlin using the LibGDX framework. Navigate your starship through an endless, toroidal space using inverse-square gravity wells. Touching the screen creates a powerful gravitational pull that you must use to slingshot your ship, collect stardust, and outmaneuver explosive drifting and hunter mines.": "Gravity Warp は、LibGDX フレームワークを使用して Kotlin でネイティブに構築された、高速のレトロなピクセルアート物理アーケード ゲームです。逆正方形の重力井戸を使用して、無限のトロイダル空間を宇宙船で航行します。画面に触れると強力な重力が発生し、これを利用して船をスリングショットしたり、スターダストを集めたり、漂流する爆発物やハンター地雷を打ち破ったりする必要があります。",
@@ -39,5 +37,7 @@
   "Put your intuition for gravity to the test with orbital physics puzzles.": "軌道物理のパズルで、重力についての直感を試しましょう。",
   "Everyday tools": "毎日の道具",
   "Understand what changed in the companies you follow. Revisit your reasons.": "フォローしている企業で何が変わったかを理解し、自分の理由を見直す。",
-  "Give big family expenses a plan, from the first estimate to the last installment.": "最初の見積もりから最後の分割払いまで、家族の大きな出費を計画。"
+  "Give big family expenses a plan, from the first estimate to the last installment.": "最初の見積もりから最後の分割払いまで、家族の大きな出費を計画。",
+  "Privacy Policy": "プライバシーポリシー（英語）",
+  "Terms of Service": "利用規約（英語）"
 }

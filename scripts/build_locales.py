@@ -57,7 +57,7 @@ def build(check=False):
             content = content.replace(f'href="{root}{filename}" hreflang="en-US"', f'href="{filename}" hreflang="{lang}"')
         content = '\n'.join(line.rstrip() for line in content.splitlines()) + '\n'
         outputs[ROOT / path / 'index.html'] = content
-        shared = {key: catalog[key] for key in ('language', 'collection', 'about', 'hello', 'nav', 'home', 'return_home', 'english_page', 'skip', 'coffee', 'privacy', 'formerly')}
+        shared = {key: catalog[key] for key in ('language', 'collection', 'about', 'hello', 'nav', 'home', 'return_home', 'english_page', 'skip', 'coffee', 'privacy', 'privacy_group', 'terms_group', 'formerly')}
         messages = {} if lang == 'en-US' else json.loads((ROOT / f'locales/projects/{lang}/common.json').read_text(encoding='utf-8'))
         ui = {key: messages[value] if path else value for key, value in UI.items()}
         if '{n}' not in ui['count'] or '{total}' not in ui['count']:

@@ -6,7 +6,6 @@
   "One blood pressure log, in Android and web form. Record your readings, explore trends, and export your history.": "Um registro de pressão arterial, em formato Android e web. Grave suas leituras, explore tendências e exporte seu histórico.",
   "Open the Web App": "Abra o aplicativo da web",
   "Download Android APK": "Baixe o APK do Android",
-  "Android Privacy Policy": "Política de privacidade do Android",
   "BP Digitizer App": "Aplicativo BP Digitizer",
   "One app. Two ways to use it.": "Um aplicativo. Duas maneiras de usá-lo.",
   "BP Digitizer helps you log blood pressure readings, explore their history, and keep your own records. Use the native Android app or open the PWA in your browser. Both can read your monitor with the camera, on your own device, and neither needs an account. The web version, previously listed here as wBP Digitizer, is part of the same project.": "O BP Digitizer ajuda você a registrar suas medições de pressão arterial, explorar o histórico e manter seus próprios registros. Use o app nativo para Android ou abra a PWA no navegador. Os dois podem ler o seu medidor com a câmera, no seu próprio aparelho, e nenhum precisa de conta. A versão web, antes listada aqui como wBP Digitizer, faz parte do mesmo projeto.",
@@ -95,5 +94,6 @@
   "Explore admission history and simulate high school choices in Bucharest.": "Explore o histórico de admissões e simule escolhas de escolas de ensino médio em Bucareste.",
   "Behind the scenes": "Nos bastidores",
   "The little building block that helps web apps work offline and stay up to date.": "Uma pequena peça que ajuda aplicativos web a funcionar offline e ficar atualizados.",
-  "One small console for managing invitations and devices across private web apps.": "Um pequeno console para gerenciar convites e dispositivos em aplicativos web privados."
+  "One small console for managing invitations and devices across private web apps.": "Um pequeno console para gerenciar convites e dispositivos em aplicativos web privados.",
+  "Android Privacy Policy": "Política de privacidade do Android"
 }

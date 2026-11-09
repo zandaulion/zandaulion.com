@@ -7,8 +7,6 @@
   "Download on Google Play": "Google Playでダウンロード",
   "Launch Web App": "ウェブアプリを開く",
   "View on GitHub": "GitHubで見る",
-  "Privacy Policy": "プライバシーポリシー（英語）",
-  "Terms of Service": "利用規約（英語）",
   "Bitey App": "Bitey アプリ",
   "About The Project": "プロジェクトについて",
   "Photograph a meal, correct the portion, log it.": "食事の写真を撮り、部分を修正し、記録します。",
@@ -98,5 +96,7 @@
   "Creative tools": "創作の道具",
   "One photo becomes a 3D relief, sliced into layers for a metal portrait.": "1枚の写真を3Dレリーフに変え、層に分けて金属の肖像を作ります。",
   "Play & explore": "遊びと探索",
-  "Bend gravity and grow a garden in a quiet, physics-powered puzzle game.": "静かな物理パズルで重力を変え、庭を育てましょう。"
+  "Bend gravity and grow a garden in a quiet, physics-powered puzzle game.": "静かな物理パズルで重力を変え、庭を育てましょう。",
+  "Privacy Policy": "プライバシーポリシー（英語）",
+  "Terms of Service": "利用規約（英語）"
 }

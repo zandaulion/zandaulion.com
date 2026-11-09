@@ -5,8 +5,6 @@
   "Play & explore": "놀이와 탐험",
   "Bend gravity and grow a garden in a quiet, physics-powered puzzle game.": "차분한 물리 퍼즐 게임에서 중력을 바꾸며 정원을 가꿔보세요.",
   "Get it on Google Play": "Google Play에서 구매하세요",
-  "Privacy Policy": "개인정보 처리방침 (영어)",
-  "Terms of Service": "서비스 약관 (영어)",
   "Gravity Garden Game": "Gravity Garden 게임",
   "About The Game": "게임 소개",
   "Gravity Garden is a breathtaking, relaxing physics-based puzzle experience set in lush environments with glowing alien flora and mysterious bioluminescent crystals. Utilizing a custom Box2D physics engine, the game features a deep fertility and spawning pipeline where the movement, resting, and impacts of your seed directly influence the growth of your garden. Manipulate gravity in four directions across 8 distinct levels—each boasting unique mechanics like underwater currents, updrafts, and labyrinthine walls—as you manage nutrients to cultivate a vibrant, living ecosystem.": "Gravity Garden는 빛나는 외계 식물과 신비한 생물발광 크리스털이 있는 무성한 환경에서 펼쳐지는 숨 막힐 듯 편안하고 편안한 물리 기반 퍼즐 경험입니다. 맞춤형 Box2D 물리 엔진을 활용하는 이 게임은 씨앗의 움직임, 휴식 및 영향이 정원의 성장에 직접적인 영향을 미치는 깊은 번식력과 산란 파이프라인을 특징으로 합니다. 각각 수중 해류, 상승 기류, 미로 벽과 같은 고유한 메커니즘을 자랑하는 8개의 서로 다른 레벨에서 4방향으로 중력을 조작하여 영양분을 관리하여 활기차고 살아있는 생태계를 조성하세요.",
@@ -43,5 +41,7 @@
   "A place for stray thoughts, photos, and voice notes before they fly away.": "스치는 생각, 사진, 음성 메모가 사라지기 전에 모아두는 공간.",
   "Creative tools": "창작 도구",
   "Sankey Diagram Editor": "Sankey 다이어그램 편집기",
-  "Make a picture of where things flow. Build and export diagrams in your browser.": "무엇이 어디로 흐르는지 그려보세요. 브라우저에서 다이어그램을 만들고 내보낼 수 있어요."
+  "Make a picture of where things flow. Build and export diagrams in your browser.": "무엇이 어디로 흐르는지 그려보세요. 브라우저에서 다이어그램을 만들고 내보낼 수 있어요.",
+  "Privacy Policy": "개인정보 처리방침 (영어)",
+  "Terms of Service": "서비스 약관 (영어)"
 }

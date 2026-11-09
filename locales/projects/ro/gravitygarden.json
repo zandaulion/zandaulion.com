@@ -5,8 +5,6 @@
   "Play & explore": "Joacă și explorare",
   "Bend gravity and grow a garden in a quiet, physics-powered puzzle game.": "Schimbă gravitația și crește o grădină într-un joc liniștit de puzzle bazat pe fizică.",
   "Get it on Google Play": "Obțineți-l pe Google Play",
-  "Privacy Policy": "Politica de confidențialitate (în engleză)",
-  "Terms of Service": "Termeni și condiții (în engleză)",
   "Gravity Garden Game": "Jocul Gravity Garden",
   "About The Game": "Despre joc",
   "Gravity Garden is a breathtaking, relaxing physics-based puzzle experience set in lush environments with glowing alien flora and mysterious bioluminescent crystals. Utilizing a custom Box2D physics engine, the game features a deep fertility and spawning pipeline where the movement, resting, and impacts of your seed directly influence the growth of your garden. Manipulate gravity in four directions across 8 distinct levels—each boasting unique mechanics like underwater currents, updrafts, and labyrinthine walls—as you manage nutrients to cultivate a vibrant, living ecosystem.": "Gravity Garden este un joc de puzzle relaxant, bazat pe fizică, într-o lume plină de plante strălucitoare și cristale bioluminescente. Motorul Box2D adaptat jocului leagă mișcarea, opririle și impacturile seminței de creșterea grădinii. Schimbă gravitația în patru direcții și explorează 8 niveluri, cu curenți subacvatici, curenți ascendenți și pereți de labirint. Gestionează nutrienții pentru a crește un ecosistem viu.",
@@ -43,5 +41,7 @@
   "A place for stray thoughts, photos, and voice notes before they fly away.": "Un loc pentru gânduri răzlețe, fotografii și note vocale, înainte să-ți zboare din minte.",
   "Creative tools": "Unelte creative",
   "Sankey Diagram Editor": "Sankey Editor de diagrame",
-  "Make a picture of where things flow. Build and export diagrams in your browser.": "Arată cum circulă lucrurile. Creează și exportă diagrame direct în browser."
+  "Make a picture of where things flow. Build and export diagrams in your browser.": "Arată cum circulă lucrurile. Creează și exportă diagrame direct în browser.",
+  "Privacy Policy": "Politica de confidențialitate (în engleză)",
+  "Terms of Service": "Termeni și condiții (în engleză)"
 }

@@ -6,7 +6,6 @@
   "One blood pressure log, in Android and web form. Record your readings, explore trends, and export your history.": "Un jurnal al tensiunii arteriale, în formular Android și web. Înregistrați-vă lecturile, explorați tendințele și exportați-vă istoricul.",
   "Open the Web App": "Deschideți aplicația web",
   "Download Android APK": "Descarcă APK-ul pentru Android",
-  "Android Privacy Policy": "Politica de confidențialitate Android",
   "BP Digitizer App": "Aplicația BP Digitizer",
   "One app. Two ways to use it.": "O aplicație. Două moduri de a-l folosi.",
   "BP Digitizer helps you log blood pressure readings, explore their history, and keep your own records. Use the native Android app or open the PWA in your browser. Both can read your monitor with the camera, on your own device, and neither needs an account. The web version, previously listed here as wBP Digitizer, is part of the same project.": "BP Digitizer vă ajută să înregistrați valorile tensiunii arteriale, să le urmăriți istoricul și să vă păstrați propriile evidențe. Folosiți aplicația nativă pentru Android sau deschideți PWA-ul în browser. Ambele pot citi tensiometrul cu camera, pe propriul dispozitiv, și niciuna nu are nevoie de cont. Versiunea web, listată anterior aici ca wBP Digitizer, face parte din același proiect.",
@@ -95,5 +94,6 @@
   "Explore admission history and simulate high school choices in Bucharest.": "Explorează istoricul admiterii și simulează opțiuni de liceu în București.",
   "Behind the scenes": "În culise",
   "The little building block that helps web apps work offline and stay up to date.": "Mica piesă care ajută aplicațiile web să funcționeze offline și să rămână la zi.",
-  "One small console for managing invitations and devices across private web apps.": "O mică consolă pentru gestionarea invitațiilor și dispozitivelor din aplicații web private."
+  "One small console for managing invitations and devices across private web apps.": "O mică consolă pentru gestionarea invitațiilor și dispozitivelor din aplicații web private.",
+  "Android Privacy Policy": "Politica de confidențialitate Android"
 }

@@ -6,7 +6,6 @@
   "One blood pressure log, in Android and web form. Record your readings, explore trends, and export your history.": "एक ब्लड प्रेशर लॉग, एंड्रॉइड और वेब फॉर्म में। अपनी रीडिंग रिकॉर्ड करें, रुझानों का पता लगाएं और अपना इतिहास निर्यात करें।",
   "Open the Web App": "वेब ऐप खोलें",
   "Download Android APK": "एंड्रॉइड एपीके डाउनलोड करें",
-  "Android Privacy Policy": "एंड्रॉइड गोपनीयता नीति",
   "BP Digitizer App": "BP Digitizer ऐप",
   "One app. Two ways to use it.": "एक ऐप. इसे इस्तेमाल करने के दो तरीके.",
   "BP Digitizer helps you log blood pressure readings, explore their history, and keep your own records. Use the native Android app or open the PWA in your browser. Both can read your monitor with the camera, on your own device, and neither needs an account. The web version, previously listed here as wBP Digitizer, is part of the same project.": "BP Digitizer आपको ब्लड प्रेशर की रीडिंग दर्ज करने, उनका इतिहास देखने और अपना रिकॉर्ड रखने में मदद करता है। नेटिव Android ऐप इस्तेमाल करें या ब्राउज़र में PWA खोलें। दोनों आपके अपने डिवाइस पर कैमरे से मॉनिटर पढ़ सकते हैं, और किसी के लिए खाते की ज़रूरत नहीं है। वेब वर्ज़न, जो पहले यहाँ wBP Digitizer के नाम से था, इसी प्रोजेक्ट का हिस्सा है।",
@@ -95,5 +94,6 @@
   "Explore admission history and simulate high school choices in Bucharest.": "पिछले प्रवेश परिणाम देखें और बुखारेस्ट के हाई स्कूल विकल्पों का अनुकरण करें।",
   "Behind the scenes": "पर्दे के पीछे",
   "The little building block that helps web apps work offline and stay up to date.": "एक छोटा घटक जो वेब ऐप को ऑफ़लाइन चलने और अपडेट रहने में मदद करता है।",
-  "One small console for managing invitations and devices across private web apps.": "निजी वेब ऐप के निमंत्रण और उपकरण सँभालने के लिए एक छोटा कंसोल।"
+  "One small console for managing invitations and devices across private web apps.": "निजी वेब ऐप के निमंत्रण और उपकरण सँभालने के लिए एक छोटा कंसोल।",
+  "Android Privacy Policy": "एंड्रॉइड गोपनीयता नीति"
 }

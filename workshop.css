@@ -109,6 +109,8 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .footer details { max-width: 460px; text-align: right; }
 .footer summary { cursor: pointer; }
 .privacy-links { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: flex-end; margin-top: 14px; }
+.footer .legal-group { margin: 16px 0 0; font-weight: 600; }
+.footer .legal-group + .privacy-links { margin-top: 8px; }
 @media (min-width: 1400px) { .intro { padding-block: 88px 72px; } }
 @media (max-width: 1000px) {
   .wrap { width: calc(100% - 48px); }

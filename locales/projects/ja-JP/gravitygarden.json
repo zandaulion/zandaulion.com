@@ -5,8 +5,6 @@
   "Play & explore": "遊びと探索",
   "Bend gravity and grow a garden in a quiet, physics-powered puzzle game.": "静かな物理パズルで重力を変え、庭を育てましょう。",
   "Get it on Google Play": "Google Play で入手",
-  "Privacy Policy": "プライバシーポリシー（英語）",
-  "Terms of Service": "利用規約（英語）",
   "Gravity Garden Game": "Gravity Garden ゲーム",
   "About The Game": "ゲームについて",
   "Gravity Garden is a breathtaking, relaxing physics-based puzzle experience set in lush environments with glowing alien flora and mysterious bioluminescent crystals. Utilizing a custom Box2D physics engine, the game features a deep fertility and spawning pipeline where the movement, resting, and impacts of your seed directly influence the growth of your garden. Manipulate gravity in four directions across 8 distinct levels—each boasting unique mechanics like underwater currents, updrafts, and labyrinthine walls—as you manage nutrients to cultivate a vibrant, living ecosystem.": "Gravity Garden は、輝くエイリアンの植物や神秘的な生物発光クリスタルのある緑豊かな環境を舞台にした、息をのむようなリラックスできる物理ベースのパズル体験です。カスタム Box2D 物理エンジンを利用したこのゲームは、種子の移動、休止、衝撃が庭の成長に直接影響を与える、深い肥沃度と産卵パイプラインを特徴としています。 8 つの異なるレベルにわたって 4 方向に重力を操作し、各レベルには水中流、上昇気流、迷路の壁などのユニークな仕組みが備わっています。栄養素を管理して活気に満ちた生きた生態系を育成します。",
@@ -43,5 +41,7 @@
   "A place for stray thoughts, photos, and voice notes before they fly away.": "ふと浮かんだ考えや写真、音声メモが消える前に置いておける場所。",
   "Creative tools": "創作の道具",
   "Sankey Diagram Editor": "Sankey ダイアグラムエディタ",
-  "Make a picture of where things flow. Build and export diagrams in your browser.": "ものの流れを図に。ブラウザで図を作成し、書き出せます。"
+  "Make a picture of where things flow. Build and export diagrams in your browser.": "ものの流れを図に。ブラウザで図を作成し、書き出せます。",
+  "Privacy Policy": "プライバシーポリシー（英語）",
+  "Terms of Service": "利用規約（英語）"
 }

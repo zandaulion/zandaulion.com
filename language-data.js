@@ -51,7 +51,9 @@ window.ZandaulionLocales = [
     "english_page": "This project page is currently in English.",
     "skip": "Skip to content",
     "coffee": "Buy me a coffee",
-    "privacy": "App privacy policies",
+    "privacy": "App privacy & terms",
+    "privacy_group": "Privacy policies",
+    "terms_group": "Terms of Service",
     "formerly": "Bitey (formerly Plate)"
   },
   {
@@ -132,7 +134,9 @@ window.ZandaulionLocales = [
     "english_page": "صفحة هذا المشروع متاحة حاليًا بالإنجليزية.",
     "skip": "انتقل إلى المحتوى",
     "coffee": "ادعمني بفنجان قهوة",
-    "privacy": "سياسات خصوصية التطبيقات",
+    "privacy": "خصوصية التطبيقات وشروطها",
+    "privacy_group": "سياسات الخصوصية",
+    "terms_group": "شروط الخدمة",
     "formerly": "Bitey (سابقًا Plate)"
   },
   {
@@ -213,7 +217,9 @@ window.ZandaulionLocales = [
     "english_page": "此项目页面目前为英文。",
     "skip": "跳转到内容",
     "coffee": "请我喝杯咖啡",
-    "privacy": "应用隐私政策",
+    "privacy": "应用隐私与条款",
+    "privacy_group": "隐私政策",
+    "terms_group": "服务条款",
     "formerly": "Bitey（原名 Plate）"
   },
   {
@@ -294,7 +300,9 @@ window.ZandaulionLocales = [
     "english_page": "La page de ce projet est actuellement en anglais.",
     "skip": "Aller au contenu",
     "coffee": "Offrez-moi un café",
-    "privacy": "Politiques de confidentialité des applications",
+    "privacy": "Confidentialité et conditions des applications",
+    "privacy_group": "Politiques de confidentialité",
+    "terms_group": "Conditions d'utilisation",
     "formerly": "Bitey (anciennement Plate)"
   },
   {
@@ -375,7 +383,9 @@ window.ZandaulionLocales = [
     "english_page": "Diese Projektseite ist derzeit auf Englisch.",
     "skip": "Zum Inhalt springen",
     "coffee": "Spendiere mir einen Kaffee",
-    "privacy": "Datenschutzhinweise der Apps",
+    "privacy": "Datenschutz & Nutzungsbedingungen der Apps",
+    "privacy_group": "Datenschutzhinweise",
+    "terms_group": "Nutzungsbedingungen",
     "formerly": "Bitey (ehemals Plate)"
   },
   {
@@ -456,7 +466,9 @@ window.ZandaulionLocales = [
     "english_page": "इस प्रोजेक्ट का पेज अभी अंग्रेज़ी में है।",
     "skip": "मुख्य सामग्री पर जाएँ",
     "coffee": "मुझे एक कॉफ़ी पिलाएँ",
-    "privacy": "ऐप की गोपनीयता नीतियाँ",
+    "privacy": "ऐप की गोपनीयता और शर्तें",
+    "privacy_group": "गोपनीयता नीतियाँ",
+    "terms_group": "सेवा की शर्तें",
     "formerly": "Bitey (पहले Plate)"
   },
   {
@@ -537,7 +549,9 @@ window.ZandaulionLocales = [
     "english_page": "このプロジェクトのページは現在英語で提供しています。",
     "skip": "本文へ移動",
     "coffee": "コーヒーで応援する",
-    "privacy": "アプリのプライバシーポリシー",
+    "privacy": "アプリのプライバシーと利用規約",
+    "privacy_group": "プライバシーポリシー",
+    "terms_group": "利用規約",
     "formerly": "Bitey（旧称Plate）"
   },
   {
@@ -618,7 +632,9 @@ window.ZandaulionLocales = [
     "english_page": "이 프로젝트 페이지는 현재 영어로 제공됩니다.",
     "skip": "본문으로 건너뛰기",
     "coffee": "커피 한 잔 후원하기",
-    "privacy": "앱 개인정보 처리방침",
+    "privacy": "앱 개인정보 및 약관",
+    "privacy_group": "개인정보 처리방침",
+    "terms_group": "서비스 약관",
     "formerly": "Bitey (이전 이름: Plate)"
   },
   {
@@ -699,7 +715,9 @@ window.ZandaulionLocales = [
     "english_page": "A página deste projeto está atualmente em inglês.",
     "skip": "Ir para o conteúdo",
     "coffee": "Me pague um café",
-    "privacy": "Políticas de privacidade dos aplicativos",
+    "privacy": "Privacidade e termos dos aplicativos",
+    "privacy_group": "Políticas de privacidade",
+    "terms_group": "Termos de Serviço",
     "formerly": "Bitey (antigo Plate)"
   },
   {
@@ -780,7 +798,9 @@ window.ZandaulionLocales = [
     "english_page": "Această pagină de proiect este momentan în engleză.",
     "skip": "Sari la conținut",
     "coffee": "Oferă-mi o cafea",
-    "privacy": "Politicile de confidențialitate ale aplicațiilor",
+    "privacy": "Confidențialitatea și termenii aplicațiilor",
+    "privacy_group": "Politici de confidențialitate",
+    "terms_group": "Termeni și condiții",
     "formerly": "Bitey (fostul Plate)"
   },
   {
@@ -861,7 +881,9 @@ window.ZandaulionLocales = [
     "english_page": "La página de este proyecto está actualmente en inglés.",
     "skip": "Saltar al contenido",
     "coffee": "Invítame a un café",
-    "privacy": "Políticas de privacidad de las aplicaciones",
+    "privacy": "Privacidad y términos de las aplicaciones",
+    "privacy_group": "Políticas de privacidad",
+    "terms_group": "Términos del servicio",
     "formerly": "Bitey (antes Plate)"
   },
   {
@@ -942,7 +964,9 @@ window.ZandaulionLocales = [
     "english_page": "Ця сторінка проєкту наразі англійською.",
     "skip": "Перейти до вмісту",
     "coffee": "Пригостити мене кавою",
-    "privacy": "Політики конфіденційності застосунків",
+    "privacy": "Конфіденційність і умови застосунків",
+    "privacy_group": "Політики конфіденційності",
+    "terms_group": "Умови використання",
     "formerly": "Bitey (раніше Plate)"
   }
 ];

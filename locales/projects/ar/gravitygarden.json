@@ -5,8 +5,6 @@
   "Play & explore": "اللعب والاستكشاف",
   "Bend gravity and grow a garden in a quiet, physics-powered puzzle game.": "غيّر الجاذبية ونمِّ حديقة في لعبة ألغاز هادئة تعتمد على الفيزياء.",
   "Get it on Google Play": "احصل عليه على Google Play",
-  "Privacy Policy": "سياسة الخصوصية (بالإنجليزية)",
-  "Terms of Service": "شروط الخدمة (بالإنجليزية)",
   "Gravity Garden Game": "لعبة Gravity Garden",
   "About The Game": "عن اللعبة",
   "Gravity Garden is a breathtaking, relaxing physics-based puzzle experience set in lush environments with glowing alien flora and mysterious bioluminescent crystals. Utilizing a custom Box2D physics engine, the game features a deep fertility and spawning pipeline where the movement, resting, and impacts of your seed directly influence the growth of your garden. Manipulate gravity in four directions across 8 distinct levels—each boasting unique mechanics like underwater currents, updrafts, and labyrinthine walls—as you manage nutrients to cultivate a vibrant, living ecosystem.": "Gravity Garden هي تجربة ألغاز مذهلة ومريحة تعتمد على الفيزياء وتقع في بيئات خصبة تحتوي على نباتات غريبة متوهجة وبلورات مضيئة بيولوجيًا غامضة. باستخدام محرك الفيزياء Box2D المخصص، تتميز اللعبة بخط أنابيب عميق للخصوبة والتكاثر حيث تؤثر حركة البذور وراحتها وتأثيراتها بشكل مباشر على نمو حديقتك. تعامل مع الجاذبية في أربعة اتجاهات عبر 8 مستويات متميزة - يتميز كل منها بآليات فريدة مثل التيارات تحت الماء والتيارات الصاعدة وجدران المتاهة - بينما تدير العناصر الغذائية لزراعة نظام بيئي حي نابض بالحياة.",
@@ -43,5 +41,7 @@
   "A place for stray thoughts, photos, and voice notes before they fly away.": "مكان للأفكار العابرة والصور والملاحظات الصوتية قبل أن تتطاير.",
   "Creative tools": "أدوات إبداعية",
   "Sankey Diagram Editor": "محرر المخططات Sankey",
-  "Make a picture of where things flow. Build and export diagrams in your browser.": "ارسم كيف تتدفق الأشياء. أنشئ مخططات وصدّرها من متصفحك."
+  "Make a picture of where things flow. Build and export diagrams in your browser.": "ارسم كيف تتدفق الأشياء. أنشئ مخططات وصدّرها من متصفحك.",
+  "Privacy Policy": "سياسة الخصوصية (بالإنجليزية)",
+  "Terms of Service": "شروط الخدمة (بالإنجليزية)"
 }

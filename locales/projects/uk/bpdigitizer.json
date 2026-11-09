@@ -6,7 +6,6 @@
   "One blood pressure log, in Android and web form. Record your readings, explore trends, and export your history.": "Один журнал артеріального тиску в Android та веб-формі. Записуйте свої показання, досліджуйте тенденції та експортуйте історію.",
   "Open the Web App": "Відкрийте веб-програму",
   "Download Android APK": "Завантажити Android APK",
-  "Android Privacy Policy": "Політика конфіденційності Android",
   "BP Digitizer App": "Додаток BP Digitizer",
   "One app. Two ways to use it.": "Один додаток. Два способи використання.",
   "BP Digitizer helps you log blood pressure readings, explore their history, and keep your own records. Use the native Android app or open the PWA in your browser. Both can read your monitor with the camera, on your own device, and neither needs an account. The web version, previously listed here as wBP Digitizer, is part of the same project.": "BP Digitizer допомагає записувати показники артеріального тиску, переглядати їхню історію й вести власні записи. Користуйтеся нативним застосунком для Android або відкрийте PWA у браузері. Обидва можуть зчитувати тонометр камерою на вашому власному пристрої, і жодному не потрібен обліковий запис. Вебверсія, раніше представлена тут як wBP Digitizer, — частина того самого проєкту.",
@@ -95,5 +94,6 @@
   "Explore admission history and simulate high school choices in Bucharest.": "Досліджуйте історію вступу та моделюйте вибір ліцею в Бухаресті.",
   "Behind the scenes": "За лаштунками",
   "The little building block that helps web apps work offline and stay up to date.": "Маленька складова, що допомагає вебзастосункам працювати офлайн і залишатися актуальними.",
-  "One small console for managing invitations and devices across private web apps.": "Маленька консоль для керування запрошеннями та пристроями в приватних вебзастосунках."
+  "One small console for managing invitations and devices across private web apps.": "Маленька консоль для керування запрошеннями та пристроями в приватних вебзастосунках.",
+  "Android Privacy Policy": "Політика конфіденційності Android"
 }
