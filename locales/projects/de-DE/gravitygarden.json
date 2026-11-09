@@ -5,8 +5,6 @@
   "Play & explore": "Spielen und entdecken",
   "Bend gravity and grow a garden in a quiet, physics-powered puzzle game.": "Verändere die Schwerkraft und lass in einem ruhigen Physik-Puzzlespiel einen Garten wachsen.",
   "Get it on Google Play": "Holen Sie es sich unter Google Play",
-  "Privacy Policy": "Datenschutzerklärung (auf Englisch)",
-  "Terms of Service": "Nutzungsbedingungen (auf Englisch)",
   "Gravity Garden Game": "Gravity Garden Spiel",
   "About The Game": "Über das Spiel",
   "Gravity Garden is a breathtaking, relaxing physics-based puzzle experience set in lush environments with glowing alien flora and mysterious bioluminescent crystals. Utilizing a custom Box2D physics engine, the game features a deep fertility and spawning pipeline where the movement, resting, and impacts of your seed directly influence the growth of your garden. Manipulate gravity in four directions across 8 distinct levels—each boasting unique mechanics like underwater currents, updrafts, and labyrinthine walls—as you manage nutrients to cultivate a vibrant, living ecosystem.": "Gravity Garden ist ein atemberaubendes, entspannendes, auf Physik basierendes Puzzle-Erlebnis, das in üppigen Umgebungen mit leuchtender außerirdischer Flora und mysteriösen biolumineszierenden Kristallen spielt. Das Spiel nutzt eine benutzerdefinierte Box2D-Physik-Engine und verfügt über eine tiefe Fruchtbarkeits- und Laichpipeline, bei der die Bewegung, Ruhe und Auswirkungen Ihres Samens das Wachstum Ihres Gartens direkt beeinflussen. Manipulieren Sie die Schwerkraft in vier Richtungen auf 8 verschiedenen Ebenen – jedes mit einzigartigen Mechanismen wie Unterwasserströmungen, Aufwinden und Labyrinthwänden – und verwalten Sie Nährstoffe, um ein lebendiges, lebendiges Ökosystem zu schaffen.",
@@ -43,5 +41,7 @@
   "A place for stray thoughts, photos, and voice notes before they fly away.": "Ein Platz für flüchtige Gedanken, Fotos und Sprachnotizen, bevor sie verschwinden.",
   "Creative tools": "Kreative Werkzeuge",
   "Sankey Diagram Editor": "Sankey Diagrammeditor",
-  "Make a picture of where things flow. Build and export diagrams in your browser.": "Zeige, wohin Dinge fließen. Erstelle und exportiere Diagramme im Browser."
+  "Make a picture of where things flow. Build and export diagrams in your browser.": "Zeige, wohin Dinge fließen. Erstelle und exportiere Diagramme im Browser.",
+  "Privacy Policy": "Datenschutzerklärung (auf Englisch)",
+  "Terms of Service": "Nutzungsbedingungen (auf Englisch)"
 }

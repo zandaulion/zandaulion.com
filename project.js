@@ -23,11 +23,14 @@ customElements.define('portfolio-header', WorkshopHeader);
 
 class WorkshopFooter extends HTMLElement {
   connectedCallback() {
+    // A project page may pass its own app's legal links as static child markup.
+    const appLegal = this.querySelector('.app-legal')?.outerHTML || '';
     this.innerHTML = `<footer class="footer wrap">
-      <p>© ${new Date().getFullYear()} Zandaulion · <a href="${projectHome}#collection">${safeText(projectCopy.explore)} ↗</a></p>
+      <div class="footer-main"><p>© ${new Date().getFullYear()} Zandaulion · <a href="${projectHome}#collection">${safeText(projectCopy.explore)} ↗</a></p>${appLegal}</div>
       <a href="https://ko-fi.com/P7K6214YH8" target="_blank" rel="noopener noreferrer">${safeText(projectLocale.coffee)} ↗</a>
-      <details><summary>${safeText(projectLocale.privacy)}</summary><div class="privacy-links">
+      <details><summary>${safeText(projectLocale.privacy)}</summary><p class="legal-group">${safeText(projectLocale.privacy_group)}</p><div class="privacy-links">
         <a href="${new URL('plate-privacy.html', projectRoot).href}" hreflang="en-US">${safeText(projectLocale.formerly)}</a><a href="${new URL('bitey-privacy.html', projectRoot).href}" hreflang="en-US">Bitey</a><a href="${new URL('bpdigitizer-privacy.html', projectRoot).href}" hreflang="en-US">BP Digitizer</a><a href="${new URL('palebluedot-privacy.html', projectRoot).href}" hreflang="en-US">Pale Blue Dot</a><a href="${new URL('gravitywarp-privacy.html', projectRoot).href}" hreflang="en-US">Gravity Warp</a><a href="${new URL('gravitygarden-privacy.html', projectRoot).href}" hreflang="en-US">Gravity Garden</a><a href="${new URL('orbitpuzzles-privacy.html', projectRoot).href}" hreflang="en-US">OrbitPuzzles</a><a href="${new URL('gravitytdg-privacy.html', projectRoot).href}" hreflang="en-US">GravityTDG</a><a href="${new URL('omaha-privacy.html', projectRoot).href}" hreflang="en-US">Pocket Omaha</a><a href="${new URL('miscare-privacy.html', projectRoot).href}" hreflang="en-US">Mișcare</a>
+      </div><p class="legal-group">${safeText(projectLocale.terms_group)}</p><div class="privacy-links"><a href="${new URL('bitey-terms.html', projectRoot).href}" hreflang="en-US">Bitey</a><a href="${new URL('palebluedot-terms.html', projectRoot).href}" hreflang="en-US">Pale Blue Dot</a><a href="${new URL('gravitywarp-terms.html', projectRoot).href}" hreflang="en-US">Gravity Warp</a><a href="${new URL('gravitygarden-terms.html', projectRoot).href}" hreflang="en-US">Gravity Garden</a><a href="${new URL('gravitytdg-terms.html', projectRoot).href}" hreflang="en-US">GravityTDG</a><a href="${new URL('omaha-terms.html', projectRoot).href}" hreflang="en-US">Pocket Omaha</a><a href="${new URL('miscare-terms.html', projectRoot).href}" hreflang="en-US">Mișcare</a>
       </div></details></footer>`;
   }
 }

@@ -6,7 +6,6 @@
   "One blood pressure log, in Android and web form. Record your readings, explore trends, and export your history.": "Ein Blutdruckprotokoll, in Android- und Webform. Zeichnen Sie Ihre Messwerte auf, erkunden Sie Trends und exportieren Sie Ihren Verlauf.",
   "Open the Web App": "Öffnen Sie die Web-App",
   "Download Android APK": "Laden Sie Android APK herunter",
-  "Android Privacy Policy": "Android-Datenschutzrichtlinie",
   "BP Digitizer App": "BP Digitizer App",
   "One app. Two ways to use it.": "Eine App. Zwei Möglichkeiten, es zu verwenden.",
   "BP Digitizer helps you log blood pressure readings, explore their history, and keep your own records. Use the native Android app or open the PWA in your browser. Both can read your monitor with the camera, on your own device, and neither needs an account. The web version, previously listed here as wBP Digitizer, is part of the same project.": "BP Digitizer hilft Ihnen, Blutdruckwerte zu erfassen, ihren Verlauf zu erkunden und eigene Aufzeichnungen zu führen. Nutzen Sie die native Android-App oder öffnen Sie die PWA im Browser. Beide können Ihr Messgerät mit der Kamera auf Ihrem eigenen Gerät ablesen, und keine braucht ein Konto. Die Webversion, hier früher als wBP Digitizer aufgeführt, gehört zum selben Projekt.",
@@ -95,5 +94,6 @@
   "Explore admission history and simulate high school choices in Bucharest.": "Erkunde frühere Aufnahmeergebnisse und simuliere die Gymnasialwahl in Bukarest.",
   "Behind the scenes": "Hinter den Kulissen",
   "The little building block that helps web apps work offline and stay up to date.": "Ein kleiner Baustein, mit dem Web-Apps offline funktionieren und aktuell bleiben.",
-  "One small console for managing invitations and devices across private web apps.": "Eine kleine Konsole für Einladungen und Geräte in privaten Web-Apps."
+  "One small console for managing invitations and devices across private web apps.": "Eine kleine Konsole für Einladungen und Geräte in privaten Web-Apps.",
+  "Android Privacy Policy": "Android-Datenschutzrichtlinie"
 }

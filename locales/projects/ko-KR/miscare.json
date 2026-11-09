@@ -9,8 +9,6 @@
   "View on GitHub": "GitHub에서 보기",
   "Download Android preview": "Android 미리보기 다운로드",
   "Release notes & checksums": "릴리스 노트 및 체크섬",
-  "Privacy Policy": "개인정보 처리방침 (영어)",
-  "Terms of Service": "서비스 약관 (영어)",
   "Mișcare App": "Mișcare 앱",
   "Android Preview": "안드로이드 미리보기",
   "Mișcare 0.1.0": "Mișcare 0.1.0",
@@ -64,5 +62,7 @@
   "Understand what changed in the companies you follow. Revisit your reasons.": "팔로우하는 기업에서 무엇이 바뀌었는지 이해하세요. 나의 이유를 다시 살펴보세요.",
   "Play & explore": "놀이와 탐험",
   "Thread your way through gravity wells in a retro physics arcade game.": "복고풍 물리 아케이드 게임에서 중력 우물 사이를 헤쳐 나가세요.",
-  "Give big family expenses a plan, from the first estimate to the last installment.": "첫 예상 금액부터 마지막 할부금까지, 가족의 큰 지출을 계획하세요."
+  "Give big family expenses a plan, from the first estimate to the last installment.": "첫 예상 금액부터 마지막 할부금까지, 가족의 큰 지출을 계획하세요.",
+  "Privacy Policy": "개인정보 처리방침 (영어)",
+  "Terms of Service": "서비스 약관 (영어)"
 }

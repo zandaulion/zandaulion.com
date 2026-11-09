@@ -5,8 +5,6 @@
   "Play & explore": "Ігри й дослідження",
   "Thread your way through gravity wells in a retro physics arcade game.": "Прокладайте шлях крізь гравітаційні ями в ретроаркаді, що спирається на фізику.",
   "Download on Google Play": "Завантажити на Google Play",
-  "Privacy Policy": "Політика конфіденційності (англійською)",
-  "Terms of Service": "Умови використання (англійською)",
   "Gravity Warp Game": "Гра Gravity Warp",
   "About The Game": "Про гру",
   "Gravity Warp is a high-speed, retro pixel-art physics arcade game built natively in Kotlin using the LibGDX framework. Navigate your starship through an endless, toroidal space using inverse-square gravity wells. Touching the screen creates a powerful gravitational pull that you must use to slingshot your ship, collect stardust, and outmaneuver explosive drifting and hunter mines.": "Gravity Warp — це високошвидкісна фізична аркадна гра в ретро-піксельному стилі, створена в Kotlin з використанням фреймворку LibGDX. Керуйте своїм зорельотом у нескінченному тороїдальному просторі за допомогою обернених квадратів гравітації. Дотик до екрана створює потужне гравітаційне тяжіння, яке ви повинні використовувати, щоб стріляти з рогатки у свій корабель, збирати зоряний пил і перемагати вибухонебезпечні дрейфуючі та мисливські міни.",
@@ -39,5 +37,7 @@
   "Put your intuition for gravity to the test with orbital physics puzzles.": "Перевірте інтуїцію щодо гравітації в головоломках з орбітальної фізики.",
   "Everyday tools": "Щоденні інструменти",
   "Understand what changed in the companies you follow. Revisit your reasons.": "Зрозумійте, що змінилося в компаніях, за якими ви стежите. Перегляньте свої причини.",
-  "Give big family expenses a plan, from the first estimate to the last installment.": "Плануйте великі сімейні витрати — від першої оцінки до останнього платежу."
+  "Give big family expenses a plan, from the first estimate to the last installment.": "Плануйте великі сімейні витрати — від першої оцінки до останнього платежу.",
+  "Privacy Policy": "Політика конфіденційності (англійською)",
+  "Terms of Service": "Умови використання (англійською)"
 }

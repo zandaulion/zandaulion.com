@@ -6,7 +6,6 @@
   "One blood pressure log, in Android and web form. Record your readings, explore trends, and export your history.": "Android 및 웹 형식의 혈압 기록 1개. 판독값을 기록하고, 추세를 탐색하고, 기록을 내보냅니다.",
   "Open the Web App": "웹 앱 열기",
   "Download Android APK": "안드로이드 APK 다운로드",
-  "Android Privacy Policy": "안드로이드 개인정보 보호정책",
   "BP Digitizer App": "BP Digitizer 앱",
   "One app. Two ways to use it.": "하나의 앱. 그것을 사용하는 두 가지 방법.",
   "BP Digitizer helps you log blood pressure readings, explore their history, and keep your own records. Use the native Android app or open the PWA in your browser. Both can read your monitor with the camera, on your own device, and neither needs an account. The web version, previously listed here as wBP Digitizer, is part of the same project.": "BP Digitizer는 혈압 측정값을 기록하고, 기록을 살펴보고, 나만의 기록을 보관하도록 돕습니다. Android 네이티브 앱을 쓰거나 브라우저에서 PWA를 여세요. 둘 다 내 기기에서 카메라로 혈압계를 읽을 수 있으며, 어느 쪽도 계정이 필요 없습니다. 예전에 여기서 wBP Digitizer로 소개한 웹 버전도 같은 프로젝트입니다.",
@@ -95,5 +94,6 @@
   "Explore admission history and simulate high school choices in Bucharest.": "과거 입학 결과를 살펴보고 부쿠레슈티의 고등학교 선택을 시뮬레이션하세요.",
   "Behind the scenes": "무대 뒤 도구",
   "The little building block that helps web apps work offline and stay up to date.": "웹 앱이 오프라인에서도 작동하고 최신 상태를 유지하도록 돕는 작은 구성 요소.",
-  "One small console for managing invitations and devices across private web apps.": "비공개 웹 앱의 초대와 기기를 한곳에서 관리하는 작은 콘솔."
+  "One small console for managing invitations and devices across private web apps.": "비공개 웹 앱의 초대와 기기를 한곳에서 관리하는 작은 콘솔.",
+  "Android Privacy Policy": "안드로이드 개인정보 보호정책"
 }

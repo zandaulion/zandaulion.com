@@ -5,8 +5,6 @@
   "Play & explore": "Ігри й дослідження",
   "Bend gravity and grow a garden in a quiet, physics-powered puzzle game.": "Змінюйте гравітацію та вирощуйте сад у спокійній фізичній головоломці.",
   "Get it on Google Play": "Отримайте його на Google Play",
-  "Privacy Policy": "Політика конфіденційності (англійською)",
-  "Terms of Service": "Умови використання (англійською)",
   "Gravity Garden Game": "Гра Gravity Garden",
   "About The Game": "Про гру",
   "Gravity Garden is a breathtaking, relaxing physics-based puzzle experience set in lush environments with glowing alien flora and mysterious bioluminescent crystals. Utilizing a custom Box2D physics engine, the game features a deep fertility and spawning pipeline where the movement, resting, and impacts of your seed directly influence the growth of your garden. Manipulate gravity in four directions across 8 distinct levels—each boasting unique mechanics like underwater currents, updrafts, and labyrinthine walls—as you manage nutrients to cultivate a vibrant, living ecosystem.": "Gravity Garden — це захоплююча розслаблююча головоломка на основі фізики, яка розгортається в зеленому середовищі з сяючою інопланетною флорою та таємничими біолюмінесцентними кристалами. Використовуючи спеціальний фізичний движок Box2D, у грі представлено глибокий конвеєр родючості та нересту, де рух, відпочинок і удари вашого насіння безпосередньо впливають на ріст вашого саду. Керуйте силою тяжіння в чотирьох напрямках на 8 різних рівнях, кожен із яких має унікальні механізми, як-от підводні течії, висхідні течії та стіни лабіринту, керуючи поживними речовинами для розвитку живої живої екосистеми.",
@@ -43,5 +41,7 @@
   "A place for stray thoughts, photos, and voice notes before they fly away.": "Місце для випадкових думок, фото й голосових нотаток, поки вони не зникли.",
   "Creative tools": "Творчі інструменти",
   "Sankey Diagram Editor": "Редактор діаграм Sankey",
-  "Make a picture of where things flow. Build and export diagrams in your browser.": "Покажіть, куди все рухається. Створюйте й експортуйте діаграми у браузері."
+  "Make a picture of where things flow. Build and export diagrams in your browser.": "Покажіть, куди все рухається. Створюйте й експортуйте діаграми у браузері.",
+  "Privacy Policy": "Політика конфіденційності (англійською)",
+  "Terms of Service": "Умови використання (англійською)"
 }

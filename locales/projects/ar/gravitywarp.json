@@ -5,8 +5,6 @@
   "Play & explore": "اللعب والاستكشاف",
   "Thread your way through gravity wells in a retro physics arcade game.": "شق طريقك عبر آبار الجاذبية في لعبة أركيد بطابع قديم تعتمد على الفيزياء.",
   "Download on Google Play": "تحميل على Google Play",
-  "Privacy Policy": "سياسة الخصوصية (بالإنجليزية)",
-  "Terms of Service": "شروط الخدمة (بالإنجليزية)",
   "Gravity Warp Game": "لعبة Gravity Warp",
   "About The Game": "عن اللعبة",
   "Gravity Warp is a high-speed, retro pixel-art physics arcade game built natively in Kotlin using the LibGDX framework. Navigate your starship through an endless, toroidal space using inverse-square gravity wells. Touching the screen creates a powerful gravitational pull that you must use to slingshot your ship, collect stardust, and outmaneuver explosive drifting and hunter mines.": "Gravity Warp هي لعبة أركيد فيزيائية عالية السرعة ذات فن البكسل القديم تم إنشاؤها أصلاً في Kotlin باستخدام إطار عمل LibGDX. قم بالتنقل في المركبة الفضائية الخاصة بك عبر مساحة حلقية لا نهاية لها باستخدام آبار الجاذبية ذات المربع العكسي. يؤدي لمس الشاشة إلى إنشاء قوة جذب قوية يجب عليك استخدامها لمقلاع سفينتك وجمع غبار النجوم والتغلب على المتفجرات المنجرفة وصيد الألغام.",
@@ -39,5 +37,7 @@
   "Put your intuition for gravity to the test with orbital physics puzzles.": "اختبر حدسك بشأن الجاذبية بألغاز الفيزياء المدارية.",
   "Everyday tools": "أدوات يومية",
   "Understand what changed in the companies you follow. Revisit your reasons.": "افهم ما تغيّر في الشركات التي تتابعها. وراجع أسبابك.",
-  "Give big family expenses a plan, from the first estimate to the last installment.": "خطط لنفقات الأسرة الكبيرة، من التقدير الأول إلى القسط الأخير."
+  "Give big family expenses a plan, from the first estimate to the last installment.": "خطط لنفقات الأسرة الكبيرة، من التقدير الأول إلى القسط الأخير.",
+  "Privacy Policy": "سياسة الخصوصية (بالإنجليزية)",
+  "Terms of Service": "شروط الخدمة (بالإنجليزية)"
 }

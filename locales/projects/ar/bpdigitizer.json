@@ -6,7 +6,6 @@
   "One blood pressure log, in Android and web form. Record your readings, explore trends, and export your history.": "سجل واحد لضغط الدم، في نموذج Android والويب. سجل قراءاتك، واستكشف الاتجاهات، وقم بتصدير سجلك.",
   "Open the Web App": "افتح تطبيق الويب",
   "Download Android APK": "تنزيل APK للاندرويد",
-  "Android Privacy Policy": "سياسة خصوصية أندرويد",
   "BP Digitizer App": "تطبيق BP Digitizer",
   "One app. Two ways to use it.": "تطبيق واحد. طريقتان لاستخدامه.",
   "BP Digitizer helps you log blood pressure readings, explore their history, and keep your own records. Use the native Android app or open the PWA in your browser. Both can read your monitor with the camera, on your own device, and neither needs an account. The web version, previously listed here as wBP Digitizer, is part of the same project.": "يساعدك BP Digitizer على تسجيل قراءات ضغط الدم واستكشاف سجلها والاحتفاظ بسجلاتك الخاصة. استخدم تطبيق Android الأصلي أو افتح تطبيق الويب التقدمي في متصفحك. يستطيع كلاهما قراءة جهاز القياس بالكاميرا على جهازك أنت، ولا يحتاج أي منهما إلى حساب. نسخة الويب، المدرجة هنا سابقًا باسم wBP Digitizer، جزء من المشروع نفسه.",
@@ -95,5 +94,6 @@
   "Explore admission history and simulate high school choices in Bucharest.": "استكشف سجل القبول وحاكِ خيارات المدارس الثانوية في بوخارست.",
   "Behind the scenes": "خلف الكواليس",
   "The little building block that helps web apps work offline and stay up to date.": "لبنة صغيرة تساعد تطبيقات الويب على العمل دون اتصال والبقاء محدثة.",
-  "One small console for managing invitations and devices across private web apps.": "لوحة صغيرة لإدارة الدعوات والأجهزة عبر تطبيقات الويب الخاصة."
+  "One small console for managing invitations and devices across private web apps.": "لوحة صغيرة لإدارة الدعوات والأجهزة عبر تطبيقات الويب الخاصة.",
+  "Android Privacy Policy": "سياسة خصوصية أندرويد"
 }

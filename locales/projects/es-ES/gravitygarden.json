@@ -5,8 +5,6 @@
   "Play & explore": "Jugar y explorar",
   "Bend gravity and grow a garden in a quiet, physics-powered puzzle game.": "Cambia la gravedad y cultiva un jardín en un tranquilo juego de puzles basado en la física.",
   "Get it on Google Play": "Consíguelo en Google Play",
-  "Privacy Policy": "Política de privacidad (en inglés)",
-  "Terms of Service": "Términos del servicio (en inglés)",
   "Gravity Garden Game": "Juego Gravity Garden",
   "About The Game": "Sobre el juego",
   "Gravity Garden is a breathtaking, relaxing physics-based puzzle experience set in lush environments with glowing alien flora and mysterious bioluminescent crystals. Utilizing a custom Box2D physics engine, the game features a deep fertility and spawning pipeline where the movement, resting, and impacts of your seed directly influence the growth of your garden. Manipulate gravity in four directions across 8 distinct levels—each boasting unique mechanics like underwater currents, updrafts, and labyrinthine walls—as you manage nutrients to cultivate a vibrant, living ecosystem.": "Gravity Garden es una impresionante y relajante experiencia de rompecabezas basada en la física ambientada en entornos exuberantes con flora alienígena brillante y misteriosos cristales bioluminiscentes. Utilizando un motor de física Box2D personalizado, el juego presenta un profundo proceso de fertilidad y desove donde el movimiento, el descanso y los impactos de tu semilla influyen directamente en el crecimiento de tu jardín. Manipula la gravedad en cuatro direcciones en 8 niveles distintos, cada uno con mecánicas únicas como corrientes submarinas, corrientes ascendentes y paredes laberínticas, mientras administras los nutrientes para cultivar un ecosistema vivo y vibrante.",
@@ -43,5 +41,7 @@
   "A place for stray thoughts, photos, and voice notes before they fly away.": "Un lugar para pensamientos, fotos y notas de voz antes de que se escapen.",
   "Creative tools": "Herramientas creativas",
   "Sankey Diagram Editor": "Editor de diagramas Sankey",
-  "Make a picture of where things flow. Build and export diagrams in your browser.": "Dibuja cómo fluyen las cosas. Crea y exporta diagramas en tu navegador."
+  "Make a picture of where things flow. Build and export diagrams in your browser.": "Dibuja cómo fluyen las cosas. Crea y exporta diagramas en tu navegador.",
+  "Privacy Policy": "Política de privacidad (en inglés)",
+  "Terms of Service": "Términos del servicio (en inglés)"
 }

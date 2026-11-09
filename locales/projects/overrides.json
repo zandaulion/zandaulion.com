@@ -71,7 +71,8 @@
     "Check every value against the monitor before using or copying a reading.": "تحقق من كل قيمة على جهاز قياس ضغط الدم قبل استخدام القراءة أو نسخها.",
     "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "في الاستخدام العادي، تُعالج الصور في ذاكرة المتصفح: لا يرسل التطبيق صورك إلى خادم ولا يحفظها. بعد التحميل الأول الكامل، يخزّن service worker التطبيق والنماذج مؤقتًا للاستخدام دون اتصال. أدوات التقييم المحلية الخاصة بالتطوير تمثل مسار عمل منفصلًا.",
     "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "الكود الأصلي والنماذج المرفقة مرخّصة بموجب AGPL-3.0-only. يحتفظ ONNX Runtime Web بترخيص MIT. تشرح بطاقة النموذج المنشأ والمجاميع الاختبارية والقيود؛ ويشرح دليل التكامل كيفية إعادة الاستخدام في تطبيق آخر.",
-    "Read the model card": "اقرأ بطاقة النموذج"
+    "Read the model card": "اقرأ بطاقة النموذج",
+    "Terms of Service": "شروط الخدمة (بالإنجليزية)"
   },
   "zh-CN": {
     "← Back to the workshop": "← 返回工作坊",
@@ -140,7 +141,8 @@
     "Check every value against the monitor before using or copying a reading.": "使用或复制读数前，请逐一与血压计显示的数值核对。",
     "This is experimental OCR, not a validated medical reader. Recognition accuracy on new real-world photos remains unproven.": "这是实验性 OCR，并非经过医学验证的读数工具。对新拍摄的真实场景照片的识别准确性尚未证实。",
     "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "原始代码和随附模型采用 AGPL-3.0-only 许可。ONNX Runtime Web 保留其 MIT 许可。模型卡说明来源、校验和及局限，集成指南介绍如何在其他应用中复用。",
-    "Read the model card": "阅读模型卡"
+    "Read the model card": "阅读模型卡",
+    "Terms of Service": "服务条款（英文）"
   },
   "fr-FR": {
     "← Back to the workshop": "← Retour à l’atelier",
@@ -204,7 +206,8 @@
     "Check every value against the monitor before using or copying a reading.": "Vérifiez chaque valeur sur le tensiomètre avant d'utiliser ou de copier une mesure.",
     "A detector finds the display, and a digit recognizer reads its rows. ONNX inference runs in a browser worker. Consistency checks and crop retries can reject or retry uncertain results; they do not guarantee a correct reading.": "Un détecteur repère l'écran et un modèle de reconnaissance lit les chiffres de ses lignes. L'inférence ONNX s'exécute dans un worker du navigateur. Les contrôles de cohérence et les nouveaux essais de recadrage peuvent rejeter un résultat incertain ou relancer la reconnaissance ; ils ne garantissent pas une lecture correcte.",
     "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "En utilisation normale, les photos sont traitées dans la mémoire du navigateur : l'application ne les envoie pas à un serveur et ne les enregistre pas. Après un premier chargement complet, le service worker met l'application et les modèles en cache pour une utilisation hors ligne. Les outils locaux d'évaluation pour le développement constituent un flux distinct.",
-    "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "Le code original et les modèles fournis sont sous licence AGPL-3.0-only. ONNX Runtime Web conserve sa licence MIT. La fiche du modèle explique la provenance, les sommes de contrôle et les limites ; le guide d'intégration décrit la réutilisation dans une autre application."
+    "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "Le code original et les modèles fournis sont sous licence AGPL-3.0-only. ONNX Runtime Web conserve sa licence MIT. La fiche du modèle explique la provenance, les sommes de contrôle et les limites ; le guide d'intégration décrit la réutilisation dans une autre application.",
+    "Terms of Service": "Conditions d'utilisation (en anglais)"
   },
   "de-DE": {
     "← Back to the workshop": "← Zurück zur Werkstatt",
@@ -271,7 +274,8 @@
     "Check every value against the monitor before using or copying a reading.": "Vergleichen Sie jeden Wert mit der Anzeige des Blutdruckmessgeräts, bevor Sie ein Ergebnis verwenden oder kopieren.",
     "Download and extract the attached release ZIP. It includes the source, two ONNX models, and the browser runtime. No account, npm install, or model training is needed. Python 3.12 or newer is recommended.": "Laden Sie die angehängte Release-ZIP herunter und entpacken Sie sie. Sie enthält den Quellcode, zwei ONNX-Modelle und die Browser-Laufzeitumgebung. Konto, npm-Installation und Modelltraining sind nicht erforderlich. Python 3.12 oder neuer wird empfohlen.",
     "A detector finds the display, and a digit recognizer reads its rows. ONNX inference runs in a browser worker. Consistency checks and crop retries can reject or retry uncertain results; they do not guarantee a correct reading.": "Ein Detektor findet die Anzeige; ein Ziffernerkenner liest ihre Zeilen. Die ONNX-Inferenz läuft in einem Browser-Worker. Konsistenzprüfungen und neue Versuche mit anderen Bildausschnitten können unsichere Ergebnisse ablehnen oder die Erkennung wiederholen. Eine korrekte Ablesung ist dadurch nicht garantiert.",
-    "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "Bei normaler Nutzung werden Fotos im Browserspeicher verarbeitet: Die App überträgt sie nicht an einen Server und speichert sie nicht. Nach dem ersten vollständigen Laden legt ein Service Worker App und Modelle für die Offline-Nutzung im Cache ab. Lokale Evaluierungswerkzeuge für die Entwicklung bilden einen separaten Ablauf."
+    "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "Bei normaler Nutzung werden Fotos im Browserspeicher verarbeitet: Die App überträgt sie nicht an einen Server und speichert sie nicht. Nach dem ersten vollständigen Laden legt ein Service Worker App und Modelle für die Offline-Nutzung im Cache ab. Lokale Evaluierungswerkzeuge für die Entwicklung bilden einen separaten Ablauf.",
+    "Terms of Service": "Nutzungsbedingungen (auf Englisch)"
   },
   "hi-IN": {
     "← Back to the workshop": "← कार्यशाला में वापस जाएँ",
@@ -339,7 +343,8 @@
     "Check every value against the monitor before using or copying a reading.": "रीडिंग का उपयोग करने या कॉपी करने से पहले हर मान का मॉनिटर के डिस्प्ले से मिलान करें।",
     "A detector finds the display, and a digit recognizer reads its rows. ONNX inference runs in a browser worker. Consistency checks and crop retries can reject or retry uncertain results; they do not guarantee a correct reading.": "डिटेक्टर डिस्प्ले खोजता है और अंक पहचानने वाला मॉडल उसकी पंक्तियाँ पढ़ता है। ONNX अनुमान ब्राउज़र वर्कर में चलता है। संगति जाँच और अलग क्रॉप के साथ दोबारा कोशिश अनिश्चित परिणाम अस्वीकार कर सकती है या पहचान फिर चला सकती है; सही रीडिंग की गारंटी नहीं है।",
     "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "सामान्य उपयोग में फ़ोटो ब्राउज़र की मेमोरी में ही संसाधित होती हैं: ऐप उन्हें सर्वर पर अपलोड या सेव नहीं करता। पहली पूरी लोडिंग के बाद service worker ऐप और मॉडल को ऑफ़लाइन उपयोग के लिए कैश करता है। विकास के दौरान स्थानीय मूल्यांकन के टूल एक अलग वर्कफ़्लो हैं।",
-    "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "मूल कोड और साथ दिए गए मॉडल AGPL-3.0-only के अंतर्गत हैं। ONNX Runtime Web का MIT लाइसेंस बरकरार है। मॉडल कार्ड में स्रोत, चेकसम और सीमाएँ हैं; इंटीग्रेशन गाइड दूसरे ऐप में इसे इस्तेमाल करने का तरीका बताती है।"
+    "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "मूल कोड और साथ दिए गए मॉडल AGPL-3.0-only के अंतर्गत हैं। ONNX Runtime Web का MIT लाइसेंस बरकरार है। मॉडल कार्ड में स्रोत, चेकसम और सीमाएँ हैं; इंटीग्रेशन गाइड दूसरे ऐप में इसे इस्तेमाल करने का तरीका बताती है।",
+    "Terms of Service": "सेवा की शर्तें (अंग्रेज़ी में)"
   },
   "ja-JP": {
     "← Back to the workshop": "← 工房に戻る",
@@ -403,7 +408,8 @@
     "Experimental browser preview": "ブラウザー用の実験的なプレビュー",
     "Hearth reads systolic pressure (SYS), diastolic pressure (DIA), and pulse from common upright, three-row monitor displays. Choose a photo or use the camera, crop the display, and correct the result before copying it.": "Hearth は、一般的な縦型・3行表示の血圧計の写真から最高血圧（SYS）、最低血圧（DIA）、脈拍を読み取ります。写真を選択するかカメラを使い、画面部分を切り抜いて、コピー前に結果を修正してください。",
     "Check every value against the monitor before using or copying a reading.": "結果を使用またはコピーする前に、すべての数値を血圧計の表示と照合してください。",
-    "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "オリジナルコードと同梱モデルは AGPL-3.0-only です。ONNX Runtime Web は MIT ライセンスを維持します。モデルカードには来歴、チェックサム、制約を、統合ガイドには別のアプリで再利用する方法を記載しています。"
+    "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "オリジナルコードと同梱モデルは AGPL-3.0-only です。ONNX Runtime Web は MIT ライセンスを維持します。モデルカードには来歴、チェックサム、制約を、統合ガイドには別のアプリで再利用する方法を記載しています。",
+    "Terms of Service": "利用規約（英語）"
   },
   "ko-KR": {
     "← Back to the workshop": "← 작업실로 돌아가기",
@@ -471,7 +477,8 @@
     "Experimental browser preview": "브라우저용 실험 버전",
     "Hearth reads systolic pressure (SYS), diastolic pressure (DIA), and pulse from common upright, three-row monitor displays. Choose a photo or use the camera, crop the display, and correct the result before copying it.": "Hearth는 일반적인 세로형 3줄 표시 혈압계의 사진에서 수축기 혈압(SYS), 이완기 혈압(DIA), 맥박을 읽습니다. 사진을 선택하거나 카메라를 사용하고, 표시 영역을 자른 뒤 복사 전에 결과를 수정하세요.",
     "Check every value against the monitor before using or copying a reading.": "결과를 사용하거나 복사하기 전에 모든 수치를 혈압계 표시와 대조하세요.",
-    "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "원본 코드와 포함된 모델은 AGPL-3.0-only 라이선스를 따릅니다. ONNX Runtime Web은 MIT 라이선스를 유지합니다. 모델 카드는 출처, 체크섬, 한계를 설명하며 통합 가이드는 다른 앱에서 재사용하는 방법을 안내합니다."
+    "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "원본 코드와 포함된 모델은 AGPL-3.0-only 라이선스를 따릅니다. ONNX Runtime Web은 MIT 라이선스를 유지합니다. 모델 카드는 출처, 체크섬, 한계를 설명하며 통합 가이드는 다른 앱에서 재사용하는 방법을 안내합니다.",
+    "Terms of Service": "서비스 약관 (영어)"
   },
   "pt-BR": {
     "← Back to the workshop": "← Voltar à oficina",
@@ -534,7 +541,8 @@
     "A detector finds the display, and a digit recognizer reads its rows. ONNX inference runs in a browser worker. Consistency checks and crop retries can reject or retry uncertain results; they do not guarantee a correct reading.": "Um detector localiza o visor e um reconhecedor de dígitos lê suas linhas. A inferência ONNX roda em um worker do navegador. As verificações de consistência e novas tentativas com outros recortes podem rejeitar resultados incertos ou repetir a leitura; não garantem uma leitura correta.",
     "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "No uso normal, as fotos são processadas na memória do navegador: o aplicativo não as envia a um servidor nem as salva. Após o primeiro carregamento completo, o service worker guarda o aplicativo e os modelos em cache para uso offline. As ferramentas locais de avaliação para desenvolvimento são um fluxo separado.",
     "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "O código original e os modelos incluídos usam a licença AGPL-3.0-only. ONNX Runtime Web mantém sua licença MIT. A ficha do modelo explica a origem, as somas de verificação e as limitações; o guia de integração descreve a reutilização em outro aplicativo.",
-    "Read the model card": "Ler a ficha do modelo"
+    "Read the model card": "Ler a ficha do modelo",
+    "Terms of Service": "Termos de Serviço (em inglês)"
   },
   "ro": {
     "← Back to the workshop": "← Înapoi în atelier",
@@ -646,7 +654,8 @@
     "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "În utilizarea obișnuită, fotografiile sunt procesate în memoria browserului: aplicația nu le trimite pe server și nu le salvează. După o primă încărcare completă, un service worker păstrează aplicația și modelele în cache pentru utilizare offline. Instrumentele locale de evaluare pentru dezvoltare reprezintă un flux separat.",
     "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "Codul original și modelele incluse sunt licențiate AGPL-3.0-only. ONNX Runtime Web își păstrează licența MIT. Fișa modelului explică proveniența, sumele de verificare și limitele; ghidul de integrare descrie reutilizarea într-o altă aplicație.",
     "Read the model card": "Citește fișa modelului",
-    "Read the integration guide": "Citește ghidul de integrare"
+    "Read the integration guide": "Citește ghidul de integrare",
+    "Terms of Service": "Termeni și condiții (în engleză)"
   },
   "es-ES": {
     "← Back to the workshop": "← Volver al taller",
@@ -714,7 +723,8 @@
     "A detector finds the display, and a digit recognizer reads its rows. ONNX inference runs in a browser worker. Consistency checks and crop retries can reject or retry uncertain results; they do not guarantee a correct reading.": "Un detector localiza la pantalla y un reconocedor de dígitos lee sus filas. La inferencia ONNX se ejecuta en un worker del navegador. Las comprobaciones de coherencia y los nuevos intentos con otros recortes pueden rechazar resultados dudosos o repetir la lectura; no garantizan un resultado correcto.",
     "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "En el uso normal, las fotos se procesan en la memoria del navegador: la aplicación no las envía a un servidor ni las guarda. Tras la primera carga completa, el service worker almacena la aplicación y los modelos en caché para usarlos sin conexión. Las herramientas locales de evaluación para desarrollo constituyen un flujo aparte.",
     "The original code and bundled models use AGPL-3.0-only. ONNX Runtime Web retains its MIT terms. The model card explains provenance, checksums, and limitations; the integration guide documents reuse in another app.": "El código original y los modelos incluidos usan la licencia AGPL-3.0-only. ONNX Runtime Web conserva su licencia MIT. La ficha del modelo explica la procedencia, las sumas de verificación y las limitaciones; la guía de integración describe cómo reutilizarlo en otra aplicación.",
-    "Read the model card": "Leer la ficha del modelo"
+    "Read the model card": "Leer la ficha del modelo",
+    "Terms of Service": "Términos del servicio (en inglés)"
   },
   "uk": {
     "← Back to the workshop": "← Назад до майстерні",
@@ -793,6 +803,7 @@
     "Hearth reads systolic pressure (SYS), diastolic pressure (DIA), and pulse from common upright, three-row monitor displays. Choose a photo or use the camera, crop the display, and correct the result before copying it.": "Hearth зчитує систолічний тиск (SYS), діастолічний тиск (DIA) і пульс із фото поширених тонометрів із вертикальним трирядним дисплеєм. Виберіть фото або скористайтеся камерою, обріжте область дисплея й виправте результат перед копіюванням.",
     "Check every value against the monitor before using or copying a reading.": "Звірте кожне значення з дисплеєм тонометра перед використанням або копіюванням результату.",
     "A detector finds the display, and a digit recognizer reads its rows. ONNX inference runs in a browser worker. Consistency checks and crop retries can reject or retry uncertain results; they do not guarantee a correct reading.": "Детектор знаходить дисплей, а розпізнавач цифр зчитує його рядки. Обчислення ONNX виконуються у worker-потоці браузера. Перевірки узгодженості та нові спроби з іншими обрізаними ділянками можуть відхилити непевний результат або повторити розпізнавання; правильне зчитування не гарантується.",
-    "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "За звичайного використання фото обробляються в пам’яті браузера: застосунок не надсилає їх на сервер і не зберігає. Після першого повного завантаження service worker кешує застосунок і моделі для роботи офлайн. Локальні засоби оцінювання під час розробки становлять окремий процес."
+    "Normal photo processing stays in the browser's memory: the app does not upload or save your photos. After a complete first load, the service worker caches the app and models for offline use. The local development evaluation tools are a separate workflow.": "За звичайного використання фото обробляються в пам’яті браузера: застосунок не надсилає їх на сервер і не зберігає. Після першого повного завантаження service worker кешує застосунок і моделі для роботи офлайн. Локальні засоби оцінювання під час розробки становлять окремий процес.",
+    "Terms of Service": "Умови використання (англійською)"
   }
 }

@@ -6,7 +6,6 @@
   "One blood pressure log, in Android and web form. Record your readings, explore trends, and export your history.": "Un registro de presión arterial, en Android y en formato web. Registre sus lecturas, explore tendencias y exporte su historial.",
   "Open the Web App": "Abra la aplicación web",
   "Download Android APK": "Descargar Android APK",
-  "Android Privacy Policy": "Política de privacidad de Android",
   "BP Digitizer App": "Aplicación BP Digitizer",
   "One app. Two ways to use it.": "Una aplicación. Dos formas de utilizarlo.",
   "BP Digitizer helps you log blood pressure readings, explore their history, and keep your own records. Use the native Android app or open the PWA in your browser. Both can read your monitor with the camera, on your own device, and neither needs an account. The web version, previously listed here as wBP Digitizer, is part of the same project.": "BP Digitizer le ayuda a registrar su tensión arterial, explorar su historial y llevar sus propios registros. Use la aplicación nativa para Android o abra la PWA en su navegador. Ambas pueden leer su tensiómetro con la cámara, en su propio dispositivo, y ninguna necesita cuenta. La versión web, antes listada aquí como wBP Digitizer, forma parte del mismo proyecto.",
@@ -95,5 +94,6 @@
   "Explore admission history and simulate high school choices in Bucharest.": "Consulta el historial de admisiones y simula opciones de instituto en Bucarest.",
   "Behind the scenes": "Entre bastidores",
   "The little building block that helps web apps work offline and stay up to date.": "Una pequeña pieza que ayuda a las aplicaciones web a funcionar sin conexión y mantenerse actualizadas.",
-  "One small console for managing invitations and devices across private web apps.": "Una pequeña consola para gestionar invitaciones y dispositivos en aplicaciones web privadas."
+  "One small console for managing invitations and devices across private web apps.": "Una pequeña consola para gestionar invitaciones y dispositivos en aplicaciones web privadas.",
+  "Android Privacy Policy": "Política de privacidad de Android"
 }
