@@ -31,6 +31,7 @@
       "assets/Magpie/feature_graphic.jpg",
       "assets/Sankey/feature_graphic.jpg",
       "assets/Miscare/feature_graphic.jpg",
+      "assets/Miscare/hero.jpg",
       "assets/GravityWarp/workshop-hero.png",
       "assets/omaha/feature-graphic.png",
       "assets/Spendosaurus/feature_graphic.jpg",
@@ -602,6 +603,41 @@
           "height": 714,
           "bytes": 43046,
           "sha256": "9ae98214cd1cf3854d3130901f99d75b1f75749357b2d8e96f2dc33cfcde60f4"
+        }
+      ]
+    },
+    "assets/Miscare/hero.jpg": {
+      "sha256": "3a6da53ebe4dea68abf4f07e27be40c3c85579e40654189805b0338b97b5f979",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "path": "assets/optimized/miscare-hero-9eaa2695-320.webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 11424,
+          "sha256": "ac514bee5bb36d595fcb59e722283a82150dfa679ca4c85d0999a156345bed6f"
+        },
+        {
+          "path": "assets/optimized/miscare-hero-9eaa2695-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 34402,
+          "sha256": "753137e4049cef8fe9aba0b6106af4e1a57e215ac564972b6cb59a5da00897e3"
+        },
+        {
+          "path": "assets/optimized/miscare-hero-9eaa2695-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 63110,
+          "sha256": "5c78cac5c8dcdf123fa21784135f4ff35f86df6e6ae361ee1a2a460cb20af4da"
+        },
+        {
+          "path": "assets/optimized/miscare-hero-9eaa2695-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 90510,
+          "sha256": "c49bd4a579a8af9f7d30be801b07b0c4ce2b17b507e1792089909a21bb04e989"
         }
       ]
     },
