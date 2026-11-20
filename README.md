@@ -8,8 +8,7 @@ A playful workshop for curious ideas: apps, games, and small tools to explore.
 
 **[Visit zandaulion.com](https://zandaulion.com/)** · [Romanian collection](https://zandaulion.com/ro/index.html)
 
-This repository contains the Zandaulion website: a searchable collection of 26
-projects, individual project pages, and an interactive Sankey diagram editor.
+This repository contains the Zandaulion website: a searchable collection of 27 projects, individual project pages, and an interactive Sankey diagram editor.
 The homepage and every project page are available in 12 languages. The site is
 static HTML, CSS, and vanilla JavaScript, hosted on GitHub Pages.
 
@@ -55,6 +54,7 @@ paths, code examples, and link destinations are preserved.
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
+| Open Banking Hub | [openbankinghub.html](openbankinghub.html) |
 | Pocket Omaha | [omaha.html](omaha.html) |
 | OrbitPuzzles | [orbitpuzzles.html](orbitpuzzles.html) |
 | Pale Blue Dot | [palebluedot.html](palebluedot.html) |
@@ -162,9 +162,8 @@ After editing source content or catalogs, regenerate the site:
 python scripts/build_locales.py
 ```
 
-The generator produces 12 homepages, 275 translated project pages, and
-`language-data.js`. It also maintains canonical and alternate-language links on
-the 25 English project pages. Commit these generated outputs with their sources;
+The generator produces 12 homepages, 297 translated project pages, and
+`language-data.js`. It also maintains canonical and alternate-language links on the 27 English project pages. Commit these generated outputs with their sources;
 GitHub Pages serves them directly without running the Python generator.
 
 Do not edit generated homepages, translated HTML, or `language-data.js` directly:
@@ -218,7 +217,7 @@ node --test scripts/test_language.cjs
 ```
 
 - The build check detects stale generated outputs and missing translations.
-- The site check covers all 336 HTML pages: 12 homepages, 312 project pages, ten privacy notices, one compatibility redirect, and the 404 page. It checks local links, assets, duplicate IDs outside the preserved privacy markup, project language metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also checks HTTP responses and compares served privacy notices with their source files.
+- The site check covers all 355 HTML pages: 12 homepages, 324 project pages, ten privacy notices, seven terms pages, one compatibility redirect, and the 404 page. It checks local links, assets, duplicate IDs outside the preserved privacy markup, project language metadata, reciprocal SEO links, and Arabic direction. With `--url`, it also checks HTTP responses and compares served privacy notices with their source files.
 - The language tests cover preference precedence, regional matching, blocked
   storage, file and subdirectory roots, redirect behavior, and section preservation.
 

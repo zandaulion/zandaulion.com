@@ -8,7 +8,7 @@ Uma oficina divertida para ideias curiosas: aplicativos, jogos e pequenas ferram
 
 **[Visite zandaulion.com](https://zandaulion.com/)** · [Coleção romena](https://zandaulion.com/ro/index.html)
 
-Este repositório contém o site Zandaulion: uma coleção pesquisável de 26 projetos, páginas de projetos individuais e um editor de diagrama Sankey interativo. A página inicial e todas as páginas do projeto estão disponíveis em 12 idiomas. O site é estático HTML, CSS e vanilla JavaScript, hospedado em GitHub Pages.
+Este repositório contém o site Zandaulion: uma coleção pesquisável de 27 projetos, páginas de projetos individuais e um editor de diagrama Sankey interativo. A página inicial e todas as páginas do projeto estão disponíveis em 12 idiomas. O site é estático HTML, CSS e vanilla JavaScript, hospedado em GitHub Pages.
 
 ## Traduções do README
 
@@ -45,6 +45,7 @@ Edite o README em inglês e os catálogos correspondentes em `locales/readme/` e
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
+| Open Banking Hub | [openbankinghub.html](openbankinghub.html) |
 | Pocket Omaha | [omaha.html](omaha.html) |
 | OrbitPuzzles | [orbitpuzzles.html](orbitpuzzles.html) |
 | Pale Blue Dot | [palebluedot.html](palebluedot.html) |
@@ -130,7 +131,7 @@ Depois de editar o conteúdo ou catálogos de origem, gere novamente o site:
 python scripts/build_locales.py
 ```
 
-O gerador produz 12 páginas iniciais, 275 páginas de projetos traduzidas e `language-data.js`. Também mantém os links canônicos e de idiomas alternativos nas 25 páginas de projetos em inglês. Inclua os arquivos gerados no mesmo commit que seus arquivos-fonte; GitHub Pages os publica diretamente sem executar o gerador Python.
+O gerador produz 12 páginas iniciais, 297 páginas de projetos traduzidas e `language-data.js`. Também mantém os links canônicos e de idiomas alternativos nas 27 páginas de projetos em inglês. Inclua os arquivos gerados no mesmo commit que seus arquivos-fonte; GitHub Pages os publica diretamente sem executar o gerador Python.
 
 Não edite páginas iniciais geradas, HTML traduzidas ou `language-data.js` diretamente: a regeneração substitui essas edições. Os catálogos da página inicial devem ter chaves não vazias correspondentes. Os catálogos de projetos usam o texto fonte como chaves, portanto, as alterações na cópia em inglês exigem atualizações de tradução correspondentes. Traduções ausentes falham na compilação.
 
@@ -164,7 +165,7 @@ node --test scripts/test_language.cjs
 ```
 
 - A verificação de construção detecta saídas geradas obsoletas e traduções ausentes.
-- A verificação do site cobre todas as 336 páginas HTML: 12 páginas iniciais, 312 páginas de projetos, dez avisos de privacidade, um redirecionamento de compatibilidade e a página 404. Ele verifica links locais, ativos, IDs duplicados fora da marcação de privacidade preservada, metadados de idioma do projeto, links SEO recíprocos e direção árabe. Com `--url`, ele também verifica as respostas HTTP e compara os avisos de privacidade fornecidos com seus arquivos de origem.
+- A verificação do site cobre todas as 355 páginas HTML: 12 páginas iniciais, 324 páginas de projetos, dez avisos de privacidade, sete páginas de termos de serviço, um redirecionamento de compatibilidade e a página 404. Ele verifica links locais, ativos, IDs duplicados fora da marcação de privacidade preservada, metadados de idioma do projeto, links SEO recíprocos e direção árabe. Com `--url`, ele também verifica as respostas HTTP e compara os avisos de privacidade fornecidos com seus arquivos de origem.
 - Os testes de idioma cobrem precedência de preferência, correspondência regional, armazenamento bloqueado, raízes de arquivos e subdiretórios, comportamento de redirecionamento e preservação de seção.
 
 Para verificações de link offline, execute `python scripts/check_site.py` sem `--url`. Revise também as páginas afetadas no navegador: layout móvel, direção árabe, mudança de idioma, controles de teclado da galeria e interações do editor.

@@ -10,7 +10,7 @@ from discovery import SOCIAL_BLOCK, project_social, social_images
 
 FILES = ('admitere.html', 'bankdwhstudio.html', 'bpdigitizer.html', 'casierul.html', 'faceslice.html', 'gravitygarden.html',
          'gravitytdg.html', 'gravitywarp.html', 'hearth.html', 'homemonitor.html', 'intarzieri.html', 'kerfloom.html',
-         'magpie.html', 'miscare.html', 'olxdeals.html', 'omaha.html', 'orbitpuzzles.html',
+         'magpie.html', 'miscare.html', 'olxdeals.html', 'omaha.html', 'openbankinghub.html', 'orbitpuzzles.html',
          'palebluedot.html', 'plate.html', 'pwainvite.html', 'pwakit.html', 'sankey.html', 'screenshotkit.html',
          'spendosaurus.html', 'thermostat.html', 'threadmark.html')
 PROJECTS = {lang: FILES for lang, path, _, _ in LANGUAGES if path}
@@ -20,7 +20,7 @@ BRANDS = {'Zandaulion', 'Admitere Liceu Kit', 'Bank DWH Studio', 'BP Digitizer',
           'OLX Deals', 'Omaha', 'OrbitPuzzles', 'Pale Blue Dot', 'Bitey', 'PWA Invite',
           'PWA Kit', 'Sankey', 'Spendosaurus', 'Thermostat', 'PWAInvite', 'PWAKit'}
 BRANDS.update({'Android Store Screenshot Kit', 'Casierul clasei', 'Threadmark', 'Intârzieri Tren', 'OLX Deal Finder', 'Pocket Omaha', 'PWA Invite Console',
-               'pwa-kit', 'Thermostat Monitor', 'Hearth OCR', 'Pocket Omaha Core', 'Home Monitor'})
+               'pwa-kit', 'Thermostat Monitor', 'Hearth OCR', 'Pocket Omaha Core', 'Home Monitor', 'Open Banking Hub', 'Bank Hub'})
 UI = {
     'explore': 'Keep exploring', 'viewer': 'Project image viewer',
     'closeLabel': 'Close image viewer', 'close': 'Close ×',

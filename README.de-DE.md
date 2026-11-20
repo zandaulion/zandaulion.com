@@ -8,7 +8,7 @@ Eine spielerische Werkstatt für neugierige Ideen: Apps, Spiele und kleine Werkz
 
 **[Visit zandaulion.com](https://zandaulion.com/)** · [Rumänische Sammlung](https://zandaulion.com/ro/index.html)
 
-Dieses Repository enthält die Zandaulion-Website: eine durchsuchbare Sammlung von 26 Projekten, einzelne Projektseiten und einen interaktiven Sankey-Diagrammeditor. Die Homepage und jede Projektseite sind in 12 Sprachen verfügbar. Die Site ist statisch HTML, CSS und Vanilla JavaScript und wird auf GitHub Pages gehostet.
+Dieses Repository enthält die Zandaulion-Website: eine durchsuchbare Sammlung von 27 Projekten, einzelne Projektseiten und einen interaktiven Sankey-Diagrammeditor. Die Homepage und jede Projektseite sind in 12 Sprachen verfügbar. Die Site ist statisch HTML, CSS und Vanilla JavaScript und wird auf GitHub Pages gehostet.
 
 ## README-Übersetzungen
 
@@ -45,6 +45,7 @@ Bearbeiten Sie die englische README-Datei und die entsprechenden Kataloge in `lo
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
+| Open Banking Hub | [openbankinghub.html](openbankinghub.html) |
 | Pocket Omaha | [omaha.html](omaha.html) |
 | OrbitPuzzles | [orbitpuzzles.html](orbitpuzzles.html) |
 | Pale Blue Dot | [palebluedot.html](palebluedot.html) |
@@ -130,7 +131,7 @@ Nachdem Sie Quellinhalte oder Kataloge bearbeitet haben, generieren Sie die Site
 python scripts/build_locales.py
 ```
 
-Der Generator erzeugt 12 Startseiten, 275 übersetzte Projektseiten und `language-data.js`. Er pflegt außerdem die kanonischen und alternativsprachigen Links auf den 25 englischen Projektseiten. Nehmen Sie die generierten Dateien zusammen mit ihren Quellen in den Commit auf; GitHub Pages liefert sie direkt aus, ohne den Python-Generator auszuführen.
+Der Generator erzeugt 12 Startseiten, 297 übersetzte Projektseiten und `language-data.js`. Er pflegt außerdem die kanonischen und alternativsprachigen Links auf den 27 englischen Projektseiten. Nehmen Sie die generierten Dateien zusammen mit ihren Quellen in den Commit auf; GitHub Pages liefert sie direkt aus, ohne den Python-Generator auszuführen.
 
 Bearbeiten Sie generierte Homepages, übersetzte HTML oder `language-data.js` nicht direkt: Durch die Neugenerierung werden diese Änderungen ersetzt. Homepage-Kataloge müssen übereinstimmende, nicht leere Schlüssel haben. Projektkataloge verwenden Quelltext als Schlüssel, daher erfordern Änderungen an der englischen Kopie entsprechende Übersetzungsaktualisierungen. Fehlende Übersetzungen schlagen beim Build fehl.
 
@@ -164,7 +165,7 @@ node --test scripts/test_language.cjs
 ```
 
 - Die Build-Prüfung erkennt veraltete generierte Ausgaben und fehlende Übersetzungen.
-- Die Website-Prüfung umfasst alle 336 HTML-Seiten: 12 Startseiten, 312 Projektseiten, zehn Datenschutzhinweise, eine Kompatibilitätsweiterleitung und die 404-Seite. Es überprüft lokale Links, Assets, doppelte IDs außerhalb des beibehaltenen Datenschutz-Markups, Metadaten der Projektsprache, wechselseitige SEO-Links und die arabische Richtung. Mit `--url` werden auch HTTP-Antworten überprüft und zugestellte Datenschutzhinweise mit ihren Quelldateien verglichen.
+- Die Website-Prüfung umfasst alle 355 HTML-Seiten: 12 Startseiten, 324 Projektseiten, zehn Datenschutzhinweise, sieben Seiten mit Nutzungsbedingungen, eine Kompatibilitätsweiterleitung und die 404-Seite. Es überprüft lokale Links, Assets, doppelte IDs außerhalb des beibehaltenen Datenschutz-Markups, Metadaten der Projektsprache, wechselseitige SEO-Links und die arabische Richtung. Mit `--url` werden auch HTTP-Antworten überprüft und zugestellte Datenschutzhinweise mit ihren Quelldateien verglichen.
 - Die Sprachtests umfassen Präferenzpriorität, regionale Übereinstimmung, blockierten Speicher, Datei- und Unterverzeichnisstämme, Umleitungsverhalten und Abschnittserhaltung.
 
 Führen Sie für Offline-Linkprüfungen `python scripts/check_site.py` ohne `--url` aus. Überprüfen Sie auch die betroffenen Seiten im Browser: mobiles Layout, arabische Ausrichtung, Sprachumschaltung, Tastatursteuerung in der Galerie und Interaktionen mit dem Editor.
