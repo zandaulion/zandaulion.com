@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es-ES" data-theme="light" dir="ltr">
+<head>
+    <!-- Content checked against open-banking-hub commit 80f132b (0.3.1, 2026-11-20). -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open Banking Hub es una vista autoalojada y de solo lectura de tus propias cuentas bancarias: gasto mensual honesto, suscripciones y facturas, una app privada para el móvil y un servidor MCP con datos ocultados para asistentes de IA.">
+    <title>Open Banking Hub - Detalles del proyecto</title>
+    <link rel="stylesheet" href="../index.css?v=2.0">
+    <link rel="stylesheet" href="../workshop.css?v=8">
+    <link rel="stylesheet" href="../project.css?v=11">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/brand/lion-light-v2-32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&amp;family=Noto+Sans+JP&amp;family=Noto+Sans+KR&amp;family=Noto+Sans+SC&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts.css?v=1">
+
+    <!-- project-locales:start -->
+    <link rel="canonical" href="https://zandaulion.com/es/openbankinghub.html">
+    <link rel="alternate" hreflang="en-US" href="https://zandaulion.com/openbankinghub.html">
+    <link rel="alternate" hreflang="ar" href="https://zandaulion.com/ar/openbankinghub.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://zandaulion.com/zh-cn/openbankinghub.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://zandaulion.com/fr/openbankinghub.html">
+    <link rel="alternate" hreflang="de-DE" href="https://zandaulion.com/de/openbankinghub.html">
+    <link rel="alternate" hreflang="hi-IN" href="https://zandaulion.com/hi/openbankinghub.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://zandaulion.com/ja/openbankinghub.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://zandaulion.com/ko/openbankinghub.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://zandaulion.com/pt-br/openbankinghub.html">
+    <link rel="alternate" hreflang="ro" href="https://zandaulion.com/ro/openbankinghub.html">
+    <link rel="alternate" hreflang="es-ES" href="https://zandaulion.com/es/openbankinghub.html">
+    <link rel="alternate" hreflang="uk" href="https://zandaulion.com/uk/openbankinghub.html">
+    <link rel="alternate" hreflang="x-default" href="https://zandaulion.com/openbankinghub.html">
+    <!-- project-locales:end -->
+
+    <!-- social:start -->
+    <meta property="og:site_name" content="Zandaulion">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Open Banking Hub — Zandaulion">
+    <meta property="og:description" content="Open Banking Hub es una vista autoalojada y de solo lectura de tus propias cuentas bancarias: gasto mensual honesto, suscripciones y facturas, una app privada para el móvil y un servidor MCP con datos ocultados para asistentes de IA.">
+    <meta property="og:url" content="https://zandaulion.com/es/openbankinghub.html">
+    <meta property="og:image" content="https://zandaulion.com/assets/OpenBankingHub/card.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="900">
+    <meta property="og:image:alt" content="Open Banking Hub — Zandaulion">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Open Banking Hub — Zandaulion">
+    <meta name="twitter:description" content="Open Banking Hub es una vista autoalojada y de solo lectura de tus propias cuentas bancarias: gasto mensual honesto, suscripciones y facturas, una app privada para el móvil y un servidor MCP con datos ocultados para asistentes de IA.">
+    <meta name="twitter:image" content="https://zandaulion.com/assets/OpenBankingHub/card.jpg">
+    <meta name="twitter:image:alt" content="Open Banking Hub — Zandaulion">
+    <!-- social:end -->
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <portfolio-header active-page="openbankinghub.html"></portfolio-header>
+
+    <main id="main">
+        <div class="container">
+            <a class="back-link" href="index.html#collection" hreflang="es-ES">← Volver al taller</a>
+            <div class="project-header">
+                <div class="project-intro">
+                    <span class="section-number">Herramientas cotidianas</span>
+                    <h1>Open Banking Hub</h1>
+                    <p class="project-lead">Mira adónde va tu dinero y qué pagas cada mes, desde tus propias cuentas bancarias y en tu propio servidor.</p>
+                    <div class="project-links">
+                        <a href="https://zandaulion.github.io/open-banking-hub/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visitar el sitio web</a>
+                        <a href="https://github.com/zandaulion/open-banking-hub" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+                    </div>
+                    <p class="availability-note">Open Banking Hub es autoalojado y de solo lectura: cada persona ejecuta su propia copia privada.</p>
+                </div>
+                <img src="../assets/OpenBankingHub/card.jpg" alt="Tres pantallas de móvil de la demo: el gasto de un mes, los pagos periódicos y el mes en modo oscuro" class="project-hero-image hero-wide" width="1600" height="900">
+            </div>
+
+            <div class="project-content reveal">
+                <h2>Acerca de la aplicación</h2>
+                <p>Open Banking Hub, o Bank Hub para abreviar, es una vista autoalojada y de solo lectura de tus propias cuentas bancarias. Obtiene tus movimientos a través de la API PSD2 de Enable Banking, los guarda en un archivo SQLite en tu propio equipo y responde bien a dos preguntas: ¿adónde ha ido mi dinero? y ¿qué pago con regularidad?</p>
+                <p>Solo lee datos de las cuentas y no contiene ningún código capaz de hacer un pago. Una app privada para el móvil muestra todo a los dispositivos que registres, y un servidor MCP de solo lectura permite que un asistente de IA responda preguntas desde una vista ocultada: categorías, importes y comercios conocidos, pero nunca nombres de personas, IBAN ni conceptos de pago.</p>
+                <p>Se ha creado y probado con Revolut, ING Romania y BRD, y debería funcionar con cualquier banco compatible con Enable Banking. El modo de producción restringido de Enable Banking es gratuito para tus propias cuentas. Open Banking Hub no está afiliado a Enable Banking ni a ningún banco.</p>
+
+                <h2>Galería</h2>
+                <p>Todas las capturas muestran datos inventados de la demo integrada en la app.</p>
+                <div class="gallery-grid">
+                    <img src="../assets/OpenBankingHub/month-light.jpg" alt="Mes: lo gastado hasta ahora frente al mes pasado, ingresos, lo que queda y un gráfico de cada mes" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/recurring-light.jpg" alt="Periódicos: pagos regulares con su variación respecto al mes anterior, e ingresos regulares" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="El mes en modo oscuro" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/payment-light.jpg" alt="Un pago: cambia su categoría para este pago o para el beneficiario, o márcalo como pago puntual" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/sort-light.jpg" alt="Ordenar: beneficiarios no reconocidos, los mayores primero" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="Cuentas: saldos, conexiones bancarias y vinculación de bancos" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                </div>
+
+                <h2>como funciona</h2>
+                <ol>
+                    <li><strong>Sincronización de solo lectura.</strong> Dos veces al día, Bank Hub obtiene saldos y movimientos de cada banco vinculado, dentro del límite PSD2 de unas cuatro solicitudes desatendidas por cuenta y día. Justo después de autorizar un banco, importa todo el historial que ese banco permite.</li>
+                    <li><strong>Ordenado con reglas.</strong> Las transferencias entre tus propias cuentas, las categorías, los pagos puntuales y los pagos periódicos se calculan a partir de los datos brutos con reglas, no con modelos de lenguaje, así que los mismos datos siempre dan el mismo resultado.</li>
+                    <li><strong>Revisa en el móvil.</strong> La app instalable muestra Mes, Periódicos, Actividad, Ordenar y Cuentas en tus dispositivos registrados, solo en tu red privada.</li>
+                    <li><strong>Pregunta a un asistente.</strong> Un asistente de IA conectado por MCP solo ve el libro ocultado y puede partir de instrucciones preparadas, como un resumen mensual o una revisión de suscripciones.</li>
+                </ol>
+
+                <h2>Funciones</h2>
+                <ul>
+                    <li><strong>Gasto honesto:</strong> Las transferencias entre tus propias cuentas quedan fuera, los reembolsos reducen su categoría y los pagos puntuales muy grandes, como un coche o una vivienda, se muestran aparte en lugar de desbordar el mes.</li>
+                    <li><strong>Suscripciones y facturas:</strong> Detectadas automáticamente, con la variación respecto a la factura anterior, lo que queda por pagar este mes y tus ingresos regulares.</li>
+                    <li><strong>Alertas en el móvil:</strong> Un pago grande, un saldo bajo, un sueldo que se retrasa, un pago periódico que cambia, una conexión bancaria a punto de caducar o una copia de seguridad que se detuvo. Por defecto, las notificaciones no muestran importes ni beneficiarios en la pantalla de bloqueo.</li>
+                    <li><strong>Funciona sin conexión:</strong> Cada pantalla guarda una copia en el móvil. Sin el servidor, la app muestra esa copia con un aviso de cuándo se guardó. Las copias de más de 14 días se eliminan, y un móvil revocado borra su copia.</li>
+                    <li><strong>Privado por diseño:</strong> Acceso al banco de solo lectura, todos los datos en un directorio de tu equipo, la app solo en tu red privada y cada móvil registrado por invitación.</li>
+                    <li><strong>IA con una vista ocultada:</strong> El servidor MCP abre la base de datos en solo lectura y lee solo las tablas ocultadas, y un detector de fugas comprueba que los nombres, los IBAN y los conceptos se quedan fuera.</li>
+                    <li><strong>Peculiaridades reales de los bancos, resueltas:</strong> Los bolsillos y recargas de Revolut, el formato de los conceptos de ING Romania, y las páginas de 20 movimientos y la regla de un solo consentimiento de BRD.</li>
+                </ul>
+
+                <h2>Debajo del capó</h2>
+                <p>Open Banking Hub está escrito en Python con FastAPI y SQLite. Funciona en un pequeño equipo Linux siempre encendido, con Docker Compose y una imagen publicada para amd64 y arm64, o con unidades systemd. Accedes desde el móvil a través de una red privada como Tailscale; no debe exponerse a internet. Los importes en otras divisas se convierten al tipo diario del Banco Nacional de Rumanía. Las copias de seguridad nocturnas se comprueban para verificar su integridad, con copias externas cifradas opcionales mediante restic. El proyecto es de código abierto con licencia MIT.</p>
+            </div>
+        </div>
+
+        <section class="related-projects wrap" aria-labelledby="related-title">
+            <div class="section-heading"><div><span class="section-number">Sigue descubriendo</span><h2 id="related-title">Quizá también te guste…</h2></div><p><a href="index.html#collection" hreflang="es-ES">Ver toda la colección ↗</a></p></div>
+            <div class="collection-grid">
+                <article class="collection-card" data-category="everyday">
+          <a href="spendosaurus.html" hreflang="es-ES">
+            <div class="collection-image"><img src="../assets/optimized/spendosaurus-feature-graphic-ebcc05c4-640.webp" srcset="../assets/optimized/spendosaurus-feature-graphic-ebcc05c4-320.webp 320w, ../assets/optimized/spendosaurus-feature-graphic-ebcc05c4-640.webp 640w, ../assets/optimized/spendosaurus-feature-graphic-ebcc05c4-960.webp 960w, ../assets/optimized/spendosaurus-feature-graphic-ebcc05c4-1280.webp 1280w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc((100vw - 57px) / 2), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Herramientas cotidianas</div>
+            <h3>Spendosaurus <span aria-hidden="true">↗</span></h3>
+            <p>Planifica los grandes gastos familiares, desde la primera estimación hasta la última cuota.</p>
+          </a>
+        </article>
+                <article class="collection-card" data-category="everyday">
+          <a href="homemonitor.html" hreflang="es-ES">
+            <div class="collection-image"><img src="../assets/optimized/homemonitor-card-9cd937d5-640.webp" srcset="../assets/optimized/homemonitor-card-9cd937d5-320.webp 320w, ../assets/optimized/homemonitor-card-9cd937d5-640.webp 640w, ../assets/optimized/homemonitor-card-9cd937d5-960.webp 960w, ../assets/optimized/homemonitor-card-9cd937d5-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc((100vw - 57px) / 2), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Herramientas cotidianas</div>
+            <h3>Home Monitor <span aria-hidden="true">↗</span></h3>
+            <p>Las cámaras de tu casa, con las caras conocidas reconocidas en tu propio servidor y una cronología tranquila de quién ha pasado.</p>
+          </a>
+        </article>
+                <article class="collection-card" data-category="everyday">
+          <a href="omaha.html" hreflang="es-ES">
+            <div class="collection-image"><img src="../assets/optimized/omaha-feature-graphic-0420be71-640.webp" srcset="../assets/optimized/omaha-feature-graphic-0420be71-320.webp 320w, ../assets/optimized/omaha-feature-graphic-0420be71-640.webp 640w, ../assets/optimized/omaha-feature-graphic-0420be71-960.webp 960w, ../assets/optimized/omaha-feature-graphic-0420be71-1024.webp 1024w" sizes="(max-width: 380px) calc(100vw - 32px), (max-width: 700px) calc((100vw - 57px) / 2), (max-width: 1000px) calc((100vw - 98px) / 3), (max-width: 1260px) calc((100vw - 130px) / 3), 377px" alt="" loading="lazy" decoding="async" width="800" height="420"></div>
+            <div class="collection-tag">Herramientas cotidianas</div>
+            <h3>Pocket Omaha <span aria-hidden="true">↗</span></h3>
+            <p>Entienda qué ha cambiado en las empresas que sigue. Revise sus razones.</p>
+          </a>
+        </article>
+            </div>
+        </section>
+    </main>
+
+    <portfolio-footer></portfolio-footer>
+    <script src="../language-data.js?v=7" defer></script>
+    <script src="../project.js?v=8" defer></script>
+    <script src="../language.js?v=7" defer></script>
+</body>
+</html>

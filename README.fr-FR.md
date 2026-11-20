@@ -8,7 +8,7 @@ Un atelier ludique pour les idées curieuses : des applications, des jeux et de 
 
 **[Visitez zandaulion.com](https://zandaulion.com/)** · [RCollection roumaine](https://zandaulion.com/ro/index.html)
 
-Ce référentiel contient le site Web Zandaulion : une collection consultable de 26 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
+Ce référentiel contient le site Web Zandaulion : une collection consultable de 27 projets, des pages de projets individuelles et un éditeur de diagrammes Sankey interactif. La page d'accueil et chaque page de projet sont disponibles en 12 langues. Le site est statique HTML, CSS et vanilla JavaScript, hébergé sur GitHub Pages.
 
 ## Traductions du README
 
@@ -45,6 +45,7 @@ Modifiez le README anglais et les catalogues correspondants dans `locales/readme
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
+| Open Banking Hub | [openbankinghub.html](openbankinghub.html) |
 | Pocket Omaha | [omaha.html](omaha.html) |
 | OrbitPuzzles | [orbitpuzzles.html](orbitpuzzles.html) |
 | Pale Blue Dot | [palebluedot.html](palebluedot.html) |
@@ -130,7 +131,7 @@ Après avoir modifié le contenu source ou les catalogues, régénérez le site�
 python scripts/build_locales.py
 ```
 
-Le générateur produit 12 pages d’accueil, 275 pages de projet traduites et `language-data.js`. Il maintient aussi les liens canoniques et les liens de langues alternatives sur les 25 pages de projet en anglais. Incluez les fichiers générés dans le même commit que leurs sources ; GitHub Pages les publie directement sans exécuter le générateur Python.
+Le générateur produit 12 pages d’accueil, 297 pages de projet traduites et `language-data.js`. Il maintient aussi les liens canoniques et les liens de langues alternatives sur les 27 pages de projet en anglais. Incluez les fichiers générés dans le même commit que leurs sources ; GitHub Pages les publie directement sans exécuter le générateur Python.
 
 Ne modifiez pas directement les pages d'accueil générées, HTML traduites ou `language-data.js` : la régénération remplace ces modifications. Les catalogues de la page d'accueil doivent avoir des clés non vides correspondantes. Les catalogues de projets utilisent le texte source comme clés, de sorte que les modifications apportées à la copie anglaise nécessitent des mises à jour de traduction correspondantes. Les traductions manquantes échouent à la construction.
 
@@ -164,7 +165,7 @@ node --test scripts/test_language.cjs
 ```
 
 - La vérification de build détecte les sorties générées obsolètes et les traductions manquantes.
-- La vérification du site couvre les 336 pages HTML : 12 pages d’accueil, 312 pages de projet, dix avis de confidentialité, une redirection de compatibilité et la page 404. Il vérifie les liens locaux, les actifs, les identifiants en double en dehors du balisage de confidentialité préservé, les métadonnées de la langue du projet, les liens SEO réciproques et la direction arabe. Avec `--url`, il vérifie également les réponses HTTP et compare les avis de confidentialité envoyés avec leurs fichiers sources.
+- La vérification du site couvre les 355 pages HTML : 12 pages d’accueil, 324 pages de projet, dix avis de confidentialité, sept pages de conditions d’utilisation, une redirection de compatibilité et la page 404. Il vérifie les liens locaux, les actifs, les identifiants en double en dehors du balisage de confidentialité préservé, les métadonnées de la langue du projet, les liens SEO réciproques et la direction arabe. Avec `--url`, il vérifie également les réponses HTTP et compare les avis de confidentialité envoyés avec leurs fichiers sources.
 - Les tests linguistiques couvrent la priorité des préférences, la correspondance régionale, le stockage bloqué, les racines des fichiers et des sous-répertoires, le comportement de redirection et la préservation des sections.
 
 Pour les vérifications de liens hors ligne, exécutez `python scripts/check_site.py` sans `--url`. Examinez également les pages concernées dans le navigateur : mise en page mobile, direction arabe, changement de langue, commandes du clavier de la galerie et interactions avec l'éditeur.

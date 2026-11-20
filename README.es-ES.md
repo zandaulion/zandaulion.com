@@ -8,7 +8,7 @@ Un taller lleno de juego para ideas curiosas: aplicaciones, juegos y pequeñas h
 
 **[Visita zandaulion.com](https://zandaulion.com/)** · [Colección rumana](https://zandaulion.com/ro/index.html)
 
-Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 26 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
+Este repositorio contiene el sitio web Zandaulion: una colección con capacidad de búsqueda de 27 proyectos, páginas de proyectos individuales y un editor de diagramas interactivo Sankey. La página de inicio y cada página del proyecto están disponibles en 12 idiomas. El sitio es estático HTML, CSS y vanilla JavaScript, alojado en GitHub Pages.
 
 ## Traducciones del README
 
@@ -45,6 +45,7 @@ Edite el archivo README en inglés y los catálogos correspondientes en `locales
 | Magpie | [magpie.html](magpie.html) |
 | Mișcare | [miscare.html](miscare.html) |
 | OLX Deal Finder | [olxdeals.html](olxdeals.html) |
+| Open Banking Hub | [openbankinghub.html](openbankinghub.html) |
 | Pocket Omaha | [omaha.html](omaha.html) |
 | OrbitPuzzles | [orbitpuzzles.html](orbitpuzzles.html) |
 | Pale Blue Dot | [palebluedot.html](palebluedot.html) |
@@ -130,7 +131,7 @@ Después de editar el contenido fuente o los catálogos, vuelva a generar el sit
 python scripts/build_locales.py
 ```
 
-El generador produce 12 páginas de inicio, 275 páginas de proyectos traducidas y `language-data.js`. También mantiene los enlaces canónicos y de idiomas alternativos de las 25 páginas de proyectos en inglés. Incluye los archivos generados en el mismo commit que sus fuentes; GitHub Pages los publica directamente sin ejecutar el generador Python.
+El generador produce 12 páginas de inicio, 297 páginas de proyectos traducidas y `language-data.js`. También mantiene los enlaces canónicos y de idiomas alternativos de las 27 páginas de proyectos en inglés. Incluye los archivos generados en el mismo commit que sus fuentes; GitHub Pages los publica directamente sin ejecutar el generador Python.
 
 No edite las páginas de inicio generadas, HTML o `language-data.js` traducidas directamente: la regeneración reemplaza esas ediciones. Los catálogos de la página de inicio deben tener claves coincidentes que no estén vacías. Los catálogos de proyectos utilizan el texto fuente como clave, por lo que los cambios en la copia en inglés requieren las correspondientes actualizaciones de traducción. Las traducciones que faltan fallan en la compilación.
 
@@ -164,7 +165,7 @@ node --test scripts/test_language.cjs
 ```
 
 - La verificación de compilación detecta resultados generados obsoletos y traducciones faltantes.
-- La comprobación del sitio abarca las 336 páginas HTML: 12 páginas de inicio, 312 páginas de proyectos, diez avisos de privacidad, una redirección de compatibilidad y la página 404. Comprueba enlaces locales, activos, ID duplicados fuera del marcado de privacidad preservado, metadatos del idioma del proyecto, enlaces recíprocos SEO y dirección árabe. Con `--url`, también verifica las respuestas de HTTP y compara los avisos de privacidad entregados con sus archivos fuente.
+- La comprobación del sitio abarca las 355 páginas HTML: 12 páginas de inicio, 324 páginas de proyectos, diez avisos de privacidad, siete páginas de términos del servicio, una redirección de compatibilidad y la página 404. Comprueba enlaces locales, activos, ID duplicados fuera del marcado de privacidad preservado, metadatos del idioma del proyecto, enlaces recíprocos SEO y dirección árabe. Con `--url`, también verifica las respuestas de HTTP y compara los avisos de privacidad entregados con sus archivos fuente.
 - Las pruebas de idioma cubren la precedencia de preferencias, la coincidencia regional, el almacenamiento bloqueado, las raíces de archivos y subdirectorios, el comportamiento de redireccionamiento y la preservación de secciones.
 
 Para verificaciones de enlaces sin conexión, ejecute `python scripts/check_site.py` sin `--url`. Revise también las páginas afectadas en el navegador: diseño móvil, dirección árabe, cambio de idioma, controles del teclado de la galería e interacciones del editor.
