@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-ES" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against open-banking-hub commit 80f132b (0.3.1, 2026-11-20). -->
+    <!-- Content checked against open-banking-hub commit bb73303 (0.6.0, 2026-11-21). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Open Banking Hub es una vista autoalojada y de solo lectura de tus propias cuentas bancarias: gasto mensual honesto, suscripciones y facturas, una app privada para el móvil y un servidor MCP con datos ocultados para asistentes de IA.">
@@ -68,31 +68,40 @@
                     </div>
                     <p class="availability-note">Open Banking Hub es autoalojado y de solo lectura: cada persona ejecuta su propia copia privada.</p>
                 </div>
-                <img src="../assets/OpenBankingHub/card.jpg" alt="Tres pantallas de móvil de la demo: el gasto de un mes, los pagos periódicos y el mes en modo oscuro" class="project-hero-image hero-wide" width="1600" height="900">
+                <img src="../assets/OpenBankingHub/card.jpg" alt="La demo en un portátil y un móvil: el gasto de un mes junto a su gráfico, y los pagos periódicos" class="project-hero-image hero-wide" width="1600" height="900">
             </div>
 
             <div class="project-content reveal">
                 <h2>Acerca de la aplicación</h2>
                 <p>Open Banking Hub, o Bank Hub para abreviar, es una vista autoalojada y de solo lectura de tus propias cuentas bancarias. Obtiene tus movimientos a través de la API PSD2 de Enable Banking, los guarda en un archivo SQLite en tu propio equipo y responde bien a dos preguntas: ¿adónde ha ido mi dinero? y ¿qué pago con regularidad?</p>
-                <p>Solo lee datos de las cuentas y no contiene ningún código capaz de hacer un pago. Una app privada para el móvil muestra todo a los dispositivos que registres, y un servidor MCP de solo lectura permite que un asistente de IA responda preguntas desde una vista ocultada: categorías, importes y comercios conocidos, pero nunca nombres de personas, IBAN ni conceptos de pago.</p>
+                <p>Solo lee datos de las cuentas y no contiene ningún código capaz de hacer un pago. Una app privada para el móvil y el portátil muestra todo a los dispositivos que registres, y un servidor MCP de solo lectura permite que un asistente de IA responda preguntas desde una vista ocultada: categorías, importes y comercios conocidos, pero nunca nombres de personas, IBAN ni conceptos de pago.</p>
                 <p>Se ha creado y probado con Revolut, ING Romania y BRD, y debería funcionar con cualquier banco compatible con Enable Banking. El modo de producción restringido de Enable Banking es gratuito para tus propias cuentas. Open Banking Hub no está afiliado a Enable Banking ni a ningún banco.</p>
 
                 <h2>Galería</h2>
-                <p>Todas las capturas muestran datos inventados de la demo integrada en la app.</p>
+                <p>Todas las capturas muestran datos inventados de la demo integrada en la app. En un portátil, la app aprovecha el ancho: una barra lateral, tablas que puedes recorrer fila a fila, y un pago o un beneficiario que se abre junto a la lista.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/OpenBankingHub/desktop-month.jpg" alt="Mes en un portátil: las cifras junto a un gráfico de cada mes, con categorías y beneficiarios lado a lado" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-activity.jpg" alt="Actividad en un portátil: los pagos en una tabla, con el pago seleccionado abierto en un panel lateral" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-recurring.jpg" alt="Periódicos en un portátil: los totales junto al gráfico y los pagos regulares en una tabla junto a los ingresos" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-accounts.jpg" alt="Cuentas en un portátil, en tres columnas: saldos, tarjetas de crédito y grupos, y luego conexiones, estado y alertas" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                </div>
                 <div class="gallery-grid">
                     <img src="../assets/OpenBankingHub/month-light.jpg" alt="Mes: lo gastado hasta ahora frente al mes pasado, ingresos, lo que queda y un gráfico de cada mes" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/recurring-light.jpg" alt="Periódicos: pagos regulares con su variación respecto al mes anterior, e ingresos regulares" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="El mes en modo oscuro" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="Cuentas: saldos, una tarjeta de crédito a partir de sus extractos y la cuenta de un hijo en un grupo" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/card-light.jpg" alt="Una tarjeta de crédito añadida a partir de sus extractos: lo que se debe, el límite, el vencimiento y los planes a plazos" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/csv-light.jpg" alt="Importar un CSV de cualquier banco: las columnas se adivinan y se confirman una vez" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/payment-light.jpg" alt="Un pago: cambia su categoría para este pago o para el beneficiario, o márcalo como pago puntual" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/sort-light.jpg" alt="Ordenar: beneficiarios no reconocidos, los mayores primero" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="Cuentas: saldos, conexiones bancarias y vinculación de bancos" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="El mes en modo oscuro" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                 </div>
 
                 <h2>como funciona</h2>
                 <ol>
                     <li><strong>Sincronización de solo lectura.</strong> Dos veces al día, Bank Hub obtiene saldos y movimientos de cada banco vinculado, dentro del límite PSD2 de unas cuatro solicitudes desatendidas por cuenta y día. Justo después de autorizar un banco, importa todo el historial que ese banco permite.</li>
+                    <li><strong>Completa los huecos con extractos.</strong> Añade un extracto mensual en PDF, o un CSV de cualquier banco, para cubrir una tarjeta de crédito que el banco no comparte o un historial que su API entrega despacio. Solo se añaden los pagos que faltan, comprobados con los totales del propio extracto, y el archivo no se guarda.</li>
                     <li><strong>Ordenado con reglas.</strong> Las transferencias entre tus propias cuentas, las categorías, los pagos puntuales y los pagos periódicos se calculan a partir de los datos brutos con reglas, no con modelos de lenguaje, así que los mismos datos siempre dan el mismo resultado.</li>
-                    <li><strong>Revisa en el móvil.</strong> La app instalable muestra Mes, Periódicos, Actividad, Ordenar y Cuentas en tus dispositivos registrados, solo en tu red privada.</li>
+                    <li><strong>Revisa en el móvil o en el portátil.</strong> La app instalable muestra Mes, Periódicos, Actividad, Ordenar y Cuentas en tus dispositivos registrados, solo en tu red privada. En un portátil añade una barra lateral, tablas con los detalles al lado y atajos de teclado.</li>
                     <li><strong>Pregunta a un asistente.</strong> Un asistente de IA conectado por MCP solo ve el libro ocultado y puede partir de instrucciones preparadas, como un resumen mensual o una revisión de suscripciones.</li>
                 </ol>
 
@@ -100,8 +109,11 @@
                 <ul>
                     <li><strong>Gasto honesto:</strong> Las transferencias entre tus propias cuentas quedan fuera, los reembolsos reducen su categoría y los pagos puntuales muy grandes, como un coche o una vivienda, se muestran aparte en lugar de desbordar el mes.</li>
                     <li><strong>Suscripciones y facturas:</strong> Detectadas automáticamente, con la variación respecto a la factura anterior, lo que queda por pagar este mes y tus ingresos regulares.</li>
+                    <li><strong>El dinero de otros:</strong> La cuenta de un hijo, un padre o una madre a quien ayudas, o un negocio van en un grupo. Sus propios pagos quedan fuera de tus totales, y lo que le envías cuenta como tú elijas: como gasto en su propia categoría o como transferencia.</li>
+                    <li><strong>Tarjetas de crédito a partir de extractos:</strong> Una tarjeta que el banco no comparte se lee de sus extractos mensuales: lo que se debe, el límite, el vencimiento y los planes a plazos, con un aviso tres días antes del vencimiento.</li>
+                    <li><strong>Móvil y portátil:</strong> En un portátil, la misma app aprovecha el ancho: Mes con el gráfico junto a las cifras, Actividad y Periódicos como tablas, Cuentas en tres columnas, y las flechas del teclado para cambiar de mes.</li>
                     <li><strong>Alertas en el móvil:</strong> Un pago grande, un saldo bajo, un sueldo que se retrasa, un pago periódico que cambia, una conexión bancaria a punto de caducar o una copia de seguridad que se detuvo. Por defecto, las notificaciones no muestran importes ni beneficiarios en la pantalla de bloqueo.</li>
-                    <li><strong>Funciona sin conexión:</strong> Cada pantalla guarda una copia en el móvil. Sin el servidor, la app muestra esa copia con un aviso de cuándo se guardó. Las copias de más de 14 días se eliminan, y un móvil revocado borra su copia.</li>
+                    <li><strong>Funciona sin conexión:</strong> Cada pantalla guarda una copia en el móvil, rellenada de antemano por wifi o datos móviles. Cuando no se puede llegar al servidor, o una red se queda colgada, la app se abre desde esa copia con un aviso de cuándo se guardó. Las copias de más de 14 días se eliminan, y un móvil revocado borra su copia.</li>
                     <li><strong>Privado por diseño:</strong> Acceso al banco de solo lectura, todos los datos en un directorio de tu equipo, la app solo en tu red privada y cada móvil registrado por invitación.</li>
                     <li><strong>IA con una vista ocultada:</strong> El servidor MCP abre la base de datos en solo lectura y lee solo las tablas ocultadas, y un detector de fugas comprueba que los nombres, los IBAN y los conceptos se quedan fuera.</li>
                     <li><strong>Peculiaridades reales de los bancos, resueltas:</strong> Los bolsillos y recargas de Revolut, el formato de los conceptos de ING Romania, y las páginas de 20 movimientos y la regla de un solo consentimiento de BRD.</li>

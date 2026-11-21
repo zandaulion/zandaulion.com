@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against open-banking-hub commit 80f132b (0.3.1, 2026-11-20). -->
+    <!-- Content checked against open-banking-hub commit bb73303 (0.6.0, 2026-11-21). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Open Banking Hub est une vue auto-hébergée et en lecture seule de vos propres comptes bancaires : des dépenses mensuelles honnêtes, les abonnements et factures, une application privée pour le téléphone et un serveur MCP aux données masquées pour les assistants IA.">
@@ -68,31 +68,40 @@
                     </div>
                     <p class="availability-note">Open Banking Hub est auto-hébergé et en lecture seule : chaque personne fait tourner sa propre copie privée.</p>
                 </div>
-                <img src="../assets/OpenBankingHub/card.jpg" alt="Trois écrans de téléphone de la démo : les dépenses d&#x27;un mois, les paiements réguliers et le mois en mode sombre" class="project-hero-image hero-wide" width="1600" height="900">
+                <img src="../assets/OpenBankingHub/card.jpg" alt="La démo sur un ordinateur portable et un téléphone : les dépenses d&#x27;un mois à côté de leur graphique, et les paiements réguliers" class="project-hero-image hero-wide" width="1600" height="900">
             </div>
 
             <div class="project-content reveal">
                 <h2>À propos de l'application</h2>
                 <p>Open Banking Hub, ou Bank Hub en abrégé, est une vue auto-hébergée et en lecture seule de vos propres comptes bancaires. Il récupère vos opérations via l'API PSD2 d'Enable Banking, les conserve dans un fichier SQLite sur votre propre machine et répond bien à deux questions : où est passé mon argent, et que dois-je payer régulièrement ?</p>
-                <p>Il ne fait que lire les données des comptes et ne contient aucun code capable d'effectuer un paiement. Une application privée pour le téléphone montre tout aux appareils que vous enregistrez, et un serveur MCP en lecture seule permet à un assistant IA de répondre à des questions à partir d'une vue masquée : catégories, montants et commerçants connus, mais jamais les noms des personnes, les IBAN ou les libellés des paiements.</p>
+                <p>Il ne fait que lire les données des comptes et ne contient aucun code capable d'effectuer un paiement. Une application privée pour téléphone et ordinateur portable montre tout aux appareils que vous enregistrez, et un serveur MCP en lecture seule permet à un assistant IA de répondre à des questions à partir d'une vue masquée : catégories, montants et commerçants connus, mais jamais les noms des personnes, les IBAN ou les libellés des paiements.</p>
                 <p>Il a été conçu et testé avec Revolut, ING Romania et BRD, et toute banque prise en charge par Enable Banking devrait fonctionner. Le mode de production restreint d'Enable Banking est gratuit pour vos propres comptes. Open Banking Hub n'est affilié ni à Enable Banking ni à aucune banque.</p>
 
                 <h2>Galerie</h2>
-                <p>Toutes les captures montrent des données inventées issues de la démo intégrée à l'application.</p>
+                <p>Toutes les captures montrent des données inventées issues de la démo intégrée à l'application. Sur un ordinateur portable, l'application exploite la largeur : une barre latérale, des tableaux à parcourir ligne par ligne, et un paiement ou un bénéficiaire qui s'ouvre à côté de la liste.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/OpenBankingHub/desktop-month.jpg" alt="Mois sur un ordinateur portable : les chiffres à côté d&#x27;un graphique de chaque mois, avec les catégories et les bénéficiaires côte à côte" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-activity.jpg" alt="Activité sur un ordinateur portable : les paiements sous forme de tableau, le paiement sélectionné ouvert dans un panneau latéral" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-recurring.jpg" alt="Récurrents sur un ordinateur portable : les totaux à côté du graphique, et les paiements réguliers en tableau à côté des revenus" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-accounts.jpg" alt="Comptes sur un ordinateur portable, en trois colonnes : soldes, cartes de crédit et groupes, puis connexions, santé et alertes" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                </div>
                 <div class="gallery-grid">
                     <img src="../assets/OpenBankingHub/month-light.jpg" alt="Mois : les dépenses jusqu&#x27;ici par rapport au mois dernier, les revenus, ce qui reste et un graphique de chaque mois" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/recurring-light.jpg" alt="Récurrents : paiements réguliers avec leur évolution d&#x27;un mois sur l&#x27;autre, et revenus réguliers" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="Le mois en mode sombre" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="Comptes : soldes, une carte de crédit issue de ses relevés et le compte d&#x27;un enfant dans un groupe" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/card-light.jpg" alt="Une carte de crédit ajoutée à partir de ses relevés : le montant dû, le plafond, l’échéance et les plans de paiement échelonné" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/csv-light.jpg" alt="Import d&#x27;un CSV de n&#x27;importe quelle banque : les colonnes sont devinées et confirmées une seule fois" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/payment-light.jpg" alt="Un paiement : changer sa catégorie pour ce paiement ou pour le bénéficiaire, ou le marquer comme ponctuel" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/sort-light.jpg" alt="Trier : bénéficiaires non reconnus, les plus importants en premier" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="Comptes : soldes, connexions bancaires et ajout de banques" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="Le mois en mode sombre" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                 </div>
 
                 <h2>Comment ça marche</h2>
                 <ol>
                     <li><strong>Synchronisation en lecture seule.</strong> Deux fois par jour, Bank Hub récupère les soldes et les opérations de chaque banque reliée, dans la limite PSD2 d'environ quatre requêtes automatiques par compte et par jour. Juste après votre autorisation, il importe tout l'historique que la banque permet.</li>
+                    <li><strong>Combler les trous avec des relevés.</strong> Ajoutez un relevé mensuel en PDF, ou un CSV de n'importe quelle banque, pour couvrir une carte de crédit que la banque ne partage pas ou un historique que son API livre lentement. Seuls les paiements manquants sont ajoutés, vérifiés par rapport aux totaux du relevé, et le fichier lui-même n'est pas conservé.</li>
                     <li><strong>Classé par des règles.</strong> Les virements entre vos propres comptes, les catégories, les dépenses ponctuelles et les paiements réguliers sont déterminés à partir des données brutes par des règles, et non par des modèles de langage : les mêmes données donnent toujours le même résultat.</li>
-                    <li><strong>Consultez sur votre téléphone.</strong> L'application installable affiche Mois, Récurrents, Activité, Trier et Comptes sur vos appareils enregistrés, uniquement sur votre réseau privé.</li>
+                    <li><strong>Consultez sur votre téléphone ou votre ordinateur.</strong> L'application installable affiche Mois, Récurrents, Activité, Trier et Comptes sur vos appareils enregistrés, uniquement sur votre réseau privé. Sur un ordinateur portable, elle ajoute une barre latérale, des tableaux avec les détails à côté et des raccourcis clavier.</li>
                     <li><strong>Interrogez un assistant.</strong> Un assistant IA connecté via MCP ne voit que le registre masqué et peut partir d'invites toutes prêtes, comme un bilan mensuel ou un audit des abonnements.</li>
                 </ol>
 
@@ -100,8 +109,11 @@
                 <ul>
                     <li><strong>Des dépenses honnêtes :</strong> Les virements entre vos propres comptes sont écartés, les remboursements réduisent leur catégorie, et les très grosses dépenses ponctuelles, comme une voiture ou un logement, sont affichées à part au lieu d'écraser le mois.</li>
                     <li><strong>Abonnements et factures :</strong> Détectés automatiquement, avec l'évolution par rapport à la facture précédente, ce qui reste à payer ce mois-ci et vos revenus réguliers.</li>
+                    <li><strong>L'argent des autres :</strong> Le compte d'un enfant, un parent que vous aidez ou une entreprise va dans un groupe. Ses propres paiements restent hors de vos totaux, et ce que vous lui envoyez compte comme vous le décidez : comme une dépense dans sa propre catégorie, ou comme un virement.</li>
+                    <li><strong>Cartes de crédit à partir des relevés :</strong> Une carte que la banque ne partage pas est lue à partir de ses relevés mensuels : le montant dû, le plafond, l'échéance et les paiements échelonnés, avec un rappel trois jours avant l'échéance.</li>
+                    <li><strong>Téléphone et ordinateur portable :</strong> Sur un ordinateur portable, la même application exploite la largeur : Mois avec le graphique à côté des chiffres, Activité et Récurrents sous forme de tableaux, Comptes en trois colonnes, et les flèches du clavier pour changer de mois.</li>
                     <li><strong>Alertes sur votre téléphone :</strong> Un paiement important, un solde bas, un salaire en retard, un paiement régulier qui change, une connexion bancaire sur le point d'expirer ou une sauvegarde qui s'est arrêtée. Par défaut, les notifications n'affichent ni montant ni bénéficiaire sur l'écran verrouillé.</li>
-                    <li><strong>Fonctionne hors ligne :</strong> Chaque écran garde une copie sur le téléphone. Sans le serveur, l'application affiche cette copie avec un bandeau indiquant quand elle a été enregistrée. Les copies de plus de 14 jours sont supprimées, et un téléphone révoqué efface sa copie.</li>
+                    <li><strong>Fonctionne hors ligne :</strong> Chaque écran garde une copie sur le téléphone, remplie à l'avance en Wi-Fi ou en données mobiles. Quand le serveur est injoignable, ou qu'un réseau reste bloqué, l'application s'ouvre à partir de cette copie avec un bandeau indiquant quand elle a été enregistrée. Les copies de plus de 14 jours sont supprimées, et un téléphone révoqué efface sa copie.</li>
                     <li><strong>Confidentiel par conception :</strong> Accès bancaire en lecture seule, toutes les données dans un seul dossier sur votre machine, l'application uniquement sur votre réseau privé, et chaque téléphone enregistré sur invitation.</li>
                     <li><strong>Une IA avec une vue masquée :</strong> Le serveur MCP ouvre la base de données en lecture seule et ne lit que les tables masquées, et un détecteur de fuites vérifie que les noms, les IBAN et les libellés restent à l'écart.</li>
                     <li><strong>Les particularités réelles des banques, gérées :</strong> Les poches et rechargements Revolut, le format des libellés d'ING Romania, ainsi que les pages de 20 opérations et la règle du consentement unique de BRD.</li>

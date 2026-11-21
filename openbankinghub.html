@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
 <head>
-    <!-- Content checked against open-banking-hub commit 80f132b (0.3.1, 2026-11-20). -->
+    <!-- Content checked against open-banking-hub commit bb73303 (0.6.0, 2026-11-21). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Open Banking Hub is a self-hosted, read-only view of your own bank accounts: honest monthly spending, subscriptions and bills, a private phone app, and a redacted MCP server for AI assistants.">
@@ -68,31 +68,40 @@
                     </div>
                     <p class="availability-note">Open Banking Hub is self-hosted and read-only: each person runs their own private copy.</p>
                 </div>
-                <img src="assets/OpenBankingHub/card.jpg" alt="Three phone screens from the demo: a month of spending, regular payments, and the month in dark mode" class="project-hero-image hero-wide" width="1600" height="900">
+                <img src="assets/OpenBankingHub/card.jpg" alt="The demo on a laptop and a phone: a month of spending beside its chart, and regular payments" class="project-hero-image hero-wide" width="1600" height="900">
             </div>
 
             <div class="project-content reveal">
                 <h2>About The App</h2>
                 <p>Open Banking Hub, or Bank Hub for short, is a self-hosted, read-only view of your own bank accounts. It pulls your transactions through the Enable Banking PSD2 API, keeps them in a SQLite file on your own machine, and answers two questions well: where did my money go, and what am I paying regularly?</p>
-                <p>It only ever reads account data and contains no code that can make a payment. A private phone app shows everything to the devices you register, and a read-only MCP server lets an AI assistant answer questions from a redacted view: categories, amounts, and known merchants, but never people&rsquo;s names, IBANs, or payment descriptions.</p>
+                <p>It only ever reads account data and contains no code that can make a payment. A private app for your phone and laptop shows everything to the devices you register, and a read-only MCP server lets an AI assistant answer questions from a redacted view: categories, amounts, and known merchants, but never people&rsquo;s names, IBANs, or payment descriptions.</p>
                 <p>It was built and tested with Revolut, ING Romania, and BRD, and any bank that Enable Banking supports should work. Enable Banking&rsquo;s restricted production mode is free for your own accounts. Open Banking Hub is not affiliated with Enable Banking or any bank.</p>
 
                 <h2>Gallery</h2>
-                <p>All screenshots show made-up data from the app&rsquo;s built-in demo.</p>
+                <p>All screenshots show made-up data from the app&rsquo;s built-in demo. On a laptop, the app uses the width: a sidebar, tables you can work down, and a payment or payee opening beside the list.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="assets/OpenBankingHub/desktop-month.jpg" alt="Month on a laptop: the figures beside a chart of every month, with categories and payees side by side" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="assets/OpenBankingHub/desktop-activity.jpg" alt="Activity on a laptop: payments as a table, with the selected payment open in a side panel" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="assets/OpenBankingHub/desktop-recurring.jpg" alt="Recurring on a laptop: the totals beside the chart, and regular payments as a table beside the income" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="assets/OpenBankingHub/desktop-accounts.jpg" alt="Accounts on a laptop in three columns: balances, credit cards and groups, then connections, health and alerts" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                </div>
                 <div class="gallery-grid">
                     <img src="assets/OpenBankingHub/month-light.jpg" alt="Month: spending so far against last month, income, what is left, and a chart of every month" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="assets/OpenBankingHub/recurring-light.jpg" alt="Recurring: regular payments with their month-over-month change, and regular income" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="assets/OpenBankingHub/month-dark.jpg" alt="The month in dark mode" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="assets/OpenBankingHub/accounts-light.jpg" alt="Accounts: balances, a credit card from its statements, and a child&rsquo;s account in a group" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="assets/OpenBankingHub/card-light.jpg" alt="A credit card added from its statements: what is owed, the limit, the due date and instalment plans" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="assets/OpenBankingHub/csv-light.jpg" alt="Importing a CSV from any bank: the columns are guessed and confirmed once" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="assets/OpenBankingHub/payment-light.jpg" alt="A payment: change its category for this payment or for the payee, or mark it as a one-off" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="assets/OpenBankingHub/sort-light.jpg" alt="Sort: unrecognised payees, biggest first" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="assets/OpenBankingHub/accounts-light.jpg" alt="Accounts: balances, bank connections and bank linking" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="assets/OpenBankingHub/month-dark.jpg" alt="The month in dark mode" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                 </div>
 
                 <h2>How it works</h2>
                 <ol>
                     <li><strong>Sync, read-only.</strong> Twice a day, Bank Hub fetches balances and transactions from each bank you have linked, within the PSD2 limit of about four unattended requests per account per day. Right after you approve a bank, it imports as much history as that bank allows.</li>
+                    <li><strong>Fill the gaps with statements.</strong> Add a monthly statement as a PDF, or a CSV from any bank, to cover a credit card the bank does not share or history its API hands out slowly. Only payments that are missing are added, checked against the statement&rsquo;s own totals, and the file itself is not kept.</li>
                     <li><strong>Sort it out with rules.</strong> Transfers between your own accounts, categories, one-offs, and regular payments are worked out from the raw data with rules, not language models, so the same data always gives the same result.</li>
-                    <li><strong>Review on your phone.</strong> The installable app shows Month, Recurring, Activity, Sort, and Accounts to your registered devices, on your private network only.</li>
+                    <li><strong>Review on your phone or laptop.</strong> The installable app shows Month, Recurring, Activity, Sort, and Accounts to your registered devices, on your private network only. On a laptop it adds a sidebar, tables with the details beside them, and keyboard shortcuts.</li>
                     <li><strong>Ask an assistant.</strong> An AI assistant connected over MCP sees only the redacted ledger, and can start from ready-made prompts such as a monthly review or a subscription audit.</li>
                 </ol>
 
@@ -100,8 +109,11 @@
                 <ul>
                     <li><strong>Honest spending:</strong> Transfers between your own accounts are left out, refunds reduce their category, and very large one-offs, such as a car or a property, are shown apart instead of swamping the month.</li>
                     <li><strong>Subscriptions and bills:</strong> Detected automatically, with the change from the previous bill, what is still due this month, and your regular income.</li>
+                    <li><strong>Someone else&rsquo;s money:</strong> A child&rsquo;s account, a parent you support, or a business goes in a group. Its own payments stay out of your totals, and what you send it counts the way you choose: as spending in its own category, or as a transfer.</li>
+                    <li><strong>Credit cards from statements:</strong> A card the bank does not share is read from its monthly statements: what is owed, the limit, the due date, and instalment plans, with a reminder three days before the payment is due.</li>
+                    <li><strong>Phone and laptop:</strong> On a laptop, the same app uses the width: Month with the chart beside the figures, Activity and Recurring as tables, Accounts in three columns, and arrow keys to change month.</li>
                     <li><strong>Alerts on your phone:</strong> A large payment, a low balance, a late salary, a changed regular payment, a bank connection about to expire, or a backup that stopped. By default, notifications show no amounts or payees on the lock screen.</li>
-                    <li><strong>Works offline:</strong> Every screen keeps a copy on the phone. Without the server, the app shows that copy with a banner saying when it was saved. Copies older than 14 days are deleted, and a revoked phone wipes its copy.</li>
+                    <li><strong>Works offline:</strong> Every screen keeps a copy on the phone, filled ahead of time on Wi-Fi or mobile data. When the server cannot be reached, or a network hangs, the app opens from that copy with a banner saying when it was saved. Copies older than 14 days are deleted, and a revoked phone wipes its copy.</li>
                     <li><strong>Private by design:</strong> Read-only bank access, all data in one directory on your machine, the app only on your private network, and each phone registered by invitation.</li>
                     <li><strong>AI with a redacted view:</strong> The MCP server opens the database read-only and reads only the redacted tables, and a leak scanner tests that names, IBANs, and descriptions stay out.</li>
                     <li><strong>Real bank quirks handled:</strong> Revolut pockets and top-ups, ING Romania&rsquo;s description format, and BRD&rsquo;s 20-transaction pages and one-consent rule.</li>

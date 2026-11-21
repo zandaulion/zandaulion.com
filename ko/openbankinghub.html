@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against open-banking-hub commit 80f132b (0.3.1, 2026-11-20). -->
+    <!-- Content checked against open-banking-hub commit bb73303 (0.6.0, 2026-11-21). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Open Banking Hub는 내 은행 계좌를 직접 호스팅하며 읽기 전용으로 보는 도구입니다. 정직한 월별 지출, 구독과 청구서, 개인용 휴대폰 앱, AI 어시스턴트를 위한 가려진 데이터의 MCP 서버를 제공합니다.">
@@ -68,31 +68,40 @@
                     </div>
                     <p class="availability-note">Open Banking Hub는 직접 호스팅하며 읽기 전용입니다. 각자 자신만의 비공개 사본을 실행합니다.</p>
                 </div>
-                <img src="../assets/OpenBankingHub/card.jpg" alt="데모의 휴대폰 화면 세 개: 한 달 지출, 정기 결제, 어두운 모드의 월 화면" class="project-hero-image hero-wide" width="1600" height="900">
+                <img src="../assets/OpenBankingHub/card.jpg" alt="노트북과 휴대폰에서 실행한 데모: 차트 옆에 표시된 한 달 지출과 정기 결제" class="project-hero-image hero-wide" width="1600" height="900">
             </div>
 
             <div class="project-content reveal">
                 <h2>앱 정보</h2>
                 <p>Open Banking Hub(줄여서 Bank Hub)는 내 은행 계좌를 직접 호스팅하며 읽기 전용으로 보는 도구입니다. Enable Banking의 PSD2 API로 거래 내역을 가져와 내 컴퓨터의 SQLite 파일에 보관하고, 두 가지 질문에 잘 답합니다. 내 돈은 어디로 갔을까? 그리고 나는 무엇을 정기적으로 내고 있을까?</p>
-                <p>계좌 데이터를 읽기만 하며, 결제를 할 수 있는 코드는 전혀 없습니다. 개인용 휴대폰 앱은 등록한 기기에 모든 것을 보여 주고, 읽기 전용 MCP 서버는 AI 어시스턴트가 가려진 화면에서 질문에 답하게 합니다. 카테고리, 금액, 알려진 가맹점은 보이지만 사람 이름, IBAN, 결제 메모는 절대 보이지 않습니다.</p>
+                <p>계좌 데이터를 읽기만 하며, 결제를 할 수 있는 코드는 전혀 없습니다. 휴대폰과 노트북용 개인 앱은 등록한 기기에 모든 것을 보여 주고, 읽기 전용 MCP 서버는 AI 어시스턴트가 가려진 화면에서 질문에 답하게 합니다. 카테고리, 금액, 알려진 가맹점은 보이지만 사람 이름, IBAN, 결제 메모는 절대 보이지 않습니다.</p>
                 <p>Revolut, ING Romania, BRD로 만들고 테스트했으며, Enable Banking이 지원하는 은행이라면 작동할 것입니다. Enable Banking의 제한된 운영 모드는 내 계좌에 한해 무료입니다. Open Banking Hub는 Enable Banking이나 어떤 은행과도 관련이 없습니다.</p>
 
                 <h2>갤러리</h2>
-                <p>모든 스크린샷은 앱에 내장된 데모의 가상 데이터입니다.</p>
+                <p>모든 스크린샷은 앱에 내장된 데모의 가상 데이터입니다. 노트북에서는 앱이 넓은 화면을 활용합니다. 사이드바, 한 줄씩 훑어볼 수 있는 표, 그리고 목록 옆에 열리는 결제나 수취인을 보여 줍니다.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/OpenBankingHub/desktop-month.jpg" alt="노트북의 월 화면: 매달의 차트 옆에 수치, 카테고리와 수취인을 나란히 표시" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-activity.jpg" alt="노트북의 활동 화면: 결제를 표로 보여 주고, 선택한 결제를 사이드 패널에서 엽니다" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-recurring.jpg" alt="노트북의 정기 화면: 차트 옆에 합계, 수입 옆에 정기 결제 표" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-accounts.jpg" alt="노트북의 계좌 화면(3열): 잔액, 신용카드와 그룹, 그리고 연결, 상태, 알림" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                </div>
                 <div class="gallery-grid">
                     <img src="../assets/OpenBankingHub/month-light.jpg" alt="월: 지난달 대비 지금까지의 지출, 수입, 남은 금액, 매달의 차트" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/recurring-light.jpg" alt="정기: 전월 대비 변화가 표시된 정기 결제와 정기 수입" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="어두운 모드의 월 화면" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="계좌: 잔액, 명세서로 추가한 신용카드, 그룹에 넣은 자녀 계좌" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/card-light.jpg" alt="명세서로 추가한 신용카드: 갚을 금액, 한도, 결제일, 할부 계획" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/csv-light.jpg" alt="어떤 은행의 CSV든 가져오기: 열을 자동으로 추측하고 한 번만 확인합니다" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/payment-light.jpg" alt="결제 항목: 이 결제나 수취인의 카테고리를 바꾸거나 일회성 지출로 표시" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/sort-light.jpg" alt="분류: 알 수 없는 수취인, 금액이 큰 순서" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="계좌: 잔액, 은행 연결, 은행 추가" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="어두운 모드의 월 화면" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                 </div>
 
                 <h2>작동 원리</h2>
                 <ol>
                     <li><strong>읽기 전용 동기화.</strong> Bank Hub는 하루 두 번, 연결된 각 은행에서 잔액과 거래 내역을 가져옵니다. PSD2의 한도인 계좌당 하루 약 네 번의 자동 요청 범위 안에서입니다. 은행을 승인한 직후에는 그 은행이 허용하는 만큼의 내역을 가져옵니다.</li>
+                    <li><strong>명세서로 빈 곳 채우기.</strong> 은행이 공유하지 않는 신용카드나 API가 느리게 내주는 내역은 월별 명세서 PDF나 어떤 은행의 CSV를 추가해 채울 수 있습니다. 빠진 결제만 명세서 자체의 합계와 대조해 추가하며, 파일 자체는 보관하지 않습니다.</li>
                     <li><strong>규칙으로 정리.</strong> 내 계좌 간 이체, 카테고리, 일회성 지출, 정기 결제는 언어 모델이 아니라 규칙으로 원본 데이터에서 계산하므로, 같은 데이터는 항상 같은 결과를 냅니다.</li>
-                    <li><strong>휴대폰에서 확인.</strong> 설치할 수 있는 앱이 등록한 기기에 월, 정기, 활동, 분류, 계좌를 보여 줍니다. 내 사설 네트워크에서만입니다.</li>
+                    <li><strong>휴대폰이나 노트북에서 확인.</strong> 설치할 수 있는 앱이 등록한 기기에 월, 정기, 활동, 분류, 계좌를 보여 줍니다. 내 사설 네트워크에서만입니다. 노트북에서는 사이드바, 세부 정보를 옆에 둔 표, 키보드 단축키가 더해집니다.</li>
                     <li><strong>어시스턴트에게 질문.</strong> MCP로 연결된 AI 어시스턴트는 가려진 장부만 보며, 월간 점검이나 구독 점검 같은 준비된 프롬프트로 시작할 수 있습니다.</li>
                 </ol>
 
@@ -100,8 +109,11 @@
                 <ul>
                     <li><strong>정직한 지출:</strong> 내 계좌 간 이체는 제외하고, 환불은 해당 카테고리 지출을 줄이며, 자동차나 부동산처럼 아주 큰 일회성 지출은 한 달을 덮지 않도록 따로 보여 줍니다.</li>
                     <li><strong>구독과 청구서:</strong> 자동으로 감지하며, 이전 청구서 대비 변화, 이번 달에 아직 남은 결제, 정기 수입을 함께 보여 줍니다.</li>
+                    <li><strong>다른 사람의 돈:</strong> 자녀의 계좌, 내가 돕는 부모님, 사업체는 그룹에 넣습니다. 그룹 자체의 결제는 내 합계에서 빠지고, 내가 보낸 돈은 내가 고른 방식대로 셉니다. 전용 카테고리의 지출이나 이체로요.</li>
+                    <li><strong>명세서로 보는 신용카드:</strong> 은행이 공유하지 않는 카드는 월별 명세서에서 읽어 옵니다. 갚을 금액, 한도, 결제일, 할부 계획을 보여 주고, 결제일 사흘 전에 알려 줍니다.</li>
+                    <li><strong>휴대폰과 노트북:</strong> 노트북에서는 같은 앱이 넓은 화면을 활용합니다. 월 화면은 수치 옆에 차트를, 활동과 정기는 표로, 계좌는 3열로 보여 주며, 화살표 키로 달을 바꿀 수 있습니다.</li>
                     <li><strong>휴대폰 알림:</strong> 큰 결제, 낮은 잔액, 늦어진 급여, 바뀐 정기 결제, 곧 만료되는 은행 연결, 멈춘 백업을 알려 줍니다. 기본적으로 잠금 화면 알림에는 금액이나 수취인이 표시되지 않습니다.</li>
-                    <li><strong>오프라인 작동:</strong> 각 화면은 휴대폰에 사본을 보관합니다. 서버가 없으면 앱은 그 사본을 보여 주고, 언제 저장했는지 배너로 알려 줍니다. 14일이 지난 사본은 삭제되고, 취소된 휴대폰은 자신의 사본을 지웁니다.</li>
+                    <li><strong>오프라인 작동:</strong> 각 화면은 휴대폰에 사본을 보관하며, Wi-Fi나 모바일 데이터로 미리 채워 둡니다. 서버에 연결할 수 없거나 네트워크가 멈추면 앱은 그 사본으로 열리고, 언제 저장했는지 배너로 알려 줍니다. 14일이 지난 사본은 삭제되고, 취소된 휴대폰은 자신의 사본을 지웁니다.</li>
                     <li><strong>설계부터 비공개:</strong> 은행 접근은 읽기 전용이고, 모든 데이터는 내 컴퓨터의 한 디렉터리에 있으며, 앱은 내 사설 네트워크에서만 작동하고, 휴대폰은 초대로만 등록합니다.</li>
                     <li><strong>가려진 화면의 AI:</strong> MCP 서버는 데이터베이스를 읽기 전용으로 열고 가려진 테이블만 읽으며, 유출 검사기가 이름, IBAN, 결제 메모가 빠져 있는지 테스트합니다.</li>
                     <li><strong>실제 은행별 특성 처리:</strong> Revolut의 포켓과 충전, ING Romania의 메모 형식, BRD의 20건 단위 페이지와 동의 하나 규칙.</li>

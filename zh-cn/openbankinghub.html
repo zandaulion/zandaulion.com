@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against open-banking-hub commit 80f132b (0.3.1, 2026-11-20). -->
+    <!-- Content checked against open-banking-hub commit bb73303 (0.6.0, 2026-11-21). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Open Banking Hub 是一个自行托管、只读的个人银行账户视图：如实的每月支出、订阅和账单、私人手机应用，以及为 AI 助手提供脱敏数据的 MCP 服务器。">
@@ -68,31 +68,40 @@
                     </div>
                     <p class="availability-note">Open Banking Hub 由你自行托管且只读：每个人运行自己的私人副本。</p>
                 </div>
-                <img src="../assets/OpenBankingHub/card.jpg" alt="演示中的三个手机界面：一个月的支出、定期付款，以及深色模式下的月视图" class="project-hero-image hero-wide" width="1600" height="900">
+                <img src="../assets/OpenBankingHub/card.jpg" alt="在笔记本电脑和手机上运行的演示：一个月的支出及其图表，以及定期付款" class="project-hero-image hero-wide" width="1600" height="900">
             </div>
 
             <div class="project-content reveal">
                 <h2>关于该应用程序</h2>
                 <p>Open Banking Hub（简称 Bank Hub）是一个自行托管、只读的个人银行账户视图。它通过 Enable Banking 的 PSD2 API 获取你的交易，保存在你自己机器上的 SQLite 文件中，并很好地回答两个问题：我的钱花到哪里去了？我定期在付哪些钱？</p>
-                <p>它只读取账户数据，不包含任何能够发起付款的代码。私人手机应用会向你注册的设备显示全部内容，而只读的 MCP 服务器让 AI 助手基于脱敏视图回答问题：可以看到类别、金额和已知商家，但绝不会看到他人姓名、IBAN 或付款附言。</p>
+                <p>它只读取账户数据，不包含任何能够发起付款的代码。适用于手机和笔记本电脑的私人应用会向你注册的设备显示全部内容，而只读的 MCP 服务器让 AI 助手基于脱敏视图回答问题：可以看到类别、金额和已知商家，但绝不会看到他人姓名、IBAN 或付款附言。</p>
                 <p>它基于 Revolut、ING Romania 和 BRD 开发和测试，Enable Banking 支持的任何银行都应该可以使用。Enable Banking 的受限生产模式对你自己的账户免费。Open Banking Hub 与 Enable Banking 或任何银行均无关联。</p>
 
                 <h2>图片集</h2>
-                <p>所有截图均为应用内置演示生成的虚构数据。</p>
+                <p>所有截图均为应用内置演示生成的虚构数据。在笔记本电脑上，应用会充分利用宽度：侧边栏、可以逐行查看的表格，以及在列表旁打开的付款或收款方。</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/OpenBankingHub/desktop-month.jpg" alt="笔记本电脑上的月份视图：每个月的图表旁是各项数字，类别和收款方并排显示" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-activity.jpg" alt="笔记本电脑上的活动视图：付款以表格显示，选中的付款在侧边面板中打开" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-recurring.jpg" alt="笔记本电脑上的定期视图：图表旁是合计，收入旁是定期付款表格" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-accounts.jpg" alt="笔记本电脑上的三栏账户视图：余额、信用卡和分组，然后是连接、状态和提醒" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                </div>
                 <div class="gallery-grid">
                     <img src="../assets/OpenBankingHub/month-light.jpg" alt="月份：与上月相比的本月至今支出、收入、剩余金额，以及每个月的图表" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/recurring-light.jpg" alt="定期：显示环比变化的定期付款，以及定期收入" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="深色模式下的月视图" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="账户：余额、根据账单添加的信用卡，以及分组中的孩子账户" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/card-light.jpg" alt="根据账单添加的信用卡：欠款、额度、还款日和分期计划" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/csv-light.jpg" alt="从任意银行导入 CSV：自动推断各列，只需确认一次" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/payment-light.jpg" alt="一笔付款：为这笔付款或该收款方更改类别，或将其标记为一次性支出" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/sort-light.jpg" alt="整理：未识别的收款方，金额大的在前" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="账户：余额、银行连接和添加银行" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="深色模式下的月视图" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                 </div>
 
                 <h2>它是如何运作的</h2>
                 <ol>
                     <li><strong>只读同步。</strong> Bank Hub 每天两次从每家已关联的银行获取余额和交易，控制在 PSD2 规定的每个账户每天约四次自动请求以内。在你授权一家银行后，它会立即导入该银行允许的全部历史记录。</li>
+                    <li><strong>用账单补齐缺口。</strong> 对于银行不共享的信用卡，或银行 API 提供得很慢的历史记录，可以添加 PDF 格式的月度账单或任意银行的 CSV 来补齐。只会添加缺少的付款，并与账单本身的合计核对，文件本身不会保留。</li>
                     <li><strong>用规则整理。</strong> 你自己账户之间的转账、类别、一次性支出和定期付款，都由规则而不是语言模型从原始数据计算得出，因此相同的数据总是得出相同的结果。</li>
-                    <li><strong>在手机上查看。</strong> 可安装的应用会在你注册的设备上显示月份、定期、活动、整理和账户，且只在你的私有网络中。</li>
+                    <li><strong>在手机或笔记本电脑上查看。</strong> 可安装的应用会在你注册的设备上显示月份、定期、活动、整理和账户，且只在你的私有网络中。在笔记本电脑上，它还会加入侧边栏、旁边显示详情的表格和键盘快捷键。</li>
                     <li><strong>询问助手。</strong> 通过 MCP 连接的 AI 助手只能看到脱敏后的账本，并可以从现成的提示开始，例如月度回顾或订阅审查。</li>
                 </ol>
 
@@ -100,8 +109,11 @@
                 <ul>
                     <li><strong>如实的支出：</strong> 你自己账户之间的转账不计入，退款会减少其所属类别的支出，而汽车或房产等非常大的一次性支出会单独显示，不会淹没整个月。</li>
                     <li><strong>订阅和账单：</strong> 自动识别，并显示与上一期账单相比的变化、本月尚未支付的部分以及你的定期收入。</li>
+                    <li><strong>别人的钱：</strong> 孩子的账户、你资助的父母或一家企业可以放进一个分组。分组自己的付款不计入你的合计，而你转给它的钱按你选择的方式计算：作为它自己类别下的支出，或作为转账。</li>
+                    <li><strong>根据账单管理信用卡：</strong> 银行不共享的信用卡会从月度账单中读取：欠款、额度、还款日和分期计划，并在还款日前三天提醒你。</li>
+                    <li><strong>手机和笔记本电脑：</strong> 在笔记本电脑上，同一个应用会充分利用宽度：月份视图的图表在数字旁边，活动和定期以表格显示，账户分三栏，还可以用方向键切换月份。</li>
                     <li><strong>手机提醒：</strong> 大额付款、余额不足、工资迟到、定期付款发生变化、银行连接即将到期，或备份已停止。默认情况下，锁屏通知不会显示金额或收款方。</li>
-                    <li><strong>离线可用：</strong> 每个界面都会在手机上保留一份副本。连不上服务器时，应用会显示这份副本，并用横幅注明保存时间。超过 14 天的副本会被删除，被撤销的手机会清除自己的副本。</li>
+                    <li><strong>离线可用：</strong> 每个界面都会在手机上保留一份副本，可通过 Wi-Fi 或移动数据提前保存。连不上服务器或网络卡住时，应用会从这份副本打开，并用横幅注明保存时间。超过 14 天的副本会被删除，被撤销的手机会清除自己的副本。</li>
                     <li><strong>从设计上保护隐私：</strong> 对银行只读访问，所有数据都在你机器上的一个目录中，应用只在你的私有网络内运行，每部手机都需凭邀请注册。</li>
                     <li><strong>脱敏视图下的 AI：</strong> MCP 服务器以只读方式打开数据库，且只读取脱敏后的表，另有泄露扫描器测试姓名、IBAN 和付款附言不会被包含进去。</li>
                     <li><strong>处理真实的银行差异：</strong> Revolut 的子账户和充值、ING Romania 的附言格式，以及 BRD 每页 20 笔交易和只允许一个授权的规则。</li>
