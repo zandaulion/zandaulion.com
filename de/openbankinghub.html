@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de-DE" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against open-banking-hub commit 80f132b (0.3.1, 2026-11-20). -->
+    <!-- Content checked against open-banking-hub commit bb73303 (0.6.0, 2026-11-21). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Open Banking Hub ist eine selbst gehostete, rein lesende Ansicht deiner eigenen Bankkonten: ehrliche monatliche Ausgaben, Abos und Rechnungen, eine private Handy-App und ein MCP-Server mit geschwärzten Daten für KI-Assistenten.">
@@ -68,31 +68,40 @@
                     </div>
                     <p class="availability-note">Open Banking Hub ist selbst gehostet und liest nur: Jede Person betreibt ihre eigene private Kopie.</p>
                 </div>
-                <img src="../assets/OpenBankingHub/card.jpg" alt="Drei Handy-Bildschirme aus der Demo: die Ausgaben eines Monats, regelmäßige Zahlungen und der Monat im dunklen Modus" class="project-hero-image hero-wide" width="1600" height="900">
+                <img src="../assets/OpenBankingHub/card.jpg" alt="Die Demo auf einem Laptop und einem Handy: die Ausgaben eines Monats neben ihrem Diagramm und regelmäßige Zahlungen" class="project-hero-image hero-wide" width="1600" height="900">
             </div>
 
             <div class="project-content reveal">
                 <h2>Über die App</h2>
                 <p>Open Banking Hub, kurz Bank Hub, ist eine selbst gehostete, rein lesende Ansicht deiner eigenen Bankkonten. Es holt deine Umsätze über die PSD2-API von Enable Banking, speichert sie in einer SQLite-Datei auf deinem eigenen Rechner und beantwortet zwei Fragen gut: Wohin ist mein Geld gegangen, und was zahle ich regelmäßig?</p>
-                <p>Es liest ausschließlich Kontodaten und enthält keinen Code, der eine Zahlung auslösen kann. Eine private Handy-App zeigt alles auf den Geräten, die du registrierst, und ein rein lesender MCP-Server lässt einen KI-Assistenten Fragen aus einer geschwärzten Ansicht beantworten: Kategorien, Beträge und bekannte Händler, aber niemals Namen von Personen, IBANs oder Verwendungszwecke.</p>
+                <p>Es liest ausschließlich Kontodaten und enthält keinen Code, der eine Zahlung auslösen kann. Eine private App für Handy und Laptop zeigt alles auf den Geräten, die du registrierst, und ein rein lesender MCP-Server lässt einen KI-Assistenten Fragen aus einer geschwärzten Ansicht beantworten: Kategorien, Beträge und bekannte Händler, aber niemals Namen von Personen, IBANs oder Verwendungszwecke.</p>
                 <p>Es wurde mit Revolut, ING Romania und BRD entwickelt und getestet, und jede von Enable Banking unterstützte Bank sollte funktionieren. Der eingeschränkte Produktionsmodus von Enable Banking ist für deine eigenen Konten kostenlos. Open Banking Hub steht in keiner Verbindung zu Enable Banking oder einer Bank.</p>
 
                 <h2>Galerie</h2>
-                <p>Alle Screenshots zeigen erfundene Daten aus der eingebauten Demo der App.</p>
+                <p>Alle Screenshots zeigen erfundene Daten aus der eingebauten Demo der App. Auf einem Laptop nutzt die App die Breite: eine Seitenleiste, Tabellen, die du Zeile für Zeile durchgehen kannst, und eine Zahlung oder ein Empfänger öffnet sich neben der Liste.</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/OpenBankingHub/desktop-month.jpg" alt="Monat auf einem Laptop: die Zahlen neben einem Diagramm aller Monate, Kategorien und Empfänger nebeneinander" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-activity.jpg" alt="Aktivität auf einem Laptop: Zahlungen als Tabelle, die ausgewählte Zahlung in einem Seitenbereich geöffnet" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-recurring.jpg" alt="Wiederkehrend auf einem Laptop: die Summen neben dem Diagramm und regelmäßige Zahlungen als Tabelle neben den Einnahmen" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-accounts.jpg" alt="Konten auf einem Laptop in drei Spalten: Salden, Kreditkarten und Gruppen, dann Verbindungen, Zustand und Benachrichtigungen" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                </div>
                 <div class="gallery-grid">
                     <img src="../assets/OpenBankingHub/month-light.jpg" alt="Monat: bisherige Ausgaben im Vergleich zum Vormonat, Einnahmen, was übrig bleibt, und ein Diagramm aller Monate" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/recurring-light.jpg" alt="Wiederkehrend: regelmäßige Zahlungen mit ihrer Veränderung zum Vormonat und regelmäßige Einnahmen" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="Der Monat im dunklen Modus" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="Konten: Salden, eine Kreditkarte aus ihren Abrechnungen und das Konto eines Kindes in einer Gruppe" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/card-light.jpg" alt="Eine aus ihren Abrechnungen hinzugefügte Kreditkarte: offener Betrag, Limit, Fälligkeit und Ratenpläne" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/csv-light.jpg" alt="CSV-Import von jeder Bank: Die Spalten werden erraten und einmal bestätigt" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/payment-light.jpg" alt="Eine Zahlung: Kategorie für diese Zahlung oder für den Empfänger ändern oder sie als Einmalzahlung markieren" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/sort-light.jpg" alt="Sortieren: unbekannte Empfänger, die größten zuerst" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="Konten: Salden, Bankverbindungen und das Verknüpfen von Banken" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="Der Monat im dunklen Modus" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                 </div>
 
                 <h2>Wie es funktioniert</h2>
                 <ol>
                     <li><strong>Synchronisieren, nur lesend.</strong> Zweimal täglich holt Bank Hub Salden und Umsätze von jeder verknüpften Bank, innerhalb des PSD2-Limits von etwa vier unbeaufsichtigten Abfragen pro Konto und Tag. Direkt nach deiner Freigabe für eine Bank importiert es so viel Verlauf, wie diese Bank zulässt.</li>
+                    <li><strong>Lücken mit Abrechnungen füllen.</strong> Füge eine Monatsabrechnung als PDF oder eine CSV-Datei von jeder Bank hinzu, um eine Kreditkarte abzudecken, die die Bank nicht freigibt, oder einen Verlauf, den ihre API nur langsam herausgibt. Nur fehlende Zahlungen werden ergänzt, geprüft gegen die Summen der Abrechnung, und die Datei selbst wird nicht aufbewahrt.</li>
                     <li><strong>Mit Regeln geordnet.</strong> Überweisungen zwischen deinen eigenen Konten, Kategorien, Einmalzahlungen und regelmäßige Zahlungen werden aus den Rohdaten mit Regeln ermittelt, nicht mit Sprachmodellen. Dieselben Daten ergeben also immer dasselbe Ergebnis.</li>
-                    <li><strong>Auf dem Handy prüfen.</strong> Die installierbare App zeigt Monat, Wiederkehrend, Aktivität, Sortieren und Konten auf deinen registrierten Geräten, nur in deinem privaten Netzwerk.</li>
+                    <li><strong>Auf Handy oder Laptop prüfen.</strong> Die installierbare App zeigt Monat, Wiederkehrend, Aktivität, Sortieren und Konten auf deinen registrierten Geräten, nur in deinem privaten Netzwerk. Auf einem Laptop kommen eine Seitenleiste, Tabellen mit den Details daneben und Tastenkürzel dazu.</li>
                     <li><strong>Einen Assistenten fragen.</strong> Ein über MCP verbundener KI-Assistent sieht nur das geschwärzte Kassenbuch und kann mit fertigen Prompts wie einem Monatsrückblick oder einer Abo-Prüfung beginnen.</li>
                 </ol>
 
@@ -100,8 +109,11 @@
                 <ul>
                     <li><strong>Ehrliche Ausgaben:</strong> Überweisungen zwischen deinen eigenen Konten bleiben außen vor, Erstattungen verringern ihre Kategorie, und sehr große Einmalzahlungen wie ein Auto oder eine Immobilie werden getrennt gezeigt, statt den Monat zu überlagern.</li>
                     <li><strong>Abos und Rechnungen:</strong> Automatisch erkannt, mit der Veränderung zur vorigen Rechnung, dem, was diesen Monat noch fällig ist, und deinen regelmäßigen Einnahmen.</li>
+                    <li><strong>Das Geld anderer:</strong> Das Konto eines Kindes, ein Elternteil, den du unterstützt, oder eine Firma kommt in eine Gruppe. Deren eigene Zahlungen bleiben aus deinen Summen heraus, und was du ihr schickst, zählt so, wie du es festlegst: als Ausgabe in einer eigenen Kategorie oder als Überweisung.</li>
+                    <li><strong>Kreditkarten aus Abrechnungen:</strong> Eine Karte, die die Bank nicht freigibt, wird aus ihren Monatsabrechnungen gelesen: offener Betrag, Limit, Fälligkeit und Ratenpläne, mit einer Erinnerung drei Tage vor der Fälligkeit.</li>
+                    <li><strong>Handy und Laptop:</strong> Auf einem Laptop nutzt dieselbe App die Breite: Monat mit dem Diagramm neben den Zahlen, Aktivität und Wiederkehrend als Tabellen, Konten in drei Spalten und Pfeiltasten zum Wechseln des Monats.</li>
                     <li><strong>Benachrichtigungen auf dem Handy:</strong> Eine große Zahlung, ein niedriger Saldo, ein verspätetes Gehalt, eine geänderte regelmäßige Zahlung, eine bald ablaufende Bankverbindung oder ein ausgefallenes Backup. Standardmäßig zeigen Benachrichtigungen auf dem Sperrbildschirm keine Beträge oder Empfänger.</li>
-                    <li><strong>Funktioniert offline:</strong> Jeder Bildschirm behält eine Kopie auf dem Handy. Ohne Server zeigt die App diese Kopie mit einem Hinweis, wann sie gespeichert wurde. Kopien, die älter als 14 Tage sind, werden gelöscht, und ein gesperrtes Handy löscht seine Kopie.</li>
+                    <li><strong>Funktioniert offline:</strong> Jeder Bildschirm behält eine Kopie auf dem Handy, vorab gefüllt über WLAN oder mobile Daten. Wenn der Server nicht erreichbar ist oder ein Netzwerk hängt, öffnet sich die App aus dieser Kopie, mit einem Hinweis, wann sie gespeichert wurde. Kopien, die älter als 14 Tage sind, werden gelöscht, und ein gesperrtes Handy löscht seine Kopie.</li>
                     <li><strong>Privat von Grund auf:</strong> Nur lesender Bankzugriff, alle Daten in einem Verzeichnis auf deinem Rechner, die App nur in deinem privaten Netzwerk und jedes Handy per Einladung registriert.</li>
                     <li><strong>KI mit geschwärzter Ansicht:</strong> Der MCP-Server öffnet die Datenbank nur lesend und liest nur die geschwärzten Tabellen, und ein Leck-Scanner prüft, dass Namen, IBANs und Verwendungszwecke draußen bleiben.</li>
                     <li><strong>Echte Bank-Eigenheiten berücksichtigt:</strong> Revolut-Unterkonten und Aufladungen, das Beschreibungsformat von ING Romania sowie die 20-Umsätze-Seiten und die Ein-Zustimmungs-Regel von BRD.</li>

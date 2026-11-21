@@ -607,7 +607,7 @@
       ]
     },
     "assets/OpenBankingHub/card.jpg": {
-      "sha256": "3e45aa902857c285bfa38748ab024e5c4134153f73cb74da4422132692893e7d",
+      "sha256": "2e0cf90e356cef6b0829aedea069f5c017e0ee97a45f904e1697b5115124f799",
       "width": 1600,
       "height": 900,
       "variants": [
@@ -615,29 +615,29 @@
           "path": "assets/optimized/openbankinghub-card-4c4ebeb2-320.webp",
           "width": 320,
           "height": 180,
-          "bytes": 7020,
-          "sha256": "c034f49f3104c93b2603ffb0aaf88e9a296a34f52db4c2b9749b31727303d1ac"
+          "bytes": 7436,
+          "sha256": "34fbb1af5ce6b15a5d94bb8c186d911763b42de90a8d7161102bc0e48e6243df"
         },
         {
           "path": "assets/optimized/openbankinghub-card-4c4ebeb2-640.webp",
           "width": 640,
           "height": 360,
-          "bytes": 18934,
-          "sha256": "2e87fb1c626bec45e7346abdbd68ea648893077099e9d3e1291a7c9930d350ce"
+          "bytes": 19380,
+          "sha256": "210c654bdcc5a5a47da0c0b744e80e326165c0d3e7768998dba3dcd2b845cda9"
         },
         {
           "path": "assets/optimized/openbankinghub-card-4c4ebeb2-960.webp",
           "width": 960,
           "height": 540,
-          "bytes": 34636,
-          "sha256": "15b3f064f91ef150c95ee4ddd356f60e9f01629ee6931cfde87be3b3590f6d45"
+          "bytes": 35750,
+          "sha256": "a8d580b5ad5be545b91917f9057e08ad330585f18a5c20c52c4fcef6ece15d00"
         },
         {
           "path": "assets/optimized/openbankinghub-card-4c4ebeb2-1280.webp",
           "width": 1280,
           "height": 720,
-          "bytes": 51720,
-          "sha256": "d984ff19b1952f5c8bfee3464fdf1001728e17484dbbf30cfab494d3f6dfcb6d"
+          "bytes": 53778,
+          "sha256": "99cfc2e12957a76782aae6872c0d4f665a07b198c207264e60e2bd5c70b011b4"
         }
       ]
     },

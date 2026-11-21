@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-JP" data-theme="light" dir="ltr">
 <head>
-    <!-- Content checked against open-banking-hub commit 80f132b (0.3.1, 2026-11-20). -->
+    <!-- Content checked against open-banking-hub commit bb73303 (0.6.0, 2026-11-21). -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Open Banking Hub は、自分の銀行口座を自分のサーバーで読み取り専用で見られるツールです。正直な月々の支出、サブスクリプションと請求、プライベートなスマートフォンアプリ、AI アシスタント向けに情報を伏せた MCP サーバーを備えています。">
@@ -68,31 +68,40 @@
                     </div>
                     <p class="availability-note">Open Banking Hub はセルフホスト型で読み取り専用です。各自が自分専用のコピーを動かします。</p>
                 </div>
-                <img src="../assets/OpenBankingHub/card.jpg" alt="デモの3つのスマートフォン画面：1か月の支出、定期的な支払い、ダークモードの月表示" class="project-hero-image hero-wide" width="1600" height="900">
+                <img src="../assets/OpenBankingHub/card.jpg" alt="ノートパソコンとスマートフォンで動くデモ：グラフと並んだ1か月の支出と、定期的な支払い" class="project-hero-image hero-wide" width="1600" height="900">
             </div>
 
             <div class="project-content reveal">
                 <h2>アプリについて</h2>
                 <p>Open Banking Hub（略して Bank Hub）は、自分の銀行口座を読み取り専用で見られるセルフホスト型ツールです。Enable Banking の PSD2 API で取引を取得し、自分のマシン上の SQLite ファイルに保存して、「お金はどこへ行ったのか」「定期的に何を払っているのか」という2つの問いにしっかり答えます。</p>
-                <p>口座データを読むだけで、支払いを行えるコードは一切含みません。プライベートなスマートフォンアプリは登録した端末にすべてを表示し、読み取り専用の MCP サーバーは、AI アシスタントが情報を伏せた表示から質問に答えられるようにします。カテゴリ、金額、既知の店舗は見えますが、人の名前、IBAN、支払いの摘要は決して渡しません。</p>
+                <p>口座データを読むだけで、支払いを行えるコードは一切含みません。スマートフォンとノートパソコン向けのプライベートなアプリは登録した端末にすべてを表示し、読み取り専用の MCP サーバーは、AI アシスタントが情報を伏せた表示から質問に答えられるようにします。カテゴリ、金額、既知の店舗は見えますが、人の名前、IBAN、支払いの摘要は決して渡しません。</p>
                 <p>Revolut、ING Romania、BRD で開発・テストしており、Enable Banking が対応する銀行なら動作するはずです。Enable Banking の制限付き本番モードは、自分の口座なら無料です。Open Banking Hub は Enable Banking やいずれの銀行とも提携していません。</p>
 
                 <h2>ギャラリー</h2>
-                <p>スクリーンショットはすべて、アプリ内蔵のデモによる架空のデータです。</p>
+                <p>スクリーンショットはすべて、アプリ内蔵のデモによる架空のデータです。ノートパソコンでは画面の幅を生かし、サイドバー、1行ずつ確認できる表、そしてリストの横に開く支払いや支払先を表示します。</p>
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); margin-bottom: 24px;">
+                    <img src="../assets/OpenBankingHub/desktop-month.jpg" alt="ノートパソコンの月表示：全月のグラフの横に数値、カテゴリと支払先を左右に並べて表示" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-activity.jpg" alt="ノートパソコンのアクティビティ：支払いを表で表示し、選んだ支払いをサイドパネルで開く" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-recurring.jpg" alt="ノートパソコンの定期：グラフの横に合計、収入の横に定期的な支払いの表" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                    <img src="../assets/OpenBankingHub/desktop-accounts.jpg" alt="ノートパソコンの口座画面（3列）：残高、クレジットカードとグループ、そして接続、状態、通知" class="gallery-img" loading="lazy" decoding="async" width="1440" height="900">
+                </div>
                 <div class="gallery-grid">
                     <img src="../assets/OpenBankingHub/month-light.jpg" alt="月：先月と比べた今月ここまでの支出、収入、残り、全月のグラフ" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/recurring-light.jpg" alt="定期：前月からの変化を示す定期的な支払いと、定期的な収入" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="ダークモードの月表示" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="口座：残高、明細書から追加したクレジットカード、グループに入れた子どもの口座" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/card-light.jpg" alt="明細書から追加したクレジットカード：利用残高、限度額、支払期日、分割払いの計画" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/csv-light.jpg" alt="どの銀行の CSV でも取り込み：列は自動で推定され、確認は一度だけ" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/payment-light.jpg" alt="支払い：この支払いまたは支払先のカテゴリを変更するか、一時的な支出として扱う" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                     <img src="../assets/OpenBankingHub/sort-light.jpg" alt="仕分け：未認識の支払先を金額の大きい順に" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
-                    <img src="../assets/OpenBankingHub/accounts-light.jpg" alt="口座：残高、銀行との接続、銀行の連携" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
+                    <img src="../assets/OpenBankingHub/month-dark.jpg" alt="ダークモードの月表示" class="gallery-img" loading="lazy" decoding="async" width="824" height="1830">
                 </div>
 
                 <h2>仕組み</h2>
                 <ol>
                     <li><strong>読み取り専用で同期。</strong> Bank Hub は1日2回、連携した各銀行から残高と取引を取得します。PSD2 の上限である、1口座あたり1日約4回の自動リクエストの範囲内です。銀行を承認した直後には、その銀行が許す限りの履歴を取り込みます。</li>
+                    <li><strong>明細書で欠けた分を補う。</strong> 銀行が共有しないクレジットカードや、API がなかなか渡さない履歴は、月次明細書の PDF か、どの銀行の CSV でも追加して補えます。足りない支払いだけが、明細書自体の合計と照合したうえで追加され、ファイルそのものは保存されません。</li>
                     <li><strong>ルールで整理。</strong> 自分の口座間の振替、カテゴリ、一時的な支出、定期的な支払いは、言語モデルではなくルールで生データから求めるため、同じデータからは常に同じ結果になります。</li>
-                    <li><strong>スマートフォンで確認。</strong> インストールできるアプリが、登録した端末に月、定期、アクティビティ、仕分け、口座を表示します。プライベートネットワーク内だけです。</li>
+                    <li><strong>スマートフォンやノートパソコンで確認。</strong> インストールできるアプリが、登録した端末に月、定期、アクティビティ、仕分け、口座を表示します。プライベートネットワーク内だけです。ノートパソコンでは、サイドバー、詳細を横に表示する表、キーボードショートカットが加わります。</li>
                     <li><strong>アシスタントに質問。</strong> MCP で接続した AI アシスタントは情報を伏せた台帳だけを見て、月次の振り返りやサブスクリプションの見直しといった用意済みのプロンプトから始められます。</li>
                 </ol>
 
@@ -100,8 +109,11 @@
                 <ul>
                     <li><strong>正直な支出：</strong> 自分の口座間の振替は除外し、返金はそのカテゴリの支出を減らし、車や不動産のような非常に大きな一時的支出は、月全体を埋もれさせないよう別に表示します。</li>
                     <li><strong>サブスクリプションと請求：</strong> 自動で検出し、前回の請求からの変化、今月まだ支払う分、定期的な収入を示します。</li>
+                    <li><strong>ほかの人のお金：</strong> 子どもの口座、支援している親、事業などはグループに入れます。そのグループ自身の支払いはあなたの合計に含めず、あなたが送ったお金は、専用カテゴリの支出として、または振替として、選んだ方法で数えます。</li>
+                    <li><strong>明細書からクレジットカード：</strong> 銀行が共有しないカードは月次明細書から読み取ります。利用残高、限度額、支払期日、分割払いの計画がわかり、支払期日の3日前に通知します。</li>
+                    <li><strong>スマートフォンとノートパソコン：</strong> ノートパソコンでは同じアプリが画面の幅を生かします。月表示は数値の横にグラフ、アクティビティと定期は表、口座は3列で表示し、矢印キーで月を切り替えられます。</li>
                     <li><strong>スマートフォンへの通知：</strong> 大きな支払い、残高不足、給与の遅れ、定期的な支払いの変更、期限切れ間近の銀行接続、止まったバックアップを知らせます。既定では、ロック画面に金額や支払先は表示されません。</li>
-                    <li><strong>オフラインでも動作：</strong> 各画面はスマートフォンにコピーを保持します。サーバーにつながらないときはそのコピーを表示し、保存日時をバナーで示します。14日より古いコピーは削除され、取り消された端末は自分のコピーを消去します。</li>
+                    <li><strong>オフラインでも動作：</strong> 各画面はスマートフォンにコピーを保持し、Wi-Fi でもモバイルデータでも事前に保存します。サーバーにつながらないときや、ネットワークが応答しないときは、そのコピーからアプリが開き、保存日時をバナーで示します。14日より古いコピーは削除され、取り消された端末は自分のコピーを消去します。</li>
                     <li><strong>設計からプライベート：</strong> 銀行へのアクセスは読み取り専用、データはすべて自分のマシンの1つのディレクトリに、アプリはプライベートネットワーク内だけで動き、各スマートフォンは招待制で登録します。</li>
                     <li><strong>情報を伏せた AI：</strong> MCP サーバーはデータベースを読み取り専用で開き、伏せたテーブルだけを読みます。漏えいスキャナーが、名前、IBAN、摘要が含まれないことをテストします。</li>
                     <li><strong>銀行ごとの実際のクセに対応：</strong> Revolut のポケットとチャージ、ING Romania の摘要の形式、BRD の20件ずつのページ分けと同意は1つだけというルール。</li>
